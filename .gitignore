@@ -1,0 +1,5 @@
+# Boz-PHP configuration file
+load.php
+
+# GNU Gettext compiled .po files
+*.mo

@@ -1,0 +1,252 @@
+# Linux Day 2016 GNU Gettext file.
+# Copyright (C) 2016 Valerio Bozzolan
+# This file is distributed under the same license as the Linux Day 2016 package.
+# Valerio Bozzolan <bozzolan.valerio@educ.di.unito.it>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxday\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-08 01:41+0200\n"
+"PO-Revision-Date: 2016-07-08 01:33+0100\n"
+"Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: index.php:26
+msgid ""
+"Il Linux Day è la principale manifestazione italiana di promozione di "
+"tecnologia sostenibile. Quest'anno a Torino si terrà nel "
+"<strong>Dipartimento di Informatica</strong> dell'Università degli studi di "
+"Torino, di <strong>sabato</strong>, il 22 ottobre 2016."
+msgstr ""
+
+#: index.php:33
+msgid ""
+"<strong>$software</strong>: function(<span class=\"yellow\">play</span>, "
+"<span class=\"blue lighten-3\">freedom</span>, <span class=\"orange"
+"\">friends</span>) { }"
+msgstr ""
+
+#: index.php:38
+msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
+msgstr "The national theme of this year is... <code>coding</code>!"
+
+#: index.php:46
+msgid "Come arrivare"
+msgstr "Directions"
+
+#: index.php:49
+msgid "Via Pessinetto 12, Torino."
+msgstr ""
+
+#: index.php:51
+msgid ""
+"Puoi prendere il tram n°<strong>9</strong> e n°<strong>13</strong>, "
+"scendendo alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di "
+"Informatica</em>."
+msgstr ""
+
+#: index.php:58 index.php:64
+msgid "Dipartimento di Informatica su OpenStreetMap"
+msgstr "Information Technology Department on OpenStreetMap"
+
+#: index.php:65
+msgid "Vedi su OpenStreetMap"
+msgstr "See on OpenStreetMap"
+
+#: index.php:76
+msgid "Talk"
+msgstr "Talk"
+
+#: index.php:79
+#, php-format
+msgid ""
+"Un ampio programma fatto di %s talk di un'ora ciascuno, affrontando "
+"tematiche riguardanti il software libero su più livelli, per soddisfare le "
+"esigenze di un ampio pubblico (dai più piccoli, al curioso, fino agli "
+"esperti)."
+msgstr ""
+
+#: index.php:85
+msgid ""
+"In seguito si riporta la tabella dei talk suddivisa in quattro categorie:"
+msgstr ""
+
+#: index.php:90
+msgid "Area Base"
+msgstr "Base Area"
+
+#: index.php:91
+msgid "Area Dev"
+msgstr "Dev Area"
+
+#: index.php:92
+msgid "Area Sysadmin"
+msgstr "Sysadmin Area"
+
+#: index.php:93
+msgid "Area Misc"
+msgstr "Misc Area"
+
+#: index.php:99
+#, php-format
+msgid "%d° ora"
+msgstr "%d° hour"
+
+#: index.php:110
+msgid "Coding come strumento didattico"
+msgstr ""
+
+#: index.php:111
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: index.php:112
+msgid "IPV6"
+msgstr "IPV6"
+
+#: index.php:113
+msgid "Progetto con Arduino"
+msgstr ""
+
+#: index.php:121
+msgid "Il software libero nella PA"
+msgstr ""
+
+#: index.php:122 index.php:123 index.php:124 index.php:133 index.php:134
+#: index.php:144 index.php:145
+msgid "?"
+msgstr ""
+
+#: index.php:132
+msgid "Introduzione a GNU/Linux"
+msgstr ""
+
+#: index.php:135
+msgid "WEEE Open - Sostenibilità & Open source"
+msgstr ""
+
+#: index.php:143
+msgid "Make FLOSS Sexy"
+msgstr ""
+
+#: index.php:146
+msgid "Security"
+msgstr "Security"
+
+#: index.php:151
+msgid "La tabella potrebbe subire variazioni."
+msgstr ""
+
+#: index.php:156
+msgid "Attività"
+msgstr ""
+
+#: index.php:157
+msgid "In contemporanea ai talk avranno luogo diverse attività:"
+msgstr ""
+
+#: index.php:164
+#, php-format
+msgid "Gestito %s %s."
+msgstr ""
+
+#: index.php:164
+msgid "da"
+msgstr "by"
+
+#: index.php:171
+msgid ""
+"Assistenza tecnica software libero (LIP - Linux Installation Party) "
+"(Installazione distribuzioni GNU/Linux e helpdesk)"
+msgstr ""
+
+#: index.php:172
+msgid "Officina Informatica Libera"
+msgstr ""
+
+#: index.php:176
+msgid "Riparazione di apparecchiature elettroniche"
+msgstr ""
+
+#: index.php:177
+msgid "Associazione Tesso"
+msgstr ""
+
+#: index.php:181
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
+msgstr ""
+
+#: index.php:182
+msgid "CoderDojo Torino"
+msgstr ""
+
+#: index.php:186
+msgid "Allestimento museale di Retrocomputing"
+msgstr ""
+
+#: load-post.php:33
+msgid "Linux Day Torino 2016"
+msgstr "Linux Day Turin 2016"
+
+#: load-post.php:34
+msgid ""
+"15° manifestazione annuale sul software libero ed i sistemi operativi GNU/"
+"Linux."
+msgstr ""
+
+#: load-post.php:55
+msgid "Benvenuti"
+msgstr "Welcome"
+
+#: includes/class-Footer.php:50
+#, php-format
+msgid ""
+"Tutti i contenuti sono rilasciati sotto licenza di <strong>contenuto "
+"culturalmente libero</strong> %s. Sei libero di distribuire e/o modificare i "
+"contenuti anche per scopi commerciali, fintanto che si cita la provenienza e "
+"si ricondivide sotto la medesima licenza."
+msgstr ""
+
+#: includes/class-Footer.php:57
+msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Footer.php:59
+msgid ""
+"Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Footer.php:67
+msgid "<b>Alcuni</b> diritti riservati."
+msgstr "<b>Some</b> rights reserved."
+
+#: includes/class-Footer.php:78
+msgid ""
+"Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
+"Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
+"regalare i tuoi dati a terzi!"
+msgstr ""
+
+#: includes/class-Footer.php:80
+#, php-format
+msgid "Pagina generata in %s secondi con %d query al database."
+msgstr ""
+
+#: includes/class-Header.php:80 includes/class-Header.php:108
+msgid "https://it.wikipedia.org/wiki/GNU"
+msgstr "https://en.wikipedia.org/wiki/GNU"
+
+#: includes/class-Header.php:81
+#, fuzzy
+msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
+msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
+
+#: includes/class-Header.php:112
+msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
+msgstr "https://en.wikipedia.org/wiki/Linux_kernel"

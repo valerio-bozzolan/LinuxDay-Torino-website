@@ -1,10 +1,21 @@
 # ld2016
 Materiale per il Linux Day Torino 2016 (Work In Progress)
 
-TO-DO :
+TO-DO:
+* Sito dell'evento
+* Gestione prenotazioni CoderDojo
+* Questionario sull'evento
+* Materiale informativo per ruoli interni
+* Registrazione talk
 
-- Sito dell'evento
-- Gestione prenotazioni CoderDojo
-- Questionario sull'evento
-- Materiale informativo per ruoli interni
-- registrazione talk
+## Installazione sito web
+Posizionare Boz-PHP da qualche parte, possibilmente in `/usr/share`:
+
+    bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
+
+Copiare `load-sample.php` in `load.php`.
+
+### Multilingua
+Verificare che sia installato il pacchetto `php-gettext` per iniziare a tradurre il sito.
+
+Lanciare `./l10n/localize.sh` almeno una volta dopo modifiche alle stringhe per aggiornare il `.pot` e i `.po`. Usare Poedit per proporre miglioramenti nei file `.po` e lanciare nuovamente due volte lo script precedente per compilare i file `.po` in file `.mo`.
