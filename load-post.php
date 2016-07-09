@@ -10,8 +10,8 @@ define('UNAME',      "Debian GNU/Linux stable");
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: GNU Gettext configuration
-define('GETTEXT_DOMAIN', 'linuxday');
-define('GETTEXT_DIRECTORY', 'l10n');
+define('GETTEXT_DOMAIN',         'linuxday');
+define('GETTEXT_DIRECTORY',      'l10n');
 define('GETTEXT_DEFAULT_ENCODE', 'UTF-8');
 
 register_language('en_US', ['en', 'en-us', 'en-en'] );
@@ -20,7 +20,6 @@ register_language('it_IT', ['it', 'it-it'] );
 if( isset( $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) ) {
 	error_log("Languages: {$_SERVER['HTTP_ACCEPT_LANGUAGE']}");
 }
-
 $l = isset( $_GET['l'] ) ? $_GET['l'] : 'it';
 define('LANGUAGE_APPLIED', apply_language( $l ) );
 

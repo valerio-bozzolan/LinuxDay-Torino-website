@@ -19,3 +19,5 @@ Copiare `load-sample.php` in `load.php`.
 Verificare che sia installato il pacchetto `php-gettext` per iniziare a tradurre il sito.
 
 Lanciare `./l10n/localize.sh` almeno una volta dopo modifiche alle stringhe per aggiornare il `.pot` e i `.po`. Usare Poedit per proporre miglioramenti nei file `.po` e lanciare nuovamente due volte lo script precedente per compilare i file `.po` in file `.mo`.
+
+Per cambiare lingua basta cambiare la lingua del browser (cosa che varia l'header `Accept-Language`). Oppure si imposta il parametro `GET` `l=en` con i codice della lingua desiderato (va in fallback sulla lingua italiana).

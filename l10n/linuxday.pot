@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-08 01:41+0200\n"
+"POT-Creation-Date: 2016-07-09 15:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,71 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: credits.php:25
+msgid ""
+"Questo sito web utilizza esclusivamente <strong>software libero</strong>."
+msgstr ""
+
+#: credits.php:47
+msgid "Sistema operativo del server web."
+msgstr ""
+
+#: credits.php:53
+msgid "Server web."
+msgstr ""
+
+#: credits.php:59
+msgid "Pre-processore di ipertesti."
+msgstr ""
+
+#: credits.php:65
+msgid "Framework per internazionalizzazione e localizzazione dei messaggi."
+msgstr ""
+
+#: credits.php:71
+msgid "Framework PHP e MySQL/MariaDB."
+msgstr ""
+
+#: credits.php:77
+msgid "Certificato SSL."
+msgstr ""
+
+#: credits.php:83
+msgid "Framework CSS e JavaScript in stile Material Design."
+msgstr ""
+
+#: credits.php:89
+msgid "Famiglia di caratteri."
+msgstr ""
+
+#: credits.php:95
+msgid "Collezione di icone Material Design."
+msgstr ""
+
+#: credits.php:101
+msgid "Mappa del Dipartimento di Informatica di Torino."
+msgstr ""
+
+#: credits.php:110
+msgid "Strumenti utilizzati"
+msgstr ""
+
+#: credits.php:111
+msgid "Alcuni strumenti utilizzati per la realizzazione del sito web:"
+msgstr ""
+
+#: credits.php:118
+msgid "https://inkscape.org/en/"
+msgstr ""
+
+#: credits.php:120
+msgid "Ritocchi alla mappa di OpenStreetMap in formato SVG."
+msgstr ""
+
+#: credits.php:126
+msgid "Banale editor di testo da terminale."
+msgstr ""
 
 #: index.php:26
 msgid ""
@@ -190,18 +255,22 @@ msgstr ""
 msgid "Allestimento museale di Retrocomputing"
 msgstr ""
 
-#: load-post.php:33
+#: load-post.php:32
 msgid "Linux Day Torino 2016"
 msgstr ""
 
-#: load-post.php:34
+#: load-post.php:33
 msgid ""
 "15° manifestazione annuale sul software libero ed i sistemi operativi GNU/"
 "Linux."
 msgstr ""
 
-#: load-post.php:55
+#: load-post.php:54
 msgid "Benvenuti"
+msgstr ""
+
+#: load-post.php:55
+msgid "Crediti"
 msgstr ""
 
 #: includes/class-Footer.php:50
@@ -238,14 +307,38 @@ msgstr ""
 msgid "Pagina generata in %s secondi con %d query al database."
 msgstr ""
 
-#: includes/class-Header.php:80 includes/class-Header.php:108
+#: includes/class-Header.php:81 includes/class-Header.php:111
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr ""
 
-#: includes/class-Header.php:81
+#: includes/class-Header.php:84
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr ""
 
-#: includes/class-Header.php:112
+#: includes/class-Header.php:115
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
+msgstr ""
+
+#: includes/class-Licenses.php:24
+msgid "GNU General Public License, versione 2"
+msgstr ""
+
+#: includes/class-Licenses.php:26
+msgid "Licenza Apache, versione 2.0"
+msgstr ""
+
+#: includes/class-Licenses.php:27
+msgid "Licenza MIT"
+msgstr ""
+
+#: includes/class-Licenses.php:28
+msgid "Licenza PHP"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "Creative Commons - Attribuzione 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
 msgstr ""
