@@ -1,7 +1,6 @@
 <?php
-# Copyright (C) 2016 Valerio Bozzolan
-#
 # Linux Day 2016 - Footer
+# Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

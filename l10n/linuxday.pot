@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-09 15:56+0200\n"
+"POT-Creation-Date: 2016-07-09 18:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: credits.php:25
+#: credits.php:24
 msgid ""
 "Questo sito web utilizza esclusivamente <strong>software libero</strong>."
 msgstr ""
 
-#: credits.php:47
+#: credits.php:46
 msgid "Sistema operativo del server web."
 msgstr ""
 
-#: credits.php:53
+#: credits.php:52
 msgid "Server web."
 msgstr ""
 
-#: credits.php:59
+#: credits.php:58
 msgid "Pre-processore di ipertesti."
 msgstr ""
 
-#: credits.php:65
+#: credits.php:64
 msgid "Framework per internazionalizzazione e localizzazione dei messaggi."
 msgstr ""
 
-#: credits.php:71
+#: credits.php:70
 msgid "Framework PHP e MySQL/MariaDB."
 msgstr ""
 
-#: credits.php:77
+#: credits.php:76
 msgid "Certificato SSL."
 msgstr ""
 
-#: credits.php:83
+#: credits.php:82
 msgid "Framework CSS e JavaScript in stile Material Design."
 msgstr ""
 
-#: credits.php:89
+#: credits.php:88
 msgid "Famiglia di caratteri."
 msgstr ""
 
-#: credits.php:95
+#: credits.php:94
 msgid "Collezione di icone Material Design."
 msgstr ""
 
-#: credits.php:101
+#: credits.php:100
 msgid "Mappa del Dipartimento di Informatica di Torino."
 msgstr ""
 
-#: credits.php:110
+#: credits.php:109
 msgid "Strumenti utilizzati"
 msgstr ""
 
-#: credits.php:111
+#: credits.php:110
 msgid "Alcuni strumenti utilizzati per la realizzazione del sito web:"
 msgstr ""
 
-#: credits.php:118
+#: credits.php:117
 msgid "https://inkscape.org/en/"
 msgstr ""
 
-#: credits.php:120
+#: credits.php:119
 msgid "Ritocchi alla mappa di OpenStreetMap in formato SVG."
 msgstr ""
 
-#: credits.php:126
+#: credits.php:125
 msgid "Banale editor di testo da terminale."
 msgstr ""
 
-#: index.php:26
+#: index.php:25
 msgid ""
 "Il Linux Day è la principale manifestazione italiana di promozione di "
 "tecnologia sostenibile. Quest'anno a Torino si terrà nel "
@@ -90,45 +90,45 @@ msgid ""
 "Torino, di <strong>sabato</strong>, il 22 ottobre 2016."
 msgstr ""
 
-#: index.php:33
+#: index.php:32
 msgid ""
 "<strong>$software</strong>: function(<span class=\"yellow\">play</span>, "
 "<span class=\"blue lighten-3\">freedom</span>, <span class=\"orange"
 "\">friends</span>) { }"
 msgstr ""
 
-#: index.php:38
+#: index.php:37
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr ""
 
-#: index.php:46
+#: index.php:45
 msgid "Come arrivare"
 msgstr ""
 
-#: index.php:49
+#: index.php:48
 msgid "Via Pessinetto 12, Torino."
 msgstr ""
 
-#: index.php:51
+#: index.php:50
 msgid ""
 "Puoi prendere il tram n°<strong>9</strong> e n°<strong>13</strong>, "
 "scendendo alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di "
 "Informatica</em>."
 msgstr ""
 
-#: index.php:58 index.php:64
+#: index.php:57 index.php:63
 msgid "Dipartimento di Informatica su OpenStreetMap"
 msgstr ""
 
-#: index.php:65
+#: index.php:64
 msgid "Vedi su OpenStreetMap"
 msgstr ""
 
-#: index.php:76
+#: index.php:75
 msgid "Talk"
 msgstr ""
 
-#: index.php:79
+#: index.php:78
 #, php-format
 msgid ""
 "Un ampio programma fatto di %s talk di un'ora ciascuno, affrontando "
@@ -137,143 +137,143 @@ msgid ""
 "esperti)."
 msgstr ""
 
-#: index.php:85
+#: index.php:84
 msgid ""
 "In seguito si riporta la tabella dei talk suddivisa in quattro categorie:"
 msgstr ""
 
-#: index.php:90
+#: index.php:89
 msgid "Area Base"
 msgstr ""
 
-#: index.php:91
+#: index.php:90
 msgid "Area Dev"
 msgstr ""
 
-#: index.php:92
+#: index.php:91
 msgid "Area Sysadmin"
 msgstr ""
 
-#: index.php:93
+#: index.php:92
 msgid "Area Misc"
 msgstr ""
 
-#: index.php:99
+#: index.php:98
 #, php-format
 msgid "%d° ora"
 msgstr ""
 
-#: index.php:110
+#: index.php:109
 msgid "Coding come strumento didattico"
 msgstr ""
 
-#: index.php:111
+#: index.php:110
 msgid "JavaScript"
 msgstr ""
 
-#: index.php:112
+#: index.php:111
 msgid "IPV6"
 msgstr ""
 
-#: index.php:113
+#: index.php:112
 msgid "Progetto con Arduino"
 msgstr ""
 
-#: index.php:121
+#: index.php:120
 msgid "Il software libero nella PA"
 msgstr ""
 
-#: index.php:122 index.php:123 index.php:124 index.php:133 index.php:134
-#: index.php:144 index.php:145
+#: index.php:121 index.php:122 index.php:123 index.php:132 index.php:133
+#: index.php:143 index.php:144
 msgid "?"
 msgstr ""
 
-#: index.php:132
+#: index.php:131
 msgid "Introduzione a GNU/Linux"
 msgstr ""
 
-#: index.php:135
+#: index.php:134
 msgid "WEEE Open - Sostenibilità & Open source"
 msgstr ""
 
-#: index.php:143
+#: index.php:142
 msgid "Make FLOSS Sexy"
 msgstr ""
 
-#: index.php:146
+#: index.php:145
 msgid "Security"
 msgstr ""
 
-#: index.php:151
+#: index.php:150
 msgid "La tabella potrebbe subire variazioni."
 msgstr ""
 
-#: index.php:156
+#: index.php:155
 msgid "Attività"
 msgstr ""
 
-#: index.php:157
+#: index.php:156
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr ""
 
-#: index.php:164
+#: index.php:163
 #, php-format
 msgid "Gestito %s %s."
 msgstr ""
 
-#: index.php:164
+#: index.php:163
 msgid "da"
 msgstr ""
 
-#: index.php:171
+#: index.php:170
 msgid ""
 "Assistenza tecnica software libero (LIP - Linux Installation Party) "
 "(Installazione distribuzioni GNU/Linux e helpdesk)"
 msgstr ""
 
-#: index.php:172
+#: index.php:171
 msgid "Officina Informatica Libera"
 msgstr ""
 
-#: index.php:176
+#: index.php:175
 msgid "Riparazione di apparecchiature elettroniche"
 msgstr ""
 
-#: index.php:177
+#: index.php:176
 msgid "Associazione Tesso"
 msgstr ""
 
-#: index.php:181
+#: index.php:180
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
 msgstr ""
 
-#: index.php:182
+#: index.php:181
 msgid "CoderDojo Torino"
 msgstr ""
 
-#: index.php:186
+#: index.php:185
 msgid "Allestimento museale di Retrocomputing"
 msgstr ""
 
-#: load-post.php:32
+#: load-post.php:48
 msgid "Linux Day Torino 2016"
 msgstr ""
 
-#: load-post.php:33
+#: load-post.php:49
 msgid ""
 "15° manifestazione annuale sul software libero ed i sistemi operativi GNU/"
 "Linux."
 msgstr ""
 
-#: load-post.php:54
+#: load-post.php:70
 msgid "Benvenuti"
 msgstr ""
 
-#: load-post.php:55
+#: load-post.php:71
 msgid "Crediti"
 msgstr ""
 
-#: includes/class-Footer.php:50
+#: includes/class-Footer.php:49
 #, php-format
 msgid ""
 "Tutti i contenuti sono rilasciati sotto licenza di <strong>contenuto "
@@ -282,63 +282,63 @@ msgid ""
 "si ricondivide sotto la medesima licenza."
 msgstr ""
 
-#: includes/class-Footer.php:57
+#: includes/class-Footer.php:56
 msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
 msgstr ""
 
-#: includes/class-Footer.php:59
+#: includes/class-Footer.php:58
 msgid ""
 "Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale"
 msgstr ""
 
-#: includes/class-Footer.php:67
+#: includes/class-Footer.php:66
 msgid "<b>Alcuni</b> diritti riservati."
 msgstr ""
 
-#: includes/class-Footer.php:78
+#: includes/class-Footer.php:77
 msgid ""
 "Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
 "Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
 "regalare i tuoi dati a terzi!"
 msgstr ""
 
-#: includes/class-Footer.php:80
+#: includes/class-Footer.php:79
 #, php-format
 msgid "Pagina generata in %s secondi con %d query al database."
 msgstr ""
 
-#: includes/class-Header.php:81 includes/class-Header.php:111
+#: includes/class-Header.php:80 includes/class-Header.php:110
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr ""
 
-#: includes/class-Header.php:84
+#: includes/class-Header.php:83
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr ""
 
-#: includes/class-Header.php:115
+#: includes/class-Header.php:114
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr ""
 
-#: includes/class-Licenses.php:24
+#: includes/class-Licenses.php:23
 msgid "GNU General Public License, versione 2"
 msgstr ""
 
-#: includes/class-Licenses.php:26
+#: includes/class-Licenses.php:25
 msgid "Licenza Apache, versione 2.0"
 msgstr ""
 
-#: includes/class-Licenses.php:27
+#: includes/class-Licenses.php:26
 msgid "Licenza MIT"
 msgstr ""
 
-#: includes/class-Licenses.php:28
+#: includes/class-Licenses.php:27
 msgid "Licenza PHP"
 msgstr ""
 
-#: includes/class-Licenses.php:30
+#: includes/class-Licenses.php:29
 msgid "Creative Commons - Attribuzione 4.0 Internazionale"
 msgstr ""
 
-#: includes/class-Licenses.php:30
+#: includes/class-Licenses.php:29
 msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
 msgstr ""

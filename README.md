@@ -9,15 +9,34 @@ TO-DO:
 * Registrazione talk
 
 ## Installazione sito web
-Posizionare Boz-PHP da qualche parte, possibilmente in `/usr/share`:
+Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
 Copiare `load-sample.php` in `load.php`.
 
 ### Multilingua
-Verificare che sia installato il pacchetto `php-gettext` per iniziare a tradurre il sito.
+Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). I file di lingua sono in `l10n/`.
 
-Lanciare `./l10n/localize.sh` almeno una volta dopo modifiche alle stringhe per aggiornare il `.pot` e i `.po`. Usare Poedit per proporre miglioramenti nei file `.po` e lanciare nuovamente due volte lo script precedente per compilare i file `.po` in file `.mo`.
+#### Cambiare lingua
+Il sito controlla la lingua accettata dal browser web (l'header `Accept-Language`)! Eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=en` (`en`, `it`, ecc.) scavalcano questa preferenza. La lingua italiana è predefinita.
 
-Per cambiare lingua basta cambiare la lingua del browser (cosa che varia l'header `Accept-Language`). Oppure si imposta il parametro `GET` `l=en` con i codice della lingua desiderato (va in fallback sulla lingua italiana).
+#### Installazione
+Lanciare `./l10n/localize.sh .` almeno una volta per aggiornare il template GNU Gettext `.pot` e i relativi `.po` con le stringhe contenute nel codice sorgente dentro le funzioni `_()` ed `_e()`.
+
+#### Migliorare lingua
+Modificare il relativo `.po` con Poedit e lanciare due volte lo script sopra.
+
+#### Aggiunta lingua
+Copiare il template GNU Gettext `.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `load-post`. Lanciare due volte `./l10n/localize.sh .` per renderla operativa.
+
+## Contributi
+Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopiare l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione come detentori del diritto d'autore.
+
+## License
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
