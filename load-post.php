@@ -17,10 +17,10 @@ define('GETTEXT_DEFAULT_ENCODE', 'UTF-8');
 register_language('en_US', ['en', 'en-us', 'en-en'] );
 register_language('it_IT', ['it', 'it-it'] );
 
-if( isset( $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) ) {
-	error_log("Languages: {$_SERVER['HTTP_ACCEPT_LANGUAGE']}");
+$l = 'it';
+if( isset( $_REQUEST['l'] ) ) {
+	$l = $_REQUEST['l'];
 }
-$l = isset( $_GET['l'] ) ? $_GET['l'] : 'it';
 define('LANGUAGE_APPLIED', apply_language( $l ) );
 
 ///////////////////////////////////////////////////////////////////
