@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Example Boz-PHP configuration file
+# Linux Day 2016 - API Documentation
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,32 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Database info
-$database = 'insert-here-database-name';
-$username = 'insert-here-database-username';
-$password = 'insert-here-database-password';
-$location = 'localhost';
+require '../load.php';
 
-// Database table prefix (if any)
-// E.g. 'asd_'
-$prefix = '';
+$talks = query_results(
+	"SELECT talk_ID, talk_uid, talk_title, talk_type, talk_hour " .
+	"FROM {$T('talk')} " .
+	"ORDER BY talk_hour",
+	'Talk'
+);
 
-// Folder of your site after the domain name
-// NO TRAILING SLASH
-// E.g. '/linux-day/2016'
-define('ROOT', '');
+foreach($talks as $i => $talk) {
+	// Fetch users
+	$talks[ $i ]->talkers = $talk->getTalkUsers();
 
-// Enable extra verbose framework errors
-define('DEBUG', true);
+	// Unuseful informations
+	unset( $talks[$i]->talk_ID );
+}
 
-// Absolute pathname to the folder of the project
-// NO TRAILING SLASH
-define('ABSPATH', __DIR__ );
+http_json_header();
 
-// Path to Boz-PHP/load.php
-require '/usr/share/boz-php-another-php-framework/load.php';
+$flags = 0;
+if( DEBUG ) {
+	$flags += JSON_PRETTY_PRINT;
+}
+
+echo json_encode( [
+		'talks' => $talks
+	],
+	$flags
+);

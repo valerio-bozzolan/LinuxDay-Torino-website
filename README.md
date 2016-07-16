@@ -9,11 +9,15 @@ TO-DO:
 * Registrazione talk
 
 ## Installazione sito web
+Il sito web PHP+MySQL/MariaDB usa il framework Boz-PHP.
+
 Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
-Copiare `load-sample.php` in `load.php`.
+Il sito non pre-richiede il database. Una connessione MySQL/MariaDB è richiesta solo per le API JSON.
+
+Copiare `load-sample.php` in `load.php` (eventualmente popolando le credenziali di un database creato importando `database-schema.sql`).
 
 ### Multilingua
 Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). I file di lingua sono in `l10n/`.
@@ -31,7 +35,7 @@ Modificare il relativo `.po` con Poedit e lanciare due volte lo script sopra.
 Copiare il template GNU Gettext `.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `load-post`. Lanciare due volte `./l10n/localize.sh .` per renderla operativa.
 
 ## Contributi
-Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopiare l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione come detentori del diritto d'autore.
+Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

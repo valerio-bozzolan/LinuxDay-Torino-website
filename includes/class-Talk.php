@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Example Boz-PHP configuration file
+# Linux Day 2016 - Instantiate database talk row
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,39 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Database info
-$database = 'insert-here-database-name';
-$username = 'insert-here-database-username';
-$password = 'insert-here-database-password';
-$location = 'localhost';
+trait TalkTrait {
+	static function prepareTalk(& $t) {
+		if( isset( $t->talk_hour ) ) {
+			$t->talk_hour = (int) $t->talk_hour;
+		}
+	}
 
-// Database table prefix (if any)
-// E.g. 'asd_'
-$prefix = '';
+	function getTalkUsers() {
+		isset( $this->talk_ID ) ||
+			error_die("Unset talk_ID");
 
-// Folder of your site after the domain name
-// NO TRAILING SLASH
-// E.g. '/linux-day/2016'
-define('ROOT', '');
+		return query_results(
+			sprintf(
+				"SELECT " .
+					"user.user_uid, ".
+					"user.user_name, ".
+					"user.user_surname".
+				" FROM ".
+					$GLOBALS[JOIN]('talker', 'user').
+				" WHERE ".
+					"talker.talk_ID = %d AND ".
+					"talker.user_ID = user.user_ID"
+				,
+				$this->talk_ID
+			)
+		);
+	}
+}
 
-// Enable extra verbose framework errors
-define('DEBUG', true);
+class Talk {
+	use TalkTrait;
 
-// Absolute pathname to the folder of the project
-// NO TRAILING SLASH
-define('ABSPATH', __DIR__ );
-
-// Path to Boz-PHP/load.php
-require '/usr/share/boz-php-another-php-framework/load.php';
+	function __construct() {
+		self::prepareTalk( $this );
+	}
+}

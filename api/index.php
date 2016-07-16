@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Example Boz-PHP configuration file
+# Linux Day 2016 - API Documentation
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,27 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Database info
-$database = 'insert-here-database-name';
-$username = 'insert-here-database-username';
-$password = 'insert-here-database-password';
-$location = 'localhost';
+require '../load.php';
 
-// Database table prefix (if any)
-// E.g. 'asd_'
-$prefix = '';
+the_header('api');
 
-// Folder of your site after the domain name
-// NO TRAILING SLASH
-// E.g. '/linux-day/2016'
-define('ROOT', '');
+?>
+	<p class="flow-text"><?php printf(
+		_("In seguito la documentazione delle API per dati in tempo reale riguardanti i talk del <b>%s</b> in formato JSON."),
+		SITE_NAME
+	) ?></p>
 
-// Enable extra verbose framework errors
-define('DEBUG', true);
+	<div class="row">
+		<?php
+		new APIDocumentation(
+			'get-talks.php',
+			sprintf(
+				_("Tutti i talk del %s."),
+				SITE_NAME
+			),
+			new APIArgument('asd', 's', _("Questo parametro non fa nulla. Asd!") )
+		);
+		?>
+	</div>
 
-// Absolute pathname to the folder of the project
-// NO TRAILING SLASH
-define('ABSPATH', __DIR__ );
-
-// Path to Boz-PHP/load.php
-require '/usr/share/boz-php-another-php-framework/load.php';
+<?php the_footer();

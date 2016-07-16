@@ -68,7 +68,8 @@ register_css('materialize.icons', XXX . '/material-design-icons/material-icons.c
 // Boz-PHP: Menu entries
 add_menu_entries( [
 	new MenuEntry('home',    URL,                  _("Benvenuti") ),
-	new MenuEntry('credits', URL . '/credits.php', _("Crediti") )
+	new MenuEntry('credits', URL . '/credits.php', _("Crediti") )  ,
+	new MenuEntry('api',     URL . '/api',         _("API")        , 'hidden')
 ] );
 
 ///////////////////////////////////////////////////////////////////

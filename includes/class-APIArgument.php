@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Example Boz-PHP configuration file
+# Linux Day 2016 - API Argument (see APIDocumentation.php)
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,37 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Database info
-$database = 'insert-here-database-name';
-$username = 'insert-here-database-username';
-$password = 'insert-here-database-password';
-$location = 'localhost';
+class APIArgument {
+	public $arg;
+	public $type;
+	public $comment;
+	public $optional;
 
-// Database table prefix (if any)
-// E.g. 'asd_'
-$prefix = '';
+	function __construct($arg, $type, $comment, $optional = false) {
+		$this->arg = $arg;
+		$this->type = $type;
+		$this->comment = $comment;
+		$this->optional = $optional;
+	}
 
-// Folder of your site after the domain name
-// NO TRAILING SLASH
-// E.g. '/linux-day/2016'
-define('ROOT', '');
+	public function getArg() {
+		return $this->arg;
+	}
 
-// Enable extra verbose framework errors
-define('DEBUG', true);
+	public function getType() {
+		$s = $this->type;
 
-// Absolute pathname to the folder of the project
-// NO TRAILING SLASH
-define('ABSPATH', __DIR__ );
+		if($s === 's')
+			return _("stringa");
 
-// Path to Boz-PHP/load.php
-require '/usr/share/boz-php-another-php-framework/load.php';
+		return $s;
+	}
+
+	public function getComment() {
+		return $this->comment;
+	}
+
+	public function isOptional() {
+		return $this->optional;
+	}
+}
