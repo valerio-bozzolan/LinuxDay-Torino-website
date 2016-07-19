@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - API Argument (see APIDocumentation.php)
+# Linux Day 2016 - Homepage
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,37 +15,26 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class APIArgument {
-	public $arg;
-	public $type;
-	public $comment;
-	public $optional;
-
-	function __construct($arg, $type, $comment, $optional = false) {
-		$this->arg = $arg;
-		$this->type = $type;
-		$this->comment = $comment;
-		$this->optional = $optional;
+trait UserTrait {
+	static function prepareUser(& $t) {
+		if( isset( $t->user_ID ) ) {
+			$t->user_ID = (int) $t->user_ID;
+		}
 	}
 
-	function getArg() {
-		return $this->arg;
+	function getUserFullname() {
+		return sprintf(
+			_("%s %s"),
+			$this->user_name,
+			$this->user_surname
+		);
 	}
+}
 
-	function getType() {
-		$s = $this->type;
+class User {
+	use UserTrait;
 
-		if($s === 's')
-			return _("stringa");
-
-		return $s;
-	}
-
-	function getComment() {
-		return $this->comment;
-	}
-
-	function isOptional() {
-		return $this->optional;
+	function __construct() {
+		self::prepareUser($this);
 	}
 }

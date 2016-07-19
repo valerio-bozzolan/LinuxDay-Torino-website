@@ -16,22 +16,72 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait TalkTrait {
+	static $AREAS = ['base', 'dev', 'misc'];
+	static $HOURS = 4;
+
 	static function prepareTalk(& $t) {
+		if( isset( $t->talk_ID ) ) {
+			$t->talk_ID   = (int) $t->talk_ID;
+		}
 		if( isset( $t->talk_hour ) ) {
 			$t->talk_hour = (int) $t->talk_hour;
 		}
 	}
 
+	/**
+	 * The human name of the talk type, can be called statically.
+	 *
+	 * @return string
+	 */
+	function getTalkType($t = null) {
+		if( $t === null ) {
+			isset( $this->talk_type )
+				|| error_die("Missing talk type");
+
+			return self::getTalkType( $this->talk_type );
+		}
+
+		if( $t === 'base' )
+			$t = _("Base");
+
+		if( $t === 'dev' )
+			$t = _("Dev");
+
+		if( $t === 'misc' )
+			$t = _("Misc");
+
+		return sprintf(
+			_("Area %s"),
+			$t
+		);
+	}
+
+	/**
+	 * The human talk hour, can be called statically.
+	 *
+	 * @return string
+	 */
+	function getTalkHour($h = null) {
+		if( $h === null ) {
+			isset( $this->talk_hour )
+				|| error_die("Missing talk hour");
+
+			return self::getTalkHour( $this->talk_hour );
+		}
+
+		return sprintf( _("%d° ora"), $h );
+	}
+
 	function getTalkUsers() {
-		isset( $this->talk_ID ) ||
-			error_die("Unset talk_ID");
+		isset( $this->talk_ID )
+			|| error_die("Missing talk_ID");
 
 		return query_results(
 			sprintf(
 				"SELECT " .
 					"user.user_uid, ".
 					"user.user_name, ".
-					"user.user_surname".
+					"user.user_surname ".
 				" FROM ".
 					$GLOBALS[JOIN]('talker', 'user').
 				" WHERE ".

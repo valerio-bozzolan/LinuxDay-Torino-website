@@ -82,71 +82,9 @@ the_header('home');
 			"<b>16</b>"
 		) ?></p>
 		<p><?php _e("In seguito si riporta la tabella dei talk suddivisa in quattro categorie:") ?></p>
-		<table class="bordered striped hoverable">
-			<tr>
-				<th></th>
 
-				<th><?php _e("Area Base") ?></th>
-				<th><?php _e("Area Dev") ?></th>
-				<th><?php _e("Area Sysadmin") ?></th>
-				<th><?php _e("Area Misc") ?></th>
-			</tr>
-			<tr class="hoverable">
-				<th><?php
-					$ora = function($d) {
-						printf(
-							_("%d° ora"),
-							$d
-						);
-					};
-					$ora(1);
-				?></th>
+		<?php new TalkersTable() ?>
 
-				<?php $dev = function($name, $desc) { ?>
-				<td><?php echo $name ?><br /><p><?php echo $desc ?></p></td>
-
-				<?php };
-				$dev("Dario Sera",      _("Coding come strumento didattico") );
-				$dev("Luigi Maselli",   _("JavaScript") );
-				$dev("Massimo Nuvoli",  _("IPV6") );
-				$dev("Francesco Tucci", _("Progetto con Arduino") );
-				?>
-
-			</tr>
-			<tr class="hoverable">
-				<th><?php $ora(2) ?></th>
-
-				<?php
-				$dev("Flavio Piovesan", _("Il software libero nella PA") );
-				$dev("?", _("?") );
-				$dev("?", _("?") );
-				$dev("?", _("?") );
-				?>
-
-			</tr>
-			<tr class="hoverable">
-				<th><?php $ora(3) ?></th>
-
-				<?php
-				$dev("Valerio Bozzolan", _("Introduzione a GNU/Linux") );
-				$dev("?", _("?") );
-				$dev("?", _("?") );
-				$dev("Marco Signoretto", _("WEEE Open - Sostenibilità & Open source") );
-				?>
-
-			</tr>
-			<tr class="hoverable">
-				<th><?php $ora(4) ?></th>
-
-				<?php
-				$dev("Manca Renzo Davoli", _("Make FLOSS Sexy") );
-				$dev("Mancano Dev", _("?") );
-				$dev("Sistemisti!!!", _("?") );
-				$dev("Davide Mainardi", _("Security") );
-				?>
-
-			</tr>
-		</table>
 		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
