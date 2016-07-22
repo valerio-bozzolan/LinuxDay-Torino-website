@@ -18,7 +18,7 @@
 class TalkersTable {
 	private $talkers = [];
 
-	function getTalker($h, $t) {
+	function getTalkers($h, $t) {
 		if( isset( $this->talkers[$h][$t] ) ) {
 			return $this->talkers[$h][$t];
 		}
@@ -26,11 +26,40 @@ class TalkersTable {
 		return false;
 	}
 
+	function getImplodedTalkers($h, $t) {
+		$talkers = $this->getTalkers($h, $t);
+		if( ! $talkers ) {
+			return _("?");
+		}
+
+		$n = count( $talkers ) - 1;
+
+		$last = $talkers[ $n ]->getUserFullName();
+
+		if( $n > 0 ) {
+			$comma = _(", ");
+			$s = '';
+			for($i = 0; $i < $n; $i++) {
+				if( $i ) {
+					$s .= $comma;
+				}
+				$s .= $talkers[ $i ]->getUserFullName();
+			}
+
+			return sprintf(
+				_("%s e %s"),
+				$s, $last
+			);
+		}
+
+		return $last;
+	}
+
 	function __construct() {
 		$talkers = Talker::queryTalkers();
 
 		foreach($talkers as $talker) {
-			$this->talkers[ $talker->talk_hour ][ $talker->talk_type ] = $talker;
+			$this->talkers[ $talker->talk_hour ][ $talker->talk_type ][] = $talker;
 		}
 	?>
 
@@ -43,18 +72,19 @@ class TalkersTable {
 				<?php endforeach ?>
 			</tr>
 
-			<?php for($h = 1; $h < Talk::$HOURS; $h++): ?>
+			<?php for($h = 1; $h < Talk::HOURS; $h++): ?>
 			<tr class="hoverable">
 				<th><?php echo Talk::getTalkHour($h) ?></th>
 				<?php foreach(Talk::$AREAS as $area): ?>
 				<td><?php
-					$talker = $this->getTalker($h, $area);
+					$talker = $this->getTalkers($h, $area);
 
 					if( $talker ) {
+						$title = "<strong>{$talker[0]->getTalkTitle()}</strong>";
 						printf(
-							_("<strong>%s</strong><br /> di %s"),
-							esc_html( $talker->talk_title ),
-							esc_html( $talker->getUserFullname() )
+							_("%s di %s."),
+							$title,
+							$this->getImplodedTalkers($h, $area)
 						);
 					} else {
 						_e("?");

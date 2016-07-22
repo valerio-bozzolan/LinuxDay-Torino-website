@@ -16,9 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait TalkTrait {
-	static $AREAS = ['base', 'dev', 'misc'];
-	static $HOURS = 4;
-
 	static function prepareTalk(& $t) {
 		if( isset( $t->talk_ID ) ) {
 			$t->talk_ID   = (int) $t->talk_ID;
@@ -92,10 +89,17 @@ trait TalkTrait {
 			)
 		);
 	}
+
+	function getTalkTitle() {
+		return $this->talk_title;
+	}
 }
 
 class Talk {
 	use TalkTrait;
+
+	static $AREAS = ['base', 'dev', 'misc'];
+	const HOURS = 4;
 
 	function __construct() {
 		self::prepareTalk( $this );

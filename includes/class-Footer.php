@@ -47,7 +47,7 @@ class Footer {
 		<div class="row darken-1 white-text">
 			<p><?php printf(
 				_("Tutti i contenuti sono rilasciati sotto ".
-				  "licenza di <strong>contenuto culturalmente libero</strong> %s. ".
+				  "licenza di <strong>contenuto culturale libero</strong> %s. ".
 				  "Sei libero di distribuire e/o modificare i contenuti ".
 				  "anche per scopi commerciali, fintanto che si cita la provenienza e ".
 				  "si ricondivide sotto la medesima licenza."
