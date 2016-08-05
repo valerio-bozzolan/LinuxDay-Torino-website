@@ -3,3 +3,6 @@ load.php
 
 # GNU Gettext compiled .po files
 *.mo
+
+# Some proprietary IDE
+.idea/

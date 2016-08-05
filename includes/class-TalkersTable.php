@@ -16,17 +16,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class TalkersTable {
-	private $talkers = [];
-
-	function getTalkers($h, $t) {
-		if( isset( $this->talkers[$h][$t] ) ) {
-			return $this->talkers[$h][$t];
-		}
-
-		return false;
-	}
+	private $talks_by_hour_then_track = [];
 
 	function getImplodedTalkers($h, $t) {
+		// TODO: implement this method
+		return 'asd';
+
 		$talkers = $this->getTalkers($h, $t);
 		if( ! $talkers ) {
 			return _("?");
@@ -34,7 +29,7 @@ class TalkersTable {
 
 		$n = count( $talkers ) - 1;
 
-		$last = $talkers[ $n ]->getUserFullName();
+		$last = $talkers[$n]->getUserFullName();
 
 		if( $n > 0 ) {
 			$comma = _(", ");
@@ -56,10 +51,11 @@ class TalkersTable {
 	}
 
 	function __construct() {
-		$talkers = Talker::queryTalkers();
+		$talks = Talk::queryTalks();
 
-		foreach($talkers as $talker) {
-			$this->talkers[ $talker->talk_hour ][ $talker->talk_type ][] = $talker;
+		foreach($talks as $talk) {
+			// This also utterly annihilate duplicates, which is okay, I guess
+			$this->talks_by_hour_then_track[$talk->hour][$talk->track] = $talk;
 		}
 	?>
 
@@ -77,10 +73,8 @@ class TalkersTable {
 				<th><?php echo Talk::getTalkHour($h) ?></th>
 				<?php foreach(Talk::$AREAS as $area): ?>
 				<td><?php
-					$talker = $this->getTalkers($h, $area);
-
-					if( $talker ) {
-						$title = "<strong>{$talker[0]->getTalkTitle()}</strong>";
+					if(isset($this->talks_by_hour_then_track[$h][$area])) {
+						$title = "<strong>{$this->talks_by_hour_then_track[$h][$area]->getTalkTitle()}</strong>";
 						printf(
 							_("%s di %s."),
 							$title,
