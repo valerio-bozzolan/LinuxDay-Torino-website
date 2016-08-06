@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^people/(.*)?$ people.php?name=$1
