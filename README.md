@@ -15,7 +15,9 @@ Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
-Il sito non pre-richiede il database. Una connessione MySQL/MariaDB è richiesta solo per le API JSON.
+Il sito non pre-richiede il database, nel senso che non prende spontaneamente fuoco se non lo trova, ma è consigliabile averlo.  
+Una connessione MySQL/MariaDB è richiesta per le API e per la tabella dei talk nella home page.  
+Sono richieste sia l'estensione `pdo_mysql` che `mysqli`.
 
 Copiare `load-sample.php` in `load.php` (eventualmente popolando le credenziali di un database creato importando `database-schema.sql`).
 
