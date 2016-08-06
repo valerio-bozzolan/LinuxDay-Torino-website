@@ -22,6 +22,8 @@ class Talk {
     public $track;
     private $start;
     private $end;
+    private $event_id;
+    private $talkers;
     public $hour;
 
     // These are used both in database queries (tracks.name) and displayed to the user!
@@ -80,47 +82,33 @@ class Talk {
         return sprintf( _("%d° ora"), $h );
     }
 
-    function getTalkUsers() {
-        isset( $this->talk_ID )
-        || error_die("Missing talk_ID");
-
-        return query_results(
-            sprintf(
-                "SELECT " .
-                "user.user_uid, ".
-                "user.user_name, ".
-                "user.user_surname ".
-                " FROM ".
-                $GLOBALS[JOIN]('talker', 'user').
-                " WHERE ".
-                "talker.talk_ID = %d AND ".
-                "talker.user_ID = user.user_ID"
-                ,
-                $this->talk_ID
-            )
-        );
-    }
-
     function getTalkTitle() {
         return $this->title;
     }
 
-	static function queryTalks() {
-	    $where = '';
+    static function getWhereTracks() {
+        $where = '';
         $count_minus_one = count(self::$AREAS)-1;
-	    for($i = 0; $i <= $count_minus_one; $i++) {
-	        $where .= ' tracks.name=\''.self::$AREAS[$i].'\'';
+        for($i = 0; $i <= $count_minus_one; $i++) {
+            $where .= ' tracks.name=\''.self::$AREAS[$i].'\'';
             if($i !== $count_minus_one) {
                 $where .= ' OR';
             }
         }
+
+        return $where;
+    }
+
+	static function queryTalks() {
+	    $where = self::getWhereTracks();
 
 		$talks = query_results(
 			"SELECT ".
 				"`events`.title, ".
 				"tracks.name AS track, ".
 				"`events`.`start`, ".
-				"`events`.`end` ".
+				"`events`.`end`, ".
+				"`events`.`id` AS event_id ".
 			" FROM `events`".
 			" JOIN tracks ".
 				"ON tracks.id=`events`.track ".
@@ -130,11 +118,41 @@ class Talk {
 			'Talk'
 		);
 
+        $talkers = query_results(
+            "SELECT ".
+            "people.name, ".
+            "events_people.event_id AS event ".
+            " FROM events_people".
+            " JOIN people ".
+            "ON events_people.person_id=people.id ".
+            " JOIN `events` ".
+            "ON events_people.event_id=`events`.id ".
+            " JOIN tracks ".
+            "ON events.track=tracks.id ".
+            " WHERE (".$where.") AND `events`.conference_id=".CONFERENCE_ID.
+            " ORDER BY ".
+            "events_people.event_id",
+            NULL
+        );
 
-        // try to guess hours...
+        $talkers_by_event_id = [];
+        foreach($talkers as $talker) {
+            $talkers_by_event_id[$talker->event][] = $talker->name;
+        }
+        // To avoid involuntary chaos and destruction...
+        unset($talkers);
+        unset($talker);
+
+        // try to guess hours (and add talkers while we're at it)
         $start_times = [];
         foreach($talks as $talk) {
             $start_times[] = $talk->start;
+
+            if(isset($talkers_by_event_id[$talk->event_id])) {
+                $talk->talkers = $talkers_by_event_id[$talk->event_id];
+            } else {
+                $talk->talkers = [];
+            }
         }
         $start_to_hour_counter = array_flip(array_values(array_unique($start_times)));
 
@@ -144,4 +162,14 @@ class Talk {
 
         return $talks;
 	}
+
+    /**
+     * Get talkers as an array.
+     * It's always an array, it's never set to anything else or left uninitialized, but here is casted to array, too.
+     *
+     * @return array talkers.
+     */
+    public function getTalkers() {
+        return (array) $this->talkers;
+    }
 }

@@ -15,39 +15,34 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class TalkersTable {
+class TalksTable {
 	private $talks_by_hour_then_track = [];
 
 	function getImplodedTalkers($h, $t) {
-		// TODO: implement this method
-		return 'asd';
-
-		$talkers = $this->getTalkers($h, $t);
-		if( ! $talkers ) {
+		$talkers = $this->talks_by_hour_then_track[$h][$t]->getTalkers();
+		if(empty($talkers)) {
 			return _("?");
 		}
 
-		$n = count( $talkers ) - 1;
+		$n = count($talkers) - 1;
 
-		$last = $talkers[$n]->getUserFullName();
-
-		if( $n > 0 ) {
+		if($n > 0) {
 			$comma = _(", ");
 			$s = '';
 			for($i = 0; $i < $n; $i++) {
 				if( $i ) {
 					$s .= $comma;
 				}
-				$s .= $talkers[ $i ]->getUserFullName();
+				$s .= $talkers[$i];
 			}
 
 			return sprintf(
 				_("%s e %s"),
-				$s, $last
+				$s, $talkers[$n]
 			);
+		} else {
+			return $talkers[0];
 		}
-
-		return $last;
 	}
 
 	function __construct() {
