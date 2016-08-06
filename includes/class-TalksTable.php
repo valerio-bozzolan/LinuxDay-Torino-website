@@ -63,7 +63,7 @@ class TalksTable {
 				<?php endforeach ?>
 			</tr>
 
-			<?php for($h = 1; $h < Talk::HOURS; $h++): ?>
+			<?php for($h = 1; $h <= Talk::HOURS; $h++): ?>
 			<tr class="hoverable">
 				<th><?php echo Talk::getTalkHour($h) ?></th>
 				<?php foreach(Talk::$AREAS as $area): ?>
