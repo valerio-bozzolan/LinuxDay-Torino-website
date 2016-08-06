@@ -47,7 +47,7 @@ the_header('home');
 			<div class="col s12 m4">
 				<p class="flow-text"><?php _e("Via Pessinetto 12, Torino.") ?></p>
 				<p><?php _e(
-					"Puoi prendere il tram n°<strong>9</strong> e n°<strong>13</strong>, ".
+					"Puoi prendere il tram n°<strong>9</strong> e n°<strong>3</strong>, ".
 					"scendendo alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di Informatica</em>."
 				) ?></p>
 			</div>
