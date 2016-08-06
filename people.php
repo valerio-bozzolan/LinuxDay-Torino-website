@@ -15,26 +15,13 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-trait UserTrait {
-	static function prepareUser(& $t) {
-		if( isset( $t->user_ID ) ) {
-			$t->user_ID = (int) $t->user_ID;
-		}
-	}
+require 'load.php';
 
-	function getUserFullname() {
-		return sprintf(
-			_("%s %s"),
-			$this->user_name,
-			$this->user_surname
-		);
-	}
-}
-
-class User {
-	use UserTrait;
-
-	function __construct() {
-		self::prepareUser($this);
-	}
-}
+the_header('home');
+?>
+	<div class="section">
+		<h1><?php echo htmlspecialchars($_GET['name']) ?></h1>
+		<p>LOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLALOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLALOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLALOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLALOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLALOREM IPSUM BLA BLA BLA LOREM IPSUM BLA BLA BLA</p>
+	</div>
+<?php
+the_footer();

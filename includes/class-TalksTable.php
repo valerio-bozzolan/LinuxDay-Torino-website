@@ -15,51 +15,46 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class TalkersTable {
-	private $talkers = [];
-
-	function getTalkers($h, $t) {
-		if( isset( $this->talkers[$h][$t] ) ) {
-			return $this->talkers[$h][$t];
-		}
-
-		return false;
-	}
+class TalksTable {
+	private $talks_by_hour_then_track = [];
 
 	function getImplodedTalkers($h, $t) {
-		$talkers = $this->getTalkers($h, $t);
-		if( ! $talkers ) {
+		$talkers = $this->talks_by_hour_then_track[$h][$t]->getTalkers();
+		if(empty($talkers)) {
 			return _("?");
 		}
 
-		$n = count( $talkers ) - 1;
+		$n = count($talkers) - 1;
 
-		$last = $talkers[ $n ]->getUserFullName();
-
-		if( $n > 0 ) {
+		if($n > 0) {
 			$comma = _(", ");
 			$s = '';
 			for($i = 0; $i < $n; $i++) {
 				if( $i ) {
 					$s .= $comma;
 				}
-				$s .= $talkers[ $i ]->getUserFullName();
+				$s .= $this->urlwrap($talkers[$i]);
 			}
 
 			return sprintf(
 				_("%s e %s"),
-				$s, $last
+				$s, $this->urlwrap($talkers[$n])
 			);
+		} else {
+			return $this->urlwrap($talkers[0]);
 		}
+	}
 
-		return $last;
+	private static function urlwrap($what) {
+		return '<a href="people/'.generate_slug($what, -1, '_').'">'.$what.'</a>';
 	}
 
 	function __construct() {
-		$talkers = Talker::queryTalkers();
+		$talks = Talk::queryTalks();
 
-		foreach($talkers as $talker) {
-			$this->talkers[ $talker->talk_hour ][ $talker->talk_type ][] = $talker;
+		foreach($talks as $talk) {
+			// This also utterly annihilate duplicates, which is okay, I guess
+			$this->talks_by_hour_then_track[$talk->hour][$talk->track] = $talk;
 		}
 	?>
 
@@ -72,15 +67,13 @@ class TalkersTable {
 				<?php endforeach ?>
 			</tr>
 
-			<?php for($h = 1; $h < Talk::HOURS; $h++): ?>
+			<?php for($h = 1; $h <= Talk::HOURS; $h++): ?>
 			<tr class="hoverable">
 				<th><?php echo Talk::getTalkHour($h) ?></th>
 				<?php foreach(Talk::$AREAS as $area): ?>
 				<td><?php
-					$talker = $this->getTalkers($h, $area);
-
-					if( $talker ) {
-						$title = "<strong>{$talker[0]->getTalkTitle()}</strong>";
+					if(isset($this->talks_by_hour_then_track[$h][$area])) {
+						$title = "<strong>{$this->talks_by_hour_then_track[$h][$area]->getTalkTitle()}</strong>";
 						printf(
 							_("%s di %s."),
 							$title,
