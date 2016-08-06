@@ -33,16 +33,20 @@ class TalksTable {
 				if( $i ) {
 					$s .= $comma;
 				}
-				$s .= $talkers[$i];
+				$s .= $this->urlwrap($talkers[$i]);
 			}
 
 			return sprintf(
 				_("%s e %s"),
-				$s, $talkers[$n]
+				$s, $this->urlwrap($talkers[$n])
 			);
 		} else {
-			return $talkers[0];
+			return $this->urlwrap($talkers[0]);
 		}
+	}
+
+	private static function urlwrap($what) {
+		return '<a href="people/'.generate_slug($what, -1, '_').'">'.$what.'</a>';
 	}
 
 	function __construct() {
