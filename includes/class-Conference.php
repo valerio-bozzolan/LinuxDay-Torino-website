@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - User profile page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Linux Day 2016 - Construct a database conference
+# Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,31 +15,28 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-require 'load.php';
+trait ConferenceTrait {
+	static function prepareConference(& $t) {
+		if( isset( $t->conference_ID ) ) {
+			$t->conference_ID   = (int) $t->conference_ID;
+		}
 
-$user = null;
+		// MySQL datetime to PHP DateTime
+		if( isset( $t->conference_start ) ) {
+			datetime2php($t->conference_start);
+		}
 
-if( isset( $_GET['uid'] ) ) {
-	$user = User::queryUser( $_GET['uid'] );
+		// MySQL datetime to PHP DateTime
+		if( isset( $t->conference_end ) ) {
+			datetime2php($t->conference_end);
+		}
+	}
 }
 
-if( $user ) {
-	the_header('user', [
-		'title' => $user->getUserFullname(),
-		'url'   => $user->getUserProfileURL()
-	] );
-} else {
-	the_header('404', [
-		'not-found' => true
-	] );
-	error("nott foond a.k.a. erroro quattrociantoquatto. (Eseguire coi permessi di root NON risolve la situazione)");
-	the_footer();
-	exit;
+class Conference {
+	use ConferenceTrait;
+
+	function __construct() {
+		self::prepareConference($this);
+	}
 }
-?>
-	<p><?php printf(
-		_("Ciao! Sono <strong>%s</strong>."),
-		esc_html( $user->getUserFullname() )
-	) ?></p>
-<?php
-the_footer();

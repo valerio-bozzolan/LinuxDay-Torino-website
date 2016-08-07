@@ -43,5 +43,8 @@ define('DEBUG', true);
 // NO TRAILING SLASH
 define('ABSPATH', __DIR__ );
 
+// User for events
+define('DB_TIMEZONE', 'UTC');
+
 // Path to Boz-PHP/load.php
 require '/usr/share/boz-php-another-php-framework/load.php';

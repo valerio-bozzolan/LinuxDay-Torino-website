@@ -15,6 +15,11 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+function datetime2php(& $s) {
+	$s = DateTime::createFromFormat('Y-m-d H:i:s', $s);
+	$s->setTimezone( new DateTimeZone( DB_TIMEZONE ) );
+}
+
 function the_header( $uid, $args = [] ) {
 	new Header($uid, $args);
 }

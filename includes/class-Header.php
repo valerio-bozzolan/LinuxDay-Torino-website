@@ -17,22 +17,27 @@
 
 class Header {
 	function __construct($menu_uid = null, $args = [] ) {
-		header('Content-Type: text/html; charset=' . CHARSET);
-
-		enqueue_css('materialize');
-		enqueue_css('materialize.icons');
-		enqueue_js('jquery');
-		enqueue_js('materialize');
-
 		$menu = get_menu_entry($menu_uid);
 
 		$args = merge_args_defaults($args, [
 			'title' => $menu->name,
 			'url'   => $menu->url,
 			'og'    => [],
+			'not-found'   => false,
 			'user-navbar' => true,
 			'container' => true
 		] );
+
+		header('Content-Type: text/html; charset=' . CHARSET);
+
+		if( $args['not-found'] ) {
+			header('HTTP/1.1 404 Not Found');
+		}
+
+		enqueue_css('materialize');
+		enqueue_css('materialize.icons');
+		enqueue_js('jquery');
+		enqueue_js('materialize');
 
 		// Close header
 		$args['container'] && inject_in_module('footer', function() {

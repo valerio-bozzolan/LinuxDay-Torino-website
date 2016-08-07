@@ -83,9 +83,9 @@ the_header('home');
 		) ?></p>
 		<p><?php _e("In seguito si riporta la tabella dei talk suddivisa in quattro categorie:") ?></p>
 
-		<?php new TalksTable() ?>
+		<?php /* new TalksTable() */ ?>
 
-		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
+		<p><?php _e("La tabella moh non può funzionare, ma immaginala forte.") ?></p>
 	</div>
 
 	<div id="play" class="divider"></div>

@@ -69,7 +69,9 @@ register_css('materialize.icons', XXX . '/material-design-icons/material-icons.c
 add_menu_entries( [
 	new MenuEntry('home',    URL,                  _("Benvenuti") ),
 	new MenuEntry('credits', URL . '/credits.php', _("Crediti") )  ,
-	new MenuEntry('api',     URL . '/api',         _("API")        , 'hidden')
+	new MenuEntry('api',     URL . '/api',         _("API")        , 'hidden'),
+	new MenuEntry('user',    URL . '/people',      null,             'hidden'),
+	new MenuEntry('404',     null,                 null,             'hidden')
 ] );
 
 ///////////////////////////////////////////////////////////////////

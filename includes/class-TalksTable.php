@@ -20,7 +20,7 @@ class TalksTable {
 
 	function getImplodedTalkers($h, $t) {
 		$talkers = $this->talks_by_hour_then_track[$h][$t]->getTalkers();
-		if(empty($talkers)) {
+		if( empty($talkers) ) {
 			return _("?");
 		}
 
@@ -33,20 +33,16 @@ class TalksTable {
 				if( $i ) {
 					$s .= $comma;
 				}
-				$s .= $this->urlwrap($talkers[$i]);
+				$s .= $talkers[$i]->getUserProfileLink();
 			}
 
 			return sprintf(
 				_("%s e %s"),
-				$s, $this->urlwrap($talkers[$n])
+				$s, $talkers[$n]->getUserProfileLink()
 			);
 		} else {
-			return $this->urlwrap($talkers[0]);
+			return $talkers[0]->getUserProfileLink();
 		}
-	}
-
-	private static function urlwrap($what) {
-		return '<a href="people/'.generate_slug($what, -1, '_').'">'.$what.'</a>';
 	}
 
 	function __construct() {

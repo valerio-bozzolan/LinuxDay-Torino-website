@@ -1,140 +1,229 @@
 <?php
+# Linux Day 2016 - API to generate a strange XML file format
+# Copyright (C) 2016 Ludovico Pavesi, Valerio Bozzolan
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+require '../load.php';
+
+require 'config.php';
+
 // In case something goes wrong...
 http_response_code(500);
 
-require 'config.php';
-define('DB_DSN', 'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME);
-
-$db_timezone = new DateTimeZone(DB_TIMEZONE);
-$output_timezone = new DateTimeZone(OUTPUT_TIMEZONE);
-
-$dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_EMULATE_PREPARES => false,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-]);
+if( ! defined('CONFERENCE_ID') ) {
+	throw new LogicException('Undefined CONFERENCE_ID');
+}
 
 $xml = new DOMDocument('1.0', 'UTF-8');
-$schedule = $xml->createElement('schedule');
-$schedule = $xml->appendChild($schedule);
+$schedule   = $xml->createElement('schedule');
+$schedule   = $xml->appendChild($schedule);
 $conference = $xml->createElement('conference');
 $conference = $schedule->appendChild($conference);
 
-$result = $dbh->query('SELECT title, subtitle, venue, city, `start`, `end`, days, day_change, timeslot_duration FROM conferences WHERE id='.CONFERENCE_ID);
+$conferences = query_row(
+	sprintf(
+		'SELECT '.
+			'conference_title, '.
+			'conference_subtitle, '.
+			'conference_venue, '.
+			'conference_city, '.
+			'conference_start, '.
+			'conference_end, '.
+			'conference_days, '.
+			'conference_day_change, '.
+			'conference_timeslot_duration '.
+		"FROM {$T('conference')} ".
+		'WHERE conference_ID = %d'
 
-if($result->rowCount() === 0) {
-    throw new LogicException('Conference '.CONFERENCE_ID.' does not exist!');
+		,
+		CONFERENCE_ID
+	)/*,
+	'Conference'*/
+);
+
+if( count($conferences) === 0 ) {
+	throw new LogicException( sprintf(
+		"Conference with ID '%s' does not exists!",
+		esc_html( CONFERENCE_ID )
+	) );
 } else {
-    $result = $result->fetch();
-    foreach($result as $tag => $content) {
-        addChild($xml, $conference, $tag, $content);
-    }
+	foreach($conferences as $tag => $content) {
+		addChild($xml, $conference, $tag, $content);
+	}
 }
 
-$events = $dbh->query('SELECT `events`.id, `events`.title, `events`.subtitle, `events`.slug, `events`.abstract, `events`.description, `events`.language,
-rooms.name AS room,
-event_types.name AS type,
-tracks.name AS track,
-`events`.`start`, `events`.`end`
-FROM `events`
-JOIN rooms ON events.room=rooms.id
-JOIN tracks ON events.track=tracks.id
-JOIN event_types ON events.type=event_types.id
-WHERE `events`.conference_id='.CONFERENCE_ID.'
-ORDER BY events.start, rooms.id');
+$events = query_results(
+	sprintf(
+		'SELECT '.
+			'event_ID, '.
+			'event_slug, '.
+			'event_title, '.
+			'event_subtitle, '.
+			'event_abstract, '.
+			'event_description, '.
+			'event_language, '.
+			'event_start, '.
+			'event_end, '.
+			'room.room_ID, '.
+			'room_name, '.
+			'chapter_name, '.
+			'track.track_ID, '.
+			'track_name, '.
+			'chapter.chapter_ID, '.
+			'chapter.chapter_name '.
+			"FROM {$JOIN('event', 'room', 'track', 'chapter')} ".
+		'WHERE '.
+			'event.room_ID = room.room_ID AND '.
+			'event.track_ID = track.track_ID AND '.
+			'event.chapter_ID = chapter.chapter_ID AND '.
+			'conference_ID = %d '.
+		'ORDER BY '.
+			'event_start, '.
+			'room.room_ID'
+
+		,
+		CONFERENCE_ID
+	),
+	'Event'
+);
 
 $events_by_date_then_room = [];
 foreach($events as $event) {
-    // Convert "datetime" fields to PHP DateTime objects
-    $event['start'] = new DateTime($event['start'], $db_timezone);
-    $event['end'] = new DateTime($event['end'], $db_timezone);
-    // Assume they are in DB_TIMEZONE time zone
-    $event['start']->setTimezone($output_timezone);
-    $event['start']->setTimezone($output_timezone);
-    $event['duration'] = $event['start']->diff($event['end']);
+	// Here event_start, event_end are PHP DateTime objects
 
-    $day = $event['start']->format('Y-m-d');
-    
-    // Add various levels to the array, if they don't already exists
-    if(!isset($events_by_date_then_room[$day])) {
-        $events_by_date_then_room[$day] = [];
-    }
+	$event->event_duration = $event->event_start->diff( $event->event_end );
 
-    if(!isset($events_by_date_then_room[$day][$event['room']])) {
-        $events_by_date_then_room[$day][$event['room']] = [];
-    }
+	$day = $event->event_start->format('Y-m-d');
 
-    // And finally, add the event itself
-    $events_by_date_then_room[$day][$event['room']][] = $event;
+	// Add various levels to the array, if they don't already exists
+	if( ! isset($events_by_date_then_room[$day] ) ) {
+		$events_by_date_then_room[$day] = [];
+	}
+
+	$room = $event->room_ID;
+
+	if( ! isset($events_by_date_then_room[$day][$room] ) ) {
+		$events_by_date_then_room[$day][$room] = [];
+	}
+
+	// And finally, add the event itself
+	$events_by_date_then_room[$day][$room][] = $event;
 }
 
-// These are database fields, array keys and XML tags whose content can be taken straight from the database. Others need a little more work to convert to the correct format.
-$keys = ['room', 'title', 'subtitle', 'track', 'type', 'language', 'abstract', 'description', 'slug'];
+// These are database event fields whose content can be taken straight from the database.
+// Others need a little more work to convert to the correct format.
+$keys = [
+	'slug',
+	'title',
+	'subtitle',
+	'language',
+	'abstract',
+	'description'
+];
+
 $day_index = 1;
-//
 $events_by_id = [];
 foreach($events_by_date_then_room as $day_date => $rooms) {
-    $dayxml = addChild($xml, $schedule, 'day', NULL);
-    $dayxml->setAttribute('index', $day_index);
-    $dayxml->setAttribute('date', $day_date);
+	$dayxml = addChild($xml, $schedule, 'day', NULL);
+	$dayxml->setAttribute('index', $day_index);
+	$dayxml->setAttribute('date', $day_date);
 
-    foreach($rooms as $room_name => $events) {
-        $roomxml = addChild($xml, $dayxml, 'room', NULL);
-        $roomxml->setAttribute('name', $room_name);
+	foreach($rooms as $room_name => $events) {
+		$roomxml = addChild($xml, $dayxml, 'room', NULL);
+		$roomxml->setAttribute('name', $room_name);
 
-        foreach($events as $event) {
-            $eventxml = addChild($xml, $roomxml, 'event', NULL);
-            $eventxml->setAttribute('id', $event['id']);
+		foreach($events as $event) {
+			$event_ID = $event->event_ID;
 
-            $events_by_id[$event['id']] = $eventxml;
+			$eventxml = addChild($xml, $roomxml, 'event', NULL);
+			$eventxml->setAttribute('id', $event_ID);
 
-            // this stops PHPStorm from complaining, but most of these elements are really just strings...
-            /** @var $event DateTime[] */
-            // Same exact format, two different parameters since 'start' is a DateTime and 'duration' a DateInterval. Why, PHP, WHY?
-            addChild($xml, $eventxml, 'start', $event['start']->format('H:i'));
-            addChild($xml, $eventxml, 'duration', $event['duration']->format('%H:%I'));
-            // Add elements that don't need any further processing
-            foreach($keys as $k) {
-                addChild($xml, $eventxml, $k, $event[$k]);
-            }
+			$events_by_id[$event_ID] = $eventxml;
 
-        }
-    }
+			// this stops PHPStorm from complaining, but most of these elements are really just strings...
+			/** @var $event DateTime[] */
+			// Same exact format, two different parameters since 'start' is a DateTime and 'duration' a DateInterval. Why, PHP, WHY?
+			addChild($xml, $eventxml, 'start',    $event->event_start->format('H:i') );
+			addChild($xml, $eventxml, 'duration', $event->event_duration->format('%H:%I') );
+			addChild($xml, $eventxml, 'room',     $event->room_ID );
+			addChild($xml, $eventxml, 'track',    $event->track_ID );
+			addChild($xml, $eventxml, 'type',     $event->chapter_ID );
 
-    $day_index++;
+			// Add event fields that don't need any further processing
+			foreach($keys as $k) {
+				addChild($xml, $eventxml, $k, $event->{"event_$k"});
+			}
+
+		}
+	}
+
+	$day_index++;
 }
 
 $lastid = NULL;
 $lastpersons = NULL;
-$select_people = $dbh->query('SELECT `events`.id AS `event`, people.name, people.id FROM people JOIN events_people ON people.id=events_people.person_id JOIN `events` ON `events`.id=events_people.event_id WHERE events.conference_id = '.CONFERENCE_ID.' ORDER BY `event`');
-while($row = $select_people->fetch()) {
-    // This works only because rows are sorted (ORDER BY `event`)
-    if($lastid !== $row['event']) {
-        $lastid = $row['event'];
+$select_people = query(
+	sprintf(
+		'SELECT '.
+			'event.event_ID, '.
+			'user.user_ID, '.
+			'user.user_uid, '.
+			'user_name, '.
+			'user_surname '.
+			 "FROM {$JOIN('event', 'event_user', 'user')} ".
+		'WHERE '.
+			'event.conference_ID = %d AND '.
+			'event.event_ID = event_user.event_ID AND '.
+			'user.user_ID = event_user.user_ID '.
+		'ORDER BY '.
+			'event_ID'
 
-        $personsxml = $xml->createElement('persons');
-        $personsxml = $events_by_id[$row['event']]->appendChild($personsxml);
-        $lastpersons = $personsxml;
-    }
+		,
+		CONFERENCE_ID
+	)
+);
 
-    $personxml = addChild($xml, $lastpersons, 'person', $row['name']);
-    $personxml->setAttribute('id', $row['id']);
+while( $row = $select_people->fetch_object('User') ) {
+	// This works only because rows are sorted (ORDER BY `event`)
+	if($lastid !== $row->event_ID) {
+		$event  = $row->event_ID;
+		$lastid = $event;
+
+		$personsxml  = $xml->createElement('persons');
+		$personsxml  = $events_by_id[$event]->appendChild($personsxml);
+		$lastpersons = $personsxml;
+	}
+
+	$personxml = addChild($xml, $lastpersons, 'person', $row->getUserFullname() );
+	$personxml->setAttribute('id', $row->user_ID);
 }
 
 if(OUTPUT_FILE !== NULL) {
-    // Try to save, if it fails throw an exception
-    if($xml->save(OUTPUT_FILE) === false) {
-        throw new RuntimeException('Failed to write '.OUTPUT_FILE);
-    }
+	// Try to save, if it fails throw an exception
+	if($xml->save(OUTPUT_FILE) === false) {
+		throw new RuntimeException('Failed to write '.OUTPUT_FILE);
+	}
 }
 
 // If we got here, no exception has been raised. Probably.
 if(OUTPUT_RESPONSE) {
-    http_response_code(200);
-    header('Content-type: text/xml; charset=utf-8');
-    echo $xml->saveXML();
+	http_response_code(200);
+	header('Content-type: text/xml; charset=utf-8');
+	echo $xml->saveXML();
 } else {
-    http_response_code(204);
+	http_response_code(204);
 }
 exit();
 
@@ -150,9 +239,9 @@ exit();
  * @return DOMElement
  */
 function addChild($xml, $parent, $tagname, $content) {
-    $child = $xml->createElement($tagname);
-    if($content !== NULL && $content !== '') {
-        $child->textContent = $content;
-    }
-    return $parent->appendChild($child);
+	$child = $xml->createElement($tagname);
+	if($content !== NULL && $content !== '') {
+		$child->textContent = $content;
+	}
+	return $parent->appendChild($child);
 }

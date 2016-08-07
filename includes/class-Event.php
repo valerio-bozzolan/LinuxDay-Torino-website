@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - User profile page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Linux Day 2016 - Construct a database event
+# Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,31 +15,28 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-require 'load.php';
+trait EventTrait {
+	static function prepareEvent(& $t) {
+		if( isset( $t->event_ID ) ) {
+			$t->event_ID   = (int) $t->event_ID;
+		}
 
-$user = null;
+		// MySQL datetime to PHP DateTime
+		if( isset( $t->event_start ) ) {
+			datetime2php($t->event_start);
+		}
 
-if( isset( $_GET['uid'] ) ) {
-	$user = User::queryUser( $_GET['uid'] );
+		// MySQL datetime to PHP DateTime
+		if( isset( $t->event_end ) ) {
+			datetime2php($t->event_end);
+		}
+	}
 }
 
-if( $user ) {
-	the_header('user', [
-		'title' => $user->getUserFullname(),
-		'url'   => $user->getUserProfileURL()
-	] );
-} else {
-	the_header('404', [
-		'not-found' => true
-	] );
-	error("nott foond a.k.a. erroro quattrociantoquatto. (Eseguire coi permessi di root NON risolve la situazione)");
-	the_footer();
-	exit;
+class Event {
+	use EventTrait;
+
+	function __construct() {
+		self::prepareEvent($this);
+	}
 }
-?>
-	<p><?php printf(
-		_("Ciao! Sono <strong>%s</strong>."),
-		esc_html( $user->getUserFullname() )
-	) ?></p>
-<?php
-the_footer();
