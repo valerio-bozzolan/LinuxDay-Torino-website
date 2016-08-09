@@ -74,17 +74,19 @@ if( $user ) {
 	<div class="section">
 		<h3><?php _e("Talks") ?></h3>
 
-	<?php $events = $user->getUserEvents() ?>
+		<?php $events = $user->getUserEvents() ?>
 
 		<?php if($events): ?>
+			<ul class="collection">
 			<?php foreach($events as $event): ?>
-				<?php printf(
+				<li class="collection-item"><?php printf(
 					_("Talk <strong>%s</strong> del <strong>%s</strong> ore <strong>%s</strong>."),
 					$event->event_title,
 					$event->getEventStart("d/m/Y"),
 					$event->getEventStart("H:i")
-				) ?>
+				) ?></li>
 			<?php endforeach ?>
+			</ul>
 		<?php else: ?>
 			<p><?php _e("Al momento non tengo nessun talk.") ?></p>
 		<?php endif ?>
