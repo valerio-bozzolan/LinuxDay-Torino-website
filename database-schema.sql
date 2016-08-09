@@ -24,8 +24,10 @@ DROP TABLE IF EXISTS `chapter`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `chapter` (
   `chapter_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `chapter_uid` varchar(32) NOT NULL,
   `chapter_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`chapter_ID`)
+  PRIMARY KEY (`chapter_ID`),
+  UNIQUE KEY `chapter_uid` (`chapter_uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,8 +40,9 @@ DROP TABLE IF EXISTS `conference`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `conference` (
   `conference_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `conference_title` varchar(100) NOT NULL,
-  `conference_subtitle` varchar(100) DEFAULT NULL,
+  `conference_uid` varchar(64) NOT NULL,
+  `conference_title` varchar(64) NOT NULL,
+  `conference_subtitle` varchar(64) DEFAULT NULL,
   `conference_venue` varchar(100) DEFAULT NULL,
   `conference_city` varchar(100) DEFAULT NULL,
   `conference_start` datetime NOT NULL,
@@ -47,7 +50,8 @@ CREATE TABLE `conference` (
   `conference_days` int(11) NOT NULL,
   `conference_day_change` varchar(8) NOT NULL,
   `conference_timeslot_duration` varchar(8) NOT NULL,
-  PRIMARY KEY (`conference_ID`)
+  PRIMARY KEY (`conference_ID`),
+  UNIQUE KEY `conference_uid` (`conference_uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,7 +64,7 @@ DROP TABLE IF EXISTS `event`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `event` (
   `event_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `event_slug` varchar(100) NOT NULL,
+  `event_slug` varchar(100) NOT NULL COMMENT 'Rename this in _uid in the future',
   `event_title` varchar(100) NOT NULL,
   `event_subtitle` varchar(100) DEFAULT NULL,
   `event_abstract` text,
@@ -112,8 +116,10 @@ DROP TABLE IF EXISTS `room`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `room` (
   `room_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `room_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`room_ID`)
+  `room_uid` varchar(64) NOT NULL,
+  `room_name` varchar(64) NOT NULL,
+  PRIMARY KEY (`room_ID`),
+  UNIQUE KEY `room_uid` (`room_uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -126,8 +132,10 @@ DROP TABLE IF EXISTS `track`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `track` (
   `track_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `track_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`track_ID`)
+  `track_uid` varchar(64) NOT NULL,
+  `track_name` varchar(64) NOT NULL,
+  PRIMARY KEY (`track_ID`),
+  UNIQUE KEY `track_uid` (`track_uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -143,8 +151,11 @@ CREATE TABLE `user` (
   `user_uid` varchar(16) NOT NULL,
   `user_name` varchar(16) NOT NULL,
   `user_surname` varchar(16) NOT NULL,
+  `user_email` varchar(32) NOT NULL,
+  `user_site` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`user_ID`),
-  UNIQUE KEY `user_uid` (`user_uid`)
+  UNIQUE KEY `user_uid` (`user_uid`),
+  UNIQUE KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -157,4 +168,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-07  5:03:19
+-- Dump completed on 2016-08-09 21:50:15
