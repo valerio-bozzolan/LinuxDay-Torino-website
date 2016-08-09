@@ -37,9 +37,36 @@ if( $user ) {
 	exit;
 }
 ?>
-	<p><?php printf(
-		_("Ciao! Sono <strong>%s</strong>."),
-		esc_html( $user->getUserFullname() )
-	) ?></p>
+	<div class="row">
+		<div class="col s2 m4">
+			<img class="responsive-img" src="<?php
+				echo 'https://secure.gravatar.com/avatar/' . md5( $user->user_email ) . '?s=56'
+			?>" alt="<?php
+				_esc_attr( $user->getUserFullname() )
+			?>" title="<?php
+				_esc_attr( $user->getUserFullname() )
+			?> "/>
+		</div>
+		<div class="col s10 m4">
+			<p><?php printf(
+				_("Ciao! Sono <strong>%s</strong>."),
+				esc_html( $user->getUserFullname() )
+			) ?></p>
+		</div>
+
+	</div>
+
+	<?php if( $user->user_site ): ?>
+	<div class="row">
+		<div class="col s12">
+			<?php echo HTML::a(
+				$user->user_site,
+				_("Sito personale") . icon('send', 'right'),
+				null,
+				'btn'
+			) ?>
+		</div>
+	</div>
+	<?php endif ?>
 <?php
 the_footer();

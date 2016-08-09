@@ -77,8 +77,13 @@ function print_menu($uid = null, $level = 0, $args = [] ) {
 	<?php
 }
 
-function icon($icon = 'send') {
-	return '<i class="material-icons">' . $icon . '</i>';
+function icon($icon = 'send', $c = null) {
+	if( $c !== null ) {
+		$c = " $c";
+	} else {
+		$c = '';
+	}
+	return "<i class=\"material-icons$c\">$icon</i>";
 }
 
 function license($code) {

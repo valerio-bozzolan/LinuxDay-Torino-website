@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Homepage
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by

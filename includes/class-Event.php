@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database event
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -74,7 +74,7 @@ class Event {
 					'track_uid, '.
 					'track_name, '.
 					'event.event_ID, '.
-					'event_slug, '. /* TODO: event_uid */
+					'event_uid, '. /* TODO: event_uid */
 					'event_title, '.
 					'event_start, '.
 					'event_end, '.

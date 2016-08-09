@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS `event`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `event` (
   `event_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `event_slug` varchar(100) NOT NULL COMMENT 'Rename this in _uid in the future',
+  `event_uid` varchar(100) NOT NULL,
   `event_title` varchar(100) NOT NULL,
   `event_subtitle` varchar(100) DEFAULT NULL,
   `event_abstract` text,
@@ -77,7 +77,7 @@ CREATE TABLE `event` (
   `track_ID` int(10) unsigned NOT NULL,
   `chapter_ID` int(10) unsigned NOT NULL,
   PRIMARY KEY (`event_ID`),
-  UNIQUE KEY `event_slug` (`event_slug`),
+  UNIQUE KEY `event_uid` (`event_uid`),
   KEY `room_ID` (`room_ID`),
   KEY `track_ID` (`track_ID`),
   KEY `chapter_ID` (`chapter_ID`),
@@ -168,4 +168,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-09 21:50:15
+-- Dump completed on 2016-08-09 23:03:48

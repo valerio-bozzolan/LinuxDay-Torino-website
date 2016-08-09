@@ -12,16 +12,12 @@ TO-DO:
 Il sito web PHP+MySQL/MariaDB usa il framework Boz-PHP.
 
 ### Framework
-
 Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
 ### Database
-
-Il sito non pre-richiede il database, nel senso che non prende spontaneamente fuoco se non lo trova, ma è consigliabile averlo.  
-Una connessione MySQL/MariaDB è richiesta per le API e per la tabella dei talk nella home page.  
-Sono richieste sia l'estensione `pdo_mysql` che `mysqli`.
+Una connessione MySQL/MariaDB è richiesta per le API e per la tabella dei talk nella home page. È richiesta l'estensione `mysqli`.
 
 Copiare `load-sample.php` in `load.php` (eventualmente popolando le credenziali di un database creato importando `database-schema.sql`).
 

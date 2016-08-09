@@ -32,7 +32,7 @@ $schedule   = $xml->appendChild($schedule);
 $conference = $xml->createElement('conference');
 $conference = $schedule->appendChild($conference);
 
-$conferences = query_row(
+$conference_row = query_row(
 	sprintf(
 		'SELECT '.
 			'conference_title, '.
@@ -53,14 +53,26 @@ $conferences = query_row(
 	'Conference'*/
 );
 
-if( count($conferences) === 0 ) {
+if( ! $conference_row ) {
 	throw new LogicException( sprintf(
 		"Conference with ID '%s' does not exists!",
 		esc_html( CONFERENCE_ID )
 	) );
 } else {
-	foreach($conferences as $tag => $content) {
-		addChild($xml, $conference, $tag, $content);
+	$conference_fields = [
+		'title',
+		'subtitle',
+		'venue',
+		'city',
+		'start',
+		'end',
+		'days',
+		'day_change',
+		'timeslot_duration'
+	];
+
+	foreach($conference_fields as $field) {
+		addChild($xml, $conference, $field, $conference_row->{"conference_$field"});
 	}
 }
 
@@ -68,7 +80,7 @@ $events = query_results(
 	sprintf(
 		'SELECT '.
 			'event_ID, '.
-			'event_slug, '.
+			'event_uid, '.
 			'event_title, '.
 			'event_subtitle, '.
 			'event_abstract, '.
@@ -82,7 +94,7 @@ $events = query_results(
 			'track.track_ID, '.
 			'track_name, '.
 			'chapter.chapter_ID, '.
-			'chapter.chapter_name '.
+			'chapter_name '.
 			"FROM {$JOIN('event', 'room', 'track', 'chapter')} ".
 		'WHERE '.
 			'event.room_ID = room.room_ID AND '.
@@ -98,6 +110,9 @@ $events = query_results(
 	),
 	'Event'
 );
+
+// Room names indexed by room_ID
+$room_names = [];
 
 $events_by_date_then_room = [];
 foreach($events as $event) {
@@ -118,6 +133,8 @@ foreach($events as $event) {
 		$events_by_date_then_room[$day][$room] = [];
 	}
 
+	$room_names[ $room ] = $event->room_name;
+
 	// And finally, add the event itself
 	$events_by_date_then_room[$day][$room][] = $event;
 }
@@ -125,7 +142,6 @@ foreach($events as $event) {
 // These are database event fields whose content can be taken straight from the database.
 // Others need a little more work to convert to the correct format.
 $keys = [
-	'slug',
 	'title',
 	'subtitle',
 	'language',
@@ -140,9 +156,12 @@ foreach($events_by_date_then_room as $day_date => $rooms) {
 	$dayxml->setAttribute('index', $day_index);
 	$dayxml->setAttribute('date', $day_date);
 
-	foreach($rooms as $room_name => $events) {
+	foreach($rooms as $room_ID => $events) {
 		$roomxml = addChild($xml, $dayxml, 'room', NULL);
-		$roomxml->setAttribute('name', $room_name);
+
+		// 9 agosto 2016 22:30 Ludovico says that this does not exist. OK.
+		// 9 agosto 2016 22:31 Ludovico says that this exists. OK.
+		$roomxml->setAttribute('name', $room_names[ $room_ID ] );
 
 		foreach($events as $event) {
 			$event_ID = $event->event_ID;
@@ -155,11 +174,12 @@ foreach($events_by_date_then_room as $day_date => $rooms) {
 			// this stops PHPStorm from complaining, but most of these elements are really just strings...
 			/** @var $event DateTime[] */
 			// Same exact format, two different parameters since 'start' is a DateTime and 'duration' a DateInterval. Why, PHP, WHY?
+			addChild($xml, $eventxml, 'slug',    $event->event_uid );
 			addChild($xml, $eventxml, 'start',    $event->event_start->format('H:i') );
 			addChild($xml, $eventxml, 'duration', $event->event_duration->format('%H:%I') );
-			addChild($xml, $eventxml, 'room',     $event->room_ID );
-			addChild($xml, $eventxml, 'track',    $event->track_ID );
-			addChild($xml, $eventxml, 'type',     $event->chapter_ID );
+			addChild($xml, $eventxml, 'room',     $event->room_name );
+			addChild($xml, $eventxml, 'track',    $event->track_name );
+			addChild($xml, $eventxml, 'type',     $event->chapter_name );
 
 			// Add event fields that don't need any further processing
 			foreach($keys as $k) {
@@ -208,6 +228,7 @@ while( $row = $select_people->fetch_object('User') ) {
 
 	$personxml = addChild($xml, $lastpersons, 'person', $row->getUserFullname() );
 	$personxml->setAttribute('id', $row->user_ID);
+	$personxml->setAttribute('slug', $row->user_uid);
 }
 
 if(OUTPUT_FILE !== NULL) {
