@@ -72,20 +72,29 @@ the_header('home');
 
 	<div id="talk" class="divider"></div>
 	<div class="section">
+		<?php $eventsTable = new EventsTable() ?>
+
 		<h3><?php _e("Talk") ?></h3>
 		<p class="flow-text"><?php printf(
 			_(
-				"Un ampio programma fatto di %s talk di un'ora ciascuno, ".
+				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
 				"affrontando tematiche riguardanti il software libero su più livelli, ".
 				"per soddisfare le esigenze di un ampio pubblico (dai più piccoli, al curioso, fino agli esperti)."
 			),
-			"<b>16</b>"
+			sprintf(
+				"<b>%d</b>",
+				$eventsTable->countEvents()
+			),
+			sprintf(
+				"<b>%d</b>",
+				$eventsTable->getHours()
+			)
 		) ?></p>
 		<p><?php _e("In seguito si riporta la tabella dei talk suddivisa in quattro categorie:") ?></p>
 
-		<?php /* new TalksTable() */ ?>
+		<?php $eventsTable->printTable(); ?>
 
-		<p><?php _e("La tabella moh non può funzionare, ma immaginala forte.") ?></p>
+		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
 	<div id="play" class="divider"></div>

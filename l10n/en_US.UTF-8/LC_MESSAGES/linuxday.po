@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-09 18:57+0200\n"
+"POT-Creation-Date: 2016-08-09 21:46+0200\n"
 "PO-Revision-Date: 2016-07-09 15:55+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: credits.php:46
 msgid "Sistema operativo del server web."
-msgstr ""
+msgstr "Operating system of the web server."
 
 #: credits.php:52
 msgid "Server web."
@@ -38,11 +38,11 @@ msgstr "Hypertext preprocessor."
 
 #: credits.php:64
 msgid "Framework per internazionalizzazione e localizzazione dei messaggi."
-msgstr ""
+msgstr "Framework for message internationalization and localization."
 
 #: credits.php:70
 msgid "Framework PHP e MySQL/MariaDB."
-msgstr ""
+msgstr "PHP and MySQL/MariaDB framework."
 
 #: credits.php:76
 msgid "Certificato SSL."
@@ -50,7 +50,7 @@ msgstr "SSL certificate."
 
 #: credits.php:82
 msgid "Framework CSS e JavaScript in stile Material Design."
-msgstr ""
+msgstr "CSS and JavaScript Material Design framework"
 
 #: credits.php:88
 msgid "Famiglia di caratteri."
@@ -58,19 +58,19 @@ msgstr "Font family."
 
 #: credits.php:94
 msgid "Collezione di icone Material Design."
-msgstr ""
+msgstr "Material Design icons collection."
 
 #: credits.php:100
 msgid "Mappa del Dipartimento di Informatica di Torino."
-msgstr ""
+msgstr "Map of the Information Technology department of Torino."
 
 #: credits.php:109
 msgid "Strumenti utilizzati"
-msgstr ""
+msgstr "Tools used"
 
 #: credits.php:110
 msgid "Alcuni strumenti utilizzati per la realizzazione del sito web:"
-msgstr ""
+msgstr "Some tools used to make the web site:"
 
 #: credits.php:117
 msgid "https://inkscape.org/en/"
@@ -78,11 +78,11 @@ msgstr "https://inkscape.org/it/"
 
 #: credits.php:119
 msgid "Ritocchi alla mappa di OpenStreetMap in formato SVG."
-msgstr ""
+msgstr "Tweaks at the OpenStreetMap SVG map."
 
 #: credits.php:125
 msgid "Banale editor di testo da terminale."
-msgstr ""
+msgstr "Insignificant terminal text editor."
 
 #: index.php:25
 msgid ""
@@ -113,9 +113,9 @@ msgstr ""
 
 #: index.php:50
 msgid ""
-"Puoi prendere il tram n°<strong>9</strong> e n°<strong>13</strong>, "
-"scendendo alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di "
-"Informatica</em>."
+"Puoi prendere il tram n°<strong>9</strong> e n°<strong>3</strong>, scendendo "
+"alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di Informatica</"
+"em>."
 msgstr ""
 
 #: index.php:57 index.php:63
@@ -126,134 +126,72 @@ msgstr ""
 msgid "Vedi su OpenStreetMap"
 msgstr "See on OpenStreetMap"
 
-#: index.php:75
+#: index.php:77
 msgid "Talk"
-msgstr ""
+msgstr "Talk"
 
-#: index.php:78
+#: index.php:80
 #, php-format
 msgid ""
-"Un ampio programma fatto di %s talk di un'ora ciascuno, affrontando "
-"tematiche riguardanti il software libero su più livelli, per soddisfare le "
-"esigenze di un ampio pubblico (dai più piccoli, al curioso, fino agli "
-"esperti)."
+"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s "
+"ore, affrontando tematiche riguardanti il software libero su più livelli, "
+"per soddisfare le esigenze di un ampio pubblico (dai più piccoli, al "
+"curioso, fino agli esperti)."
 msgstr ""
 
-#: index.php:84
+#: index.php:93
 msgid ""
 "In seguito si riporta la tabella dei talk suddivisa in quattro categorie:"
 msgstr ""
 
-#: index.php:89
-msgid "Area Base"
-msgstr "Base Area"
-
-#: index.php:90
-msgid "Area Dev"
-msgstr "Dev Area"
-
-#: index.php:91
-msgid "Area Sysadmin"
-msgstr "Sysadmin Area"
-
-#: index.php:92
-msgid "Area Misc"
-msgstr "Misc Area"
-
-#: index.php:98
-#, php-format
-msgid "%d° ora"
-msgstr "%d° hour"
-
-#: index.php:109
-msgid "Coding come strumento didattico"
-msgstr ""
-
-#: index.php:110
-msgid "JavaScript"
-msgstr "JavaScript"
-
-#: index.php:111
-msgid "IPV6"
-msgstr "IPV6"
-
-#: index.php:112
-msgid "Progetto con Arduino"
-msgstr ""
-
-#: index.php:120
-msgid "Il software libero nella PA"
-msgstr ""
-
-#: index.php:121 index.php:122 index.php:123 index.php:132 index.php:133
-#: index.php:143 index.php:144
-msgid "?"
-msgstr ""
-
-#: index.php:131
-msgid "Introduzione a GNU/Linux"
-msgstr ""
-
-#: index.php:134
-msgid "WEEE Open - Sostenibilità & Open source"
-msgstr ""
-
-#: index.php:142
-msgid "Make FLOSS Sexy"
-msgstr ""
-
-#: index.php:145
-msgid "Security"
-msgstr ""
-
-#: index.php:150
+#: index.php:97
 msgid "La tabella potrebbe subire variazioni."
-msgstr ""
+msgstr "The table can change anytime."
 
-#: index.php:155
+#: index.php:102
 msgid "Attività"
 msgstr ""
 
-#: index.php:156
+#: index.php:103
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr ""
 
-#: index.php:163
+#: index.php:110
 #, php-format
 msgid "Gestito %s %s."
 msgstr "Maintained %s %s."
 
-#: index.php:163
+#: index.php:110
 msgid "da"
 msgstr "by"
 
-#: index.php:170
+#: index.php:117
 msgid ""
 "Assistenza tecnica software libero (LIP - Linux Installation Party) "
 "(Installazione distribuzioni GNU/Linux e helpdesk)"
 msgstr ""
 
-#: index.php:171
+#: index.php:118
 msgid "Officina Informatica Libera"
 msgstr ""
 
-#: index.php:175
+#: index.php:122
 msgid "Riparazione di apparecchiature elettroniche"
 msgstr ""
 
-#: index.php:176
+#: index.php:123
 msgid "Associazione Tesso"
 msgstr ""
 
-#: index.php:180
+#: index.php:127
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
 msgstr ""
 
-#: index.php:181
+#: index.php:128
 msgid "CoderDojo Torino"
 msgstr ""
 
-#: index.php:185
+#: index.php:132
 msgid "Allestimento museale di Retrocomputing"
 msgstr ""
 
@@ -275,11 +213,51 @@ msgstr "Welcome"
 msgid "Crediti"
 msgstr "Credits"
 
+#: load-post.php:72
+msgid "API"
+msgstr ""
+
+#: people.php:41
+#, php-format
+msgid "Ciao! Sono <strong>%s</strong>."
+msgstr ""
+
+#: includes/class-EventsTable.php:76
+msgid "Ora"
+msgstr ""
+
+#: includes/class-EventsTable.php:86
+#, php-format
+msgid "%d° ora"
+msgstr "%d° hour"
+
+#: includes/class-EventsTable.php:94
+#, php-format
+msgid "%s di %s."
+msgstr ""
+
+#: includes/class-EventsTable.php:99
+msgid "Nessun talk pianificato."
+msgstr ""
+
+#: includes/class-EventsTable.php:115
+msgid "nessuno"
+msgstr ""
+
+#: includes/class-EventsTable.php:123
+msgid ", "
+msgstr ""
+
+#: includes/class-EventsTable.php:132
+#, php-format
+msgid "%s e %s"
+msgstr ""
+
 #: includes/class-Footer.php:49
 #, php-format
 msgid ""
 "Tutti i contenuti sono rilasciati sotto licenza di <strong>contenuto "
-"culturalmente libero</strong> %s. Sei libero di distribuire e/o modificare i "
+"culturale libero</strong> %s. Sei libero di distribuire e/o modificare i "
 "contenuti anche per scopi commerciali, fintanto che si cita la provenienza e "
 "si ricondivide sotto la medesima licenza."
 msgstr ""
@@ -312,15 +290,15 @@ msgstr ""
 msgid "Pagina generata in %s secondi con %d query al database."
 msgstr "Page generated in %s seconds with %d queries to a database."
 
-#: includes/class-Header.php:80 includes/class-Header.php:110
+#: includes/class-Header.php:85 includes/class-Header.php:115
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
-#: includes/class-Header.php:83
+#: includes/class-Header.php:88
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: includes/class-Header.php:114
+#: includes/class-Header.php:119
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
@@ -347,3 +325,31 @@ msgstr "Creative Commons - Attribution 4.0 International"
 #: includes/class-Licenses.php:29
 msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by/4.0/deed"
+
+#: includes/class-User.php:27
+#, php-format
+msgid "%s %s"
+msgstr ""
+
+#: includes/class-User.php:44
+#, php-format
+msgid "Profilo utente di %s"
+msgstr ""
+
+#~ msgid "Area Base"
+#~ msgstr "Base Area"
+
+#~ msgid "Area Dev"
+#~ msgstr "Dev Area"
+
+#~ msgid "Area Sysadmin"
+#~ msgstr "Sysadmin Area"
+
+#~ msgid "Area Misc"
+#~ msgstr "Misc Area"
+
+#~ msgid "JavaScript"
+#~ msgstr "JavaScript"
+
+#~ msgid "IPV6"
+#~ msgstr "IPV6"
