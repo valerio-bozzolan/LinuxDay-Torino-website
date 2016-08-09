@@ -48,7 +48,7 @@ if( $user ) {
 			?> "/>
 		</div>
 		<div class="col s10 m4">
-			<p><?php printf(
+			<p class="flow-text"><?php printf(
 				_("Ciao! Sono <strong>%s</strong>."),
 				esc_html( $user->getUserFullname() )
 			) ?></p>
@@ -68,5 +68,26 @@ if( $user ) {
 		</div>
 	</div>
 	<?php endif ?>
+
+	<div class="divider"></div>
+
+	<div class="section">
+		<h3><?php _e("Talks") ?></h3>
+
+	<?php $events = $user->getUserEvents() ?>
+
+		<?php if($events): ?>
+			<?php foreach($events as $event): ?>
+				<?php printf(
+					_("Talk <strong>%s</strong> del <strong>%s</strong> ore <strong>%s</strong>."),
+					$event->event_title,
+					$event->getEventStart("d/m/Y"),
+					$event->getEventStart("H:i")
+				) ?>
+			<?php endforeach ?>
+		<?php else: ?>
+			<p><?php _e("Al momento non tengo nessun talk.") ?></p>
+		<?php endif ?>
+	</div>
 <?php
 the_footer();

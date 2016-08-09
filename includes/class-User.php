@@ -47,6 +47,27 @@ trait UserTrait {
 			$html_class
 		);
 	}
+
+	function getUserEvents() {
+		return query_results(
+			sprintf(
+				'SELECT '.
+					'event_uid, '.
+					'event_title, '.
+					'event_start, '.
+					'event_end '.
+					"FROM {$GLOBALS[JOIN]('event', 'event_user')} " .
+				'WHERE '.
+					'event_user.user_ID = %d AND '.
+					'event_user.event_ID = event.event_ID '.
+				'ORDER BY '.
+					'event_start'
+				,
+				$this->user_ID
+			),
+			'Event'
+		);
+	}
 }
 
 class User {
