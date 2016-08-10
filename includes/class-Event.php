@@ -69,12 +69,12 @@ class Event {
 
 		// Yes, I want to obtain duplicates
 		$events = query_results(
-			$sql = sprintf(
+			sprintf(
 				'SELECT '.
 					'track_uid, '.
 					'track_name, '.
 					'event.event_ID, '.
-					'event_uid, '. /* TODO: event_uid */
+					'event_uid, '.
 					'event_title, '.
 					'event_start, '.
 					'event_end, '.
@@ -132,8 +132,13 @@ class Event {
 
 			// Next hour if it's really ANOTHER event (and not a duplicate)
 			if( $hour !== $last_hour ) {
-				// `$hour - $last_hour` is often only 1
-				$incremental_hour = $hour - $last_hour;
+				if( $incremental_hour === 0 ) {
+					$incremental_hour = 1;
+				} else {
+					// `$hour - $last_hour` is often only 1
+					// Set to ++ to skip empty spaces
+					$incremental_hour = $hour - $last_hour;
+				}
 			}
 
 			// Fill `->hour`
