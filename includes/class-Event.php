@@ -66,6 +66,7 @@ class Event {
 	 * @return array
 	 */
 	static function queryEvents() {
+		global $JOIN;
 
 		// Yes, I want to obtain duplicates
 		$events = query_results(
@@ -81,10 +82,10 @@ class Event {
 					'user_uid, '.
 					'user_name, '.
 					'user_surname '.
-					" FROM {$GLOBALS[JOIN]('track', 'event')} ".
-						"LEFT JOIN {$GLOBALS[JOIN]('event_user')} ".
+					" FROM {$JOIN('track', 'event')} ".
+						"LEFT JOIN {$JOIN('event_user')} ".
 							'ON (event.event_ID = event_user.event_ID) '.
-						"LEFT JOIN {$GLOBALS[JOIN]('user')} ".
+						"LEFT JOIN {$JOIN('user')} ".
 							'ON (event_user.user_ID = user.user_ID) '.
 				'WHERE '.
 					'event.conference_ID = %d AND '.

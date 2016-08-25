@@ -23,7 +23,7 @@
 #############################################################################
 
 # The copyright older of your localization
-copyright="Valerio Bozzolan"
+copyright="Linux Day 2016 website contributors"
 
 # The prefix of your localization's files
 # You have to know how GNU Gettext works to change it.

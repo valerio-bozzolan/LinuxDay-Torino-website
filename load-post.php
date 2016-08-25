@@ -19,12 +19,6 @@
 defined('ABSPATH') || exit;
 
 ///////////////////////////////////////////////////////////////////
-// PRON stuff
-define('CONTACT_EMAIL', 'asd@example.org');
-define('SERVER',     "Apache");
-define('UNAME',      "Debian GNU/Linux stable");
-
-///////////////////////////////////////////////////////////////////
 // Boz-PHP: GNU Gettext configuration
 define('GETTEXT_DOMAIN',         'linuxday');
 define('GETTEXT_DIRECTORY',      'l10n');

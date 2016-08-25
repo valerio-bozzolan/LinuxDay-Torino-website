@@ -49,6 +49,8 @@ trait UserTrait {
 	}
 
 	function getUserEvents() {
+		global $JOIN;
+
 		return query_results(
 			sprintf(
 				'SELECT '.
@@ -56,7 +58,7 @@ trait UserTrait {
 					'event_title, '.
 					'event_start, '.
 					'event_end '.
-					"FROM {$GLOBALS[JOIN]('event', 'event_user')} " .
+					"FROM {$JOIN('event', 'event_user')} " .
 				'WHERE '.
 					'event_user.user_ID = %d AND '.
 					'event_user.event_ID = event.event_ID '.
@@ -78,9 +80,11 @@ class User {
 	}
 
 	static function queryUser($uid) {
+		global $T;
+
 		return query_row(
 			sprintf(
-				"SELECT * FROM {$GLOBALS[T]('user')} WHERE user_uid = '%s'",
+				"SELECT * FROM {$T('user')} WHERE user_uid = '%s'",
 				esc_sql( $uid )
 			),
 			'User'

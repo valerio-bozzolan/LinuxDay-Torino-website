@@ -46,5 +46,10 @@ define('ABSPATH', __DIR__ );
 // User for events
 define('DB_TIMEZONE', 'UTC');
 
+// Other stuff
+define('CONTACT_EMAIL', 'asd@example.org');
+define('SERVER',     "Apache");
+define('UNAME',      "Debian GNU/Linux stable");
+
 // Path to Boz-PHP/load.php
 require '/usr/share/boz-php-another-php-framework/load.php';

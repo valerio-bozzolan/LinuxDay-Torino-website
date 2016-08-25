@@ -20,12 +20,12 @@ class Header {
 		$menu = get_menu_entry($menu_uid);
 
 		$args = merge_args_defaults($args, [
-			'title' => $menu->name,
-			'url'   => $menu->url,
-			'og'    => [],
+			'title'       => $menu->name,
+			'url'         => $menu->url,
+			'og'          => [],
 			'not-found'   => false,
 			'user-navbar' => true,
-			'container' => true
+			'container'   => true
 		] );
 
 		header('Content-Type: text/html; charset=' . CHARSET);

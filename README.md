@@ -17,9 +17,11 @@ Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
 ### Database
-Una connessione MySQL/MariaDB è richiesta per le API e per la tabella dei talk nella home page. È richiesta l'estensione `mysqli`.
+Una connessione MySQL/MariaDB è richiesta la tabella dei talk nella home page e per le API. È richiesta l'estensione `mysqli`.
 
 Copiare `load-sample.php` in `load.php` (eventualmente popolando le credenziali di un database creato importando `database-schema.sql`).
+
+Copiare `api/config-sample.php` in `api/config.php`.
 
 ### Localizzazione\lingua
 Lanciare `./l10n/localize.sh .` almeno una volta per aggiornare il template GNU Gettext `.pot` e i relativi `.po` con le stringhe contenute nel codice sorgente dentro le funzioni `_()` ed `_e()`.

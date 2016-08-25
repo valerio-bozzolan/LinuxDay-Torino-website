@@ -89,7 +89,10 @@ class EventsTable {
 				<?php foreach($this->getTracks() as $track): ?>
 				<td><?php
 					if( isset( $this->events[$h][$track->track_uid] ) ) {
-						$title = "<strong>{$this->events[$h][$track->track_uid]->event_title}</strong>";
+						$title = sprintf(
+							"<strong>%s</strong>",
+							$this->events[$h][$track->track_uid]->event_title
+						);
 						printf(
 							_("%s di %s."),
 							$title,
