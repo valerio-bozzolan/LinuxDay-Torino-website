@@ -82,10 +82,10 @@ CREATE TABLE `event` (
   KEY `track_ID` (`track_ID`),
   KEY `chapter_ID` (`chapter_ID`),
   KEY `conference_ID` (`conference_ID`),
-  CONSTRAINT `events_ibfk_5` FOREIGN KEY (`conference_ID`) REFERENCES `conference` (`conference_ID`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `chapter` (`chapter_ID`) ON UPDATE NO ACTION,
-  CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `track` (`track_ID`) ON UPDATE NO ACTION,
-  CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `room` (`room_ID`) ON UPDATE NO ACTION
+  CONSTRAINT `events_ibfk_5` FOREIGN KEY (`conference_ID`) REFERENCES `conference` (`conference_ID`) ON DELETE CASCADE,
+  CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `chapter` (`chapter_ID`),
+  CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `track` (`track_ID`),
+  CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `room` (`room_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,8 +102,8 @@ CREATE TABLE `event_user` (
   UNIQUE KEY `user_ID_event_ID` (`event_ID`,`user_ID`),
   KEY `user_ID` (`user_ID`),
   KEY `event_ID` (`event_ID`),
-  CONSTRAINT `event_user_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `user` (`user_ID`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  CONSTRAINT `event_user_ibfk_2` FOREIGN KEY (`event_ID`) REFERENCES `event` (`event_ID`) ON DELETE CASCADE ON UPDATE NO ACTION
+  CONSTRAINT `event_user_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `user` (`user_ID`) ON DELETE CASCADE,
+  CONSTRAINT `event_user_ibfk_2` FOREIGN KEY (`event_ID`) REFERENCES `event` (`event_ID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -120,6 +120,24 @@ CREATE TABLE `room` (
   `room_name` varchar(64) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`room_ID`),
   UNIQUE KEY `room_uid` (`room_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `skill`
+--
+
+DROP TABLE IF EXISTS `skill`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `skill` (
+  `skill_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `skill_uid` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `skill_title` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `skill_type` enum('programming','subject') COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`skill_ID`),
+  UNIQUE KEY `skill_uid` (`skill_uid`),
+  KEY `skill_type` (`skill_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -153,9 +171,29 @@ CREATE TABLE `user` (
   `user_surname` varchar(20) CHARACTER SET utf8 NOT NULL,
   `user_email` varchar(32) CHARACTER SET utf8 NOT NULL,
   `user_site` varchar(64) CHARACTER SET utf8 DEFAULT NULL,
+  `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `user_skill`
+--
+
+DROP TABLE IF EXISTS `user_skill`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_skill` (
+  `user_ID` int(10) unsigned NOT NULL,
+  `skill_ID` int(10) unsigned NOT NULL,
+  `skill_score` int(11) NOT NULL,
+  PRIMARY KEY (`user_ID`,`skill_ID`),
+  KEY `skill_ID` (`skill_ID`),
+  KEY `skill_score` (`skill_score`),
+  CONSTRAINT `user_skill_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `user` (`user_ID`) ON DELETE CASCADE,
+  CONSTRAINT `user_skill_ibfk_2` FOREIGN KEY (`skill_ID`) REFERENCES `skill` (`skill_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -168,4 +206,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-10 11:30:22
+-- Dump completed on 2016-08-25 18:32:16

@@ -70,6 +70,33 @@ trait UserTrait {
 			'Event'
 		);
 	}
+
+	function getUserSkills() {
+		global $JOIN;
+
+		return query_results(
+			sprintf(
+				'SELECT '.
+					'skill_uid, '.
+					'skill_title, ' .
+					'skill_score ' .
+					"FROM {$JOIN('user_skill', 'skill')} ".
+				'WHERE '.
+					'user_skill.user_ID = %d AND '.
+					'user_skill.skill_ID = skill.skill_ID ' .
+				'ORDER BY '.
+					'skill_score < 0, '.
+					'ABS(skill_score)'
+				,
+				$this->user_ID
+			),
+			'Skill'
+		);
+	}
+
+	function getUserImageURL() {
+		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email );
+	}
 }
 
 class User {

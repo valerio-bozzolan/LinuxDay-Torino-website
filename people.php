@@ -37,17 +37,11 @@ if( $user ) {
 	exit;
 }
 ?>
-
-	<p class="flow-text"><?php printf(
-		_("Ciao! Sono <strong>%s</strong>."),
-		esc_html( $user->getUserFullname() )
-	) ?></p>
-
 	<div class="row">
 		<div class="col s12 l4">
 			<div class="valign-wrapper">
 				<img class="responsive-img hoverable z-depth-1" src="<?php
-					echo 'https://secure.gravatar.com/avatar/' . md5( $user->user_email ) . '?s=128'
+					echo $user->getUserImageURL() . '?s=128'
 				?>" alt="<?php
 					_esc_attr( $user->getUserFullname() )
 				?>" title="<?php
@@ -58,14 +52,26 @@ if( $user ) {
 
 		<?php if( $user->user_site ): ?>
 		<div class="col s12 l8">
-			<div class="card-panel">
-				<p><?php echo HTML::a(
-					$user->user_site,
-					_("Sito personale") . icon('send', 'right'),
-					null,
-					'btn'
-				) ?></p>
-			</div>
+			<p><?php echo HTML::a(
+				$user->user_site,
+				_("Sito personale") . icon('send', 'right'),
+				null,
+				'btn'
+			) ?></p>
+		</div>
+		<?php endif ?>
+
+		<?php if( $skills = $user->getUserSkills() ): ?>
+		<div class="col s12 l8">
+			<p><?php _e("Le mie skill:") ?></p>
+			<table>
+				<?php foreach($skills as $skill): ?>
+				<tr>
+					<td><code><?php echo $skill->getSkillCode() ?></code></td>
+					<td>(<?php echo $skill->getSkillPhrase() ?>)</td>
+				</tr>
+				<?php endforeach ?>
+			</table>
 		</div>
 		<?php endif ?>
 
@@ -74,21 +80,30 @@ if( $user ) {
 	<div class="divider"></div>
 
 	<div class="section">
-		<h3><?php _e("Talks") ?></h3>
+		<h3><?php _e("Talk condotti") ?></h3>
 
 		<?php $events = $user->getUserEvents() ?>
 
 		<?php if($events): ?>
-			<ul class="collection">
+			<table>
+			<thead>
+				<th><?php _e("Nome talk") ?></th>
+				<th><?php _e("Orario") ?></th>
+			</thead>
 			<?php foreach($events as $event): ?>
-				<li class="collection-item"><?php printf(
-					_("Talk <strong>%s</strong> del <strong>%s</strong> ore <strong>%s</strong>."),
-					$event->event_title,
-					$event->getEventStart("d/m/Y"),
-					$event->getEventStart("H:i")
-				) ?></li>
+			<tr>
+				<td><?php printf(
+					"<strong>%s</strong>",
+					esc_html( $event->event_title )
+				) ?></td>
+				<td><?php printf(
+					_("Ore <b>%s</b> (il %s)"),
+					$event->getEventStart("H:i"),
+					$event->getEventStart("d/m/Y")
+				) ?></td>
+			</tr>
 			<?php endforeach ?>
-			</ul>
+			</table>
 		<?php else: ?>
 			<p><?php _e("Al momento non tengo nessun talk.") ?></p>
 		<?php endif ?>
