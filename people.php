@@ -37,37 +37,39 @@ if( $user ) {
 	exit;
 }
 ?>
+
+	<p class="flow-text"><?php printf(
+		_("Ciao! Sono <strong>%s</strong>."),
+		esc_html( $user->getUserFullname() )
+	) ?></p>
+
 	<div class="row">
-		<div class="col s2 m4">
-			<img class="responsive-img" src="<?php
-				echo 'https://secure.gravatar.com/avatar/' . md5( $user->user_email ) . '?s=56'
-			?>" alt="<?php
-				_esc_attr( $user->getUserFullname() )
-			?>" title="<?php
-				_esc_attr( $user->getUserFullname() )
-			?> "/>
-		</div>
-		<div class="col s10 m4">
-			<p class="flow-text"><?php printf(
-				_("Ciao! Sono <strong>%s</strong>."),
-				esc_html( $user->getUserFullname() )
-			) ?></p>
+		<div class="col s12 l4">
+			<div class="valign-wrapper">
+				<img class="responsive-img hoverable z-depth-1" src="<?php
+					echo 'https://secure.gravatar.com/avatar/' . md5( $user->user_email ) . '?s=128'
+				?>" alt="<?php
+					_esc_attr( $user->getUserFullname() )
+				?>" title="<?php
+					_esc_attr( $user->getUserFullname() )
+				?> "/>
+			</div>
 		</div>
 
-	</div>
-
-	<?php if( $user->user_site ): ?>
-	<div class="row">
-		<div class="col s12">
-			<?php echo HTML::a(
-				$user->user_site,
-				_("Sito personale") . icon('send', 'right'),
-				null,
-				'btn'
-			) ?>
+		<?php if( $user->user_site ): ?>
+		<div class="col s12 l8">
+			<div class="card-panel">
+				<p><?php echo HTML::a(
+					$user->user_site,
+					_("Sito personale") . icon('send', 'right'),
+					null,
+					'btn'
+				) ?></p>
+			</div>
 		</div>
+		<?php endif ?>
+
 	</div>
-	<?php endif ?>
 
 	<div class="divider"></div>
 
