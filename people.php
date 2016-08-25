@@ -67,7 +67,7 @@ if( $user ) {
 			<table>
 				<?php foreach($skills as $skill): ?>
 				<tr>
-					<td><code><?php echo $skill->getSkillCode() ?></code></td>
+					<td><div class="chip"><code><?php echo $skill->getSkillCode() ?></code></div></td>
 					<td>(<?php echo $skill->getSkillPhrase() ?>)</td>
 				</tr>
 				<?php endforeach ?>
