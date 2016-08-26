@@ -58,8 +58,8 @@ if( $user ) {
 					<p><?php echo HTML::a(
 						$user->user_site,
 						_("Sito personale") . icon('send', 'right'),
-							null,
-						'btn'
+						null,
+						'btn waves-effect waves-light'
 					) ?></p>
 				</div>
 			</div>
@@ -78,7 +78,7 @@ if( $user ) {
 				<div class="col s12">
 					<p><?php _e("Le mie skill:") ?></p>
 					<?php while( $skill = $skills->fetch_object('Skill') ): ?>
-						<div class="chip tooltipped" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
+						<div class="chip tooltipped hoverable" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
 					<?php endwhile ?>
 				</div>
 			</div>
@@ -126,8 +126,10 @@ if( $user ) {
 		<?php if($events): ?>
 			<table>
 			<thead>
+			<tr>
 				<th><?php _e("Nome talk") ?></th>
 				<th><?php _e("Orario") ?></th>
+			<tr>
 			</thead>
 			<?php foreach($events as $event): ?>
 			<tr>
