@@ -183,15 +183,3 @@ if( $user ) {
 	<!-- End social -->
 <?php
 the_footer();
-
-        function getUserFacebruck() {
-                return 'https://facebook.com/' . $this->user_fb;
-        }
-
-        function getUserGuggolpluz() {
-                return 'https://plus.google.com/' . $this->user_googl;
-        }
-
-        function getUserTuitt() {
-                return 'https://twitter.com/' . $this->user_twtr;
-        }
