@@ -59,6 +59,26 @@ class Event {
 		self::prepareUser($this);
 	}
 
+	static function getQueryUserEvents($user_ID) {
+		global $JOIN;
+
+		return sprintf(
+			'SELECT '.
+				'event_uid, '.
+				'event_title, '.
+				'event_start, '.
+				'event_end '.
+				"FROM {$JOIN('event', 'event_user')} " .
+			'WHERE '.
+				'event_user.user_ID = %d AND '.
+				'event_user.event_ID = event.event_ID '.
+			'ORDER BY '.
+				'event_start'
+			,
+			$user_ID
+		);
+	}
+
 	/**
 	 * Query events ordered by tracks with event-users.
 	 * Every row is filled with an handy array of users (`->users`) and an incremental hour (`->hour`)

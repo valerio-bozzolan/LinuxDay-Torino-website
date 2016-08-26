@@ -74,3 +74,5 @@ register_expected('LICENSES', 'Licenses');
 
 // Common functions
 require ABSPATH . INCLUDES . '/functions.php';
+
+define('ISO_LANG', get_iso_lang() );

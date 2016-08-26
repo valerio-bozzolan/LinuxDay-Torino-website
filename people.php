@@ -57,7 +57,7 @@ if( $user ) {
 				<div class="col s12">
 					<p><?php echo HTML::a(
 						$user->user_site,
-						_("Sito personale") . icon('send', 'right'),
+						_("Sito personale") . icon('contact_mail', 'right'),
 						null,
 						'btn waves-effect waves-light'
 					) ?></p>
@@ -149,5 +149,49 @@ if( $user ) {
 			<p><?php _e("Al momento non ho tenuto alcun talk.") ?></p>
 		<?php endif ?>
 	</div>
+
+	<!-- Start social -->
+	<?php if( $user->isUserSocial() ): ?>
+	<div class="divider"></div>
+	<div class="section">
+		<h3><?php _e("Social") ?></h3>
+		<div class="row">
+			<?php $box = function($user, $social, $title, $icon, $profile, $colors) { ?>
+			<div class="col s4 m3">
+				<?php echo HTML::a(
+					$profile,
+					($icon) ? icon($title) : $title,
+					sprintf(
+						_("%s su %s"),
+						$user->getUserFullname(),
+						$social
+					),
+					"btn-floating btn-large waves-effect waves-light $colors"
+				) ?>
+			</div>
+			<?php }; ?>
+
+			<?php
+			$user->user_rss   && $box($user, _("RSS"),      'rss_feed', 1, $user->user_rss,            'orange');
+			$user->user_fb    && $box($user, _("Facebook"), 'FB',       0, $user->getUserFacebruck(),  'indigo');
+			$user->user_googl && $box($user, _("Google+"),  'G+',       0, $user->getUserGuggolpluz(), 'red');
+			$user->user_twtr  && $box($user, _("Twitter"),  'Tw',       0, $user->getUserTuitt(),      'blue');
+			?>
+		</div>
+	</div>
+	<?php endif ?>
+	<!-- End social -->
 <?php
 the_footer();
+
+        function getUserFacebruck() {
+                return 'https://facebook.com/' . $this->user_fb;
+        }
+
+        function getUserGuggolpluz() {
+                return 'https://plus.google.com/' . $this->user_googl;
+        }
+
+        function getUserTuitt() {
+                return 'https://twitter.com/' . $this->user_twtr;
+        }

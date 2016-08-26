@@ -68,4 +68,22 @@ class Skill {
 	function __construct() {
 		self::prepareSkill($this);
 	}
+
+	static function getQueryUserSkills($user_ID) {
+		global $JOIN;
+
+		return sprintf(
+			'SELECT '.
+				'skill_uid, '.
+				'skill_title, ' .
+				'skill_score ' .
+				"FROM {$JOIN('user_skill', 'skill')} ".
+			'WHERE '.
+				'user_skill.user_ID = %d AND '.
+				'user_skill.skill_ID = skill.skill_ID ' .
+			'ORDER BY skill_score < 0, ABS(skill_score)'
+
+			, $user_ID
+		);
+	}
 }

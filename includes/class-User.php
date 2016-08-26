@@ -51,75 +51,54 @@ trait UserTrait {
 		);
 	}
 
-	function getUserEvents() {
-		global $JOIN;
-
-		return query_results(
-			sprintf(
-				'SELECT '.
-					'event_uid, '.
-					'event_title, '.
-					'event_start, '.
-					'event_end '.
-					"FROM {$JOIN('event', 'event_user')} " .
-				'WHERE '.
-					'event_user.user_ID = %d AND '.
-					'event_user.event_ID = event.event_ID '.
-				'ORDER BY '.
-					'event_start'
-				,
-				$this->user_ID
-			),
-			'Event'
-		);
+	function queryUserEvents() {
+		return query( Event::getQueryUserEvents($this->user_ID) );
 	}
 
 	function queryUserSkills() {
-		global $JOIN;
+		return query( Skill::getQueryUserSkills( $this->user_ID ) );
+	}
 
-		return query(
-			sprintf(
-				'SELECT '.
-					'skill_uid, '.
-					'skill_title, ' .
-					'skill_score ' .
-					"FROM {$JOIN('user_skill', 'skill')} ".
-				'WHERE '.
-					'user_skill.user_ID = %d AND '.
-					'user_skill.skill_ID = skill.skill_ID ' .
-				'ORDER BY '.
-					'skill_score < 0, '.
-					'ABS(skill_score)'
-				,
-				$this->user_ID
-			),
-			'Skill'
-		);
+	function getUserEvents() {
+		return query_results( Event::getQueryUserEvents($this->user_ID), 'Event');
+	}
+
+	function getUserSkills() {
+		return query_results( Skill::getQueryUserSkills( $this->user_ID ), 'Skill');
 	}
 
 	function getUserImageURL() {
 		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email );
 	}
 
+
 	function getUserBio() {
-		$l = null;
-
-		if( LANGUAGE_APPLIED === 'it_IT.UTF-8' ) {
-			if( isset( $this->user_bio_it ) ) {
-				$l = $this->user_bio_it;
-			}
-		} else {
-			if( isset( $this->user_bio_en ) ) {
-				$l = $this->user_bio_en;
-			}
-		}
-
-		return $l;
+		$field = "user_bio_" . ISO_LANG;
+		return isset( $this->{$field} ) ? $this->{$field} : null;
 	}
 
 	// asd!
 	function hasUserBio() {
 		return nl2br( $this->getUserBio() );
+	}
+
+	function isUserSocial() {
+		return isset( $this->user_rss )
+		    || isset( $this->user_fb )
+		    || isset( $this->user_googl )
+		    || isset( $this->user_twtr );
+	}
+
+	function getUserFacebruck() {
+		return 'https://facebook.com/' . $this->user_fb;
+	}
+
+	function getUserGuggolpluz() {
+		return 'https://plus.google.com/' . $this->user_googl;
+	}
+
+	function getUserTuitt() {
+		return 'https://twitter.com/' . $this->user_twtr;
 	}
 }
 

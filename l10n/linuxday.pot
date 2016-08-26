@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 18:32+0200\n"
+"POT-Creation-Date: 2016-08-26 18:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,33 +215,67 @@ msgstr ""
 msgid "API"
 msgstr ""
 
-#: people.php:57
+#: people.php:60
 msgid "Sito personale"
 msgstr ""
 
-#: people.php:66
+#: people.php:79
 msgid "Le mie skill:"
 msgstr ""
 
-#: people.php:83
+#: people.php:93
+#, php-format
+msgid "La mia licenza di software libero preferita è la <b>%s</b>."
+msgstr ""
+
+#: people.php:113
+msgid "Bio"
+msgstr ""
+
+#: people.php:122
 msgid "Talk condotti"
 msgstr ""
 
-#: people.php:90
+#: people.php:130
 msgid "Nome talk"
 msgstr ""
 
-#: people.php:91
+#: people.php:131
 msgid "Orario"
 msgstr ""
 
-#: people.php:100
+#: people.php:141
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr ""
 
-#: people.php:108
-msgid "Al momento non tengo nessun talk."
+#: people.php:149
+msgid "Al momento non ho tenuto alcun talk."
+msgstr ""
+
+#: people.php:157
+msgid "Social"
+msgstr ""
+
+#: people.php:165
+#, php-format
+msgid "%s su %s"
+msgstr ""
+
+#: people.php:175
+msgid "RSS"
+msgstr ""
+
+#: people.php:176
+msgid "Facebook"
+msgstr ""
+
+#: people.php:177
+msgid "Google+"
+msgstr ""
+
+#: people.php:178
+msgid "Twitter"
 msgstr ""
 
 #: includes/class-EventsTable.php:76
@@ -392,12 +426,12 @@ msgid ""
 "sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
 msgstr ""
 
-#: includes/class-User.php:27
+#: includes/class-User.php:30
 #, php-format
 msgid "%s %s"
 msgstr ""
 
-#: includes/class-User.php:44
+#: includes/class-User.php:47
 #, php-format
 msgid "Profilo utente di %s"
 msgstr ""
