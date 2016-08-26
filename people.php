@@ -38,40 +38,83 @@ if( $user ) {
 }
 ?>
 	<div class="row">
+
+		<!-- Profile image -->
 		<div class="col s12 l4">
 			<div class="valign-wrapper">
 				<img class="responsive-img hoverable z-depth-1" src="<?php
-					echo $user->getUserImageURL() . '?s=128'
+					echo $user->getUserImageURL() . '?s=256'
 				?>" alt="<?php
 					_esc_attr( $user->getUserFullname() )
 				?>" title="<?php
 					_esc_attr( $user->getUserFullname() )
 				?> "/>
 			</div>
-		</div>
 
-		<?php if( $user->user_site ): ?>
+			<!-- Start website -->
+			<?php if( $user->user_site ): ?>
+			<div class="row">
+				<div class="col s12">
+					<p><?php echo HTML::a(
+						$user->user_site,
+						_("Sito personale") . icon('send', 'right'),
+							null,
+						'btn'
+					) ?></p>
+				</div>
+			</div>
+			<?php endif ?>
+			<!-- End website -->
+		</div>
+		<!-- End profile image -->
+
+		<!-- Start sidebar -->
 		<div class="col s12 l8">
-			<p><?php echo HTML::a(
-				$user->user_site,
-				_("Sito personale") . icon('send', 'right'),
-				null,
-				'btn'
-			) ?></p>
-		</div>
-		<?php endif ?>
 
-		<?php $skills = $user->queryUserSkills(); ?>
-		<?php if( $skills->num_rows ): ?>
-		<div class="col s12 l8">
-			<p><?php _e("Le mie skill:") ?></p>
-			<?php while( $skill = $skills->fetch_object('Skill') ): ?>
-				<div class="chip tooltipped" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
-			<?php endwhile ?>
-		</div>
-		<?php endif ?>
+			<!-- Start skills -->
+			<?php $skills = $user->queryUserSkills(); ?>
+			<?php if( $skills->num_rows ): ?>
+			<div class="row">
+				<div class="col s12">
+					<p><?php _e("Le mie skill:") ?></p>
+					<?php while( $skill = $skills->fetch_object('Skill') ): ?>
+						<div class="chip tooltipped" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
+					<?php endwhile ?>
+				</div>
+			</div>
+			<?php endif ?>
+			<!-- End skills -->
 
+			<!-- Start license -->
+			<?php if( $user->user_lovelicense ): ?>
+			<div class="row">
+				<div class="col s12">
+					<p><?php printf(
+						_("La mia licenza di software libero preferita è la <b>%s</b>."),
+						HTML::a(
+							$user->user_lovelicense->getURL(),
+							$user->user_lovelicense->getShort(),
+							$user->user_lovelicense->getName()
+						)
+					) ?></p>
+				</div>
+			</div>
+			<?php endif ?>
+			<!-- End license -->
+
+		</div>
+		<!-- End sidebar -->
 	</div>
+
+	<!-- Start user bio -->
+	<?php if( $user->hasUserBio() ): ?>
+	<div class="divider"></div>
+	<div class="section">
+		<h3><?php _e("Bio") ?></h3>
+		<p class="flow-text"><?php _esc_html( $user->getUserBio() ) ?></p>
+	</div>
+	<?php endif ?>
+	<!-- End user bio -->
 
 	<div class="divider"></div>
 
@@ -101,7 +144,7 @@ if( $user ) {
 			<?php endforeach ?>
 			</table>
 		<?php else: ?>
-			<p><?php _e("Al momento non tengo nessun talk.") ?></p>
+			<p><?php _e("Al momento non ho tenuto alcun talk.") ?></p>
 		<?php endif ?>
 	</div>
 <?php

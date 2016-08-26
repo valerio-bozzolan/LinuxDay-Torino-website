@@ -172,6 +172,8 @@ CREATE TABLE `user` (
   `user_email` varchar(32) CHARACTER SET utf8 NOT NULL,
   `user_site` varchar(64) CHARACTER SET utf8 DEFAULT NULL,
   `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_bio_it` text COLLATE utf8mb4_unicode_ci,
+  `user_bio_en` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
@@ -206,4 +208,4 @@ CREATE TABLE `user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-25 18:32:16
+-- Dump completed on 2016-08-26  3:33:39

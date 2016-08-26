@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule ^/people/(.*)$ /people.php?uid=$1
+RewriteRule ^/people/(.*)$ /people.php?uid=$1 [L,QSA]

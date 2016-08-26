@@ -20,6 +20,9 @@ trait UserTrait {
 		if( isset( $t->user_ID ) ) {
 			$t->user_ID = (int) $t->user_ID;
 		}
+		if( isset( $t->user_lovelicense ) ) {
+			$t->user_lovelicense = license( $t->user_lovelicense );
+		}
 	}
 
 	function getUserFullname() {
@@ -96,6 +99,27 @@ trait UserTrait {
 
 	function getUserImageURL() {
 		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email );
+	}
+
+	function getUserBio() {
+		$l = null;
+
+		if( LANGUAGE_APPLIED === 'it_IT.UTF-8' ) {
+			if( isset( $this->user_bio_it ) ) {
+				$l = $this->user_bio_it;
+			}
+		} else {
+			if( isset( $this->user_bio_en ) ) {
+				$l = $this->user_bio_en;
+			}
+		}
+
+		return $l;
+	}
+
+	// asd!
+	function hasUserBio() {
+		return nl2br( $this->getUserBio() );
 	}
 }
 
