@@ -61,17 +61,13 @@ if( $user ) {
 		</div>
 		<?php endif ?>
 
-		<?php if( $skills = $user->getUserSkills() ): ?>
+		<?php $skills = $user->queryUserSkills(); ?>
+		<?php if( $skills->num_rows ): ?>
 		<div class="col s12 l8">
 			<p><?php _e("Le mie skill:") ?></p>
-			<table>
-				<?php foreach($skills as $skill): ?>
-				<tr>
-					<td><div class="chip"><code><?php echo $skill->getSkillCode() ?></code></div></td>
-					<td>(<?php echo $skill->getSkillPhrase() ?>)</td>
-				</tr>
-				<?php endforeach ?>
-			</table>
+			<?php while( $skill = $skills->fetch_object('Skill') ): ?>
+				<div class="chip tooltipped" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
+			<?php endwhile ?>
 		</div>
 		<?php endif ?>
 

@@ -71,10 +71,10 @@ trait UserTrait {
 		);
 	}
 
-	function getUserSkills() {
+	function queryUserSkills() {
 		global $JOIN;
 
-		return query_results(
+		return query(
 			sprintf(
 				'SELECT '.
 					'skill_uid, '.
