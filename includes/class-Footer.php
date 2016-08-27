@@ -19,7 +19,6 @@ class Footer {
 	function __construct( $args = [] ) {
 		load_module('footer');
 ?>
-
 <footer class="page-footer blue darken-2">
 	<div class="container">
 		<div class="row">
@@ -45,20 +44,37 @@ class Footer {
 
 		</div>
 		<div class="row darken-1 white-text">
-			<p><?php printf(
-				_("Tutti i contenuti sono rilasciati sotto ".
-				  "licenza di <strong>contenuto culturale libero</strong> %s. ".
-				  "Sei libero di distribuire e/o modificare i contenuti ".
-				  "anche per scopi commerciali, fintanto che si cita la provenienza e ".
-				  "si ricondivide sotto la medesima licenza."
-				),
-				HTML::a(
-					_('https://creativecommons.org/licenses/by-sa/4.0/deed.it'),
-					"CC By-Sa 4.0",
-					_("Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale"),
-					'yellow-text'
-				)
-			) ?></p>
+			<div class="col s12 m7 l8">
+				<p><?php printf(
+					_("Tutti i contenuti sono rilasciati sotto ".
+					  "licenza di <strong>contenuto culturale libero</strong> %s. ".
+					  "Sei libero di distribuire e/o modificare i contenuti ".
+					  "anche per scopi commerciali, fintanto che si cita la provenienza e ".
+					  "si ricondivide sotto la medesima licenza."
+					),
+					license('cc-by-sa-4.0')->getLink('yellow-text')
+				) ?></p>
+			</div>
+			<div class="col s12 m5 l4">
+				<p><?php
+					echo icon('share', 'right');
+					printf(
+						_("Il sito è distribuito sotto licenza libera %s. Clonalo!"),
+						license('gnu-agpl')->getLink('yellow-text')
+					);
+				?></p>
+				<p><blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote></p>
+			</div>
+			<div class="col s12">
+				<p><small><?php
+					echo icon('cloud_queue', 'left');
+					printf(
+						_("Pagina generata in %s secondi con %d query al database."),
+						get_page_load(),
+						get_num_queries()
+					);
+				?></small></p>
+			</div>
 		</div>
 	</div>
 	<div class="footer-copyright">
@@ -69,16 +85,12 @@ class Footer {
 </footer>
 <script>
 $(document).ready( function () {
-	$(".button-collapse").sideNav();
+	$('.button-collapse').sideNav();
+	$('.parallax').parallax();
 } );
 </script>
 </body>
 </html>
-<!-- <?php _e("Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non regalare i tuoi dati a terzi!") ?> -->
-<!-- <?php printf(
-		_("Pagina generata in %s secondi con %d query al database."),
-		get_page_load(),
-		get_num_queries()
-	) ?> --><?php
+<!-- <?php _e("Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non regalare i tuoi dati a terzi!") ?> --><?php
 	}
 }

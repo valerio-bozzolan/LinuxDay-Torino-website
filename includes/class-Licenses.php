@@ -19,14 +19,16 @@ class Licenses {
 	private $licenses;
 
 	function __construct() {
-		$this->add('gnu-gpl',    "GNU GPL",      "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html')
-		     ->add('gnu-gpl-v2', "GNU GPL v2", _("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html')
-		     ->add('gnu-agpl',   "GNU AGPL",     "GNU Affero General Public License",       'https://www.gnu.org/licenses/agpl-3.0.html')
-		     ->add('apache',     "Apache 2.0", _("Licenza Apache, versione 2.0"),           'https://www.apache.org/licenses/LICENSE-2.0.html')
-		     ->add('mit',        "MIT",        _("Licenza MIT"),                            'https://opensource.org/licenses/MIT')
-		     ->add('php',        "PHP",        _("Licenza PHP"),                            'http://www.php.net/license/3_01.txt')
-		     ->add('odbl',       "ODbl",         "Open Data Commons Open Database License", 'http://opendatacommons.org/licenses/odbl/')
-		     ->add('cc-by',      "CC By 4.0",  _("Creative Commons - Attribuzione 4.0 Internazionale"), _('https://creativecommons.org/licenses/by/4.0/deed.it') );
+		$this->add('gnu-gpl',      "GNU GPL",        "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html')
+		     ->add('gnu-gpl-v2',   "GNU GPL v2",   _("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html')
+		     ->add('gnu-agpl',     "GNU AGPL",       "GNU Affero General Public License",       'https://www.gnu.org/licenses/agpl-3.0.html')
+		     ->add('apache',       "Apache 2.0",   _("Licenza Apache, versione 2.0"),           'https://www.apache.org/licenses/LICENSE-2.0.html')
+		     ->add('mit',          "MIT",          _("Licenza MIT"),                            'https://opensource.org/licenses/MIT')
+		     ->add('php',          "PHP",          _("Licenza PHP"),                            'http://www.php.net/license/3_01.txt')
+		     ->add('odbl',         "ODbl",           "Open Data Commons Open Database License", 'http://opendatacommons.org/licenses/odbl/')
+		     ->add('cc-by',        "CC By 4.0",    _("Creative Commons - Attribuzione 4.0 Internazionale"), _('https://creativecommons.org/licenses/by/4.0/deed.it') )
+		     ->add('cc-by-sa-3.0', "CC By Sa 3.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"), _('https://creativecommons.org/licenses/by-sa/3.0/deed.it') )
+		     ->add('cc-by-sa-4.0', "CC By Sa 4.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-sa/4.0/deed.it') );
 	}
 
 	function add($code, $short, $name, $url) {
@@ -60,5 +62,15 @@ class License {
 
 	function getURL() {
 		return $this->url;
+	}
+
+	function getLink($classes = null, $other = null) {
+		return HTML::a(
+			$this->getURL(),
+			$this->getShort(),
+			$this->getName(),
+			$classes,
+			$other
+		);
 	}
 }

@@ -105,6 +105,9 @@ class Header {
 		] ) ?>
 
 	</nav>
+	<div class="parallax-container" style="height:200px">
+		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
+	</div>
 	<header>
 		<div class="center">
 			<h1><?php echo $h1 ?></h1>
