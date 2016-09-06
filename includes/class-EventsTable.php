@@ -69,6 +69,10 @@ class EventsTable {
 	 * PHP MERDA.
 	 */
 	function printTable() {
+		if( ! isset( $this->tracks ) ) {
+			_e("asd! No.");
+			return;
+		}
 	?>
 
 		<table class="bordered striped hoverable">
