@@ -143,22 +143,23 @@ class Event {
 		$last_hour = -1;
 		$last_event_ID = -1;
 		foreach($events as $i => $event) {
+			// Remember that it's a JOIN with duplicates
 			if( $last_event_ID === $event->event_ID ) {
 				unset( $events[ $i ] );
 				continue;
 			}
 
-			// 'G' is date() 0-24 hour format without leading zeros
+			// 'G': date() 0-24 hour format without leading zeros
 			$hour = (int) $event->getEventStart('G');
 
-			// Next hour if it's really ANOTHER event (and not a duplicate)
+			// Next hour
 			if( $hour !== $last_hour ) {
 				if( $incremental_hour === 0 ) {
 					$incremental_hour = 1;
 				} else {
 					// `$hour - $last_hour` is often only 1
 					// Set to ++ to skip empty spaces
-					$incremental_hour = $hour - $last_hour;
+					$incremental_hour += $hour - $last_hour;
 				}
 			}
 
@@ -169,6 +170,8 @@ class Event {
 			$event->users = $users[ $event->event_ID ];
 
 			$last_event_ID = $event->event_ID;
+
+			$last_hour = $hour;
 		}
 
 		return $events;
