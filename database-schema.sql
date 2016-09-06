@@ -152,8 +152,10 @@ CREATE TABLE `track` (
   `track_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `track_uid` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `track_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `track_order` smallint(1) NOT NULL,
   PRIMARY KEY (`track_ID`),
-  UNIQUE KEY `track_uid` (`track_uid`)
+  UNIQUE KEY `track_uid` (`track_uid`),
+  KEY `track_order` (`track_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -212,4 +214,4 @@ CREATE TABLE `user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-26 18:14:35
+-- Dump completed on 2016-09-07  1:11:30

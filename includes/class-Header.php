@@ -47,7 +47,7 @@ class Header {
 <!DOCTYPE html>
 <html lang="<?php echo ISO_LANG ?>">
 <head>
-	<title><?php echo "{$args['title']} - " . SITE_NAME ?></title>
+	<title><?php echo "{$args['title']} — " . SITE_NAME ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="Boz-PHP - Another PHP Framework" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" /><?php load_module('header') ?>

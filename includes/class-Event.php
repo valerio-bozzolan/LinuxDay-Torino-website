@@ -112,7 +112,7 @@ class Event {
 					'event.track_ID = track.track_ID '.
 				'ORDER BY '.
 					'event_start, '.
-					'track_uid'
+					'track_order'
 				,
 				CONFERENCE_ID
 			),
