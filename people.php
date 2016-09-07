@@ -128,6 +128,7 @@ if( $user ) {
 			<thead>
 			<tr>
 				<th><?php _e("Nome talk") ?></th>
+				<th><?php _e("Traccia") ?></th>
 				<th><?php _e("Orario") ?></th>
 			<tr>
 			</thead>
@@ -137,6 +138,7 @@ if( $user ) {
 					"<strong>%s</strong>",
 					esc_html( $event->event_title )
 				) ?></td>
+				<td><?php _esc_html( $event->track_name ) ?></td>
 				<td><?php printf(
 					_("Ore <b>%s</b> (il %s)"),
 					$event->getEventStart("H:i"),
@@ -157,7 +159,7 @@ if( $user ) {
 		<h3><?php _e("Social") ?></h3>
 		<div class="row">
 			<?php $box = function($user, $social, $title, $icon, $profile, $colors) { ?>
-			<div class="col s4 m3">
+			<div class="col s4 m3 l2">
 				<?php echo HTML::a(
 					$profile,
 					($icon) ? icon($title) : $title,
@@ -176,6 +178,7 @@ if( $user ) {
 			$user->user_fb    && $box($user, _("Facebook"), 'FB',       0, $user->getUserFacebruck(),  'indigo');
 			$user->user_googl && $box($user, _("Google+"),  'G+',       0, $user->getUserGuggolpluz(), 'red');
 			$user->user_twtr  && $box($user, _("Twitter"),  'Tw',       0, $user->getUserTuitt(),      'blue');
+			$user->user_lnkd  && $box($user, _("Linkedin"), 'Li',	    0, $user->getUserLinkeddon(),  'gray');
 			?>
 		</div>
 	</div>

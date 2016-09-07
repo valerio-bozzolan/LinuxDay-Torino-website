@@ -67,11 +67,14 @@ class Event {
 				'event_uid, '.
 				'event_title, '.
 				'event_start, '.
-				'event_end '.
-				"FROM {$JOIN('event', 'event_user')} " .
+				'event_end, '.
+				'track_name, '.
+				'track_uid '.
+				"FROM {$JOIN('event', 'event_user', 'track')} " .
 			'WHERE '.
 				'event_user.user_ID = %d AND '.
-				'event_user.event_ID = event.event_ID '.
+				'event_user.event_ID = event.event_ID AND '.
+				'event.track_ID = track.track_ID '.
 			'ORDER BY '.
 				'event_start'
 			,

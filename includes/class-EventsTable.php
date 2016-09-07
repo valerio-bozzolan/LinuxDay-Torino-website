@@ -123,25 +123,18 @@ class EventsTable {
 		}
 
 		$users = $this->events[$h][$t]->users;
-
-		$n = count($users) - 1;
-
-		if($n > 0) {
-			$comma = _(", ");
-			$s = '';
-			for($i = 0; $i < $n; $i++) {
-				if( $i ) {
-					$s .= $comma;
-				}
-				$s .= $users[$i]->getUserProfileLink();
-			}
-			return sprintf(
-				_("%s e %s"),
-				$s, $users[$n]->getUserProfileLink()
-			);
-		} else {
-			return $users[0]->getUserProfileLink();
+		$n = count($users);
+		foreach($users as & $user) {
+			$user = $user->getUserProfileLink();
 		}
+
+		$last = $n > 1 ? array_pop($users) : false;
+		$s = implode( _(", "), $users);
+		if($last) {
+			$s = sprintf( _("%s e %s"), $s, $last);
+		}
+
+		return $s;
 	}
 
 	function getUsers($h, $t) {

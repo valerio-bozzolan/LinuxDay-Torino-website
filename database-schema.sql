@@ -171,7 +171,7 @@ CREATE TABLE `user` (
   `user_uid` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_surname` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_email` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_site` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_bio_it` text COLLATE utf8mb4_unicode_ci,
@@ -179,6 +179,7 @@ CREATE TABLE `user` (
   `user_rss` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_twtr` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_fb` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_lnkd` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_googl` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
@@ -214,4 +215,4 @@ CREATE TABLE `user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-07  1:11:30
+-- Dump completed on 2016-09-07  2:36:59

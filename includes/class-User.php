@@ -85,6 +85,7 @@ trait UserTrait {
 	function isUserSocial() {
 		return isset( $this->user_rss )
 		    || isset( $this->user_fb )
+		    || isset( $this->user_lnkd )
 		    || isset( $this->user_googl )
 		    || isset( $this->user_twtr );
 	}
@@ -99,6 +100,10 @@ trait UserTrait {
 
 	function getUserTuitt() {
 		return 'https://twitter.com/' . $this->user_twtr;
+	}
+
+	function getUserLinkeddon() {
+		return 'https://www.linkedin.com/in/' . $this->user_lnkd;
 	}
 }
 
