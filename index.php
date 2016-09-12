@@ -17,4 +17,14 @@
 
 require 'load.php';
 
-http_redirect(URL . '/conference/2016');
+$conference = query_row(
+	"SELECT conference_uid FROM {$T('conference')} ORDER BY conference_ID DESC LIMIT 1",
+	'Conference'
+);
+
+if( ! $conference ) {
+	error_die("Start adding a conference");
+}
+
+// In the future this page will have multiple conferences
+http_redirect( $conference->getConferenceURL() );

@@ -45,10 +45,7 @@ trait ConferenceTrait {
 	}
 
 	function getConferenceURL() {
-		isset( $this->conference_uid )
-			|| die( "Missing conference_uid" );
-
-		return URL . "/conference/{$this->getConferenceUID()}";
+		return URL . "/{$this->getConferenceUID()}";
 	}
 
 	function getConferenceStart($f) {

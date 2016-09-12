@@ -9,7 +9,12 @@ TO-DO:
 * Registrazione talk
 
 ## Installazione sito web
-Il sito web PHP+MySQL/MariaDB usa il framework Boz-PHP.
+Il sito web PHP+MySQL/MariaDB usa il framework Boz-PHP. Viene utilizzato jQuery.
+
+Per un'installazione della maggior parte delle componenti su un sistema Debian:
+    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery
+
+(Il file `.htaccess` è testato incluso direttamente nel VirtualHost di Apache tramite la direttiva `Include`.)
 
 ### Framework
 Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
@@ -19,11 +24,11 @@ Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 ### Database
 Una connessione MySQL/MariaDB è richiesta la tabella dei talk nella home page e per le API. È richiesta l'estensione `mysqli`.
 
-Copiare `load-sample.php` in `load.php` (eventualmente popolando le credenziali di un database creato importando `database-schema.sql`).
+Copiare `load-sample.php` in `load.php` popolando le credenziali di un database creato importando `database-schema.sql`.
 
 Copiare `api/config-sample.php` in `api/config.php`.
 
-### Localizzazione\lingua
+### Localizzazione/lingua
 Lanciare `./l10n/localize.sh .` almeno una volta per aggiornare il template GNU Gettext `.pot` e i relativi `.po` con le stringhe contenute nel codice sorgente dentro le funzioni `_()` ed `_e()`.
 
 ### API
@@ -47,7 +52,7 @@ Copiare il template GNU Gettext `.pot` in un nuovo file `.po` nel nuovo percorso
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
-## License
+## Licenza
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

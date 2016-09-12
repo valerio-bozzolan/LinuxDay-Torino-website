@@ -18,7 +18,7 @@
 require 'load.php';
 
 $conference = null;
-if( isset( $_GET['uid'] ) ) {
+if( ! empty( $_GET['uid'] ) ) {
 	$conference = Conference::getConference(
 		luser_input( $_GET['uid'], 64 )
 	);
@@ -28,7 +28,8 @@ $conference
 	|| die_with_404();
 
 the_header('conference', [
-	'title' => $conference->getConferenceTitle()
+	'title' => $conference->getConferenceTitle(),
+	'url'   => $conference->getConferenceURL()
 ] );
 ?>
 	<div class="section">
