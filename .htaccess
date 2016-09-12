@@ -16,4 +16,4 @@ RewriteRule ^/javascript - [L]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-l
-RewriteRule ^/(.*) /conference.php?uid=$1&file=%{DOCUMENT_ROOT}%{REQUEST_FILENAME} [L,QSA]
+RewriteRule ^/(.*) /conference.php?uid=$1 [L,QSA]
