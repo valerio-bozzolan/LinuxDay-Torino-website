@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Homepage
+# Linux Day 2016 - Print a daily rappresentation of events
 # Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
 #
 # This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 /**
  * Print an hour-based events table
  */
-class EventsTable {
+class DailyEventsTable {
 	/**
 	 * @type integer
 	 */
@@ -41,8 +41,9 @@ class EventsTable {
 	 */
 	private $n;
 
-	function __construct() {
-		$events = Event::queryEvents();
+	function __construct( $conference_ID ) {
+
+		$events = Event::getDailyEvents( $conference_ID );
 
 		foreach($events as $event) {
 			///////////////////////////////////////////////////////////////////////
@@ -93,12 +94,15 @@ class EventsTable {
 				<?php foreach($this->getTracks() as $track): ?>
 				<td><?php
 					if( isset( $this->events[$h][$track->track_uid] ) ) {
-						$title = sprintf(
-							"<strong>%s</strong>",
-							$this->events[$h][$track->track_uid]->event_title
+						$title = HTML::a(
+							$this->events[$h][$track->track_uid]->getEventURL(),
+							sprintf(
+								"<strong>%s</strong>",
+								$this->events[$h][$track->track_uid]->event_title
+							)
 						);
 						printf(
-							_("%s di %s."),
+							_("%s<br /> di %s."),
 							$title,
 							$this->getImplodedUsers($h, $track->track_uid)
 						);
@@ -125,7 +129,7 @@ class EventsTable {
 		$users = $this->events[$h][$t]->users;
 		$n = count($users);
 		foreach($users as & $user) {
-			$user = $user->getUserProfileLink();
+			$user = $user->getUserLink();
 		}
 
 		$last = $n > 1 ? array_pop($users) : false;
@@ -151,5 +155,9 @@ class EventsTable {
 
 	function countEvents() {
 		return $this->n;
+	}
+
+	function countTracks() {
+		return count( $this->tracks );
 	}
 }

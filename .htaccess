@@ -1,2 +1,4 @@
 RewriteEngine on
-RewriteRule ^/people/(.*)$ /people.php?uid=$1 [L,QSA]
+RewriteRule ^/conference/(.*)$  /conference.php?uid=$1 [L,QSA]
+RewriteRule ^/user/(.*)$ /user.php?uid=$1 [L,QSA]
+RewriteRule ^/event/(.*)/(.*)$  /event.php?conference=$1&uid=$2 [L,QSA]

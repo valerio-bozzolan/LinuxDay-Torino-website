@@ -39,8 +39,8 @@ define('CONTENT',  ROOT . '/content');
 define('INCLUDES', ROOT . '/includes');
 define('XXX',      ROOT . '/static');
 
-define('SITE_NAME',        _("Linux Day Torino 2016") );
-define('SITE_DESCRIPTION', _("15° manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
+define('SITE_NAME',        _("Linux Day Torino") );
+define('SITE_DESCRIPTION', _("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
 
 ///////////////////////////////////////////////////////////////////
 // Autoload classes
@@ -61,11 +61,13 @@ register_css('materialize.icons', XXX . '/material-design-icons/material-icons.c
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries
 add_menu_entries( [
-	new MenuEntry('home',    URL,                  _("Benvenuti") ),
-	new MenuEntry('credits', URL . '/credits.php', _("Crediti") )  ,
-	new MenuEntry('api',     URL . '/api',         _("API")        , 'hidden'),
-	new MenuEntry('user',    URL . '/people',      null,             'hidden'),
-	new MenuEntry('404',     null,                 null,             'hidden')
+	new MenuEntry('home',       URL,                  _("Benvenuti")            ),
+	new MenuEntry('credits',    URL . '/credits.php', _("Crediti")              ),
+	new MenuEntry('api',        URL . '/api',         _("API"),         'hidden'),
+	new MenuEntry('user',       URL . '/people',      null,             'hidden'),
+	new MenuEntry('event',      URL . '/event',       null,             'hidden'),
+	new MenuEntry('conference', URL . '/conference',  null,             'hidden'),
+	new MenuEntry('404',        null,                 null,             'hidden')
 ] );
 
 ///////////////////////////////////////////////////////////////////
@@ -74,5 +76,7 @@ register_expected('LICENSES', 'Licenses');
 
 // Common functions
 require ABSPATH . INCLUDES . '/functions.php';
+
+define('DEFAULT_IMAGE', XXX . '/gnu-linux-on-black.png');
 
 define('ISO_LANG', get_iso_lang() );

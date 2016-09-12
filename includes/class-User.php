@@ -23,6 +23,23 @@ trait UserTrait {
 		if( isset( $t->user_lovelicense ) ) {
 			$t->user_lovelicense = license( $t->user_lovelicense );
 		}
+		if( isset( $t->user_public ) ) {
+			$t->user_public = (bool) (int) $t->user_public;
+		}
+	}
+
+	function getUserID() {
+		isset( $this->user_ID )
+			|| error_die("Missing user_ID");
+
+		return $this->user_ID;
+	}
+
+	function isUserPublic() {
+		isset( $this->user_public, $this->user_ID )
+			|| die("Missing user_public or user_ID");
+
+		return $this->user_public || get_user('user_ID') === $this->user_ID;
 	}
 
 	function getUserFullname() {
@@ -33,15 +50,15 @@ trait UserTrait {
 		);
 	}
 
-	function getUserProfileURL() {
-		return URL . '/people/' . $this->user_uid;
+	function getUserURL() {
+		return URL . "/user/{$this->user_uid}";
 	}
 
-	function getUserProfileLink($html_class = null) {
+	function getUserLink($html_class = null) {
 		$name = $this->getUserFullname();
 
 		return HTML::a(
-			$this->getUserProfileURL(),
+			$this->getUserURL(),
 			$name,
 			sprintf(
 				_("Profilo utente di %s"),
@@ -51,26 +68,21 @@ trait UserTrait {
 		);
 	}
 
-	function queryUserEvents() {
-		return query( Event::getQueryUserEvents($this->user_ID) );
-	}
-
 	function queryUserSkills() {
 		return query( Skill::getQueryUserSkills( $this->user_ID ) );
 	}
 
 	function getUserEvents() {
-		return query_results( Event::getQueryUserEvents($this->user_ID), 'Event');
+		return query_results( Event::getQueryUserEvents( $this->user_ID ), 'Event');
 	}
 
 	function getUserSkills() {
 		return query_results( Skill::getQueryUserSkills( $this->user_ID ), 'Skill');
 	}
 
-	function getUserImageURL() {
-		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email );
+	function getUserImage($s = 256) {
+		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email ) . '?s=' . $s;
 	}
-
 
 	function getUserBio() {
 		$field = "user_bio_" . ISO_LANG;
@@ -105,6 +117,27 @@ trait UserTrait {
 	function getUserLinkeddon() {
 		return 'https://www.linkedin.com/in/' . $this->user_lnkd;
 	}
+
+	function getUserGithubbo() {
+		return 'https://github.com/' . $this->user_github;
+	}
+
+	private function getQueryUserEvents() {
+		$q = Event::getStandardQueryEvent();
+		$q->useTable('event_user');
+		$q->appendCondition('event.event_ID = event_user.event_ID');
+		$q->appendCondition(
+			sprintf(
+				'event_user.user_ID = %d',
+				$this->getUserID()
+			)
+		);
+		return $q;
+	}
+
+	function queryUserEvents() {
+		return $this->getQueryUserEvents()->query();
+	}
 }
 
 class User {
@@ -114,7 +147,7 @@ class User {
 		self::prepareUser($this);
 	}
 
-	static function queryUser($uid) {
+	static function getUser($uid) {
 		global $T;
 
 		return query_row(
@@ -125,4 +158,36 @@ class User {
 			'User'
 		);
 	}
+
+	static function getStandardQueryUsers() {
+		$q = new DynamicQuery();
+
+		$q->selectField( [
+			'user_uid',
+			'user_name',
+			'user_surname',
+			'user_mail'
+		] );
+
+		$q->useTable('user');
+
+
+		return sprintf(
+			'SELECT '.
+				'user_uid, '.
+				'user_name, '.
+				'user_surname, '.
+				'user_email '.
+				"FROM {$JOIN('event_user', 'user')} " .
+			'WHERE '.
+				'event_user.event_ID = %d AND '.
+				'event_user.user_ID = user.user_ID '.
+			'ORDER BY '.
+				'event_user_order'
+			,
+			$this->event_ID
+		);
+	}
+
+
 }

@@ -63,7 +63,7 @@ class Footer {
 						license('gnu-agpl')->getLink('yellow-text')
 					);
 				?></p>
-				<p><blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote></p>
+				<blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote>
 			</div>
 			<div class="col s12">
 				<p><small><?php

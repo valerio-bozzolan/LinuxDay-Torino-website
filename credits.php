@@ -102,29 +102,29 @@ the_header('credits', ['container' => false] );
 		<div class="container">
 			<h3><?php _e("Strumenti utilizzati") ?></h3>
 			<p class="flow-text"><?php _e("Alcuni strumenti utilizzati per la realizzazione del sito web:") ?></p>
-		</div>
 
-		<div class="row">
-		<?php
-			$tech(
-				"Inkscape",
-				_('https://inkscape.org/en/'),
-				'gnu-gpl-v2',
-				_("Ritocchi alla mappa di OpenStreetMap in formato SVG.")
-			);
-			$tech(
-				"GIMP",
-				_('https://www.gimp.org'),
-				'gnu-gpl',
-				_("Fotoritocchi e modifiche alle immagini")
-			);
-			$tech(
-				"GNU Nano",
-				'https://www.nano-editor.org',
-				'gnu-gpl',
-				_("Banale editor di testo da terminale.")
-			);
-		?>
+			<div class="row">
+			<?php
+				$tech(
+					"Inkscape",
+					_('https://inkscape.org/it/'),
+					'gnu-gpl-v2',
+					_("Ritocchi alla mappa di OpenStreetMap in formato SVG.")
+				);
+				$tech(
+					"GIMP",
+					_('https://www.gimp.org'),
+					'gnu-gpl',
+					_("Fotoritocchi e modifiche alle immagini")
+				);
+				$tech(
+					"GNU Nano",
+					'https://www.nano-editor.org',
+					'gnu-gpl',
+					_("Banale editor di testo da terminale.")
+				);
+			?>
+			</div>
 		</div>
 	</div>
 
@@ -132,44 +132,51 @@ the_header('credits', ['container' => false] );
 	<div class="section">
 		<div class="container">
 			<h3><?php _e("Materiale") ?></h3>
+
+			<ul class="collection">
+				<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>
+				<li class="collection-item"><?php printf(
+					_("Grazie a %s per %s sotto licenza %s."),
+					HTML::a(
+						$toURL,
+						$to
+					),
+					HTML::a(
+						$url,
+						$what
+					),
+					HTML::a(
+						$license->getURL(),
+						$license->getShort()
+					)
+				) ?></li>
+				<?php }; ?>
+
+				<?php
+				$thanks(
+					'User:VGrigas (WMF)',
+					'https://commons.wikimedia.org/wiki/User:VGrigas_%28WMF%29',
+					_("l'immagine estratta dal suo video «This is Wikipedia»"),
+					'https://commons.wikimedia.org/wiki/File:This_is_Wikipedia.webm',
+					license('cc-by-sa-3.0')
+				);
+				$thanks(
+					_("i contributori di OpenStreetMap"),
+					'http://www.openstreetmap.org',
+					_("la piantina del dipartimento di Informatica di Torino"),
+					XXX . '/openstreetmap-unito.svg',
+					license('odbl')
+				);
+				$thanks(
+					"Rui Damas",
+					'https://www.gnu.org/graphics/gnu-slash-linux.html',
+					_("l'immagine predefinita di alcuni elementi"),
+					DEFAULT_IMAGE,
+					license('gnu-gpl')
+				);
+				?>
+			</ul>
 		</div>
-
-		<ul class="collection">
-			<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>
-			<li class="collection-item"><?php printf(
-				_("Grazie a %s per %s sotto licenza %s."),
-				HTML::a(
-					$toURL,
-					$to
-				),
-				HTML::a(
-					$url,
-					$what
-				),
-				HTML::a(
-					$license->getURL(),
-					$license->getShort()
-				)
-			) ?></li>
-			<?php }; ?>
-
-			<?php
-			$thanks(
-				'User:VGrigas (WMF)',
-				'https://commons.wikimedia.org/wiki/User:VGrigas_%28WMF%29',
-				_("l'immagine estratta dal suo video «This is Wikipedia»"),
-				'https://commons.wikimedia.org/wiki/File:This_is_Wikipedia.webm',
-				license('cc-by-sa-3.0')
-			);
-			$thanks(
-				_("i contributori di OpenStreetMap"),
-				'http://www.openstreetmap.org',
-				_("la piantina del dipartimento di Informatica di Torino"),
-				XXX . '/openstreetmap-unito.svg',
-				license('odbl')
-			);
-			?>
-		</ul>
 	</div>
 <?php
 the_footer();

@@ -18,37 +18,35 @@
 require 'load.php';
 
 $user = null;
-
 if( isset( $_GET['uid'] ) ) {
-	$user = User::queryUser( $_GET['uid'] );
+	$user = User::getUser(
+		luser_input( $_GET['uid'], 64 )
+	);
 }
 
-if( $user ) {
-	the_header('user', [
-		'title' => $user->getUserFullname(),
-		'url'   => $user->getUserProfileURL()
-	] );
-} else {
-	the_header('404', [
-		'not-found' => true
-	] );
-	error("nott foond a.k.a. erroro quattrociantoquatto. (Eseguire coi permessi di root NON risolve la situazione)");
-	the_footer();
-	exit;
-}
+$user || die_with_404();
+
+the_header('user', [
+	'title' => $user->getUserFullname(),
+	'url'   => $user->getUserURL()
+] );
 ?>
 	<div class="row">
 
 		<!-- Profile image -->
 		<div class="col s12 l4">
 			<div class="valign-wrapper">
-				<img class="responsive-img hoverable z-depth-1" src="<?php
-					echo $user->getUserImageURL() . '?s=256'
-				?>" alt="<?php
-					_esc_attr( $user->getUserFullname() )
-				?>" title="<?php
-					_esc_attr( $user->getUserFullname() )
-				?> "/>
+				<?php if( $user->user_site ): ?>
+					<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>">
+				<?php endif ?>
+					<img class="responsive-img hoverable z-depth-1" src="<?php
+						echo $user->getUserImage() . '?s=256'
+					?>" alt="<?php
+						_esc_attr( $user->getUserFullname() )
+					?>" />
+				<?php if( $user->user_site ): ?>
+					</a>
+				<?php endif ?>
 			</div>
 
 			<!-- Start website -->
@@ -121,34 +119,42 @@ if( $user ) {
 	<div class="section">
 		<h3><?php _e("Talk condotti") ?></h3>
 
-		<?php $events = $user->getUserEvents() ?>
-
+		<?php $events = $user->queryUserEvents(); ?>
 		<?php if($events): ?>
 			<table>
 			<thead>
 			<tr>
 				<th><?php _e("Nome talk") ?></th>
 				<th><?php _e("Traccia") ?></th>
+				<th><?php _e("Stanza") ?></th>
 				<th><?php _e("Orario") ?></th>
 			<tr>
 			</thead>
-			<?php foreach($events as $event): ?>
+			<?php while( $event = $events->fetch_object('Event') ): ?>
 			<tr>
-				<td><?php printf(
-					"<strong>%s</strong>",
-					esc_html( $event->event_title )
+				<td><?php echo HTML::a(
+					$event->getEventURL(),
+					sprintf(
+						"<strong>%s</strong>",
+						esc_html( $event->event_title )
+					),
+					sprintf(
+						_("Vedi %s"),
+						$event->event_title
+					)
 				) ?></td>
 				<td><?php _esc_html( $event->track_name ) ?></td>
+				<td><?php _esc_html( $event->room_name ) ?></td>
 				<td><?php printf(
 					_("Ore <b>%s</b> (il %s)"),
 					$event->getEventStart("H:i"),
 					$event->getEventStart("d/m/Y")
 				) ?></td>
 			</tr>
-			<?php endforeach ?>
+			<?php endwhile ?>
 			</table>
 		<?php else: ?>
-			<p><?php _e("Al momento non ho tenuto alcun talk.") ?></p>
+			<p><?php _e("Questo utente non ha ancora tenuto nessun talk.") ?></p>
 		<?php endif ?>
 	</div>
 
@@ -174,15 +180,17 @@ if( $user ) {
 			<?php }; ?>
 
 			<?php
-			$user->user_rss   && $box($user, _("RSS"),      'rss_feed', 1, $user->user_rss,            'orange');
-			$user->user_fb    && $box($user, _("Facebook"), 'FB',       0, $user->getUserFacebruck(),  'indigo');
-			$user->user_googl && $box($user, _("Google+"),  'G+',       0, $user->getUserGuggolpluz(), 'red');
-			$user->user_twtr  && $box($user, _("Twitter"),  'Tw',       0, $user->getUserTuitt(),      'blue');
-			$user->user_lnkd  && $box($user, _("Linkedin"), 'Li',	    0, $user->getUserLinkeddon(),  'gray');
+			$user->user_rss     && $box($user, _("RSS"),      'rss_feed', 1, $user->user_rss,            'orange');
+			$user->user_fb      && $box($user, _("Facebook"), 'FB',       0, $user->getUserFacebruck(),  'indigo');
+			$user->user_googl   && $box($user, _("Google+"),  'G+',       0, $user->getUserGuggolpluz(), 'red');
+			$user->user_twtr    && $box($user, _("Twitter"),  'Tw',       0, $user->getUserTuitt(),      'blue');
+			$user->user_lnkd    && $box($user, _("Linkedin"), 'Li',	      0, $user->getUserLinkeddon(),  'gray');
+			$user->user_github  && $box($user, _("Github"),   'Gh',	      0, $user->getUserGithubbo(),   'black white-text');
 			?>
 		</div>
 	</div>
 	<?php endif ?>
 	<!-- End social -->
+</div>
 <?php
 the_footer();

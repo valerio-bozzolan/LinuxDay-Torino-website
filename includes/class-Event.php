@@ -32,11 +32,28 @@ trait EventTrait {
 		}
 	}
 
+	function getEventID() {
+		isset( $this->event_ID )
+			|| die("Missing event_ID");
+		return $this->event_ID;
+	}
+
+	function getEventUID() {
+		isset( $this->event_uid )
+			|| die("Missing event_uid");
+		return $this->event_uid;
+	}
+
+	function getEventURL() {
+		isset( $this->conference_uid )
+			|| die("Missing conference_uid");
+		return URL . "/event/{$this->conference_uid}/{$this->getEventUID()}";
+	}
+
 	/**
-	 * Return true if this event result has also the user column
+	 * Event is joined with an user?
 	 */
 	function eventHasUser() {
-		// (isset returns true if it exists but it's null)
 		return isset( $this->user_uid );
 	}
 
@@ -47,39 +64,124 @@ trait EventTrait {
 	function getEventEnd($f) {
 		return $this->event_end->format($f);
 	}
-}
 
-class_exists('User');
-
-class Event {
-	use EventTrait, UserTrait;
-
-	function __construct() {
-		self::prepareEvent($this);
-		self::prepareUser($this);
+	function hasEventImage() {
+		return isset( $this->event_img );
 	}
 
-	static function getQueryUserEvents($user_ID) {
+	function getEventImage() {
+		return site_page( $this->event_img, ROOT );
+	}
+
+	/**
+	 * @return string
+	 */
+	function getQueryEventUsers() {
 		global $JOIN;
 
 		return sprintf(
 			'SELECT '.
-				'event_uid, '.
-				'event_title, '.
-				'event_start, '.
-				'event_end, '.
-				'track_name, '.
-				'track_uid '.
-				"FROM {$JOIN('event', 'event_user', 'track')} " .
+				'user_uid, '.
+				'user_name, '.
+				'user_surname, '.
+				'user_email '.
+				"FROM {$JOIN('event_user', 'user')} " .
 			'WHERE '.
-				'event_user.user_ID = %d AND '.
-				'event_user.event_ID = event.event_ID AND '.
-				'event.track_ID = track.track_ID '.
+				'event_user.event_ID = %d AND '.
+				'event_user.user_ID = user.user_ID '.
 			'ORDER BY '.
-				'event_start'
+				'event_user_order'
 			,
-			$user_ID
+			$this->getEventID()
 		);
+	}
+
+	function queryEventUsers() {
+		return query( $this->getQueryEventUsers() );
+	}
+}
+
+class_exists('User');
+class_exists('Conference');
+
+class Event {
+	use EventTrait, UserTrait, ConferenceTrait;
+
+	function __construct() {
+		self::prepareEvent($this);
+		self::prepareUser($this);
+		self::prepareConference($this);
+	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	function getStandardQueryEvent() {
+		$q = new DynamicQuery();
+		$q->selectField( [
+			'event.event_ID',
+			'event_uid',
+			'event_title',
+			'event_subtitle',
+			'event_abstract',
+			'event_description',
+			'event_language',
+			'event_start',
+			'event_end',
+			'room_uid',
+			'room_name',
+			'track_uid',
+			'track_name',
+			'conference.conference_ID',
+			'conference_uid',
+			'conference_title'
+		] );
+		$q->useTable( [ 'event', 'conference', 'room', 'track' ] );
+		$q->appendCondition('event.conference_ID = conference.conference_ID');
+		$q->appendCondition('event.room_ID = room.room_ID');
+		$q->appendCondition('event.track_ID = track.track_ID');
+		return $q;
+	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	static function getQueryEventByUid($event_uid) {
+		$q = Event::getStandardQueryEvent();
+		return $q->appendCondition( sprintf(
+			"event.event_uid = '%s'",
+			esc_sql( $event_uid )
+		) );
+	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	static function getQueryEventByConferenceUID( $event_uid, $conference_uid ) {
+		$q = Event::getQueryEventByUid($event_uid);
+		return $q->appendCondition( sprintf(
+			"conference.conference_uid = '%s'",
+			esc_sql( $conference_uid )
+		) );
+	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	static function getQueryEventByConferenceID( $event_uid, $conference_ID ) {
+		$q = Event::getQueryEventByUid($event_uid);
+		return $q->appendCondition( sprintf(
+			'conference.conference_ID = %d',
+			$conference_ID
+		) );
+	}
+
+	/**
+	 * @return Event
+	 */
+	static function getEventByConferenceUID( $event_uid, $conference_uid ) {
+		return Event::getQueryEventByConferenceUID($event_uid, $conference_uid)
+		            ->getRow('Event');
 	}
 
 	/**
@@ -88,7 +190,7 @@ class Event {
 	 *
 	 * @return array
 	 */
-	static function queryEvents() {
+	static function getDailyEvents( $conference_ID ) {
 		global $JOIN;
 
 		// Yes, I want to obtain duplicates
@@ -104,20 +206,22 @@ class Event {
 					'event_end, '.
 					'user_uid, '.
 					'user_name, '.
-					'user_surname '.
-					" FROM {$JOIN('track', 'event')} ".
+					'user_surname, '.
+					'conference_uid '.
+					" FROM {$JOIN('conference', 'track', 'event')} ".
 						"LEFT JOIN {$JOIN('event_user')} ".
 							'ON (event.event_ID = event_user.event_ID) '.
 						"LEFT JOIN {$JOIN('user')} ".
 							'ON (event_user.user_ID = user.user_ID) '.
 				'WHERE '.
 					'event.conference_ID = %d AND '.
+					'event.conference_ID = conference.conference_ID AND '.
 					'event.track_ID = track.track_ID '.
 				'ORDER BY '.
 					'event_start, '.
 					'track_order'
 				,
-				CONFERENCE_ID
+				$conference_ID
 			),
 			'Event'
 		);

@@ -91,3 +91,13 @@ function license($code) {
 
 	return $GLOBALS['LICENSES']->get($code);
 }
+
+function die_with_404() {
+	the_header('404', [
+		'title' => _("È un 404! Pagina non trovata :("),
+		'not-found' => true
+	] );
+	error( _("Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di root <b>non</b> risolve la situazione!)") );
+	the_footer();
+	exit;
+}

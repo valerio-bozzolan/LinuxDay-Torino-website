@@ -20,6 +20,7 @@ class Header {
 		$menu = get_menu_entry($menu_uid);
 
 		$args = merge_args_defaults($args, [
+			'show-title'  => true,
 			'title'       => $menu->name,
 			'url'         => $menu->url,
 			'og'          => [],
@@ -92,8 +93,7 @@ class Header {
 	<nav>
 		<div class="nav-wrapper blue darken-1">
 			<a class="brand-logo" href="<?php echo URL ?>" title="<?php _esc_attr(SITE_DESCRIPTION) ?>">
-				<?php echo $h1 = strtoupper( SITE_NAME ) ?>
-
+				LD2016
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
@@ -110,7 +110,7 @@ class Header {
 	</div>
 	<header>
 		<div class="center">
-			<h1><?php echo $h1 ?></h1>
+			<h1><?php _esc_html( strtoupper( SITE_NAME ) ) ?></h1>
 			<p><?php echo str_replace(
 				['/', 'GNU', 'Linux'], [
 					'<b>/</b>',
@@ -126,6 +126,7 @@ class Header {
 				SITE_DESCRIPTION
 			) ?></p>
 		</div>
+		<?php if( $args['show-title'] ): ?>
 		<div class="container">
 			<?php if( isset( $args['url'] ) ): ?>
 
@@ -136,6 +137,7 @@ class Header {
 			<?php endif ?>
 
 		</div>
+		<?php endif ?>
 	</header>
 	<?php if( $args['container'] ): ?><div class="container"><?php endif ?>
 
