@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Single Event page
+# Linux Day 2016 - Single event page (an event lives in a conference)
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify

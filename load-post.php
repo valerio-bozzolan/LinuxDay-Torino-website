@@ -79,4 +79,8 @@ require ABSPATH . INCLUDES . '/functions.php';
 
 define('DEFAULT_IMAGE', XXX . '/gnu-linux-on-black.png');
 
+define('PERMALINK_CONFERENCE', '/%s');      // "/{conference_uid}"
+define('PERMALINK_EVENT',      '/%s/%s');   // "/{conference_uid}/{event_uid}"
+define('PERMALINK_USER',       '/user/%s'); // "/{user_uid}"
+
 define('ISO_LANG', get_iso_lang() );

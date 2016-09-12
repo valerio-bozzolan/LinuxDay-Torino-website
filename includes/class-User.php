@@ -35,6 +35,13 @@ trait UserTrait {
 		return $this->user_ID;
 	}
 
+	function getUserUID() {
+		isset( $this->user_uid )
+			|| error_die("Missing user_uid");
+
+		return $this->user_uid;
+	}
+
 	function isUserPublic() {
 		isset( $this->user_public, $this->user_ID )
 			|| die("Missing user_public or user_ID");
@@ -51,7 +58,7 @@ trait UserTrait {
 	}
 
 	function getUserURL() {
-		return URL . "/user/{$this->user_uid}";
+		return URL . sprintf( PERMALINK_USER, $this->getUserUID() );
 	}
 
 	function getUserLink($html_class = null) {

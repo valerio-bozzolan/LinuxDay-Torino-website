@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Conference page
+# Linux Day 2016 - Single conference page
 # Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
 #
 # This program is free software: you can redistribute it and/or modify

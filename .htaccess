@@ -1,19 +1,29 @@
 DirectoryIndex index.php
 
 RewriteEngine on
-RewriteRule ^/conference/(.*)$  /conference.php?uid=$1 [L,QSA]
-RewriteRule ^/user/(.*)$        /user.php?uid=$1 [L,QSA]
-RewriteRule ^/event/(.*)/(.*)$  /event.php?conference=$1&uid=$2 [L,QSA]
 
-# It's OK to visit the index.php alone
-# This rule works only if you have index.php as your unique DirectoryIndex
-RewriteRule ^/index.php -  [L]
+# I'm pretty sure that the last [OR] it's useful... but it does not work!
 
-# People often have this folder as an Apache alias
-# thanks to the libjs-jquery package
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -l
+RewriteRule ^ - [L]
+
+RewriteRule ^/user/(.*) /user.php?uid=$1 [L,QSA]
+
+# Skip Apache aliases
+# /javascript is from the `libjs-jquery` package
+# /icons is from Apache
 RewriteRule ^/javascript - [L]
+RewriteRule ^/icons/     - [L]
 
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-l
-RewriteRule ^/(.*) /conference.php?uid=$1 [L,QSA]
+# Skip DirectoryIndex
+RewriteRule index.php$ - [L]
+
+RewriteRule ^/(.*)/(.*)$  /event.php?conference=$1&uid=$2   [L,QSA]
+
+RewriteRule ^/(.*)              /conference.php?uid=$1&ultimo=asd [L,QSA]

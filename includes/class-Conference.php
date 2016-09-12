@@ -45,7 +45,7 @@ trait ConferenceTrait {
 	}
 
 	function getConferenceURL() {
-		return URL . "/{$this->getConferenceUID()}";
+		return URL . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
 	}
 
 	function getConferenceStart($f) {

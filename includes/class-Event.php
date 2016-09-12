@@ -47,7 +47,7 @@ trait EventTrait {
 	function getEventURL() {
 		isset( $this->conference_uid )
 			|| die("Missing conference_uid");
-		return URL . "/event/{$this->conference_uid}/{$this->getEventUID()}";
+		return URL . sprintf( PERMALINK_EVENT, $this->getConferenceUID(), $this->getEventUID() );
 	}
 
 	/**
