@@ -12,9 +12,10 @@ TO-DO:
 Il sito web PHP+MySQL/MariaDB usa il framework Boz-PHP. Viene utilizzato jQuery.
 
 Per un'installazione della maggior parte delle componenti su un sistema Debian:
+
     apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery
 
-(Il file `.htaccess` è testato incluso direttamente nel VirtualHost di Apache tramite la direttiva `Include`.)
+(Il file `.htaccess` è testato incluso direttamente nel VirtualHost di Apache tramite la direttiva `Include`)
 
 ### Framework
 Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
