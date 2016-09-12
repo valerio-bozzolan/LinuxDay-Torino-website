@@ -2,7 +2,7 @@ DirectoryIndex index.php
 
 RewriteEngine on
 
-# I'm pretty sure that the last [OR] it's useful... but it does not work!
+# I'm pretty sure that I could use the [OR]... but it does not work a fuck!
 
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
@@ -24,6 +24,5 @@ RewriteRule ^/icons/     - [L]
 # Skip DirectoryIndex
 RewriteRule index.php$ - [L]
 
-RewriteRule ^/(.*)/(.*)$  /event.php?conference=$1&uid=$2   [L,QSA]
-
-RewriteRule ^/(.*)              /conference.php?uid=$1&ultimo=asd [L,QSA]
+RewriteRule ^/(.*)/(.*)$ /event.php?conference=$1&uid=$2   [L,QSA]
+RewriteRule ^/(.*)       /conference.php?uid=$1&ultimo=asd [L,QSA]
