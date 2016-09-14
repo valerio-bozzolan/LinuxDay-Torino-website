@@ -18,6 +18,9 @@ https://commons.wikimedia.org/wiki/File:Heckert_GNU_white.svg
 GNU Nano (public domain)
 https://commons.wikimedia.org/wiki/File:Gnu-nano.svg
 
+HTTPS icon (CC By 2.0 Generic)
+https://commons.wikimedia.org/wiki/File:HTTPS_icon.png
+
 Inkscape (GNU GPLv3)
 https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg
 
@@ -63,6 +66,9 @@ https://creativecommons.org/licenses/by/3.0/
 
 Creative Commons Attribution 2.5 Generic
 https://creativecommons.org/licenses/by/2.5/
+
+Creative Commons Attribution 2.0 Generic
+https://creativecommons.org/licenses/by/2.0/
 
 GNU Free Documentation License
 https://www.gnu.org/licenses/fdl.html

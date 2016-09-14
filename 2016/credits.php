@@ -17,166 +17,204 @@
 
 require 'load.php';
 
-the_header('credits', ['container' => false] );
+the_header('credits');
 ?>
 	<div class="section">
-		<div class="container">
-			<p class="flow-text"><?php _e("Questo sito web utilizza esclusivamente <strong>software libero</strong>.") ?></p>
-		</div>
+		<p class="flow-text"><?php _e("Questo sito web utilizza esclusivamente <strong>software libero</strong>.") ?></p>
+	</div>
 
-		<?php $tech = function($name, $url, $license, $desc) {
+
+		<?php $tech = function($name, $url, $license, $desc, $icon = null, $material = false) {
 			$license = license($license); ?>
-			<div class="col s12 m6 l3">
-				<div class="card-panel">
-					<h3><?php printf("<strong>%s</strong><br /> <small>(%s)</small>",
-						HTML::a( $url, $name ),
-						HTML::a( $license->getURL(), $license->getShort(), $license->getName() )
-					) ?></h3>
-					<p><?php echo $desc ?></p>
+			<div class="col s3 m2 l2">
+				<div class="row">
+					<div class="col s12">
+						<a href="<?php echo $url ?>">
+						<?php if($icon): ?>
+							<img class="hoverable responsive-img" src="<?php echo XXX . "/libre-icons/$icon" ?>" alt="<?php printf(
+								_("Logo di %s"),
+								$name
+							) ?>" />
+						<?php endif ?>
+						</a>
+					</div>
+					<div class="col s12">
+						<small><?php printf(
+							"<strong>%s</strong> <small>(%s)</small>",
+							HTML::a( $url, $name ),
+							HTML::a( $license->getURL(), $license->getShort(), $license->getName() )
+						) ?></small>
+					</div>
 				</div>
 			</div>
 		<?php }; ?>
 
+	<div class="section">
 		<div class="row">
 		<?php
-			$tech(
-				"Debian GNU/Linux",
-				'https://debian.org',
-				'gnu-gpl',
-				_("Sistema operativo del server web.")
-			);
-			$tech(
-				"Apache 2.0",
-				'https://httpd.apache.org',
-				'apache',
-				_("Server web.")
-			);
-			$tech(
-				"PHP5",
-				'http://php.net',
-				'php',
-				_("Pre-processore di ipertesti.")
-			);
-			$tech(
-				"GNU Gettext",
-				'https://www.gnu.org/software/gettext/',
-				'gnu-gpl',
-				_("Framework per internazionalizzazione e localizzazione dei messaggi.")
-			);
-			$tech(
-				"Boz-PHP",
-				'https://launchpad.net/boz-php-another-php-framework',
-				'gnu-agpl',
-				_("Framework PHP e MySQL/MariaDB.")
- 			);
-			$tech(
-				"Let's Encrypt",
-				'https://certbot.eff.org/',
-				'apache',
-				_("Certificato SSL.")
-			);
-			$tech(
-				"Materialize",
-				'https://github.com/Dogfalo/materialize',
-				'mit',
-				_("Framework CSS e JavaScript in stile Material Design.")
-			);
-			$tech(
-				"Roboto 2.0",
-				'https://www.google.com/fonts/specimen/Roboto',
-				'apache',
-				_("Famiglia di caratteri.")
-			);
-			$tech(
-				"Material Design Icons",
-				'http://google.github.io/material-design-icons/',
-				'cc-by',
-				_("Collezione di icone Material Design.")
-			);
+		$tech(
+			"Debian GNU/Linux",
+			'https://debian.org',
+			'gnu-gpl',
+			_("Sistema operativo del server web."),
+			'debian.png'
+		);
+		$tech(
+			"Apache",
+			'https://httpd.apache.org',
+			'apache',
+			_("Server web."),
+			'apache.png'
+		);
+		$tech(
+			"PHP5",
+			'http://php.net',
+			'php',
+			_("Pre-processore di ipertesti."),
+			'php.png'
+		);
+		$tech(
+			"MariaDB",
+			'https://mariadb.org',
+			'gnu-gpl-v2',
+			_("MySQL guidato dalla comunità."),
+			'mariadb.png'
+		);
+		$tech(
+			"MySQL",
+			'http://www.mysql.com',
+			'gnu-gpl-v2',
+			_("Database SQL relazionale."),
+			'mysql.png'
+		);
+		$tech(
+			"GNU Gettext",
+			'https://www.gnu.org/software/gettext/',
+			'gnu-gpl',
+			_("Framework per internazionalizzazione e localizzazione dei messaggi."),
+			'gnu.png'
+		);
 		?>
 		</div>
-	</div>
-
-	<div id="utilities" class="divider"></div>
-	<div class="section">
-		<div class="container">
-			<h3><?php _e("Strumenti utilizzati") ?></h3>
-			<p class="flow-text"><?php _e("Alcuni strumenti utilizzati per la realizzazione del sito web:") ?></p>
-
-			<div class="row">
-			<?php
-				$tech(
-					"Inkscape",
-					_('https://inkscape.org/it/'),
-					'gnu-gpl-v2',
-					_("Ritocchi alla mappa di OpenStreetMap in formato SVG.")
-				);
-				$tech(
-					"GIMP",
-					_('https://www.gimp.org'),
-					'gnu-gpl',
-					_("Fotoritocchi e modifiche alle immagini")
-				);
-				$tech(
-					"GNU Nano",
-					'https://www.nano-editor.org',
-					'gnu-gpl',
-					_("Banale editor di testo da terminale.")
-				);
-			?>
-			</div>
+		<div class="row">
+		<?php
+		$tech(
+			"Boz-PHP",
+			'https://launchpad.net/boz-php-another-php-framework',
+			'gnu-agpl',
+			_("Framework PHP e MySQL/MariaDB."),
+			'boz.png'
+		);
+		$tech(
+			"Let's Encrypt",
+			'https://certbot.eff.org',
+			'apache',
+			_("Certificato SSL."),
+			'https.png'
+		);
+		$tech(
+			"jQuery",
+			'http://jquery.com',
+			'jquery',
+			_("Framework JavaScript."),
+			'jquery.png'
+		);
+		$tech(
+			"Materialize",
+			'https://github.com/Dogfalo/materialize',
+			'mit',
+			_("Framework CSS e JavaScript in stile Material Design."),
+			'materialize.png'
+		);
+		$tech(
+			"Roboto 2.0",
+			'https://www.google.com/fonts/specimen/Roboto',
+			'apache',
+			_("Famiglia di caratteri."),
+			'roboto.png'
+		);
+		$tech(
+			"Material Design Icons",
+			'http://google.github.io/material-design-icons/',
+			'cc-by',
+			_("Collezione di icone Material Design."),
+			'material.png'
+		);
+		?>
+		</div>
+		<div class="row">
+		<?php
+		$tech(
+			"Inkscape",
+			_('https://inkscape.org/it/'),
+			'gnu-gpl-v2',
+			_("Ritocchi alla mappa di OpenStreetMap in formato png."),
+			'inkscape.png'
+		);
+		$tech(
+			"GIMP",
+			_('https://www.gimp.org'),
+			'gnu-gpl',
+			_("Fotoritocchi e modifiche alle immagini"),
+			'gimp.png'
+		);
+		$tech(
+			"GNU Nano",
+			'https://www.nano-editor.org',
+			'gnu-gpl',
+			_("Banale editor di testo da terminale."),
+			'gnu-nano.png'
+		);
+		$tech(
+			"OpenStreetMap",
+			'http://www.openstreetmap.org',
+			'odbl',
+			_("Mappa planetaria libera"),
+			'osm.png'
+		);
+		$tech(
+			"Git",
+			'https://git-scm.com',
+			'gnu-gpl-v2',
+			_("Controllo versione distribuito"),
+			'git.png'
+		);
+		?>
 		</div>
 	</div>
 
 	<div id="media" class="divider"></div>
 	<div class="section">
-		<div class="container">
-			<h3><?php _e("Materiale") ?></h3>
+		<h3><?php _e("Materiale") ?></h3>
 
-			<ul class="collection">
-				<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>
-				<li class="collection-item"><?php printf(
-					_("Grazie a %s per %s sotto licenza %s."),
-					HTML::a(
-						$toURL,
-						$to
-					),
-					HTML::a(
-						$url,
-						$what
-					),
-					HTML::a(
-						$license->getURL(),
-						$license->getShort()
-					)
-				) ?></li>
-				<?php }; ?>
+		<ul class="collection">
+			<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>
+			<?php $license = license($license) ?>
+			<li class="collection-item"><?php printf(
+				_("Grazie a %s per %s sotto licenza %s."),
+				HTML::a($toURL, $to),
+				HTML::a($url, $what),
+				HTML::a( $license->getURL(), $license->getShort() )
+			) ?></li>
+			<?php }; ?>
 
-				<?php
-				$thanks(
-					'User:VGrigas (WMF)',
-					'https://commons.wikimedia.org/wiki/User:VGrigas_%28WMF%29',
-					_("l'immagine estratta dal suo video «This is Wikipedia»"),
-					'https://commons.wikimedia.org/wiki/File:This_is_Wikipedia.webm',
-					license('cc-by-sa-3.0')
-				);
-				$thanks(
-					_("i contributori di OpenStreetMap"),
-					'http://www.openstreetmap.org',
-					_("la piantina del dipartimento di Informatica di Torino"),
-					XXX . '/openstreetmap-unito.svg',
-					license('odbl')
-				);
-				$thanks(
-					"Rui Damas",
-					'https://www.gnu.org/graphics/gnu-slash-linux.html',
-					_("l'immagine predefinita di alcuni elementi"),
-					DEFAULT_IMAGE,
-					license('gnu-gpl')
-				);
-				?>
-			</ul>
-		</div>
+			<?php
+			$thanks(
+				"User:VGrigas (WMF)",
+				'https://commons.wikimedia.org/wiki/User:VGrigas_%28WMF%29',
+				_("l'immagine estratta dal suo video «This is Wikipedia»"),
+				'https://commons.wikimedia.org/wiki/File:This_is_Wikipedia.webm',
+				'cc-by-sa-3.0'
+			);
+			$thanks(
+				"Rui Damas",
+				'https://www.gnu.org/graphics/gnu-slash-linux.html',
+				_("l'immagine predefinita di alcuni elementi"),
+				DEFAULT_IMAGE,
+				'gnu-gpl'
+			);
+			?>
+		</ul>
 	</div>
 <?php
 the_footer();
