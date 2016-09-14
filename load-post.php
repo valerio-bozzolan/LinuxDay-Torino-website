@@ -18,7 +18,6 @@
 // Die if called directly
 defined('ABSPATH') || exit;
 
-///////////////////////////////////////////////////////////////////
 // Autoload classes
 spl_autoload_register( function($c) {
 	$path = ABSPATH . "/includes/class-$c.php";
@@ -27,12 +26,9 @@ spl_autoload_register( function($c) {
 	}
 } );
 
-///////////////////////////////////////////////////////////////////
-// Boz-PHP: Menu entries
-///////////////////////////////////////////////////////////////////
 // Boz-PHP: On demand global objects
 register_expected('LICENSES', 'Licenses');
 
-define('PERMALINK_CONFERENCE', '/%s');             // "/{conference_uid}"
-define('PERMALINK_EVENT',      '/%3$s/%1$s');      // "/{$chapter_uid}/{event_uid}"
-define('PERMALINK_USER',       '/user/%s');        // "/{user_uid}"
+define('PERMALINK_CONFERENCE', '/');               // URL . "/{conference_uid}"
+define('PERMALINK_EVENT',      '/%3$s/%1$s');      // URL . "/{$chapter_uid}/{event_uid}"
+define('PERMALINK_USER',       '/user/%s');        // URL . "/{user_uid}"

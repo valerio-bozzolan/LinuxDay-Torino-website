@@ -22,8 +22,8 @@ require 'config.php';
 // In case something goes wrong...
 http_response_code(500);
 
-if( ! defined('CONFERENCE_ID') ) {
-	throw new LogicException('Undefined CONFERENCE_ID');
+if( empty( $_GET['conference_ID'] ) ) {
+	throw new LogicException('Undefined GET conference_ID');
 }
 
 $xml = new DOMDocument('1.0', 'UTF-8');
@@ -32,25 +32,8 @@ $schedule   = $xml->appendChild($schedule);
 $conference = $xml->createElement('conference');
 $conference = $schedule->appendChild($conference);
 
-$conference_row = query_row(
-	sprintf(
-		'SELECT '.
-			'conference_title, '.
-			'conference_subtitle, '.
-			'conference_venue, '.
-			'conference_city, '.
-			'conference_start, '.
-			'conference_end, '.
-			'conference_days, '.
-			'conference_day_change, '.
-			'conference_timeslot_duration '.
-		"FROM {$T('conference')} ".
-		'WHERE conference_ID = %d'
-
-		,
-		CONFERENCE_ID
-	)/*,
-	'Conference'*/
+$conference_row = Conference::getConference(
+	luser_input( $_GET['conference'], 32 )
 );
 
 if( ! $conference_row ) {
@@ -64,8 +47,6 @@ if( ! $conference_row ) {
 		'subtitle',
 		'venue',
 		'city',
-		'start',
-		'end',
 		'days',
 		'day_change',
 		'timeslot_duration'
@@ -74,6 +55,9 @@ if( ! $conference_row ) {
 	foreach($conference_fields as $field) {
 		addChild($xml, $conference, $field, $conference_row->{"conference_$field"});
 	}
+
+	addChild($xml, $conference, 'start', $conference_row->getConferenceStart('Y-m-d H:i:s') );
+	addChild($xml, $conference, 'end',   $conference_row->getConferenceEnd('Y-m-d H:i:s') );
 }
 
 $events = query_results(

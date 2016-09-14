@@ -40,6 +40,8 @@ class Header {
 			);
 		}
 
+		$args['title'] = strtoupper( $args['title'] );
+
 		header('Content-Type: text/html; charset=' . CHARSET);
 
 		if( $args['not-found'] ) {
@@ -121,7 +123,14 @@ class Header {
 	</div>
 	<header>
 		<div class="center">
-			<h1><?php _esc_html( strtoupper( SITE_NAME ) ) ?></h1>
+			<?php if( isset( $args['url'] ) ): ?>
+
+			<h1><a href="<?php echo $args['url'] ?>"><?php echo $args['title'] ?></a></h1>
+			<?php else: ?>
+
+			<h1><?php echo $args['title'] ?></h1>
+			<?php endif ?>
+
 			<p><?php echo str_replace(
 				['/', 'GNU', 'Linux'], [
 					'<b>/</b>',
@@ -141,18 +150,6 @@ class Header {
 				SITE_DESCRIPTION
 			) ?></p>
 		</div>
-		<?php if( $args['show-title'] ): ?>
-		<div class="container">
-			<?php if( isset( $args['url'] ) ): ?>
-
-			<h2><a href="<?php echo $args['url'] ?>"><?php echo $args['title'] ?></a></h2>
-			<?php else: ?>
-
-			<h2><?php echo $args['title'] ?></h2>
-			<?php endif ?>
-
-		</div>
-		<?php endif ?>
 	</header>
 	<?php if( $args['container'] ): ?><div class="container"><?php endif ?>
 

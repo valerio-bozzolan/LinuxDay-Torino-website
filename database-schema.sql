@@ -28,7 +28,7 @@ CREATE TABLE `chapter` (
   `chapter_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`chapter_ID`),
   UNIQUE KEY `chapter_uid` (`chapter_uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `conference` (
   UNIQUE KEY `conference_uid` (`conference_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `conference_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `location` (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,11 +88,12 @@ CREATE TABLE `event` (
   KEY `track_ID` (`track_ID`),
   KEY `chapter_ID` (`chapter_ID`),
   KEY `conference_ID` (`conference_ID`),
+  KEY `event_start` (`event_start`),
   CONSTRAINT `events_ibfk_5` FOREIGN KEY (`conference_ID`) REFERENCES `conference` (`conference_ID`) ON DELETE CASCADE,
   CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `chapter` (`chapter_ID`),
   CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `track` (`track_ID`),
   CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `room` (`room_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,7 +134,7 @@ CREATE TABLE `location` (
   `location_lon` float(4,3) NOT NULL,
   `location_zoom` int(1) DEFAULT NULL,
   PRIMARY KEY (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +153,7 @@ CREATE TABLE `room` (
   UNIQUE KEY `room_uid` (`room_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `room_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `location` (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +171,7 @@ CREATE TABLE `skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +189,7 @@ CREATE TABLE `track` (
   PRIMARY KEY (`track_ID`),
   UNIQUE KEY `track_uid` (`track_uid`),
   KEY `track_order` (`track_order`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +219,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -249,4 +250,4 @@ CREATE TABLE `user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 15:34:35
+-- Dump completed on 2016-09-14 10:03:16
