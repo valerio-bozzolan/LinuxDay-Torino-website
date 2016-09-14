@@ -1,28 +1,36 @@
 DirectoryIndex index.php
 
+RewriteBase /
+
 RewriteEngine on
 
 # I'm pretty sure that I could use the [OR]... but it does not work a fuck!
 
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^ - [L]
 
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -l
+RewriteCond %{REQUEST_FILENAME} -l
 RewriteRule ^ - [L]
-
-RewriteRule ^/user/(.*) /user.php?uid=$1 [L,QSA]
 
 # Skip Apache aliases
-# /javascript is from the `libjs-jquery` package
-# /icons is from Apache
-RewriteRule ^/javascript - [L]
-RewriteRule ^/icons/     - [L]
+# javascript is from the `libjs-jquery` package
+# icons is from Apache
+RewriteRule ^javascript - [L]
+RewriteRule ^icons      - [L]
 
-# Skip DirectoryIndex
+# Skip DirectoryIndex (add other files if you have it)
 RewriteRule index.php$ - [L]
 
-RewriteRule ^/(.*)/(.*)$ /event.php?conference=$1&uid=$2   [L,QSA]
-RewriteRule ^/(.*)       /conference.php?uid=$1&ultimo=asd [L,QSA]
+# The user page
+RewriteRule ^(.*)/user/(.*)$ /$1/user.php?uid=$2&conference=$1         [L,QSA]
+
+# The chapter uid is only for SEO
+RewriteRule ^(.*)/(.*)/(.*)$ /$1/event.php?conference=$1&chapter=$2&uid=$3 [L,QSA]
+#               \    \    \-->event_uid
+#                \    \------>chapter_uid
+#                 \---------->conference_uid
+
+RewriteRule ^(.*)/$          /$1/conference.php?uid=$1                 [L,QSA]

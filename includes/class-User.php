@@ -166,6 +166,9 @@ class User {
 		);
 	}
 
+	/**
+	 * Return DynamicQuery
+	 */
 	static function getStandardQueryUsers() {
 		$q = new DynamicQuery();
 
@@ -173,28 +176,23 @@ class User {
 			'user_uid',
 			'user_name',
 			'user_surname',
-			'user_mail'
+			'user_email'
 		] );
 
-		$q->useTable('user');
-
-
-		return sprintf(
-			'SELECT '.
-				'user_uid, '.
-				'user_name, '.
-				'user_surname, '.
-				'user_email '.
-				"FROM {$JOIN('event_user', 'user')} " .
-			'WHERE '.
-				'event_user.event_ID = %d AND '.
-				'event_user.user_ID = user.user_ID '.
-			'ORDER BY '.
-				'event_user_order'
-			,
-			$this->event_ID
-		);
+		return $q->useTable('user');
 	}
 
-
+	/**
+	 * @return DynamicQuery
+	 */
+	static function getQueryUsersByEvent( $event_ID ) {
+		$q = self::getStandardQueryUsers();
+		$q->useTable('event_user');
+		$q->appendCondition('event_user.user_ID = user.user_ID');
+		$q->appendCondition( sprintf(
+			'event_user.event_ID = %d',
+			$event_ID
+		) );
+		return $q->appendOrderBy('event_user_order');
+	}
 }

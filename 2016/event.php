@@ -18,10 +18,11 @@
 require 'load.php';
 
 $event = null;
-if( isset( $_GET['conference'], $_GET['uid'] ) ) {
-	$event = Event::getEventByConferenceUid(
+if( isset( $_GET['conference'], $_GET['uid'], $_GET['chapter'] ) ) {
+	$event = Event::getEventByConferenceChapter(
 		luser_input( $_GET['uid']       , 64 ),
-		luser_input( $_GET['conference'], 64 )
+		luser_input( $_GET['conference'], 64 ),
+		luser_input( $_GET['chapter']   , 64 )
 	);
 }
 

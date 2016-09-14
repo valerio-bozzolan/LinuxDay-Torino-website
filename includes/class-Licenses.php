@@ -20,6 +20,7 @@ class Licenses {
 
 	function __construct() {
 		$this->add('gnu-gpl',      "GNU GPL",        "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html')
+		     ->add('gnu-gpl-v3',   "GNU GPL v3",   _("GNU General Public License, versione 3"), 'https://www.gnu.org/licenses/gpl-3.0.html')
 		     ->add('gnu-gpl-v2',   "GNU GPL v2",   _("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html')
 		     ->add('gnu-agpl',     "GNU AGPL",       "GNU Affero General Public License",       'https://www.gnu.org/licenses/agpl-3.0.html')
 		     ->add('apache',       "Apache 2.0",   _("Licenza Apache, versione 2.0"),           'https://www.apache.org/licenses/LICENSE-2.0.html')

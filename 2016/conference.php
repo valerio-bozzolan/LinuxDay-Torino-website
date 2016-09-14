@@ -28,7 +28,9 @@ $conference
 	|| die_with_404();
 
 the_header('conference', [
-	'title' => $conference->getConferenceTitle(),
+	'nav-title'  => $s = $conference->getConferenceTitle(),
+	'head-title' => $s,
+	'title' => $s,
 	'url'   => $conference->getConferenceURL()
 ] );
 ?>

@@ -20,13 +20,9 @@ trait EventTrait {
 		if( isset( $t->event_ID ) ) {
 			$t->event_ID   = (int) $t->event_ID;
 		}
-
-		// MySQL datetime to PHP DateTime
 		if( isset( $t->event_start ) ) {
 			datetime2php($t->event_start);
 		}
-
-		// MySQL datetime to PHP DateTime
 		if( isset( $t->event_end ) ) {
 			datetime2php($t->event_end);
 		}
@@ -34,20 +30,29 @@ trait EventTrait {
 
 	function getEventID() {
 		isset( $this->event_ID )
-			|| die("Missing event_ID");
+			|| error_die("Missing event_ID");
 		return $this->event_ID;
 	}
 
 	function getEventUID() {
 		isset( $this->event_uid )
-			|| die("Missing event_uid");
+			|| error_die("Missing event_uid");
 		return $this->event_uid;
 	}
 
+	function getChapterUID() {
+		isset( $this->chapter_uid )
+			|| error_die("Missing chapter_uid");
+		return $this->chapter_uid;
+	}
+
 	function getEventURL() {
-		isset( $this->conference_uid )
-			|| die("Missing conference_uid");
-		return URL . sprintf( PERMALINK_EVENT, $this->getConferenceUID(), $this->getEventUID() );
+		return URL . sprintf(
+			PERMALINK_EVENT,
+			$this->getEventUID(),
+			$this->getConferenceUID(),
+			$this->getChapterUid()
+		);
 	}
 
 	/**
@@ -73,31 +78,9 @@ trait EventTrait {
 		return site_page( $this->event_img, ROOT );
 	}
 
-	/**
-	 * @return string
-	 */
-	function getQueryEventUsers() {
-		global $JOIN;
-
-		return sprintf(
-			'SELECT '.
-				'user_uid, '.
-				'user_name, '.
-				'user_surname, '.
-				'user_email '.
-				"FROM {$JOIN('event_user', 'user')} " .
-			'WHERE '.
-				'event_user.event_ID = %d AND '.
-				'event_user.user_ID = user.user_ID '.
-			'ORDER BY '.
-				'event_user_order'
-			,
-			$this->getEventID()
-		);
-	}
-
 	function queryEventUsers() {
-		return query( $this->getQueryEventUsers() );
+		return User::getQueryUsersByEvent( $this->getEventID() )
+			->query();
 	}
 }
 
@@ -132,13 +115,16 @@ class Event {
 			'room_name',
 			'track_uid',
 			'track_name',
+			'chapter_uid',
+			'chapter_name',
 			'conference.conference_ID',
 			'conference_uid',
 			'conference_title'
 		] );
-		$q->useTable( [ 'event', 'conference', 'room', 'track' ] );
+		$q->useTable( [ 'event', 'conference', 'room', 'track', 'chapter' ] );
 		$q->appendCondition('event.conference_ID = conference.conference_ID');
 		$q->appendCondition('event.room_ID = room.room_ID');
+		$q->appendCondition('event.chapter_ID = chapter.chapter_ID');
 		$q->appendCondition('event.track_ID = track.track_ID');
 		return $q;
 	}
@@ -146,7 +132,7 @@ class Event {
 	/**
 	 * @return DynamicQuery
 	 */
-	static function getQueryEventByUid($event_uid) {
+	static function getQueryEvent($event_uid) {
 		$q = Event::getStandardQueryEvent();
 		return $q->appendCondition( sprintf(
 			"event.event_uid = '%s'",
@@ -157,8 +143,8 @@ class Event {
 	/**
 	 * @return DynamicQuery
 	 */
-	static function getQueryEventByConferenceUID( $event_uid, $conference_uid ) {
-		$q = Event::getQueryEventByUid($event_uid);
+	static function getQueryEventByConference( $event_uid, $conference_uid ) {
+		$q = Event::getQueryEvent($event_uid);
 		return $q->appendCondition( sprintf(
 			"conference.conference_uid = '%s'",
 			esc_sql( $conference_uid )
@@ -168,19 +154,31 @@ class Event {
 	/**
 	 * @return DynamicQuery
 	 */
-	static function getQueryEventByConferenceID( $event_uid, $conference_ID ) {
-		$q = Event::getQueryEventByUid($event_uid);
+	static function getQueryEventByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
+		$q = Event::getQueryEvent($event_uid);
+		$q->appendCondition( sprintf(
+			"conference.conference_uid = '%s'",
+			esc_sql( $conference_uid )
+		) );
 		return $q->appendCondition( sprintf(
-			'conference.conference_ID = %d',
-			$conference_ID
+			"chapter.chapter_uid = '%s'",
+			esc_sql( $chapter_uid )
 		) );
 	}
 
 	/**
 	 * @return Event
 	 */
-	static function getEventByConferenceUID( $event_uid, $conference_uid ) {
-		return Event::getQueryEventByConferenceUID($event_uid, $conference_uid)
+	static function getEventByConference( $event_uid, $conference_uid ) {
+		return Event::getQueryEventByConference($event_uid, $conference_uid)
+		            ->getRow('Event');
+	}
+
+	/**
+	 * @return Event
+	 */
+	static function getEventByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
+		return Event::getQueryEventByConferenceChapter($event_uid, $conference_uid, $chapter_uid)
 		            ->getRow('Event');
 	}
 
@@ -199,6 +197,7 @@ class Event {
 				'SELECT '.
 					'track_uid, '.
 					'track_name, '.
+					'chapter_uid, '.
 					'event.event_ID, '.
 					'event_uid, '.
 					'event_title, '.
@@ -208,7 +207,7 @@ class Event {
 					'user_name, '.
 					'user_surname, '.
 					'conference_uid '.
-					" FROM {$JOIN('conference', 'track', 'event')} ".
+					" FROM {$JOIN('conference', 'track', 'chapter', 'event')} ".
 						"LEFT JOIN {$JOIN('event_user')} ".
 							'ON (event.event_ID = event_user.event_ID) '.
 						"LEFT JOIN {$JOIN('user')} ".
@@ -216,7 +215,8 @@ class Event {
 				'WHERE '.
 					'event.conference_ID = %d AND '.
 					'event.conference_ID = conference.conference_ID AND '.
-					'event.track_ID = track.track_ID '.
+					'event.track_ID = track.track_ID AND '.
+					'event.chapter_ID = chapter.chapter_ID '.
 				'ORDER BY '.
 					'event_start, '.
 					'track_order'

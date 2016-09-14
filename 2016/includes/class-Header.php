@@ -21,6 +21,9 @@ class Header {
 
 		$args = merge_args_defaults($args, [
 			'show-title'  => true,
+			'nav-title'   => SITE_NAME_SHORT,
+			'nav-url'     => URL,
+			'head-title'  => null,
 			'title'       => $menu->name,
 			'url'         => $menu->url,
 			'og'          => [],
@@ -28,6 +31,14 @@ class Header {
 			'user-navbar' => true,
 			'container'   => true
 		] );
+
+		if( $args['head-title'] === null ) {
+			$args['head-title'] = sprintf(
+				_("%s - %s"),
+				$args['title'],
+				$args['nav-title']
+			);
+		}
 
 		header('Content-Type: text/html; charset=' . CHARSET);
 
@@ -48,7 +59,7 @@ class Header {
 <!DOCTYPE html>
 <html lang="<?php echo ISO_LANG ?>">
 <head>
-	<title><?php echo "{$args['title']} — " . SITE_NAME ?></title>
+	<title><?php echo $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="Boz-PHP - Another PHP Framework" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" /><?php load_module('header') ?>
@@ -91,9 +102,9 @@ class Header {
 -->
 <body>
 	<nav>
-		<div class="nav-wrapper blue darken-1">
-			<a class="brand-logo" href="<?php echo URL ?>" title="<?php _esc_attr(SITE_DESCRIPTION) ?>">
-				LD2016
+		<div class="nav-wrapper teal">
+			<a class="brand-logo" href="<?php echo $args['nav-url'] ?>" title="<?php _esc_attr(SITE_DESCRIPTION) ?>">
+				<?php echo $args['nav-title'] ?>
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
@@ -116,11 +127,15 @@ class Header {
 					'<b>/</b>',
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
-						'GNU'
+						'GNU',
+						null,
+						'black-text hoverable'
 					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
-						'Linux'
+						'Linux',
+						null,
+						'black-text hoverable'
 					)
 				],
 				SITE_DESCRIPTION
