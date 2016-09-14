@@ -29,7 +29,8 @@ class Licenses {
 		     ->add('odbl',         "ODbl",           "Open Data Commons Open Database License", 'http://opendatacommons.org/licenses/odbl/')
 		     ->add('cc-by',        "CC By 4.0",    _("Creative Commons - Attribuzione 4.0 Internazionale"), _('https://creativecommons.org/licenses/by/4.0/deed.it') )
 		     ->add('cc-by-sa-3.0', "CC By Sa 3.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"), _('https://creativecommons.org/licenses/by-sa/3.0/deed.it') )
-		     ->add('cc-by-sa-4.0', "CC By Sa 4.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-sa/4.0/deed.it') );
+		     ->add('cc-by-sa-4.0', "CC By Sa 4.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-sa/4.0/deed.it') )
+		     ->add('jquery',       "jQuery",       _("Licenza jQuery"),                         'https://github.com/jquery/jquery/blob/master/LICENSE.txt');
 	}
 
 	function add($code, $short, $name, $url) {
