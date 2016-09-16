@@ -6,7 +6,7 @@ Si invitano i relatori a fornire più informazioni possibili riguardanti il prop
 * Descrizione — Come saranno affrontate le tematiche del talk nell'ora a disposizione
 * Materiali — Le proprie slide o altro materiale (fornirle entro 7 giorni dal talk!)
 
-Inviare il tutto al webmaster.
+Inviare il tutto al webmaster (webmaster at ldto dot it).
 
 ## Materiale
 I relatori non devono creare materiale contenente potenziali violazioni di copyright dato che saranno rese pubbliche sul sito web Linux Day Torino.
@@ -18,10 +18,10 @@ I relatori sono fortemente invitati ad utilizzare una delle seguenti licenze cul
 * [Creative Commons Attribuzione](https://creativecommons.org/licenses/by/4.0/deed.it)
 * [Creative Commons Pubblico Dominio](https://creativecommons.org/publicdomain/zero/1.0/deed.it)
 
-Nel materiale ricordarsi di specificare:
+Nel materiale non dimenticarsi di specificare:
 
-* Anno
-* Nome e cognome dei relatori
+* Riferimenti al Linux Day Torino
+* Nome e cognome dei relatori e contatti
 * Licenza scelta
 
 ## Strumenti utilizzati

@@ -142,8 +142,24 @@ trait UserTrait {
 		return $q;
 	}
 
+	private function getQueryUserEventsByConference($conference_ID) {
+		$q = $this->getQueryUserEvents();
+		$q->useTable('event');
+		$q->appendCondition('event_user.event_ID = event.event_ID');
+		return $q->appendCondition(
+			sprintf(
+				'event.conference_ID = %d',
+				$conference_ID
+			)
+		);
+	}
+
 	function queryUserEvents() {
 		return $this->getQueryUserEvents()->query();
+	}
+
+	function queryUserEventsByConference($conference_ID) {
+		return $this->getQueryUserEventsByConference($conference_ID)->query();
 	}
 }
 

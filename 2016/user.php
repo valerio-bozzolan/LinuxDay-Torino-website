@@ -26,9 +26,15 @@ if( isset( $_GET['uid'] ) ) {
 
 $user || die_with_404();
 
-the_header('user', [
+new Header('user', [
 	'title' => $user->getUserFullname(),
-	'url'   => $user->getUserURL()
+	'url'   => $user->getUserURL(),
+	'og'    => [
+		'image' => $user->getUserImage(),
+		'type'  => 'profile',
+		'profile:first_name' => $user->user_name,
+		'profile:last_name'  => $user->user_surname
+	]
 ] );
 ?>
 	<div class="row">
@@ -40,7 +46,7 @@ the_header('user', [
 					<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>">
 				<?php endif ?>
 					<img class="responsive-img hoverable z-depth-1" src="<?php
-						echo $user->getUserImage() . '?s=256'
+						echo $user->getUserImage()
 					?>" alt="<?php
 						_esc_attr( $user->getUserFullname() )
 					?>" />
@@ -192,5 +198,4 @@ the_header('user', [
 	<?php endif ?>
 	<!-- End social -->
 </div>
-<?php
-the_footer();
+<?php new Footer();

@@ -17,7 +17,7 @@
 
 require 'load.php';
 
-the_header('credits');
+new Header('credits');
 ?>
 	<div class="section">
 		<p class="flow-text"><?php _e("Questo sito web utilizza esclusivamente <strong>software libero</strong>.") ?></p>
@@ -29,7 +29,11 @@ the_header('credits');
 			<div class="col s3 m2 l2">
 				<div class="row">
 					<div class="col s12">
-						<a href="<?php echo $url ?>">
+						<a href="<?php echo $url ?>" title="<?php printf(
+							_("%s: progetto a licenza %s"),
+							$name,
+							$license->getShort()
+						) ?>">
 						<?php if($icon): ?>
 							<img class="hoverable responsive-img" src="<?php echo XXX . "/libre-icons/$icon" ?>" alt="<?php printf(
 								_("Logo di %s"),
@@ -38,13 +42,14 @@ the_header('credits');
 						<?php endif ?>
 						</a>
 					</div>
+					<!--
 					<div class="col s12">
 						<small><?php printf(
 							"<strong>%s</strong> <small>(%s)</small>",
 							HTML::a( $url, $name ),
 							HTML::a( $license->getURL(), $license->getShort(), $license->getName() )
 						) ?></small>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		<?php }; ?>
@@ -110,7 +115,7 @@ the_header('credits');
 			'https://certbot.eff.org',
 			'apache',
 			_("Certificato SSL."),
-			'https.png'
+			'lets-encrypt.png'
 		);
 		$tech(
 			"jQuery",
@@ -216,5 +221,4 @@ the_header('credits');
 			?>
 		</ul>
 	</div>
-<?php
-the_footer();
+<?php new Footer();

@@ -19,7 +19,7 @@ class Footer {
 	function __construct( $args = [] ) {
 		load_module('footer');
 ?>
-<footer class="page-footer blue darken-2">
+<footer class="page-footer teal darken-2">
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m6">

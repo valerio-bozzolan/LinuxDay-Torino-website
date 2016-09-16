@@ -27,22 +27,66 @@ if( ! empty( $_GET['uid'] ) ) {
 $conference
 	|| die_with_404();
 
-the_header('conference', [
-	'head-title'  => $s = $conference->getConferenceTitle(),
-	'title' => $s,
-	'url'   => $conference->getConferenceURL()
+enqueue_css('animation');
+
+new Header('conference', [
+	'show-title' => false,
+	'head-title' => $s = $conference->getConferenceTitle(),
+	'title'      => $s,
+	'url'        => $conference->getConferenceURL()
 ] );
 ?>
+	<div class="header">
+		<center>
+			<h1><?php echo HTML::a(
+				$conference->getConferenceURL(),
+				strtoupper( SITE_NAME )
+			) ?></h1>
+
+			<p class="flow-text"><?php echo str_replace(
+				['/', 'GNU', 'Linux'], [
+					'<b>/</b>',
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/GNU'),
+						'GNU',
+						null,
+						'black-text hoverable'
+					),
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
+						'Linux',
+						null,
+						'black-text hoverable'
+					)
+				],
+				SITE_DESCRIPTION
+			) ?></p>
+		</center>
+	</div>
+
 	<div class="section">
 		<div class="row">
-			<p class="flow-text"><?php echo $conference->getConferenceDescription() ?></p>
-			<?php if( $conference->conference_quote ): ?>
+			<p class="flow-text"><?php printf(
+				_(
+					"Il Linux Day è la principale manifestazione italiana di promozione di tecnologia sostenibile. ".
+					"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>sabato</strong>, il %s."
+				),
+				_("Dipartimento di Informatica"),
+				_("Università degli studi di Torino"),
+				_("sabato"),
+				_("22 ottobre 2016")
+			) ?></p>
 			<div class="col s12 m8">
-				<blockquote class="flow-text"><?php echo $conference->getConferenceQuote() ?></blockquote>
+				<blockquote class="flow-text">
+					// How to write good code<br />
+					<strong>$software</strong>: 
+					function(<span class="yellow">play</span>, 
+					<span class="blue lighten-3">freedom</span>, 
+					<span class="orange">friends</span>) { }
+				</blockquote>
 			</div>
-			<?php endif ?>
 			<div class="col s12 m4">
-				<p class="flow-text"><?php echo $conference->getConferenceSubtitle() ?></p>
+				<p class="flow-text"><?php _e("Il tema di quest'anno a livello nazionale è... il <code>coding</code>!") ?></p>
 			</div>
 		</div>
 	</div>
@@ -118,7 +162,7 @@ the_header('conference', [
 					$who = HTML::a($url, $who, null);
 				} ?>
 
-			<div class="col s12 m6 l3">
+			<div class="col s12 m6 l4">
 				<div class="card-panel hoverable">
 					<p><span class="flow-text"><?php echo $what ?></span><br /> <?php printf( _("Gestito %s %s."), _("da"), $who ) ?></p>
 				</div>
@@ -149,5 +193,4 @@ the_header('conference', [
 
 		</div>
 	</div>
-<?php
-the_footer();
+<?php new Footer();

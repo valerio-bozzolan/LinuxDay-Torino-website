@@ -20,14 +20,6 @@ function datetime2php(& $s) {
 	$s->setTimezone( new DateTimeZone( DB_TIMEZONE ) );
 }
 
-function the_header( $uid, $args = [] ) {
-	new Header($uid, $args);
-}
-
-function the_footer( $args = [] ) {
-	new Footer($args);
-}
-
 function get_iso_lang() {
 	$l = [
 		'en_US.UTF-8' => 'en'
@@ -93,11 +85,11 @@ function license($code) {
 }
 
 function die_with_404() {
-	the_header('404', [
+	new Header('404', [
 		'title' => _("È un 404! Pagina non trovata :("),
 		'not-found' => true
 	] );
 	error( _("Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di root <b>non</b> risolve la situazione!)") );
-	the_footer();
+	new Footer();
 	exit;
 }

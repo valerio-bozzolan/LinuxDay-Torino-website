@@ -26,10 +26,20 @@ class Header {
 			'head-title'  => null,
 			'title'       => $menu->name,
 			'url'         => $menu->url,
-			'og'          => [],
 			'not-found'   => false,
 			'user-navbar' => true,
 			'container'   => true
+		] );
+
+		if( ! isset( $args['og'] ) ) {
+			$args['og'] = [];
+		}
+
+		$args['og'] = merge_args_defaults($args['og'], [
+			'image'  => XXX . '/ld-2016-logo.png',
+			'type'   => 'website',
+			'url'    => $args['url'],
+			'title'  => $args['title']
 		] );
 
 		if( $args['head-title'] === null ) {
@@ -39,8 +49,6 @@ class Header {
 				$args['nav-title']
 			);
 		}
-
-		$args['title'] = strtoupper( $args['title'] );
 
 		header('Content-Type: text/html; charset=' . CHARSET);
 
@@ -63,8 +71,31 @@ class Header {
 <head>
 	<title><?php echo $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="generator" content="Boz-PHP - Another PHP Framework" />
-	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" /><?php load_module('header') ?>
+	<meta name="generator" content="GNU nano" />
+	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
+
+	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/logo-192.png" />
+	<link rel="icon" type="image/png" sizes="160x160" href="<?php echo XXX ?>/favicon/logo-160.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo XXX ?>/favicon/logo-96.png" />
+	<link rel="icon" type="image/png" sizes="64x64" href="<?php echo XXX ?>/favicon/logo-64.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo XXX ?>/favicon/logo-32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo XXX ?>/favicon/logo-16.png" />
+
+	<!-- Note the amount of code wasted only because they don't follow standards -->
+	<link rel="apple-touch-icon" href="<?php echo XXX ?>/favicon/logo-57.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo XXX ?>/favicon/logo-114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo XXX ?>/favicon/logo-72.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo XXX ?>/favicon/logo-144.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo XXX ?>/favicon/logo-60.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo XXX ?>/favicon/logo-120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo XXX ?>/favicon/logo-76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo XXX ?>/favicon/logo-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo XXX ?>/favicon/logo-180.png">
+	<meta name="msapplication-TileColor" content="#fff" />
+	<meta name="msapplication-TileImage" content="<?php echo XXX ?>/favicon/logo-144.png" />
+	<!-- Yes... It's a lot of code wasted... -->
+
+<?php load_module('header') ?>
 
 <?php foreach($args['og'] as $id=>$value): ?>
 	<meta property="og:<?php echo $id ?>" content="<?php echo $value ?>" />
@@ -121,36 +152,19 @@ class Header {
 	<div class="parallax-container" style="height:200px">
 		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
 	</div>
-	<header>
-		<div class="center">
-			<?php if( isset( $args['url'] ) ): ?>
 
-			<h1><a href="<?php echo $args['url'] ?>"><?php echo $args['title'] ?></a></h1>
-			<?php else: ?>
+	<?php if( $args['show-title'] ): ?>
+	<header class="container">
+		<?php if( isset( $args['url'] ) ): ?>
 
-			<h1><?php echo $args['title'] ?></h1>
-			<?php endif ?>
+		<h1><a href="<?php echo $args['url'] ?>"><?php echo $args['title'] ?></a></h1>
+		<?php else: ?>
 
-			<p><?php echo str_replace(
-				['/', 'GNU', 'Linux'], [
-					'<b>/</b>',
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/GNU'),
-						'GNU',
-						null,
-						'black-text hoverable'
-					),
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
-						'Linux',
-						null,
-						'black-text hoverable'
-					)
-				],
-				SITE_DESCRIPTION
-			) ?></p>
-		</div>
+		<h1><?php echo $args['title'] ?></h1>
+		<?php endif ?>
 	</header>
+	<?php endif ?>
+
 	<?php if( $args['container'] ): ?><div class="container"><?php endif ?>
 
 <?php	}

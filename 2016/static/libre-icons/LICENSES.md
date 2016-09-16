@@ -81,3 +81,9 @@ https://www.gnu.org/copyleft/lgpl.html
 
 Mit License
 https://opensource.org/licenses/MIT
+
+## Icone non-libere di software libero
+
+Let's Encrypt (CC By-NC 4.0)
+https://letsencrypt.org/images/le-logo-standard.png
+https://creativecommons.org/licenses/by-nc/4.0/

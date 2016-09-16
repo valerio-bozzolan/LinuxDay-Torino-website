@@ -28,7 +28,7 @@ if( isset( $_GET['conference'], $_GET['uid'], $_GET['chapter'] ) ) {
 
 $event || die_with_404();
 
-the_header('event', [
+new Header('event', [
 	'title' => $event->event_title,
 	'url'   => $event->getEventURL()
 ] );
@@ -119,5 +119,4 @@ the_header('event', [
 			?>
 		</a>
 	</div>
-<?php
-the_footer();
+<?php new Footer();

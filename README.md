@@ -11,11 +11,13 @@ TO-DO:
 ## Installazione sito web
 Il sito web vuole permettere la decentralizzazione dei temi grafici dei vari Linux Day Torino, centralizzandone i contenuti.
 
-È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework Boz-PHP. Viene utilizzato jQuery.
+È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework Boz-PHP.
+
+Vengono utilizzati jQuery e LeafLet e si assume che siano installati attraverso il proprio gestore di pacchetti.
 
 Per un'installazione della maggior parte delle componenti su un sistema Debian:
 
-    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery
+    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery libjs-leaflet
 
 Il file `.htaccess` è testato includendolo direttamente nel VirtualHost di Apache tramite la direttiva `Include`:
 
@@ -71,6 +73,8 @@ Copiare il template GNU Gettext `*/l10n/linuxday.pot` in un nuovo file `.po` nel
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
 ## Licenza
+Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino.
+
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
