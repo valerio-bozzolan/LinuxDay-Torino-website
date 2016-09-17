@@ -5,8 +5,11 @@ Si invitano i relatori a fornire più informazioni possibili riguardanti il prop
 * Abstract — Le tematiche del talk (comparirà sul sito, max. 200 caratteri)
 * Descrizione — Come saranno affrontate le tematiche del talk nell'ora a disposizione
 * Materiali — Le proprie slide o altro materiale (fornirle entro 7 giorni dal talk!)
+* Relatori — Nome*, cognome*, username amichevole* (e.g. "boz"), e-mail, sito web personale, licenza di software libero preferita, breve biofrafia in Italiano e in Inglese, blog personale, vari social (GitHub, Twitter, Facebook, LinkedIn, Google+, ..), skill
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
+
+I relatori possono registrarsi in [https://it.gravatar.com](Gravatar.com) per cambiare l'immagine del profilo sul sito.
 
 ## Materiale
 I relatori non devono creare materiale contenente potenziali violazioni di copyright dato che saranno rese pubbliche sul sito web Linux Day Torino.

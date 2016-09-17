@@ -1,7 +1,8 @@
 # Icone presenti
 
-* Border Radio (in concessione esclusiva a Linux Day 2016)
+* Border Radio (CC By-Sa 4.0 International)
 http://www.border-radio.it
+https://creativecommons.org/licenses/by-sa/4.0/
 
 * MuBit (in concessione esclusiva a Linux Day 2016)
 http://www.mupin.it

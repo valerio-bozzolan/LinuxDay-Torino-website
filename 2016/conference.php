@@ -27,6 +27,8 @@ if( ! empty( $_GET['uid'] ) ) {
 $conference
 	|| die_with_404();
 
+enqueue_js('leaflet');
+enqueue_css('leaflet');
 enqueue_css('animation');
 
 new Header('conference', [
@@ -69,7 +71,7 @@ new Header('conference', [
 			<p class="flow-text"><?php printf(
 				_(
 					"Il Linux Day è la principale manifestazione italiana di promozione di tecnologia sostenibile. ".
-					"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>sabato</strong>, il %s."
+					"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>."
 				),
 				_("Dipartimento di Informatica"),
 				_("Università degli studi di Torino"),
@@ -152,8 +154,8 @@ new Header('conference', [
 		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
-	<div id="play" class="divider"></div>
-	<div class="section">
+	<div id="activities" class="divider"></div>
+	<div class="section" id="activities-section">
 		<h3><?php _e("Attività") ?></h3>
 		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
 		<div class="row">
@@ -162,8 +164,8 @@ new Header('conference', [
 					$who = HTML::a($url, $who, null);
 				} ?>
 
-			<div class="col s12 m6 l4">
-				<div class="card-panel hoverable">
+			<div class="col s12 m6">
+				<div class="card-panel hoverable teal lighten-4">
 					<p><span class="flow-text"><?php echo $what ?></span><br /> <?php printf( _("Gestito %s %s."), _("da"), $who ) ?></p>
 				</div>
 			</div>
@@ -191,6 +193,31 @@ new Header('conference', [
 			);
 			?>
 
+		</div>
+	</div>
+
+	<div id="price" class="divider"></div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col s12 m4">
+				<img class="responsive-img circle hoverable" src="<?php echo XXX ?>/4-liberta.png" alt="<?php
+					_("Le quattro libertà fontamentali del software libero")
+				?>" />
+			</div>
+			<div class="col s12 m8 valign-wrapper">
+				<p class="flow-text"><?php printf(
+					_(
+					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".
+					"Non dimenticare di portarti a casa una <em>maglietta</em> o ".
+					"qualche dozzina di adesivi e spille! ".
+					"È il nostro modo per promuovere ulteriormente il software libero, ".
+					"per far sì che altri Linux Day rimangano sempre indipendenti, liberi e gratuiti.<br /> ".
+					"Ci vediamo il <strong>%s</strong>!"
+					),
+					_("22 ottobre")
+				) ?></p>
+			</div>
 		</div>
 	</div>
 <?php new Footer();

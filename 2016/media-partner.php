@@ -27,13 +27,19 @@ new Header('media-partner');
 	) ?></p>
 	<div class="row">
 		<?php $partner = function($name, $url, $icon, $logo, $color, $desc) { ?>
+		<div class="col s12 m6">
+			<!--
 			<div class="card">
-				<div class="card-image">
+				<div class="card-image"> -->
+				<a href="<?php echo $url ?>" title="<?php
+					_e("$name")
+				?>" target="_blank">
 					<img class="<?php echo $color ?>" src="<?php echo XXX . "/partner/$logo" ?>" alt="<?php printf(
 						_("Logo di %s"),
 						$name
 					) ?>" />
-				</div>
+				</a>
+				<!-- </div>
 				<div class="card-content">
 					<p><?php echo $desc ?></p>
 				</div>
@@ -45,11 +51,11 @@ new Header('media-partner');
 						'btn waves-effect',
 						'target="_blank"'
 					) ?>
-				</div>
+				</div> -->
 			</div>
+		</div>
 		<?php }; ?>
 
-		<div class="col s12 m6">
 		<?php
 			$partner(
 				"Border Radio",
