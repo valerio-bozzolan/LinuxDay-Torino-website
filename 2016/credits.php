@@ -125,6 +125,13 @@ new Header('credits');
 			'jquery.png'
 		);
 		$tech(
+			"Leaflet",
+			'http://leafletjs.com',
+			'bsd-2',
+			_("Framework JavaScript per mappe interattive"),
+			'leaflet.png'
+		);
+		$tech(
 			"Materialize",
 			'https://github.com/Dogfalo/materialize',
 			'mit',
