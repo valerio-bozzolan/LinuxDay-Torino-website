@@ -13,35 +13,37 @@ Il sito web vuole permettere la decentralizzazione dei temi grafici dei vari Lin
 
 È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework Boz-PHP.
 
+### Preparazione
 Vengono utilizzati jQuery e LeafLet e si assume che siano installati attraverso il proprio gestore di pacchetti.
 
 Per un'installazione della maggior parte delle componenti su un sistema Debian:
 
     apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery libjs-leaflet
+    a2enmod rewrite
 
-Il file `.htaccess` è testato includendolo direttamente nel VirtualHost di Apache tramite la direttiva `Include`:
+### File
+Clonare questo progetto nella root del proprio `VirtualHost` di Apache.
 
-    <Virtualhost ...>
-        ...
-
-        <Directory /var/www/linuxdaytorino/>
-            Include /var/www/linuxdaytorino/.htaccess
-        </Directory>
-    </Virtualhost>
+    cd /var/www/linuxday
+    git clone [questo repo] .
 
 Il sito può rimanere in sola-lettura per l'utente `www-data`.
+
+### Database
+Creare un database importando `database-schema.sql`.
+
+Copiare il file di configurazione di default:
+
+    cp load-sample.php load.php
+
+Riempire `load.php` con le credenziali del database.
 
 ### Framework
 Posizionare Boz-PHP da qualche parte, solitamente in `/usr/share`:
 
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
-Oppure modificare oppurtunatamente `load.php` con il percorso scelto per il framework.
-
-### Database
-È richiesta una connessione MySQL/MariaDB (con estensione `mysqli`).
-
-Creare un database importandovi `database-schema.sql` e inserendo le credenziali nel file `load.php`.
+Se viene posizionato in un altro posto, modificare oppurtunatamente `load.php`.
 
 ### API
 Copiare `includes/api/config-sample.php` in `includes/api/config.php`.
@@ -64,10 +66,10 @@ I file di localizzazione `.pot` e `.po` contengono le stringhe contenute nel cod
 Il sito controlla la lingua accettata dal browser web (l'header `Accept-Language`). Eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=en` (`en`, `it`, ecc.) scavalcano questa preferenza. La lingua italiana è predefinita.
 
 ### Migliorare lingua
-Modificare il relativo `.po` con Poedit e lanciare due volte lo script [#multilingua].
+Modificare il relativo `.po` con Poedit e lanciare due volte lo script (multilingua)[#multilingua].
 
 ### Aggiunta lingua
-Copiare il template GNU Gettext `*/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./$ANNO/load.php`. Lanciare due volte lo script in [#multilingua] per renderla operativa.
+Copiare il template GNU Gettext `*/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./$ANNO/load.php`. Lanciare due volte lo script in(multilingua)[#multilingua] per renderla operativa.
 
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.

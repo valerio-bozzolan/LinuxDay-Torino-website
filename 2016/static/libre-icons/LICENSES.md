@@ -6,6 +6,9 @@ https://commons.wikimedia.org/wiki/File:Apache_HTTP_server_logo_(2016).svg
 Debian logo (GNU LGPL)
 https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg
 
+Docker logo (Apache license)
+https://commons.wikimedia.org/wiki/File:Docker_%28container_engine%29_logo.png
+
 The GIMP icon (GNU GPL)
 https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg
 
@@ -23,6 +26,9 @@ https://commons.wikimedia.org/wiki/File:HTTPS_icon.png
 
 Inkscape (GNU GPLv3)
 https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg
+
+Leaflet logo (BSD-2)
+https://commons.wikimedia.org/wiki/File:Leaflet_logo.svg
 
 MariaDB (GNU FDL)
 https://commons.wikimedia.org/wiki/File:Mariadb-seal-browntext.svg
@@ -51,9 +57,15 @@ https://commons.wikimedia.org/wiki/File:PHP-logo.svg
 Roboto typeface (CC By 2.5 Generic)
 https://commons.wikimedia.org/wiki/File:Roboto_(typeface).svg
 
+Wikipedia logo (GNU FDL)
+https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2-o75.svg
+
 ## Licenze
 Apache License
 https://www.apache.org/licenses/LICENSE-2.0
+
+BSD-2 License
+https://commons.wikimedia.org/wiki/Template:BSD
 
 Creative Commons Attribution-ShareAlike 4.0 International
 https://creativecommons.org/licenses/by-sa/4.0/

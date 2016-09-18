@@ -21,20 +21,12 @@ $username = 'insert-here-database-username';
 $password = 'insert-here-database-password';
 $location = 'localhost';
 
-// Unless the database contains more than one conference, leave this at 1.
-define('CONFERENCE_ID', 1);
-
 // Database table prefix (if any)
 // E.g. 'asd_'
 // Keep in mind that "tagliatella" doesn't support this, so it's probably better to leave an empty string here.
 $prefix = '';
 
 // See also include/class-Talk.php for track\area names!
-
-// Folder of your site after the domain name
-// NO TRAILING SLASH
-// E.g. '/linux-day/2016'
-define('ROOT', '');
 
 // Enable extra verbose framework errors
 define('DEBUG', true);
@@ -44,7 +36,7 @@ define('DEBUG', true);
 define('ABSPATH', __DIR__ );
 
 // User for events
-define('DB_TIMEZONE', 'UTC');
+define('DB_TIMEZONE', 'Europe/Rome');
 
 // Path to Boz-PHP/load.php
 require '/usr/share/boz-php-another-php-framework/load.php';
