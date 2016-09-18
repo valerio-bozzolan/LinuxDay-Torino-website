@@ -28,10 +28,21 @@ if( isset( $_GET['conference'], $_GET['uid'], $_GET['chapter'] ) ) {
 
 $event || die_with_404();
 
-new Header('event', [
-	'title' => $event->event_title,
+$args = [
+	'title' => sprintf(
+		_("Talk: %s"),
+		$event->event_title
+	),
 	'url'   => $event->getEventURL()
-] );
+];
+
+if( $event->hasEventImage() ) {
+	$args['og'] = [
+		'image' => $event->getEventImage()
+	];
+}
+
+new Header('event', $args);
 ?>
 	<div class="row">
 
@@ -49,15 +60,12 @@ new Header('event', [
 
 		<!-- Start room -->
 		<div class="col s12 l8">
-			<p><?php
-				printf(
-					_("Si terrà il %s alle ore %s in %s."),
-					"<b>{$event->getEventStart("d/m/Y")}</b>",
-					"<b>{$event->getEventStart("H:i")}</b>",
-					"<b>{$event->room_name}</b>"
-
-				);
-			?></p>
+			<p class="flow-text"><?php printf(
+				_("Il talk si terrà il %s alle ore %s in %s."),
+				"<b>{$event->getEventStart("d/m/Y")}</b>",
+				"<b>{$event->getEventStart("H:i")}</b>",
+				"<b>{$event->room_name}</b>"
+			) ?></p>
 		</div>
 		<!-- End room -->
 	</div>
@@ -82,23 +90,36 @@ new Header('event', [
 		<?php if($users): ?>
 			<div class="row">
 			<?php while( $user = $users->fetch_object('User') ): ?>
-				<div class="col s12 m4 l3">
-					<a href="<?php echo $user->getUserURL() ?>">
-					<div class="card-panel hoverable">
-						<div class="row valign-wrapper">
-							<div class="col s4">
-								<img class="circle responsive-img" src="<?php
+				<div class="col s12 m6">
+					<div class="row valign-wrapper">
+						<div class="col m4 l6">
+							<a class="tooltipped" href="<?php
+								echo $user->getUserURL()
+							?>" title="<?php _esc_attr( sprintf(
+								_("Profilo di %s"),
+								$user->getUserFullname()
+							) ) ?>" data-tooltip="<?php _esc_attr(
+								$user->getUserFullname()
+							) ?>">
+								<img class="circle responsive-img hoverable" src="<?php
 									echo $user->getUserImage(256)
-								?>" alt="<?php
-									_esc_attr( $user->getUserFullname() )
-								?>" />
-							</div>
-							<div class="col s8">
-								<?php _esc_html( $user->getUserFullname() ) ?>
-							</div>
+								?>" alt="<?php _esc_attr(
+									$user->getUserFullname()
+								) ?>" />
+							</a>
+						</div>
+						<div class="col m4 l6">
+							<?php echo HTML::a(
+								$user->getUserURL(),
+								"<h4>{$user->getUserFullname()}</h4>",
+								sprintf(
+									_("Profilo di %s"),
+									$user->getUserFullname()
+								),
+								'valign'
+							) ?>
 						</div>
 					</div>
-					</a>
 				</div>
 			<?php endwhile ?>
 			</div>
@@ -119,4 +140,9 @@ new Header('event', [
 			?>
 		</a>
 	</div>
+	<script>
+	$(document).ready(function () {
+		$('.tooltipped').tooltip();
+	});
+	</script>
 <?php new Footer();

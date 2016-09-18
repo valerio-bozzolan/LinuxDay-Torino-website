@@ -61,10 +61,13 @@ class Header {
 		enqueue_js('jquery');
 		enqueue_js('materialize');
 
-		// Close header
-		$args['container'] && inject_in_module('footer', function() {
-			echo "\t</div>";
-		} );
+		// Close header - Start
+		$args['container'] && inject_in_module('footer', function() { ?>
+		</div>
+		<!-- End container -->
+
+		<?php } );
+		// Close header - End
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo ISO_LANG ?>">
@@ -165,7 +168,11 @@ class Header {
 	</header>
 	<?php endif ?>
 
-	<?php if( $args['container'] ): ?><div class="container"><?php endif ?>
+	<?php if( $args['container'] ): ?>
+	<!-- Start container -->
+	<div class="container">
+
+	<?php endif ?>
 
 <?php	}
 }

@@ -75,7 +75,7 @@ trait EventTrait {
 	}
 
 	function getEventImage() {
-		return site_page( $this->event_img, ROOT );
+		return site_page($this->event_img, URL);
 	}
 
 	function queryEventUsers() {
@@ -111,6 +111,7 @@ class Event {
 			'event_language',
 			'event_start',
 			'event_end',
+			'event_img',
 			'room_uid',
 			'room_name',
 			'track_uid',
