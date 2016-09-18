@@ -55,16 +55,25 @@ trait LocationTrait {
 		return isset( $this->location_lat, $this->location_lon );
 	}
 
-	function getLocationGeoOSM() {
-		$z = isset( $this->location_zoom )
-			? Location::DEFAULT_ZOOM
-			: $this->location_zoom;
+	function getLocationZoom() {
+		return isset( $this->location_zoom ) ? $this->location_zoom : Location::DEFAULT_ZOOM;
+	}
 
+	function getLocationGeoOSM() {
 		return sprintf(
 			'https://www.openstreetmap.org/?mlat=%1$s&mlon=%2$s#map=%3$s/%1$s/%2$s',
 			$this->location_lat,
 			$this->location_lon,
-			$z
+			$this->getLocationZoom()
+		);
+	}
+
+	function printLocationLeaflet() {
+		printf(
+			'<div data-lat="%s" data-lng="%s" data-zoom="%s" id="map"></div>',
+			$this->location_lat,
+			$this->location_lon,
+			$this->getLocationZoom()
 		);
 	}
 }

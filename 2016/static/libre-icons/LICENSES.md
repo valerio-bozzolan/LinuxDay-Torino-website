@@ -42,6 +42,9 @@ https://commons.wikimedia.org/wiki/File:Openstreetmap_logo.svg
 jQuery logo (public domain)
 https://commons.wikimedia.org/wiki/File:JQuery_logo_text.svg
 
+JavaScript logo (public domain)
+https://commons.wikimedia.org/wiki/File:JavaScript-logo.png
+
 PHP icon (CC By-Sa 4.0 International)
 https://commons.wikimedia.org/wiki/File:PHP-logo.svg
 

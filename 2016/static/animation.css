@@ -26,3 +26,7 @@ h1::before {
 #activities-section .card-panel {
 	min-height:206px;
 }
+#map {
+	min-width:300px;
+	height:600px;
+}

@@ -28,6 +28,7 @@ $conference
 	|| die_with_404();
 
 enqueue_js('leaflet');
+enqueue_js('leaflet.init');
 enqueue_css('leaflet');
 enqueue_css('animation');
 
@@ -106,25 +107,23 @@ new Header('conference', [
 				) ?></p>
 			</div>
 			<div class="col s12 m8">
-				<div class="card hoverable">
-					<div class="card-image">
-						<img src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
-				        </div>
-					<div class="card-content">
-						<p></p>
-					</div>
-					<div class="card-action">
-						<?php echo HTML::a(
-							$conference->getLocationGeoOSM(),
-							_("Vedi su OpenStreetMap"),
-							sprintf(
-								_("Vedi %s su OpenStreetMap"),
-								esc_html( $conference->getConferenceTitle() )
-							),
-							'btn',
-							'target="_blank"'
-						) ?>
-					</div>
+				<div class="card-panel">
+					<?php $conference->printLocationLeaflet() ?>
+					<noscript>
+						<style>#map {display: none}</style>
+						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
+						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
+					</noscript>
+					<p><?php echo HTML::a(
+						$conference->getLocationGeoOSM(),
+						_("Vedi su OpenStreetMap") . icon('place', 'right'),
+						sprintf(
+							_("Vedi %s su OpenStreetMap"),
+							esc_html( $conference->getConferenceTitle() )
+						),
+						'btn waves-effect',
+						'target="_blank"'
+					) ?></p>
 				</div>
 			</div>
 		</div>
