@@ -48,7 +48,7 @@ trait SkillTrait {
 		if($n === 2)  return $t === Skill::PROGRAMMING ? _("sono discretamente bravo in %s")   : _("sono molto interessato al mondo %s");
 		if($n === 3)  return $t === Skill::PROGRAMMING ? _("%s... il mio cavallo di battaglia!") : _("%s... è un mio pensiero fisso!");
 		if($n > 3)    return _("%s: l'essenza stessa della mia vita!");
-		if($n === -1) return _("sono davvero scarso con il mondo %s");
+		if($n === -1) return _("%s, sto cercando di smettere...");
 		if($n === -2) return _("se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia");
 		if($n === -3) return _("se accenni a %s ti prendo a tastierate");
 

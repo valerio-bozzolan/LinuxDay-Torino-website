@@ -27,6 +27,8 @@ h1::before {
 	min-height:206px;
 }
 #map {
-	min-width:300px;
-	height:600px;
+	height:400px;
+}
+th {
+	text-align:left !important;
 }

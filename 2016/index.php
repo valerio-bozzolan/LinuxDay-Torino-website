@@ -106,7 +106,7 @@ new Header('conference', [
 					$conference->getLocationNote()
 				) ?></p>
 			</div>
-			<div class="col s12 m8">
+			<div class="col s10 m8">
 				<div class="card-panel">
 					<?php $conference->printLocationLeaflet() ?>
 					<noscript>

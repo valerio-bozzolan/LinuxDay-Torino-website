@@ -76,14 +76,20 @@ class DailyEventsTable {
 		}
 	?>
 
-		<table class="bordered striped hoverable">
+		<table class="bordered striped hoverable responsive-table">
+		<thead>
 			<tr>
 				<th><?php _e("Ora") ?></th>
 
 				<?php foreach($this->tracks as $track): ?>
-				<th><?php echo $track->track_name ?></th>
+				<th><?php printf(
+					_("Aula<br /> %s"),
+					esc_html( $track->track_name )
+				) ?></th>
 				<?php endforeach ?>
 			</tr>
+		</thead>
+		<tbody>
 
 			<?php for($h = 1; $h <= $this->getHours(); $h++): ?>
 			<tr class="hoverable">
@@ -114,6 +120,7 @@ class DailyEventsTable {
 			</tr>
 			<?php endfor ?>
 
+		</tbody>
 		</table>
 
 	<?php

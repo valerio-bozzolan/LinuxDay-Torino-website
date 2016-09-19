@@ -36,7 +36,7 @@ class Header {
 		}
 
 		$args['og'] = merge_args_defaults($args['og'], [
-			'image'  => XXX . '/ld-2016-logo.png',
+			'image'  => XXX . '/ld-2016-logo-teal.png',
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
