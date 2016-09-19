@@ -32,6 +32,11 @@ enqueue_js('leaflet.init');
 enqueue_css('leaflet');
 enqueue_css('animation');
 
+// Support for non-JavaScript
+inject_in_module('header', function() {
+	echo "\n\t<noscript><style>#map {display: none}</style></noscript>";
+} );
+
 new Header('conference', [
 	'show-title' => false,
 	'head-title' => $s = $conference->getConferenceTitle(),
@@ -40,7 +45,7 @@ new Header('conference', [
 ] );
 ?>
 	<div class="header">
-		<center>
+		<div class="center-align">
 			<h1><?php echo HTML::a(
 				$conference->getConferenceURL(),
 				strtoupper( SITE_NAME )
@@ -64,7 +69,7 @@ new Header('conference', [
 				],
 				SITE_DESCRIPTION
 			) ?></p>
-		</center>
+		</div>
 	</div>
 
 	<div class="section">
@@ -110,7 +115,6 @@ new Header('conference', [
 				<div class="card-panel">
 					<?php $conference->printLocationLeaflet() ?>
 					<noscript>
-						<style>#map {display: none}</style>
 						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
 						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
 					</noscript>

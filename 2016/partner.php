@@ -17,7 +17,7 @@
 
 require 'load.php';
 
-new Header('media-partner');
+new Header('partner');
 
 ?>
 	<p class="flow-text"><?php _e(
@@ -25,55 +25,68 @@ new Header('media-partner');
 		"Tutto questo, a Torino, non sarebbe possibile senza una comunità incredibile. Grazie a tutti coloro che credono ".
 		"nella libertà digitale e culturale. In particolare:"
 	) ?></p>
-	<div class="row">
-		<?php $partner = function($name, $url, $icon, $logo, $color, $desc) { ?>
-		<div class="col s12 m6">
-			<!--
-			<div class="card">
-				<div class="card-image"> -->
+
+	<?php $partner = function($name, $url, $icon, $logo, $color, $desc) { ?>
+	<div class="section">
+		<div class="row">
+			<div class="col s12 m6">
 				<a href="<?php echo $url ?>" title="<?php
 					_e("$name")
 				?>" target="_blank">
-					<img class="<?php echo $color ?>" src="<?php echo XXX . "/partner/$logo" ?>" alt="<?php printf(
+					<img class="responsive-img" src="<?php
+						echo XXX . "/partner/$logo"
+					?>" alt="<?php printf(
 						_("Logo di %s"),
 						$name
 					) ?>" />
 				</a>
-				<!-- </div>
-				<div class="card-content">
-					<p><?php echo $desc ?></p>
-				</div>
-				<div class="card-action">
-					<?php echo HTML::a(
-						$url,
-						$name . icon($icon, 'right'),
-						null,
-						'btn waves-effect',
-						'target="_blank"'
-					) ?>
-				</div> -->
+			</div>
+			<div class="col s12 m6">
+				<p><?php echo $desc ?></p>
+				<p><?php echo HTML::a(
+					$url,
+					$name . icon($icon, 'right'),
+					null,
+					'btn waves-effect ' . $color,
+					'target="_blank"'
+				) ?></p>
 			</div>
 		</div>
-		<?php }; ?>
-
-		<?php
-			$partner(
-				"Border Radio",
-				'http://border-radio.it',
-				'mic',
-				'border.png',
-				'white',
-				_("Comunità di musica culturale libera in Torino.")
-			);
-			$partner(
-				"Quotidiano Piemontese",
-				'http://www.quotidianopiemontese.it',
-				'rss_feed',
-				'quotidiano-piemontese.jpg',
-				'white',
-				_("Informazione partecipativa e trasparente.")
-			);
-		?>
-		</div>
 	</div>
-<?php new Footer();
+	<?php
+	};
+
+	$partner(
+		"Border Radio",
+		'http://border-radio.it',
+		'mic',
+		'border.png',
+		'orange',
+		_("Musica culturale libera in Torino.")
+	);
+	$partner(
+		"Quotidiano Piemontese",
+		'http://www.quotidianopiemontese.it',
+		'rss_feed',
+		'quotidiano-piemontese.jpg',
+		'grey',
+		_("Informazione partecipativa e trasparente.")
+	);
+	$partner(
+		_("Associazione Tesso"),
+		'http://www.associazionetesso.org',
+		'build',
+		'tesso.png',
+		'blue darken-4',
+		_("Trasformazione e sviluppo sociale.")
+	);
+	$partner(
+		"Coderdojo Torino",
+		'http://coderdojotorino.it',
+		'usb',
+		'coderdojo.png',
+		'black white-text',
+		_("Favorire la digitalizzazione nelle scuole e nel territorio.")
+	);
+
+new Footer();

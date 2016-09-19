@@ -134,8 +134,9 @@ new Header('user', [
 				<th><?php _e("Traccia") ?></th>
 				<th><?php _e("Stanza") ?></th>
 				<th><?php _e("Orario") ?></th>
-			<tr>
+			</tr>
 			</thead>
+			<tbody>
 			<?php while( $event = $events->fetch_object('Event') ): ?>
 			<tr>
 				<td><?php echo HTML::a(
@@ -158,6 +159,7 @@ new Header('user', [
 				) ?></td>
 			</tr>
 			<?php endwhile ?>
+			</tbody>
 			</table>
 		<?php else: ?>
 			<p><?php _e("Questo utente non ha ancora tenuto nessun talk.") ?></p>
@@ -197,5 +199,4 @@ new Header('user', [
 	</div>
 	<?php endif ?>
 	<!-- End social -->
-</div>
 <?php new Footer();
