@@ -81,6 +81,14 @@ new Header('partner');
 		_("Trasformazione e sviluppo sociale.")
 	);
 	$partner(
+		"MuBit",
+		'http://www.mupin.it',
+		'computer',
+		'mubit.jpg',
+		'teal',
+		_("Museo dell'Informatica del Piemonte.")
+	);
+	$partner(
 		"Coderdojo Torino",
 		'http://coderdojotorino.it',
 		'usb',
