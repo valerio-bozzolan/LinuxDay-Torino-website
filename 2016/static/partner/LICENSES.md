@@ -4,15 +4,15 @@
 http://www.border-radio.it
 https://creativecommons.org/licenses/by-sa/4.0/
 
-* MuBit (in concessione esclusiva a Linux Day 2016)
+* MuBit (in concessione esclusiva a Linux Day Torino)
 http://www.mupin.it
 
-* Quotidiano Piemontese (in concessione esclusiva a Linux Day 2016)
+* Quotidiano Piemontese (in concessione esclusiva a Linux Day Torino)
 http://quotidianopiemontese.it
 
-* Let's Encrypt (CC By-Nc 4.0)
-https://letsencrypt.org/images/le-logo-standard.svg
-https://creativecommons.org/licenses/by-nc/4.0/
-
-* Tesso (in concessione esclusiva a Linux Day 2016)
+* Tesso (in concessione esclusiva a Linux Day Torino)
 http://associazionetesso.org
+
+* Coderdojo (GNU Free Documentation License)
+https://commons.wikimedia.org/wiki/File:CoderDojo_Logo.png
+https://www.gnu.org/licenses/fdl.html

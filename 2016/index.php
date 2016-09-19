@@ -88,9 +88,9 @@ new Header('conference', [
 				<blockquote class="flow-text">
 					// How to write good code<br />
 					<strong>$software</strong>: 
-					function(<span class="yellow">play</span>, 
-					<span class="blue lighten-3">freedom</span>, 
-					<span class="orange">friends</span>) { }
+					function(<span class="yellow hoverable">play</span>, 
+					<span class="blue lighten-3 hoverable">freedom</span>, 
+					<span class="orange hoverable">friends</span>) { }
 				</blockquote>
 			</div>
 			<div class="col s12 m4">
@@ -120,7 +120,7 @@ new Header('conference', [
 					</noscript>
 					<p><?php echo HTML::a(
 						$conference->getLocationGeoOSM(),
-						_("Vedi su OpenStreetMap") . icon('place', 'right'),
+						_("OpenStreetMap") . icon('place', 'right'),
 						sprintf(
 							_("Vedi %s su OpenStreetMap"),
 							esc_html( $conference->getConferenceTitle() )
@@ -153,6 +153,8 @@ new Header('conference', [
 		) ?></p>
 
 		<?php $eventsTable->printTable(); ?>
+
+		<div class="card-panel hide-on-large-only"><?php echo icon('smartphone', 'left'); _e("<strong>Schermo piccolo?</strong> Puoi scorrere la tabella verso destra.") ?></div>
 
 		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>

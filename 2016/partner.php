@@ -78,7 +78,7 @@ new Header('partner');
 		'build',
 		'tesso.png',
 		'blue darken-4',
-		_("Trasformazione e sviluppo sociale.")
+		_("Associazione trasformazione e sviluppo sociale.")
 	);
 	$partner(
 		"MuBit",
@@ -86,7 +86,7 @@ new Header('partner');
 		'computer',
 		'mubit.jpg',
 		'teal',
-		_("Museo dell'Informatica del Piemonte.")
+		_("Museo internazionale dell'Informatica.")
 	);
 	$partner(
 		"Coderdojo Torino",
@@ -94,7 +94,7 @@ new Header('partner');
 		'usb',
 		'coderdojo.png',
 		'black white-text',
-		_("Favorire la digitalizzazione nelle scuole e nel territorio.")
+		_("Eventi per la digitalizzazione nelle scuole e nel territorio.")
 	);
 
 new Footer();

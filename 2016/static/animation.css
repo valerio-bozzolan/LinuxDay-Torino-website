@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 h1::before {
-	content: "# ";
+	content: "> ";
 }
 h1::before {
 	animation: blinker 2s ease infinite;

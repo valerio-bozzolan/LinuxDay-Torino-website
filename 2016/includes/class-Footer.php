@@ -23,25 +23,8 @@ class Footer {
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m6">
-				<h5 class="white-text"><?php echo SITE_NAME ?></h5>
-			</div><?php /*
-			<div class="col s12 m6">
-				<div class="section">
-				<h5 class="white-text"><?php _e("Contattaci") ?></h5>
-				<table>
-					<tr>
-						<th class="white-text"><?php _e("E-mail") ?><?php echo icon('email') ?></th>
-						<td>
-							<code>
-								<a class="white-text" href="mailto:<?php echo CONTACT_EMAIL ?>"><?php echo CONTACT_EMAIL ?></a>
-							</code>
-						</td>
-					</tr>
-				</table>
-				</div>
+				<h5 class="white-text"><code>#LDTO2016</code></h5>
 			</div>
-			*/ ?>
-
 		</div>
 		<div class="row darken-1 white-text">
 			<div class="col s12 m7 l8">

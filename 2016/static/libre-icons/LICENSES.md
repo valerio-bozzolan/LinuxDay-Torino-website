@@ -9,6 +9,9 @@ https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg
 Docker logo (Apache license)
 https://commons.wikimedia.org/wiki/File:Docker_%28container_engine%29_logo.png
 
+IPv6 launch badge (CC By 3.0 Unported)
+https://commons.wikimedia.org/wiki/File:World_IPv6_launch_badge.svg
+
 The GIMP icon (GNU GPL)
 https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg
 
@@ -18,8 +21,11 @@ https://commons.wikimedia.org/wiki/File:Git_icon.svg
 GNU Head (GNU FDL)
 https://commons.wikimedia.org/wiki/File:Heckert_GNU_white.svg
 
-GNU Nano (public domain)
+GNU Nano (Public domain)
 https://commons.wikimedia.org/wiki/File:Gnu-nano.svg
+
+HADOOP cluster (Public domain)
+https://commons.wikimedia.org/wiki/File:Cubieboard_HADOOP_cluster.JPG
 
 HTTPS icon (CC By 2.0 Generic)
 https://commons.wikimedia.org/wiki/File:HTTPS_icon.png
@@ -54,8 +60,14 @@ https://commons.wikimedia.org/wiki/File:JavaScript-logo.png
 PHP icon (CC By-Sa 4.0 International)
 https://commons.wikimedia.org/wiki/File:PHP-logo.svg
 
+Raspberry Pi model (CC By-Sa 4.0 International by Multicherry)
+https://commons.wikimedia.org/wiki/File:Raspberry_Pi_2_Model_B_v1.1_top.jpg
+
 Roboto typeface (CC By 2.5 Generic)
 https://commons.wikimedia.org/wiki/File:Roboto_(typeface).svg
+
+Wikidata logo (Public domain)
+https://commons.wikimedia.org/wiki/File:Wikidata-logo-en.svg
 
 Wikipedia logo (GNU FDL)
 https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2-o75.svg
@@ -98,7 +110,6 @@ Mit License
 https://opensource.org/licenses/MIT
 
 ## Icone non-libere di software libero
-
 Let's Encrypt (CC By-NC 4.0)
 https://letsencrypt.org/images/le-logo-standard.png
 https://creativecommons.org/licenses/by-nc/4.0/

@@ -17,6 +17,10 @@
 
 require 'load.php';
 
+inject_in_module('header', function() {
+	echo "\n\t<style>.libre-icon {min-height: 120px}</style>";
+} );
+
 new Header('credits');
 ?>
 	<div class="section">
@@ -26,14 +30,14 @@ new Header('credits');
 
 		<?php $tech = function($name, $url, $license, $desc, $icon = null, $material = false) {
 			$license = license($license); ?>
-			<div class="col s3 m2 l2">
-				<div class="row">
-					<div class="col s12">
+			<div class="col s3 m2 l1">
+				<div class="row libre-icon valign-wrapper">
+					<div class="col s12 valign">
 						<a href="<?php echo $url ?>" title="<?php printf(
 							_("%s: progetto a licenza %s"),
 							$name,
 							$license->getShort()
-						) ?>">
+						) ?>" target="_blank">
 						<?php if($icon): ?>
 							<img class="hoverable responsive-img" src="<?php echo XXX . "/libre-icons/$icon" ?>" alt="<?php printf(
 								_("Logo di %s"),
@@ -42,14 +46,6 @@ new Header('credits');
 						<?php endif ?>
 						</a>
 					</div>
-					<!--
-					<div class="col s12">
-						<small><?php printf(
-							"<strong>%s</strong> <small>(%s)</small>",
-							HTML::a( $url, $name ),
-							HTML::a( $license->getURL(), $license->getShort(), $license->getName() )
-						) ?></small>
-					</div>-->
 				</div>
 			</div>
 		<?php }; ?>
@@ -99,10 +95,6 @@ new Header('credits');
 			_("Framework per internazionalizzazione e localizzazione dei messaggi."),
 			'gnu.png'
 		);
-		?>
-		</div>
-		<div class="row">
-		<?php
 		$tech(
 			"Boz-PHP",
 			'https://launchpad.net/boz-php-another-php-framework',
@@ -152,10 +144,6 @@ new Header('credits');
 			_("Collezione di icone Material Design."),
 			'material.png'
 		);
-		?>
-		</div>
-		<div class="row">
-		<?php
 		$tech(
 			"Inkscape",
 			_('https://inkscape.org/it/'),
