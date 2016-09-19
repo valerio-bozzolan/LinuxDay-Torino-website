@@ -75,7 +75,7 @@ add_menu_entries( [
 	new MenuEntry('404',         null, null, 'hidden'),
 
 	new MenuEntry('home',          URL,                        _("Benvenuti")             ),
-	new MenuEntry('media-partner', URL . '/media-partner.php', _("Media partner")         ),
+	new MenuEntry('partner',       URL . '/partner.php',       _("Partner")               ),
 	new MenuEntry('credits',       URL . '/credits.php',       _("Crediti")               ),
 	new MenuEntry('api',           URL . '/api',               _("API"),          'hidden')
 
