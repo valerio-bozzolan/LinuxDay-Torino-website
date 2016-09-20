@@ -83,7 +83,7 @@ class DailyEventsTable {
 
 				<?php foreach($this->tracks as $track): ?>
 				<th><?php printf(
-					_("Aula<br /> %s"),
+					_("Aula %s"),
 					esc_html( $track->track_name )
 				) ?></th>
 				<?php endforeach ?>

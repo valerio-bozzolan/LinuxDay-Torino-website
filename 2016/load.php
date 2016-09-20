@@ -31,6 +31,9 @@ spl_autoload_register( function($c) {
 
 require 'includes/functions.php';
 
+define('TEXT', 'purple-text text-darken-4');
+define('BACK', 'purple darken-4');
+
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: GNU Gettext configuration
 define('GETTEXT_DOMAIN',         'linuxday');

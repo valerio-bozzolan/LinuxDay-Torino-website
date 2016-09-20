@@ -138,7 +138,7 @@ class Header {
 -->
 <body>
 	<nav>
-		<div class="nav-wrapper teal">
+		<div class="nav-wrapper purple darken-4">
 			<a class="brand-logo" href="<?php echo $args['nav-url'] ?>" title="<?php _esc_attr(SITE_DESCRIPTION) ?>">
 				<?php echo $args['nav-title'] ?>
 			</a>
@@ -160,7 +160,7 @@ class Header {
 	<header class="container">
 		<?php if( isset( $args['url'] ) ): ?>
 
-		<h1><a href="<?php echo $args['url'] ?>"><?php echo $args['title'] ?></a></h1>
+		<h1><?php echo HTML::a($args['url'], $args['title'], null, TEXT) ?></a></h1>
 		<?php else: ?>
 
 		<h1><?php echo $args['title'] ?></h1>

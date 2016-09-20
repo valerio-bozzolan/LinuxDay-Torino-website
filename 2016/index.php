@@ -48,7 +48,9 @@ new Header('conference', [
 		<div class="center-align">
 			<h1><?php echo HTML::a(
 				$conference->getConferenceURL(),
-				strtoupper( SITE_NAME )
+				strtoupper( SITE_NAME ),
+				null,
+				TEXT
 			) ?></h1>
 
 			<p class="flow-text"><?php echo str_replace(
@@ -120,12 +122,12 @@ new Header('conference', [
 					</noscript>
 					<p><?php echo HTML::a(
 						$conference->getLocationGeoOSM(),
-						_("OpenStreetMap") . icon('place', 'right'),
+						icon('place', 'right'),
 						sprintf(
 							_("Vedi %s su OpenStreetMap"),
 							esc_html( $conference->getConferenceTitle() )
 						),
-						'btn waves-effect',
+						'btn-floating btn-large waves-effect waves-light',
 						'target="_blank"'
 					) ?></p>
 				</div>
