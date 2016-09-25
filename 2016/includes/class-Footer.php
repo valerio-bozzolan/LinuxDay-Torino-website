@@ -39,14 +39,18 @@ class Footer {
 				) ?></p>
 			</div>
 			<div class="col s12 m5 l4">
-				<p><?php
-					echo icon('share', 'right');
-					printf(
-						_("Il sito è distribuito sotto licenza libera %s. Clonalo!"),
-						license('gnu-agpl')->getLink('yellow-text')
-					);
-				?></p>
-				<blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote>
+				<h5 class="white-text">Edizioni Passate</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2015">2015, Dipartimento di Biotecnologie</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2014">2014, Politecnico di Torino</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2013">2013, Politecnico di Torino</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2012">2012, Cortile del Maglio</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2011">2011, Cascina Roccafranca</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2010">2010, Cascina Roccafranca</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2009">2009, Cascina Roccafranca</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2008">2008, Cascina Roccafranca</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2007">2007, Cascina Rocccafranca</a></li>
+				</ul>
 			</div>
 			<div class="col s12">
 				<p><small><?php

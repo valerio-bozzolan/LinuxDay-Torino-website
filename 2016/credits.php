@@ -24,10 +24,8 @@ inject_in_module('header', function() {
 new Header('credits');
 ?>
 	<div class="section">
-		<p class="flow-text"><?php _e("Questo sito web utilizza esclusivamente <strong>software libero</strong>.") ?></p>
+		<p class="flow-text"><?php _e("Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>.") ?></p>
 	</div>
-
-
 		<?php $tech = function($name, $url, $license, $desc, $icon = null, $material = false) {
 			$license = license($license); ?>
 			<div class="col s3 m2 l1">
@@ -148,7 +146,7 @@ new Header('credits');
 			"Inkscape",
 			_('https://inkscape.org/it/'),
 			'gnu-gpl-v2',
-			_("Ritocchi alla mappa di OpenStreetMap in formato png."),
+			_("Programma per disegno vettoriale."),
 			'inkscape.png'
 		);
 		$tech(
@@ -179,9 +177,31 @@ new Header('credits');
 			_("Controllo versione distribuito"),
 			'git.png'
 		);
+		$tech(
+			"Attendize",
+			'https://www.attendize.com',
+			'gnu-gpl-v2',
+			_("Event manager open source"),
+			'attendize.jpg'
+		);
+		$tech(
+			"YOURLS",
+			'https://yourls.org',
+			'gnu-gpl-v2',
+			_("Your Own Url Shortener"),
+			'yourls.png'
+		);
 		?>
 		</div>
 	</div>
+		<div id="media" class="divider"></div>
+	<p><?php
+                                        printf(
+                                                _("Il sito è distribuito sotto licenza libera %s. Clonalo!"),
+                                                license('gnu-agpl')->getLink('orange-text')
+                                        );
+                                ?></p>
+                                <blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote>
 
 	<div id="media" class="divider"></div>
 	<div class="section">

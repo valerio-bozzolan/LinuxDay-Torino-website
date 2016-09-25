@@ -29,6 +29,7 @@ $conference
 
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
+enqueue_js('scrollfire');
 enqueue_css('leaflet');
 enqueue_css('animation');
 
@@ -100,7 +101,6 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-
 	<div id="where" class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Come arrivare") ?></h3>
@@ -227,4 +227,13 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
+<script>
+var options = [
+    {selector: '#where', offset: 400, callback: function(el) {
+      Materialize.showStaggeredList($(el));
+    } },
+  ];
+  Materialize.scrollFire(options);
+
+</script>
 <?php new Footer();

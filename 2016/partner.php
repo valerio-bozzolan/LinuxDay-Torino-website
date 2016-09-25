@@ -26,13 +26,13 @@ new Header('partner');
 		"nella libertà digitale e culturale. In particolare:"
 	) ?></p>
 
-	<?php $partner = function($name, $url, $icon, $logo, $color, $desc) { ?>
+	<?php $partner = function($name, $url, $logo) { ?>
 	<div class="section">
 		<div class="row">
 			<div class="col s12 m6">
 				<a href="<?php echo $url ?>" title="<?php
 					_e("$name")
-				?>" target="_blank">
+				?>" target="_blank"> 
 					<img class="responsive-img" src="<?php
 						echo XXX . "/partner/$logo"
 					?>" alt="<?php printf(
@@ -41,60 +41,66 @@ new Header('partner');
 					) ?>" />
 				</a>
 			</div>
-			<div class="col s12 m6">
-				<p><?php echo $desc ?></p>
-				<p><?php echo HTML::a(
-					$url,
-					$name . icon($icon, 'right'),
-					null,
-					'btn waves-effect ' . $color,
-					'target="_blank"'
-				) ?></p>
 			</div>
 		</div>
 	</div>
+ <div class="divider"></div>
 	<?php
 	};
 
 	$partner(
 		"Border Radio",
 		'http://border-radio.it',
-		'mic',
-		'border.png',
-		'orange',
-		_("Musica culturale libera in Torino.")
+		'border.png'
 	);
 	$partner(
 		"Quotidiano Piemontese",
 		'http://www.quotidianopiemontese.it',
-		'rss_feed',
-		'quotidiano-piemontese.jpg',
-		'grey',
-		_("Informazione partecipativa e trasparente.")
+		'quotidiano-piemontese.jpg'
 	);
 	$partner(
 		_("Associazione Tesso"),
 		'http://www.associazionetesso.org',
-		'build',
-		'tesso.png',
-		'blue darken-4',
-		_("Associazione trasformazione e sviluppo sociale.")
+		'tesso.png'
 	);
 	$partner(
 		"MuBit",
 		'http://www.mupin.it',
-		'computer',
-		'mubit.jpg',
-		'teal',
-		_("Museo internazionale dell'Informatica.")
+		'mubit.jpg'
 	);
 	$partner(
 		"Coderdojo Torino",
 		'http://coderdojotorino.it',
-		'usb',
-		'coderdojo.png',
-		'black white-text',
-		_("Eventi per la digitalizzazione nelle scuole e nel territorio.")
+		'cd1.png'
 	);
-
+	$partner(
+                "Coderdojo Torino 2",
+                'http://coderdojotorino2.it',
+		'cd2.jpg'
+        );
+$partner(
+                "Patrocinio Circoscrizione 4",
+                '',
+                'circoscrizione.jpg'
+        );
+$partner(
+                "Patrocinio Comune di Torino",
+                '',
+                'comune.jpg'
+        );
+$partner(
+                "Patrocinio Città Metropolitana di Torino",
+                '',
+                'metropoli.png'
+        );
+$partner(
+                "Patrocinio Università degli Studi di Torino",
+                '',
+                'unito.jpg'
+        );
+$partner(
+                "Patrocinio Torino Smart City",
+                '',
+                'smartcity.jpg'
+        );
 new Footer();

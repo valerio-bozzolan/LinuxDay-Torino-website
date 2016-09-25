@@ -68,6 +68,7 @@ register_css('leaflet',            '/javascript/leaflet/leaflet.css');
 register_css('materialize',       XXX . '/materialize/css/materialize.min.css');
 register_css('materialize.icons', XXX . '/material-design-icons/material-icons.css');
 register_css('animation',         XXX . '/animation.css');
+register_js('scrollfire',         XXX . '/scrollfire.js');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries
