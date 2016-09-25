@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Single conference page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -31,7 +31,7 @@ enqueue_js('leaflet');
 enqueue_js('leaflet.init');
 enqueue_js('scrollfire');
 enqueue_css('leaflet');
-enqueue_css('animation');
+enqueue_css('home');
 
 // Support for non-JavaScript
 inject_in_module('header', function() {
@@ -102,7 +102,7 @@ new Header('conference', [
 		</div>
 	</div>
 	<div id="where" class="divider"></div>
-	<div class="section">
+	<div id="where-section" class="section">
 		<h3><?php _e("Come arrivare") ?></h3>
 		<div class="row">
 			<div class="col s12 m4">
@@ -166,14 +166,32 @@ new Header('conference', [
 		<h3><?php _e("Attività") ?></h3>
 		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
 		<div class="row">
-			<?php $box = function($what, $who, $url = null, $prep = null) {
+			<?php $box = function($what, $who, $url = null, $prep = null, $img = null) {
+				if( ! $prep ) {
+					$prep = _("da %s");
+				}
+				$who_prep = sprintf($prep, $who);
+				$who_text = $who;
 				if( $url ) {
 					$who = HTML::a($url, $who, null);
 				} ?>
 
 			<div class="col s12 m6">
 				<div class="card-panel hoverable teal lighten-4">
-					<p><span class="flow-text"><?php echo $what ?></span><br /> <?php printf( _("Gestito %s %s."), _("da"), $who ) ?></p>
+					<?php if( $img ): ?>
+					<div class="row"><!-- Start image row -->
+						<div class="col s4">
+							<img class="responsive-img" src="<?php echo XXX . "/partner/$img" ?>" alt="<?php _esc_attr($who_text) ?>" />
+						</div>
+						<div class="col s8"><!-- Start text col -->
+					<?php endif ?>
+
+							<p><span class="flow-text"><?php echo $what ?></span><br /> <?php printf( _("Gestito %s."), $who_prep ) ?></p>
+
+					<?php if( $img ): ?>
+						</div><!-- End text col -->
+					</div><!-- End image row -->
+					<?php endif ?>
 				</div>
 			</div>
 
@@ -182,17 +200,23 @@ new Header('conference', [
 			$box(
 				_("Riparazione di apparecchiature elettroniche."),
 				_("Associazione Tesso"),
-				'http://www.associazionetesso.org'
+				'http://www.associazionetesso.org',
+				_("dall'%s"),
+				'tesso.png'
 			);
 			$box(
 				_("Laboratorio di coding per i più piccoli a tema Linux Day."),
 				_("CoderDojo Torino"),
-				'https://coderdojo.com'
+				'https://coderdojo.com',
+				null,
+				'coderdojo.png'
 			);
 			$box(
 				_("Allestimento museale di Retrocomputing."),
-				"MUPIN",
-				'http://mupin.it'
+				"MuBit",
+				'http://mupin.it',
+				_("dal %s"),
+				'mubit.jpg'
 			);
 			$box(
 				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
@@ -227,13 +251,4 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-<script>
-var options = [
-    {selector: '#where', offset: 400, callback: function(el) {
-      Materialize.showStaggeredList($(el));
-    } },
-  ];
-  Materialize.scrollFire(options);
-
-</script>
 <?php new Footer();

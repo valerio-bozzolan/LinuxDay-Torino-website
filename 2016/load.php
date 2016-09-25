@@ -18,6 +18,8 @@
 // Boz-PHP: URL const
 define('ROOT', '/2016');
 
+define('REPO', 'https://github.com/0iras0r/ld2016');
+
 // Boz-PHP: start
 require '../load.php';
 
@@ -67,7 +69,7 @@ register_js('materialize',        XXX . '/materialize/js/materialize.min.js');
 register_css('leaflet',            '/javascript/leaflet/leaflet.css');
 register_css('materialize',       XXX . '/materialize/css/materialize.min.css');
 register_css('materialize.icons', XXX . '/material-design-icons/material-icons.css');
-register_css('animation',         XXX . '/animation.css');
+register_css('home',              XXX . '/home.css');
 register_js('scrollfire',         XXX . '/scrollfire.js');
 
 ///////////////////////////////////////////////////////////////////

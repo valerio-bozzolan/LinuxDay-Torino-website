@@ -72,38 +72,47 @@ https://commons.wikimedia.org/wiki/File:Wikidata-logo-en.svg
 Wikipedia logo (GNU FDL)
 https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2-o75.svg
 
+YOURLS logo (MIT)
+https://github.com/YOURLS/YOURLS/blob/master/images/yourls-logo.png
+
+Attendize (AAL)
+https://github.com/Attendize/Attendize/blob/master/public/assets/images/logo-dark.png
+
 ## Licenze
+Attribution Assurance License (AAL)
+https://opensource.org/licenses/AAL
+
 Apache License
 https://www.apache.org/licenses/LICENSE-2.0
 
 BSD-2 License
 https://commons.wikimedia.org/wiki/Template:BSD
 
-Creative Commons Attribution-ShareAlike 4.0 International
+Creative Commons Attribution-ShareAlike 4.0 International (CC By-Sa 4.0)
 https://creativecommons.org/licenses/by-sa/4.0/
 
-Creative Commons Attribution-ShareAlike 2.0 Generic
+Creative Commons Attribution-ShareAlike 2.0 Generic (CC By-Sa 2.0)
 https://creativecommons.org/licenses/by-sa/2.0/
 
-Creative Commons Attribution 4.0 International
+Creative Commons Attribution 4.0 International (CC By 4.0)
 https://creativecommons.org/licenses/by/4.0/
 
-Creative Commons Attribution 3.0 Unported
+Creative Commons Attribution 3.0 Unported (CC By 3.0)
 https://creativecommons.org/licenses/by/3.0/
 
-Creative Commons Attribution 2.5 Generic
+Creative Commons Attribution 2.5 Generic (CC By 2.5)
 https://creativecommons.org/licenses/by/2.5/
 
-Creative Commons Attribution 2.0 Generic
+Creative Commons Attribution 2.0 Generic (CC By 2.0)
 https://creativecommons.org/licenses/by/2.0/
 
-GNU Free Documentation License
+GNU Free Documentation License (GNU FDL)
 https://www.gnu.org/licenses/fdl.html
 
-GNU General Public License version 3
+GNU General Public License version 3 (GNU GPL v3)
 https://www.gnu.org/copyleft/gpl-3.0.html
 
-GNU Lesser General Public License
+GNU Lesser General Public License (GNU LGPL)
 https://www.gnu.org/copyleft/lgpl.html
 
 Mit License

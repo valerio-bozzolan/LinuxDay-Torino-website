@@ -31,7 +31,8 @@ class Licenses {
 		     ->add('cc-by-sa-3.0', "CC BY-SA 3.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"), _('https://creativecommons.org/licenses/by-sa/3.0/deed.it') )
 		     ->add('cc-by-sa-4.0', "CC BY-SA 4.0", _("Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-sa/4.0/deed.it') )
 		     ->add('jquery',       "jQuery",       _("Licenza jQuery"),                         'https://github.com/jquery/jquery/blob/master/LICENSE.txt')
-		     ->add('bsd-2',        "BSD-2",        "BSD-2",                                     'https://www.gnu.org/licenses/license-list.html#FreeBSD');
+		     ->add('bsd-2',        "BSD-2",        "BSD-2",                                     'https://www.gnu.org/licenses/license-list.html#FreeBSD')
+		     ->add('aal',          "AAL",          "Attribution Assurance License",             'https://opensource.org/licenses/AAL');
 	}
 
 	function add($code, $short, $name, $url) {

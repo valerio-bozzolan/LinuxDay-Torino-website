@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Media partner page
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -9,11 +9,11 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 require 'load.php';
 
@@ -23,84 +23,121 @@ new Header('partner');
 	<p class="flow-text"><?php _e(
 		"Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si festeggia in tutta Italia.".
 		"Tutto questo, a Torino, non sarebbe possibile senza una comunità incredibile. Grazie a tutti coloro che credono ".
-		"nella libertà digitale e culturale. In particolare:"
+		"nella libertà digitale e culturale."
 	) ?></p>
 
-	<?php $partner = function($name, $url, $logo) { ?>
+	<?php $partner = function($name, $url, $logo) {
+		echo HTML::a(
+			$url,
+			sprintf(
+				'<img class="responsive-img" src="%s" alt="%s" />',
+				XXX . "/partner/$logo",
+				sprintf(
+					_("Logo di %s"),
+					$name
+				)
+			),
+			$name,
+			null,
+			'target="_blank"'
+		);
+	}; ?>
+
+	<div class="divider"></div>
 	<div class="section">
+		<p class="flow-text"><?php _e("Con la partecipazione di:") ?></p>
 		<div class="row">
-			<div class="col s12 m6">
-				<a href="<?php echo $url ?>" title="<?php
-					_e("$name")
-				?>" target="_blank"> 
-					<img class="responsive-img" src="<?php
-						echo XXX . "/partner/$logo"
-					?>" alt="<?php printf(
-						_("Logo di %s"),
-						$name
-					) ?>" />
-				</a>
+			<div class="col s12 m3">
+			<?php $partner(
+				_("Associazione Tesso"),
+				'http://www.associazionetesso.org',
+				'tesso.png'
+			); ?>
 			</div>
+			<div class="col s12 m3">
+			<?php $partner(
+				"MuBit",
+				'http://www.mupin.it',
+				'mubit.jpg'
+			); ?>
+			</div>
+			<div class="col s12 m3">
+                        <?php $partner(
+				_("Coderdojo Torino"),
+				'http://coderdojotorino.it',
+				'cd1.png'
+			); ?>
+                        </div>
+			<div class="col s12 m3">
+                        <?php $partner(
+				"Coderdojo Torino 2",
+				'http://coderdojotorino2.it',
+				'cd2.jpg'
+			); ?>
 			</div>
 		</div>
 	</div>
- <div class="divider"></div>
-	<?php
-	};
 
-	$partner(
-		"Border Radio",
-		'http://border-radio.it',
-		'border.png'
-	);
-	$partner(
-		"Quotidiano Piemontese",
-		'http://www.quotidianopiemontese.it',
-		'quotidiano-piemontese.jpg'
-	);
-	$partner(
-		_("Associazione Tesso"),
-		'http://www.associazionetesso.org',
-		'tesso.png'
-	);
-	$partner(
-		"MuBit",
-		'http://www.mupin.it',
-		'mubit.jpg'
-	);
-	$partner(
-		"Coderdojo Torino",
-		'http://coderdojotorino.it',
-		'cd1.png'
-	);
-	$partner(
-                "Coderdojo Torino 2",
-                'http://coderdojotorino2.it',
-		'cd2.jpg'
-        );
-$partner(
-                "Patrocinio Circoscrizione 4",
-                '',
-                'circoscrizione.jpg'
-        );
-$partner(
-                "Patrocinio Comune di Torino",
-                '',
-                'comune.jpg'
-        );
-$partner(
-                "Patrocinio Città Metropolitana di Torino",
-                '',
-                'metropoli.png'
-        );
-$partner(
-                "Patrocinio Università degli Studi di Torino",
-                '',
-                'unito.jpg'
-        );
-$partner(
-                "Patrocinio Torino Smart City",
-                '',
-                'smartcity.jpg'
-        );
-new Footer();
+	<div id="media-partner" class="divider"></div>
+	<div class="section">
+		<p class="flow-text"><?php _e("Media partner:") ?></p>
+		<div class="row">
+			<div class="col s12 m6 l4">
+			<?php $partner(
+				"Border Radio",
+				'http://border-radio.it',
+				'border.png'
+			); ?>
+			</div>
+			<div class="col s12 m6 offset-l2 l4" style="padding-top:20px">
+			<?php $partner(
+				"Quotidiano Piemontese",
+				'http://www.quotidianopiemontese.it',
+				'quotidiano-piemontese.jpg'
+			); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+	<div class="section">
+		<p class="flow-text"><?php _e("Con il patrocinio di:") ?></p>
+		<div class="row">
+			<div class="col s12 m1">
+			<?php $partner(
+				"Patrocinio Circoscrizione 4",
+				'http://www.comune.torino.it/circ4/',
+				'circoscrizione.jpg'
+			); ?>
+			</div>
+			<div class="col s12 offset-m1 m2">
+			<?php $partner(
+				"Patrocinio Comune di Torino",
+				'http://www.comune.torino.it',
+				'comune.jpg'
+			); ?>
+			</div>
+			<div class="col s12 m2">
+			<?php $partner(
+				"Patrocinio Città Metropolitana di Torino",
+				'http://www.cittametropolitana.torino.it',
+				'metropoli.png'
+			); ?>
+			</div>
+			<div class="col s12 m2">
+			<?php $partner(
+				"Patrocinio Università degli Studi di Torino",
+				'http://www.unito.it',
+				'unito.jpg'
+			); ?>
+			</div>
+			<div class="col s12 m2">
+			<?php $partner(
+				"Patrocinio Torino Smart City",
+				'http://www.torinosmartcity.it',
+				'smartcity.jpg'
+			); ?>
+			</div>
+		</div>
+	</div>
+<?php new Footer();

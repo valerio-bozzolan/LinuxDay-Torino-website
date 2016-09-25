@@ -92,7 +92,7 @@ new Header('event', $args);
 			<?php while( $user = $users->fetch_object('User') ): ?>
 				<div class="col s12 m6">
 					<div class="row valign-wrapper">
-						<div class="col m4 l6">
+						<div class="col s12 m4 l3">
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL()
 							?>" title="<?php _esc_attr( sprintf(
@@ -108,7 +108,7 @@ new Header('event', $args);
 								) ?>" />
 							</a>
 						</div>
-						<div class="col m4 l6">
+						<div class="col s12 m4 l9">
 							<?php echo HTML::a(
 								$user->getUserURL(),
 								"<h4>{$user->getUserFullname()}</h4>",

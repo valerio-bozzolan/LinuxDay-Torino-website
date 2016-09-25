@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Footer
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,13 +22,9 @@ class Footer {
 <footer class="page-footer <?php echo BACK ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col s12 m6">
-				<h5 class="white-text"><code>#LDTO2016</code></h5>
-			</div>
-		</div>
-		<div class="row darken-1 white-text">
 			<div class="col s12 m7 l8">
-				<p><?php printf(
+				<h5 class="white-text"><code>#LDTO2016</code></h5>
+				<p class="white-text"><?php printf(
 					_("Tutti i contenuti sono rilasciati sotto ".
 					  "licenza di <strong>contenuto culturale libero</strong> %s. ".
 					  "Sei libero di distribuire e/o modificare i contenuti ".
@@ -39,19 +35,45 @@ class Footer {
 				) ?></p>
 			</div>
 			<div class="col s12 m5 l4">
-				<h5 class="white-text">Edizioni Passate</h5>
+				<h5 class="white-text"><?php _e("Edizioni Passate") ?></h5>
 				<ul>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2015">2015, Dipartimento di Biotecnologie</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2014">2014, Politecnico di Torino</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2013">2013, Politecnico di Torino</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2012">2012, Cortile del Maglio</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2011">2011, Cascina Roccafranca</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2010">2010, Cascina Roccafranca</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2009">2009, Cascina Roccafranca</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2008">2008, Cascina Roccafranca</a></li>
-					<li><a class="grey-text text-lighten-3" href="http://linuxdaytorino.org/2007">2007, Cascina Rocccafranca</a></li>
+					<?php $ld = function($year, $where) { ?>
+					<li><?php echo HTML::a(
+						"http://linuxdaytorino.org/$year/",
+						"$year, $where",
+						sprintf(
+							"Linux Day %d %s",
+							$year,
+							$where
+						),
+						'grey-text text-lighten-3'
+					) ?></li>
+					<?php };
+
+					$ld(2015, _("Dipartimento di Biotecnologie")  );
+					$ld(2014, _("Politecnico di Torino")  );
+					$ld(2013, _("Politecnico di Torino")  );
+					$ld(2012, _("Cortile del Maglio")  );
+
+					// You want to fight about this?
+					for($year=2011; $year>2006; $year--) {
+						$ld($year, _("Cascina Roccafranca")  );
+					}
+					?>
 				</ul>
+
 			</div>
+			<div class="col s12 m5 l4">
+				<p><?php echo HTML::a(
+					'https://blog.linuxdaytorino.org',
+					"Blog" . icon('rss_feed', 'right'),
+					_("Blog del Linux Day Torino"),
+					'btn waves-effect waves-purple white black-text',
+					'target="_blank"'
+				) ?></p>
+			</div>
+		</div>
+		<div class="row darken-1 white-text">
 			<div class="col s12">
 				<p><small><?php
 					echo icon('cloud_queue', 'left');

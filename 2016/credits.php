@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Credits
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -26,6 +26,10 @@ new Header('credits');
 	<div class="section">
 		<p class="flow-text"><?php _e("Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>.") ?></p>
 	</div>
+
+	<div class="section">
+		<div class="row">
+
 		<?php $tech = function($name, $url, $license, $desc, $icon = null, $material = false) {
 			$license = license($license); ?>
 			<div class="col s3 m2 l1">
@@ -48,8 +52,6 @@ new Header('credits');
 			</div>
 		<?php }; ?>
 
-	<div class="section">
-		<div class="row">
 		<?php
 		$tech(
 			"Debian GNU/Linux",
@@ -180,28 +182,31 @@ new Header('credits');
 		$tech(
 			"Attendize",
 			'https://www.attendize.com',
-			'gnu-gpl-v2',
+			'aal',
 			_("Event manager open source"),
 			'attendize.jpg'
 		);
 		$tech(
 			"YOURLS",
 			'https://yourls.org',
-			'gnu-gpl-v2',
+			'mit',
 			_("Your Own Url Shortener"),
 			'yourls.png'
 		);
 		?>
 		</div>
 	</div>
-		<div id="media" class="divider"></div>
-	<p><?php
-                                        printf(
-                                                _("Il sito è distribuito sotto licenza libera %s. Clonalo!"),
-                                                license('gnu-agpl')->getLink('orange-text')
-                                        );
-                                ?></p>
-                                <blockquote class="hoverable"><code>git clone https://github.com/0iras0r/ld2016</code></blockquote>
+
+	<div id="clone" class="divider"></div>
+	<p><?php printf(
+		_("Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"),
+		license('gnu-agpl')->getLink()
+	) ?></p>
+	<div class="row">
+		<div class="col s12 m6">
+			<blockquote class="hoverable"><code>git clone <?php echo REPO ?></code></blockquote>
+		</div>
+	</div>
 
 	<div id="media" class="divider"></div>
 	<div class="section">

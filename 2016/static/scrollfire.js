@@ -1,13 +1,11 @@
 $(document).ready(function () {
-	$("#map").hide();
+	$("#where-section").hide();
+	var options = [ {
+		selector: '#where-section',
+		offset: 0,
+		callback: function(el) {
+			$(el).slideDown("slow");
+		}
+	} ];
+	Materialize.scrollFire(options);
 } );
-
-var options = [ {
-	selector: '#map',
-	offset: 100,
-	callback: function(el) {
-		$("#map").show("slow");
-	}
-} ];
-Materialize.scrollFire(options);
-
