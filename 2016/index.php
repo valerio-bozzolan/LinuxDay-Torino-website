@@ -64,7 +64,8 @@ new Header('conference', [
 				<p class="flow-text"><?php printf(
 					_(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>."
+						"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>, ".
+						"dalle <strong>%s</strong> alle <strong>%s</strong>."
 					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
@@ -81,7 +82,9 @@ new Header('conference', [
 					_("Dipartimento di Informatica"),
 					_("Università degli studi di Torino"),
 					_("sabato"),
-					_("22 ottobre 2016")
+					_("22 ottobre 2016"),
+					$conference->getConferenceStart("H:i"),
+					$conference->getConferenceEnd("H:i")
 				) ?></p>
 			</div>
 		</div>
