@@ -52,8 +52,10 @@ if( isset( $_REQUEST['l'] ) ) {
 define('LANGUAGE_APPLIED', apply_language( $l ) );
 
 ///////////////////////////////////////////////////////////////////
+define('STATIC_FOLD', '/static');
+
 // Boz-PHP: Helpful constants
-define('XXX',     ROOT  . '/static');
+define('XXX', ROOT . STATIC_FOLD);
 
 define('SITE_NAME',        _("Linux Day Torino 2016") );
 define('SITE_NAME_SHORT',  _("LDTO2016") );

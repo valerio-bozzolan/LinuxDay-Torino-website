@@ -36,7 +36,7 @@ class Header {
 		}
 
 		$args['og'] = merge_args_defaults($args['og'], [
-			'image'  => XXX . '/ld-2016-logo-teal.png',
+			'image'  => URL . STATIC_FOLD . '/ld-2016-logo-teal.png', // It's better an absolute URL here
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
