@@ -26,16 +26,18 @@ new Header('partner');
 		"nella libertà digitale e culturale."
 	) ?></p>
 
-	<?php $partner = function($name, $url, $logo) {
+	<?php $partner = function($name, $url, $logo, $max_size = false) {
+		$max_size = $max_size ? ' style="max-height:120px"' : '';
 		echo HTML::a(
 			$url,
 			sprintf(
-				'<img class="responsive-img" src="%s" alt="%s" />',
+				'<img class="responsive-img" src="%s" alt="%s"%s />',
 				XXX . "/partner/$logo",
 				sprintf(
 					_("Logo di %s"),
 					$name
-				)
+				),
+				$max_size
 			),
 			$name,
 			null,
@@ -51,28 +53,32 @@ new Header('partner');
 			<?php $partner(
 				_("Associazione Tesso"),
 				'http://www.associazionetesso.org',
-				'tesso.png'
+				'tesso.png',
+				1
 			); ?>
 			</div>
 			<div class="col s12 m3">
 			<?php $partner(
-				"MuBit",
+				"MuBIT",
 				'http://www.mupin.it',
-				'mubit.jpg'
+				'mubit.jpg',
+				1
 			); ?>
 			</div>
 			<div class="col s12 m3">
                         <?php $partner(
 				_("Coderdojo Torino"),
 				'http://coderdojotorino.it',
-				'cd1.png'
+				'cd1.png',
+				1
 			); ?>
                         </div>
 			<div class="col s12 m3">
                         <?php $partner(
 				"Coderdojo Torino 2",
 				'http://coderdojotorino2.it',
-				'cd2.jpg'
+				'cd2.jpg',
+				1
 			); ?>
 			</div>
 		</div>

@@ -66,6 +66,9 @@ https://commons.wikimedia.org/wiki/File:Raspberry_Pi_2_Model_B_v1.1_top.jpg
 Roboto typeface (CC By 2.5 Generic)
 https://commons.wikimedia.org/wiki/File:Roboto_(typeface).svg
 
+W3C logo (public domain)
+https://commons.wikimedia.org/wiki/File:W3C_icon.svg
+
 Wikidata logo (Public domain)
 https://commons.wikimedia.org/wiki/File:Wikidata-logo-en.svg
 

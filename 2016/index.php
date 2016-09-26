@@ -53,10 +53,19 @@ new Header('conference', [
 				null,
 				TEXT
 			) ?></h1>
-
-			<p class="flow-text"><?php echo str_replace(
-				['/', 'GNU', 'Linux'], [
-					'<b>/</b>',
+		</div>
+	</div>
+	<div class="section">
+		<div class="row valign-wrapper">
+			<div class="col s12 m2 l1 center-align hide-on-small-only">
+				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _e("Linux Day 2016") ?>" class="responsive-img" />
+			</div>
+			<div class="col s12 m10 l11">
+				<p class="flow-text"><?php printf(
+					_(
+						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
+						"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>."
+					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
 						'GNU',
@@ -68,32 +77,22 @@ new Header('conference', [
 						'Linux',
 						null,
 						'black-text hoverable'
-					)
-				],
-				SITE_DESCRIPTION
-			) ?></p>
+					),
+					_("Dipartimento di Informatica"),
+					_("Università degli studi di Torino"),
+					_("sabato"),
+					_("22 ottobre 2016")
+				) ?></p>
+			</div>
 		</div>
-	</div>
-
-	<div class="section">
 		<div class="row">
-			<p class="flow-text"><?php printf(
-				_(
-					"Il Linux Day è la principale manifestazione italiana di promozione di tecnologia sostenibile. ".
-					"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>."
-				),
-				_("Dipartimento di Informatica"),
-				_("Università degli studi di Torino"),
-				_("sabato"),
-				_("22 ottobre 2016")
-			) ?></p>
 			<div class="col s12 m8">
 				<blockquote class="flow-text">
 					// How to write good code<br />
 					<strong>$software</strong>: 
 					function(<span class="yellow hoverable">play</span>, 
 					<span class="blue lighten-3 hoverable">freedom</span>, 
-					<span class="orange hoverable">friends</span>) { }
+					<span class="orange hoverable">friends</span>) { /* RTFM */ }
 				</blockquote>
 			</div>
 			<div class="col s12 m4">
@@ -107,11 +106,7 @@ new Header('conference', [
 		<div class="row">
 			<div class="col s12 m4">
 				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
-				<p><?php printf(
-					_("%s, %s"),
-					$conference->getLocationAddress(),
-					$conference->getLocationNote()
-				) ?></p>
+				<p class="flow-text"><?php echo $conference->getLocationNote() ?></p>
 			</div>
 			<div class="col s10 m8">
 				<div class="card-panel">
@@ -120,16 +115,23 @@ new Header('conference', [
 						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
 						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
 					</noscript>
-					<p><?php echo HTML::a(
-						$conference->getLocationGeoOSM(),
-						icon('place', 'right'),
-						sprintf(
-							_("Vedi %s su OpenStreetMap"),
-							esc_html( $conference->getConferenceTitle() )
-						),
-						'btn-floating btn-large waves-effect waves-light',
-						'target="_blank"'
-					) ?></p>
+					<div class="row valign-wrapper">
+						<div class="col s8">
+							<p class="flow-text"><?php echo $conference->getLocationAddress() ?></p>
+						</div>
+						<div class="col s4">
+							<p class="right"><?php echo HTML::a(
+								$conference->getLocationGeoOSM(),
+								icon('place', 'right'),
+								sprintf(
+									_("Vedi %s su OpenStreetMap"),
+									esc_html( $conference->getConferenceTitle() )
+								),
+								'btn-floating btn-large waves-effect',
+								'target="_blank"'
+							) ?></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -177,7 +179,7 @@ new Header('conference', [
 				} ?>
 
 			<div class="col s12 m6">
-				<div class="card-panel hoverable teal lighten-4">
+				<div class="card-panel hoverable purple darken-3 white-text">
 					<?php if( $img ): ?>
 					<div class="row"><!-- Start image row -->
 						<div class="col s4">
@@ -199,24 +201,38 @@ new Header('conference', [
 
 			$box(
 				_("Riparazione di apparecchiature elettroniche."),
-				_("Associazione Tesso"),
+				_("Associazione Restart Party"),
 				'http://www.associazionetesso.org',
 				_("dall'%s"),
-				'tesso.png'
+				'restart-party.png'
 			);
 			$box(
 				_("Laboratorio di coding per i più piccoli a tema Linux Day."),
-				_("CoderDojo Torino"),
-				'https://coderdojo.com',
+				sprintf(
+					_("%s e %s"),
+					HTML::a(
+						'http://coderdojotorino.it',
+						_("CoderDojo Torino 1"),
+						null,
+						'white-text'
+					),
+					HTML::a(
+						'http://coderdojotorino2.it',
+						_("CoderDojo Torino 2"),
+						null,
+						'white-text'
+					)
+				),
+				null,
 				null,
 				'coderdojo.png'
 			);
 			$box(
 				_("Allestimento museale di Retrocomputing."),
-				"MuBit",
+				"MuBIT",
 				'http://mupin.it',
 				_("dal %s"),
-				'mubit.jpg'
+				'mubit.png'
 			);
 			$box(
 				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),

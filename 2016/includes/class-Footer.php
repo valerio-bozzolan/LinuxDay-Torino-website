@@ -66,9 +66,9 @@ class Footer {
 			<div class="col s12 m5 l4">
 				<p><?php echo HTML::a(
 					'https://blog.linuxdaytorino.org',
-					"Blog" . icon('rss_feed', 'right'),
+					icon('rss_feed', 'purple-text text-darken-3'),
 					_("Blog del Linux Day Torino"),
-					'btn waves-effect waves-purple white black-text',
+					'btn-floating waves-effect waves-purple white',
 					'target="_blank"'
 				) ?></p>
 			</div>

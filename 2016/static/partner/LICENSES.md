@@ -1,4 +1,4 @@
-# Icone presenti
+# Loghi presenti
 
 * Border Radio (CC By-Sa 4.0 International)
 http://www.border-radio.it
@@ -10,7 +10,7 @@ http://www.mupin.it
 * Quotidiano Piemontese (in concessione esclusiva a Linux Day Torino)
 http://quotidianopiemontese.it
 
-* Tesso (in concessione esclusiva a Linux Day Torino)
+* Tesso e Restart Party (in concessione esclusiva a Linux Day Torino)
 http://associazionetesso.org
 
 * Coderdojo (GNU Free Documentation License)
