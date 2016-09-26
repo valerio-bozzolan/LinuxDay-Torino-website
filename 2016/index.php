@@ -201,7 +201,7 @@ new Header('conference', [
 
 			$box(
 				_("Riparazione di apparecchiature elettroniche."),
-				_("Associazione Restart Party"),
+				_("Associazione Restarters Torino"),
 				'http://www.associazionetesso.org',
 				_("dall'%s"),
 				'restart-party.png'
