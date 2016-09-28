@@ -55,6 +55,11 @@ class Footer {
 					),
 					license('cc-by-sa-4.0')->getLink('yellow-text')
 				) ?></p>
+				<p class="white-text"><?php printf(
+					_("Contattare all'indirizzo %s o al numero %s."),
+					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text'),
+					CONTACT_PHONE
+				) ?></p>
 				<p>
 					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" <?php printf(
 						_("%s su Facebook"),
