@@ -57,8 +57,8 @@ class Footer {
 				) ?></p>
 				<p class="white-text"><?php printf(
 					_("Contattare all'indirizzo %s o al numero %s."),
-					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text'),
-					CONTACT_PHONE
+					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text hoverable'),
+					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'white-text hoverable', 'target="_blank"')
 				) ?></p>
 				<p>
 					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" <?php printf(
@@ -88,7 +88,7 @@ class Footer {
 							$year,
 							$where
 						),
-						'grey-text text-lighten-3'
+						'grey-text text-lighten-3 hoverable'
 					) ?></li>
 					<?php };
 
