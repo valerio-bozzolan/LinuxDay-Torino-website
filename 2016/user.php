@@ -172,28 +172,23 @@ new Header('user', [
 	<div class="section">
 		<h3><?php _e("Social") ?></h3>
 		<div class="row">
-			<?php $box = function($user, $social, $title, $icon, $profile, $colors) { ?>
+			<?php $box = function($user, $social, $profile, $path, $is_icon = false) { ?>
 			<div class="col s4 m3 l2">
-				<?php echo HTML::a(
-					$profile,
-					($icon) ? icon($title) : $title,
-					sprintf(
-						_("%s su %s"),
-						$user->getUserFullname(),
-						$social
-					),
-					"btn-floating btn-large waves-effect waves-light $colors"
-				) ?>
+				<?php
+				$title = sprintf( _("%s su %s"), $user->getUserFullname(), $social );
+				$logo = $is_icon ? icon($path) : HTML::img(XXX . "/social/$path", $social, $title);
+				echo HTML::a($profile, $logo, $title, null, 'target="_blank"');
+				?>
 			</div>
 			<?php }; ?>
 
 			<?php
-			$user->user_rss     && $box($user, _("RSS"),      'rss_feed', 1, $user->user_rss,            'orange');
-			$user->user_fb      && $box($user, _("Facebook"), 'FB',       0, $user->getUserFacebruck(),  'indigo');
-			$user->user_googl   && $box($user, _("Google+"),  'G+',       0, $user->getUserGuggolpluz(), 'red');
-			$user->user_twtr    && $box($user, _("Twitter"),  'Tw',       0, $user->getUserTuitt(),      'blue');
-			$user->user_lnkd    && $box($user, _("Linkedin"), 'Li',	      0, $user->getUserLinkeddon(),  'gray');
-			$user->user_github  && $box($user, _("Github"),   'Gh',	      0, $user->getUserGithubbo(),   'black white-text');
+			$user->user_rss    && $box($user, "RSS",      $user->user_rss,            'home.png'    );
+			$user->user_fb     && $box($user, "Facebook", $user->getUserFacebruck(),  'facebook.png');
+			$user->user_googl  && $box($user, "Google+",  $user->getUserGuggolpluz(), 'google.png'  );
+			$user->user_twtr   && $box($user, "Twitter",  $user->getUserTuitt(),      'twitter.png' );
+			$user->user_lnkd   && $box($user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png');
+			$user->user_github && $box($user, "Github",   $user->getUserGithubbo(),   'github.png'  );
 			?>
 		</div>
 	</div>

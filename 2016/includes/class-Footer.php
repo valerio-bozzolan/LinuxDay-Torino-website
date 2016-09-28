@@ -17,8 +17,30 @@
 
 class Footer {
 	function __construct( $args = [] ) {
-		load_module('footer');
+
+		$args = merge_args_defaults($args, [
+			'home' => true
+		] );
 ?>
+
+
+	<?php if( $args['home'] ): ?>
+	<div class="divider"></div>
+	<div class="section">
+		<a class="btn waves-effect" href="<?php echo URL ?>/">
+			<?php
+				printf(
+					_("Torna a %s"),
+					SITE_NAME
+				);
+				echo icon('home', 'right');
+			?>
+		</a>
+	</div>
+	<?php endif ?>
+
+<?php load_module('footer') ?>
+
 <footer class="page-footer <?php echo BACK ?>">
 	<div class="container">
 		<div class="row">
@@ -33,6 +55,21 @@ class Footer {
 					),
 					license('cc-by-sa-4.0')->getLink('yellow-text')
 				) ?></p>
+				<p>
+					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" <?php printf(
+						_("%s su Facebook"),
+						SITE_NAME
+					) ?>>
+						<img src="<?php echo XXX ?>/social/facebook.png" height="32" alt="Facebook" />
+					</a>
+
+					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" <?php printf(
+						_("%s su Facebook"),
+						SITE_NAME
+					) ?>>
+						<img src="<?php echo XXX ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
+					</a>
+				</p>
 			</div>
 			<div class="col s12 m5 l4">
 				<h5 class="white-text"><?php _e("Edizioni Passate") ?></h5>

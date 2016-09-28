@@ -270,4 +270,4 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-<?php new Footer();
+<?php new Footer(['home' => false]);

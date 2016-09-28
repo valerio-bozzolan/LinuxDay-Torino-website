@@ -128,18 +128,6 @@ new Header('event', $args);
 		<?php endif ?>
 	</div>
 
-	<div class="divider"></div>
-	<div class="section">
-		<a class="btn waves-effect" href="<?php echo $event->getConferenceURL() ?>">
-			<?php
-				printf(
-					_("Torna a %s"),
-					$event->getConferenceTitle()
-				);
-				echo icon('home', 'right');
-			?>
-		</a>
-	</div>
 	<script>
 	$(document).ready(function () {
 		$('.tooltipped').tooltip();
