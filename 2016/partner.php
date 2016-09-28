@@ -132,9 +132,9 @@ new Header('partner');
 			</div>
 			<div class="col s12 m2">
 			<?php $partner(
-				"Patrocinio Università degli Studi di Torino",
-				'http://www.unito.it',
-				'unito.jpg'
+				"Patrocinio Dipartimento di Informatica UniTO",
+				'http://di.unito.it',
+				'dipinfounito.jpg'
 			); ?>
 			</div>
 			<div class="col s12 m2">
