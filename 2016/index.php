@@ -104,7 +104,7 @@ new Header('conference', [
 		</div>
 	</div>
 	<div id="where" class="divider" data-show="#where-section"></div>
-	<div id="where-section" class="section">
+	<div id="where-section" class="section" id="where-section">
 		<h3><?php _e("Come arrivare") ?></h3>
 		<div class="row">
 			<div class="col s12 m4">

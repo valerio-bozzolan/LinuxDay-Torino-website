@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$("#map-section").fadeTo(0, 0);
+	$("#where-section").fadeTo(0, 0);
 	$("#talk-section").fadeTo(0, 0);
 	$("#activities-section").fadeTo(0, 0);
 	$("#price-section").fadeTo(0, 0);
@@ -11,11 +11,11 @@ $(document).ready(function () {
 		$show.fadeTo(1200, 1);
 	}
 
-	var offset = 20;
+	var offset = 250;
 
 	var options = [
 		{
-			selector: '#map',
+			selector: '#where',
 			offset: offset,
 			callback: showSection
 		},
