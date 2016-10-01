@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Boz-PHP configuration
+# Linux Day 2016 - Construct a database conference
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,23 +15,17 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Die if called directly
-defined('ABSPATH') || exit;
+function datetime2php(& $s) {
+	$s = DateTime::createFromFormat('Y-m-d H:i:s', $s);
+	$s->setTimezone( new DateTimeZone( DB_TIMEZONE ) );
+}
 
-// Autoload classes
-spl_autoload_register( function($c) {
-	$path = ABSPATH . "/includes/class-$c.php";
-	if( is_file( $path ) ) {
-		require $path;
+function get_iso_lang() {
+	$l = [
+		'en_US.UTF-8' => 'en'
+	];
+	if( isset( $l[ LANGUAGE_APPLIED ] ) ) {
+		return $l[ LANGUAGE_APPLIED ];
 	}
-} );
-
-// One day I will push these 2 functions in Boz-PHP
-require ABSPATH . '/includes/functions.php';
-
-// Boz-PHP: On demand global objects
-register_expected('LICENSES', 'Licenses');
-
-define('PERMALINK_CONFERENCE', '/');               // URL . "/{conference_uid}"
-define('PERMALINK_EVENT',      '/%3$s/%1$s');      // URL . "/{$chapter_uid}/{event_uid}"
-define('PERMALINK_USER',       '/user/%s');        // URL . "/{user_uid}"
+	return 'it';
+}

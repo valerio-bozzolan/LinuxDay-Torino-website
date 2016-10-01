@@ -22,8 +22,8 @@ require 'config.php';
 // In case something goes wrong...
 http_response_code(500);
 
-if( empty( $_GET['conference_ID'] ) ) {
-	throw new LogicException('Undefined GET conference_ID');
+if( empty( $_GET['conference'] ) ) {
+	throw new LogicException('Undefined GET "conference" (uid)');
 }
 
 $xml = new DOMDocument('1.0', 'UTF-8');
@@ -38,8 +38,8 @@ $conference_row = Conference::getConference(
 
 if( ! $conference_row ) {
 	throw new LogicException( sprintf(
-		"Conference with ID '%s' does not exists!",
-		esc_html( CONFERENCE_ID )
+		"Conference with uid '%s' does not exists!",
+		esc_html( $_GET['conference'] )
 	) );
 } else {
 	$conference_fields = [
@@ -90,7 +90,7 @@ $events = query_results(
 			'room.room_ID'
 
 		,
-		CONFERENCE_ID
+		$conference_row->getConferenceID()
 	),
 	'Event'
 );
@@ -195,7 +195,7 @@ $select_people = query(
 			'event_ID'
 
 		,
-		CONFERENCE_ID
+		$conference_row->getConferenceID()
 	)
 );
 
