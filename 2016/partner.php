@@ -110,7 +110,7 @@ new Header('partner');
 		<p class="flow-text"><?php _e("Con il patrocinio di:") ?></p>
 		<div class="row">
 			<div class="col s12 m1">
-			<?php $partner(
+			<?php false && $partner(
 				"Patrocinio Circoscrizione 4",
 				'http://www.comune.torino.it/circ4/',
 				'circoscrizione.jpg'
