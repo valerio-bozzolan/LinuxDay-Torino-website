@@ -103,7 +103,7 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-	<div id="where" class="divider"></div>
+	<div id="where" class="divider" data-show="#where-section"></div>
 	<div id="where-section" class="section">
 		<h3><?php _e("Come arrivare") ?></h3>
 		<div class="row">
@@ -140,8 +140,8 @@ new Header('conference', [
 		</div>
 	</div>
 
-	<div id="talk" class="divider"></div>
-	<div class="section">
+	<div id="talk" class="divider" data-show="#talk-section"></div>
+	<div class="section" id="talk-section">
 		<?php $eventsTable = $conference->getDailyEventsTable() ?>
 
 		<h3><?php _e("Talk") ?></h3>
@@ -166,7 +166,7 @@ new Header('conference', [
 		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
-	<div id="activities" class="divider"></div>
+	<div id="activities" class="divider" data-show="#activities-section"></div>
 	<div class="section" id="activities-section">
 		<h3><?php _e("Attività") ?></h3>
 		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
@@ -246,9 +246,8 @@ new Header('conference', [
 		</div>
 	</div>
 
-	<div id="price" class="divider"></div>
-
-	<div class="section">
+	<div id="price" class="divider" data-show="#price-section"></div>
+	<div class="section" id="price-section">
 		<div class="row">
 			<div class="col s12 m4">
 				<img class="responsive-img circle hoverable" src="<?php echo XXX ?>/4-liberta.png" alt="<?php

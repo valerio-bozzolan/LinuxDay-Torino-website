@@ -109,35 +109,38 @@ new Header('partner');
 	<div class="section">
 		<p class="flow-text"><?php _e("Con il patrocinio di:") ?></p>
 		<div class="row">
+			<?php /* They do not responded
 			<div class="col s12 m1">
-			<?php false && $partner(
+			<?php $partner(
 				"Patrocinio Circoscrizione 4",
 				'http://www.comune.torino.it/circ4/',
 				'circoscrizione.jpg'
 			); ?>
 			</div>
-			<div class="col s12 offset-m1 m2">
+			*/ ?>
+
+			<div class="col s12 m3">
 			<?php $partner(
 				"Patrocinio Comune di Torino",
 				'http://www.comune.torino.it',
 				'comune.jpg'
 			); ?>
 			</div>
-			<div class="col s12 m2">
+			<div class="col s12 m3">
 			<?php $partner(
 				"Patrocinio Città Metropolitana di Torino",
 				'http://www.cittametropolitana.torino.it',
 				'metropoli.png'
 			); ?>
 			</div>
-			<div class="col s12 m2">
+			<div class="col s12 m3">
 			<?php $partner(
 				"Patrocinio Dipartimento di Informatica UniTO",
 				'http://di.unito.it',
 				'dipinfounito.jpg'
 			); ?>
 			</div>
-			<div class="col s12 m2">
+			<div class="col s12 m3">
 			<?php $partner(
 				"Patrocinio Torino Smart City",
 				'http://www.torinosmartcity.it',
@@ -146,4 +149,4 @@ new Header('partner');
 			</div>
 		</div>
 	</div>
-<?php new Footer();
+<?php new Footer(['home' => false]);

@@ -248,4 +248,4 @@ new Header('credits');
 			?>
 		</ul>
 	</div>
-<?php new Footer();
+<?php new Footer(['home' => false]);
