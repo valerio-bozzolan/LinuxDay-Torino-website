@@ -31,6 +31,14 @@ $(document).ready(function () {
 		maxZoom: 19,
 		attribution: thanks
 	}));
-	L.marker(center).addTo(map);
-	document.map = map;	
+	var ldIcon = L.icon({
+		iconUrl:   '/2016/static/linuxday-64.png',
+		shadowUrl: '/2016/static/linuxday-64-shadow.png',
+		iconSize:     [27,   32], // size of the icon
+		shadowSize:   [50,   32], // size of the shadow
+		iconAnchor:   [13,   26], // point of the icon which will correspond to marker's location
+		shadowAnchor: [11,   29],  // the same for the shadow
+		popupAnchor:  [-3,  -76] // point from which the popup should open relative to the iconAnchor
+	});
+	L.marker(center, {icon: ldIcon}).addTo(map);
 });

@@ -130,7 +130,7 @@ new Header('conference', [
 									_("Vedi %s su OpenStreetMap"),
 									esc_html( $conference->getConferenceTitle() )
 								),
-								'btn-floating btn-large waves-effect',
+								'btn-floating btn-large purple darken-3 waves-effect',
 								'target="_blank"'
 							) ?></p>
 						</div>
@@ -255,7 +255,7 @@ new Header('conference', [
 					_("Le quattro libertà fontamentali del software libero")
 				?>" />
 			</div>
-			<div class="col s12 m8 valign-wrapper">
+			<div class="col s12 m8">
 				<p class="flow-text"><?php printf(
 					_(
 					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".
@@ -266,6 +266,16 @@ new Header('conference', [
 					"Ci vediamo il <strong>%s</strong>!"
 					),
 					_("22 ottobre")
+				) ?></p>
+
+				<p><?php echo HTML::a(
+					ROOT . '/partner.php',
+					_("Scopri i nostri partner") . icon('business', 'right'),
+					sprintf(
+						_("Partner %s"),
+						SITE_NAME
+					),
+					'btn purple white-text waves-effect waves-light'
 				) ?></p>
 			</div>
 		</div>

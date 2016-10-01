@@ -193,6 +193,13 @@ new Header('credits');
 			_("Your Own Url Shortener"),
 			'yourls.png'
 		);
+		$tech(
+			"W3C Validator",
+			'https://validator.w3.org',
+			'mit',
+			_("Validatore standard HTML, JavaScript e CSS"),
+			'w3c.png'
+		);
 		?>
 		</div>
 	</div>

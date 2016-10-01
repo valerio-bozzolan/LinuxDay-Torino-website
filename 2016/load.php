@@ -63,16 +63,17 @@ define('SITE_DESCRIPTION', _("Manifestazione annuale sul software libero ed i si
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: CSS and JS (some aliases from `libjs-jquery` package)
-register_js('jquery',             '/javascript/jquery/jquery.min.js');
-register_js('leaflet',            '/javascript/leaflet/leaflet.js');
-register_js('leaflet',            '/javascript/leaflet/leaflet.js');
-register_js('leaflet.init',       XXX . '/leaflet-init.js');
-register_js('materialize',        XXX . '/materialize/js/materialize.min.js');
+register_js('jquery',              '/javascript/jquery/jquery.min.js');
+register_js('leaflet',             '/javascript/leaflet/leaflet.js');
+register_js('leaflet',             '/javascript/leaflet/leaflet.js');
+register_js('leaflet.init',        XXX . '/leaflet-init.js');
+register_js('materialize',         XXX . '/materialize/js/materialize.min.js');
 register_css('leaflet',            '/javascript/leaflet/leaflet.css');
-register_css('materialize',       XXX . '/materialize/css/materialize.min.css');
-register_css('materialize.icons', XXX . '/material-design-icons/material-icons.css');
-register_css('home',              XXX . '/home.css');
-register_js('scrollfire',         XXX . '/scrollfire.js');
+register_css('materialize',        XXX . '/materialize/css/materialize.min.css');
+register_css('materialize.custom', XXX . '/materialize-custom.css');
+register_css('materialize.icons',  XXX . '/material-design-icons/material-icons.css');
+register_css('home',               XXX . '/home.css');
+register_js('scrollfire',          XXX . '/scrollfire.js');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries

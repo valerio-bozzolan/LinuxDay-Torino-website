@@ -22,7 +22,6 @@ class Header {
 		$args = merge_args_defaults($args, [
 			'show-title'  => true,
 			'nav-title'   => SITE_NAME_SHORT,
-			'nav-url'     => URL,
 			'head-title'  => null,
 			'title'       => $menu->name,
 			'url'         => $menu->url,
@@ -57,6 +56,7 @@ class Header {
 		}
 
 		enqueue_css('materialize');
+		enqueue_css('materialize.custom');
 		enqueue_css('materialize.icons');
 		enqueue_js('jquery');
 		enqueue_js('materialize');
@@ -139,8 +139,8 @@ class Header {
 <body>
 	<nav>
 		<div class="nav-wrapper purple darken-4">
-			<a class="brand-logo" href="<?php echo $args['nav-url'] ?>" title="<?php _esc_attr(SITE_DESCRIPTION) ?>">
-				<?php echo $args['nav-title'] ?>
+			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
+				<img src="<?php echo XXX ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
@@ -152,7 +152,7 @@ class Header {
 		] ) ?>
 
 	</nav>
-	<div class="parallax-container" style="height:200px">
+	<div class="parallax-container">
 		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
 	</div>
 

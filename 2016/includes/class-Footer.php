@@ -60,20 +60,28 @@ class Footer {
 					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text hoverable'),
 					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'white-text hoverable', 'target="_blank"')
 				) ?></p>
-				<p>
-					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" <?php printf(
+				<p class="ld-social valign-wrapper">
+					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" title="<?php printf(
 						_("%s su Facebook"),
 						SITE_NAME
-					) ?>>
+					) ?>">
 						<img src="<?php echo XXX ?>/social/facebook.png" height="32" alt="Facebook" />
 					</a>
 
-					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" <?php printf(
-						_("%s su Facebook"),
+					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" title="<?php printf(
+						_("%s su Twitter"),
 						SITE_NAME
-					) ?>>
+					) ?>">
 						<img src="<?php echo XXX ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
 					</a>
+
+					<?php echo HTML::a(
+						'https://blog.linuxdaytorino.org',
+						icon('rss_feed', 'purple-text text-darken-3 ld-blog-icon'),
+						_("Blog del Linux Day Torino"),
+						'btn-floating waves-effect waves-purple white purple-text ld-blog',
+						'target="_blank"'
+					) ?>
 				</p>
 			</div>
 			<div class="col s12 m5 l4">
@@ -81,7 +89,7 @@ class Footer {
 				<ul>
 					<?php $ld = function($year, $where) { ?>
 					<li><?php echo HTML::a(
-						"http://linuxdaytorino.org/$year/",
+						PROTOCOL . DOMAIN . "/$year/",
 						"$year, $where",
 						sprintf(
 							"Linux Day %d %s",
@@ -104,15 +112,6 @@ class Footer {
 					?>
 				</ul>
 
-			</div>
-			<div class="col s12 m5 l4">
-				<p><?php echo HTML::a(
-					'https://blog.linuxdaytorino.org',
-					icon('rss_feed', 'purple-text text-darken-3'),
-					_("Blog del Linux Day Torino"),
-					'btn-floating waves-effect waves-purple white',
-					'target="_blank"'
-				) ?></p>
 			</div>
 		</div>
 		<div class="row darken-1 white-text">
