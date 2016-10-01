@@ -8,7 +8,7 @@ $(document).ready(function () {
 		var show = $( $el ).data("show");
 		console.log(show);
 		var $show = $( show );
-		$show.fadeTo("slow", 1);
+		$show.fadeTo(1200, 1);
 	}
 
 	var offset = 20;
