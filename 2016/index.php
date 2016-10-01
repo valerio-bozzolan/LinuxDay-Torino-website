@@ -267,6 +267,7 @@ new Header('conference', [
 					_("22 ottobre")
 				) ?></p>
 
+				<!--
 				<p><?php echo HTML::a(
 					ROOT . '/partner.php',
 					_("Scopri i nostri partner") . icon('business', 'right'),
@@ -276,6 +277,7 @@ new Header('conference', [
 					),
 					'btn purple white-text waves-effect waves-light'
 				) ?></p>
+				-->
 			</div>
 		</div>
 	</div>
