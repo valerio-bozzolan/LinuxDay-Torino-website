@@ -46,7 +46,6 @@ if( ! $conference_row ) {
 		'title',
 		'subtitle',
 		'venue',
-		'city',
 		'days',
 		'day_change',
 		'timeslot_duration'
@@ -58,6 +57,7 @@ if( ! $conference_row ) {
 
 	addChild($xml, $conference, 'start', $conference_row->getConferenceStart('Y-m-d H:i:s') );
 	addChild($xml, $conference, 'end',   $conference_row->getConferenceEnd('Y-m-d H:i:s') );
+	addChild($xml, $conference, 'city',  $conference_row->getLocationAddress() );
 }
 
 $events = query_results(
