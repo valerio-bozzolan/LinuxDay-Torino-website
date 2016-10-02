@@ -246,7 +246,7 @@ exit();
 function addChild($xml, $parent, $tagname, $content) {
 	$child = $xml->createElement($tagname);
 	if($content !== NULL && $content !== '') {
-		$child->textContent = $content;
+		$child->nodeValue = $content;
 	}
 	return $parent->appendChild($child);
 }
