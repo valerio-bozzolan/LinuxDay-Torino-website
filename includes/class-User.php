@@ -42,11 +42,16 @@ trait UserTrait {
 		return $this->user_uid;
 	}
 
+	/**
+	 * N.B. Also if he is logged he's public.
+	 */
 	function isUserPublic() {
-		isset( $this->user_public, $this->user_ID )
-			|| die("Missing user_public or user_ID");
+		isset( $this->user_public )
+			|| die("Missing user_public");
 
-		return $this->user_public || get_user('user_ID') === $this->user_ID;
+		$user_ID = $this->getUserID();
+
+		return $this->user_public || get_user('user_ID') === $user_ID;
 	}
 
 	function getUserFullname() {
@@ -87,8 +92,23 @@ trait UserTrait {
 		return query_results( Skill::getQueryUserSkills( $this->user_ID ), 'Skill');
 	}
 
+	function getUserEmail() {
+		property_exists($this, 'user_email')
+			|| error_die("Missing user_email");
+
+		return $this->user_email;
+	}
+
 	function getUserImage($s = 256) {
-		return 'https://www.gravatar.com/avatar/' . md5( $this->user_email ) . '?s=' . $s;
+		property_exists($this, 'user_image')
+			|| error_die("Missing user_image");
+
+		$image = $this->user_image;
+		if( ! $image ) {
+			$image = 'https://www.gravatar.com/avatar/' . md5( $this->getUserEmail() ) . '?s=' . $s;
+		}
+
+		return $image;
 	}
 
 	function getUserBio() {
@@ -187,14 +207,6 @@ class User {
 	 */
 	static function getStandardQueryUsers() {
 		$q = new DynamicQuery();
-
-		$q->selectField( [
-			'user_uid',
-			'user_name',
-			'user_surname',
-			'user_email'
-		] );
-
 		return $q->useTable('user');
 	}
 

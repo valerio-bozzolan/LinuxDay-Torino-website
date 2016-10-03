@@ -80,6 +80,13 @@ trait EventTrait {
 
 	function queryEventUsers() {
 		return User::getQueryUsersByEvent( $this->getEventID() )
+			->selectField([
+				'user_uid',
+				'user_name',
+				'user_surname',
+				'user_email',
+				'user_image'
+			])
 			->query();
 	}
 }
