@@ -16,3 +16,5 @@ http://associazionetesso.org
 * Coderdojo (GNU Free Documentation License)
 https://commons.wikimedia.org/wiki/File:CoderDojo_Logo.png
 https://www.gnu.org/licenses/fdl.html
+
+* Tutti gli altri loghi sotto licenza esclusiva Linux Day 2016
