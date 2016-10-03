@@ -71,7 +71,7 @@ new Header('event', $args);
 	</div>
 
 	<!-- Start event description -->
-	<?php if( $event->event_description ): ?>
+	<?php if( $event->hasEventDescription() ): ?>
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Descrizione") ?></h3>

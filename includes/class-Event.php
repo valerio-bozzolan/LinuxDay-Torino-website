@@ -78,6 +78,17 @@ trait EventTrait {
 		return site_page($this->event_img, URL);
 	}
 
+	function hasEventDescription() {
+		property_exists($this, 'event_description')
+			|| error_die("Missing event_description");
+
+		return isset( $this->event_description );
+	}
+
+	function getEventDescription() {
+		return $this->event_description;
+	}
+
 	function queryEventUsers() {
 		return User::getQueryUsersByEvent( $this->getEventID() )
 			->selectField([

@@ -41,7 +41,7 @@ new Header('user', [
 
 		<!-- Profile image -->
 		<div class="col s12 l4">
-			<div class="valign-wrapper">
+			<div>
 				<?php if( $user->user_site ): ?>
 					<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>">
 				<?php endif ?>
