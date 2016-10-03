@@ -11,7 +11,7 @@ $(document).ready(function () {
 		$show.fadeTo(1200, 1);
 	}
 
-	var offset = 250;
+	var offset = 220;
 
 	var options = [
 		{
