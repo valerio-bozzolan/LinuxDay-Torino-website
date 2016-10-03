@@ -64,8 +64,8 @@ new Header('conference', [
 				<p class="flow-text"><?php printf(
 					_(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Quest'anno a Torino si terrà nel <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>, ".
-						"dalle <strong>%s</strong> alle <strong>%s</strong>."
+						"Quest'anno a Torino si terrà presso il <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>, ".
+						"dalle <strong>%s</strong>."
 					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
