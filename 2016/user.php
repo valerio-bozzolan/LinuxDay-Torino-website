@@ -19,9 +19,7 @@ require 'load.php';
 
 $user = null;
 if( isset( $_GET['uid'] ) ) {
-	$user = User::getUser(
-		luser_input( $_GET['uid'], 64 )
-	);
+	$user = User::getUser( $_GET['uid'] );
 }
 
 $user || die_with_404();
@@ -37,6 +35,13 @@ new Header('user', [
 	]
 ] );
 ?>
+	<?php if( $user->hasPermissionToEditUser() ): ?>
+		<p><?php echo HTML::a(
+			ROOT . "/user-edit.php?uid={$user->getUserUID()}",
+			_("Modifica") . icon('edit', 'left')
+		) ?></p>
+	<?php endif ?>
+
 	<div class="row">
 
 		<!-- Profile image -->

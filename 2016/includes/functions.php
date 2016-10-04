@@ -63,12 +63,6 @@ function icon($icon = 'send', $c = null) {
 	return "<i class=\"material-icons$c\">$icon</i>";
 }
 
-function license($code) {
-	expect('LICENSES');
-
-	return $GLOBALS['LICENSES']->get($code);
-}
-
 function die_with_404() {
 	new Header('404', [
 		'title' => _("È un 404! Pagina non trovata :("),

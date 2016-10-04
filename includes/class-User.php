@@ -181,10 +181,26 @@ trait UserTrait {
 	function queryUserEventsByConference($conference_ID) {
 		return $this->getQueryUserEventsByConference($conference_ID)->query();
 	}
+
+	function hasPermissionToEditUser() {
+		if( has_permission('edit-users') ) {
+			return true;
+		}
+		if( has_permission('edit-account') && $this->isUserMyself() ) {
+			return true;
+		}
+		return false;
+	}
+
+	function isUserMyself() {
+		return get_user('user_ID') === $this->getUserID();
+	}
 }
 
+class_exists('Sessionuser');
+
 class User {
-	use UserTrait;
+	use UserTrait, SessionuserTrait;
 
 	function __construct() {
 		self::prepareUser($this);
@@ -196,7 +212,7 @@ class User {
 		return query_row(
 			sprintf(
 				"SELECT * FROM {$T('user')} WHERE user_uid = '%s'",
-				esc_sql( $uid )
+				esc_sql( luser_input( $uid, 32) )
 			),
 			'User'
 		);

@@ -61,6 +61,20 @@ trait SkillTrait {
 			esc_html( $this->skill_title )
 		);
 	}
+
+	function getSkillID() {
+		isset( $this->skill_ID )
+			|| error_die("Missing skill_ID");
+
+		return $this->skill_ID;
+	}
+
+	function getSkillUID() {
+		isset( $this->skill_uid )
+			|| error_die("Missing skill_uid");
+
+		return $this->skill_uid;
+	}
 }
 
 class Skill {
@@ -71,6 +85,18 @@ class Skill {
 
 	function __construct() {
 		self::prepareSkill($this);
+	}
+
+	static function getSkill($uid) {
+		global $T;
+
+		return query_row(
+			sprintf(
+				"SELECT * FROM {$T('skill')} WHERE skill_uid = '%s'",
+				esc_sql( luser_input( $uid, 32) )
+			),
+			'Skill'
+		);
 	}
 
 	static function getQueryUserSkills($user_ID) {
