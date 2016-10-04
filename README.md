@@ -75,6 +75,16 @@ Modificare il relativo `.po` con Poedit e lanciare due volte lo script [multilin
 ### Aggiunta lingua
 Copiare il template GNU Gettext `*/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./$ANNO/load.php`. Lanciare due volte lo script in [multilingua](#multilingua) per renderla operativa.
 
+## Backend
+Per poter accedere al backend occorre generare l'hash della password nel database (`user`.`user_password`). Il nome utente sara il proprio `user_uid`.
+
+Per generare l'hash della password conviene abilitare momentaneamente queste due opzioni nel file `/load.php`:
+
+    define('DEBUG', 1);
+    define('SHOW_EVERY_SQL', 1);
+
+Dunque fare un login nella pagina `/2016/login.php` specificando una password inventata. Facendo il login, l'hash sarà mostrato a video e saprete cosa fare.
+
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
