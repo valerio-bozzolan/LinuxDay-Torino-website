@@ -68,7 +68,7 @@ new Header('user', [
 						$user->user_site,
 						_("Sito personale") . icon('contact_mail', 'right'),
 						null,
-						'btn waves-effect waves-light'
+						'btn waves-effect purple darken-2'
 					) ?></p>
 				</div>
 			</div>
