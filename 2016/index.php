@@ -19,9 +19,7 @@ require 'load.php';
 
 $conference = null;
 if( ! empty( $_GET['uid'] ) ) {
-	$conference = Conference::getConference(
-		luser_input( $_GET['uid'], 64 )
-	);
+	$conference = Conference::getConference( $_GET['uid'] );
 }
 
 $conference

@@ -29,3 +29,9 @@ function get_iso_lang() {
 	}
 	return 'it';
 }
+
+function license($code) {
+	expect('LICENSES');
+
+	return $GLOBALS['LICENSES']->get($code);
+}

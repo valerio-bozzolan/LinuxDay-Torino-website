@@ -32,6 +32,10 @@ require ABSPATH . '/includes/functions.php';
 // Boz-PHP: On demand global objects
 register_expected('LICENSES', 'Licenses');
 
+register_permissions('user',    'edit-account');
+inherit_permissions( 'admin',   'user');
+register_permissions('admin',   'edit-users');
+
 define('PERMALINK_CONFERENCE', '/');               // URL . "/{conference_uid}"
 define('PERMALINK_EVENT',      '/%3$s/%1$s');      // URL . "/{$chapter_uid}/{event_uid}"
 define('PERMALINK_USER',       '/user/%s');        // URL . "/{user_uid}"

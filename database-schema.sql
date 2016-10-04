@@ -202,11 +202,14 @@ DROP TABLE IF EXISTS `ldto_user`;
 CREATE TABLE `ldto_user` (
   `user_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_uid` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_role` enum('administrator','user') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
   `user_public` tinyint(1) NOT NULL,
+  `user_active` tinyint(4) NOT NULL DEFAULT '0',
   `user_name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_surname` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_email` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_image` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Gravatar when NULL',
+  `user_password` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_site` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_bio_it` text COLLATE utf8mb4_unicode_ci,
@@ -251,4 +254,4 @@ CREATE TABLE `ldto_user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-03 23:33:26
+-- Dump completed on 2016-10-04  2:37:46

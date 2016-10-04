@@ -115,7 +115,7 @@ class Conference {
 					"conference_uid = '%s' AND ".
 					'conference.location_ID = location.location_ID'
 				,
-				esc_sql( $conference_uid )
+				esc_sql( luser_input( $conference_uid, 64 ) )
 			),
 			'Conference'
 		);
