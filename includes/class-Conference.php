@@ -68,8 +68,8 @@ trait ConferenceTrait {
 		return _( $this->conference_subtitle );
 	}
 
-	function getDailyEventsTable() {
-		return new DailyEventsTable( $this->getConferenceID() );
+	function getDailyEventsTable($chapter_uid) {
+		return new DailyEventsTable( $this->getConferenceID(), $chapter_uid );
 	}
 }
 

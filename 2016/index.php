@@ -140,7 +140,7 @@ new Header('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<?php $eventsTable = $conference->getDailyEventsTable() ?>
+		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
 
 		<h3><?php _e("Talk") ?></h3>
 		<p class="flow-text"><?php printf(

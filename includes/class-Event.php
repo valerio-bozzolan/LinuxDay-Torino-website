@@ -207,7 +207,7 @@ class Event {
 	 *
 	 * @return array
 	 */
-	static function getDailyEvents( $conference_ID ) {
+	static function getDailyEvents( $conference_ID = null, $chapter_uid ) {
 		global $JOIN;
 
 		// Yes, I want to obtain duplicates
@@ -235,12 +235,14 @@ class Event {
 					'event.conference_ID = %d AND '.
 					'event.conference_ID = conference.conference_ID AND '.
 					'event.track_ID = track.track_ID AND '.
-					'event.chapter_ID = chapter.chapter_ID '.
+					'event.chapter_ID = chapter.chapter_ID AND '.
+					"chapter_uid = '%s'" .
 				'ORDER BY '.
 					'event_start, '.
 					'track_order'
 				,
-				$conference_ID
+				$conference_ID,
+				esc_sql( $chapter_uid )
 			),
 			'Event'
 		);
