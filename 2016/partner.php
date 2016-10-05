@@ -143,18 +143,20 @@ new Header('partner');
 				'regione-piemonte.jpg'
 			); ?>
 			</div>
-			<div class="col s12 m2">
-			<?php patrocinio(
-				_("Comune di Torino"),
-				'http://www.comune.torino.it',
-				'comune.jpg'
-			); ?>
-			</div>
+
 			<div class="col s12 m2">
 			<?php patrocinio(
 				_("Città Metropolitana di Torino"),
 				'http://www.cittametropolitana.torino.it',
 				'metropoli.png'
+			); ?>
+
+			</div>
+			<div class="col s12 m2">
+			<?php patrocinio(
+				_("Comune di Torino"),
+				'http://www.comune.torino.it',
+				'comune.jpg'
 			); ?>
 			</div>
 			<div class="col s12 m2">
