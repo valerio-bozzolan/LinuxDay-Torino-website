@@ -66,15 +66,15 @@ new Header('partner');
 			); ?>
 			</div>
 			<div class="col s12 m3">
-                        <?php partner(
+			<?php partner(
 				_("Coderdojo Torino"),
 				'http://coderdojotorino.it',
 				'cd1.png',
 				1
 			); ?>
-                        </div>
+			</div>
 			<div class="col s12 m3">
-                        <?php partner(
+			<?php partner(
 				"Coderdojo Torino 2",
 				'http://coderdojotorino2.it',
 				'cd2.jpg',
@@ -85,19 +85,18 @@ new Header('partner');
 	</div>
 
 	<div id="main-sponsor" class="divider"></div>
-        <div class="section">
-                <p class="flow-text"><?php _e("Main sponsor:") ?></p>
-                <div class="row">
-                        <div class="col s12 m6 l4">
-                        <?php partner(
-                                "Quadrata Service Group s.r.l",
-                                'www.quadrata-group.com',
-                                'quadrata.png'
-                        ); ?>
-                        </div>
+	<div class="section">
+		<p class="flow-text"><?php _e("Main sponsor:") ?></p>
+		<div class="row">
+			<div class="col s12 m6 l4">
+				<?php partner(
+					"Quadrata Service Group s.r.l",
+					'http://www.quadrata-group.com',
+					'quadrata.png'
+				); ?>
+			</div>
 		</div>
 	</div>
-
 
 	<div id="media-partner" class="divider"></div>
 	<div class="section">
@@ -134,7 +133,7 @@ new Header('partner');
 				$img
 			);
 		} ?>
-	
+
 		<div class="row">
 			<div class="col s12 m2">
 			<?php patrocinio(
