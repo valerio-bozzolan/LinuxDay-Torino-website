@@ -84,6 +84,18 @@ new Header('partner');
 		</div>
 	</div>
 
+	<div id="main-sponsor" class="divider"></div>
+        <div class="section">
+                <p class="flow-text"><?php _e("Main Sponsor:") ?></p>
+                <div class="row">
+                        <div class="col s12 m6 l4">
+                        <?php partner(
+                                "Quadrata Service Group s.r.l",
+                                'www.quadrata-group.com',
+                                'quadrata.png'
+                        ); ?>
+                        </div>
+
 	<div id="media-partner" class="divider"></div>
 	<div class="section">
 		<p class="flow-text"><?php _e("Media partner:") ?></p>
