@@ -86,7 +86,7 @@ new Header('partner');
 
 	<div id="main-sponsor" class="divider"></div>
         <div class="section">
-                <p class="flow-text"><?php _e("Main Sponsor:") ?></p>
+                <p class="flow-text"><?php _e("Main sponsor:") ?></p>
                 <div class="row">
                         <div class="col s12 m6 l4">
                         <?php partner(
@@ -95,6 +95,9 @@ new Header('partner');
                                 'quadrata.png'
                         ); ?>
                         </div>
+		</div>
+	</div>
+
 
 	<div id="media-partner" class="divider"></div>
 	<div class="section">
