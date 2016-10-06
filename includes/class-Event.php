@@ -16,18 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait EventTrait {
-	static function prepareEvent(& $t) {
-		if( isset( $t->event_ID ) ) {
-			$t->event_ID   = (int) $t->event_ID;
-		}
-		if( isset( $t->event_start ) ) {
-			datetime2php($t->event_start);
-		}
-		if( isset( $t->event_end ) ) {
-			datetime2php($t->event_end);
-		}
-	}
-
 	function getEventID() {
 		isset( $this->event_ID )
 			|| error_die("Missing event_ID");
@@ -40,19 +28,20 @@ trait EventTrait {
 		return $this->event_uid;
 	}
 
-	function getChapterUID() {
-		isset( $this->chapter_uid )
-			|| error_die("Missing chapter_uid");
-		return $this->chapter_uid;
-	}
-
 	function getEventURL() {
 		return URL . sprintf(
 			PERMALINK_EVENT,
 			$this->getEventUID(),
 			$this->getConferenceUID(),
-			$this->getChapterUid()
+			$this->getChapterUID()
 		);
+	}
+
+	function getEventTitle() {
+		isset( $this->event_title )
+			|| error_die("Missing event_title");
+
+		return $this->event_title;
 	}
 
 	/**
@@ -89,7 +78,7 @@ trait EventTrait {
 		return $this->event_description;
 	}
 
-	function queryEventUsers() {
+	function queryEventUsers($fields = null) {
 		return User::getQueryUsersByEvent( $this->getEventID() )
 			->selectField([
 				'user_uid',
@@ -98,20 +87,39 @@ trait EventTrait {
 				'user_email',
 				'user_image'
 			])
+			->selectField($fields)
 			->query();
+	}
+
+	function hasPermissionToEditEvent() {
+		return has_permission('edit-events');
 	}
 }
 
 class_exists('User');
 class_exists('Conference');
+class_exists('Chapter');
 
 class Event {
-	use EventTrait, UserTrait, ConferenceTrait;
+	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait;
 
 	function __construct() {
-		self::prepareEvent($this);
-		self::prepareUser($this);
-		self::prepareConference($this);
+		self::normalize($this);
+		User::normalize($this);
+		Conference::normalize($this);
+		Chapter::normalize($this);
+	}
+
+	static function normalize(& $t) {
+		if( isset( $t->event_ID ) ) {
+			$t->event_ID = (int) $t->event_ID;
+		}
+		if( isset( $t->event_start ) ) {
+			datetime2php($t->event_start);
+		}
+		if( isset( $t->event_end ) ) {
+			datetime2php($t->event_end);
+		}
 	}
 
 	/**
@@ -154,8 +162,8 @@ class Event {
 	static function getQueryEvent($event_uid) {
 		$q = Event::getStandardQueryEvent();
 		return $q->appendCondition( sprintf(
-			"event.event_uid = '%s'",
-			esc_sql( $event_uid )
+			"event_uid = '%s'",
+			esc_sql( luser_input( $event_uid, 64 ) )
 		) );
 	}
 
@@ -165,8 +173,8 @@ class Event {
 	static function getQueryEventByConference( $event_uid, $conference_uid ) {
 		$q = Event::getQueryEvent($event_uid);
 		return $q->appendCondition( sprintf(
-			"conference.conference_uid = '%s'",
-			esc_sql( $conference_uid )
+			"conference_uid = '%s'",
+			esc_sql( luser_input( $conference_uid, 64 ) )
 		) );
 	}
 
@@ -174,14 +182,10 @@ class Event {
 	 * @return DynamicQuery
 	 */
 	static function getQueryEventByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
-		$q = Event::getQueryEvent($event_uid);
-		$q->appendCondition( sprintf(
-			"conference.conference_uid = '%s'",
-			esc_sql( $conference_uid )
-		) );
+		$q = Event::getQueryEventByConference($event_uid, $conference_uid);
 		return $q->appendCondition( sprintf(
-			"chapter.chapter_uid = '%s'",
-			esc_sql( $chapter_uid )
+			"chapter_uid = '%s'",
+			esc_sql( luser_input( $chapter_uid, 64 ) )
 		) );
 	}
 

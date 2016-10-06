@@ -30,8 +30,9 @@ $event || die_with_404();
 
 $args = [
 	'title' => sprintf(
-		_("Talk: %s"),
-		$event->event_title
+		_("%s: %s"),
+		$event->getChapterName(),
+		$event->getEventTitle()
 	),
 	'url'   => $event->getEventURL()
 ];
@@ -44,6 +45,13 @@ if( $event->hasEventImage() ) {
 
 new Header('event', $args);
 ?>
+	<?php if( $event->hasPermissionToEditEvent() ): ?>
+	<p><?php echo HTML::a(
+		ROOT . "/event-edit.php?{$event->getEventID()}",
+		_("Modifica evento") . icon('edit', 'left')
+	) ?></p>
+	<?php endif ?>
+
 	<div class="row">
 
 		<div class="col s12 m4">

@@ -16,16 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait SkillTrait {
-	static function prepareSkill(& $t) {
-		if( isset( $t->skill_ID ) ) {
-			$t->skill_ID = (int) $t->skill_ID;
-		}
-
-		if( isset( $t->skill_score ) ) {
-			$t->skill_score = (int) $t->skill_score;
-		}
-	}
-
 	function getSkillCode() {
 		$score = $this->skill_score;
 		if($score === 0) {
@@ -84,7 +74,17 @@ class Skill {
 	const PROGRAMMING = 'programming';
 
 	function __construct() {
-		self::prepareSkill($this);
+		self::normalize($this);
+	}
+
+	static function normalize(& $t) {
+		if( isset( $t->skill_ID ) ) {
+			$t->skill_ID = (int) $t->skill_ID;
+		}
+
+		if( isset( $t->skill_score ) ) {
+			$t->skill_score = (int) $t->skill_score;
+		}
 	}
 
 	static function getSkill($uid) {
