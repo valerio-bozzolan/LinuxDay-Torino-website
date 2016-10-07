@@ -23,11 +23,20 @@ trait EventUserTrait {
 		return $this->event_user_order;
 	}
 
-	function deleteEventUser() {
+	/**
+	 * Can be called statically.
+	 */
+	function deleteEventUser($event_ID = null, $user_ID = null) {
+		if( $event_ID === null ) {
+			$event_ID = $this->getEventID();
+		}
+		if( $user_ID === null ) {
+			$user_ID = $this->getUserID();
+		}
 		query( sprintf(
 			"DELETE FROM {$GLOBALS[T]('event_user')} WHERE event_ID = %d AND USER_ID = %d",
-			$this->getEventID(),
-			$this->getUserID()
+			$event_ID,
+			$user_ID
 		) );
 	}
 }

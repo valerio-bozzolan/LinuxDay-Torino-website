@@ -18,11 +18,11 @@
 require 'load.php';
 
 $event = null;
-if( isset( $_GET['conference'], $_GET['uid'], $_GET['chapter'] ) ) {
+if( isset( $_GET['uid'], $_GET['conference'], $_GET['chapter'] ) ) {
 	$event = Event::getEventByConferenceChapter(
-		luser_input( $_GET['uid']       , 64 ),
-		luser_input( $_GET['conference'], 64 ),
-		luser_input( $_GET['chapter']   , 64 )
+		$_GET['uid'],
+		$_GET['conference'],
+		$_GET['chapter']
 	);
 }
 
@@ -47,7 +47,10 @@ new Header('event', $args);
 ?>
 	<?php if( $event->hasPermissionToEditEvent() ): ?>
 	<p><?php echo HTML::a(
-		ROOT . "/event-edit.php?{$event->getEventID()}",
+		ROOT . "/event-edit.php?" . http_build_query( [
+			'uid'        => $event->getEventUID(),
+			'conference' => $event->getConferenceUID()
+		] ),
 		_("Modifica evento") . icon('edit', 'left')
 	) ?></p>
 	<?php endif ?>

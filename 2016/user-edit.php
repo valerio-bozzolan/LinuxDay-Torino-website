@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Single user profile page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Linux Day 2016 - Single event edit page
+# Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -60,6 +60,13 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 		case 'add-skill':
 			$skill = Skill::getSkill( $_POST['skill_uid'] );
 
+			// If exists, delete it
+			query( sprintf(
+				"DELETE FROM {$T('user_skill')} WHERE user_ID = %d AND skill_ID = %d",
+				$user->getUserID(),
+				$skill->getSkillID()
+			) );
+
 			insert_row('user_skill', [
 				new DBCol('user_ID',     $user->getUserID(),    'd'),
 				new DBCol('skill_ID',    $skill->getSkillID(),  'd'),
@@ -70,14 +77,11 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 }
 
 new Header('user', [
-	'title' => $user->getUserFullname(),
+	'title' => sprintf(
+		_("Modifica utente %s"),
+		$user->getUserFullname()
+	),
 	'url'   => $user->getUserURL(),
-	'og'    => [
-		'image' => $user->getUserImage(),
-		'type'  => 'profile',
-		'profile:first_name' => $user->user_name,
-		'profile:last_name'  => $user->user_surname
-	]
 ] );
 ?>
 	<p><?php echo HTML::a(
@@ -86,7 +90,6 @@ new Header('user', [
 	) ?></p>
 
 	<h3><?php _e("Aggiungi skill") ?></h3>
-	<p class="red flow-text">Se stai pensando di aggiungere skill già associate a questo utente... sei avvertito/a :3</p>
 	<div class="row">
 		<div class="col s12 m4">
 			<div class="card-panel">
@@ -108,7 +111,7 @@ new Header('user', [
 							<input type="text" name="skill_score" value="0" />
 						</div>
 						<div class="col s6">
-							<button type="submit"><?php _e("Applica") ?></button>
+							<button type="submit" class="btn"><?php _e("Aggiungi") ?></button>
 						</div>
 					</div>
 				</div>
@@ -139,7 +142,7 @@ new Header('user', [
 								<label for="skill-<?php echo $i++ ?>"><?php _e("Elimina") ?></label>
 							</div>
 							<div class="col s6">
-								<button type="submit"><?php _e("Applica") ?></button>
+								<button type="submit" class="btn"><?php _e("Salva") ?></button>
 							</div>
 							<div class="col s12">
 								<p><?php echo $skill->getSkillPhrase() ?></p>
