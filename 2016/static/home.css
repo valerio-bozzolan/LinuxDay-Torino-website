@@ -32,3 +32,12 @@ h1::before {
 th {
 	text-align:left !important;
 }
+#activities-section .card-panel {
+	padding:10px  15px;
+}
+#activities-section .card-panel .row {
+	margin-bottom:0px;
+}
+#activities-section .flow-text {
+	line-height:1.1;
+}
