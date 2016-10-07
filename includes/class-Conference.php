@@ -16,18 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait ConferenceTrait {
-	static function prepareConference(& $t) {
-		if( isset( $t->conference_ID ) ) {
-			$t->conference_ID   = (int) $t->conference_ID;
-		}
-		if( isset( $t->conference_start ) ) {
-			datetime2php($t->conference_start);
-		}
-		if( isset( $t->conference_end ) ) {
-			datetime2php($t->conference_end);
-		}
-	}
-
 	function getConferenceID() {
 		isset( $this->conference_ID )
 			|| die("Missing conference_ID");
@@ -68,20 +56,31 @@ trait ConferenceTrait {
 		return _( $this->conference_subtitle );
 	}
 
-	function getDailyEventsTable() {
-		return new DailyEventsTable( $this->getConferenceID() );
+	function getDailyEventsTable($chapter_uid) {
+		return new DailyEventsTable( $this->getConferenceID(), $chapter_uid );
 	}
 }
 
 class_exists('Location');
 
 class Conference {
-	use ConferenceTrait;
-	use LocationTrait;
+	use ConferenceTrait, LocationTrait;
 
 	function __construct() {
-		self::prepareConference($this);
-		self::prepareLocation($this);
+		self::normalize($this);
+		Location::normalize($this);
+	}
+
+	static function normalize(& $t) {
+		if( isset( $t->conference_ID ) ) {
+			$t->conference_ID   = (int) $t->conference_ID;
+		}
+		if( isset( $t->conference_start ) ) {
+			datetime2php($t->conference_start);
+		}
+		if( isset( $t->conference_end ) ) {
+			datetime2php($t->conference_end);
+		}
 	}
 
 	static function getConference( $conference_uid ) {

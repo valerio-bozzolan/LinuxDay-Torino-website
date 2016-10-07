@@ -61,7 +61,7 @@ class Footer {
 					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'white-text hoverable', 'target="_blank"')
 				) ?></p>
 				<p class="ld-social valign-wrapper">
-					<a class="hoverable" href="http://facebook.com/LinuxDayTorino" target="_blank" title="<?php printf(
+					<a class="hoverable" href="https://facebook.com/LinuxDayTorino" target="_blank" title="<?php printf(
 						_("%s su Facebook"),
 						SITE_NAME
 					) ?>">

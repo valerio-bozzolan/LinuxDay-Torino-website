@@ -16,21 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait LocationTrait {
-	static function prepareLocation(& $t) {
-		if( isset( $t->location_ID ) ) {
-			$t->location_ID   = (int) $t->location_ID;
-		}
-		if( isset( $t->location_lat ) ) {
-			$t->location_lat   = (float) $t->location_lat;
-		}
-		if( isset( $t->location_lon ) ) {
-			$t->location_lon   = (float) $t->location_lon;
-		}
-		if( isset( $t->location_zoom ) ) {
-			$t->location_zoom = (int) $t->location_zoom;
-		}
-	}
-
 	function getLocationName() {
 		return _( $this->location_name );
 	}
@@ -87,6 +72,21 @@ class Location {
 	const DEFAULT_ZOOM = 17;
 
 	function __construct() {
-		self::prepareLocation($this);
+		self::normalize($this);
+	}
+
+	static function normalize(& $t) {
+		if( isset( $t->location_ID ) ) {
+			$t->location_ID   = (int) $t->location_ID;
+		}
+		if( isset( $t->location_lat ) ) {
+			$t->location_lat   = (float) $t->location_lat;
+		}
+		if( isset( $t->location_lon ) ) {
+			$t->location_lon   = (float) $t->location_lon;
+		}
+		if( isset( $t->location_zoom ) ) {
+			$t->location_zoom = (int) $t->location_zoom;
+		}
 	}
 }

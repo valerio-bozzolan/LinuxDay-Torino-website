@@ -41,9 +41,9 @@ class DailyEventsTable {
 	 */
 	private $n;
 
-	function __construct( $conference_ID ) {
+	function __construct( $conference_ID, $chapter_uid ) {
 
-		$events = Event::getDailyEvents( $conference_ID );
+		$events = Event::getDailyEvents( $conference_ID, $chapter_uid );
 
 		foreach($events as $event) {
 			///////////////////////////////////////////////////////////////////////

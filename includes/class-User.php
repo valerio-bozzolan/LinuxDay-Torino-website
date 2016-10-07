@@ -16,18 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait UserTrait {
-	static function prepareUser(& $t) {
-		if( isset( $t->user_ID ) ) {
-			$t->user_ID = (int) $t->user_ID;
-		}
-		if( isset( $t->user_lovelicense ) ) {
-			$t->user_lovelicense = license( $t->user_lovelicense );
-		}
-		if( isset( $t->user_public ) ) {
-			$t->user_public = (bool) (int) $t->user_public;
-		}
-	}
-
 	function getUserID() {
 		isset( $this->user_ID )
 			|| error_die("Missing user_ID");
@@ -203,7 +191,19 @@ class User {
 	use UserTrait, SessionuserTrait;
 
 	function __construct() {
-		self::prepareUser($this);
+		self::normalize($this);
+	}
+
+	static function normalize(& $t) {
+		if( isset( $t->user_ID ) ) {
+			$t->user_ID = (int) $t->user_ID;
+		}
+		if( isset( $t->user_lovelicense ) ) {
+			$t->user_lovelicense = license( $t->user_lovelicense );
+		}
+		if( isset( $t->user_public ) ) {
+			$t->user_public = (bool) (int) $t->user_public;
+		}
 	}
 
 	static function getUser($uid) {

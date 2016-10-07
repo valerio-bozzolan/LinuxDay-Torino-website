@@ -92,8 +92,8 @@ new Header('conference', [
 					// How to write good code<br />
 					<strong>$software</strong>: 
 					function(<span class="yellow hoverable">play</span>, 
-					<span class="blue lighten-3 hoverable">freedom</span>, 
-					<span class="orange hoverable">friends</span>) { /* RTFM */ }
+					<span class="teal white-text hoverable">freedom</span>, 
+					<span class="purple darken-2 white-text hoverable">friends</span>) { /* RTFM */ }
 				</blockquote>
 			</div>
 			<div class="col s12 m4">
@@ -140,7 +140,7 @@ new Header('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<?php $eventsTable = $conference->getDailyEventsTable() ?>
+		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
 
 		<h3><?php _e("Talk") ?></h3>
 		<p class="flow-text"><?php printf(
@@ -169,15 +169,16 @@ new Header('conference', [
 		<h3><?php _e("Attività") ?></h3>
 		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
 		<div class="row">
-			<?php $box = function($what, $who, $url = null, $prep = null, $img = null) {
+			<?php $box = function($what, $who, $url = null, $prep = null, $img = null, $attendize = null) {
 				if( ! $prep ) {
 					$prep = _("da %s");
 				}
-				$who_prep = sprintf($prep, $who);
 				$who_text = $who;
 				if( $url ) {
-					$who = HTML::a($url, $who, null);
-				} ?>
+					$who = HTML::a($url, $who, null, 'white-text', 'target="_blank"');
+				}
+				$who_prep = sprintf($prep, $who);
+			?>
 
 			<div class="col s12 m6">
 				<div class="card-panel hoverable purple darken-3 white-text">
@@ -189,7 +190,23 @@ new Header('conference', [
 						<div class="col s8"><!-- Start text col -->
 					<?php endif ?>
 
-							<p><span class="flow-text"><?php echo $what ?></span><br /> <?php printf( _("Gestito %s."), $who_prep ) ?></p>
+							<p>
+								<span class="flow-text"><?php echo $what ?></span><br /> 
+								<?php printf( _("Gestito %s."), $who_prep ) ?>
+							</p>
+
+							<?php if($attendize): ?>
+							<p><?php echo HTML::a(
+								$attendize,
+								_("Prenota"),
+								sprintf(
+									_("Prenota la tua partecipazione a %s"),
+									$what
+								),
+								'btn white purple-text waves-effect waves-purple hoverable',
+								'target="_blank"'
+							) ?></p>
+							<?php endif ?>
 
 					<?php if( $img ): ?>
 						</div><!-- End text col -->
@@ -215,18 +232,21 @@ new Header('conference', [
 						'http://coderdojotorino.it',
 						_("CoderDojo Torino 1"),
 						null,
-						'white-text'
+						'white-text',
+						'target="_blank"'
 					),
 					HTML::a(
-						'http://coderdojotorino2.it',
+						'http://www.coderdojotorino2.it',
 						_("CoderDojo Torino 2"),
 						null,
-						'white-text'
+						'white-text',
+						'target="_blank"'
 					)
 				),
 				null,
 				null,
-				'coderdojo.png'
+				'coderdojo.png',
+				'https://attendize.ldto.it/e/3/coderdojo-at-linuxday'
 			);
 			$box(
 				_("Allestimento museale di Retrocomputing."),
