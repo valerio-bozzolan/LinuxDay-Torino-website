@@ -24,13 +24,18 @@ RewriteRule ^icons      - [L]
 # Skip DirectoryIndex (add other files if you have it)
 RewriteRule index.php$ - [L]
 
+# /xml (or /xml/) should point to current year schedule, next year we'll change this to 2017
+# Also: it's an "internal" redirect, users won't see the URL change.
+RewriteRule ^/xml/?$ /2016/schedule.xml [L,PT]
+
 # The user page
-RewriteRule ^(.*)/user/(.*)$ /$1/user.php?uid=$2&conference=$1         [L,QSA]
+RewriteRule ^(.*)/user/(.*)/?$ /$1/user.php?uid=$2&conference=$1         [L,QSA]
 
 # The chapter uid is only for SEO
-RewriteRule ^(.*)/(.*)/(.*)$ /$1/event.php?conference=$1&chapter=$2&uid=$3 [L,QSA]
+RewriteRule ^(.*)/(.*)/(.*)/?$ /$1/event.php?conference=$1&chapter=$2&uid=$3 [L,QSA]
 #               \    \    \-->event_uid
 #                \    \------>chapter_uid
 #                 \---------->conference_uid
 
-RewriteRule ^(.*)/$          /$1/index.php?uid=$1                 [L,QSA]
+# TODO: uid=$1? Is this right?
+RewriteRule ^(.*)/?$          /$1/index.php?uid=$1                 [L,QSA]
