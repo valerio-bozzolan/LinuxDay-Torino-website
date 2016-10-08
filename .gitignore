@@ -12,3 +12,6 @@ schedule.xml
 
 # API configuration file
 /includes/api/config.php
+
+# htaccess.txt is just an example (that doesn't work even though it's formally correct in every way possible)
+/.htaccess
