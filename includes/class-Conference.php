@@ -96,6 +96,8 @@ class Conference {
 					'conference_acronym, '.
 					'conference_description, '.
 					'conference_quote, '.
+					'conference_persons_url, '.
+					'conference_events_url, '.
 					'conference_venue, '.
 					'conference_days, '.
 					'conference_day_change, '.

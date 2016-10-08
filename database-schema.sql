@@ -44,6 +44,8 @@ CREATE TABLE `ldto_conference` (
   `conference_title` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `conference_subtitle` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `conference_acronym` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conference_persons_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab\Pentabarf standard',
+  `conference_events_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab\Pentabarf standard',
   `conference_quote` text COLLATE utf8mb4_unicode_ci,
   `conference_venue` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `conference_city` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

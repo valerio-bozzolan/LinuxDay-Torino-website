@@ -49,6 +49,8 @@ if( ! $conference_row ) {
 		'venue',
 		'days',
 		'day_change',
+		'persons_url',
+		'events_url',
 		'timeslot_duration'
 	];
 
@@ -129,7 +131,6 @@ foreach($events as $event) {
 $keys = [
 	'title',
 	'subtitle',
-    'acronym',
 	'language',
 	'abstract',
 	'description'
