@@ -45,6 +45,7 @@ if( ! $conference_row ) {
 	$conference_fields = [
 		'title',
 		'subtitle',
+        'acronym',
 		'venue',
 		'days',
 		'day_change',
@@ -128,6 +129,7 @@ foreach($events as $event) {
 $keys = [
 	'title',
 	'subtitle',
+    'acronym',
 	'language',
 	'abstract',
 	'description'

@@ -93,6 +93,7 @@ class Conference {
 					'conference_uid, '.
 					'conference_title, '.
 					'conference_subtitle, '.
+					'conference_acronym, '.
 					'conference_description, '.
 					'conference_quote, '.
 					'conference_venue, '.
