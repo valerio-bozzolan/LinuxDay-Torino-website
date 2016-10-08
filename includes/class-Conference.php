@@ -100,8 +100,6 @@ class Conference {
 					'conference_events_url, '.
 					'conference_venue, '.
 					'conference_days, '.
-					'conference_day_change, '.
-					'conference_timeslot_duration, '.
 					'conference_start, '.
 					'conference_end, '.
 					'conference_uid, '.
