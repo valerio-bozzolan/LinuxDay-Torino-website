@@ -18,13 +18,13 @@
 trait ConferenceTrait {
 	function getConferenceID() {
 		isset( $this->conference_ID )
-			|| die("Missing conference_ID");
+			|| error_die("Missing conference_ID");
 		return $this->conference_ID;
 	}
 
 	function getConferenceUID() {
 		isset( $this->conference_uid )
-			|| die("Missing conference_uid");
+			|| error_die("Missing conference_uid");
 		return $this->conference_uid;
 	}
 
@@ -34,6 +34,13 @@ trait ConferenceTrait {
 
 	function getConferenceURL() {
 		return URL . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
+	}
+
+	function forceConferencePermalink() {
+		$url = $this->getConferenceURL();
+		if( $url !== request_uri() ) {
+			http_redirect( $url );
+		}
 	}
 
 	function getConferenceStart($f) {

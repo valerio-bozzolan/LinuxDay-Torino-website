@@ -35,6 +35,11 @@ define('DEBUG', true);
 // NO TRAILING SLASH
 define('ABSPATH', __DIR__ );
 
+// Request URI pathname of the complete website
+// NO TRAILING SLASH
+// E.g. '/linux-day'
+define('ROOT', '');
+
 // User for events
 define('DB_TIMEZONE', 'Europe/Rome');
 

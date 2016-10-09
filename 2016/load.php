@@ -15,17 +15,20 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// Boz-PHP: URL const
-define('ROOT', '/2016');
-
-define('REPO', 'https://github.com/0iras0r/ld2016');
-
 // Boz-PHP: start
 require '../load.php';
 
+// Conference directory in ROOT path
+define('CONFERENCE_DIR', '/2016');
+
+// Conference URI directory
+define('CONFERENCE', ROOT . CONFERENCE_DIR);
+
+define('REPO', 'https://github.com/0iras0r/ld2016');
+
 // Autoload classes
 spl_autoload_register( function($c) {
-	$path = ABSPATH . ROOT . "/includes/class-$c.php";
+	$path = ABSPATH . CONFERENCE_DIR . "/includes/class-$c.php";
 	if( is_file( $path ) ) {
 		require $path;
 	}
@@ -55,7 +58,7 @@ define('LANGUAGE_APPLIED', apply_language( $l ) );
 define('STATIC_FOLD', '/static');
 
 // Boz-PHP: Helpful constants
-define('XXX', ROOT . STATIC_FOLD);
+define('XXX', CONFERENCE . STATIC_FOLD);
 
 define('SITE_NAME',        _("Linux Day Torino 2016") );
 define('SITE_NAME_SHORT',  _("LDTO2016") );
@@ -83,11 +86,10 @@ add_menu_entries( [
 	new MenuEntry('conference',  null, null, 'hidden'),
 	new MenuEntry('404',         null, null, 'hidden'),
 
-	new MenuEntry('home',          URL,                        _("Benvenuti")             ),
-	new MenuEntry('partner',       URL . '/partner.php',       _("Partner")               ),
-	new MenuEntry('credits',       URL . '/credits.php',       _("Crediti")               ),
-	new MenuEntry('api',           URL . '/api',               _("API"),          'hidden')
-
+	new MenuEntry('home',    URL . CONFERENCE . _,               _("Benvenuti")             ),
+	new MenuEntry('partner', URL . CONFERENCE . '/partner.php',  _("Partner")               ),
+	new MenuEntry('credits', URL . CONFERENCE . '/credits.php',  _("Crediti")               ),
+	new MenuEntry('api',     URL . CONFERENCE . '/api',          _("API"),          'hidden')
 ] );
 
 define('ISO_LANG', get_iso_lang() );

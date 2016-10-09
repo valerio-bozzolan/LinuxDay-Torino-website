@@ -37,6 +37,17 @@ inherit_permissions( 'admin',   'user');
 register_permissions('admin',   'edit-users');
 register_permissions('admin',   'edit-events');
 
-define('PERMALINK_CONFERENCE', '/');               // URL . "/{conference_uid}"
-define('PERMALINK_EVENT',      '/%3$s/%1$s');      // URL . "/{$chapter_uid}/{event_uid}"
-define('PERMALINK_USER',       '/user/%s');        // URL . "/{user_uid}"
+// /{conference_uid}/
+defined('PERMALINK_CONFERENCE')
+	|| define('PERMALINK_CONFERENCE', '/%s/');
+
+ // /{conference_uid}/{$chapter_uid}/{event_uid}
+defined('PERMALINK_EVENT')
+	|| define('PERMALINK_EVENT',      '/%1$s/%3$s/%2$s');
+
+// /2016/{user_uid}
+defined('PERMALINK_USER')
+	|| define('PERMALINK_USER',       '/2016/user/%s');
+
+defined('FORCE_PERMALINK')
+	|| define('FORCE_PERMALINK', 1);

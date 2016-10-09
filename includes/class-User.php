@@ -54,6 +54,13 @@ trait UserTrait {
 		return URL . sprintf( PERMALINK_USER, $this->getUserUID() );
 	}
 
+	function forceUserPermalink() {
+		$url = $this->getUserURL();
+		if( $url !== request_uri() ) {
+			http_redirect( $url );
+		}
+	}
+
 	function getUserLink($html_class = null) {
 		$name = $this->getUserFullname();
 

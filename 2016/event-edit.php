@@ -30,7 +30,7 @@ $event	|| error_die("Missing event");
 $event->hasPermissionToEditevent()
 	|| error_die("Can't edit event");
 
-$permalink = ROOT . "/event-edit.php?" . http_build_query( [
+$permalink = CONF_DIR . "/event-edit.php?" . http_build_query( [
 	'uid'        => $event->getEventUID(),
 	'conference' => $event->getConferenceUID()
 ] );

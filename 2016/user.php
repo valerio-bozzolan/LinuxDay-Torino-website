@@ -22,7 +22,8 @@ if( isset( $_GET['uid'] ) ) {
 	$user = User::getUser( $_GET['uid'] );
 }
 
-$user || die_with_404();
+$user           || die_with_404();
+FORCE_PERMALINK && $user->forceUserPermalink();
 
 new Header('user', [
 	'title' => $user->getUserFullname(),
@@ -37,7 +38,7 @@ new Header('user', [
 ?>
 	<?php if( $user->hasPermissionToEditUser() ): ?>
 		<p><?php echo HTML::a(
-			ROOT . "/user-edit.php?uid={$user->getUserUID()}",
+			CONFERENCE . "/user-edit.php?uid={$user->getUserUID()}",
 			_("Modifica") . icon('edit', 'left')
 		) ?></p>
 	<?php endif ?>

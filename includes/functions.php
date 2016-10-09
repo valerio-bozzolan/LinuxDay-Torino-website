@@ -35,3 +35,9 @@ function license($code) {
 
 	return $GLOBALS['LICENSES']->get($code);
 }
+
+
+
+function request_uri() {
+	return URL_protocol() . URL_domain() . ROOT . $_SERVER['REQUEST_URI'];
+}

@@ -31,10 +31,17 @@ trait EventTrait {
 	function getEventURL() {
 		return URL . sprintf(
 			PERMALINK_EVENT,
-			$this->getEventUID(),
 			$this->getConferenceUID(),
+			$this->getEventUID(),
 			$this->getChapterUID()
 		);
+	}
+
+	function forceEventPermalink() {
+		$url = $this->getEventURL();
+		if( $url !== request_uri() ) {
+			http_redirect( $url );
+		}
 	}
 
 	function getEventTitle() {

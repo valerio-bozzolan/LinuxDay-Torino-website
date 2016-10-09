@@ -25,6 +25,9 @@ if( ! empty( $_GET['uid'] ) ) {
 $conference
 	|| die_with_404();
 
+FORCE_PERMALINK
+	&& $conference->forceConferencePermalink();
+
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
 enqueue_js('scrollfire');
@@ -287,7 +290,7 @@ new Header('conference', [
 
 				<!--
 				<p><?php echo HTML::a(
-					ROOT . '/partner.php',
+					CONFERENCE . '/partner.php',
 					_("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(
 						_("Partner %s"),

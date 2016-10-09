@@ -34,7 +34,7 @@ Il sito ha un file `.htaccess`. Assicurarsi di avere il modulo Apache `rewrite` 
 Il sito può rimanere in sola lettura per l'utente Apache:
 
     chown root:www-data -R /var/www/linuxday
-    chmod 750           -R /var/www/linuxday
+    chmod o=            -R /var/www/linuxday
 
 ### Database
 Creare un database e importare `database-schema.sql`.
@@ -48,6 +48,19 @@ Posizionare il framework Boz-PHP:
     bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
 
 Se il framework viene posizionato in un altro posto, modificare oppurtunatamente `load.php`.
+
+### URL
+Per il funzionamento del sito copiare il file di esempio `htaccess.txt` come file `.htaccess`.
+
+Se il sito ha una cartella diversa dalla root, ricordarsi di variare l'`.htaccess` in concordanza:
+
+    # /.htaccess:
+    RewriteBase /ldto2016
+
+Ricordarsi di aggiornare la relativa costante:
+
+    # /load.php:
+    define('ROOT', '/ldto2016');
 
 ### API
 Copiare `includes/api/config-sample.php` in `includes/api/config.php`.

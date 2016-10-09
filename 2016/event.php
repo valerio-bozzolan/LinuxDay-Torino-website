@@ -26,7 +26,8 @@ if( isset( $_GET['uid'], $_GET['conference'], $_GET['chapter'] ) ) {
 	);
 }
 
-$event || die_with_404();
+$event          || die_with_404();
+FORCE_PERMALINK && $event->forceEventPermalink();
 
 $args = [
 	'title' => sprintf(
@@ -47,7 +48,7 @@ new Header('event', $args);
 ?>
 	<?php if( $event->hasPermissionToEditEvent() ): ?>
 	<p><?php echo HTML::a(
-		ROOT . "/event-edit.php?" . http_build_query( [
+		CONFERENCE . "/event-edit.php?" . http_build_query( [
 			'uid'        => $event->getEventUID(),
 			'conference' => $event->getConferenceUID()
 		] ),
