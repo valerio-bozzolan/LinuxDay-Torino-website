@@ -121,7 +121,7 @@ new Header('user', [
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Bio") ?></h3>
-		<p class="flow-text"><?php _esc_html( $user->getUserBio() ) ?></p>
+		<p class="flow-text"><?php $user->printUserBio() ?></p>
 	</div>
 	<?php endif ?>
 	<!-- End user bio -->
@@ -149,15 +149,15 @@ new Header('user', [
 					$event->getEventURL(),
 					sprintf(
 						"<strong>%s</strong>",
-						esc_html( $event->event_title )
+						esc_html( $title = $event->getEventTitle() )
 					),
 					sprintf(
 						_("Vedi %s"),
-						$event->event_title
+						$title
 					)
 				) ?></td>
-				<td><?php _esc_html( $event->track_name ) ?></td>
-				<td><?php _esc_html( $event->room_name ) ?></td>
+				<td><?php _esc_html( $event->getTrackName() ) ?></td>
+				<td><?php _esc_html( $event->getRoomName() ) ?></td>
 				<td><?php printf(
 					_("Ore <b>%s</b> (il %s)"),
 					$event->getEventStart("H:i"),

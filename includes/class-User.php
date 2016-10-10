@@ -95,9 +95,6 @@ trait UserTrait {
 	}
 
 	function getUserImage($s = 256) {
-		property_exists($this, 'user_image')
-			|| error_die("Missing user_image");
-
 		$image = $this->user_image;
 		if( ! $image ) {
 			$image = 'https://www.gravatar.com/avatar/' . md5( $this->getUserEmail() ) . '?s=' . $s;
@@ -106,14 +103,16 @@ trait UserTrait {
 		return $image;
 	}
 
-	function getUserBio() {
-		$field = "user_bio_" . ISO_LANG;
-		return isset( $this->{$field} ) ? $this->{$field} : null;
+	function hasUserBio() {
+		return isset( $this->user_bio );
 	}
 
-	// asd!
-	function hasUserBio() {
-		return nl2br( $this->getUserBio() );
+	function getUserBio() {
+		return _($this->user_bio);
+	}
+
+	function printUserBio() {
+		echo nl2br( $this->getUserBio() );
 	}
 
 	function isUserSocial() {

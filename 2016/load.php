@@ -48,7 +48,7 @@ define('GETTEXT_DEFAULT_ENCODE', 'UTF-8');
 register_language('en_US', ['en', 'en-us', 'en-en'] );
 register_language('it_IT', ['it', 'it-it'] );
 
-$l = 'it';
+$l = null;
 if( isset( $_REQUEST['l'] ) ) {
 	$l = $_REQUEST['l'];
 }

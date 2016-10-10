@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Construct a database chapter
+# Linux Day 2016 - Construct a database room
 # Copyright (C) 2016 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,48 +15,48 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-trait ChapterTrait {
-	function getChapterID() {
-		isset( $this->chapter_ID )
-			|| error_die("Missing chapter_ID");
+trait RoomTrait {
+	function getRoomID() {
+		isset( $this->room_ID )
+			|| error_die("Missing room_ID");
 
 		return $this->room_ID;
 	}
 
-	function getChapterUID() {
-		isset( $this->chapter_uid )
-			|| error_die("Missing chapter_uid");
+	function getRoomUID() {
+		isset( $this->room_uid )
+			|| error_die("Missing room_uid");
 
-		return $this->chapter_uid;
+		return $this->room_uid;
 	}
 
-	function getChapterName() {
-		return _( $this->chapter_name );
+	function getRoomName() {
+		return _( $this->room_name );
 	}
 }
 
-class Chapter {
-	use ChapterTrait;
+class Room {
+	use RoomTrait;
 
 	function __construct() {
 		self::normalize($this);
 	}
 
 	static function normalize(& $t) {
-		if( isset( $t->chapter_ID ) ) {
-			$t->chapter_ID = (int) $t->chapter_ID;
+		if( isset( $t->room_ID ) ) {
+			$t->room_ID = (int) $t->room_ID;
 		}
 	}
 
-	static function getChapter($uid) {
+	static function getRoom($uid) {
 		global $T;
 
 		return query_row(
 			sprintf(
-				"SELECT * FROM {$T('chapter')} WHERE chapter_uid = '%s'",
+				"SELECT * FROM {$T('room')} WHERE room_uid = '%s'",
 				esc_sql( luser_input( $uid, 32) )
 			),
-			'Chapter'
+			'Room'
 		);
 	}
 }

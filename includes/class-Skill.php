@@ -114,7 +114,9 @@ class Skill {
 				'user_skill.skill_ID = skill.skill_ID ' .
 			'ORDER BY skill_score < 0, ABS(skill_score)'
 
-			, $user_ID
+			,
+
+			$user_ID
 		);
 	}
 }

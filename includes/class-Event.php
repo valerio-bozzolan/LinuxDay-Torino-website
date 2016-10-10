@@ -19,12 +19,14 @@ trait EventTrait {
 	function getEventID() {
 		isset( $this->event_ID )
 			|| error_die("Missing event_ID");
+
 		return $this->event_ID;
 	}
 
 	function getEventUID() {
 		isset( $this->event_uid )
 			|| error_die("Missing event_uid");
+
 		return $this->event_uid;
 	}
 
@@ -48,7 +50,7 @@ trait EventTrait {
 		isset( $this->event_title )
 			|| error_die("Missing event_title");
 
-		return $this->event_title;
+		return _( $this->event_title );
 	}
 
 	/**
@@ -82,7 +84,11 @@ trait EventTrait {
 	}
 
 	function getEventDescription() {
-		return $this->event_description;
+		return _( $this->event_description );
+	}
+
+	function printEventDescription() {
+		echo nl2br( $this->getEventDescription() );
 	}
 
 	function queryEventUsers($fields = null) {
@@ -106,15 +112,19 @@ trait EventTrait {
 class_exists('User');
 class_exists('Conference');
 class_exists('Chapter');
+class_exists('Room');
+class_exists('Track');
 
 class Event {
-	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait;
+	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait, RoomTrait, TrackTrait;
 
 	function __construct() {
 		self::normalize($this);
 		User::normalize($this);
 		Conference::normalize($this);
 		Chapter::normalize($this);
+		Room::normalize($this);
+		Track::normalize($this);
 	}
 
 	static function normalize(& $t) {
