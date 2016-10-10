@@ -44,17 +44,14 @@ CREATE TABLE `ldto_conference` (
   `conference_title` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `conference_subtitle` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `conference_acronym` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `conference_persons_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab\Pentabarf standard',
-  `conference_events_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab\Pentabarf standard',
+  `conference_persons_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab/Pentabarf standard',
+  `conference_events_url` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Not part of frab/Pentabarf standard',
   `conference_quote` text COLLATE utf8mb4_unicode_ci,
-  `conference_venue` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `conference_city` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conference_city` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Has to be removed',
   `conference_description` text COLLATE utf8mb4_unicode_ci,
   `conference_start` datetime NOT NULL,
   `conference_end` datetime NOT NULL,
   `conference_days` int(11) NOT NULL,
-  `conference_day_change` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Unused and completely useless',
-  `conference_timeslot_duration` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Unused and completely useless',
   `location_ID` int(10) unsigned NOT NULL,
   PRIMARY KEY (`conference_ID`),
   UNIQUE KEY `conference_uid` (`conference_uid`),
@@ -205,8 +202,8 @@ DROP TABLE IF EXISTS `ldto_user`;
 CREATE TABLE `ldto_user` (
   `user_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_uid` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_role` enum('administrator','user') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
-  `user_public` tinyint(1) NOT NULL,
+  `user_role` enum('admin','user') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
+  `user_public` tinyint(1) NOT NULL DEFAULT '1',
   `user_active` tinyint(4) NOT NULL DEFAULT '0',
   `user_name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_surname` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -215,7 +212,7 @@ CREATE TABLE `ldto_user` (
   `user_password` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_site` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_bio_it` text COLLATE utf8mb4_unicode_ci,
+  `user_bio` text COLLATE utf8mb4_unicode_ci,
   `user_bio_en` text COLLATE utf8mb4_unicode_ci,
   `user_rss` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_twtr` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -257,4 +254,4 @@ CREATE TABLE `ldto_user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-04  2:37:46
+-- Dump completed on 2016-10-11  0:20:24

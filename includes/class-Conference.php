@@ -105,7 +105,6 @@ class Conference {
 					'conference_quote, '.
 					'conference_persons_url, '.
 					'conference_events_url, '.
-					'conference_venue, '.
 					'conference_days, '.
 					'conference_start, '.
 					'conference_end, '.

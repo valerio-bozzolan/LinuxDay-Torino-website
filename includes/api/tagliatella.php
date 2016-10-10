@@ -45,8 +45,7 @@ if( ! $conference_row ) {
 	$conference_fields = [
 		'title',
 		'subtitle',
-        'acronym',
-		'venue',
+	        'acronym',
 		'days',
 		'day_change',
 		'persons_url',
@@ -61,6 +60,7 @@ if( ! $conference_row ) {
 	addChild($xml, $conference, 'start', $conference_row->getConferenceStart('Y-m-d H:i:s') );
 	addChild($xml, $conference, 'end',   $conference_row->getConferenceEnd('Y-m-d H:i:s') );
 	addChild($xml, $conference, 'city',  $conference_row->getLocationAddress() );
+	addChild($xml, $conference, 'venue',  $conference_row->getLocationNote() );
 }
 
 $events = query_results(
