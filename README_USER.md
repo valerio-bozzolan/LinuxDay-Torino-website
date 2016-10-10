@@ -18,15 +18,15 @@ Per ogni relatore del talk, specificare:
 * Indirizzo e-mail
 * Sito web personale (business-card) e/o blog personale
 * Licenza di software libero preferita
-* Breve biofrafia in Italiano e in Inglese
+* Breve biografia in Italiano e in Inglese
 * Vari social (GitHub, Twitter, Facebook, LinkedIn, Google+, ..)
 
-I relatori possono registrarsi in [https://it.gravatar.com](Gravatar.com) per cambiare l'immagine del proprio profilo sul sito. Alternativamente, per evitare di registrarsi in Gravatar, fornire un'immagine (possibilmente almeno 128x128) che sarà caricata sul sito.
+I relatori possono registrarsi in [https://it.gravatar.com](Gravatar.com) per cambiare l'immagine del proprio profilo sul sito. Alternativamente, per evitare di registrarsi in Gravatar, fornire un'immagine (possibilmente almeno 256x256px) che sarà caricata sul sito.
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
 
 ## Materiale
-I RELATORI NON DEVONO CREARE MATERIALE CONTENENTE VIOLAZIONI DI COPYRIGHT DATO CHE SARANNO RESE PUBBLICHE A NOME DEL Linux Day Torino.
+I RELATORI NON DEVONO CREARE MATERIALE CONTENENTE VIOLAZIONI DI COPYRIGHT DATO CHE SARÀ RESO PUBBLICO A NOME DEL Linux Day Torino.
 
 I relatori sono fortemente invitati ad utilizzare una delle seguenti licenze culturali libere per il proprio materiale, qui elencate in ordine di preferenza:
 
@@ -37,14 +37,13 @@ I relatori sono fortemente invitati ad utilizzare una delle seguenti licenze cul
 
 All'interno del materiale non dimenticarsi di specificare:
 
-* Riferimenti al Linux Day Torino
+* Riferimenti al Linux Day Torino 2016
 * Nome e cognome dei relatori e contatti
 * Licenza scelta
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
 
 ## Strumenti utilizzati
-SI INVITANO I RELATORI A **NON PROMUOVERE SOFTWARE NON-LIBERO** DURANTE IL TALK.
+SI INVITANO I RELATORI A **NON PROMUOVERE SOFTWARE NON-LIBERO** DURANTE IL TALK, IN QUALSIASI MANIERA.
 
 È ad esempio inaccettabile che i computer utilizzati per le slide abbiano sistemi operativi non liberi.
-
