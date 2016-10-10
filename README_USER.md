@@ -15,7 +15,7 @@ Per ogni relatore del talk, specificare:
 * Nome\*
 * Cognome\*
 * Username amichevole\* (e.g. "boz")
-* Indirizzo e-mail
+* Indirizzo e-mail (non sarà mostrato sul sito)
 * Sito web personale (business-card) e/o blog personale
 * Licenza di software libero preferita
 * Breve biografia in Italiano e in Inglese
