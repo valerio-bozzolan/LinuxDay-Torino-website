@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-10T23:36:24+02:00
+# Last update: 2016-10-11T22:27:54+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -308,8 +308,7 @@ _("Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrent
 Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola)");
 
 // user[massimo]::user_bio
-_("Architetto di Sistemi presso Progetto
-Archivio SRL e Dicobit.");
+_("Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.");
 
 // user[elia]::user_bio
 _("Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.");

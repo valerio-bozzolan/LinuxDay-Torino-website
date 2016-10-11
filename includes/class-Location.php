@@ -24,7 +24,7 @@ trait LocationTrait {
 		isset( $this->location_address )
 			|| error_die("Missing location_address");
 
-		return $this->location_address;
+		return _( $this->location_address );
 	}
 
 	function getLocationNote() {
