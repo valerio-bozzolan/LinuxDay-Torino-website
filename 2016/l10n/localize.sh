@@ -33,7 +33,7 @@ rtfm() {
 	echo Usage:
 	echo $1 SITE_ROOT
 	echo Example:
-	echo $1 /var/www/mysite
+	echo $1 ./2016
 }
 
 path="$1"

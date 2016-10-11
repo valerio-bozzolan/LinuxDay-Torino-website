@@ -43,7 +43,7 @@ define('BACK', 'purple darken-4');
 // Boz-PHP: GNU Gettext configuration
 define('GETTEXT_DOMAIN',         'linuxday');
 define('GETTEXT_DIRECTORY',      'l10n');
-define('GETTEXT_DEFAULT_ENCODE', 'UTF-8');
+define('GETTEXT_DEFAULT_ENCODE', 'utf8');
 
 register_language('en_US', ['en', 'en-us', 'en-en'] );
 register_language('it_IT', ['it', 'it-it'] );
