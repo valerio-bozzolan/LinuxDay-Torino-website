@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-11T22:42:35+02:00
+# Last update: 2016-10-11T22:46:17+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -54,7 +54,7 @@ _("La tecnologia LoRa e le sue applicazioni IoT");
 _("Rinascimento 2.0");
 
 // event[talk-base-2]::event_description
-_("Non e' una lezione di storia... o forse si'.Stiamo scrivendo la storia che leggeranno i nostri pronipoti.Siamo spesso troppo presi dai gadget tecnologici per accorgerci che e' in corso unarivoluzione, stiamo entrando in una nuova era.");
+_("Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando in una nuova era.");
 
 // event[talk-base-3]::event_title
 _("Utilizzi di GNU/Linux");
