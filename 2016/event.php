@@ -87,7 +87,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Descrizione") ?></h3>
-		<p class="flow-text"><?php echo $event->getEventDescription() ?></p>
+		<p class="flow-text"><?php $event->printEventDescription() ?></p>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->

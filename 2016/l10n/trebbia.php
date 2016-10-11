@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-11T22:27:54+02:00
+# Last update: 2016-10-11T22:42:35+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -45,9 +45,7 @@ _("Un viaggio nel magico mondo della programmazione con consigli pratici e tecni
 _("Non bisogna aver paura di IPv6");
 
 // event[talk-sys-1]::event_description
-_("Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle
-potenzialità, le differenze da IPv4 e l'implementazione in ambiente
-GNU/Linux.");
+_("Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/Linux.");
 
 // event[talk-misc-1]::event_title
 _("La tecnologia LoRa e le sue applicazioni IoT");
