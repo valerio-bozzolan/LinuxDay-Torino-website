@@ -100,7 +100,7 @@ class DailyEventsTable {
 				<?php foreach($this->getTracks() as $track): ?>
 				<td><?php
 					if( isset( $this->events[$h][$track->track_uid] ) ) {
-						$event_title = $this->events[$h][$track->track_uid]->event_title;
+						$event_title = $this->events[$h][$track->track_uid]->getEventTitle();
 
 						$title = HTML::a(
 							$this->events[$h][$track->track_uid]->getEventURL(),

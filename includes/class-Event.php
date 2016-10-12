@@ -47,9 +47,6 @@ trait EventTrait {
 	}
 
 	function getEventTitle() {
-		isset( $this->event_title )
-			|| error_die("Missing event_title");
-
 		return _( $this->event_title );
 	}
 
