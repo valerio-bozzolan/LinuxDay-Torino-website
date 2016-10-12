@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-11T22:46:17+02:00
+# Last update: 2016-10-12T02:09:14+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -72,12 +72,10 @@ _("Yocto Project, un generatore automatico di distribuzioni linux embedded");
 _("Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po' di ordine nel caos di sviluppo di Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di sviluppo Linux embedded completo con gli strumenti, i metadati e la documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette a disposizione sono potenti e facilmente generabili (compresi gli ambienti di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e permettono di realizzare e portare avanti progetti, senza causare la perdita delle ottimizzazioni e degli investimenti effettuati nel corso del fase di prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia da parte della comunità open source permettendo agli utenti di concentrarsi sulle caratteristiche e lo sviluppo del proprio prodotto.");
 
 // event[talk-dev-3]::event_title
-_("Dieci anni dietro a FidoCadJ
-");
+_("Dieci anni dietro a FidoCadJ");
 
 // event[talk-dev-3]::event_description
-_("Dietro le quinte di un progetto open source: un editor per l'elettronica (e non solo), usato in diversi forum italiani.
-");
+_("Dietro le quinte di un progetto open source: un editor per l'elettronica (e non solo), usato in diversi forum italiani.");
 
 // event[talk-dev-4]::event_title
 _("Un bot di Telegram con Python");
