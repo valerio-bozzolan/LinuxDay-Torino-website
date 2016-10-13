@@ -1,5 +1,7 @@
 # LD2016
-Materiale per il Linux Day Torino 2016 (Work In Progress)
+![Linux Day Torino 2016](https://raw.githubusercontent.com/0iras0r/ld2016/master/2016/static/linuxday-64.png)
+
+Materiale per il Linux Day Torino 2016.
 
 ## TO-DO
 * Sito dell'evento (OK!)
