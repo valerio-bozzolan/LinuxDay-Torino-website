@@ -20,23 +20,11 @@ function datetime2php(& $s) {
 	$s->setTimezone( new DateTimeZone( DB_TIMEZONE ) );
 }
 
-function get_iso_lang() {
-	$l = [
-		'en_US.UTF-8' => 'en'
-	];
-	if( isset( $l[ LANGUAGE_APPLIED ] ) ) {
-		return $l[ LANGUAGE_APPLIED ];
-	}
-	return 'it';
-}
-
 function license($code) {
 	expect('LICENSES');
 
 	return $GLOBALS['LICENSES']->get($code);
 }
-
-
 
 function request_uri() {
 	return URL_protocol() . URL_domain() . ROOT . $_SERVER['REQUEST_URI'];

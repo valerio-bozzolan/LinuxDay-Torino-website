@@ -70,7 +70,7 @@ class Header {
 		// Close header - End
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo ISO_LANG ?>">
+<html lang="<?php echo latest_language()->getISO() ?>">
 <head>
 	<title><?php echo $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
