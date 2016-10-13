@@ -1,12 +1,12 @@
-# ld2016
+# LD2016
 Materiale per il Linux Day Torino 2016 (Work In Progress)
 
-TO-DO:
-* Sito dell'evento
-* Gestione prenotazioni CoderDojo
+## TO-DO
+* Sito dell'evento (OK!)
+* Gestione prenotazioni CoderDojo (OK!)
 * Questionario sull'evento
 * Materiale informativo per ruoli interni
-* Registrazione talk
+* Registrazione talk (SEMBRA-OK!)
 
 ## Installazione sito web
 Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di ogni Linux Day Torino, centralizzandone le informazioni.
@@ -14,32 +14,42 @@ Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di og
 È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework Boz-PHP.
 
 ### Preparazione
-Vengono utilizzati jQuery e LeafLet e si assume che siano installati attraverso il proprio gestore di pacchetti.
-
-Per un'installazione della maggior parte delle componenti su un sistema Debian:
+Su un sistema Debian `stable`:
 
     apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 php-gettext libjs-jquery libjs-leaflet
+    a2enmod rewrite
+    service apache2 reload
 
 ### File
-Clonare i file di questo progetto direttamente nella directory del proprio `VirtualHost` di Apache.
+Clonare i file di questo progetto direttamente nella `DocumentRoot` del proprio `VirtualHost` di Apache.
 
     cd /var/www/linuxday
     git clone [questo repo] .
 
-Il sito ha un file `.htaccess`. Assicurarsi di avere il modulo Apache `rewrite` abilitato:
+In seguito copiare il file `htaccess.txt` in `.htaccess`.
 
-    a2enmod rewrite
-    service apache2 reload
-
-Il sito può rimanere in sola lettura per l'utente Apache:
+Il sito può rimanere tranquillamente in sola lettura per l'utente Apache:
 
     chown root:www-data -R /var/www/linuxday
     chmod o=            -R /var/www/linuxday
 
+### URL
+Se il sito ha una cartella diversa dalla root, ricordarsi di variare l'`.htaccess` in concordanza:
+
+    # /.htaccess:
+    RewriteBase /ldto2016
+
+E ricordarsi di aggiornare la relativa costante:
+
+    # /load.php:
+    define('ROOT', '/ldto2016');
+
 ### Database
 Creare un database e importare `database-schema.sql`.
 
-Copiare il file di configurazione di default `load-sample.php` in `load.php` e inserire in quest'ultimo le credenziali del database.
+Creare il file `load.php` (vedere l'esempio `load-sample.php`) inserendovi le credenziali del database.
+
+Si può applicare un prefisso alle tabelle, specificandolo nella variabile `$prefix` del file `load.php`.
 
 ### Framework
 Posizionare il framework Boz-PHP:
@@ -49,21 +59,8 @@ Posizionare il framework Boz-PHP:
 
 Se il framework viene posizionato in un altro posto, modificare oppurtunatamente `load.php`.
 
-### URL
-Per il funzionamento del sito copiare il file di esempio `htaccess.txt` come file `.htaccess`.
-
-Se il sito ha una cartella diversa dalla root, ricordarsi di variare l'`.htaccess` in concordanza:
-
-    # /.htaccess:
-    RewriteBase /ldto2016
-
-Ricordarsi di aggiornare la relativa costante:
-
-    # /load.php:
-    define('ROOT', '/ldto2016');
-
 ### API
-Copiare `includes/api/config-sample.php` in `includes/api/config.php`.
+Creare il file `includes/api/config.php` copiandolo da `includes/api/config-sample.php`.
 
 Le API possono generare il file `includes/api/schedule.xml` che contiene l'elenco dei talk/eventi in formato XML (che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
 
@@ -71,13 +68,18 @@ Il file viene generato ogni volta che si esegue `includes/api/tagliatella.php`. 
 È possibile far restituire l'XML direttamente da `includes/api/tagliatella.php` modificando le impostazioni in `includes/api/config.php`.
 
 ## Multilingua
-Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). I file di lingua sono in `*/l10n/`.
+Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`) in grado di tradurre le stringhe che vengono fatte passare attraverso le funzioni `_()` ed `_e()` se la relativa traduzione è presente in un file `.po`.
 
-I file di localizzazione `.pot` e `.po` contengono le stringhe contenute nel codice sorgente dentro le funzioni `_()` ed `_e()`. I file `.mo` sono il compilato dei relativi file `.po`. Tutti questi file vengono aggiornati lanciando il comando:
+I file `.po` sono situati nella directory `2016/l10n/` e contengono anche le stringhe da tradurre provenienti dal database. Per aggiornare le stringhe provenienti dal database:
 
-    ./$ANNO/l10n/localize.sh .
+    cd ./2016/l10n/
+    php ./mieti.php > ./trebbia.php
 
-È meglio lanciare il comando due volte. Questo fa sì che la prima volta si aggiornino i file `.pot` e `.po`. La seconda volta si è sicuri che i file `.mo` siano compilati dall'ultima versione dei file `.po`.
+In seguito, lanciare questo script due volte:
+
+    ./2016/l10n/localize.sh .
+
+(La prima volta si sarà sicuri di aver creato un template (`.pot`) contenente l'ultima versione di tutte le stringhe traducibili del codice sorgente; la seconda volta si sarà sicuri di aver creato dei file `.po` relativi proprio all'ultima versione del template, e si otterranno i relativi file `.mo` aggiornati e il sito sarà multilingua.)
 
 ### Cambiare lingua
 Il sito controlla la lingua accettata dal browser web (l'header `Accept-Language`). Eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=en` (`en`, `it`, ecc.) scavalcano questa preferenza. La lingua italiana è predefinita.
