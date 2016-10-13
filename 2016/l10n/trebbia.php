@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-12T02:09:14+02:00
+# Last update: 2016-10-13T16:45:25+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -27,19 +27,14 @@ _("LDTO15");
 _("Didattica del coding");
 
 // event[talk-base-1]::event_description
-_("Le basi del coding sono fondamentali, come leggere e scrivere. 
-
-Quali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?
-
-
-");
+_("Le basi del coding sono fondamentali, come leggere e scrivere.
+Quali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?");
 
 // event[talk-dev-1]::event_title
 _("Introduzione alla programmazione con JavaScript");
 
 // event[talk-dev-1]::event_description
-_("Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.
-");
+_("Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.");
 
 // event[talk-sys-1]::event_title
 _("Non bisogna aver paura di IPv6");
@@ -100,8 +95,7 @@ _("Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l'elabora
 _("InfoSec. Istruzioni per l'uso.");
 
 // event[talk-sys-3]::event_description
-_("Applicativi, consigli pratici e buone norme di comportamento
-per mantenere al sicuro la propria “vita digitale”.");
+_("Applicativi, consigli pratici e buone norme di comportamento per mantenere al sicuro la propria \"vita digitale\".");
 
 // event[talk-misc-2]::event_title
 _("Sostenibilità e Open Culture all'Università");
@@ -269,11 +263,8 @@ _("Qualcuno ha detto... software libero?");
 
 // user[oirasor]::user_bio
 _("Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).
-
 Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.
-
 Mi è capitato di organizzare questo Linux Day. =P
-
 Suonatore di Floppy, appassionato di Dama e Retrocomputing.");
 
 // user[dario]::user_bio
@@ -284,20 +275,19 @@ Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010."
 // user[renzo]::user_bio
 _("Ricercatore, Maker, Insegnante, Sviluppatore...
 Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.
-In realta' vuole salvare il mondo, ma non ditelo a nessuno.");
+In realtà vuole salvare il mondo, ma non ditelo a nessuno.");
 
 // user[luigi.maselli]::user_bio
 _("Fondatore corso-javascript.it e TorinoJS, software developer freelance.");
 
 // user[marco.cavallini]::user_bio
 _("Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.
-E' membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.");
+È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.");
 
 // user[davide]::user_bio
 _("Davide è viaggiatore transalpino, programmatore della domenica (se non fa bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano gli amplificatori operazionali, in altre occasioni canta a squarciagola con altre persone. Appassionato di vecchi computer e di elettronica analogica, si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. Coordinatore del progetto open source FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due posti, soprattutto se a motore centrale.
 
-Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d'onda dielettrica.
-");
+Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d'onda dielettrica.");
 
 // user[francesco]::user_bio
 _("Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (https://geekcookie.github.com e www.pilloledib.it) almeno una volta al mese.
@@ -310,16 +300,13 @@ _("Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.");
 _("Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.");
 
 // user[davide.isoardi]::user_bio
-_("Big Data System Architect e sysadmin");
+_("Big Data System Architect e sysadmin.");
 
 // user[davide.vergari]::user_bio
 _("Big Data System Architect e sysadmin");
 
 // user[davide.mainardi]::user_bio
-_("Ingegnere informatico, Open Source enthusiast, focalizzato su
-privacy e sicurezza informatica, full stack Java developer,
-Consigliere della Fondazione dell'Ordine degli Ingegneri della
-Provincia di Torino.");
+_("Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell'Ordine degli Ingegneri della Provincia di Torino.");
 
 // user[alessio]::user_bio
 _("Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.");

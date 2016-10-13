@@ -87,17 +87,25 @@ function spawn_gnu($from, $fields, $identifier = null) {
 	if($identifier === null) {
 		$identifier = "{$from}_ID";
 	}
-	$fields[] = $identifier;
 
+	// Stripping evil carriage returns from the database
+	$sql = [];
+	foreach($fields as $field) {
+		$sql[] = sprintf(
+			'`%1$s` = REPLACE(`%1$s`, \'\r\n\', \'\n\')',
+			$field
+		);
+	}
+	query("UPDATE {$GLOBALS[T]($from)} SET " . implode(', ', $sql) );
+
+	$select = $fields;
+	$select[] = $identifier;
 	$q = new DynamicQuery();
-	$elements = $q->useTable($from)->selectField($fields)->query();
+	$elements = $q->useTable($from)->selectField($select)->query();
 
-	if( ! $elements ) {
+	if( ! $elements->num_rows ) {
 		return;
 	}
-
-	// Skip identifier
-	array_pop($fields);
 
 	while( $row = $elements->fetch_array() ) {
 		$uid = $row[$identifier];
@@ -107,14 +115,13 @@ function spawn_gnu($from, $fields, $identifier = null) {
 
 function spawn_linux($from, $uid, $obj, $properties) {
 	foreach($properties as $property) {
-		$value = $obj[$property];
+		$value = $obj[ $property ];
 
 		if( empty($value) ) {
 			continue;
 		}
 
 		echo "\n\n";
-
 		printf(
 			"// %s[%s]::%s\n",
 			$from,
@@ -123,7 +130,6 @@ function spawn_linux($from, $uid, $obj, $properties) {
 		);
 
 		$value = addcslashes($value, '"\\');
-		$value = str_replace("\r", '', $value);
 
 		printf('_("%s");', $value);
 	}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-12 02:10+0200\n"
+"POT-Creation-Date: 2016-10-13 16:46+0200\n"
 "PO-Revision-Date: 2016-10-11 21:27+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -237,7 +237,7 @@ msgstr "https://en.wikipedia.org/wiki/GNU"
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/index.php:83 2016/l10n/trebbia.php:142
+#: 2016/index.php:83 2016/l10n/trebbia.php:136
 msgid "Dipartimento di Informatica"
 msgstr "Computer Science department"
 
@@ -341,7 +341,7 @@ msgstr "Restarters Torino association"
 msgid "dall'%s"
 msgstr "by %s"
 
-#: 2016/index.php:231 2016/l10n/trebbia.php:131
+#: 2016/index.php:231 2016/l10n/trebbia.php:125
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr "Coding lab for children themed Linux Day."
 
@@ -678,7 +678,7 @@ msgstr "Linux Day Torino Blog"
 msgid "Edizioni Passate"
 msgstr "Past editions"
 
-#: 2016/includes/class-Footer.php:103 2016/l10n/trebbia.php:151
+#: 2016/includes/class-Footer.php:103 2016/l10n/trebbia.php:145
 msgid "Dipartimento di Biotecnologie"
 msgstr "Biotechnology department"
 
@@ -748,37 +748,31 @@ msgstr "Coding didactics"
 
 #: 2016/l10n/trebbia.php:30
 msgid ""
-"Le basi del coding sono fondamentali, come leggere e scrivere. \n"
-"\n"
+"Le basi del coding sono fondamentali, come leggere e scrivere.\n"
 "Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
-"genitori?\n"
-"\n"
-"\n"
+"genitori?"
 msgstr ""
 "Coding basics are fundamentals, like reading and writing. \n"
-"\n"
-"Which didactics tools and methods do teachers and parents have?\n"
-"\n"
-"\n"
+"Which didactics tools and methods do teachers and parents have?"
 
-#: 2016/l10n/trebbia.php:38
+#: 2016/l10n/trebbia.php:34
 msgid "Introduzione alla programmazione con JavaScript"
 msgstr "Introduction to JavaScript programming"
 
-#: 2016/l10n/trebbia.php:41
+#: 2016/l10n/trebbia.php:37
 msgid ""
 "Un viaggio nel magico mondo della programmazione con consigli pratici e "
-"tecnici per chi aspira a creare software e non solo subirlo.\n"
+"tecnici per chi aspira a creare software e non solo subirlo."
 msgstr ""
 "A journey through the magical world of programming with practical and "
 "technical recommendation to whoever aspires to create software and not just "
-"having it imposed on them.\n"
+"having it imposed on them."
 
-#: 2016/l10n/trebbia.php:45
+#: 2016/l10n/trebbia.php:40
 msgid "Non bisogna aver paura di IPv6"
 msgstr "Do not fear IPv6"
 
-#: 2016/l10n/trebbia.php:48
+#: 2016/l10n/trebbia.php:43
 msgid ""
 "Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
 "potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
@@ -788,15 +782,15 @@ msgstr ""
 "its potentiality, its difference with IPv4 and its implementation in GNU/"
 "Linux environments."
 
-#: 2016/l10n/trebbia.php:51
+#: 2016/l10n/trebbia.php:46
 msgid "La tecnologia LoRa e le sue applicazioni IoT"
 msgstr "LoRa technology and its implementation to IoT"
 
-#: 2016/l10n/trebbia.php:54
+#: 2016/l10n/trebbia.php:49
 msgid "Rinascimento 2.0"
 msgstr "Renaissance 2.0"
 
-#: 2016/l10n/trebbia.php:57
+#: 2016/l10n/trebbia.php:52
 msgid ""
 "Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
 "leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
@@ -807,11 +801,11 @@ msgstr ""
 "our grandchildren will study. We are often to taken by technological gadgets "
 "to realize that a revolution is taking place: we are entering a new era. "
 
-#: 2016/l10n/trebbia.php:60
+#: 2016/l10n/trebbia.php:55
 msgid "Utilizzi di GNU/Linux"
 msgstr "GNU/Linux uses"
 
-#: 2016/l10n/trebbia.php:63
+#: 2016/l10n/trebbia.php:58
 msgid ""
 "Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
 "del software libero della vita di tutti i giorni. Si suggerisce di invitare "
@@ -821,16 +815,16 @@ msgstr ""
 "Freedom Software uses in every day life. It's recommended to bring with you "
 "your typical skeptic friend and/or the fanboy (╯°□°)╯."
 
-#: 2016/l10n/trebbia.php:66
+#: 2016/l10n/trebbia.php:61
 msgid "Linux al Comune di Torino"
 msgstr "Linux to Municipality of Turin"
 
-#: 2016/l10n/trebbia.php:69
+#: 2016/l10n/trebbia.php:64
 msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
 msgstr ""
 "Yocto Project, an automatic generator of embedded Linux distributions. "
 
-#: 2016/l10n/trebbia.php:72
+#: 2016/l10n/trebbia.php:67
 msgid ""
 "Lo Yocto Project è un progetto di collaborazione open source che fornisce "
 "modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
@@ -866,11 +860,11 @@ msgstr ""
 "letting users concentrate on the characteristics and development of their "
 "product."
 
-#: 2016/l10n/trebbia.php:75
+#: 2016/l10n/trebbia.php:70
 msgid "Dieci anni dietro a FidoCadJ"
 msgstr "Ten years put behind FidoCadj"
 
-#: 2016/l10n/trebbia.php:78
+#: 2016/l10n/trebbia.php:73
 msgid ""
 "Dietro le quinte di un progetto open source: un editor per l'elettronica (e "
 "non solo), usato in diversi forum italiani."
@@ -878,11 +872,11 @@ msgstr ""
 "Behind the scenes of an open-source project: an editor for electronics (and "
 "not only), used in different Italian forums."
 
-#: 2016/l10n/trebbia.php:81
+#: 2016/l10n/trebbia.php:76
 msgid "Un bot di Telegram con Python"
 msgstr "A Telegram bot with Python"
 
-#: 2016/l10n/trebbia.php:84
+#: 2016/l10n/trebbia.php:79
 msgid ""
 "Poche righe di codice, un Raspberry Pi ed ecco un bot Telegram da usare a "
 "nostro piacimento."
@@ -890,12 +884,12 @@ msgstr ""
 "Few code lines, a Raspberry Pi and here we have a Telegram bot to use how we "
 "please. "
 
-#: 2016/l10n/trebbia.php:87
+#: 2016/l10n/trebbia.php:82
 msgid "Docker: distribuiamo applicazioni"
 msgstr "Docker: we supply applications"
 
 # Come si traduce sistemi distribuiti? ~Liv
-#: 2016/l10n/trebbia.php:90
+#: 2016/l10n/trebbia.php:85
 msgid ""
 "Una introduzione ai sistemi distribuiti tramite la gestione dei container "
 "realizzati con Docker.\n"
@@ -907,11 +901,11 @@ msgstr ""
 "An answer to: what do we need Docker for? How to install it? How do I manage "
 "it?"
 
-#: 2016/l10n/trebbia.php:94
+#: 2016/l10n/trebbia.php:89
 msgid "Hadoop - BigData in streaming"
 msgstr "Hadoop - BigData in streaming"
 
-#: 2016/l10n/trebbia.php:97
+#: 2016/l10n/trebbia.php:92
 msgid ""
 "Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
 "l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
@@ -919,43 +913,43 @@ msgstr ""
 "What are BigData and where do they go? Case use of a cluster Hadoop to "
 "elaborate while streaming with Apache NiFi, Kafka and Solr."
 
-#: 2016/l10n/trebbia.php:100
+#: 2016/l10n/trebbia.php:95
 msgid "InfoSec. Istruzioni per l'uso."
 msgstr "InfoSec. How to use."
 
-#: 2016/l10n/trebbia.php:103
+#: 2016/l10n/trebbia.php:98
 msgid ""
-"Applicativi, consigli pratici e buone norme di comportamento\n"
-"per mantenere al sicuro la propria “vita digitale”."
+"Applicativi, consigli pratici e buone norme di comportamento per mantenere "
+"al sicuro la propria \"vita digitale\"."
 msgstr ""
-"Application, practical advice and good behaviour rules \n"
-"to keep safe your \"digital life\""
+"Application, practical advice and good behaviour rules to keep safe your "
+"\"digital life\"."
 
-#: 2016/l10n/trebbia.php:107
+#: 2016/l10n/trebbia.php:101
 msgid "Sostenibilità e Open Culture all'Università"
 msgstr "Sustainability and Open Culture at University"
 
-#: 2016/l10n/trebbia.php:110
+#: 2016/l10n/trebbia.php:104
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: 2016/l10n/trebbia.php:113 2016/l10n/trebbia.php:247
+#: 2016/l10n/trebbia.php:107 2016/l10n/trebbia.php:241
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
-#: 2016/l10n/trebbia.php:116
+#: 2016/l10n/trebbia.php:110
 msgid "LIP"
 msgstr "LIP"
 
-#: 2016/l10n/trebbia.php:119
+#: 2016/l10n/trebbia.php:113
 msgid "Linux Installation Party"
 msgstr "Linux Installation Party"
 
-#: 2016/l10n/trebbia.php:122
+#: 2016/l10n/trebbia.php:116
 msgid "Installazione di distribuzioni GNU/Linux"
 msgstr "Installation of various GNU/Linux"
 
-#: 2016/l10n/trebbia.php:125
+#: 2016/l10n/trebbia.php:119
 msgid ""
 "Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
 "Gestito da volontari."
@@ -963,11 +957,11 @@ msgstr ""
 "Linux Installation Party and technical assistance on GNU/Linux "
 "distributions. Run by Volunteers."
 
-#: 2016/l10n/trebbia.php:128
+#: 2016/l10n/trebbia.php:122
 msgid "Coderdojo"
 msgstr "Coderdojo"
 
-#: 2016/l10n/trebbia.php:134
+#: 2016/l10n/trebbia.php:128
 msgid ""
 "Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
 "deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
@@ -994,11 +988,11 @@ msgstr ""
 "Particular thanks go to the two groups that made this experience possible "
 "CoderDojo Turin and CoderDojo Turin 2."
 
-#: 2016/l10n/trebbia.php:145
+#: 2016/l10n/trebbia.php:139
 msgid "Torino, Via Pessinetto 12"
 msgstr "Turin, Via Pessinetto 12"
 
-#: 2016/l10n/trebbia.php:148
+#: 2016/l10n/trebbia.php:142
 msgid ""
 "Puoi prendere il tram n°<strong>9</strong> e n°<strong>3</strong>, scendendo "
 "alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di Informatica</"
@@ -1008,11 +1002,11 @@ msgstr ""
 "the city centre and get off at the stop <em>Amedeo di Savoia / Computer "
 "Science Department</em>."
 
-#: 2016/l10n/trebbia.php:154
+#: 2016/l10n/trebbia.php:148
 msgid "Via Nizza 52, Torino"
 msgstr "Via Nizza 52, Turin"
 
-#: 2016/l10n/trebbia.php:157
+#: 2016/l10n/trebbia.php:151
 msgid ""
 "La fermata <strong>Nizza</strong> della metropolitana è a 50 metri dal "
 "Dipartimento di Biotecnologie."
@@ -1020,160 +1014,157 @@ msgstr ""
 "<strong>Nizza</strong>'s underground station is at 50 mt from the "
 "Biotechnologies Department. "
 
-#: 2016/l10n/trebbia.php:160
+#: 2016/l10n/trebbia.php:154
 msgid "Aula A"
 msgstr "Room A"
 
-#: 2016/l10n/trebbia.php:163
+#: 2016/l10n/trebbia.php:157
 msgid "Aula B"
 msgstr "Room B"
 
-#: 2016/l10n/trebbia.php:166
+#: 2016/l10n/trebbia.php:160
 msgid "Aula C"
 msgstr "Room C"
 
-#: 2016/l10n/trebbia.php:169
+#: 2016/l10n/trebbia.php:163
 msgid "Aula D"
 msgstr "Room D"
 
-#: 2016/l10n/trebbia.php:172
+#: 2016/l10n/trebbia.php:166
 msgid "Spazio Coderdojo"
 msgstr "CoderDojo area"
 
-#: 2016/l10n/trebbia.php:175
+#: 2016/l10n/trebbia.php:169
 msgid "Spazio Restart"
 msgstr "Restart area"
 
-#: 2016/l10n/trebbia.php:178
+#: 2016/l10n/trebbia.php:172
 msgid "Primo piano"
 msgstr "First Floor"
 
-#: 2016/l10n/trebbia.php:181
+#: 2016/l10n/trebbia.php:175
 msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
-#: 2016/l10n/trebbia.php:184
+#: 2016/l10n/trebbia.php:178
 msgid "Laboratorio Djikstra"
 msgstr "Djikstra Lab"
 
-#: 2016/l10n/trebbia.php:187
+#: 2016/l10n/trebbia.php:181
 msgid "asd"
 msgstr "asd"
 
-#: 2016/l10n/trebbia.php:190
+#: 2016/l10n/trebbia.php:184
 msgid "PHP"
 msgstr "PHP"
 
-#: 2016/l10n/trebbia.php:193
+#: 2016/l10n/trebbia.php:187
 msgid "JavaScript"
 msgstr "JavaScript"
 
-#: 2016/l10n/trebbia.php:196
+#: 2016/l10n/trebbia.php:190
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: 2016/l10n/trebbia.php:199
+#: 2016/l10n/trebbia.php:193
 msgid "NodeJS"
 msgstr "NodeJS"
 
-#: 2016/l10n/trebbia.php:202
+#: 2016/l10n/trebbia.php:196
 msgid "Apple"
 msgstr "Apple"
 
-#: 2016/l10n/trebbia.php:205
+#: 2016/l10n/trebbia.php:199
 msgid "Java"
 msgstr "Java"
 
-#: 2016/l10n/trebbia.php:208
+#: 2016/l10n/trebbia.php:202
 msgid "C++"
 msgstr "C++"
 
-#: 2016/l10n/trebbia.php:211
+#: 2016/l10n/trebbia.php:205
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: 2016/l10n/trebbia.php:214
+#: 2016/l10n/trebbia.php:208
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
-#: 2016/l10n/trebbia.php:217
+#: 2016/l10n/trebbia.php:211
 msgid "Turbo Pascal"
 msgstr "Turbo Pascal"
 
-#: 2016/l10n/trebbia.php:220
+#: 2016/l10n/trebbia.php:214
 msgid "Software Libero"
 msgstr "Free Software"
 
-#: 2016/l10n/trebbia.php:223
+#: 2016/l10n/trebbia.php:217
 msgid "Debian"
 msgstr "Debian"
 
-#: 2016/l10n/trebbia.php:226
+#: 2016/l10n/trebbia.php:220
 msgid "Inkscape"
 msgstr "Inkscape"
 
-#: 2016/l10n/trebbia.php:229
+#: 2016/l10n/trebbia.php:223
 msgid "Adobe Illustrator"
 msgstr "Adobe Illustrator"
 
-#: 2016/l10n/trebbia.php:232
+#: 2016/l10n/trebbia.php:226
 msgid "Immagini vettoriali"
 msgstr "Vector Images"
 
-#: 2016/l10n/trebbia.php:235
+#: 2016/l10n/trebbia.php:229
 msgid "Insegnare"
 msgstr "Teach"
 
-#: 2016/l10n/trebbia.php:238
+#: 2016/l10n/trebbia.php:232
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: 2016/l10n/trebbia.php:241
+#: 2016/l10n/trebbia.php:235
 msgid "Blender"
 msgstr "Blender"
 
-#: 2016/l10n/trebbia.php:244
+#: 2016/l10n/trebbia.php:238
 msgid "C"
 msgstr "C"
 
-#: 2016/l10n/trebbia.php:250
+#: 2016/l10n/trebbia.php:244
 msgid "Embedded"
 msgstr "Embedded"
 
-#: 2016/l10n/trebbia.php:253
+#: 2016/l10n/trebbia.php:247
 msgid "Base"
 msgstr "Base"
 
-#: 2016/l10n/trebbia.php:256
+#: 2016/l10n/trebbia.php:250
 msgid "Dev"
 msgstr "Dev"
 
-#: 2016/l10n/trebbia.php:259
+#: 2016/l10n/trebbia.php:253
 msgid "Sys"
 msgstr "Sys"
 
-#: 2016/l10n/trebbia.php:262
+#: 2016/l10n/trebbia.php:256
 msgid "Misc"
 msgstr "Misc"
 
-#: 2016/l10n/trebbia.php:265
+#: 2016/l10n/trebbia.php:259
 msgid "Altro"
 msgstr "Other"
 
-#: 2016/l10n/trebbia.php:268
+#: 2016/l10n/trebbia.php:262
 msgid "Qualcuno ha detto... software libero?"
 msgstr "Did someone say... Free as in Freedom software?"
 
-#: 2016/l10n/trebbia.php:271
+#: 2016/l10n/trebbia.php:265
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
-"\n"
 "Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
 "avanzare per migliorare le risorse e la conoscenza di tutti.\n"
-"\n"
 "Mi è capitato di organizzare questo Linux Day. =P\n"
-"\n"
 "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
 msgstr ""
 "Computer engineering student, enthusiast of many things (maybe too many).\n"
@@ -1185,7 +1176,7 @@ msgstr ""
 "\n"
 "Floppy musician, checkers and Retrocomputing enthusiast."
 
-#: 2016/l10n/trebbia.php:280
+#: 2016/l10n/trebbia.php:271
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
 "la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n"
@@ -1199,28 +1190,28 @@ msgstr ""
 "I've been using GNU/Linux for many years, and I help out at the Linux Day "
 "since 2010."
 
-#: 2016/l10n/trebbia.php:285
+#: 2016/l10n/trebbia.php:276
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
-"In realta' vuole salvare il mondo, ma non ditelo a nessuno."
+"In realtà vuole salvare il mondo, ma non ditelo a nessuno."
 msgstr ""
 "Researcher, Maker, Teacher, Developer...\n"
 "Fifty years old at the civil registry, but keeps on playing and thinking "
 "freely.\n"
 "Actually he wants to save the world, but don't tell it to anybody."
 
-#: 2016/l10n/trebbia.php:290
+#: 2016/l10n/trebbia.php:281
 msgid "Fondatore corso-javascript.it e TorinoJS, software developer freelance."
 msgstr ""
 "Founder of corso-javascript.it e TorinoJS, software developer freelance."
 
-#: 2016/l10n/trebbia.php:293
+#: 2016/l10n/trebbia.php:284
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
 "1999 con le prime schede StrongArm.\n"
-"E' membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
+"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
 "ha fondato KOAN nel 1996, una software house specializzata in software "
 "embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
 "formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
@@ -1235,7 +1226,7 @@ msgstr ""
 "training on Linux embedded systems. When he is not using a computer, he is "
 "usually interested in mixing up Physics with Philosophy. "
 
-#: 2016/l10n/trebbia.php:297
+#: 2016/l10n/trebbia.php:288
 msgid ""
 "Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
 "bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
@@ -1251,7 +1242,7 @@ msgid ""
 "generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
 "su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
 "ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
-"dielettrica.\n"
+"dielettrica."
 msgstr ""
 "Davide is a transalpine traveller, Sunday programmer (except when it's sunny "
 "and there's snow and he can go ski) and sometimes even of Saturday "
@@ -1265,9 +1256,9 @@ msgstr ""
 "Davide often uses Java, C and C++, he know how to build a impulse generator "
 "with step recovery diodes, he knows pretty well what is an augmented fourth "
 "interval, how does the ionic exchange work on glass and how to calculate "
-"movement of propagation in a dielectric waveguide.\n"
+"movement of propagation in a dielectric waveguide."
 
-#: 2016/l10n/trebbia.php:303
+#: 2016/l10n/trebbia.php:293
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (https://"
@@ -1284,11 +1275,11 @@ msgstr ""
 "and other embedded boards, electronics fundamentals, programmer as a pastime "
 "(what languages? It's not important, learning their syntax is not preclusive)"
 
-#: 2016/l10n/trebbia.php:307
+#: 2016/l10n/trebbia.php:297
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr "System Architect at Project Archivio SRL and Dicobit."
 
-#: 2016/l10n/trebbia.php:310
+#: 2016/l10n/trebbia.php:300
 msgid ""
 "Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
 "dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
@@ -1301,23 +1292,25 @@ msgstr ""
 "dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
 "system engineering. "
 
-#: 2016/l10n/trebbia.php:313 2016/l10n/trebbia.php:316
+#: 2016/l10n/trebbia.php:303
+msgid "Big Data System Architect e sysadmin."
+msgstr "Big Data System Architect and sysadmin."
+
+#: 2016/l10n/trebbia.php:306
 msgid "Big Data System Architect e sysadmin"
 msgstr "Big Data System Architect and sysadmin"
 
-#: 2016/l10n/trebbia.php:319
+#: 2016/l10n/trebbia.php:309
 msgid ""
-"Ingegnere informatico, Open Source enthusiast, focalizzato su\n"
-"privacy e sicurezza informatica, full stack Java developer,\n"
-"Consigliere della Fondazione dell'Ordine degli Ingegneri della\n"
-"Provincia di Torino."
+"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
+"sicurezza informatica, full stack Java developer, Consigliere della "
+"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
 msgstr ""
-"Computer engineer, open source enthusiast, focused on\n"
-"IT privacy and security, full stack Java developer,\n"
-"Councelor at \"Fondazione dell'Ordine degli Ingegneri della\n"
-"Provincia di Torino\"."
+"Computer engineer, open source enthusiast, focused on IT privacy and "
+"security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
+"degli Ingegneri della Provincia di Torino\"."
 
-#: 2016/l10n/trebbia.php:325
+#: 2016/l10n/trebbia.php:312
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
