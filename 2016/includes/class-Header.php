@@ -35,7 +35,7 @@ class Header {
 		}
 
 		$args['og'] = merge_args_defaults($args['og'], [
-			'image'  => URL . XXX . '/ld-2016-logo-teal.png', // It's better an absolute URL here
+			'image'  => URL . XXX . '/ld-2016-logo-purple.png', // It's better an absolute URL here
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
@@ -77,7 +77,7 @@ class Header {
 	<meta name="generator" content="GNU nano" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
 
-	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/logo-192.png" />
+	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/favicon-192.png" />
 	<link rel="shortcut icon" href="<?php echo XXX ?>/favicon/favicon.ico" />
 	<link rel="icon" sizes="16x16 32x32 64x64" href="<?php echo XXX ?>/favicon/favicon.ico">
 	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/favicon-192.png">
