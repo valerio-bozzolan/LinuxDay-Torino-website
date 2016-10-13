@@ -92,6 +92,4 @@ add_menu_entries( [
 	new MenuEntry('api',     URL . CONFERENCE . '/api',          _("API"),          'hidden')
 ] );
 
-define('ISO_LANG', get_iso_lang() );
-
 define('DEFAULT_IMAGE', XXX . '/gnu-linux-on-black.png');
