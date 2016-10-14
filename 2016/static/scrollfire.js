@@ -1,4 +1,8 @@
 $(document).ready(function () {
+	if(window.location.hash) {
+		return;
+	}
+
 	$("#where-section").fadeTo(0, 0);
 	$("#talk-section").fadeTo(0, 0);
 	$("#activities-section").fadeTo(0, 0);
