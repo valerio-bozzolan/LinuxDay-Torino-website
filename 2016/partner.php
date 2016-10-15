@@ -81,6 +81,14 @@ new Header('partner');
 				1
 			); ?>
 			</div>
+			<div class="col s12 m3">
+			<?php partner(
+				"Giovani per Torino",
+				'http://www.comune.torino.it/infogio/gxt/',
+				'giovani-per-torino.jpeg',
+				1
+			); ?>
+			</div>
 		</div>
 	</div>
 

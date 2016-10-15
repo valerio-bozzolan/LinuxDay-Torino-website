@@ -17,4 +17,7 @@ http://associazionetesso.org
 https://commons.wikimedia.org/wiki/File:CoderDojo_Logo.png
 https://www.gnu.org/licenses/fdl.html
 
+* Giovani per Torino (in concessione esclusiva a Linux Day Torino)
+http://www.comune.torino.it/infogio/gxt/cose.htm
+
 * Tutti gli altri loghi sotto licenza esclusiva Linux Day 2016
