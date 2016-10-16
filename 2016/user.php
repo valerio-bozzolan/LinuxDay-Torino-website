@@ -187,7 +187,7 @@ new Header('user', [
 
 			<?php
 			$user->user_rss    && $box($user, "RSS",      $user->user_rss,            'home.png'    );
-			$user->user_fb     && $box($user, "Facebook", $user->getUserFacebruck(),  'facebook.png');
+			$user->user_fb     && $box($user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png');
 			$user->user_googl  && $box($user, "Google+",  $user->getUserGuggolpluz(), 'google.png'  );
 			$user->user_twtr   && $box($user, "Twitter",  $user->getUserTuitt(),      'twitter.png' );
 			$user->user_lnkd   && $box($user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png');

@@ -10,6 +10,9 @@ https://commons.wikimedia.org/wiki/File:Logo_google%2B_2015.png
 Facebook thumb logo (public domain)
 https://commons.wikimedia.org/wiki/File:Facebook_like_thumb.png
 
+Facebook logo (public domain)
+https://commons.wikimedia.org/wiki/File:F_icon.svg
+
 Github logo (MIT License)
 https://commons.wikimedia.org/wiki/File:Octicons-mark-github.svg
 
