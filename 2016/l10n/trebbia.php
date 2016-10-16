@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-16T03:56:47+02:00
+# Last update: 2016-10-16T18:17:44+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -98,7 +98,8 @@ _("Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l'elabora
 _("InfoSec. Istruzioni per l'uso.");
 
 // event[talk-sys-3]::event_description
-_("Applicativi, consigli pratici e buone norme di comportamento per mantenere al sicuro la propria \"vita digitale\".");
+_("InfoSec → Information Security → Sicurezza delle informazioni.
+Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".");
 
 // event[talk-misc-2]::event_title
 _("Sostenibilità e Open Culture all'Università");

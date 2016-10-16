@@ -137,7 +137,7 @@ INSERT INTO `ldto_event` VALUES (28,'talk-dev-3','Dieci anni dietro a FidoCadJ',
 INSERT INTO `ldto_event` VALUES (29,'talk-dev-4','Un bot di Telegram con Python',NULL,'Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.','Slide con esempi di codice e presentazione del Raspberry dal vivo, se c\'è connettività e tempo una breve dimostrazione.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/bot_father.jpg',1,2,2,1);
 INSERT INTO `ldto_event` VALUES (30,'talk-sys-2','Docker: distribuiamo applicazioni',NULL,NULL,'Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\nUna risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?',NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00','/2016/static/libre-icons/docker.png',1,3,3,1);
 INSERT INTO `ldto_event` VALUES (31,'talk-sys-4','Hadoop - BigData in streaming',NULL,NULL,'Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l\'elaborazione in streaming con Apache NiFi, Kafka e Solr.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/hadoop.png',1,3,3,1);
-INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'Applicativi, consigli pratici e buone norme di comportamento per mantenere al sicuro la propria \"vita digitale\".',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'InfoSec → Information Security → Sicurezza delle informazioni.\nIl talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
 INSERT INTO `ldto_event` VALUES (33,'talk-misc-2','Sostenibilità e Open Culture all\'Università',NULL,NULL,NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,4,4,1);
 INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscenza libera',NULL,NULL,NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/wikidata.png',1,4,4,1);
 INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',1,4,4,1);
@@ -507,4 +507,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-16 17:56:57
+-- Dump completed on 2016-10-16 18:19:01
