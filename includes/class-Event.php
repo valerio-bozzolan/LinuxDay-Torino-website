@@ -80,12 +80,27 @@ trait EventTrait {
 		return isset( $this->event_description );
 	}
 
+	function hasEventAbstract() {
+		property_exists($this, 'event_abstract')
+			|| error_die("Missing event_abstract");
+
+		return isset( $this->event_abstract );
+	}
+
 	function getEventDescription() {
 		return _( $this->event_description );
 	}
 
+	function getEventAbstract() {
+		return _( $this->event_abstract );
+	}
+
 	function printEventDescription() {
 		echo nl2br( $this->getEventDescription() );
+	}
+
+	function printEventAbstract() {
+		echo nl2br( $this->getEventAbstract() );
 	}
 
 	function queryEventUsers($fields = null) {

@@ -81,6 +81,16 @@ new Header('event', $args);
 		<!-- End room -->
 	</div>
 
+	<!-- Start event abstract -->
+	<?php if( $event->hasEventAbstract() ): ?>
+	<div class="divider"></div>
+	<div class="section">
+		<h3><?php _e("Abstract") ?></h3>
+		<p class="flow-text"><?php $event->printEventAbstract() ?></p>
+	</div>
+	<?php endif ?>
+	<!-- End event abstract -->
+
 	<!-- Start event description -->
 	<?php if( $event->hasEventDescription() ): ?>
 	<div class="divider"></div>
