@@ -28,8 +28,20 @@ CREATE TABLE `ldto_chapter` (
   `chapter_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`chapter_ID`),
   UNIQUE KEY `chapter_uid` (`chapter_uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_chapter`
+--
+
+LOCK TABLES `ldto_chapter` WRITE;
+/*!40000 ALTER TABLE `ldto_chapter` DISABLE KEYS */;
+INSERT INTO `ldto_chapter` VALUES (1,'talk','Talk');
+INSERT INTO `ldto_chapter` VALUES (2,'party','Linux Installation Party');
+INSERT INTO `ldto_chapter` VALUES (3,'coderdojo','Coderdojo');
+/*!40000 ALTER TABLE `ldto_chapter` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_conference`
@@ -57,8 +69,19 @@ CREATE TABLE `ldto_conference` (
   UNIQUE KEY `conference_uid` (`conference_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_conference_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_conference`
+--
+
+LOCK TABLES `ldto_conference` WRITE;
+/*!40000 ALTER TABLE `ldto_conference` DISABLE KEYS */;
+INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-09-22 14:00:00','2016-10-22 18:00:00',1,1);
+INSERT INTO `ldto_conference` VALUES (2,'2015','LDTO15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2015-10-24 14:00:00','2015-10-24 18:00:00',1,2);
+/*!40000 ALTER TABLE `ldto_conference` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_event`
@@ -93,8 +116,35 @@ CREATE TABLE `ldto_event` (
   CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `ldto_chapter` (`chapter_ID`),
   CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `ldto_track` (`track_ID`),
   CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `ldto_room` (`room_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_event`
+--
+
+LOCK TABLES `ldto_event` WRITE;
+/*!40000 ALTER TABLE `ldto_event` DISABLE KEYS */;
+INSERT INTO `ldto_event` VALUES (17,'talk-base-1','Didattica del coding',NULL,NULL,'Le basi del coding sono fondamentali, come leggere e scrivere.\nQuali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (21,'talk-dev-1','Introduzione alla programmazione con JavaScript',NULL,NULL,'Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/javascript.png',1,2,2,1);
+INSERT INTO `ldto_event` VALUES (22,'talk-sys-1','Non bisogna aver paura di IPv6',NULL,NULL,'Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l\'implementazione in ambiente GNU/Linux.',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/ipv6.png',1,3,3,1);
+INSERT INTO `ldto_event` VALUES (23,'talk-misc-1','La tecnologia LoRa e le sue applicazioni IoT',NULL,NULL,NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (24,'talk-base-2','Rinascimento 2.0',NULL,NULL,'Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando in una nuova era.',NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (25,'talk-base-3','Utilizzi di GNU/Linux',NULL,NULL,'Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi del software libero della vita di tutti i giorni. Si suggerisce di invitare il vostro classico conoscente scettico e/o fanboy (╯°□°)╯.',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (26,'talk-base-4','Linux al Comune di Torino',NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00',NULL,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (27,'talk-dev-2','Yocto Project, un generatore automatico di distribuzioni linux embedded',NULL,NULL,'Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall\'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po\' di ordine nel caos di sviluppo di Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di sviluppo Linux embedded completo con gli strumenti, i metadati e la documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette a disposizione sono potenti e facilmente generabili (compresi gli ambienti di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e permettono di realizzare e portare avanti progetti, senza causare la perdita delle ottimizzazioni e degli investimenti effettuati nel corso del fase di prototipazione. Il Progetto Yocto favorisce l\'adozione di questa tecnologia da parte della comunità open source permettendo agli utenti di concentrarsi sulle caratteristiche e lo sviluppo del proprio prodotto.',NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (28,'talk-dev-3','Dieci anni dietro a FidoCadJ',NULL,NULL,'Dietro le quinte di un progetto open source: un editor per l\'elettronica (e non solo), usato in diversi forum italiani.',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (29,'talk-dev-4','Un bot di Telegram con Python',NULL,'Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.','Slide con esempi di codice e presentazione del Raspberry dal vivo, se c\'è connettività e tempo una breve dimostrazione.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/bot_father.jpg',1,2,2,1);
+INSERT INTO `ldto_event` VALUES (30,'talk-sys-2','Docker: distribuiamo applicazioni',NULL,NULL,'Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\nUna risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?',NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00','/2016/static/libre-icons/docker.png',1,3,3,1);
+INSERT INTO `ldto_event` VALUES (31,'talk-sys-4','Hadoop - BigData in streaming',NULL,NULL,'Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l\'elaborazione in streaming con Apache NiFi, Kafka e Solr.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/hadoop.png',1,3,3,1);
+INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'Applicativi, consigli pratici e buone norme di comportamento per mantenere al sicuro la propria \"vita digitale\".',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (33,'talk-misc-2','Sostenibilità e Open Culture all\'Università',NULL,NULL,NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscenza libera',NULL,NULL,NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/wikidata.png',1,4,4,1);
+INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',1,4,4,1);
+INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di distribuzioni GNU/Linux','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,1,9,5,2);
+INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,1,10,5,3);
+/*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_event_user`
@@ -117,6 +167,34 @@ CREATE TABLE `ldto_event_user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `ldto_event_user`
+--
+
+LOCK TABLES `ldto_event_user` WRITE;
+/*!40000 ALTER TABLE `ldto_event_user` DISABLE KEYS */;
+INSERT INTO `ldto_event_user` VALUES (17,3,0);
+INSERT INTO `ldto_event_user` VALUES (21,8,0);
+INSERT INTO `ldto_event_user` VALUES (22,13,0);
+INSERT INTO `ldto_event_user` VALUES (23,18,0);
+INSERT INTO `ldto_event_user` VALUES (23,25,0);
+INSERT INTO `ldto_event_user` VALUES (23,26,0);
+INSERT INTO `ldto_event_user` VALUES (24,7,0);
+INSERT INTO `ldto_event_user` VALUES (25,1,0);
+INSERT INTO `ldto_event_user` VALUES (26,9,0);
+INSERT INTO `ldto_event_user` VALUES (27,10,0);
+INSERT INTO `ldto_event_user` VALUES (28,11,0);
+INSERT INTO `ldto_event_user` VALUES (29,12,0);
+INSERT INTO `ldto_event_user` VALUES (30,14,0);
+INSERT INTO `ldto_event_user` VALUES (31,15,0);
+INSERT INTO `ldto_event_user` VALUES (31,16,0);
+INSERT INTO `ldto_event_user` VALUES (32,17,0);
+INSERT INTO `ldto_event_user` VALUES (33,20,0);
+INSERT INTO `ldto_event_user` VALUES (34,23,0);
+INSERT INTO `ldto_event_user` VALUES (35,21,0);
+/*!40000 ALTER TABLE `ldto_event_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ldto_location`
 --
 
@@ -134,8 +212,19 @@ CREATE TABLE `ldto_location` (
   `location_lon` float NOT NULL,
   `location_zoom` int(1) DEFAULT NULL,
   PRIMARY KEY (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_location`
+--
+
+LOCK TABLES `ldto_location` WRITE;
+/*!40000 ALTER TABLE `ldto_location` DISABLE KEYS */;
+INSERT INTO `ldto_location` VALUES (1,'dipartimento-di-informatica-di-torino','Dipartimento di Informatica','Torino, Via Pessinetto 12','Puoi prendere il tram n°<strong>9</strong> e n°<strong>3</strong>, scendendo alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di Informatica</em>.','/2016/static/openstreetmap-unito.svg',45.09,7.65917,NULL);
+INSERT INTO `ldto_location` VALUES (2,'dipartimento-di-biotecnologie','Dipartimento di Biotecnologie','Via Nizza 52, Torino','La fermata <strong>Nizza</strong> della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.','http://linuxdaytorino.org/2015/images/biotech.jpg',9.999,7.674,NULL);
+/*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_room`
@@ -153,8 +242,26 @@ CREATE TABLE `ldto_room` (
   UNIQUE KEY `room_uid` (`room_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_room_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_room`
+--
+
+LOCK TABLES `ldto_room` WRITE;
+/*!40000 ALTER TABLE `ldto_room` DISABLE KEYS */;
+INSERT INTO `ldto_room` VALUES (1,'aula-1','Aula A',1);
+INSERT INTO `ldto_room` VALUES (2,'aula-2','Aula B',1);
+INSERT INTO `ldto_room` VALUES (3,'aula-3','Aula C',1);
+INSERT INTO `ldto_room` VALUES (4,'aula-4','Aula D',1);
+INSERT INTO `ldto_room` VALUES (5,'lab-1','Spazio Coderdojo',1);
+INSERT INTO `ldto_room` VALUES (6,'lab-2','Spazio Restart',1);
+INSERT INTO `ldto_room` VALUES (8,'first-floor','Primo piano',2);
+INSERT INTO `ldto_room` VALUES (9,'lab-touring','Laboratorio Turing',1);
+INSERT INTO `ldto_room` VALUES (10,'lab-djikstra','Laboratorio Djikstra',1);
+/*!40000 ALTER TABLE `ldto_room` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_sharable`
@@ -176,8 +283,18 @@ CREATE TABLE `ldto_sharable` (
   UNIQUE KEY `sharable_uid` (`sharable_uid`,`event_ID`),
   KEY `event_ID` (`event_ID`),
   CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_sharable`
+--
+
+LOCK TABLES `ldto_sharable` WRITE;
+/*!40000 ALTER TABLE `ldto_sharable` DISABLE KEYS */;
+INSERT INTO `ldto_sharable` VALUES (1,'Presentazione','Presentazione','/2016/static/uploads/Telegram_bot.odp','document',NULL,'cc-by-sa-4.0',29);
+/*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_skill`
@@ -194,8 +311,39 @@ CREATE TABLE `ldto_skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_skill`
+--
+
+LOCK TABLES `ldto_skill` WRITE;
+/*!40000 ALTER TABLE `ldto_skill` DISABLE KEYS */;
+INSERT INTO `ldto_skill` VALUES (1,'asd','asd','subject');
+INSERT INTO `ldto_skill` VALUES (2,'php','PHP','programming');
+INSERT INTO `ldto_skill` VALUES (3,'js','JavaScript','programming');
+INSERT INTO `ldto_skill` VALUES (4,'microsoft-windows','Microsoft Windows','subject');
+INSERT INTO `ldto_skill` VALUES (5,'node-js','NodeJS','programming');
+INSERT INTO `ldto_skill` VALUES (6,'apple','Apple','subject');
+INSERT INTO `ldto_skill` VALUES (7,'java','Java','programming');
+INSERT INTO `ldto_skill` VALUES (8,'cpp','C++','programming');
+INSERT INTO `ldto_skill` VALUES (9,'ubuntu','Ubuntu','subject');
+INSERT INTO `ldto_skill` VALUES (10,'gnu-linux','GNU/Linux','subject');
+INSERT INTO `ldto_skill` VALUES (11,'turbo-pascal','Turbo Pascal','programming');
+INSERT INTO `ldto_skill` VALUES (12,'free-software','Software Libero','subject');
+INSERT INTO `ldto_skill` VALUES (13,'debian','Debian','subject');
+INSERT INTO `ldto_skill` VALUES (14,'inkscape','Inkscape','subject');
+INSERT INTO `ldto_skill` VALUES (15,'adobe-illustrator','Adobe Illustrator','subject');
+INSERT INTO `ldto_skill` VALUES (16,'svg','Immagini vettoriali','subject');
+INSERT INTO `ldto_skill` VALUES (17,'teach','Insegnare','subject');
+INSERT INTO `ldto_skill` VALUES (18,'raee','Recupero del RAEE','subject');
+INSERT INTO `ldto_skill` VALUES (19,'blender','Blender','subject');
+INSERT INTO `ldto_skill` VALUES (20,'c','C','programming');
+INSERT INTO `ldto_skill` VALUES (21,'wiki','Wikipedia','subject');
+INSERT INTO `ldto_skill` VALUES (22,'embedded','Embedded','subject');
+/*!40000 ALTER TABLE `ldto_skill` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_track`
@@ -212,8 +360,22 @@ CREATE TABLE `ldto_track` (
   PRIMARY KEY (`track_ID`),
   UNIQUE KEY `track_uid` (`track_uid`),
   KEY `track_order` (`track_order`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_track`
+--
+
+LOCK TABLES `ldto_track` WRITE;
+/*!40000 ALTER TABLE `ldto_track` DISABLE KEYS */;
+INSERT INTO `ldto_track` VALUES (1,'base','Base',1);
+INSERT INTO `ldto_track` VALUES (2,'dev','Dev',2);
+INSERT INTO `ldto_track` VALUES (3,'sys','Sys',3);
+INSERT INTO `ldto_track` VALUES (4,'misc','Misc',4);
+INSERT INTO `ldto_track` VALUES (5,'altro','Altro',5);
+/*!40000 ALTER TABLE `ldto_track` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_user`
@@ -246,8 +408,38 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_user`
+--
+
+LOCK TABLES `ldto_user` WRITE;
+/*!40000 ALTER TABLE `ldto_user` DISABLE KEYS */;
+INSERT INTO `ldto_user` VALUES (1,'boz','admin',1,1,'Valerio','Bozzolan',NULL,NULL,NULL,'https://boz.reyboz.it','gnu-gpl','Qualcuno ha detto... software libero?','Someone is talking about Free as in Freedom software?','https://blog.reyboz.it','ValerioBozzolan',NULL,NULL,NULL,'valerio-bozzolan');
+INSERT INTO `ldto_user` VALUES (2,'oirasor','admin',1,1,'Rosario','Antoci',NULL,NULL,NULL,'','gnu-gpl','Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).\nNon mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.\nMi è capitato di organizzare questo Linux Day. =P\nSuonatore di Floppy, appassionato di Dama e Retrocomputing.','IT Engineering Student, I have many passions (maybe too much).\r\n\r\nI don\'t like technology which cause only useless gadgets, but its continuous progress to improve everybody\'s resources and knowledges.\r\n\r\nIt happens that I organized this Linux Day.\r\n\r\nI play floppies, I love Checkers and Retrocomputing.',NULL,'0iras0r',NULL,NULL,NULL,'0iras0r');
+INSERT INTO `ldto_user` VALUES (3,'dario','user',1,0,'Dario','Sera',NULL,NULL,'!',NULL,NULL,'Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n\nUtilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (7,'renzo','user',1,0,'Renzo','Davoli',NULL,'/2016/static/user/davoli.jpg','!',NULL,NULL,'Ricercatore, Maker, Insegnante, Sviluppatore...\nCinquantenne all\'anagrafe, continua a giocare e a pensare liberamente.\nIn realtà vuole salvare il mondo, ma non ditelo a nessuno.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (8,'luigi.maselli','user',1,0,'Luigi','Maselli',NULL,NULL,'!','https://grigio.org','mit','Fondatore corso-javascript.it e TorinoJS, software developer freelance.','',NULL,'grigi0',NULL,NULL,NULL,'grigio');
+INSERT INTO `ldto_user` VALUES (9,'flavio','user',1,0,'','N.D.',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (10,'marco.cavallini','user',1,0,'Marco','Cavallini',NULL,'/2016/static/user/cavallini.jpg','!',NULL,NULL,'Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni \'80. Inizia l\'attività di evangelizzazione all\'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.\nÈ membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.',NULL,NULL,NULL,NULL,'marcocavallini',NULL,NULL);
+INSERT INTO `ldto_user` VALUES (11,'davide','user',1,0,'Davide','Bucci',NULL,NULL,'!','http://davbucci.chez-alice.fr/',NULL,'Davide è viaggiatore transalpino, programmatore della domenica (se non fa bello, non c\'è neve e non si va a sciare) e qualche volta anche del sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano gli amplificatori operazionali, in altre occasioni canta a squarciagola con altre persone. Appassionato di vecchi computer e di elettronica analogica, si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. Coordinatore del progetto open source FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due posti, soprattutto se a motore centrale.\n\nDavide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un\'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d\'onda dielettrica.',NULL,NULL,'davbucci',NULL,NULL,NULL,'DarwinNE');
+INSERT INTO `ldto_user` VALUES (12,'francesco','user',1,0,'Francesco','Tucci',NULL,NULL,'!','http://www.iltucci.com',NULL,'Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (https://geekcookie.github.com e www.pilloledib.it) almeno una volta al mese.\nMini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola)',NULL,NULL,'cesco_78','francesco.tucci',NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (13,'massimo','user',1,0,'Massimo','Nuvoli',NULL,'/2016/static/user/massimo.jpg','!',NULL,NULL,'Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (14,'elia','user',1,0,'Elia','Bellussi',NULL,NULL,'!',NULL,NULL,'Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell\'Informatica (già Museo Piemontese dell\'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell\'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (15,'davide.isoardi','user',1,0,'Davide','Isoardi',NULL,NULL,'!',NULL,NULL,'Big Data System Architect e sysadmin.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (16,'davide.vergari','user',1,0,'Davide','Vergari',NULL,NULL,'!',NULL,NULL,'Big Data System Architect e sysadmin',NULL,NULL,'DavideVergari',NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (17,'davide.mainardi','user',1,0,'Davide','Mainardi',NULL,NULL,'!',NULL,NULL,'Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell\'Ordine degli Ingegneri della Provincia di Torino.',NULL,NULL,'ingmainardi',NULL,NULL,NULL,'dmainardi');
+INSERT INTO `ldto_user` VALUES (18,'gianfranco.poncini','user',1,0,'Gianfranco','Poncini',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (20,'marco.signoretto','user',1,0,'Marco','Signoretto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (21,'simone','user',1,0,'Simone','Massi',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (23,'alessio','user',1,0,'Alessio','Melandri',NULL,'/2016/static/user/alessio.jpg','!',NULL,NULL,'Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell\'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l\'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.',NULL,NULL,NULL,NULL,'alessiomelandri',NULL,'alemela');
+INSERT INTO `ldto_user` VALUES (24,'mario','user',0,0,'Mario','Lacaj',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (25,'valerio.saschetto','user',1,0,'Valerio','Vaschetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `ldto_user_skill`
@@ -267,6 +459,44 @@ CREATE TABLE `ldto_user_skill` (
   CONSTRAINT `ldto_user_skill_ibfk_2` FOREIGN KEY (`skill_ID`) REFERENCES `ldto_skill` (`skill_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_user_skill`
+--
+
+LOCK TABLES `ldto_user_skill` WRITE;
+/*!40000 ALTER TABLE `ldto_user_skill` DISABLE KEYS */;
+INSERT INTO `ldto_user_skill` VALUES (1,11,-4);
+INSERT INTO `ldto_user_skill` VALUES (20,15,-4);
+INSERT INTO `ldto_user_skill` VALUES (1,4,-2);
+INSERT INTO `ldto_user_skill` VALUES (1,6,-2);
+INSERT INTO `ldto_user_skill` VALUES (1,5,-1);
+INSERT INTO `ldto_user_skill` VALUES (1,7,0);
+INSERT INTO `ldto_user_skill` VALUES (11,7,0);
+INSERT INTO `ldto_user_skill` VALUES (1,3,2);
+INSERT INTO `ldto_user_skill` VALUES (1,8,2);
+INSERT INTO `ldto_user_skill` VALUES (1,13,2);
+INSERT INTO `ldto_user_skill` VALUES (20,14,2);
+INSERT INTO `ldto_user_skill` VALUES (20,19,2);
+INSERT INTO `ldto_user_skill` VALUES (1,2,3);
+INSERT INTO `ldto_user_skill` VALUES (8,5,3);
+INSERT INTO `ldto_user_skill` VALUES (10,8,3);
+INSERT INTO `ldto_user_skill` VALUES (10,20,3);
+INSERT INTO `ldto_user_skill` VALUES (10,22,3);
+INSERT INTO `ldto_user_skill` VALUES (11,8,3);
+INSERT INTO `ldto_user_skill` VALUES (11,20,3);
+INSERT INTO `ldto_user_skill` VALUES (20,16,3);
+INSERT INTO `ldto_user_skill` VALUES (20,17,3);
+INSERT INTO `ldto_user_skill` VALUES (20,18,3);
+INSERT INTO `ldto_user_skill` VALUES (23,5,3);
+INSERT INTO `ldto_user_skill` VALUES (23,13,3);
+INSERT INTO `ldto_user_skill` VALUES (23,21,3);
+INSERT INTO `ldto_user_skill` VALUES (1,12,4);
+INSERT INTO `ldto_user_skill` VALUES (7,12,4);
+INSERT INTO `ldto_user_skill` VALUES (8,3,4);
+INSERT INTO `ldto_user_skill` VALUES (8,12,4);
+/*!40000 ALTER TABLE `ldto_user_skill` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -277,4 +507,4 @@ CREATE TABLE `ldto_user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-16  3:14:59
+-- Dump completed on 2016-10-16 17:56:57

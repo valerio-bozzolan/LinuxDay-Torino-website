@@ -70,27 +70,37 @@ Il file viene generato ogni volta che si esegue `includes/api/tagliatella.php`. 
 È possibile far restituire l'XML direttamente da `includes/api/tagliatella.php` modificando le impostazioni in `includes/api/config.php`.
 
 ## Multilingua
-Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`) in grado di tradurre le stringhe che vengono fatte passare attraverso le funzioni `_()` ed `_e()` se la relativa traduzione è presente in un file `.po`.
+Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). Riassumere il fowkflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
 
-I file `.po` sono situati nella directory `2016/l10n/` e contengono anche le stringhe da tradurre provenienti dal database. Per aggiornare le stringhe provenienti dal database:
+* Per cambiare una stringa italiana, cambiala dal database o dal codice sorgente
 
+Quando poi hai deciso di voler tradurre il progetto così com'è:
+
+    # Exporting database strings to source code
     cd ./2016/l10n/
     php ./mieti.php > ./trebbia.php
+    cd -
 
-In seguito, lanciare questo script due volte:
+    # Export source code to GNU Gettext template (.pot)
+    ./2016/l10n/localize.sh ./2016
 
-    ./2016/l10n/localize.sh .
+    # Export GNU Gettext template (.pot) in files for Poedit (.po)
+    ./2016/l10n/localize.sh ./2016
 
-(La prima volta si sarà sicuri di aver creato un template (`.pot`) contenente l'ultima versione di tutte le stringhe traducibili del codice sorgente; la seconda volta si sarà sicuri di aver creato dei file `.po` relativi proprio all'ultima versione del template, e si otterranno i relativi file `.mo` aggiornati e il sito sarà multilingua.)
+A questo punto sfodera Poedit e traduci tutti i .po che desideri.
+
+I file `.po` sono situati nella directory `2016/l10n/`.
+
+Per vedere il risultato in funzione:
+
+    # Compile Poedit files (.po) to binary GNU Gettext files (.mo)
+    ./2016/l10n/localize.sh ./2016
 
 ### Cambiare lingua
-Il sito controlla la lingua accettata dal browser web (l'header `Accept-Language`). Eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=en` (`en`, `it`, ecc.) scavalcano questa preferenza. La lingua italiana è predefinita.
-
-### Migliorare lingua
-Modificare il relativo `.po` con Poedit e lanciare due volte lo script [multilingua](#multilingua).
+Il sito effettua content negotiation controllando la lingua accettata dal browser web (l'header `Accept-Language`) o eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=$lingua` (`en`, `it`, ecc.). La lingua italiana è predefinita.
 
 ### Aggiunta lingua
-Copiare il template GNU Gettext `*/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.UTF-8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./$ANNO/load.php`. Lanciare due volte lo script in [multilingua](#multilingua) per renderla operativa.
+Copiare il template GNU Gettext `2016/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.utf8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./2016/load.php` e rieffettuare i passi della sezione [multilingua](#multilingua).
 
 ## Backend
 Per poter accedere al backend occorre generare l'hash della password nel database (`user`.`user_password`). Il nome utente sara il proprio `user_uid`.
@@ -100,7 +110,21 @@ Per generare l'hash della password conviene abilitare momentaneamente queste due
     define('DEBUG', 1);
     define('SHOW_EVERY_SQL', 1);
 
-Dunque fare un login nella pagina `/2016/login.php` specificando una password inventata. Facendo il login, l'hash sarà mostrato a video e saprete cosa fare.
+In questo modo, una volta effettuato il login da `2016/login.php` specificando una password inventata, si otterrà l'hash da inserire nel database.
+
+## Esportazione database
+**Nota**: a differenza del codice sorgente il database è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
+
+In ogni caso:
+
+    # Exporting one-row per data
+    mysqldump --extended-insert=FALSE linuxday2016 > database-schema.sql
+
+    # Stripping e-mail addresses
+    sed "s/'[a-z\.\-]*@[a-z\.\-]*'/NULL/g" -i database-schema.sql
+
+    # Stripping passwords (now are SHA1 salted)
+    sed "s/'[a-f0-9]\{40\}'/NULL/g" -i database-schema.sql
 
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
