@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-13T16:45:25+02:00
+# Last update: 2016-10-16T03:56:47+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -75,8 +75,11 @@ _("Dietro le quinte di un progetto open source: un editor per l'elettronica (e n
 // event[talk-dev-4]::event_title
 _("Un bot di Telegram con Python");
 
+// event[talk-dev-4]::event_abstract
+_("Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.");
+
 // event[talk-dev-4]::event_description
-_("Poche righe di codice, un Raspberry Pi ed ecco un bot Telegram da usare a nostro piacimento.");
+_("Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è connettività e tempo una breve dimostrazione.");
 
 // event[talk-sys-2]::event_title
 _("Docker: distribuiamo applicazioni");

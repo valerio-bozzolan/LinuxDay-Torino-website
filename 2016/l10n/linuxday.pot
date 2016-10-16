@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-13 16:46+0200\n"
+"POT-Creation-Date: 2016-10-16 04:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgid ""
 "Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"
 msgstr ""
 
-#: 2016/credits.php:220
+#: 2016/credits.php:220 2016/event.php:109
 msgid "Materiale"
 msgstr ""
 
@@ -187,25 +187,38 @@ msgstr ""
 msgid "Modifica evento"
 msgstr ""
 
-#: 2016/event.php:76
+#: 2016/event.php:75
 #, php-format
 msgid "Il talk si terrà il %s alle ore %s in %s."
 msgstr ""
 
-#: 2016/event.php:89
-msgid "Descrizione"
+#: 2016/event.php:88
+msgid "Abstract"
 msgstr ""
 
 #: 2016/event.php:98
+msgid "Descrizione"
+msgstr ""
+
+#: 2016/event.php:121
+#, php-format
+msgid "Scarica %s distribuibile sotto licenza %s."
+msgstr ""
+
+#: 2016/event.php:124
+msgid "l'allegato"
+msgstr ""
+
+#: 2016/event.php:143
 msgid "Relatori"
 msgstr ""
 
-#: 2016/event.php:111 2016/event.php:128
+#: 2016/event.php:156 2016/event.php:173
 #, php-format
 msgid "Profilo di %s"
 msgstr ""
 
-#: 2016/event.php:139
+#: 2016/event.php:184
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr ""
 
@@ -230,7 +243,7 @@ msgstr ""
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr ""
 
-#: 2016/index.php:83 2016/l10n/trebbia.php:136
+#: 2016/index.php:83 2016/l10n/trebbia.php:139
 msgid "Dipartimento di Informatica"
 msgstr ""
 
@@ -330,7 +343,7 @@ msgstr ""
 msgid "dall'%s"
 msgstr ""
 
-#: 2016/index.php:231 2016/l10n/trebbia.php:125
+#: 2016/index.php:231 2016/l10n/trebbia.php:128
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr ""
 
@@ -461,40 +474,40 @@ msgstr ""
 msgid "Coderdojo Torino"
 msgstr ""
 
-#: 2016/partner.php:89
+#: 2016/partner.php:97
 msgid "Main sponsor:"
 msgstr ""
 
-#: 2016/partner.php:103
+#: 2016/partner.php:111
 msgid "Media partner:"
 msgstr ""
 
-#: 2016/partner.php:124
+#: 2016/partner.php:132
 msgid "Con il patrocinio di:"
 msgstr ""
 
-#: 2016/partner.php:129
+#: 2016/partner.php:137
 #, php-format
 msgid "Patrocinio %s"
 msgstr ""
 
-#: 2016/partner.php:140
+#: 2016/partner.php:148
 msgid "Regione Piemonte"
 msgstr ""
 
-#: 2016/partner.php:148
+#: 2016/partner.php:156
 msgid "Città Metropolitana di Torino"
 msgstr ""
 
-#: 2016/partner.php:156
+#: 2016/partner.php:164
 msgid "Comune di Torino"
 msgstr ""
 
-#: 2016/partner.php:163
+#: 2016/partner.php:171
 msgid "Dipartimento di Informatica UniTO"
 msgstr ""
 
-#: 2016/partner.php:170
+#: 2016/partner.php:178
 msgid "Torino Smart City"
 msgstr ""
 
@@ -523,54 +536,54 @@ msgstr ""
 msgid "Le mie skill:"
 msgstr ""
 
-#: 2016/user.php:103
+#: 2016/user.php:104
 #, php-format
 msgid "La mia licenza di software libero preferita è la <b>%s</b>."
 msgstr ""
 
-#: 2016/user.php:123
+#: 2016/user.php:120
 msgid "Bio"
 msgstr ""
 
-#: 2016/user.php:132
+#: 2016/user.php:129
 msgid "Talk condotti"
 msgstr ""
 
-#: 2016/user.php:139
+#: 2016/user.php:136
 msgid "Nome talk"
 msgstr ""
 
-#: 2016/user.php:140
+#: 2016/user.php:137
 msgid "Traccia"
 msgstr ""
 
-#: 2016/user.php:141
+#: 2016/user.php:138
 msgid "Stanza"
 msgstr ""
 
-#: 2016/user.php:142
+#: 2016/user.php:139
 msgid "Orario"
 msgstr ""
 
-#: 2016/user.php:155
+#: 2016/user.php:152
 #, php-format
 msgid "Vedi %s"
 msgstr ""
 
-#: 2016/user.php:162
+#: 2016/user.php:159
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr ""
 
-#: 2016/user.php:171
+#: 2016/user.php:168
 msgid "Questo utente non ha ancora tenuto nessun talk."
 msgstr ""
 
-#: 2016/user.php:179
+#: 2016/user.php:176
 msgid "Social"
 msgstr ""
 
-#: 2016/user.php:184
+#: 2016/user.php:181
 #, php-format
 msgid "%s su %s"
 msgstr ""
@@ -652,7 +665,7 @@ msgstr ""
 msgid "Edizioni Passate"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:103 2016/l10n/trebbia.php:145
+#: 2016/includes/class-Footer.php:103 2016/l10n/trebbia.php:148
 msgid "Dipartimento di Biotecnologie"
 msgstr ""
 
@@ -814,15 +827,22 @@ msgstr ""
 
 #: 2016/l10n/trebbia.php:79
 msgid ""
-"Poche righe di codice, un Raspberry Pi ed ecco un bot Telegram da usare a "
-"nostro piacimento."
+"Usare Python e la libreria Telepot per sviluppare un semplice bot su "
+"Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
+"piccolo, economico e parco in consumi."
 msgstr ""
 
 #: 2016/l10n/trebbia.php:82
-msgid "Docker: distribuiamo applicazioni"
+msgid ""
+"Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
+"connettività e tempo una breve dimostrazione."
 msgstr ""
 
 #: 2016/l10n/trebbia.php:85
+msgid "Docker: distribuiamo applicazioni"
+msgstr ""
+
+#: 2016/l10n/trebbia.php:88
 msgid ""
 "Una introduzione ai sistemi distribuiti tramite la gestione dei container "
 "realizzati con Docker.\n"
@@ -830,61 +850,61 @@ msgid ""
 "gestisce?"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:89
+#: 2016/l10n/trebbia.php:92
 msgid "Hadoop - BigData in streaming"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:92
+#: 2016/l10n/trebbia.php:95
 msgid ""
 "Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
 "l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:95
+#: 2016/l10n/trebbia.php:98
 msgid "InfoSec. Istruzioni per l'uso."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:98
+#: 2016/l10n/trebbia.php:101
 msgid ""
 "Applicativi, consigli pratici e buone norme di comportamento per mantenere "
 "al sicuro la propria \"vita digitale\"."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:101
+#: 2016/l10n/trebbia.php:104
 msgid "Sostenibilità e Open Culture all'Università"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:104
+#: 2016/l10n/trebbia.php:107
 msgid "Wikidata: la base di conoscenza libera"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:107 2016/l10n/trebbia.php:241
+#: 2016/l10n/trebbia.php:110 2016/l10n/trebbia.php:244
 msgid "Wikipedia"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:110
+#: 2016/l10n/trebbia.php:113
 msgid "LIP"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:113
+#: 2016/l10n/trebbia.php:116
 msgid "Linux Installation Party"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:116
+#: 2016/l10n/trebbia.php:119
 msgid "Installazione di distribuzioni GNU/Linux"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:119
+#: 2016/l10n/trebbia.php:122
 msgid ""
 "Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
 "Gestito da volontari."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:122
+#: 2016/l10n/trebbia.php:125
 msgid "Coderdojo"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:128
+#: 2016/l10n/trebbia.php:131
 msgid ""
 "Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
 "deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
@@ -900,172 +920,172 @@ msgid ""
 "quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:139
+#: 2016/l10n/trebbia.php:142
 msgid "Torino, Via Pessinetto 12"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:142
+#: 2016/l10n/trebbia.php:145
 msgid ""
 "Puoi prendere il tram n°<strong>9</strong> e n°<strong>3</strong>, scendendo "
 "alla fermata <em>Ospedale Amedeo di Savoia / Dipartimento di Informatica</"
 "em>."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:148
+#: 2016/l10n/trebbia.php:151
 msgid "Via Nizza 52, Torino"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:151
+#: 2016/l10n/trebbia.php:154
 msgid ""
 "La fermata <strong>Nizza</strong> della metropolitana è a 50 metri dal "
 "Dipartimento di Biotecnologie."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:154
+#: 2016/l10n/trebbia.php:157
 msgid "Aula A"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:157
+#: 2016/l10n/trebbia.php:160
 msgid "Aula B"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:160
+#: 2016/l10n/trebbia.php:163
 msgid "Aula C"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:163
+#: 2016/l10n/trebbia.php:166
 msgid "Aula D"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:166
+#: 2016/l10n/trebbia.php:169
 msgid "Spazio Coderdojo"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:169
+#: 2016/l10n/trebbia.php:172
 msgid "Spazio Restart"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:172
+#: 2016/l10n/trebbia.php:175
 msgid "Primo piano"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:175
+#: 2016/l10n/trebbia.php:178
 msgid "Laboratorio Turing"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:178
+#: 2016/l10n/trebbia.php:181
 msgid "Laboratorio Djikstra"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:181
+#: 2016/l10n/trebbia.php:184
 msgid "asd"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:184
+#: 2016/l10n/trebbia.php:187
 msgid "PHP"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:187
+#: 2016/l10n/trebbia.php:190
 msgid "JavaScript"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:190
+#: 2016/l10n/trebbia.php:193
 msgid "Microsoft Windows"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:193
+#: 2016/l10n/trebbia.php:196
 msgid "NodeJS"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:196
+#: 2016/l10n/trebbia.php:199
 msgid "Apple"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:199
+#: 2016/l10n/trebbia.php:202
 msgid "Java"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:202
+#: 2016/l10n/trebbia.php:205
 msgid "C++"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:205
+#: 2016/l10n/trebbia.php:208
 msgid "Ubuntu"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:208
+#: 2016/l10n/trebbia.php:211
 msgid "GNU/Linux"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:211
+#: 2016/l10n/trebbia.php:214
 msgid "Turbo Pascal"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:214
+#: 2016/l10n/trebbia.php:217
 msgid "Software Libero"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:217
+#: 2016/l10n/trebbia.php:220
 msgid "Debian"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:220
+#: 2016/l10n/trebbia.php:223
 msgid "Inkscape"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:223
+#: 2016/l10n/trebbia.php:226
 msgid "Adobe Illustrator"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:226
+#: 2016/l10n/trebbia.php:229
 msgid "Immagini vettoriali"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:229
+#: 2016/l10n/trebbia.php:232
 msgid "Insegnare"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:232
+#: 2016/l10n/trebbia.php:235
 msgid "Recupero del RAEE"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:235
+#: 2016/l10n/trebbia.php:238
 msgid "Blender"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:238
+#: 2016/l10n/trebbia.php:241
 msgid "C"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:244
+#: 2016/l10n/trebbia.php:247
 msgid "Embedded"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:247
+#: 2016/l10n/trebbia.php:250
 msgid "Base"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:250
+#: 2016/l10n/trebbia.php:253
 msgid "Dev"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:253
+#: 2016/l10n/trebbia.php:256
 msgid "Sys"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:256
+#: 2016/l10n/trebbia.php:259
 msgid "Misc"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:259
+#: 2016/l10n/trebbia.php:262
 msgid "Altro"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:262
+#: 2016/l10n/trebbia.php:265
 msgid "Qualcuno ha detto... software libero?"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:265
+#: 2016/l10n/trebbia.php:268
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
@@ -1075,7 +1095,7 @@ msgid ""
 "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:271
+#: 2016/l10n/trebbia.php:274
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
 "la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n"
@@ -1084,18 +1104,18 @@ msgid ""
 "2010."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:276
+#: 2016/l10n/trebbia.php:279
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
 "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:281
+#: 2016/l10n/trebbia.php:284
 msgid "Fondatore corso-javascript.it e TorinoJS, software developer freelance."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:284
+#: 2016/l10n/trebbia.php:287
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1107,7 +1127,7 @@ msgid ""
 "è solitamente interessato a mescolare la Fisica con la Filosofia."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:288
+#: 2016/l10n/trebbia.php:291
 msgid ""
 "Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
 "bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
@@ -1126,7 +1146,7 @@ msgid ""
 "dielettrica."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:293
+#: 2016/l10n/trebbia.php:296
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (https://"
@@ -1137,11 +1157,11 @@ msgid ""
 "mi ostacola)"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:297
+#: 2016/l10n/trebbia.php:300
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:300
+#: 2016/l10n/trebbia.php:303
 msgid ""
 "Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
 "dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
@@ -1149,22 +1169,22 @@ msgid ""
 "Digitale. Consulente informatico si occupa di system engineering."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:303
+#: 2016/l10n/trebbia.php:306
 msgid "Big Data System Architect e sysadmin."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:306
+#: 2016/l10n/trebbia.php:309
 msgid "Big Data System Architect e sysadmin"
 msgstr ""
 
-#: 2016/l10n/trebbia.php:309
+#: 2016/l10n/trebbia.php:312
 msgid ""
 "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
 "sicurezza informatica, full stack Java developer, Consigliere della "
 "Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
 msgstr ""
 
-#: 2016/l10n/trebbia.php:312
+#: 2016/l10n/trebbia.php:315
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
