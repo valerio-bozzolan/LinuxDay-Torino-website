@@ -104,6 +104,10 @@ trait EventTrait {
 	function hasPermissionToEditEvent() {
 		return has_permission('edit-events');
 	}
+
+	function querySharables() {
+		return Sharable::querySharables( $this->getEventID() );
+	}
 }
 
 class_exists('User');

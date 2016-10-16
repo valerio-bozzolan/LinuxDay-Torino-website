@@ -69,6 +69,10 @@ class License {
 	}
 
 	function getLink($classes = null, $other = null) {
+		if($other = null) {
+			$other = 'target="_blank"';
+		}
+
 		return HTML::a(
 			$this->getURL(),
 			$this->getShort(),

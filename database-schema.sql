@@ -157,6 +157,29 @@ CREATE TABLE `ldto_room` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `ldto_sharable`
+--
+
+DROP TABLE IF EXISTS `ldto_sharable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ldto_sharable` (
+  `sharable_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `sharable_uid` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sharable_title` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sharable_path` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sharable_type` enum('video','image','document') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sharable_mimetype` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Must be set for videos',
+  `sharable_license` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `event_ID` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`sharable_ID`),
+  UNIQUE KEY `sharable_uid` (`sharable_uid`,`event_ID`),
+  KEY `event_ID` (`event_ID`),
+  CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `ldto_skill`
 --
 
@@ -254,4 +277,4 @@ CREATE TABLE `ldto_user_skill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-11  0:20:24
+-- Dump completed on 2016-10-16  3:14:59

@@ -189,6 +189,17 @@ trait UserTrait {
 	function isUserMyself() {
 		return get_user('user_ID') === $this->getUserID();
 	}
+
+	function hasUserLovelicense() {
+		property_exists($this, 'user_lovelicense')
+			|| error_die("Missing user_lovelicense");
+
+		return isset( $this->user_lovelicense );
+	}
+
+	function getUserLovelicense() {
+		return license( $this->user_lovelicense );
+	}
 }
 
 class_exists('Sessionuser');
@@ -203,9 +214,6 @@ class User {
 	static function normalize(& $t) {
 		if( isset( $t->user_ID ) ) {
 			$t->user_ID = (int) $t->user_ID;
-		}
-		if( isset( $t->user_lovelicense ) ) {
-			$t->user_lovelicense = license( $t->user_lovelicense );
 		}
 		if( isset( $t->user_public ) ) {
 			$t->user_public = (bool) (int) $t->user_public;

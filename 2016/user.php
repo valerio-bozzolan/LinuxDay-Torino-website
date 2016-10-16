@@ -96,16 +96,13 @@ new Header('user', [
 			<!-- End skills -->
 
 			<!-- Start license -->
-			<?php if( $user->user_lovelicense ): ?>
+			<?php if( $user->hasUserLovelicense() ): ?>
 			<div class="row">
 				<div class="col s12">
+					<?php $license = $user->getUserLovelicense() ?>
 					<p><?php printf(
 						_("La mia licenza di software libero preferita è la <b>%s</b>."),
-						HTML::a(
-							$user->user_lovelicense->getURL(),
-							$user->user_lovelicense->getShort(),
-							$user->user_lovelicense->getName()
-						)
+						$license->getLink()
 					) ?></p>
 				</div>
 			</div>

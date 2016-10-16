@@ -57,7 +57,6 @@ new Header('event', $args);
 	<?php endif ?>
 
 	<div class="row">
-
 		<div class="col s12 m4">
 			<img class="responsive-img hoverable" src="<?php
 				if( $event->hasEventImage() ) {
@@ -92,14 +91,50 @@ new Header('event', $args);
 	<?php endif ?>
 	<!-- End event description -->
 
+	<!-- Start files -->
+	<?php $sharables = $event->querySharables() ?>
+	<?php if( $sharables->num_rows ): ?>
 	<div class="divider"></div>
+	<div class="section">
+		<h3><?php _e("Materiale") ?></h3>
+		<div class="row">
+			<?php $i = 0 ?>
+			<?php while( $sharable = $sharables->fetch_object('Sharable') ): ?>
+			<div class="col s12">
+				<?php if( $sharable->isSharableVideo() ): ?>
+					<video class="responsive-video" controls="controls">
+						<source src="<?php echo $sharable->getSharablePath() ?>" type="<?php echo $sharable->getSharableMIME() ?>" />
+					</video>
+				<?php else: ?>
+					<p class="flow-text">
+						<?php printf(
+							_("Scarica %s distribuibile sotto licenza %s."),
+							HTML::a(
+								$sharable->getSharablePath(),
+								icon('attachment', 'left') .  _("l'allegato"),
+								null,
+								null,
+								'target="_blank"'
+							),
+							$sharable->getSharableLicense()->getLink()
+						) ?>
+					</p>
+				<?php endif ?>
+			</div>
+			<?php endwhile ?>
+		</div>
+	</div>
+	<?php endif ?>
+	<!-- End files -->
 
+	<!-- Start speakers -->
+	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Relatori") ?></h3>
 
 		<?php $users = $event->queryEventUsers(); ?>
 
-		<?php if($users): ?>
+		<?php if( $users->num_rows ): ?>
 			<div class="row">
 			<?php while( $user = $users->fetch_object('User') ): ?>
 				<div class="col s12 m6">
@@ -139,6 +174,7 @@ new Header('event', $args);
 			<p><?php _e("L'elenco dei relatori non è ancora noto.") ?></p>
 		<?php endif ?>
 	</div>
+	<!-- End speakers -->
 
 	<script>
 	$(document).ready(function () {
