@@ -866,8 +866,9 @@ msgstr ""
 
 #: 2016/l10n/trebbia.php:101
 msgid ""
-"Applicativi, consigli pratici e buone norme di comportamento per mantenere "
-"al sicuro la propria \"vita digitale\"."
+"InfoSec \u2192 Information Security \u2192 Sicurezza delle informazioni."
+" Il talk illustrer\u00E0 gli applicativi e dar\u00E0 i giusti consigli per "
+"poter tenere maggiormente al sicuro la propria \"vita digitale\"."
 msgstr ""
 
 #: 2016/l10n/trebbia.php:104
