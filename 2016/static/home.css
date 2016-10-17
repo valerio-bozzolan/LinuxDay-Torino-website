@@ -43,3 +43,7 @@ th {
 #activities-section .flow-text {
 	line-height:1.1;
 }
+#rooms-section img {
+	max-width: 70%;
+	margin: auto;
+}
