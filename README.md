@@ -18,7 +18,7 @@ Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di og
 ### Preparazione
 Su un sistema Debian `stable`:
 
-    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 php-gettext libjs-jquery libjs-leaflet
+    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 php-gettext libjs-jquery libjs-leaflet libmarkdown-php
     a2enmod rewrite
     service apache2 reload
 
@@ -82,19 +82,19 @@ Quando poi hai deciso di voler tradurre il progetto così com'è:
     cd -
 
     # Export source code to GNU Gettext template (.pot)
-    ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php ./2016
 
     # Export GNU Gettext template (.pot) in files for Poedit (.po)
-    ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php ./2016
 
 A questo punto sfodera Poedit e traduci tutti i .po che desideri.
 
 I file `.po` sono situati nella directory `2016/l10n/`.
 
-Per vedere il risultato in funzione:
+Per vedere il risultato in funzione (indovina un po'?):
 
     # Compile Poedit files (.po) to binary GNU Gettext files (.mo)
-    ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php ./2016
 
 ### Cambiare lingua
 Il sito effettua content negotiation controllando la lingua accettata dal browser web (l'header `Accept-Language`) o eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=$lingua` (`en`, `it`, ecc.). La lingua italiana è predefinita.
