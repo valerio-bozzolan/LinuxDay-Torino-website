@@ -170,7 +170,7 @@ new Header('conference', [
 	<div id="rooms" class="divider" data-show="#rooms-section"></div>
 	<div class="section" id="rooms-section">
 		<h3><?php _e("Planimetria") ?></h3>
-		<img class="materialboxed responsive-img" style="max-width: 70%; margin: auto" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
+		<img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
 	</div>
 
 	<div id="activities" class="divider" data-show="#activities-section"></div>
