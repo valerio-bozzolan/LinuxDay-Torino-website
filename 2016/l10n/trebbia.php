@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-17T14:50:45+02:00
+# Last update: 2016-10-17T15:12:34+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -144,7 +144,8 @@ _("Torino, Via Pessinetto 12");
 
 // location[1]::location_note
 _("Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.
-Puoi prendere il pullman n°59 e n°59/ scendendo alla fermata *Svizzera*.");
+
+Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n°**59** e n°**59/** scendendo alla fermata *Svizzera*.");
 
 // location[2]::location_name
 _("Dipartimento di Biotecnologie");
@@ -153,7 +154,7 @@ _("Dipartimento di Biotecnologie");
 _("Via Nizza 52, Torino");
 
 // location[2]::location_note
-_("La fermata <strong>Nizza</strong> della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.");
+_("La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.");
 
 // room[aula-1]::room_name
 _("Aula A");

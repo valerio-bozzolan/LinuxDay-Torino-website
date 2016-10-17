@@ -221,8 +221,8 @@ CREATE TABLE `ldto_location` (
 
 LOCK TABLES `ldto_location` WRITE;
 /*!40000 ALTER TABLE `ldto_location` DISABLE KEYS */;
-INSERT INTO `ldto_location` VALUES (1,'dipartimento-di-informatica-di-torino','Dipartimento di Informatica','Torino, Via Pessinetto 12','Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.\nPuoi prendere il pullman n°59 e n°59/ scendendo alla fermata *Svizzera*.','/2016/static/openstreetmap-unito.svg',45.09,7.65917,NULL);
-INSERT INTO `ldto_location` VALUES (2,'dipartimento-di-biotecnologie','Dipartimento di Biotecnologie','Via Nizza 52, Torino','La fermata <strong>Nizza</strong> della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.','http://linuxdaytorino.org/2015/images/biotech.jpg',9.999,7.674,NULL);
+INSERT INTO `ldto_location` VALUES (1,'dipartimento-di-informatica-di-torino','Dipartimento di Informatica','Torino, Via Pessinetto 12','Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.\r\n\r\nDalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n°**59** e n°**59/** scendendo alla fermata *Svizzera*.','/2016/static/openstreetmap-unito.svg',45.09,7.65917,NULL);
+INSERT INTO `ldto_location` VALUES (2,'dipartimento-di-biotecnologie','Dipartimento di Biotecnologie','Via Nizza 52, Torino','La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.','http://linuxdaytorino.org/2015/images/biotech.jpg',9.999,7.674,NULL);
 /*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -506,4 +506,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-17 14:50:45
+-- Dump completed on 2016-10-17 15:12:06
