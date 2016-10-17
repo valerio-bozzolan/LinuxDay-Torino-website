@@ -54,6 +54,43 @@ xgettext \
 	"$path"/*.php \
 	"$path"/*/*.php
 
+#!/bin/bash
+
+package="linuxday"
+path="./2016"
+
+# Find all useless comments (= line numbers in trebbia.php)
+replace=($(grep -oE '[0-9]{4}/l10n/trebbia.php:[0-9]+' "$path"/l10n/$package.pot | sort -h -t: -k2))
+
+comments=()
+paths=()
+linenumbers=()
+
+for comment in "${replace[@]}"
+do
+	comments+=($comment)
+	tmp=(${comment//:/ })
+	paths+=(${tmp[0]})
+	# don't ask why. Or do ask, but I don't know the answer.
+	tmpn=${tmp[1]}
+	tmpn2=$(($tmpn-1))
+	linenumbers+=($tmpn2)
+done
+
+# The whole point of sorting was to read sequentially every line in trebbia.php and keep only the right ones, but the task proved too difficult.
+# So here we go: a O(n^2) algorithm, or possibly worse! Yay!
+
+i=0
+for comment in $comments
+do
+	# Get string description from trebbia.php, remove "//" from beginning
+	description=$(sed -n ${linenumbers[$i]}p "$path"/../${paths[$i]} | cut -c 4-)
+	# aaaaand... this doesn't work.
+	sed -i 's#"'${comment}'"#"'$description'"#g' "$path"/l10n/$package.pot
+	((i+=1))
+done
+
+
 # Generate/update the .po files from the .pot file
 find "$path"/l10n -name \*.po -execdir msgmerge -o $package.po $package.po ../../$package.pot \;
 
