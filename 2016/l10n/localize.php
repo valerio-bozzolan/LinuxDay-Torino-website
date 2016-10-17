@@ -23,10 +23,10 @@
 #
 #############################################################################
 
-# The copyright older of your localization
+# The copyright holder of your localization
 $copyright="Linux Day 2016 website contributors";
 
-# The prefix of your localization's files
+# The prefix of your localization files
 # You have to know how GNU Gettext works to change it.
 $package="linuxday";
 
@@ -38,7 +38,7 @@ function rtfm() {
 		echo $argv[0].' ./2016'.PHP_EOL;
 }
 
-if($argc !== 2) {
+if(!isset($argc) || $argc !== 2) {
 	rtfm();
 	exit(1);
 }
