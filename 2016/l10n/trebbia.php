@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-17T12:10:09+02:00
+# Last update: 2016-10-17T14:50:45+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -286,7 +286,7 @@ Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.
 In realtà vuole salvare il mondo, ma non ditelo a nessuno.");
 
 // user[luigi.maselli]::user_bio
-_("Fondatore corso-javascript.it e TorinoJS, software developer freelance.");
+_("Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance.");
 
 // user[marco.cavallini]::user_bio
 _("Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.
@@ -299,9 +299,9 @@ _("Davide è viaggiatore transalpino, programmatore della domenica (se non fa be
 Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d'onda dielettrica.");
 
 // user[francesco]::user_bio
-_("Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (<https://geekcookies.github.io/> e <http://www.pilloledib.it>) almeno una volta al mese.
+_("Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (<http://geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al mese.
 
-Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola)");
+Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola).");
 
 // user[massimo]::user_bio
 _("Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.");

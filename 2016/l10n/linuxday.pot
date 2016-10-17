@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 12:10+0200\n"
+"POT-Creation-Date: 2016-10-17 14:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1124,7 +1124,9 @@ msgid ""
 msgstr ""
 
 #: 2016/l10n/trebbia.php:289
-msgid "Fondatore corso-javascript.it e TorinoJS, software developer freelance."
+msgid ""
+"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
+"freelance."
 msgstr ""
 
 #: 2016/l10n/trebbia.php:292
@@ -1162,14 +1164,14 @@ msgstr ""
 #: 2016/l10n/trebbia.php:302
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
-"corrente, sistemista di professione, maker per diletto, podcaster (<https://"
-"geekcookies.github.io/> e <http://www.pilloledib.it>) almeno una volta al "
+"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
+"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
 "mese.\n"
 "\n"
 "Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
 "altre schedine embedded, basi di elettronica, programmatore a tempo perso "
 "(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
-"mi ostacola)"
+"mi ostacola)."
 msgstr ""
 
 #: 2016/l10n/trebbia.php:307
