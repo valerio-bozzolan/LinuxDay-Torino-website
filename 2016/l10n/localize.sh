@@ -54,11 +54,6 @@ xgettext \
 	"$path"/*.php \
 	"$path"/*/*.php
 
-#!/bin/bash
-
-package="linuxday"
-path="./2016"
-
 # Find all useless comments (= line numbers in trebbia.php)
 replace=($(grep -oE '[0-9]{4}/l10n/trebbia.php:[0-9]+' "$path"/l10n/$package.pot | sort -h -t: -k2))
 
