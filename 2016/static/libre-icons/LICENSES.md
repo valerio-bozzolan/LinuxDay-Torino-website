@@ -3,6 +3,9 @@
 Apache HTTP server logo (Apache license)
 https://commons.wikimedia.org/wiki/File:Apache_HTTP_server_logo_(2016).svg
 
+Attendize (AAL)
+https://github.com/Attendize/Attendize/blob/master/public/assets/images/logo-dark.png
+
 Debian logo (GNU LGPL)
 https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg
 
@@ -51,6 +54,9 @@ https://commons.wikimedia.org/wiki/File:Mysql.svg
 OpenStreetMap logo (CC By-Sa 2.0)
 https://commons.wikimedia.org/wiki/File:Openstreetmap_logo.svg
 
+Planimetria Dipartimento di Informatica (CC By-Sa 4.0)
+Grazie a Roberto Guido che ha ricalcato la piantina con Inkscape.
+
 jQuery logo (public domain)
 https://commons.wikimedia.org/wiki/File:JQuery_logo_text.svg
 
@@ -77,9 +83,6 @@ https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2-o75.svg
 
 YOURLS logo (MIT)
 https://github.com/YOURLS/YOURLS/blob/master/images/yourls-logo.png
-
-Attendize (AAL)
-https://github.com/Attendize/Attendize/blob/master/public/assets/images/logo-dark.png
 
 ## Licenze
 Attribution Assurance License (AAL)

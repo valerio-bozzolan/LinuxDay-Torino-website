@@ -6,6 +6,7 @@ $(document).ready(function () {
 	$("#where-section").fadeTo(0, 0);
 	$("#talk-section").fadeTo(0, 0);
 	$("#activities-section").fadeTo(0, 0);
+	$("#rooms-section").fadeTo(0, 0);
 	$("#price-section").fadeTo(0, 0);
 
 	function showSection($el) {
@@ -30,6 +31,11 @@ $(document).ready(function () {
 		},
 		{
 			selector: '#activities',
+			offset: offset,
+			callback: showSection
+		},
+		{
+			selector: '#rooms',
 			offset: offset,
 			callback: showSection
 		},
