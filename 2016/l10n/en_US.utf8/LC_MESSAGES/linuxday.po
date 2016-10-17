@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 21:17+0200\n"
+"POT-Creation-Date: 2016-10-17 21:38+0200\n"
 "PO-Revision-Date: 2016-10-11 21:27+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -323,89 +323,89 @@ msgid "La tabella potrebbe subire variazioni."
 msgstr "The table could change any time."
 
 #: 2016/index.php:172
+msgid "Planimetria"
+msgstr "Planimetry"
+
+#: 2016/index.php:173
+msgid "Planimetria Dipartimento di Informatica"
+msgstr "Computer Science department planimetry"
+
+#: 2016/index.php:178
 msgid "Attività"
 msgstr "Activities"
 
-#: 2016/index.php:173
+#: 2016/index.php:179
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr "At the same time of the talks, various activity will take place: "
 
-#: 2016/index.php:177
+#: 2016/index.php:183
 #, php-format
 msgid "da %s"
 msgstr "by %s"
 
-#: 2016/index.php:198
+#: 2016/index.php:204
 #, php-format
 msgid "Gestito %s."
 msgstr "Run %s."
 
-#: 2016/index.php:204
+#: 2016/index.php:210
 msgid "Prenota"
 msgstr "Book"
 
-#: 2016/index.php:206
+#: 2016/index.php:212
 #, php-format
 msgid "Prenota la tua partecipazione a %s"
 msgstr "Book your presence to the %s"
 
-#: 2016/index.php:224
+#: 2016/index.php:230
 msgid "Riparazione di apparecchiature elettroniche."
 msgstr "Fixing electronic devices"
 
-#: 2016/index.php:225
+#: 2016/index.php:231
 msgid "Associazione Restarters Torino"
 msgstr "Restarters Torino association"
 
-#: 2016/index.php:227
+#: 2016/index.php:233
 #, php-format
 msgid "dall'%s"
 msgstr "by %s"
 
-#: 2016/index.php:231 event[coderdojo]::event_abstract
+#: 2016/index.php:237 event[coderdojo]::event_abstract
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr "Coding lab for children themed Linux Day."
 
-#: 2016/index.php:233 2016/includes/class-DailyEventsTable.php:151
+#: 2016/index.php:239 2016/includes/class-DailyEventsTable.php:151
 #, php-format
 msgid "%s e %s"
 msgstr "%s and %s"
 
-#: 2016/index.php:236
+#: 2016/index.php:242
 msgid "CoderDojo Torino 1"
 msgstr "CoderDojo Turin 1"
 
-#: 2016/index.php:243
+#: 2016/index.php:249
 msgid "CoderDojo Torino 2"
 msgstr "CoderDojo Turin 2"
 
-#: 2016/index.php:255
+#: 2016/index.php:261
 msgid "Allestimento museale di Retrocomputing."
 msgstr "Retrocomputing museum exhibition"
 
-#: 2016/index.php:258
+#: 2016/index.php:264
 #, php-format
 msgid "dal %s"
 msgstr "by %s"
 
-#: 2016/index.php:262
+#: 2016/index.php:268
 msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 "LIP (Linux Installation Party) and technical assistance to GNU/Linux "
 "distributions. "
 
-#: 2016/index.php:263
+#: 2016/index.php:269
 msgid "volontari"
 msgstr "volunteers"
-
-#: 2016/index.php:272
-msgid "Planimetria"
-msgstr "Planimetry"
-
-#: 2016/index.php:273
-msgid "Planimetria Dipartimento di Informatica"
-msgstr "Computer Science department planimetry"
 
 #: 2016/index.php:284
 msgid "Le quattro libertà fontamentali del software libero"
@@ -657,10 +657,6 @@ msgstr "%s<br /> by %s."
 #: 2016/includes/class-DailyEventsTable.php:122
 msgid "Nessun talk pianificato."
 msgstr "No talks planned."
-
-#: 2016/includes/class-DailyEventsTable.php:139
-msgid "nessuno"
-msgstr "nobody"
 
 #: 2016/includes/class-DailyEventsTable.php:149
 msgid ", "
@@ -1377,6 +1373,9 @@ msgstr ""
 "to meet in computer science. I work with data everyday at Synapta, adding "
 "new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
 "semantic Web. I love to play chess and drink orange soda. Even not together. "
+
+#~ msgid "nessuno"
+#~ msgstr "nobody"
 
 #~ msgid "Big Data System Architect e sysadmin"
 #~ msgstr "Big Data System Architect and sysadmin"

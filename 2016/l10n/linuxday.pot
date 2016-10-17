@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 21:17+0200\n"
+"POT-Creation-Date: 2016-10-17 21:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -312,86 +312,86 @@ msgid "La tabella potrebbe subire variazioni."
 msgstr ""
 
 #: 2016/index.php:172
-msgid "Attività"
+msgid "Planimetria"
 msgstr ""
 
 #: 2016/index.php:173
+msgid "Planimetria Dipartimento di Informatica"
+msgstr ""
+
+#: 2016/index.php:178
+msgid "Attività"
+msgstr ""
+
+#: 2016/index.php:179
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr ""
 
-#: 2016/index.php:177
+#: 2016/index.php:183
 #, php-format
 msgid "da %s"
 msgstr ""
 
-#: 2016/index.php:198
+#: 2016/index.php:204
 #, php-format
 msgid "Gestito %s."
 msgstr ""
 
-#: 2016/index.php:204
+#: 2016/index.php:210
 msgid "Prenota"
 msgstr ""
 
-#: 2016/index.php:206
+#: 2016/index.php:212
 #, php-format
 msgid "Prenota la tua partecipazione a %s"
 msgstr ""
 
-#: 2016/index.php:224
+#: 2016/index.php:230
 msgid "Riparazione di apparecchiature elettroniche."
 msgstr ""
 
-#: 2016/index.php:225
+#: 2016/index.php:231
 msgid "Associazione Restarters Torino"
 msgstr ""
 
-#: 2016/index.php:227
+#: 2016/index.php:233
 #, php-format
 msgid "dall'%s"
 msgstr ""
 
-#: 2016/index.php:231 event[coderdojo]::event_abstract
+#: 2016/index.php:237 event[coderdojo]::event_abstract
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr ""
 
-#: 2016/index.php:233 2016/includes/class-DailyEventsTable.php:151
+#: 2016/index.php:239 2016/includes/class-DailyEventsTable.php:151
 #, php-format
 msgid "%s e %s"
 msgstr ""
 
-#: 2016/index.php:236
+#: 2016/index.php:242
 msgid "CoderDojo Torino 1"
 msgstr ""
 
-#: 2016/index.php:243
+#: 2016/index.php:249
 msgid "CoderDojo Torino 2"
 msgstr ""
 
-#: 2016/index.php:255
+#: 2016/index.php:261
 msgid "Allestimento museale di Retrocomputing."
 msgstr ""
 
-#: 2016/index.php:258
+#: 2016/index.php:264
 #, php-format
 msgid "dal %s"
 msgstr ""
 
-#: 2016/index.php:262
+#: 2016/index.php:268
 msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 
-#: 2016/index.php:263
+#: 2016/index.php:269
 msgid "volontari"
-msgstr ""
-
-#: 2016/index.php:272
-msgid "Planimetria"
-msgstr ""
-
-#: 2016/index.php:273
-msgid "Planimetria Dipartimento di Informatica"
 msgstr ""
 
 #: 2016/index.php:284
@@ -634,10 +634,6 @@ msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:122
 msgid "Nessun talk pianificato."
-msgstr ""
-
-#: 2016/includes/class-DailyEventsTable.php:139
-msgid "nessuno"
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:149

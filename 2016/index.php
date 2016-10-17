@@ -167,6 +167,12 @@ new Header('conference', [
 		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
+	<div id="rooms" class="divider" data-show="#rooms-section"></div>
+	<div class="section" id="rooms-section">
+		<h3><?php _e("Planimetria") ?></h3>
+		<img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
+	</div>
+
 	<div id="activities" class="divider" data-show="#activities-section"></div>
 	<div class="section" id="activities-section">
 		<h3><?php _e("Attività") ?></h3>
@@ -265,12 +271,6 @@ new Header('conference', [
 			?>
 
 		</div>
-	</div>
-
-	<div id="rooms" class="divider" data-show="#rooms-section"></div>
-	<div class="section" id="rooms-section">
-		<h3><?php _e("Planimetria") ?></h3>
-		<img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
 	</div>
 
 	<div id="price" class="divider" data-show="#price-section"></div>
