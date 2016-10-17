@@ -28,7 +28,11 @@ trait LocationTrait {
 	}
 
 	function getLocationNote() {
-		return nl2br( _( $this->location_note ) );
+		return $this->location_note;
+	}
+
+	function printLocationNote($args = []) {
+		echo Markdown::parse( _( $this->location_note ), $args );
 	}
 
 	function getLocationGeothumb() {
