@@ -15,12 +15,13 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-require '/usr/share/php/markdown.php';
+require LIBMARKDOWN_PATH;
 
 class Markdown {
 	static function parse($s, $args = []) {
 		$s = markdown($s);
 
+		// Custom paragraph class
 		if( ! empty( $args['p'] ) ) {
 			$p = sprintf(
 				'<p class="%s">',
@@ -30,6 +31,13 @@ class Markdown {
 			$s = str_replace('<p>', $p, $s);
 		}
 
+		// Stripping displayed link protocols
+		$s = str_replace( [
+			'>http://',
+			'>https://'
+		], '>', $s);
+
+		// Tartet blank as default
 		$s = str_replace('<a ', '<a target="_blank" ', $s);
 
 		return $s;

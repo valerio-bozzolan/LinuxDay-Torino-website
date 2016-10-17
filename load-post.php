@@ -37,6 +37,9 @@ inherit_permissions( 'admin',   'user');
 register_permissions('admin',   'edit-users');
 register_permissions('admin',   'edit-events');
 
+defined('LIBMARKDOWN_PATH')
+	|| define('LIBMARKDOWN_PATH', '/usr/share/php/markdown.php');
+
 // /{conference_uid}/
 defined('PERMALINK_CONFERENCE')
 	|| define('PERMALINK_CONFERENCE', '/%s/');
