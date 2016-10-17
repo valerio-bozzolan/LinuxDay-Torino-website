@@ -68,9 +68,17 @@ class Header {
 
 		<?php } );
 		// Close header - End
+
+		$l = latest_language();
+
+		if($l) {
+			$l = $l->getISO();
+		} else {
+			$l = 'it';
+		}
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo latest_language()->getISO() ?>">
+<html lang="<?php echo $l ?>">
 <head>
 	<title><?php echo $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

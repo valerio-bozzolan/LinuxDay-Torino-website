@@ -270,16 +270,22 @@ new Header('conference', [
 	<div id="rooms" class="divider" data-show="#rooms-section"></div>
 	<div class="section" id="rooms-section">
 		<h3><?php _e("Planimetria") ?></h3>
-		<img class="materialboxed" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
+		<img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
 	</div>
 
 	<div id="price" class="divider" data-show="#price-section"></div>
 	<div class="section" id="price-section">
 		<div class="row">
 			<div class="col s12 m4">
-				<img class="responsive-img circle hoverable" src="<?php echo XXX ?>/4-liberta.png" alt="<?php
-					_("Le quattro libertà fontamentali del software libero")
-				?>" />
+				<div class="row">
+					<div class="col s6 m12 offset-s3">
+						<div class="center-align">
+							<img class="responsive-img circle hoverable" src="<?php echo XXX ?>/4-liberta.png" alt="<?php
+								_("Le quattro libertà fontamentali del software libero")
+							?>" />
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="col s12 m8">
 				<p class="flow-text"><?php printf(
