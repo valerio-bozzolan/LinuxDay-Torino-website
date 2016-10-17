@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Linux Day 2016 website contributors
-# This file is distributed under the same license as the linuxday package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 19:04+0200\n"
+"POT-Creation-Date: 2016-10-17 21:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,7 +243,7 @@ msgid ""
 "%s</strong>, dalle <strong>%s</strong>."
 msgstr ""
 
-#: 2016/index.php:72 2016/includes/class-Header.php:133
+#: 2016/index.php:72 2016/includes/class-Header.php:141
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr ""
 
@@ -386,11 +386,19 @@ msgstr ""
 msgid "volontari"
 msgstr ""
 
-#: 2016/index.php:275
+#: 2016/index.php:272
+msgid "Planimetria"
+msgstr ""
+
+#: 2016/index.php:273
+msgid "Planimetria Dipartimento di Informatica"
+msgstr ""
+
+#: 2016/index.php:284
 msgid "Le quattro libertà fontamentali del software libero"
 msgstr ""
 
-#: 2016/index.php:281
+#: 2016/index.php:293
 #, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
@@ -400,15 +408,15 @@ msgid ""
 "e gratuiti.<br /> Ci vediamo il <strong>%s</strong>!"
 msgstr ""
 
-#: 2016/index.php:288
+#: 2016/index.php:300
 msgid "22 ottobre"
 msgstr ""
 
-#: 2016/index.php:294
+#: 2016/index.php:306
 msgid "Scopri i nostri partner"
 msgstr ""
 
-#: 2016/index.php:296
+#: 2016/index.php:308
 #, php-format
 msgid "Partner %s"
 msgstr ""
@@ -710,11 +718,11 @@ msgstr ""
 msgid "%s - %s"
 msgstr ""
 
-#: 2016/includes/class-Header.php:136
+#: 2016/includes/class-Header.php:144
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr ""
 
-#: 2016/includes/class-Header.php:156
+#: 2016/includes/class-Header.php:164
 msgid "This is Wikipedia"
 msgstr ""
 
@@ -875,6 +883,7 @@ msgstr ""
 #: event[talk-sys-3]::event_description
 msgid ""
 "InfoSec → Information Security → Sicurezza delle informazioni.\n"
+"\n"
 "Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
 "maggiormente al sicuro la propria \"vita digitale\"."
 msgstr ""
@@ -887,7 +896,7 @@ msgstr ""
 msgid "Wikidata: la base di conoscenza libera"
 msgstr ""
 
-#: event[talk-misc-4]::event_title conference[2015]::conference_title7
+#: event[talk-misc-4]::event_title conference[2015]::conference_title8
 msgid "Wikipedia"
 msgstr ""
 
@@ -900,7 +909,7 @@ msgid "Linux Installation Party"
 msgstr ""
 
 #: event[lip]::event_abstract
-msgid "Installazione di distribuzioni GNU/Linux"
+msgid "Installazione di varie distribuzioni GNU/Linux."
 msgstr ""
 
 #: event[lip]::event_description
@@ -952,20 +961,20 @@ msgid ""
 "Biotecnologie."
 msgstr ""
 
-#: room[aula-1]::room_name
-msgid "Aula A"
+#: room[a]::room_name
+msgid "Aula A (dev)"
 msgstr ""
 
-#: room[aula-2]::room_name
-msgid "Aula B"
+#: room[b]::room_name
+msgid "Aula B (base)"
 msgstr ""
 
-#: room[aula-3]::room_name
-msgid "Aula C"
+#: room[c]::room_name
+msgid "Aula C (misc)"
 msgstr ""
 
-#: room[aula-4]::room_name
-msgid "Aula D"
+#: room[d]::room_name
+msgid "Aula D (sys)"
 msgstr ""
 
 #: room[lab-1]::room_name
@@ -1020,15 +1029,15 @@ msgstr ""
 msgid "C++"
 msgstr ""
 
-#: conference[2016]::conference_title1
+#: conference[2016]::conference_title2
 msgid "Ubuntu"
 msgstr ""
 
-#: conference[2016]::conference_title4
+#: conference[2016]::conference_title5
 msgid "GNU/Linux"
 msgstr ""
 
-#: conference[2016]::conference_title7
+#: conference[2016]::conference_title8
 msgid "Turbo Pascal"
 msgstr ""
 
@@ -1060,11 +1069,11 @@ msgstr ""
 msgid "Recupero del RAEE"
 msgstr ""
 
-#: conference[2015]::conference_title1
+#: conference[2015]::conference_title2
 msgid "Blender"
 msgstr ""
 
-#: conference[2015]::conference_title4
+#: conference[2015]::conference_title5
 msgid "C"
 msgstr ""
 
@@ -1096,7 +1105,7 @@ msgstr ""
 msgid "Qualcuno ha detto... software libero?"
 msgstr ""
 
-#: event[talk-base-1]::event_title1
+#: event[talk-base-1]::event_title2
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
@@ -1163,7 +1172,7 @@ msgid ""
 "dielettrica."
 msgstr ""
 
-#: event[talk-base-1]::event_description3
+#: event[talk-base-1]::event_description4
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (<http://"
@@ -1176,7 +1185,7 @@ msgid ""
 "mi ostacola)."
 msgstr ""
 
-#: event[talk-base-1]::event_description8
+#: event[talk-base-1]::event_description9
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr ""
 
@@ -1188,12 +1197,8 @@ msgid ""
 "Digitale. Consulente informatico si occupa di system engineering."
 msgstr ""
 
-#: user[davide.isoardi]::user_bio
+#: user[davide.isoardi]::user_bio user[davide.vergari]::user_bio
 msgid "Big Data System Architect e sysadmin."
-msgstr ""
-
-#: user[davide.vergari]::user_bio
-msgid "Big Data System Architect e sysadmin"
 msgstr ""
 
 #: user[davide.mainardi]::user_bio

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 19:04+0200\n"
+"POT-Creation-Date: 2016-10-17 21:17+0200\n"
 "PO-Revision-Date: 2016-10-11 21:27+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -250,7 +250,7 @@ msgstr ""
 "at the <strong>%s</strong> of the %s, on <strong>%s</strong>, <strong>%s</"
 "strong>, from <strong>%s</strong>."
 
-#: 2016/index.php:72 2016/includes/class-Header.php:133
+#: 2016/index.php:72 2016/includes/class-Header.php:141
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
@@ -399,11 +399,19 @@ msgstr ""
 msgid "volontari"
 msgstr "volunteers"
 
-#: 2016/index.php:275
+#: 2016/index.php:272
+msgid "Planimetria"
+msgstr "Planimetry"
+
+#: 2016/index.php:273
+msgid "Planimetria Dipartimento di Informatica"
+msgstr "Computer Science department planimetry"
+
+#: 2016/index.php:284
 msgid "Le quattro libertà fontamentali del software libero"
 msgstr "The four fundamentals of Free as in Freedom software:"
 
-#: 2016/index.php:281
+#: 2016/index.php:293
 #, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
@@ -418,15 +426,15 @@ msgstr ""
 "Days always indipendent, Free and without costs.<br /> See you on <strong>"
 "%s</strong>!"
 
-#: 2016/index.php:288
+#: 2016/index.php:300
 msgid "22 ottobre"
 msgstr "October 22nd"
 
-#: 2016/index.php:294
+#: 2016/index.php:306
 msgid "Scopri i nostri partner"
 msgstr "Our partners"
 
-#: 2016/index.php:296
+#: 2016/index.php:308
 #, php-format
 msgid "Partner %s"
 msgstr "%s partner"
@@ -739,11 +747,11 @@ msgstr ""
 msgid "%s - %s"
 msgstr "%s - %s"
 
-#: 2016/includes/class-Header.php:136
+#: 2016/includes/class-Header.php:144
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/includes/class-Header.php:156
+#: 2016/includes/class-Header.php:164
 msgid "This is Wikipedia"
 msgstr "This is Wikipedia"
 
@@ -951,10 +959,12 @@ msgstr "InfoSec. How to use."
 #: event[talk-sys-3]::event_description
 msgid ""
 "InfoSec → Information Security → Sicurezza delle informazioni.\n"
+"\n"
 "Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
 "maggiormente al sicuro la propria \"vita digitale\"."
 msgstr ""
 "InfoSec → Information Security.\n"
+"\n"
 "Talk will show application and give practical advice in order to keep "
 "(mainly) safe you \"digital life\"."
 
@@ -966,7 +976,7 @@ msgstr "Sustainability and Open Culture at University"
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: event[talk-misc-4]::event_title conference[2015]::conference_title7
+#: event[talk-misc-4]::event_title conference[2015]::conference_title8
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
@@ -979,8 +989,8 @@ msgid "Linux Installation Party"
 msgstr "Linux Installation Party"
 
 #: event[lip]::event_abstract
-msgid "Installazione di distribuzioni GNU/Linux"
-msgstr "Installation of various GNU/Linux"
+msgid "Installazione di varie distribuzioni GNU/Linux."
+msgstr "Installation of various GNU/Linux distributions."
 
 #: event[lip]::event_description
 msgid ""
@@ -1051,21 +1061,21 @@ msgstr ""
 "**Nizza**'s underground station is at 50 mt from the Biotechnologies "
 "Department. "
 
-#: room[aula-1]::room_name
-msgid "Aula A"
-msgstr "Room A"
+#: room[a]::room_name
+msgid "Aula A (dev)"
+msgstr "Room A (dev)"
 
-#: room[aula-2]::room_name
-msgid "Aula B"
-msgstr "Room B"
+#: room[b]::room_name
+msgid "Aula B (base)"
+msgstr "Room B (base)"
 
-#: room[aula-3]::room_name
-msgid "Aula C"
-msgstr "Room C"
+#: room[c]::room_name
+msgid "Aula C (misc)"
+msgstr "Room C (misc)"
 
-#: room[aula-4]::room_name
-msgid "Aula D"
-msgstr "Room D"
+#: room[d]::room_name
+msgid "Aula D (sys)"
+msgstr "Room D (sys)"
 
 #: room[lab-1]::room_name
 msgid "Spazio Coderdojo"
@@ -1119,15 +1129,15 @@ msgstr "Java"
 msgid "C++"
 msgstr "C++"
 
-#: conference[2016]::conference_title1
+#: conference[2016]::conference_title2
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: conference[2016]::conference_title4
+#: conference[2016]::conference_title5
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
-#: conference[2016]::conference_title7
+#: conference[2016]::conference_title8
 msgid "Turbo Pascal"
 msgstr "Turbo Pascal"
 
@@ -1159,11 +1169,11 @@ msgstr "Teach"
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: conference[2015]::conference_title1
+#: conference[2015]::conference_title2
 msgid "Blender"
 msgstr "Blender"
 
-#: conference[2015]::conference_title4
+#: conference[2015]::conference_title5
 msgid "C"
 msgstr "C"
 
@@ -1195,7 +1205,7 @@ msgstr "Other"
 msgid "Qualcuno ha detto... software libero?"
 msgstr "Did someone say... Free as in Freedom software?"
 
-#: event[talk-base-1]::event_title1
+#: event[talk-base-1]::event_title2
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
@@ -1303,7 +1313,7 @@ msgstr ""
 "interval, how does the ionic exchange work on glass and how to calculate "
 "movement of propagation in a dielectric waveguide."
 
-#: event[talk-base-1]::event_description3
+#: event[talk-base-1]::event_description4
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (<http://"
@@ -1324,7 +1334,7 @@ msgstr ""
 "(what languages? It's not important, learning their syntax is not "
 "preclusive)."
 
-#: event[talk-base-1]::event_description8
+#: event[talk-base-1]::event_description9
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr "System Architect at Project Archivio SRL and Dicobit."
 
@@ -1341,13 +1351,9 @@ msgstr ""
 "dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
 "system engineering. "
 
-#: user[davide.isoardi]::user_bio
+#: user[davide.isoardi]::user_bio user[davide.vergari]::user_bio
 msgid "Big Data System Architect e sysadmin."
 msgstr "Big Data System Architect and sysadmin."
-
-#: user[davide.vergari]::user_bio
-msgid "Big Data System Architect e sysadmin"
-msgstr "Big Data System Architect and sysadmin"
 
 #: user[davide.mainardi]::user_bio
 msgid ""
@@ -1371,6 +1377,9 @@ msgstr ""
 "to meet in computer science. I work with data everyday at Synapta, adding "
 "new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
 "semantic Web. I love to play chess and drink orange soda. Even not together. "
+
+#~ msgid "Big Data System Architect e sysadmin"
+#~ msgstr "Big Data System Architect and sysadmin"
 
 #~ msgid "Il talk si terrà il %s alle ore %s in %s."
 #~ msgstr "The talk will be on the %s at %s in %s."

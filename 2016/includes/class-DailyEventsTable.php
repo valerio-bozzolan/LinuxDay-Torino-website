@@ -136,7 +136,7 @@ class DailyEventsTable {
 		$users = $this->getUsers($h, $t);
 
 		if( ! $users ) {
-			return _("nessuno");
+			return "//";
 		}
 
 		$users = $this->events[$h][$t]->users;

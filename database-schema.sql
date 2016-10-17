@@ -137,11 +137,11 @@ INSERT INTO `ldto_event` VALUES (28,'talk-dev-3','Dieci anni dietro a FidoCadJ',
 INSERT INTO `ldto_event` VALUES (29,'talk-dev-4','Un bot di Telegram con Python',NULL,'Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.','Slide con esempi di codice e presentazione del Raspberry dal vivo, se c\'è connettività e tempo una breve dimostrazione.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/bot_father.jpg',1,2,2,1);
 INSERT INTO `ldto_event` VALUES (30,'talk-sys-2','Docker: distribuiamo applicazioni',NULL,NULL,'Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\nUna risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?',NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00','/2016/static/libre-icons/docker.png',1,3,3,1);
 INSERT INTO `ldto_event` VALUES (31,'talk-sys-4','Hadoop - BigData in streaming',NULL,NULL,'Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l\'elaborazione in streaming con Apache NiFi, Kafka e Solr.',NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/hadoop.png',1,3,3,1);
-INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'InfoSec → Information Security → Sicurezza delle informazioni.\nIl talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'InfoSec → Information Security → Sicurezza delle informazioni.\n\nIl talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
 INSERT INTO `ldto_event` VALUES (33,'talk-misc-2','Sostenibilità e Open Culture all\'Università',NULL,NULL,NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,4,4,1);
 INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscenza libera',NULL,NULL,NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/wikidata.png',1,4,4,1);
 INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',1,4,4,1);
-INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di distribuzioni GNU/Linux','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,1,9,5,2);
+INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di varie distribuzioni GNU/Linux.','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,1,9,5,2);
 INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,1,10,5,3);
 /*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -221,7 +221,7 @@ CREATE TABLE `ldto_location` (
 
 LOCK TABLES `ldto_location` WRITE;
 /*!40000 ALTER TABLE `ldto_location` DISABLE KEYS */;
-INSERT INTO `ldto_location` VALUES (1,'dipartimento-di-informatica-di-torino','Dipartimento di Informatica','Torino, Via Pessinetto 12','Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.\r\n\r\nDalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n°**59** e n°**59/** scendendo alla fermata *Svizzera*.','/2016/static/openstreetmap-unito.svg',45.09,7.65917,NULL);
+INSERT INTO `ldto_location` VALUES (1,'dipartimento-di-informatica-di-torino','Dipartimento di Informatica','Torino, Via Pessinetto 12','Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.\n\nDalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n°**59** e n°**59/** scendendo alla fermata *Svizzera*.','/2016/static/openstreetmap-unito.svg',45.09,7.65917,NULL);
 INSERT INTO `ldto_location` VALUES (2,'dipartimento-di-biotecnologie','Dipartimento di Biotecnologie','Via Nizza 52, Torino','La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.','http://linuxdaytorino.org/2015/images/biotech.jpg',9.999,7.674,NULL);
 /*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -251,10 +251,10 @@ CREATE TABLE `ldto_room` (
 
 LOCK TABLES `ldto_room` WRITE;
 /*!40000 ALTER TABLE `ldto_room` DISABLE KEYS */;
-INSERT INTO `ldto_room` VALUES (1,'aula-1','Aula A',1);
-INSERT INTO `ldto_room` VALUES (2,'aula-2','Aula B',1);
-INSERT INTO `ldto_room` VALUES (3,'aula-3','Aula C',1);
-INSERT INTO `ldto_room` VALUES (4,'aula-4','Aula D',1);
+INSERT INTO `ldto_room` VALUES (1,'a','Aula A (dev)',1);
+INSERT INTO `ldto_room` VALUES (2,'b','Aula B (base)',1);
+INSERT INTO `ldto_room` VALUES (3,'c','Aula C (misc)',1);
+INSERT INTO `ldto_room` VALUES (4,'d','Aula D (sys)',1);
 INSERT INTO `ldto_room` VALUES (5,'lab-1','Spazio Coderdojo',1);
 INSERT INTO `ldto_room` VALUES (6,'lab-2','Spazio Restart',1);
 INSERT INTO `ldto_room` VALUES (8,'first-floor','Primo piano',2);
@@ -428,14 +428,14 @@ INSERT INTO `ldto_user` VALUES (12,'francesco','user',1,0,'Francesco','Tucci',NU
 INSERT INTO `ldto_user` VALUES (13,'massimo','user',1,0,'Massimo','Nuvoli',NULL,'/2016/static/user/massimo.jpg','!',NULL,NULL,'Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (14,'elia','user',1,0,'Elia','Bellussi',NULL,NULL,'!',NULL,NULL,'Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell\'Informatica (già Museo Piemontese dell\'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell\'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (15,'davide.isoardi','user',1,0,'Davide','Isoardi',NULL,NULL,'!',NULL,NULL,'Big Data System Architect e sysadmin.',NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (16,'davide.vergari','user',1,0,'Davide','Vergari',NULL,NULL,'!',NULL,NULL,'Big Data System Architect e sysadmin',NULL,'DavideVergari',NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (16,'davide.vergari','user',1,0,'Davide','Vergari',NULL,NULL,'!',NULL,NULL,'Big Data System Architect e sysadmin.',NULL,'DavideVergari',NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (17,'davide.mainardi','user',1,0,'Davide','Mainardi',NULL,NULL,'!',NULL,NULL,'Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell\'Ordine degli Ingegneri della Provincia di Torino.',NULL,'ingmainardi',NULL,NULL,NULL,'dmainardi');
 INSERT INTO `ldto_user` VALUES (18,'gianfranco.poncini','user',1,0,'Gianfranco','Poncini',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (20,'marco.signoretto','user',1,0,'Marco','Signoretto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (21,'simone','user',1,0,'Simone','Massi',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (23,'alessio','user',1,0,'Alessio','Melandri',NULL,'/2016/static/user/alessio.jpg','!',NULL,NULL,'Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell\'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l\'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.',NULL,NULL,NULL,'alessiomelandri',NULL,'alemela');
 INSERT INTO `ldto_user` VALUES (24,'mario','user',0,0,'Mario','Lacaj',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (25,'valerio.saschetto','user',1,0,'Valerio','Vaschetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (25,'valerio.sacchetto','user',1,0,'Valerio','Sacchetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -506,4 +506,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-17 15:12:06
+-- Dump completed on 2016-10-17 21:17:32

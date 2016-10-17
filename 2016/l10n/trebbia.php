@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-17T15:29:01+02:00
+# Last update: 2016-10-17T21:17:54+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -99,6 +99,7 @@ _("InfoSec. Istruzioni per l'uso.");
 
 // event[talk-sys-3]::event_description
 _("InfoSec → Information Security → Sicurezza delle informazioni.
+
 Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".");
 
 // event[talk-misc-2]::event_title
@@ -117,7 +118,7 @@ _("LIP");
 _("Linux Installation Party");
 
 // event[lip]::event_abstract
-_("Installazione di distribuzioni GNU/Linux");
+_("Installazione di varie distribuzioni GNU/Linux.");
 
 // event[lip]::event_description
 _("Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.");
@@ -156,17 +157,17 @@ _("Via Nizza 52, Torino");
 // location[2]::location_note
 _("La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.");
 
-// room[aula-1]::room_name
-_("Aula A");
+// room[a]::room_name
+_("Aula A (dev)");
 
-// room[aula-2]::room_name
-_("Aula B");
+// room[b]::room_name
+_("Aula B (base)");
 
-// room[aula-3]::room_name
-_("Aula C");
+// room[c]::room_name
+_("Aula C (misc)");
 
-// room[aula-4]::room_name
-_("Aula D");
+// room[d]::room_name
+_("Aula D (sys)");
 
 // room[lab-1]::room_name
 _("Spazio Coderdojo");
@@ -314,7 +315,7 @@ _("Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell'Informatic
 _("Big Data System Architect e sysadmin.");
 
 // user[davide.vergari]::user_bio
-_("Big Data System Architect e sysadmin");
+_("Big Data System Architect e sysadmin.");
 
 // user[davide.mainardi]::user_bio
 _("Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell'Ordine degli Ingegneri della Provincia di Torino.");
