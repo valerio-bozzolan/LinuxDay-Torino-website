@@ -30,3 +30,12 @@
 .ld-social a {
 	margin:10px;
 }
+
+/*
+ * https://github.com/Dogfalo/materialize/issues/3327
+ */
+@media only screen and (max-width: 600px) {
+	.row.valign-wrapper {
+		display: inherit;
+	}
+} 

@@ -46,19 +46,21 @@ new Header('user', [
 	<div class="row">
 
 		<!-- Profile image -->
-		<div class="col s12 l4">
-			<div>
-				<?php if( $user->user_site ): ?>
-					<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>">
-				<?php endif ?>
-					<img class="responsive-img hoverable z-depth-1" src="<?php
-						echo $user->getUserImage()
-					?>" alt="<?php
-						_esc_attr( $user->getUserFullname() )
-					?>" />
-				<?php if( $user->user_site ): ?>
-					</a>
-				<?php endif ?>
+		<div class="col s12 m6 l4">
+			<div class="row">
+				<div class="col s8">
+					<?php if( $user->user_site ): ?>
+						<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>" target="_blank">
+					<?php endif ?>
+						<img class="responsive-img hoverable z-depth-1" src="<?php
+							echo $user->getUserImage()
+						?>" alt="<?php
+							_esc_attr( $user->getUserFullname() )
+						?>" />
+					<?php if( $user->user_site ): ?>
+						</a>
+					<?php endif ?>
+				</div>
 			</div>
 
 			<!-- Start website -->
@@ -69,7 +71,8 @@ new Header('user', [
 						$user->user_site,
 						_("Sito personale") . icon('contact_mail', 'right'),
 						null,
-						'btn waves-effect purple darken-2'
+						'btn waves-effect purple darken-2',
+						'target="_blank"'
 					) ?></p>
 				</div>
 			</div>
@@ -79,7 +82,7 @@ new Header('user', [
 		<!-- End profile image -->
 
 		<!-- Start sidebar -->
-		<div class="col s12 l8">
+		<div class="col s12 m6 l8">
 
 			<!-- Start skills -->
 			<?php $skills = $user->queryUserSkills(); ?>
@@ -118,7 +121,7 @@ new Header('user', [
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Bio") ?></h3>
-		<p class="flow-text"><?php $user->printUserBio() ?></p>
+		<?php $user->printUserBio(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End user bio -->
@@ -129,7 +132,7 @@ new Header('user', [
 		<h3><?php _e("Talk condotti") ?></h3>
 
 		<?php $events = $user->queryUserEvents(); ?>
-		<?php if($events): ?>
+		<?php if($events->num_rows): ?>
 			<table>
 			<thead>
 			<tr>
@@ -179,7 +182,7 @@ new Header('user', [
 			<div class="col s4 m3 l2">
 				<?php
 				$title = sprintf( _("%s su %s"), $user->getUserFullname(), $social );
-				$logo = $is_icon ? icon($path) : HTML::img(XXX . "/social/$path", $social, $title);
+				$logo = $is_icon ? icon($path) : HTML::img(XXX . "/social/$path", $social, $title, 'responsive-img');
 				echo HTML::a($profile, $logo, $title, null, 'target="_blank"');
 				?>
 			</div>

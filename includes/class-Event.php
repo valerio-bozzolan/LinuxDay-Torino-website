@@ -88,19 +88,19 @@ trait EventTrait {
 	}
 
 	function getEventDescription() {
-		return _( $this->event_description );
+		return $this->event_description;
 	}
 
 	function getEventAbstract() {
-		return _( $this->event_abstract );
+		return $this->event_abstract;
 	}
 
-	function printEventDescription() {
-		echo nl2br( $this->getEventDescription() );
+	function printEventDescription($args = []) {
+		echo Markdown::parse( _( $this->getEventDescription() ), $args );
 	}
 
-	function printEventAbstract() {
-		echo nl2br( $this->getEventAbstract() );
+	function printEventAbstract($args = []) {
+		echo Markdown::parse( _( $this->getEventAbstract() ), $args );
 	}
 
 	function queryEventUsers($fields = null) {

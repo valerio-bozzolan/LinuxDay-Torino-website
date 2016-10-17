@@ -57,26 +57,37 @@ new Header('event', $args);
 	<?php endif ?>
 
 	<div class="row">
-		<div class="col s12 m4">
-			<img class="responsive-img hoverable" src="<?php
-				if( $event->hasEventImage() ) {
-					echo $event->getEventImage();
-				} else {
-					echo DEFAULT_IMAGE;
-				}
-			?>" alt="<?php
-				_esc_attr( $event->event_title )
-			?>" />
+		<div class="col s12 m5 l4">
+			<div class="row">
+				<div class="col s6 m12">
+					<img class="responsive-img hoverable" src="<?php
+						if( $event->hasEventImage() ) {
+							echo $event->getEventImage();
+						} else {
+							echo DEFAULT_IMAGE;
+						}
+					?>" alt="<?php
+						_esc_attr( $event->getEventTitle() )
+					?>" />
+				</div>
+			</div>
 		</div>
 
 		<!-- Start room -->
-		<div class="col s12 l8">
-			<p class="flow-text"><?php printf(
-				_("Il talk si terrà il %s alle ore %s in %s."),
-				"<b>{$event->getEventStart("d/m/Y")}</b>",
-				"<b>{$event->getEventStart("H:i")}</b>",
-				"<b>{$event->room_name}</b>"
-			) ?></p>
+		<div class="col s12 m6 offset-m1 l5 offset-l3">
+			<table class="striped bordered">
+				<tr>
+					<th><?php echo icon('access_time', 'left'); _e("Quando:") ?></th>
+					<td><?php echo $event->getRoomName() ?><br /> <?php echo $event->getConferenceTitle() ?></td>
+				</tr>
+				<tr>
+					<th><?php echo icon('room', 'left'); _e("Dove:") ?></th>
+					<td><?php printf(
+						_("Ore %s"),
+						$event->getEventStart('H:i')
+					) ?><br /> <?php echo $event->getEventStart('d/m/Y') ?></td>
+				</tr>
+			</table>
 		</div>
 		<!-- End room -->
 	</div>
@@ -86,7 +97,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Abstract") ?></h3>
-		<p class="flow-text"><?php $event->printEventAbstract() ?></p>
+		<?php $event->printEventAbstract(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event abstract -->
@@ -96,7 +107,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Descrizione") ?></h3>
-		<p class="flow-text"><?php $event->printEventDescription() ?></p>
+		<?php $event->printEventDescription(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
@@ -149,7 +160,7 @@ new Header('event', $args);
 			<?php while( $user = $users->fetch_object('User') ): ?>
 				<div class="col s12 m6">
 					<div class="row valign-wrapper">
-						<div class="col s12 m4 l3">
+						<div class="col s4 l3">
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL()
 							?>" title="<?php _esc_attr( sprintf(
@@ -165,7 +176,7 @@ new Header('event', $args);
 								) ?>" />
 							</a>
 						</div>
-						<div class="col s12 m4 l9">
+						<div class="col s8 l9">
 							<?php echo HTML::a(
 								$user->getUserURL(),
 								"<h4>{$user->getUserFullname()}</h4>",

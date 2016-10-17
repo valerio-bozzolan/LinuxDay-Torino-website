@@ -108,11 +108,11 @@ trait UserTrait {
 	}
 
 	function getUserBio() {
-		return _($this->user_bio);
+		return $this->user_bio;
 	}
 
-	function printUserBio() {
-		echo nl2br( $this->getUserBio() );
+	function printUserBio($args = []) {
+		echo Markdown::parse( _( $this->getUserBio() ), $args);
 	}
 
 	function isUserSocial() {
