@@ -12,8 +12,8 @@ https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg
 Docker logo (Apache license)
 https://commons.wikimedia.org/wiki/File:Docker_%28container_engine%29_logo.png
 
-IPv6 launch badge (CC By 3.0 Unported)
-https://commons.wikimedia.org/wiki/File:World_IPv6_launch_badge.svg
+F-Droid Logo 4 (GNU GPL v3+)
+https://commons.wikimedia.org/wiki/File:F-Droid_Logo_4.svg
 
 The GIMP icon (GNU GPL)
 https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg
@@ -35,6 +35,9 @@ https://commons.wikimedia.org/wiki/File:HTTPS_icon.png
 
 Inkscape (GNU GPLv3)
 https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg
+
+IPv6 launch badge (CC By 3.0 Unported)
+https://commons.wikimedia.org/wiki/File:World_IPv6_launch_badge.svg
 
 Leaflet logo (BSD-2)
 https://commons.wikimedia.org/wiki/File:Leaflet_logo.svg

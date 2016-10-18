@@ -200,6 +200,13 @@ new Header('credits');
 			_("Validatore standard HTML, JavaScript e CSS"),
 			'w3c.png'
 		);
+		$tech(
+			"F-Droid",
+			'https://f-droid.org',
+			'gnu-gpl-v3',
+			_("Catalogo di software libero per Android"),
+			'f-droid.png'
+		);
 		?>
 		</div>
 	</div>

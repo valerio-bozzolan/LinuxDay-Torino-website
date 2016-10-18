@@ -104,48 +104,12 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-	<div id="where" class="divider" data-show="#where-section"></div>
-	<div id="where-section" class="section">
-		<h3><?php _e("Come arrivare") ?></h3>
-		<div class="row">
-			<div class="col s12 m4">
-				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
-				<?php echo $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
-			</div>
-			<div class="col s10 m8">
-				<div class="card-panel">
-					<?php $conference->printLocationLeaflet() ?>
-					<noscript>
-						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
-						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
-					</noscript>
-					<div class="row valign-wrapper">
-						<div class="col s8">
-							<p class="flow-text"><?php echo $conference->getLocationAddress() ?></p>
-						</div>
-						<div class="col s4">
-							<p class="right"><?php echo HTML::a(
-								$conference->getLocationGeoOSM(),
-								icon('place', 'right'),
-								sprintf(
-									_("Vedi %s su OpenStreetMap"),
-									esc_html( $conference->getConferenceTitle() )
-								),
-								'btn-floating btn-large purple darken-3 waves-effect',
-								'target="_blank"'
-							) ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
-
 		<h3><?php _e("Talk") ?></h3>
+
+		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
 		<p class="flow-text"><?php printf(
 			_(
 				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
@@ -159,18 +123,70 @@ new Header('conference', [
 			_("In seguito si riporta la tabella dei talk suddivisa in %s categorie:"),
 			"<b>{$eventsTable->countTracks()}</b>"
 		) ?></p>
+		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 
 		<?php $eventsTable->printTable(); ?>
-
-		<div class="card-panel hide-on-large-only"><?php echo icon('smartphone', 'left'); _e("<strong>Schermo piccolo?</strong> Puoi scorrere la tabella verso destra.") ?></div>
-
-		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
 	</div>
 
 	<div id="rooms" class="divider" data-show="#rooms-section"></div>
 	<div class="section" id="rooms-section">
-		<h3><?php _e("Planimetria") ?></h3>
-		<img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" />
+		<div class="row">
+			<div class="col s12 m4 l4">
+				<h3><?php _e("Planimetria") ?></h3>
+				<p class="flow-text"><?php _e("La manifestazione sarà suddivisa in aule tematiche.") ?></p>
+			</div>
+			<div class="col s12 m7 offset-m1 l6 offset-l2">
+				<div class="card-panel">
+					<div class="center-align">
+						<p><img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" /></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fdroid" class="divider" data-show="#fdroid-section"></div>
+	<div class="section" id="fdroid-section">
+		<h3><?php _e("App Android") ?></h3>
+		<p class="flow-text"><?php printf(
+			_("La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"),
+			"<em>LDTO Companion</em>"
+		) ?></p>
+		<div class="row">
+			<div class="col s12 m5 l6">
+				<div class="row">
+					<div class="col s4 offset-s4 m12">
+						<img src="<?php echo XXX ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m7 l6">
+				<p><?php
+					echo icon('looks_one', 'left');
+					printf(
+						_("Scarica e installa %s:"),
+						"F-Droid"
+					);
+				?></p>
+				<p>
+					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org" target="_blank">
+						<?php echo icon('file_download', 'left'); _e("Installa F-Droid") ?>
+					</a>
+				</p>
+				<p><?php
+					echo icon('looks_two', 'left');
+					printf(
+						_("Scarica e installa %s:"),
+						"LDTO Companion"
+					);
+				?></p>
+				<p>
+					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
+							<?php echo icon('file_download', 'left'); _e("Installa LDTO16") ?>
+					</a>
+				</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="activities" class="divider" data-show="#activities-section"></div>
@@ -235,22 +251,12 @@ new Header('conference', [
 			);
 			$box(
 				_("Laboratorio di coding per i più piccoli a tema Linux Day."),
-				sprintf(
-					_("%s e %s"),
-					HTML::a(
-						'http://coderdojotorino.it',
-						_("CoderDojo Torino 1"),
-						null,
-						'white-text',
-						'target="_blank"'
-					),
-					HTML::a(
-						'http://www.coderdojotorino2.it',
-						_("CoderDojo Torino 2"),
-						null,
-						'white-text',
-						'target="_blank"'
-					)
+				HTML::a(
+					'http://www.coderdojotorino2.it',
+					_("CoderDojo Torino 2"),
+					null,
+					'white-text',
+					'target="_blank"'
 				),
 				null,
 				null,
@@ -273,6 +279,43 @@ new Header('conference', [
 		</div>
 	</div>
 
+	<div id="where" class="divider" data-show="#where-section"></div>
+	<div id="where-section" class="section">
+		<div class="row">
+			<div class="col s12 m4">
+				<h3><?php _e("Come arrivare") ?></h3>
+				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
+				<?php echo $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
+			</div>
+			<div class="col s10 m8">
+				<div class="card-panel">
+					<?php $conference->printLocationLeaflet() ?>
+					<noscript>
+						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
+						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
+					</noscript>
+					<div class="row valign-wrapper">
+						<div class="col s8">
+							<p class="flow-text"><?php echo $conference->getLocationAddress() ?></p>
+						</div>
+						<div class="col s4">
+							<p class="right"><?php echo HTML::a(
+								$conference->getLocationGeoOSM(),
+								icon('place', 'right'),
+								sprintf(
+									_("Vedi %s su OpenStreetMap"),
+									esc_html( $conference->getConferenceTitle() )
+								),
+								'btn-floating btn-large purple darken-3 waves-effect',
+								'target="_blank"'
+							) ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="price" class="divider" data-show="#price-section"></div>
 	<div class="section" id="price-section">
 		<div class="row">
@@ -288,6 +331,7 @@ new Header('conference', [
 				</div>
 			</div>
 			<div class="col s12 m8">
+				<h3><?php _e("Ingresso gratuito") ?></h3>
 				<p class="flow-text"><?php printf(
 					_(
 					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".

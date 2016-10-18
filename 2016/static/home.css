@@ -44,6 +44,8 @@ th {
 	line-height:1.1;
 }
 #rooms-section img {
-	max-width: 70%;
-	margin: auto;
+	max-width: 60%;
+}
+#f-droid .btn {
+	width:99%;
 }
