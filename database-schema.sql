@@ -180,7 +180,6 @@ INSERT INTO `ldto_event_user` VALUES (23,25,0);
 INSERT INTO `ldto_event_user` VALUES (23,26,0);
 INSERT INTO `ldto_event_user` VALUES (24,7,0);
 INSERT INTO `ldto_event_user` VALUES (25,1,0);
-INSERT INTO `ldto_event_user` VALUES (26,9,0);
 INSERT INTO `ldto_event_user` VALUES (27,10,0);
 INSERT INTO `ldto_event_user` VALUES (28,11,0);
 INSERT INTO `ldto_event_user` VALUES (29,12,0);
@@ -421,7 +420,6 @@ INSERT INTO `ldto_user` VALUES (2,'oirasor','admin',1,1,'Rosario','Antoci',NULL,
 INSERT INTO `ldto_user` VALUES (3,'dario','user',1,0,'Dario','Sera',NULL,NULL,'!',NULL,NULL,'Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n\nUtilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (7,'renzo','user',1,0,'Renzo','Davoli',NULL,'/2016/static/user/davoli.jpg','!',NULL,NULL,'Ricercatore, Maker, Insegnante, Sviluppatore...\nCinquantenne all\'anagrafe, continua a giocare e a pensare liberamente.\nIn realtà vuole salvare il mondo, ma non ditelo a nessuno.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (8,'luigi.maselli','user',1,0,'Luigi','Maselli',NULL,NULL,'!','https://grigio.org','mit','Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance.',NULL,'grigi0',NULL,NULL,NULL,'grigio');
-INSERT INTO `ldto_user` VALUES (9,'flavio','user',1,0,'','N.D.',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (10,'marco.cavallini','user',1,0,'Marco','Cavallini',NULL,'/2016/static/user/cavallini.jpg','!',NULL,NULL,'Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni \'80. Inizia l\'attività di evangelizzazione all\'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.\n\nÈ membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.',NULL,NULL,NULL,'marcocavallini',NULL,NULL);
 INSERT INTO `ldto_user` VALUES (11,'davide','user',1,0,'Davide','Bucci',NULL,NULL,'!','http://davbucci.chez-alice.fr/',NULL,'Davide è viaggiatore transalpino, programmatore della domenica (se non fa bello, non c\'è neve e non si va a sciare) e qualche volta anche del sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano gli amplificatori operazionali, in altre occasioni canta a squarciagola con altre persone. Appassionato di vecchi computer e di elettronica analogica, si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. Coordinatore del progetto open source FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due posti, soprattutto se a motore centrale.\n\nDavide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un\'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d\'onda dielettrica.',NULL,'davbucci',NULL,NULL,NULL,'DarwinNE');
 INSERT INTO `ldto_user` VALUES (12,'francesco','user',1,0,'Francesco','Tucci',NULL,NULL,'!','http://www.iltucci.com',NULL,'Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (<http://geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al mese.\n\nMini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola).',NULL,'cesco_78','francesco.tucci',NULL,NULL,NULL);
@@ -506,4 +504,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-17 21:17:32
+-- Dump completed on 2016-10-18 19:55:40
