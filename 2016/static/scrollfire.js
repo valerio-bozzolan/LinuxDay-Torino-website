@@ -3,12 +3,6 @@ $(document).ready(function () {
 		return;
 	}
 
-	$("#where-section").fadeTo(0, 0);
-	$("#talk-section").fadeTo(0, 0);
-	$("#rooms-section").fadeTo(0, 0);
-	$("#activities-section").fadeTo(0, 0);
-	$("#price-section").fadeTo(0, 0);
-
 	function showSection($el) {
 		var show = $( $el ).data("show");
 		console.log(show);
@@ -18,32 +12,16 @@ $(document).ready(function () {
 
 	var offset = 150;
 
-	var options = [
-		{
-			selector: '#where',
+	var asd = ['talk', 'rooms', 'fdroid', 'activities', 'where', 'price'];
+	var options = [];
+	for(var i=0; i<asd.length; i++) {
+		$("#" + asd[i] + "-section").fadeTo(0, 0);
+		options[i] = {
+			selector: '#' + asd[i],
 			offset: offset,
 			callback: showSection
-		},
-		{
-			selector: '#talk',
-			offset: offset,
-			callback: showSection
-		},
-		{
-			selector: '#rooms',
-			offset: offset,
-			callback: showSection
-		},
-		{
-			selector: '#activities',
-			offset: offset,
-			callback: showSection
-		},
-		{
-			selector: '#price',
-			offset: offset,
-			callback: showSection
-		}
-	];
+		};
+	}	
+
 	Materialize.scrollFire(options);
 } );
