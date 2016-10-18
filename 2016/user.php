@@ -121,7 +121,7 @@ new Header('user', [
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Bio") ?></h3>
-		<?php $user->printUserBio(['p' => 'flow-text']) ?>
+		<?php echo $user->getUserBioHTML(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End user bio -->

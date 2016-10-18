@@ -110,7 +110,7 @@ new Header('conference', [
 		<div class="row">
 			<div class="col s12 m4">
 				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
-				<?php $conference->printLocationNote(['p' => 'flow-text']) ?>
+				<?php echo $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
 			</div>
 			<div class="col s10 m8">
 				<div class="card-panel">

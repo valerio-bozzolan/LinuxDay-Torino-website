@@ -50,6 +50,10 @@ trait EventTrait {
 		return _( $this->event_title );
 	}
 
+	function getEventSubtitle() {
+		return _( $this->event_subtitle );
+	}
+
 	/**
 	 * Event is joined with an user?
 	 */
@@ -95,12 +99,12 @@ trait EventTrait {
 		return $this->event_abstract;
 	}
 
-	function printEventDescription($args = []) {
-		echo Markdown::parse( _( $this->getEventDescription() ), $args );
+	function getEventDescriptionHTML($args = []) {
+		return Markdown::parse( _( $this->event_description ), $args );
 	}
 
-	function printEventAbstract($args = []) {
-		echo Markdown::parse( _( $this->getEventAbstract() ), $args );
+	function getEventAbstractHTML($args = []) {
+		return Markdown::parse( _( $this->event_abstract ), $args );
 	}
 
 	function queryEventUsers($fields = null) {

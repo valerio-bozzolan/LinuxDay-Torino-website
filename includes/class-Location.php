@@ -31,8 +31,8 @@ trait LocationTrait {
 		return $this->location_note;
 	}
 
-	function printLocationNote($args = []) {
-		echo Markdown::parse( _( $this->location_note ), $args );
+	function getLocationNoteHTML($args = []) {
+		return Markdown::parse( _( $this->location_note ), $args );
 	}
 
 	function getLocationGeothumb() {

@@ -97,7 +97,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Abstract") ?></h3>
-		<?php $event->printEventAbstract(['p' => 'flow-text']) ?>
+		<?php echo $event->getEventAbstractHTML(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event abstract -->
@@ -107,7 +107,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Descrizione") ?></h3>
-		<?php $event->printEventDescription(['p' => 'flow-text']) ?>
+		<?php echo $event->getEventDescriptionHTML(['p' => 'flow-text']) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->

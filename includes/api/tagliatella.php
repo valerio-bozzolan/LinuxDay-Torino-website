@@ -47,20 +47,22 @@ if( ! $conference_row ) {
 		'subtitle',
 	        'acronym',
 		'days',
-		'day_change',
 		'persons_url',
-		'events_url',
-		'timeslot_duration'
+		'events_url'
 	];
 
 	foreach($conference_fields as $field) {
 		addChild($xml, $conference, $field, $conference_row->{"conference_$field"});
 	}
 
-	addChild($xml, $conference, 'start', $conference_row->getConferenceStart('Y-m-d H:i:s') );
-	addChild($xml, $conference, 'end',   $conference_row->getConferenceEnd('Y-m-d H:i:s') );
-	addChild($xml, $conference, 'city',  $conference_row->getLocationAddress() );
-	addChild($xml, $conference, 'venue',  $conference_row->getLocationNote() );
+	addChild($xml, $conference, 'start',             $conference_row->getConferenceStart('Y-m-d H:i:s') );
+	addChild($xml, $conference, 'end',               $conference_row->getConferenceEnd('Y-m-d H:i:s') );
+	addChild($xml, $conference, 'city',              $conference_row->getLocationAddress() );
+	addChild($xml, $conference, 'venue',             $conference_row->getLocationNoteHTML() );
+
+	// Yes, these are hardcoded. asd
+	addChild($xml, $conference, 'day_change',        '09:00:00');
+	addChild($xml, $conference, 'timeslot_duration', '00:30:00');
 }
 
 $events = query_results(
@@ -129,11 +131,8 @@ foreach($events as $event) {
 // These are database event fields whose content can be taken straight from the database.
 // Others need a little more work to convert to the correct format.
 $keys = [
-	'title',
 	'subtitle',
 	'language',
-	'abstract',
-	'description'
 ];
 
 $day_index = 1;
@@ -161,18 +160,30 @@ foreach($events_by_date_then_room as $day_date => $rooms) {
 			// this stops PHPStorm from complaining, but most of these elements are really just strings...
 			/** @var $event DateTime[] */
 			// Same exact format, two different parameters since 'start' is a DateTime and 'duration' a DateInterval. Why, PHP, WHY?
-			addChild($xml, $eventxml, 'slug',    $event->event_uid );
-			addChild($xml, $eventxml, 'start',    $event->event_start->format('H:i') );
-			addChild($xml, $eventxml, 'duration', $event->event_duration->format('%H:%I') );
-			addChild($xml, $eventxml, 'room',     $event->room_name );
-			addChild($xml, $eventxml, 'track',    $event->track_name );
-			addChild($xml, $eventxml, 'type',     $event->chapter_name );
+			addChild($xml, $eventxml, 'title',       $event->getEventTitle() );
+			addChild($xml, $eventxml, 'slug',        $event->getEventUID() );
+			addChild($xml, $eventxml, 'start',       $event->event_start->format('H:i') );
+			addChild($xml, $eventxml, 'duration',    $event->event_duration->format('%H:%I') );
+			addChild($xml, $eventxml, 'room',        $event->getRoomName() );
+			addChild($xml, $eventxml, 'track',       $event->getTrackName() );
+			addChild($xml, $eventxml, 'type',        $event->getChapterName() );
+
+			$description = null;
+			if( $event->hasEventDescription() ) {
+				$description = $event->getEventDescriptionHTML();
+			}
+			addChild($xml, $eventxml, 'description', $description);
+
+			$abstract = null;
+			if( $event->hasEventAbstract() ) {
+				$abstract = $event->getEventAbstractHTML();
+			}
+			addChild($xml, $eventxml, 'abstract', $abstract);
 
 			// Add event fields that don't need any further processing
 			foreach($keys as $k) {
 				addChild($xml, $eventxml, $k, $event->{"event_$k"});
 			}
-
 		}
 	}
 
@@ -202,10 +213,12 @@ $select_people = query(
 	)
 );
 
-while( $row = $select_people->fetch_object('User') ) {
+while( $row = $select_people->fetch_object('EventUser') ) {
 	// This works only because rows are sorted (ORDER BY `event`)
-	if($lastid !== $row->event_ID) {
-		$event  = $row->event_ID;
+	$event_ID = $row->getEventID();
+
+	if($lastid !== $event_ID) {
+		$event  = $event_ID;
 		$lastid = $event;
 
 		$personsxml  = $xml->createElement('persons');
@@ -214,8 +227,8 @@ while( $row = $select_people->fetch_object('User') ) {
 	}
 
 	$personxml = addChild($xml, $lastpersons, 'person', $row->getUserFullname() );
-	$personxml->setAttribute('id', $row->user_ID);
-	$personxml->setAttribute('slug', $row->user_uid);
+	$personxml->setAttribute('id',   $row->getUserID() );
+	$personxml->setAttribute('slug', $row->getUserUID() );
 }
 
 if(OUTPUT_FILE !== NULL) {
