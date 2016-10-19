@@ -23,13 +23,6 @@ trait SharableTrait {
 		return $this->sharable_ID;
 	}
 
-	function getSharableUID() {
-		isset( $this->sharable_uid )
-			|| error_die("Missing sharable_uid");
-
-		return $this->sharable_uid;
-	}
-
 	function getSharableTitle() {
 		return _( $this->sharable_title );
 	}
