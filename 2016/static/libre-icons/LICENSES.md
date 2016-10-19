@@ -12,6 +12,9 @@ https://commons.wikimedia.org/wiki/File:Debian-OpenLogo.svg
 Docker logo (Apache license)
 https://commons.wikimedia.org/wiki/File:Docker_%28container_engine%29_logo.png
 
+FIdoCadJ (GNU GPL v3)
+https://github.com/DarwinNE/FidoCadJ/blob/master/icons/icona_fidocadj_512x512.png
+
 F-Droid Logo 4 (GNU GPL v3+)
 https://commons.wikimedia.org/wiki/File:F-Droid_Logo_4.svg
 
