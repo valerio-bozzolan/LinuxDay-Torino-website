@@ -68,9 +68,15 @@ spawn_gnu('location', [
 	'location_note'
 ] );
 
+spawn_gnu('track', [
+		'track_name',
+		'track_label'
+	],
+	'track_uid'
+);
+
 spawn_gnu('room',  'room_name',   'room_uid');
 spawn_gnu('skill', 'skill_title', 'skill_uid');
-spawn_gnu('track', 'track_name',  'track_uid');
 spawn_gnu('user',  'user_bio',    'user_uid');
 
 echo <<< EOF

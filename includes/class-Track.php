@@ -33,6 +33,10 @@ trait TrackTrait {
 	function getTrackName() {
 		return _( $this->track_name );
 	}
+
+	function getTrackLabel() {
+		return _( $this->track_label );
+	}
 }
 
 class Track {

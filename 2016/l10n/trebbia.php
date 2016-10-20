@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-18T19:55:41+02:00
+# Last update: 2016-10-20T03:17:15+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -157,17 +157,47 @@ _("Via Nizza 52, Torino");
 // location[2]::location_note
 _("La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie.");
 
+// track[base]::track_name
+_("Base");
+
+// track[base]::track_label
+_("Adatto ad un pubblico senza pre-conoscenze particolari");
+
+// track[dev]::track_name
+_("Dev");
+
+// track[dev]::track_label
+_("Area sviluppatori");
+
+// track[sys]::track_name
+_("Sys");
+
+// track[sys]::track_label
+_("Area sistemisti");
+
+// track[misc]::track_name
+_("Misc");
+
+// track[misc]::track_label
+_("Argomenti relativi alla conoscenza e alla libertà digitale.");
+
+// track[altro]::track_name
+_("Altro");
+
+// track[altro]::track_label
+_("Di tutto un po'");
+
 // room[a]::room_name
-_("Aula A (dev)");
+_("Aula B");
 
 // room[b]::room_name
-_("Aula B (base)");
+_("Aula A");
 
 // room[c]::room_name
-_("Aula C (misc)");
+_("Aula D");
 
 // room[d]::room_name
-_("Aula D (sys)");
+_("Aula C");
 
 // room[lab-1]::room_name
 _("Spazio Coderdojo");
@@ -249,21 +279,6 @@ _("Wikipedia");
 
 // skill[embedded]::skill_title
 _("Embedded");
-
-// track[base]::track_name
-_("Base");
-
-// track[dev]::track_name
-_("Dev");
-
-// track[sys]::track_name
-_("Sys");
-
-// track[misc]::track_name
-_("Misc");
-
-// track[altro]::track_name
-_("Altro");
 
 // user[boz]::user_bio
 _("Qualcuno ha detto... software libero?");

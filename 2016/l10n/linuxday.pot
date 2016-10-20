@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-18 19:55+0200\n"
+"POT-Creation-Date: 2016-10-20 03:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,7 +136,7 @@ msgid ""
 "Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"
 msgstr ""
 
-#: 2016/credits.php:227 2016/event.php:120
+#: 2016/credits.php:227 2016/event.php:124
 msgid "Materiale"
 msgstr ""
 
@@ -192,46 +192,58 @@ msgid "Modifica evento"
 msgstr ""
 
 #: 2016/event.php:80
-msgid "Quando:"
+msgid "Tema"
 msgstr ""
 
 #: 2016/event.php:84
-msgid "Dove:"
+msgid "Dove"
 msgstr ""
 
-#: 2016/event.php:86
+#: 2016/event.php:88
+msgid "Quando"
+msgstr ""
+
+#: 2016/event.php:90
 #, php-format
 msgid "Ore %s"
 msgstr ""
 
-#: 2016/event.php:99
+#: 2016/event.php:103
 msgid "Abstract"
 msgstr ""
 
-#: 2016/event.php:109
+#: 2016/event.php:113
 msgid "Descrizione"
 msgstr ""
 
-#: 2016/event.php:132
+#: 2016/event.php:136
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr ""
 
-#: 2016/event.php:135
+#: 2016/event.php:139
 msgid "l'allegato"
 msgstr ""
 
-#: 2016/event.php:154
+#: 2016/event.php:158
 msgid "Relatori"
 msgstr ""
 
-#: 2016/event.php:167 2016/event.php:184
+#: 2016/event.php:171 2016/event.php:188
 #, php-format
 msgid "Profilo di %s"
 msgstr ""
 
-#: 2016/event.php:195
+#: 2016/event.php:199
 msgid "L'elenco dei relatori non è ancora noto."
+msgstr ""
+
+#: 2016/event.php:219
+msgid "Preceduto da"
+msgstr ""
+
+#: 2016/event.php:232
+msgid "A seguire"
 msgstr ""
 
 #: 2016/index.php:62
@@ -629,39 +641,30 @@ msgstr ""
 msgid "asd! No."
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:82
-msgid "Ora"
-msgstr ""
-
-#: 2016/includes/class-DailyEventsTable.php:86
-#, php-format
-msgid "Aula %s"
-msgstr ""
-
-#: 2016/includes/class-DailyEventsTable.php:97
+#: 2016/includes/class-DailyEventsTable.php:94
 #, php-format
 msgid "%d° ora"
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:112
+#: 2016/includes/class-DailyEventsTable.php:109
 #, php-format
 msgid "Talk %s"
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:117
+#: 2016/includes/class-DailyEventsTable.php:114
 #, php-format
 msgid "%s<br /> di %s."
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:122
+#: 2016/includes/class-DailyEventsTable.php:119
 msgid "Nessun talk pianificato."
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:149
+#: 2016/includes/class-DailyEventsTable.php:146
 msgid ", "
 msgstr ""
 
-#: 2016/includes/class-DailyEventsTable.php:151
+#: 2016/includes/class-DailyEventsTable.php:148
 #, php-format
 msgid "%s e %s"
 msgstr ""
@@ -918,7 +921,7 @@ msgstr ""
 msgid "Wikidata: la base di conoscenza libera"
 msgstr ""
 
-#: event[talk-misc-4]::event_title conference[2015]::conference_title8
+#: event[talk-misc-4]::event_title event[talk-base-1]::event_title8
 msgid "Wikipedia"
 msgstr ""
 
@@ -983,20 +986,60 @@ msgid ""
 "Biotecnologie."
 msgstr ""
 
+#: track[base]::track_name
+msgid "Base"
+msgstr ""
+
+#: track[base]::track_label
+msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
+msgstr ""
+
+#: track[dev]::track_name
+msgid "Dev"
+msgstr ""
+
+#: track[dev]::track_label
+msgid "Area sviluppatori"
+msgstr ""
+
+#: track[sys]::track_name
+msgid "Sys"
+msgstr ""
+
+#: track[sys]::track_label
+msgid "Area sistemisti"
+msgstr ""
+
+#: track[misc]::track_name
+msgid "Misc"
+msgstr ""
+
+#: track[misc]::track_label
+msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
+msgstr ""
+
+#: track[altro]::track_name
+msgid "Altro"
+msgstr ""
+
+#: track[altro]::track_label
+msgid "Di tutto un po'"
+msgstr ""
+
 #: room[a]::room_name
-msgid "Aula A (dev)"
+msgid "Aula B"
 msgstr ""
 
 #: room[b]::room_name
-msgid "Aula B (base)"
+msgid "Aula A"
 msgstr ""
 
 #: room[c]::room_name
-msgid "Aula C (misc)"
+msgid "Aula D"
 msgstr ""
 
 #: room[d]::room_name
-msgid "Aula D (sys)"
+msgid "Aula C"
 msgstr ""
 
 #: room[lab-1]::room_name
@@ -1011,15 +1054,15 @@ msgstr ""
 msgid "Primo piano"
 msgstr ""
 
-#: room[lab-touring]::room_name
+#: conference[2016]::conference_title2
 msgid "Laboratorio Turing"
 msgstr ""
 
-#: room[lab-djikstra]::room_name
+#: conference[2016]::conference_title5
 msgid "Laboratorio Djikstra"
 msgstr ""
 
-#: skill[asd]::skill_title
+#: conference[2016]::conference_title8
 msgid "asd"
 msgstr ""
 
@@ -1051,15 +1094,15 @@ msgstr ""
 msgid "C++"
 msgstr ""
 
-#: conference[2016]::conference_title2
+#: conference[2015]::conference_title2
 msgid "Ubuntu"
 msgstr ""
 
-#: conference[2016]::conference_title5
+#: conference[2015]::conference_title5
 msgid "GNU/Linux"
 msgstr ""
 
-#: conference[2016]::conference_title8
+#: conference[2015]::conference_title8
 msgid "Turbo Pascal"
 msgstr ""
 
@@ -1091,11 +1134,11 @@ msgstr ""
 msgid "Recupero del RAEE"
 msgstr ""
 
-#: conference[2015]::conference_title2
+#: event[talk-base-1]::event_title2
 msgid "Blender"
 msgstr ""
 
-#: conference[2015]::conference_title5
+#: event[talk-base-1]::event_title5
 msgid "C"
 msgstr ""
 
@@ -1103,31 +1146,11 @@ msgstr ""
 msgid "Embedded"
 msgstr ""
 
-#: track[base]::track_name
-msgid "Base"
-msgstr ""
-
-#: track[dev]::track_name
-msgid "Dev"
-msgstr ""
-
-#: track[sys]::track_name
-msgid "Sys"
-msgstr ""
-
-#: track[misc]::track_name
-msgid "Misc"
-msgstr ""
-
-#: track[altro]::track_name
-msgid "Altro"
-msgstr ""
-
 #: user[boz]::user_bio
 msgid "Qualcuno ha detto... software libero?"
 msgstr ""
 
-#: event[talk-base-1]::event_title2
+#: user[oirasor]::user_bio
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
@@ -1149,20 +1172,20 @@ msgid ""
 "2010."
 msgstr ""
 
-#: user[renzo]::user_bio
+#: event[talk-base-1]::event_description1
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
 "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
 msgstr ""
 
-#: user[luigi.maselli]::user_bio
+#: event[talk-base-1]::event_description6
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
 msgstr ""
 
-#: user[marco.cavallini]::user_bio
+#: event[talk-base-1]::event_description9
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1194,7 +1217,7 @@ msgid ""
 "dielettrica."
 msgstr ""
 
-#: event[talk-base-1]::event_description4
+#: user[francesco]::user_bio
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (<http://"
@@ -1207,7 +1230,7 @@ msgid ""
 "mi ostacola)."
 msgstr ""
 
-#: event[talk-base-1]::event_description9
+#: user[massimo]::user_bio
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr ""
 

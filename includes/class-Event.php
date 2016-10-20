@@ -61,11 +61,11 @@ trait EventTrait {
 		return isset( $this->user_uid );
 	}
 
-	function getEventStart($f) {
+	function getEventStart($f = 'Y-m-d H:i:s') {
 		return $this->event_start->format($f);
 	}
 
-	function getEventEnd($f) {
+	function getEventEnd($f = 'Y-m-d H:i:s') {
 		return $this->event_end->format($f);
 	}
 
@@ -127,6 +127,62 @@ trait EventTrait {
 	function querySharables() {
 		return Sharable::querySharables( $this->getEventID() );
 	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	function getNextEventsQuery() {
+		$q = Event::getStandardQueryEvent();
+		$q->appendCondition( sprintf(
+			'event.conference_ID = %d',
+			$this->getConferenceID()
+		) );
+		$q->appendCondition( sprintf(
+			'room.room_ID = %d',
+			$this->getRoomID()
+		) );
+		$q->appendOrderBy('event_start');
+		$q->appendCondition( sprintf(
+			"event_start >= '%s'",
+			esc_sql( $this->getEventEnd() )
+		) );
+		return $q;
+	}
+
+	/**
+	 * @return DynamicQuery
+	 */
+	function getPreviousEventsQuery() {
+		$q = Event::getStandardQueryEvent();
+		$q->appendCondition( sprintf(
+			'event.conference_ID = %d',
+			$this->getConferenceID()
+		) );
+		$q->appendCondition( sprintf(
+			'room.room_ID = %d',
+			$this->getRoomID()
+		) );
+		$q->appendOrderBy('event_end DESC');
+		$q->appendCondition( sprintf(
+			"event_end <= '%s'",
+			esc_sql( $this->getEventStart() )
+		) );
+		return $q;
+	}
+
+	function getNextEvent($fields = null) {
+		if($fields === null) {
+			$fields = Event::$FULL_FIELDS;
+		}
+		return $this->getNextEventsQuery()->selectField($fields)->setLimit(1)->getRow('Event');
+	}
+
+	function getPreviousEvent($fields = null) {
+		if($fields === null) {
+			$fields = Event::$FULL_FIELDS;
+		}
+		return $this->getPreviousEventsQuery()->selectField($fields)->setLimit(1)->getRow('Event');
+	}
 }
 
 class_exists('User');
@@ -137,6 +193,30 @@ class_exists('Track');
 
 class Event {
 	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait, RoomTrait, TrackTrait;
+
+	static $FULL_FIELDS = [
+		'event.event_ID',
+		'event_uid',
+		'event_title',
+		'event_subtitle',
+		'event_abstract',
+		'event_description',
+		'event_language',
+		'event_start',
+		'event_end',
+		'event_img',
+		'room.room_ID',
+		'room_uid',
+		'room_name',
+		'track_uid',
+		'track_name',
+		'track_label',
+		'chapter_uid',
+		'chapter_name',
+		'conference.conference_ID',
+		'conference_uid',
+		'conference_title'
+	];
 
 	function __construct() {
 		self::normalize($this);
@@ -164,27 +244,6 @@ class Event {
 	 */
 	function getStandardQueryEvent() {
 		$q = new DynamicQuery();
-		$q->selectField( [
-			'event.event_ID',
-			'event_uid',
-			'event_title',
-			'event_subtitle',
-			'event_abstract',
-			'event_description',
-			'event_language',
-			'event_start',
-			'event_end',
-			'event_img',
-			'room_uid',
-			'room_name',
-			'track_uid',
-			'track_name',
-			'chapter_uid',
-			'chapter_name',
-			'conference.conference_ID',
-			'conference_uid',
-			'conference_title'
-		] );
 		$q->useTable( [ 'event', 'conference', 'room', 'track', 'chapter' ] );
 		$q->appendCondition('event.conference_ID = conference.conference_ID');
 		$q->appendCondition('event.room_ID = room.room_ID');
@@ -231,7 +290,7 @@ class Event {
 	 */
 	static function getEventByConference( $event_uid, $conference_uid ) {
 		return Event::getQueryEventByConference($event_uid, $conference_uid)
-		            ->getRow('Event');
+		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
 	}
 
 	/**
@@ -239,7 +298,7 @@ class Event {
 	 */
 	static function getEventByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
 		return Event::getQueryEventByConferenceChapter($event_uid, $conference_uid, $chapter_uid)
-		            ->getRow('Event');
+		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
 	}
 
 	/**
@@ -257,6 +316,7 @@ class Event {
 				'SELECT '.
 					'track_uid, '.
 					'track_name, '.
+					'track_label, '.
 					'chapter_uid, '.
 					'event.event_ID, '.
 					'event_uid, '.

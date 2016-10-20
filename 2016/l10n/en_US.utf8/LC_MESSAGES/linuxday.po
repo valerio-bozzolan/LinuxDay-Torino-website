@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-18 19:55+0200\n"
+"POT-Creation-Date: 2016-10-20 03:17+0200\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:227 2016/event.php:120
+#: 2016/credits.php:227 2016/event.php:124
 msgid "Materiale"
 msgstr "Files"
 
@@ -195,47 +195,59 @@ msgid "Modifica evento"
 msgstr "Edit event"
 
 #: 2016/event.php:80
-msgid "Quando:"
-msgstr "When:"
+msgid "Tema"
+msgstr "Chapter"
 
 #: 2016/event.php:84
-msgid "Dove:"
+msgid "Dove"
 msgstr "Where:"
 
-#: 2016/event.php:86
+#: 2016/event.php:88
+msgid "Quando"
+msgstr "When:"
+
+#: 2016/event.php:90
 #, php-format
 msgid "Ore %s"
 msgstr "Hour %s"
 
-#: 2016/event.php:99
+#: 2016/event.php:103
 msgid "Abstract"
 msgstr "Abstract"
 
-#: 2016/event.php:109
+#: 2016/event.php:113
 msgid "Descrizione"
 msgstr "Description"
 
-#: 2016/event.php:132
+#: 2016/event.php:136
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:135
+#: 2016/event.php:139
 msgid "l'allegato"
 msgstr "the attachment"
 
-#: 2016/event.php:154
+#: 2016/event.php:158
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:167 2016/event.php:184
+#: 2016/event.php:171 2016/event.php:188
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:195
+#: 2016/event.php:199
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
+
+#: 2016/event.php:219
+msgid "Preceduto da"
+msgstr "Previous"
+
+#: 2016/event.php:232
+msgid "A seguire"
+msgstr "Next"
 
 #: 2016/index.php:62
 msgid "Linux Day 2016"
@@ -651,39 +663,30 @@ msgstr "%s on %s"
 msgid "asd! No."
 msgstr "asd! Nope."
 
-#: 2016/includes/class-DailyEventsTable.php:82
-msgid "Ora"
-msgstr "Hour"
-
-#: 2016/includes/class-DailyEventsTable.php:86
-#, php-format
-msgid "Aula %s"
-msgstr "%s room"
-
-#: 2016/includes/class-DailyEventsTable.php:97
+#: 2016/includes/class-DailyEventsTable.php:94
 #, php-format
 msgid "%d° ora"
 msgstr "%d° time"
 
-#: 2016/includes/class-DailyEventsTable.php:112
+#: 2016/includes/class-DailyEventsTable.php:109
 #, php-format
 msgid "Talk %s"
 msgstr "Talk %s"
 
-#: 2016/includes/class-DailyEventsTable.php:117
+#: 2016/includes/class-DailyEventsTable.php:114
 #, php-format
 msgid "%s<br /> di %s."
 msgstr "%s<br /> by %s."
 
-#: 2016/includes/class-DailyEventsTable.php:122
+#: 2016/includes/class-DailyEventsTable.php:119
 msgid "Nessun talk pianificato."
 msgstr "No talks planned."
 
-#: 2016/includes/class-DailyEventsTable.php:149
+#: 2016/includes/class-DailyEventsTable.php:146
 msgid ", "
 msgstr ", "
 
-#: 2016/includes/class-DailyEventsTable.php:151
+#: 2016/includes/class-DailyEventsTable.php:148
 #, php-format
 msgid "%s e %s"
 msgstr "%s and %s"
@@ -998,7 +1001,7 @@ msgstr "Sustainability and Open Culture at University"
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: event[talk-misc-4]::event_title conference[2015]::conference_title8
+#: event[talk-misc-4]::event_title event[talk-base-1]::event_title8
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
@@ -1083,21 +1086,61 @@ msgstr ""
 "**Nizza**'s underground station is at 50 mt from the Biotechnologies "
 "Department. "
 
+#: track[base]::track_name
+msgid "Base"
+msgstr "Base"
+
+#: track[base]::track_label
+msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
+msgstr "Non-technical"
+
+#: track[dev]::track_name
+msgid "Dev"
+msgstr "Dev"
+
+#: track[dev]::track_label
+msgid "Area sviluppatori"
+msgstr "Developers area"
+
+#: track[sys]::track_name
+msgid "Sys"
+msgstr "Sys"
+
+#: track[sys]::track_label
+msgid "Area sistemisti"
+msgstr "Sysadmins area"
+
+#: track[misc]::track_name
+msgid "Misc"
+msgstr "Misc"
+
+#: track[misc]::track_label
+msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
+msgstr "Related to knowledge and digital freedom."
+
+#: track[altro]::track_name
+msgid "Altro"
+msgstr "Other"
+
+#: track[altro]::track_label
+msgid "Di tutto un po'"
+msgstr "A bit of everything"
+
 #: room[a]::room_name
-msgid "Aula A (dev)"
-msgstr "Room A (dev)"
+msgid "Aula B"
+msgstr "\"B\" room"
 
 #: room[b]::room_name
-msgid "Aula B (base)"
-msgstr "Room B (base)"
+msgid "Aula A"
+msgstr "\"A\" room"
 
 #: room[c]::room_name
-msgid "Aula C (misc)"
-msgstr "Room C (misc)"
+msgid "Aula D"
+msgstr "\"D\" room"
 
 #: room[d]::room_name
-msgid "Aula D (sys)"
-msgstr "Room D (sys)"
+msgid "Aula C"
+msgstr "\"C\" room"
 
 #: room[lab-1]::room_name
 msgid "Spazio Coderdojo"
@@ -1111,15 +1154,15 @@ msgstr "Restart area"
 msgid "Primo piano"
 msgstr "First Floor"
 
-#: room[lab-touring]::room_name
+#: conference[2016]::conference_title2
 msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
-#: room[lab-djikstra]::room_name
+#: conference[2016]::conference_title5
 msgid "Laboratorio Djikstra"
 msgstr "Djikstra Lab"
 
-#: skill[asd]::skill_title
+#: conference[2016]::conference_title8
 msgid "asd"
 msgstr "asd"
 
@@ -1151,15 +1194,15 @@ msgstr "Java"
 msgid "C++"
 msgstr "C++"
 
-#: conference[2016]::conference_title2
+#: conference[2015]::conference_title2
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: conference[2016]::conference_title5
+#: conference[2015]::conference_title5
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
-#: conference[2016]::conference_title8
+#: conference[2015]::conference_title8
 msgid "Turbo Pascal"
 msgstr "Turbo Pascal"
 
@@ -1191,11 +1234,11 @@ msgstr "Teach"
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: conference[2015]::conference_title2
+#: event[talk-base-1]::event_title2
 msgid "Blender"
 msgstr "Blender"
 
-#: conference[2015]::conference_title5
+#: event[talk-base-1]::event_title5
 msgid "C"
 msgstr "C"
 
@@ -1203,31 +1246,11 @@ msgstr "C"
 msgid "Embedded"
 msgstr "Embedded"
 
-#: track[base]::track_name
-msgid "Base"
-msgstr "Base"
-
-#: track[dev]::track_name
-msgid "Dev"
-msgstr "Dev"
-
-#: track[sys]::track_name
-msgid "Sys"
-msgstr "Sys"
-
-#: track[misc]::track_name
-msgid "Misc"
-msgstr "Misc"
-
-#: track[altro]::track_name
-msgid "Altro"
-msgstr "Other"
-
 #: user[boz]::user_bio
 msgid "Qualcuno ha detto... software libero?"
 msgstr "Did someone say... Free as in Freedom software?"
 
-#: event[talk-base-1]::event_title2
+#: user[oirasor]::user_bio
 msgid ""
 "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
 "troppe).\n"
@@ -1262,7 +1285,7 @@ msgstr ""
 "I've been using GNU/Linux for many years, and I help out at the Linux Day "
 "since 2010."
 
-#: user[renzo]::user_bio
+#: event[talk-base-1]::event_description1
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
@@ -1273,7 +1296,7 @@ msgstr ""
 "freely.\n"
 "Actually he wants to save the world, but don't tell it to anybody."
 
-#: user[luigi.maselli]::user_bio
+#: event[talk-base-1]::event_description6
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
@@ -1281,7 +1304,7 @@ msgstr ""
 "Founder of <http://corso-javascript.it> and TorinoJS, software developer "
 "freelance."
 
-#: user[marco.cavallini]::user_bio
+#: event[talk-base-1]::event_description9
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1335,7 +1358,7 @@ msgstr ""
 "interval, how does the ionic exchange work on glass and how to calculate "
 "movement of propagation in a dielectric waveguide."
 
-#: event[talk-base-1]::event_description4
+#: user[francesco]::user_bio
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (<http://"
@@ -1356,7 +1379,7 @@ msgstr ""
 "(what languages? It's not important, learning their syntax is not "
 "preclusive)."
 
-#: event[talk-base-1]::event_description9
+#: user[massimo]::user_bio
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr "System Architect at Project Archivio SRL and Dicobit."
 
@@ -1399,6 +1422,21 @@ msgstr ""
 "to meet in computer science. I work with data everyday at Synapta, adding "
 "new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
 "semantic Web. I love to play chess and drink orange soda. Even not together. "
+
+#~ msgid "Ora"
+#~ msgstr "Hour"
+
+#~ msgid "Aula A (dev)"
+#~ msgstr "Room A (dev)"
+
+#~ msgid "Aula B (base)"
+#~ msgstr "Room B (base)"
+
+#~ msgid "Aula C (misc)"
+#~ msgstr "Room C (misc)"
+
+#~ msgid "Aula D (sys)"
+#~ msgstr "Room D (sys)"
 
 #~ msgid ""
 #~ "<strong>Schermo piccolo?</strong> Puoi scorrere la tabella verso destra."

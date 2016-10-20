@@ -79,13 +79,10 @@ class DailyEventsTable {
 		<table class="bordered striped hoverable responsive-table">
 		<thead>
 			<tr>
-				<th><?php _e("Ora") ?></th>
+				<th><!-- asd --></th>
 
 				<?php foreach($this->tracks as $track): ?>
-				<th><?php printf(
-					_("Aula %s"),
-					esc_html( $track->track_name )
-				) ?></th>
+				<th class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $track->getTrackLabel() ) ?>"><?php echo $track->getTrackName() ?></th>
 				<?php endforeach ?>
 			</tr>
 		</thead>

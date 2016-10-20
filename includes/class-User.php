@@ -147,13 +147,10 @@ trait UserTrait {
 		$q = Event::getStandardQueryEvent();
 		$q->useTable('event_user');
 		$q->appendCondition('event.event_ID = event_user.event_ID');
-		$q->appendCondition(
-			sprintf(
-				'event_user.user_ID = %d',
-				$this->getUserID()
-			)
-		);
-		return $q;
+		return $q->appendCondition( sprintf(
+			'event_user.user_ID = %d',
+			$this->getUserID()
+		) );
 	}
 
 	private function getQueryUserEventsByConference($conference_ID) {
@@ -169,7 +166,7 @@ trait UserTrait {
 	}
 
 	function queryUserEvents() {
-		return $this->getQueryUserEvents()->query();
+		return $this->getQueryUserEvents()->selectField( Event::$FULL_FIELDS )->query();
 	}
 
 	function queryUserEventsByConference($conference_ID) {

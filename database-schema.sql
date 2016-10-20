@@ -250,10 +250,10 @@ CREATE TABLE `ldto_room` (
 
 LOCK TABLES `ldto_room` WRITE;
 /*!40000 ALTER TABLE `ldto_room` DISABLE KEYS */;
-INSERT INTO `ldto_room` VALUES (1,'a','Aula A (dev)',1);
-INSERT INTO `ldto_room` VALUES (2,'b','Aula B (base)',1);
-INSERT INTO `ldto_room` VALUES (3,'c','Aula C (misc)',1);
-INSERT INTO `ldto_room` VALUES (4,'d','Aula D (sys)',1);
+INSERT INTO `ldto_room` VALUES (1,'a','Aula B',1);
+INSERT INTO `ldto_room` VALUES (2,'b','Aula A',1);
+INSERT INTO `ldto_room` VALUES (3,'c','Aula D',1);
+INSERT INTO `ldto_room` VALUES (4,'d','Aula C',1);
 INSERT INTO `ldto_room` VALUES (5,'lab-1','Spazio Coderdojo',1);
 INSERT INTO `ldto_room` VALUES (6,'lab-2','Spazio Restart',1);
 INSERT INTO `ldto_room` VALUES (8,'first-floor','Primo piano',2);
@@ -356,6 +356,7 @@ CREATE TABLE `ldto_track` (
   `track_uid` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `track_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `track_order` smallint(1) NOT NULL,
+  `track_label` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`track_ID`),
   UNIQUE KEY `track_uid` (`track_uid`),
   KEY `track_order` (`track_order`)
@@ -368,11 +369,11 @@ CREATE TABLE `ldto_track` (
 
 LOCK TABLES `ldto_track` WRITE;
 /*!40000 ALTER TABLE `ldto_track` DISABLE KEYS */;
-INSERT INTO `ldto_track` VALUES (1,'base','Base',1);
-INSERT INTO `ldto_track` VALUES (2,'dev','Dev',2);
-INSERT INTO `ldto_track` VALUES (3,'sys','Sys',3);
-INSERT INTO `ldto_track` VALUES (4,'misc','Misc',4);
-INSERT INTO `ldto_track` VALUES (5,'altro','Altro',5);
+INSERT INTO `ldto_track` VALUES (1,'base','Base',2,'Adatto ad un pubblico senza pre-conoscenze particolari');
+INSERT INTO `ldto_track` VALUES (2,'dev','Dev',3,'Area sviluppatori');
+INSERT INTO `ldto_track` VALUES (3,'sys','Sys',4,'Area sistemisti');
+INSERT INTO `ldto_track` VALUES (4,'misc','Misc',1,'Argomenti relativi alla conoscenza e alla libertà digitale.');
+INSERT INTO `ldto_track` VALUES (5,'altro','Altro',5,'Di tutto un po\'');
 /*!40000 ALTER TABLE `ldto_track` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -504,4 +505,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-20  0:58:08
+-- Dump completed on 2016-10-20  3:17:13
