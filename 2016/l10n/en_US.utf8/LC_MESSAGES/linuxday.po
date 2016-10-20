@@ -200,11 +200,11 @@ msgstr "Chapter"
 
 #: 2016/event.php:84
 msgid "Dove"
-msgstr "Where:"
+msgstr "Where"
 
 #: 2016/event.php:88
 msgid "Quando"
-msgstr "When:"
+msgstr "When"
 
 #: 2016/event.php:90
 #, php-format
