@@ -214,7 +214,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<div class="row">
-			<div class="col s6">
+			<div class="col s12 m6">
 				<?php if( $previous ): ?>
 					<h3><?php echo icon('navigate_before'); _e("Preceduto da") ?></h3>
 					<p class="flow-text">
@@ -227,7 +227,7 @@ new Header('event', $args);
 					</p>
 				<?php endif ?>
 			</div>
-			<div class="col s6 right-align">
+			<div class="col s12 m6 right-align">
 				<?php if( $next ): ?>
 					<h3><?php _e("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
