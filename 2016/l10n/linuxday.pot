@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 03:17+0200\n"
+"POT-Creation-Date: 2016-10-21 10:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,124 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-Licenses.php:23
+msgid "GNU General Public License, versione 3"
+msgstr ""
+
+#: includes/class-Licenses.php:24
+msgid "GNU General Public License, versione 2"
+msgstr ""
+
+#: includes/class-Licenses.php:26
+msgid "Licenza Apache, versione 2.0"
+msgstr ""
+
+#: includes/class-Licenses.php:27
+msgid "Licenza MIT"
+msgstr ""
+
+#: includes/class-Licenses.php:28
+msgid "Licenza PHP"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "Creative Commons - Attribuzione 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:31
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+msgstr ""
+
+#: includes/class-Licenses.php:31
+msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:32
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
+"Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:32
+msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:33
+msgid "Licenza jQuery"
+msgstr ""
+
+#: includes/class-Skill.php:36
+#, php-format
+msgid "%s per me potrebbe essere qualcosa che si mangia"
+msgstr ""
+
+#: includes/class-Skill.php:37
+#, php-format
+msgid "ho conoscenze %s di base"
+msgstr ""
+
+#: includes/class-Skill.php:38
+#, php-format
+msgid "sono discretamente bravo in %s"
+msgstr ""
+
+#: includes/class-Skill.php:38
+#, php-format
+msgid "sono molto interessato al mondo %s"
+msgstr ""
+
+#: includes/class-Skill.php:39
+#, php-format
+msgid "%s... il mio cavallo di battaglia!"
+msgstr ""
+
+#: includes/class-Skill.php:39
+#, php-format
+msgid "%s... è un mio pensiero fisso!"
+msgstr ""
+
+#: includes/class-Skill.php:40
+#, php-format
+msgid "%s: l'essenza stessa della mia vita!"
+msgstr ""
+
+#: includes/class-Skill.php:41
+#, php-format
+msgid "%s, sto cercando di smettere..."
+msgstr ""
+
+#: includes/class-Skill.php:42
+#, php-format
+msgid ""
+"se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
+msgstr ""
+
+#: includes/class-Skill.php:43
+#, php-format
+msgid "se accenni a %s ti prendo a tastierate"
+msgstr ""
+
+#: includes/class-Skill.php:45
+#, php-format
+msgid ""
+"sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
+msgstr ""
+
+#: includes/class-User.php:47
+#, php-format
+msgid "%s %s"
+msgstr ""
+
+#: includes/class-User.php:71
+#, php-format
+msgid "Profilo utente di %s"
+msgstr ""
 
 #: 2016/credits.php:27
 msgid ""
@@ -1146,6 +1264,10 @@ msgstr ""
 msgid "Embedded"
 msgstr ""
 
+#: skill[haskell]::skill_title
+msgid "Haskell"
+msgstr ""
+
 #: user[boz]::user_bio
 msgid "Qualcuno ha detto... software libero?"
 msgstr ""
@@ -1172,20 +1294,20 @@ msgid ""
 "2010."
 msgstr ""
 
-#: event[talk-base-1]::event_description1
+#: event[talk-base-1]::event_description4
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
 "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
 msgstr ""
 
-#: event[talk-base-1]::event_description6
+#: event[talk-base-1]::event_description9
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
 msgstr ""
 
-#: event[talk-base-1]::event_description9
+#: user[marco.cavallini]::user_bio
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1253,11 +1375,22 @@ msgid ""
 "Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
 msgstr ""
 
-#: user[alessio]::user_bio
+#: event[talk-dev-1]::event_title2
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
 "giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
 "e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
 "piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
+msgstr ""
+
+#: event[talk-dev-1]::event_title5
+msgid ""
+"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
+"Dipartimento di Informatica di Torino.\n"
+"\n"
+"Cosa c'entro? Te lo dico subito in questa intervista:\n"
+"\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+"dipartimento/>"
 msgstr ""

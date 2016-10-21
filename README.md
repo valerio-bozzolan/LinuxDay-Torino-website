@@ -82,10 +82,10 @@ Quando poi hai deciso di voler tradurre il progetto così com'è:
     cd -
 
     # Export source code to GNU Gettext template (.pot)
-    php ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php .
 
     # Export GNU Gettext template (.pot) in files for Poedit (.po)
-    php ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php .
 
 A questo punto sfodera Poedit e traduci tutti i .po che desideri.
 
@@ -94,7 +94,7 @@ I file `.po` sono situati nella directory `2016/l10n/`.
 Per vedere il risultato in funzione (indovina un po'?):
 
     # Compile Poedit files (.po) to binary GNU Gettext files (.mo)
-    php ./2016/l10n/localize.php ./2016
+    php ./2016/l10n/localize.php .
 
 ### Cambiare lingua
 Il sito effettua content negotiation controllando la lingua accettata dal browser web (l'header `Accept-Language`) o eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=$lingua` (`en`, `it`, ecc.). La lingua italiana è predefinita.

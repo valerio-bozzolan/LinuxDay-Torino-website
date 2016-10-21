@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 03:17+0200\n"
+"POT-Creation-Date: 2016-10-21 10:35+0200\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -16,6 +16,126 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#: includes/class-Licenses.php:23
+msgid "GNU General Public License, versione 3"
+msgstr "GNU General Public License, version 3"
+
+#: includes/class-Licenses.php:24
+msgid "GNU General Public License, versione 2"
+msgstr "GNU General Public License, version 2"
+
+#: includes/class-Licenses.php:26
+msgid "Licenza Apache, versione 2.0"
+msgstr "Apache License, version 2.0"
+
+#: includes/class-Licenses.php:27
+msgid "Licenza MIT"
+msgstr "MIT License"
+
+#: includes/class-Licenses.php:28
+msgid "Licenza PHP"
+msgstr "PHP License"
+
+#: includes/class-Licenses.php:30
+msgid "Creative Commons - Attribuzione 4.0 Internazionale"
+msgstr "Creative Commons - Attribution 4.0 International"
+
+#: includes/class-Licenses.php:30
+msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
+msgstr "https://creativecommons.org/licenses/by/4.0/deed"
+
+#: includes/class-Licenses.php:31
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+msgstr "Creative Commons - Attribution - ShareAlike 3.0 Unported"
+
+#: includes/class-Licenses.php:31
+msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgstr "https://creativecommons.org/licenses/by-sa/3.0/"
+
+#: includes/class-Licenses.php:32
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
+"Internazionale"
+msgstr "Creative Commons Attribution - ShareAlike 4.0 International"
+
+#: includes/class-Licenses.php:32
+msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+msgstr "https://creativecommons.org/licenses/by-sa/4.0/deed"
+
+#: includes/class-Licenses.php:33
+msgid "Licenza jQuery"
+msgstr "jQuery License"
+
+#: includes/class-Skill.php:36
+#, php-format
+msgid "%s per me potrebbe essere qualcosa che si mangia"
+msgstr "%s may be something edible"
+
+#: includes/class-Skill.php:37
+#, php-format
+msgid "ho conoscenze %s di base"
+msgstr "basic knowledge about %s"
+
+#: includes/class-Skill.php:38
+#, php-format
+msgid "sono discretamente bravo in %s"
+msgstr "I'm quite good at %s"
+
+#: includes/class-Skill.php:38
+#, php-format
+msgid "sono molto interessato al mondo %s"
+msgstr "very interested in the %s world"
+
+#: includes/class-Skill.php:39
+#, php-format
+msgid "%s... il mio cavallo di battaglia!"
+msgstr "%s... my best weapon!"
+
+#: includes/class-Skill.php:39
+#, php-format
+msgid "%s... è un mio pensiero fisso!"
+msgstr "I think all the time about %s!"
+
+#: includes/class-Skill.php:40
+#, php-format
+msgid "%s: l'essenza stessa della mia vita!"
+msgstr "%s: the essence of my life!"
+
+#: includes/class-Skill.php:41
+#, php-format
+msgid "%s, sto cercando di smettere..."
+msgstr "%s, I'm trying to quit..."
+
+#: includes/class-Skill.php:42
+#, php-format
+msgid ""
+"se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
+msgstr ""
+"if I touch %s I suddently have a bath!"
+
+#: includes/class-Skill.php:43
+#, php-format
+msgid "se accenni a %s ti prendo a tastierate"
+msgstr "don't talk about %s: I will hit you with my keyboard"
+
+#: includes/class-Skill.php:45
+#, php-format
+msgid ""
+"sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
+msgstr ""
+"I'm ready to kill if you talk about %s and the jail it's not a problem"
+
+#: includes/class-User.php:47
+#, php-format
+msgid "%s %s"
+msgstr "%s %s"
+
+#: includes/class-User.php:71
+#, fuzzy, php-format
+msgid "Profilo utente di %s"
+msgstr "Profile of %s"
 
 #: 2016/credits.php:27
 msgid ""
@@ -1246,6 +1366,10 @@ msgstr "C"
 msgid "Embedded"
 msgstr "Embedded"
 
+#: skill[haskell]::skill_title
+msgid "Haskell"
+msgstr ""
+
 #: user[boz]::user_bio
 msgid "Qualcuno ha detto... software libero?"
 msgstr "Did someone say... Free as in Freedom software?"
@@ -1285,7 +1409,7 @@ msgstr ""
 "I've been using GNU/Linux for many years, and I help out at the Linux Day "
 "since 2010."
 
-#: event[talk-base-1]::event_description1
+#: event[talk-base-1]::event_description4
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
@@ -1296,7 +1420,7 @@ msgstr ""
 "freely.\n"
 "Actually he wants to save the world, but don't tell it to anybody."
 
-#: event[talk-base-1]::event_description6
+#: event[talk-base-1]::event_description9
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
@@ -1304,7 +1428,7 @@ msgstr ""
 "Founder of <http://corso-javascript.it> and TorinoJS, software developer "
 "freelance."
 
-#: event[talk-base-1]::event_description9
+#: user[marco.cavallini]::user_bio
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1410,7 +1534,7 @@ msgstr ""
 "security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
 "degli Ingegneri della Provincia di Torino\"."
 
-#: user[alessio]::user_bio
+#: event[talk-dev-1]::event_title2
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
@@ -1422,6 +1546,29 @@ msgstr ""
 "to meet in computer science. I work with data everyday at Synapta, adding "
 "new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
 "semantic Web. I love to play chess and drink orange soda. Even not together. "
+
+#: event[talk-dev-1]::event_title5
+msgid ""
+"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
+"Dipartimento di Informatica di Torino.\n"
+"\n"
+"Cosa c'entro? Te lo dico subito in questa intervista:\n"
+"\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+"dipartimento/>"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Linux Day Torino 2015"
+#~ msgstr "Linux Day Turin 2016"
+
+#, fuzzy
+#~ msgid "Facebook"
+#~ msgstr "%s on Facebook"
+
+#, fuzzy
+#~ msgid "Twitter"
+#~ msgstr "%s on Twitter"
 
 #~ msgid "Ora"
 #~ msgstr "Hour"
@@ -1478,32 +1625,6 @@ msgstr ""
 
 #~ msgid "da"
 #~ msgstr "by"
-
-#~ msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
-#~ msgstr "https://creativecommons.org/licenses/by-sa/4.0/deed"
-
-#~ msgid ""
-#~ "Creative Commons Attribuzione - Condividi allo stesso modo 4.0 "
-#~ "Internazionale"
-#~ msgstr "Creative Commons Attribution - ShareAlike 4.0 International"
-
-#~ msgid "GNU General Public License, versione 2"
-#~ msgstr "GNU General Public License, version 2"
-
-#~ msgid "Licenza Apache, versione 2.0"
-#~ msgstr "Apache License, version 2.0"
-
-#~ msgid "Licenza MIT"
-#~ msgstr "MIT License"
-
-#~ msgid "Licenza PHP"
-#~ msgstr "PHP License"
-
-#~ msgid "Creative Commons - Attribuzione 4.0 Internazionale"
-#~ msgstr "Creative Commons - Attribution 4.0 International"
-
-#~ msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
-#~ msgstr "https://creativecommons.org/licenses/by/4.0/deed"
 
 #~ msgid "Area Dev"
 #~ msgstr "Dev Area"

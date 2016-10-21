@@ -30,11 +30,11 @@ $copyright="Linux Day 2016 website contributors";
 $package="linuxday";
 
 function rtfm() {
-		global $argv;
-		echo 'Usage:'.PHP_EOL;
-		echo $argv[0].' SITE_ROOT'.PHP_EOL;
-		echo 'Example:'.PHP_EOL;
-		echo $argv[0].' ./2016'.PHP_EOL;
+	global $argv;
+	echo 'Usage:'.PHP_EOL;
+	echo $argv[0].' SITE_ROOT'.PHP_EOL;
+	echo 'Example:'.PHP_EOL;
+	echo $argv[0].' ./project_directory'.PHP_EOL;
 }
 
 if(!isset($argc) || $argc !== 2) {
@@ -51,15 +51,16 @@ xgettext \
 	--from-code=UTF-8 \
 	--keyword=_e \
 	--default-domain=$package \
-	-o "$path"/l10n/$package.pot \
-	"$path"/*.php \
-	"$path"/*/*.php
+	-o "$path"/2016/l10n/$package.pot \
+	"$path"/includes/*.php \
+	"$path"/2016/*.php \
+	"$path"/2016/*/*.php
 EOT;
 
 exec($xgettext);
 
 # Get the pot
-$pot = file_get_contents($path."/l10n/$package.pot");
+$pot = file_get_contents($path."/2016/l10n/$package.pot");
 $useless_comments = [];
 
 # # Find all useless comments (= line numbers in trebbia.php)
@@ -74,19 +75,19 @@ foreach($useless_comments as $i => $comment) {
 
 # Found anything?
 if(isset($useless_couples)) {
-    foreach($useless_couples as $i => $couple) {
-        # This is O(n^2), or even worse.
-        $line = exec('sed -n ' . $couple[1] . 'p '."$path".'/../' . $couple[0] . ' | cut -c 4-');
-        # Get the line, place it in the pot.
-        $pot = str_replace($useless_comments[$i], $line, $pot);
-    }
+	foreach($useless_couples as $i => $couple) {
+		# This is O(n^2), or even worse.
+		$line = exec('sed -n ' . $couple[1] . 'p '."$path/2016/../" . $couple[0] . ' | cut -c 4-');
+		# Get the line, place it in the pot.
+		$pot = str_replace($useless_comments[$i], $line, $pot);
+	}
 }
 
 # write the pot
-file_put_contents($path."/l10n/$package.pot", $pot);
+file_put_contents($path."/2016/l10n/$package.pot", $pot);
 
 # Generate/update the .po files from the .pot file
-exec("find \"$path\"/l10n -name \\*.po -execdir msgmerge -o $package.po $package.po ../../$package.pot \\;");
+exec("find \"$path\"/2016/l10n -name \\*.po -execdir msgmerge -o $package.po $package.po ../../$package.pot \\;");
 
 # Generate/update the .mo files from .po files
-exec("find \"$path\"/l10n -name \\*.po -execdir msgfmt -o $package.mo $package.po \\;");
+exec("find \"$path\"/2016/l10n -name \\*.po -execdir msgfmt -o $package.mo $package.po \\;");

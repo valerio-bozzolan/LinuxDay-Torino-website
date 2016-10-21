@@ -190,6 +190,7 @@ INSERT INTO `ldto_event_user` VALUES (32,17,0);
 INSERT INTO `ldto_event_user` VALUES (33,20,0);
 INSERT INTO `ldto_event_user` VALUES (34,23,0);
 INSERT INTO `ldto_event_user` VALUES (35,21,0);
+INSERT INTO `ldto_event_user` VALUES (33,24,1);
 /*!40000 ALTER TABLE `ldto_event_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,7 +311,7 @@ CREATE TABLE `ldto_skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -341,6 +342,7 @@ INSERT INTO `ldto_skill` VALUES (19,'blender','Blender','subject');
 INSERT INTO `ldto_skill` VALUES (20,'c','C','programming');
 INSERT INTO `ldto_skill` VALUES (21,'wiki','Wikipedia','subject');
 INSERT INTO `ldto_skill` VALUES (22,'embedded','Embedded','subject');
+INSERT INTO `ldto_skill` VALUES (23,'haskell','Haskell','programming');
 /*!40000 ALTER TABLE `ldto_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -433,7 +435,7 @@ INSERT INTO `ldto_user` VALUES (18,'gianfranco.poncini','user',1,0,'Gianfranco',
 INSERT INTO `ldto_user` VALUES (20,'marco.signoretto','user',1,0,'Marco','Signoretto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (21,'simone','user',1,0,'Simone','Massi',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (23,'alessio','user',1,0,'Alessio','Melandri',NULL,'/2016/static/user/alessio.jpg','!',NULL,NULL,'Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell\'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l\'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.',NULL,NULL,NULL,'alessiomelandri',NULL,'alemela');
-INSERT INTO `ldto_user` VALUES (24,'mario','user',0,0,'Mario','Lacaj',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (24,'mario.lacaj','user',1,0,'Mario','Lacaj',NULL,'/2016/static/user/mario_lacaj.jpg','',NULL,NULL,'Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Dipartimento di Informatica di Torino.\r\n\r\nCosa c\'entro? Te lo dico subito in questa intervista:\r\n\r\n<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (25,'valerio.sacchetto','user',1,0,'Valerio','Sacchetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
@@ -476,6 +478,10 @@ INSERT INTO `ldto_user_skill` VALUES (1,8,2);
 INSERT INTO `ldto_user_skill` VALUES (1,13,2);
 INSERT INTO `ldto_user_skill` VALUES (20,14,2);
 INSERT INTO `ldto_user_skill` VALUES (20,19,2);
+INSERT INTO `ldto_user_skill` VALUES (24,2,2);
+INSERT INTO `ldto_user_skill` VALUES (24,3,2);
+INSERT INTO `ldto_user_skill` VALUES (24,20,2);
+INSERT INTO `ldto_user_skill` VALUES (24,23,2);
 INSERT INTO `ldto_user_skill` VALUES (1,2,3);
 INSERT INTO `ldto_user_skill` VALUES (8,5,3);
 INSERT INTO `ldto_user_skill` VALUES (10,8,3);
@@ -489,6 +495,7 @@ INSERT INTO `ldto_user_skill` VALUES (20,18,3);
 INSERT INTO `ldto_user_skill` VALUES (23,5,3);
 INSERT INTO `ldto_user_skill` VALUES (23,13,3);
 INSERT INTO `ldto_user_skill` VALUES (23,21,3);
+INSERT INTO `ldto_user_skill` VALUES (24,7,3);
 INSERT INTO `ldto_user_skill` VALUES (1,12,4);
 INSERT INTO `ldto_user_skill` VALUES (7,12,4);
 INSERT INTO `ldto_user_skill` VALUES (8,3,4);
@@ -505,4 +512,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-20  3:17:13
+-- Dump completed on 2016-10-21 10:25:37

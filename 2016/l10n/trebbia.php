@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-20T03:17:15+02:00
+# Last update: 2016-10-21T10:35:06+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -280,6 +280,9 @@ _("Wikipedia");
 // skill[embedded]::skill_title
 _("Embedded");
 
+// skill[haskell]::skill_title
+_("Haskell");
+
 // user[boz]::user_bio
 _("Qualcuno ha detto... software libero?");
 
@@ -337,6 +340,13 @@ _("Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicur
 
 // user[alessio]::user_bio
 _("Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.");
+
+// user[mario.lacaj]::user_bio
+_("Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Dipartimento di Informatica di Torino.
+
+Cosa c'entro? Te lo dico subito in questa intervista:
+
+<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>");
 
 ######################################
 ##### Th-th-th-that's all folks! #####
