@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-21T10:46:12+02:00
+# Last update: 2016-10-21T22:56:37+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -70,7 +70,7 @@ _("Lo Yocto Project è un progetto di collaborazione open source che fornisce mo
 _("Dieci anni dietro a FidoCadJ");
 
 // event[talk-dev-3]::event_description
-_("Dietro le quinte di un progetto open source: un editor per l'elettronica (e non solo), usato in diversi forum italiani.");
+_("Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github.io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi forum italiani.");
 
 // event[talk-dev-4]::event_title
 _("Un bot di Telegram con Python");
@@ -104,6 +104,9 @@ Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere m
 
 // event[talk-misc-2]::event_title
 _("Sostenibilità e Open Culture all'Università");
+
+// event[talk-misc-2]::event_abstract
+_("Le apparecchiature guaste sono una risorsa più che un rifiuto. Al Politecnico un gruppo di studenti intende costituire un team dove i ragazzi possano rigenerare le apparecchiature guaste, condividere informazioni e fornire alla società circostante apparecchiature elettroniche funzionanti gratuitamente.");
 
 // event[talk-misc-3]::event_title
 _("Wikidata: la base di conoscenza libera");
@@ -337,6 +340,13 @@ _("Big Data System Architect e sysadmin.");
 
 // user[davide.mainardi]::user_bio
 _("Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell'Ordine degli Ingegneri della Provincia di Torino.");
+
+// user[marco.signoretto]::user_bio
+_("The trash king!
+
+Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello aziendale.
+
+Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a muoversi in tutti i campi della creatività: dal product design alla grafica, dall'interaction design alla sostenibilità.");
 
 // user[alessio]::user_bio
 _("Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.");

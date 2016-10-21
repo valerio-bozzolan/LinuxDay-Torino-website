@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 10:46+0200\n"
+"POT-Creation-Date: 2016-10-21 22:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -976,8 +976,9 @@ msgstr ""
 
 #: event[talk-dev-3]::event_description
 msgid ""
-"Dietro le quinte di un progetto open source: un editor per l'elettronica (e "
-"non solo), usato in diversi forum italiani."
+"Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
+"io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
+"forum italiani."
 msgstr ""
 
 #: event[talk-dev-4]::event_title
@@ -1035,11 +1036,20 @@ msgstr ""
 msgid "Sostenibilità e Open Culture all'Università"
 msgstr ""
 
+#: event[talk-misc-2]::event_abstract
+msgid ""
+"Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
+"Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
+"possano rigenerare le apparecchiature guaste, condividere informazioni e "
+"fornire alla società circostante apparecchiature elettroniche funzionanti "
+"gratuitamente."
+msgstr ""
+
 #: event[talk-misc-3]::event_title
 msgid "Wikidata: la base di conoscenza libera"
 msgstr ""
 
-#: event[talk-misc-4]::event_title event[talk-base-1]::event_title8
+#: event[talk-misc-4]::event_title skill[wiki]::skill_title
 msgid "Wikipedia"
 msgstr ""
 
@@ -1168,19 +1178,19 @@ msgstr ""
 msgid "Spazio Restart"
 msgstr ""
 
-#: room[first-floor]::room_name
+#: conference[2016]::conference_title2
 msgid "Primo piano"
 msgstr ""
 
-#: conference[2016]::conference_title2
+#: conference[2016]::conference_title5
 msgid "Laboratorio Turing"
 msgstr ""
 
-#: conference[2016]::conference_title5
+#: conference[2016]::conference_title8
 msgid "Laboratorio Djikstra"
 msgstr ""
 
-#: conference[2016]::conference_title8
+#: skill[asd]::skill_title
 msgid "asd"
 msgstr ""
 
@@ -1208,19 +1218,19 @@ msgstr ""
 msgid "Java"
 msgstr ""
 
-#: skill[cpp]::skill_title
+#: conference[2015]::conference_title2
 msgid "C++"
 msgstr ""
 
-#: conference[2015]::conference_title2
+#: conference[2015]::conference_title5
 msgid "Ubuntu"
 msgstr ""
 
-#: conference[2015]::conference_title5
+#: conference[2015]::conference_title8
 msgid "GNU/Linux"
 msgstr ""
 
-#: conference[2015]::conference_title8
+#: skill[turbo-pascal]::skill_title
 msgid "Turbo Pascal"
 msgstr ""
 
@@ -1248,15 +1258,15 @@ msgstr ""
 msgid "Insegnare"
 msgstr ""
 
-#: skill[raee]::skill_title
+#: event[talk-base-1]::event_title2
 msgid "Recupero del RAEE"
 msgstr ""
 
-#: event[talk-base-1]::event_title2
+#: event[talk-base-1]::event_title5
 msgid "Blender"
 msgstr ""
 
-#: event[talk-base-1]::event_title5
+#: event[talk-base-1]::event_title8
 msgid "C"
 msgstr ""
 
@@ -1285,7 +1295,7 @@ msgid ""
 "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
 msgstr ""
 
-#: user[dario]::user_bio
+#: event[talk-base-1]::event_description2
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
 "la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n"
@@ -1294,14 +1304,14 @@ msgid ""
 "2010."
 msgstr ""
 
-#: event[talk-base-1]::event_description4
+#: event[talk-base-1]::event_description7
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
 "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
 msgstr ""
 
-#: event[talk-base-1]::event_description9
+#: user[luigi.maselli]::user_bio
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
@@ -1368,14 +1378,28 @@ msgstr ""
 msgid "Big Data System Architect e sysadmin."
 msgstr ""
 
-#: user[davide.mainardi]::user_bio
+#: event[talk-dev-1]::event_title2
 msgid ""
 "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
 "sicurezza informatica, full stack Java developer, Consigliere della "
 "Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
 msgstr ""
 
-#: event[talk-dev-1]::event_title2
+#: event[talk-dev-1]::event_title5
+msgid ""
+"The trash king!\n"
+"\n"
+"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
+"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
+"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
+"aziendale.\n"
+"\n"
+"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
+"muoversi in tutti i campi della creatività: dal product design alla grafica, "
+"dall'interaction design alla sostenibilità."
+msgstr ""
+
+#: user[alessio]::user_bio
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
@@ -1384,7 +1408,7 @@ msgid ""
 "piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
 msgstr ""
 
-#: event[talk-dev-1]::event_title5
+#: user[mario.lacaj]::user_bio
 msgid ""
 "Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
 "Dipartimento di Informatica di Torino.\n"
