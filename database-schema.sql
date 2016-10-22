@@ -125,7 +125,7 @@ CREATE TABLE `ldto_event` (
 
 LOCK TABLES `ldto_event` WRITE;
 /*!40000 ALTER TABLE `ldto_event` DISABLE KEYS */;
-INSERT INTO `ldto_event` VALUES (17,'talk-base-1','Didattica del coding',NULL,NULL,'Le basi del coding sono fondamentali, come leggere e scrivere.\nQuali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (17,'talk-base-1','Didattica del coding',NULL,NULL,'Le basi del coding sono fondamentali, come leggere e scrivere.\nQuali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?',NULL,'2016-10-22 14:30:00','2016-10-22 15:30:00',NULL,1,11,1,1);
 INSERT INTO `ldto_event` VALUES (21,'talk-dev-1','Introduzione alla programmazione con JavaScript',NULL,NULL,'Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/javascript.png',1,2,2,1);
 INSERT INTO `ldto_event` VALUES (22,'talk-sys-1','Non bisogna aver paura di IPv6',NULL,NULL,'Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l\'implementazione in ambiente GNU/Linux.',NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/ipv6.png',1,3,3,1);
 INSERT INTO `ldto_event` VALUES (23,'talk-misc-1','La tecnologia LoRa e le sue applicazioni IoT',NULL,NULL,NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,1,4,4,1);
@@ -242,7 +242,7 @@ CREATE TABLE `ldto_room` (
   UNIQUE KEY `room_uid` (`room_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_room_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -260,6 +260,7 @@ INSERT INTO `ldto_room` VALUES (6,'lab-2','Spazio Restart',1);
 INSERT INTO `ldto_room` VALUES (8,'first-floor','Primo piano',2);
 INSERT INTO `ldto_room` VALUES (9,'lab-touring','Laboratorio Turing',1);
 INSERT INTO `ldto_room` VALUES (10,'lab-djikstra','Laboratorio Djikstra',1);
+INSERT INTO `ldto_room` VALUES (11,'f','Aula F',1);
 /*!40000 ALTER TABLE `ldto_room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -512,4 +513,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-21 22:56:16
+-- Dump completed on 2016-10-22 12:35:24
