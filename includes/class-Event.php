@@ -242,7 +242,7 @@ class Event {
 	/**
 	 * @return DynamicQuery
 	 */
-	function getStandardQueryEvent() {
+	static function getStandardQueryEvent() {
 		$q = new DynamicQuery();
 		$q->useTable( [ 'event', 'conference', 'room', 'track', 'chapter' ] );
 		$q->appendCondition('event.conference_ID = conference.conference_ID');

@@ -250,13 +250,23 @@ new Header('conference', [
 				'restart-party.png'
 			);
 			$box(
-				_("Laboratorio di coding per i più piccoli a tema Linux Day."),
-				HTML::a(
-					'http://www.coderdojotorino2.it',
-					_("CoderDojo Torino 2"),
-					null,
-					'white-text',
-					'target="_blank"'
+				_("Laboratorio di coding per i più piccoli a tema Linux Day"),
+				sprintf(
+					_("%s e %s."),
+					HTML::a(
+						'http://www.coderdojotorino.it',
+						_("CoderDojo Torino"),
+						 null,
+						'white-text',
+						'target="_blank"'
+					),
+					HTML::a(
+						'http://www.coderdojotorino2.it',
+						_("Coderdojo Torino 2"),
+						null,
+						'white-text',
+						'target="_blank"'
+					)
 				),
 				null,
 				null,
