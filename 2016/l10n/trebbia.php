@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-21T22:56:37+02:00
+# Last update: 2016-10-27T02:10:24+02:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -216,6 +216,9 @@ _("Laboratorio Turing");
 
 // room[lab-djikstra]::room_name
 _("Laboratorio Djikstra");
+
+// room[f]::room_name
+_("Aula F");
 
 // skill[asd]::skill_title
 _("asd");

@@ -23,8 +23,39 @@ trait SharableTrait {
 		return $this->sharable_ID;
 	}
 
-	function getSharableTitle() {
+	function getSharableTitle($args = []) {
+		property_exists($this, 'sharable_title')
+			|| error_die("Missing sharable title");
+
+		if( ! isset( $this->sharable_title ) ) {
+			return $this->getDefaultSharableTitle($args);
+		}
+
 		return _( $this->sharable_title );
+	}
+
+	/**
+	 * Retrieve something usable as a title
+	 */
+	function getDefaultSharableTitle($args = []) {
+
+		if( $this->sharable_type === 'youtube' ) {
+			if( isset( $args['prop'] ) && $args['prop'] ) {
+				return sprintf(
+					_("il %s"),
+					_("video esterno")
+				);
+			} else {
+				return _("video esterno");
+			}
+		}
+
+		// Get filename from "/asd/asd/asd/(filename)"
+		$i = 0;
+		while( strpos($this->sharable_path, '/', $i) !== false ) {
+			$i++;
+		}
+		return substr($this->sharable_path, $i);
 	}
 
 	function isSharableImage() {
@@ -39,12 +70,23 @@ trait SharableTrait {
 		return $this->sharable_type === 'document';
 	}
 
+	function isSharableDownloadable() {
+		return $this->sharable_type !== 'youtube';
+	}
+
 	function getSharableLicense() {
 		return license( $this->sharable_license );
 	}
 
 	function getSharablePath() {
-		return site_page($this->sharable_path, ROOT);
+		$t = $this->sharable_type;
+		$p = $this->sharable_path;
+
+		if($t === 'youtube') {
+			return "https://www.youtube.com/watch?v={$p}";
+		}
+
+		return site_page($p, ROOT);
 	}
 
 	function getSharableMIME() {

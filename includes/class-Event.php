@@ -99,6 +99,21 @@ trait EventTrait {
 		return $this->event_abstract;
 	}
 
+	function hasEventNote() {
+		property_exists($this, 'event_note')
+			|| error_die("Missing event_note");
+
+		return isset( $this->event_note );
+	}
+
+	function getEventNote() {
+		return $this->event_note;
+	}
+
+	function getEventNoteHTML($args = []) {
+		return Markdown::parse( _( $this->event_note ), $args );
+	}
+
 	function getEventDescriptionHTML($args = []) {
 		return Markdown::parse( _( $this->event_description ), $args );
 	}
@@ -201,6 +216,7 @@ class Event {
 		'event_subtitle',
 		'event_abstract',
 		'event_description',
+		'event_note',
 		'event_language',
 		'event_start',
 		'event_end',

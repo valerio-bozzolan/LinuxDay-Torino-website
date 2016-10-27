@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 22:56+0200\n"
+"POT-Creation-Date: 2016-10-27 02:10+0200\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -67,6 +67,15 @@ msgstr "https://creativecommons.org/licenses/by-sa/4.0/deed"
 #: includes/class-Licenses.php:33
 msgid "Licenza jQuery"
 msgstr "jQuery License"
+
+#: includes/class-Sharable.php:45
+#, php-format
+msgid "il %s"
+msgstr "the %s"
+
+#: includes/class-Sharable.php:46 includes/class-Sharable.php:49
+msgid "video esterno"
+msgstr "external video"
 
 #: includes/class-Skill.php:36
 #, php-format
@@ -257,7 +266,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:227 2016/event.php:124
+#: 2016/credits.php:227 2016/event.php:134
 msgid "Materiale"
 msgstr "Files"
 
@@ -337,33 +346,38 @@ msgstr "Abstract"
 msgid "Descrizione"
 msgstr "Description"
 
-#: 2016/event.php:136
+#: 2016/event.php:123
+msgid "Note"
+msgstr "Notes"
+
+#: 2016/event.php:146
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:139
-msgid "l'allegato"
-msgstr "the attachment"
+#: 2016/event.php:160
+#, php-format
+msgid "Vedi %s distribuibile sotto licenza %s."
+msgstr "See %s sharable under %s license."
 
-#: 2016/event.php:158
+#: 2016/event.php:182
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:171 2016/event.php:188
+#: 2016/event.php:195 2016/event.php:212
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:199
+#: 2016/event.php:223
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
 
-#: 2016/event.php:219
+#: 2016/event.php:243
 msgid "Preceduto da"
 msgstr "Previous"
 
-#: 2016/event.php:232
+#: 2016/event.php:256
 msgid "A seguire"
 msgstr "Next"
 
@@ -513,56 +527,65 @@ msgstr "Restarters Torino association"
 msgid "dall'%s"
 msgstr "by %s"
 
-#: 2016/index.php:253 event[coderdojo]::event_abstract
-msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
-msgstr "Coding lab for children themed Linux Day."
+#: 2016/index.php:253
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
+msgstr "Coding lab for children themed Linux Day"
 
-#: 2016/index.php:256
-msgid "CoderDojo Torino 2"
+#: 2016/index.php:255
+#, php-format
+msgid "%s e %s."
+msgstr "%s and %s."
+
+#: 2016/index.php:258
+msgid "CoderDojo Torino"
+msgstr "CoderDojo Turin"
+
+#: 2016/index.php:265
+msgid "Coderdojo Torino 2"
 msgstr "CoderDojo Turin 2"
 
-#: 2016/index.php:267
+#: 2016/index.php:277
 msgid "Allestimento museale di Retrocomputing."
 msgstr "Retrocomputing museum exhibition"
 
-#: 2016/index.php:270
+#: 2016/index.php:280
 #, php-format
 msgid "dal %s"
 msgstr "by %s"
 
-#: 2016/index.php:274
+#: 2016/index.php:284
 msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 "LIP (Linux Installation Party) and technical assistance to GNU/Linux "
 "distributions. "
 
-#: 2016/index.php:275
+#: 2016/index.php:285
 msgid "volontari"
 msgstr "volunteers"
 
-#: 2016/index.php:286
+#: 2016/index.php:296
 msgid "Come arrivare"
 msgstr "How to reach us"
 
-#: 2016/index.php:295
+#: 2016/index.php:305
 msgid "Abilitare JavaScript per la mappa interattiva."
 msgstr "Enable JavaScript for interactive map."
 
-#: 2016/index.php:306
+#: 2016/index.php:316
 #, php-format
 msgid "Vedi %s su OpenStreetMap"
 msgstr "See %s on OpenStreetMap"
 
-#: 2016/index.php:327
+#: 2016/index.php:337
 msgid "Le quattro libertà fontamentali del software libero"
 msgstr "The four fundamentals of Free as in Freedom software:"
 
-#: 2016/index.php:334
+#: 2016/index.php:344
 msgid "Ingresso gratuito"
 msgstr "Free (as in beer) entry"
 
-#: 2016/index.php:337
+#: 2016/index.php:347
 #, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
@@ -577,15 +600,15 @@ msgstr ""
 "Days always indipendent, Free and without costs.<br /> See you on <strong>"
 "%s</strong>!"
 
-#: 2016/index.php:344
+#: 2016/index.php:354
 msgid "22 ottobre"
 msgstr "October 22nd"
 
-#: 2016/index.php:350
+#: 2016/index.php:360
 msgid "Scopri i nostri partner"
 msgstr "Our partners"
 
-#: 2016/index.php:352
+#: 2016/index.php:362
 #, php-format
 msgid "Partner %s"
 msgstr "%s partner"
@@ -1162,6 +1185,10 @@ msgstr ""
 msgid "Coderdojo"
 msgstr "Coderdojo"
 
+#: event[coderdojo]::event_abstract
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
+msgstr "Coding lab for children themed Linux Day."
+
 #: event[coderdojo]::event_description
 msgid ""
 "Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
@@ -1295,6 +1322,10 @@ msgstr "Turing Lab"
 msgid "Laboratorio Djikstra"
 msgstr "Djikstra Lab"
 
+#: room[f]::room_name
+msgid "Aula F"
+msgstr "\"F\" room"
+
 #: skill[asd]::skill_title
 msgid "asd"
 msgstr "asd"
@@ -1319,19 +1350,19 @@ msgstr "NodeJS"
 msgid "Apple"
 msgstr "Apple"
 
-#: skill[java]::skill_title
+#: conference[2015]::conference_title2
 msgid "Java"
 msgstr "Java"
 
-#: conference[2015]::conference_title2
+#: conference[2015]::conference_title5
 msgid "C++"
 msgstr "C++"
 
-#: conference[2015]::conference_title5
+#: conference[2015]::conference_title8
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: conference[2015]::conference_title8
+#: skill[gnu-linux]::skill_title
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
@@ -1359,19 +1390,19 @@ msgstr "Adobe Illustrator"
 msgid "Immagini vettoriali"
 msgstr "Vector Images"
 
-#: skill[teach]::skill_title
+#: event[talk-base-1]::event_title2
 msgid "Insegnare"
 msgstr "Teach"
 
-#: event[talk-base-1]::event_title2
+#: event[talk-base-1]::event_title5
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: event[talk-base-1]::event_title5
+#: event[talk-base-1]::event_title8
 msgid "Blender"
 msgstr "Blender"
 
-#: event[talk-base-1]::event_title8
+#: skill[c]::skill_title
 msgid "C"
 msgstr "C"
 
@@ -1408,7 +1439,7 @@ msgstr ""
 "\n"
 "Floppy musician, checkers and Retrocomputing enthusiast."
 
-#: event[talk-base-1]::event_description2
+#: event[talk-base-1]::event_description5
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
 "la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n"
@@ -1422,7 +1453,7 @@ msgstr ""
 "I've been using GNU/Linux for many years, and I help out at the Linux Day "
 "since 2010."
 
-#: event[talk-base-1]::event_description7
+#: user[renzo]::user_bio
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
@@ -1533,11 +1564,11 @@ msgstr ""
 "dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
 "system engineering. "
 
-#: user[davide.isoardi]::user_bio user[davide.vergari]::user_bio
+#: user[davide.isoardi]::user_bio event[talk-dev-1]::event_title2
 msgid "Big Data System Architect e sysadmin."
 msgstr "Big Data System Architect and sysadmin."
 
-#: event[talk-dev-1]::event_title2
+#: event[talk-dev-1]::event_title5
 msgid ""
 "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
 "sicurezza informatica, full stack Java developer, Consigliere della "
@@ -1547,7 +1578,7 @@ msgstr ""
 "security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
 "degli Ingegneri della Provincia di Torino\"."
 
-#: event[talk-dev-1]::event_title5
+#: event[talk-dev-1]::event_title8
 msgid ""
 "The trash king!\n"
 "\n"
@@ -1601,80 +1632,3 @@ msgstr ""
 "\n"
 "<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
 "dipartimento/>"
-
-#, fuzzy
-#~ msgid "Linux Day Torino 2015"
-#~ msgstr "Linux Day Turin 2016"
-
-#, fuzzy
-#~ msgid "Facebook"
-#~ msgstr "%s on Facebook"
-
-#, fuzzy
-#~ msgid "Twitter"
-#~ msgstr "%s on Twitter"
-
-#~ msgid "Ora"
-#~ msgstr "Hour"
-
-#~ msgid "Aula A (dev)"
-#~ msgstr "Room A (dev)"
-
-#~ msgid "Aula B (base)"
-#~ msgstr "Room B (base)"
-
-#~ msgid "Aula C (misc)"
-#~ msgstr "Room C (misc)"
-
-#~ msgid "Aula D (sys)"
-#~ msgstr "Room D (sys)"
-
-#~ msgid ""
-#~ "<strong>Schermo piccolo?</strong> Puoi scorrere la tabella verso destra."
-#~ msgstr "<strong>Small screen?</strong> You can swipe right."
-
-#~ msgid "CoderDojo Torino 1"
-#~ msgstr "CoderDojo Turin 1"
-
-#~ msgid "nessuno"
-#~ msgstr "nobody"
-
-#~ msgid "Big Data System Architect e sysadmin"
-#~ msgstr "Big Data System Architect and sysadmin"
-
-#~ msgid "Il talk si terrà il %s alle ore %s in %s."
-#~ msgstr "The talk will be on the %s at %s in %s."
-
-#~ msgid ""
-#~ "Poche righe di codice, un Raspberry Pi ed ecco un bot Telegram da usare a "
-#~ "nostro piacimento."
-#~ msgstr ""
-#~ "Few code lines, a Raspberry Pi and here we have a Telegram bot to use how "
-#~ "we please. "
-
-#~ msgid ""
-#~ "Questo sito web utilizza esclusivamente <strong>software libero</strong>."
-#~ msgstr ""
-#~ "This web site is exclusively built over <strong>free as in freedom "
-#~ "software</strong>."
-
-#~ msgid "Strumenti utilizzati"
-#~ msgstr "Tools used"
-
-#~ msgid "Alcuni strumenti utilizzati per la realizzazione del sito web:"
-#~ msgstr "Some tools used to make the web site:"
-
-#~ msgid "Ritocchi alla mappa di OpenStreetMap in formato SVG."
-#~ msgstr "Tweaks at the OpenStreetMap SVG map."
-
-#~ msgid "da"
-#~ msgstr "by"
-
-#~ msgid "Area Dev"
-#~ msgstr "Dev Area"
-
-#~ msgid "Area Sysadmin"
-#~ msgstr "Sysadmin Area"
-
-#~ msgid "IPV6"
-#~ msgstr "IPV6"

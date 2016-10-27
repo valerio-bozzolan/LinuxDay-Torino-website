@@ -116,6 +116,16 @@ new Header('event', $args);
 	<?php endif ?>
 	<!-- End event description -->
 
+	<!-- Start event description -->
+	<?php if( $event->hasEventNote() ): ?>
+	<div class="divider"></div>
+	<div class="section">
+		<h3><?php _e("Note") ?></h3>
+		<?php echo $event->getEventNoteHTML(['p' => 'flow-text']) ?>
+	</div>
+	<?php endif ?>
+	<!-- End event description -->
+
 	<!-- Start files -->
 	<?php $sharables = $event->querySharables() ?>
 	<?php if( $sharables->num_rows ): ?>
@@ -130,13 +140,27 @@ new Header('event', $args);
 					<video class="responsive-video" controls="controls">
 						<source src="<?php echo $sharable->getSharablePath() ?>" type="<?php echo $sharable->getSharableMIME() ?>" />
 					</video>
-				<?php else: ?>
+				<?php elseif( $sharable->isSharableDownloadable() ): ?>
 					<p class="flow-text">
 						<?php printf(
 							_("Scarica %s distribuibile sotto licenza %s."),
 							HTML::a(
 								$sharable->getSharablePath(),
-								icon('attachment', 'left') .  _("l'allegato"),
+								icon('attachment', 'left') . $sharable->getSharableTitle(['prop' => true]),
+								null,
+								null,
+								'target="_blank"'
+							),
+							$sharable->getSharableLicense()->getLink()
+						) ?>
+					</p>
+				<?php else: ?>
+					<p class="flow-text">
+						<?php printf(
+							_("Vedi %s distribuibile sotto licenza %s."),
+							HTML::a(
+								$sharable->getSharablePath(),
+								icon('share', 'left') . $sharable->getSharableTitle(['prop' => true]),
 								null,
 								null,
 								'target="_blank"'
