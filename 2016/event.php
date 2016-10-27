@@ -136,11 +136,7 @@ new Header('event', $args);
 			<?php $i = 0 ?>
 			<?php while( $sharable = $sharables->fetch_object('Sharable') ): ?>
 			<div class="col s12">
-				<?php if( $sharable->isSharableVideo() ): ?>
-					<video class="responsive-video" controls="controls">
-						<source src="<?php echo $sharable->getSharablePath() ?>" type="<?php echo $sharable->getSharableMIME() ?>" />
-					</video>
-				<?php elseif( $sharable->isSharableDownloadable() ): ?>
+				<?php if( $sharable->isSharableDownloadable() ): ?>
 					<p class="flow-text">
 						<?php printf(
 							_("Scarica %s distribuibile sotto licenza %s."),
@@ -154,6 +150,11 @@ new Header('event', $args);
 							$sharable->getSharableLicense()->getLink()
 						) ?>
 					</p>
+					<?php if( $sharable->isSharableVideo() ): ?>
+					<video class="responsive-video" controls="controls">
+						<source src="<?php echo $sharable->getSharablePath() ?>" type="<?php echo $sharable->getSharableMIME() ?>" />
+					</video>
+					<?php endif ?>
 				<?php else: ?>
 					<p class="flow-text">
 						<?php printf(
