@@ -40,6 +40,12 @@ register_permissions('admin',   'edit-events');
 defined('LIBMARKDOWN_PATH')
 	|| define('LIBMARKDOWN_PATH', '/usr/share/php/markdown.php');
 
+defined('JQUERY')
+	|| define('JQUERY', '/javascript/jquery/jquery.min.js');
+
+defined('LEAFLET_DIR')
+	|| define('LEAFLET_DIR', '/javascript/leaflet');
+
 // /{conference_uid}/
 defined('PERMALINK_CONFERENCE')
 	|| define('PERMALINK_CONFERENCE', '/%s/');
