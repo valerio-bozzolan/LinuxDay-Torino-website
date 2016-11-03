@@ -69,7 +69,7 @@ class License {
 	}
 
 	function getLink($classes = null, $other = null) {
-		if($other = null) {
+		if(null === $other) {
 			$other = 'target="_blank"';
 		}
 
