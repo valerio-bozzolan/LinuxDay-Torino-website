@@ -181,6 +181,7 @@ INSERT INTO `ldto_event_user` VALUES (23,25,0);
 INSERT INTO `ldto_event_user` VALUES (23,26,0);
 INSERT INTO `ldto_event_user` VALUES (24,7,0);
 INSERT INTO `ldto_event_user` VALUES (25,1,0);
+INSERT INTO `ldto_event_user` VALUES (26,27,0);
 INSERT INTO `ldto_event_user` VALUES (27,10,0);
 INSERT INTO `ldto_event_user` VALUES (28,11,0);
 INSERT INTO `ldto_event_user` VALUES (29,12,0);
@@ -283,7 +284,7 @@ CREATE TABLE `ldto_sharable` (
   PRIMARY KEY (`sharable_ID`),
   KEY `event_ID` (`event_ID`),
   CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -299,6 +300,8 @@ INSERT INTO `ldto_sharable` VALUES (4,NULL,'3V2mhlOce6E','youtube',NULL,'cc-by-s
 INSERT INTO `ldto_sharable` VALUES (6,NULL,'dCMvkmztdjk','youtube',NULL,'cc-by-sa-4.0',25);
 INSERT INTO `ldto_sharable` VALUES (7,NULL,'http://static.reyboz.it/2016/linux-day-torino/dieci-anni-FidoCadJ.mp4','video','video/mp4','cc-by-sa-4.0',28);
 INSERT INTO `ldto_sharable` VALUES (8,NULL,'/2016/static/uploads/intro-programmazione-js.pdf','document',NULL,'cc-by-sa-4.0',21);
+INSERT INTO `ldto_sharable` VALUES (9,NULL,'http://static.reyboz.it/2016/linux-day-torino/telegram-bot-python.mp4','video','video/mp4','cc-by-sa-4.0',29);
+INSERT INTO `ldto_sharable` VALUES (10,NULL,'http://static.reyboz.it/2016/linux-day-torino/yocto-project.mp4','video','video/mp4','cc-by-sa-4.0',27);
 /*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -415,7 +418,7 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -444,6 +447,7 @@ INSERT INTO `ldto_user` VALUES (23,'alessio','user',1,0,'Alessio','Melandri',NUL
 INSERT INTO `ldto_user` VALUES (24,'mario.lacaj','user',1,0,'Mario','Lacaj',NULL,'/2016/static/user/mario_lacaj.jpg','',NULL,NULL,'Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Dipartimento di Informatica di Torino.\n\nCosa c\'entro? Te lo dico subito in questa intervista:\n\n<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (25,'valerio.sacchetto','user',1,0,'Valerio','Sacchetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (27,'madbob','user',1,0,'Roberto','Guido',NULL,NULL,'','http://www.madbob.org',NULL,'Presidente [Italian Linux Society](http://www.ils.org/).','http://blog.madbob.org','madbob',NULL,NULL,NULL,'madbob');
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -518,4 +522,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-27 15:50:02
+-- Dump completed on 2016-11-03 21:20:23
