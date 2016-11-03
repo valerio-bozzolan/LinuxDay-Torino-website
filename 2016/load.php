@@ -55,10 +55,10 @@ if( isset( $_REQUEST['l'] ) ) {
 define('LANGUAGE_APPLIED', apply_language( $l ) );
 
 ///////////////////////////////////////////////////////////////////
-define('STATIC_FOLD', '/static');
+define('STATIC_DIR', '/static');
 
 // Boz-PHP: Helpful constants
-define('XXX', CONFERENCE . STATIC_FOLD);
+define('XXX', CONFERENCE . STATIC_DIR);
 
 define('SITE_NAME',        _("Linux Day Torino 2016") );
 define('SITE_NAME_SHORT',  _("LDTO2016") );
@@ -88,6 +88,7 @@ add_menu_entries( [
 
 	new MenuEntry('home',    URL . CONFERENCE . _,               _("Benvenuti")             ),
 	new MenuEntry('partner', URL . CONFERENCE . '/partner.php',  _("Partner")               ),
+	new MenuEntry('photos',  URL . CONFERENCE . '/photos.php',   _("Fotografie")            ),
 	new MenuEntry('credits', URL . CONFERENCE . '/credits.php',  _("Crediti")               ),
 	new MenuEntry('api',     URL . CONFERENCE . '/api',          _("API"),          'hidden')
 ] );
