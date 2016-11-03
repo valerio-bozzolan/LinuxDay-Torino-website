@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-27 02:10+0200\n"
+"POT-Creation-Date: 2016-11-03 22:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -347,34 +347,34 @@ msgstr ""
 msgid "Note"
 msgstr ""
 
-#: 2016/event.php:146
+#: 2016/event.php:142
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr ""
 
-#: 2016/event.php:160
+#: 2016/event.php:161
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr ""
 
-#: 2016/event.php:182
+#: 2016/event.php:183
 msgid "Relatori"
 msgstr ""
 
-#: 2016/event.php:195 2016/event.php:212
+#: 2016/event.php:196 2016/event.php:213
 #, php-format
 msgid "Profilo di %s"
 msgstr ""
 
-#: 2016/event.php:223
+#: 2016/event.php:224
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr ""
 
-#: 2016/event.php:243
+#: 2016/event.php:244
 msgid "Preceduto da"
 msgstr ""
 
-#: 2016/event.php:256
+#: 2016/event.php:257
 msgid "A seguire"
 msgstr ""
 
@@ -1329,7 +1329,9 @@ msgstr ""
 #: event[talk-base-1]::event_description5
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
-"la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.\n"
+"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
+"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
+"it).\n"
 "\n"
 "Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
 "2010."
@@ -1448,4 +1450,8 @@ msgid ""
 "\n"
 "<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
 "dipartimento/>"
+msgstr ""
+
+#: user[madbob]::user_bio
+msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
 msgstr ""

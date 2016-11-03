@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-10-27T02:10:24+02:00
+# Last update: 2016-11-03T22:18:08+01:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -302,7 +302,7 @@ Mi è capitato di organizzare questo Linux Day. =P
 Suonatore di Floppy, appassionato di Dama e Retrocomputing.");
 
 // user[dario]::user_bio
-_("Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di CoderDojo Torino2 e di Merende Digitali.
+_("Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).
 
 Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.");
 
@@ -360,6 +360,9 @@ _("Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Diparti
 Cosa c'entro? Te lo dico subito in questa intervista:
 
 <https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>");
+
+// user[madbob]::user_bio
+_("Presidente [Italian Linux Society](http://www.ils.org/).");
 
 ######################################
 ##### Th-th-th-that's all folks! #####
