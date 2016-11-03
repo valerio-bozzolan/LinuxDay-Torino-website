@@ -284,7 +284,7 @@ CREATE TABLE `ldto_sharable` (
   PRIMARY KEY (`sharable_ID`),
   KEY `event_ID` (`event_ID`),
   CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -302,6 +302,7 @@ INSERT INTO `ldto_sharable` VALUES (7,NULL,'http://static.reyboz.it/2016/linux-d
 INSERT INTO `ldto_sharable` VALUES (8,NULL,'/2016/static/uploads/intro-programmazione-js.pdf','document',NULL,'cc-by-sa-4.0',21);
 INSERT INTO `ldto_sharable` VALUES (9,NULL,'http://static.reyboz.it/2016/linux-day-torino/telegram-bot-python.mp4','video','video/mp4','cc-by-sa-4.0',29);
 INSERT INTO `ldto_sharable` VALUES (10,NULL,'http://static.reyboz.it/2016/linux-day-torino/yocto-project.mp4','video','video/mp4','cc-by-sa-4.0',27);
+INSERT INTO `ldto_sharable` VALUES (11,NULL,'ftp://ftp.koansoftware.com/public/talks/LinuxDay2016/LinuxDay-2016-Yocto-Koan.pdf','document','','cc-by-sa-3.0',27);
 /*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -522,4 +523,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-03 21:20:23
+-- Dump completed on 2016-11-03 21:37:28
