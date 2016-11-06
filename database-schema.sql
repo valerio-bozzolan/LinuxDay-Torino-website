@@ -284,7 +284,7 @@ CREATE TABLE `ldto_sharable` (
   PRIMARY KEY (`sharable_ID`),
   KEY `event_ID` (`event_ID`),
   CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,6 +303,7 @@ INSERT INTO `ldto_sharable` VALUES (8,NULL,'/2016/static/uploads/intro-programma
 INSERT INTO `ldto_sharable` VALUES (9,NULL,'http://static.reyboz.it/2016/linux-day-torino/telegram-bot-python.mp4','video','video/mp4','cc-by-sa-4.0',29);
 INSERT INTO `ldto_sharable` VALUES (10,NULL,'http://static.reyboz.it/2016/linux-day-torino/yocto-project.mp4','video','video/mp4','cc-by-sa-4.0',27);
 INSERT INTO `ldto_sharable` VALUES (11,NULL,'ftp://ftp.koansoftware.com/public/talks/LinuxDay2016/LinuxDay-2016-Yocto-Koan.pdf','document','','cc-by-sa-3.0',27);
+INSERT INTO `ldto_sharable` VALUES (12,NULL,'/2016/static/uploads/Docker.odp','document','','cc-by-nc-sa-4.0',30);
 /*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -430,7 +431,7 @@ LOCK TABLES `ldto_user` WRITE;
 /*!40000 ALTER TABLE `ldto_user` DISABLE KEYS */;
 INSERT INTO `ldto_user` VALUES (1,'boz','admin',1,1,'Valerio','Bozzolan',NULL,NULL,NULL,'https://boz.reyboz.it','gnu-gpl','Qualcuno ha detto... software libero?','https://blog.reyboz.it','ValerioBozzolan',NULL,NULL,NULL,'valerio-bozzolan');
 INSERT INTO `ldto_user` VALUES (2,'oirasor','admin',1,1,'Rosario','Antoci',NULL,NULL,NULL,'','gnu-gpl','Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).\n\nNon mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.\n\nMi è capitato di organizzare questo Linux Day. =P\n\nSuonatore di Floppy, appassionato di Dama e Retrocomputing.',NULL,'0iras0r',NULL,NULL,NULL,'0iras0r');
-INSERT INTO `ldto_user` VALUES (3,'dario','user',1,0,'Dario','Sera',NULL,NULL,'!',NULL,NULL,'Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).\r\n\r\nUtilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (3,'dario','user',1,0,'Dario','Sera',NULL,NULL,'!',NULL,NULL,'Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).\n\nUtilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (7,'renzo','user',1,0,'Renzo','Davoli',NULL,'/2016/static/user/davoli.jpg','!',NULL,NULL,'Ricercatore, Maker, Insegnante, Sviluppatore...\nCinquantenne all\'anagrafe, continua a giocare e a pensare liberamente.\nIn realtà vuole salvare il mondo, ma non ditelo a nessuno.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (8,'luigi.maselli','user',1,0,'Luigi','Maselli',NULL,NULL,'!','https://grigio.org','mit','Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance.',NULL,'grigi0',NULL,NULL,NULL,'grigio');
 INSERT INTO `ldto_user` VALUES (10,'marco.cavallini','user',1,0,'Marco','Cavallini',NULL,'/2016/static/user/cavallini.jpg','!',NULL,NULL,'Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni \'80. Inizia l\'attività di evangelizzazione all\'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.\n\nÈ membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.',NULL,NULL,NULL,'marcocavallini',NULL,NULL);
@@ -523,4 +524,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-03 22:14:19
+-- Dump completed on 2016-11-06 21:10:00
