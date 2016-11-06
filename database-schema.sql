@@ -298,10 +298,10 @@ INSERT INTO `ldto_sharable` VALUES (2,NULL,'/2016/static/uploads/FidoCadJ.pdf','
 INSERT INTO `ldto_sharable` VALUES (3,NULL,'/2016/static/uploads/Utilizzi_di_GNU_Linux.odp','document',NULL,'cc-by-sa-4.0',25);
 INSERT INTO `ldto_sharable` VALUES (4,NULL,'3V2mhlOce6E','youtube',NULL,'cc-by-sa-4.0',24);
 INSERT INTO `ldto_sharable` VALUES (6,NULL,'dCMvkmztdjk','youtube',NULL,'cc-by-sa-4.0',25);
-INSERT INTO `ldto_sharable` VALUES (7,NULL,'http://static.reyboz.it/2016/linux-day-torino/dieci-anni-FidoCadJ.mp4','video','video/mp4','cc-by-sa-4.0',28);
+INSERT INTO `ldto_sharable` VALUES (7,NULL,'//static.reyboz.it/2016/linux-day-torino/dieci-anni-FidoCadJ.mp4','video','video/mp4','cc-by-sa-4.0',28);
 INSERT INTO `ldto_sharable` VALUES (8,NULL,'/2016/static/uploads/intro-programmazione-js.pdf','document',NULL,'cc-by-sa-4.0',21);
-INSERT INTO `ldto_sharable` VALUES (9,NULL,'http://static.reyboz.it/2016/linux-day-torino/telegram-bot-python.mp4','video','video/mp4','cc-by-sa-4.0',29);
-INSERT INTO `ldto_sharable` VALUES (10,NULL,'http://static.reyboz.it/2016/linux-day-torino/yocto-project.mp4','video','video/mp4','cc-by-sa-4.0',27);
+INSERT INTO `ldto_sharable` VALUES (9,NULL,'//static.reyboz.it/2016/linux-day-torino/telegram-bot-python.mp4','video','video/mp4','cc-by-sa-4.0',29);
+INSERT INTO `ldto_sharable` VALUES (10,NULL,'//static.reyboz.it/2016/linux-day-torino/yocto-project.mp4','video','video/mp4','cc-by-sa-4.0',27);
 INSERT INTO `ldto_sharable` VALUES (11,NULL,'ftp://ftp.koansoftware.com/public/talks/LinuxDay2016/LinuxDay-2016-Yocto-Koan.pdf','document','','cc-by-sa-3.0',27);
 INSERT INTO `ldto_sharable` VALUES (12,NULL,'/2016/static/uploads/Docker.odp','document','','cc-by-nc-sa-4.0',30);
 /*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
@@ -524,4 +524,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-06 21:10:00
+-- Dump completed on 2016-11-06 21:34:56
