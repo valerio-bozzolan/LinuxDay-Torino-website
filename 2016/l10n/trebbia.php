@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-11-03T22:18:08+01:00
+# Last update: 2016-11-06T21:13:45+01:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");

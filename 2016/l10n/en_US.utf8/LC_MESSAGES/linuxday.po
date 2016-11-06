@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-03 22:18+0100\n"
+"POT-Creation-Date: 2016-11-06 21:13+0100\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -65,6 +65,17 @@ msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by-sa/4.0/deed"
 
 #: includes/class-Licenses.php:33
+msgid ""
+"Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
+"modo 4.0 Internazionale"
+msgstr ""
+"Creative Commons Attribution - Non Commercial - ShareAlike 4.0 International"
+
+#: includes/class-Licenses.php:33
+msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
+msgstr "https://creativecommons.org/licenses/by-nc-sa/4.0/deed"
+
+#: includes/class-Licenses.php:34
 msgid "Licenza jQuery"
 msgstr "jQuery License"
 
@@ -626,13 +637,17 @@ msgid ""
 "Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
 msgstr "Annual event on Free software and GNU/Linux operating systems."
 
-#: 2016/load.php:89
+#: 2016/load.php:88
 msgid "Benvenuti"
 msgstr "Welcome"
 
-#: 2016/load.php:90
+#: 2016/load.php:89
 msgid "Partner"
 msgstr "Partners"
+
+#: 2016/load.php:90
+msgid "Fotografie"
+msgstr "Photos"
 
 #: 2016/load.php:91
 msgid "Crediti"
@@ -722,6 +737,15 @@ msgstr "UniTO Computer Science department."
 #: 2016/partner.php:178
 msgid "Torino Smart City"
 msgstr "Turin Smart City"
+
+#: 2016/photos.php:23
+#, php-format
+msgid "foto %s"
+msgstr "photo %s"
+
+#: 2016/photos.php:30
+msgid "Alcuni scatti dal Linux Day 2016 a Torino."
+msgstr "Some photos from the Linux Day 2016 at Turin."
 
 #: 2016/user-edit.php:81
 #, php-format

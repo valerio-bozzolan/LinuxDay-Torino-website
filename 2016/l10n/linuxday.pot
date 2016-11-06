@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-03 22:18+0100\n"
+"POT-Creation-Date: 2016-11-06 21:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,6 +65,16 @@ msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
 msgstr ""
 
 #: includes/class-Licenses.php:33
+msgid ""
+"Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
+"modo 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:33
+msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:34
 msgid "Licenza jQuery"
 msgstr ""
 
@@ -608,12 +618,16 @@ msgid ""
 "Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
 msgstr ""
 
-#: 2016/load.php:89
+#: 2016/load.php:88
 msgid "Benvenuti"
 msgstr ""
 
-#: 2016/load.php:90
+#: 2016/load.php:89
 msgid "Partner"
+msgstr ""
+
+#: 2016/load.php:90
+msgid "Fotografie"
 msgstr ""
 
 #: 2016/load.php:91
@@ -699,6 +713,15 @@ msgstr ""
 
 #: 2016/partner.php:178
 msgid "Torino Smart City"
+msgstr ""
+
+#: 2016/photos.php:23
+#, php-format
+msgid "foto %s"
+msgstr ""
+
+#: 2016/photos.php:30
+msgid "Alcuni scatti dal Linux Day 2016 a Torino."
 msgstr ""
 
 #: 2016/user-edit.php:81
