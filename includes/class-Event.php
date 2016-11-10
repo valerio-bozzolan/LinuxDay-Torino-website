@@ -149,6 +149,10 @@ trait EventTrait {
 	function getNextEventsQuery() {
 		$q = Event::getStandardQueryEvent();
 		$q->appendCondition( sprintf(
+			"DATE(event_start) = '%s'",
+			esc_sql( $this->getEventStart('Y-m-d') )
+		) );
+		$q->appendCondition( sprintf(
 			'event.conference_ID = %d',
 			$this->getConferenceID()
 		) );
@@ -169,6 +173,10 @@ trait EventTrait {
 	 */
 	function getPreviousEventsQuery() {
 		$q = Event::getStandardQueryEvent();
+		$q->appendCondition( sprintf(
+			"DATE(event_start) = '%s'",
+			esc_sql( $this->getEventStart('Y-m-d') )
+		) );
 		$q->appendCondition( sprintf(
 			'event.conference_ID = %d',
 			$this->getConferenceID()
@@ -198,6 +206,29 @@ trait EventTrait {
 		}
 		return $this->getPreviousEventsQuery()->selectField($fields)->setLimit(1)->getRow('Event');
 	}
+
+	/**
+	 * Insert subscription if not exists
+	 */
+	function addSubscription($email) {
+		$exists = Subscription::getStandardQuery( $email, $this->getEventID() )->getRow('Subscription');
+
+		$exists || Subscription::insert( $email, $this->getEventID() );
+
+		return $exists;
+	}
+
+	function areEventSubscriptionsAvailable() {
+		isset( $this->event_subscriptions )
+			|| error_die("Missing event_subscriptions");
+
+		return $this->event_subscriptions && ! $this->isEventPassed();
+	}
+
+	function isEventPassed() {
+		$now = new DateTime('now');
+		return $now->diff( $this->event_end )->invert === 1;
+	}
 }
 
 class_exists('User');
@@ -221,6 +252,7 @@ class Event {
 		'event_start',
 		'event_end',
 		'event_img',
+		'event_subscriptions',
 		'room.room_ID',
 		'room_uid',
 		'room_name',
@@ -252,6 +284,9 @@ class Event {
 		}
 		if( isset( $t->event_end ) ) {
 			datetime2php($t->event_end);
+		}
+		if( isset( $t->event_subscriptions ) ) {
+			$t->event_subscriptions = (bool) (int) $t->event_subscriptions;
 		}
 	}
 

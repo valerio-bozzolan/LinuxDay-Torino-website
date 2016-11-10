@@ -27,7 +27,9 @@ class Header {
 			'url'         => $menu->url,
 			'not-found'   => false,
 			'user-navbar' => true,
-			'container'   => true
+			'container'   => true,
+			'alert'       => null,
+			'alert.type'  => null
 		] );
 
 		if( ! isset( $args['og'] ) ) {
@@ -163,6 +165,10 @@ class Header {
 	<div class="parallax-container">
 		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
 	</div>
+
+	<?php if( $args['alert'] ) {
+		new Messagebox( $args['alert'], $args['alert.type'] );
+	} ?>
 
 	<?php if( $args['show-title'] ): ?>
 	<header class="container">

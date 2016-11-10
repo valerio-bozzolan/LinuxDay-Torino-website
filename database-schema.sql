@@ -28,7 +28,7 @@ CREATE TABLE `ldto_chapter` (
   `chapter_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`chapter_ID`),
   UNIQUE KEY `chapter_uid` (`chapter_uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ LOCK TABLES `ldto_chapter` WRITE;
 INSERT INTO `ldto_chapter` VALUES (1,'talk','Talk');
 INSERT INTO `ldto_chapter` VALUES (2,'party','Linux Installation Party');
 INSERT INTO `ldto_chapter` VALUES (3,'coderdojo','Coderdojo');
+INSERT INTO `ldto_chapter` VALUES (4,'learning','Corso');
 /*!40000 ALTER TABLE `ldto_chapter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,6 +103,7 @@ CREATE TABLE `ldto_event` (
   `event_start` datetime NOT NULL,
   `event_end` datetime NOT NULL,
   `event_img` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `event_subscriptions` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Enable subscriptions',
   `conference_ID` int(10) unsigned NOT NULL,
   `room_ID` int(10) unsigned NOT NULL,
   `track_ID` int(10) unsigned NOT NULL,
@@ -117,7 +119,7 @@ CREATE TABLE `ldto_event` (
   CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `ldto_chapter` (`chapter_ID`),
   CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `ldto_track` (`track_ID`),
   CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `ldto_room` (`room_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,24 +128,25 @@ CREATE TABLE `ldto_event` (
 
 LOCK TABLES `ldto_event` WRITE;
 /*!40000 ALTER TABLE `ldto_event` DISABLE KEYS */;
-INSERT INTO `ldto_event` VALUES (17,'talk-base-1','Didattica del coding',NULL,NULL,'Le basi del coding sono fondamentali, come leggere e scrivere.\nQuali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 15:30:00',NULL,1,11,1,1);
-INSERT INTO `ldto_event` VALUES (21,'talk-dev-1','Introduzione alla programmazione con JavaScript',NULL,NULL,'Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/javascript.png',1,2,2,1);
-INSERT INTO `ldto_event` VALUES (22,'talk-sys-1','Non bisogna aver paura di IPv6',NULL,NULL,'Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l\'implementazione in ambiente GNU/Linux.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/ipv6.png',1,3,3,1);
-INSERT INTO `ldto_event` VALUES (23,'talk-misc-1','La tecnologia LoRa e le sue applicazioni IoT',NULL,NULL,NULL,NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,1,4,4,1);
-INSERT INTO `ldto_event` VALUES (24,'talk-base-2','Rinascimento 2.0',NULL,NULL,'Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando in una nuova era.',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,1,1,1);
-INSERT INTO `ldto_event` VALUES (25,'talk-base-3','Utilizzi di GNU/Linux',NULL,NULL,'Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi del software libero della vita di tutti i giorni. Si suggerisce di invitare il vostro classico conoscente scettico e/o fanboy (╯°□°)╯.','Il talk doveva prevedere un sondaggio interattivo con [OpenCV](https://it.wikipedia.org/wiki/OpenCV) ma purtroppo l\'idea è stata soppressa per mancanza di tempo e la presentazione è diventata una cozzaglia di argomenti messi insieme :D\r\n\r\nAl minuto 12 del talk si è detto che «la casa madre di un e-book non è autore di tale e-book», nel senso che non è *soltanto* autore di tale tecnologia, ma ne è anche *padrone*, fintanto che non ci sarà un software libero per utilizzarlo.\r\n\r\nAl minuto 18 si voleva intendere che alcuni sminuiscono il software libero paragonandolo al *comunismo* pensando che uccida il commercio. In realtà molti *freelance* (eccomi!) si guadagnano da vivere sviluppando software libero per aziende che semplicemente apprezzano di essere gli unici a detenere il totale controllo sui propri sistemi.\r\n\r\nAl minuto 27 mi sono dimenticato di mostrare qualche esempio con Blender, tipo [Tears of Steel](https://www.youtube.com/watch?v=R6MlUcmOul8&t=6m18s).\r\n\r\nAl minuto 31 ho accennato al fatto di aver caricato la presentazione sul sito da soli cinque minuti. L\'informazione è scorretta: era stata caricata sul sito da circa un\'ora. In ogni caso è stata fatta la notte dello stesso giorno. :D\r\n\r\nAl minuto 33 non ho fatto abbastanza capire bene quanto odio uTorrent. Per favore basta usare uTorrent! Perchè conoscerlo quando c\'è Transmission, Deluge, etc.? In ogni caso ecco la geniale [rappresentazione del protocollo bittorrent](http://mg8.org/processing/bt.html).\r\n\r\nAl minuto 39 ho citato [Aaron Swartz](https://it.wikipedia.org/wiki/Aaron_Swartz) e il documentario a lui dedicato [The Internet\'s Own Boy: The Story of Aaron Swartz](https://it.wikipedia.org/wiki/The_Internet%27s_Own_Boy:_The_Story_of_Aaron_Swartz). L\'informazione corretta è che Aaron Swartz si suicidò dopo aver subito una multa di 4 milioni di dollari e una potenziale detenzione fino a 50 anni.\r\n\r\nAl minuto 43 è stato citato un popolare e controverso software proprietario di tracciamento dei visitatori. Se possiedi un sito web, utilizza [Piwik](https://piwik.org) per fare le stesse cose ma senza regalare i dati dei tuoi utenti ad altri intermediari.',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,1,1,1);
-INSERT INTO `ldto_event` VALUES (26,'talk-base-4','Linux al Comune di Torino',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00',NULL,1,1,1,1);
-INSERT INTO `ldto_event` VALUES (27,'talk-dev-2','Yocto Project, un generatore automatico di distribuzioni linux embedded',NULL,NULL,'Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall\'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po\' di ordine nel caos di sviluppo di Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di sviluppo Linux embedded completo con gli strumenti, i metadati e la documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette a disposizione sono potenti e facilmente generabili (compresi gli ambienti di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e permettono di realizzare e portare avanti progetti, senza causare la perdita delle ottimizzazioni e degli investimenti effettuati nel corso del fase di prototipazione. Il Progetto Yocto favorisce l\'adozione di questa tecnologia da parte della comunità open source permettendo agli utenti di concentrarsi sulle caratteristiche e lo sviluppo del proprio prodotto.',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,2,2,1);
-INSERT INTO `ldto_event` VALUES (28,'talk-dev-3','Dieci anni dietro a FidoCadJ',NULL,NULL,'Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github.io/FidoCadJ/): un editor per l\'elettronica (e non solo), usato in diversi forum italiani.',NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/fidocadj.png',1,2,2,1);
-INSERT INTO `ldto_event` VALUES (29,'talk-dev-4','Un bot di Telegram con Python',NULL,'Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.','Slide con esempi di codice e presentazione del Raspberry dal vivo, se c\'è connettività e tempo una breve dimostrazione.',NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/bot_father.jpg',1,2,2,1);
-INSERT INTO `ldto_event` VALUES (30,'talk-sys-2','Docker: distribuiamo applicazioni',NULL,NULL,'Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\nUna risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00','/2016/static/libre-icons/docker.png',1,3,3,1);
-INSERT INTO `ldto_event` VALUES (31,'talk-sys-4','Hadoop - BigData in streaming',NULL,NULL,'Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l\'elaborazione in streaming con Apache NiFi, Kafka e Solr.',NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/hadoop.png',1,3,3,1);
-INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'InfoSec → Information Security → Sicurezza delle informazioni.\n\nIl talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".',NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,1,3,3,1);
-INSERT INTO `ldto_event` VALUES (33,'talk-misc-2','Sostenibilità e Open Culture all\'Università',NULL,'Le apparecchiature guaste sono una risorsa più che un rifiuto. Al Politecnico un gruppo di studenti intende costituire un team dove i ragazzi possano rigenerare le apparecchiature guaste, condividere informazioni e fornire alla società circostante apparecchiature elettroniche funzionanti gratuitamente.',NULL,NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,1,4,4,1);
-INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscenza libera',NULL,NULL,NULL,NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/wikidata.png',1,4,4,1);
-INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',1,4,4,1);
-INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di varie distribuzioni GNU/Linux.','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,1,9,5,2);
-INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,1,10,5,3);
+INSERT INTO `ldto_event` VALUES (17,'talk-base-1','Didattica del coding',NULL,NULL,'Le basi del coding sono fondamentali, come leggere e scrivere.\nQuali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 15:30:00',NULL,0,1,11,1,1);
+INSERT INTO `ldto_event` VALUES (21,'talk-dev-1','Introduzione alla programmazione con JavaScript',NULL,NULL,'Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/javascript.png',0,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (22,'talk-sys-1','Non bisogna aver paura di IPv6',NULL,NULL,'Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l\'implementazione in ambiente GNU/Linux.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00','/2016/static/libre-icons/ipv6.png',0,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (23,'talk-misc-1','La tecnologia LoRa e le sue applicazioni IoT',NULL,NULL,NULL,NULL,NULL,'2016-10-22 14:00:00','2016-10-22 15:00:00',NULL,0,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (24,'talk-base-2','Rinascimento 2.0',NULL,NULL,'Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando in una nuova era.',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,0,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (25,'talk-base-3','Utilizzi di GNU/Linux',NULL,NULL,'Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi del software libero della vita di tutti i giorni. Si suggerisce di invitare il vostro classico conoscente scettico e/o fanboy (╯°□°)╯.','Il talk doveva prevedere un sondaggio interattivo con [OpenCV](https://it.wikipedia.org/wiki/OpenCV) ma purtroppo l\'idea è stata soppressa per mancanza di tempo e la presentazione è diventata una cozzaglia di argomenti messi insieme :D\r\n\r\nAl minuto 12 del talk si è detto che «la casa madre di un e-book non è autore di tale e-book», nel senso che non è *soltanto* autore di tale tecnologia, ma ne è anche *padrone*, fintanto che non ci sarà un software libero per utilizzarlo.\r\n\r\nAl minuto 18 si voleva intendere che alcuni sminuiscono il software libero paragonandolo al *comunismo* pensando che uccida il commercio. In realtà molti *freelance* (eccomi!) si guadagnano da vivere sviluppando software libero per aziende che semplicemente apprezzano di essere gli unici a detenere il totale controllo sui propri sistemi.\r\n\r\nAl minuto 27 mi sono dimenticato di mostrare qualche esempio con Blender, tipo [Tears of Steel](https://www.youtube.com/watch?v=R6MlUcmOul8&t=6m18s).\r\n\r\nAl minuto 31 ho accennato al fatto di aver caricato la presentazione sul sito da soli cinque minuti. L\'informazione è scorretta: era stata caricata sul sito da circa un\'ora. In ogni caso è stata fatta la notte dello stesso giorno. :D\r\n\r\nAl minuto 33 non ho fatto abbastanza capire bene quanto odio uTorrent. Per favore basta usare uTorrent! Perchè conoscerlo quando c\'è Transmission, Deluge, etc.? In ogni caso ecco la geniale [rappresentazione del protocollo bittorrent](http://mg8.org/processing/bt.html).\r\n\r\nAl minuto 39 ho citato [Aaron Swartz](https://it.wikipedia.org/wiki/Aaron_Swartz) e il documentario a lui dedicato [The Internet\'s Own Boy: The Story of Aaron Swartz](https://it.wikipedia.org/wiki/The_Internet%27s_Own_Boy:_The_Story_of_Aaron_Swartz). L\'informazione corretta è che Aaron Swartz si suicidò dopo aver subito una multa di 4 milioni di dollari e una potenziale detenzione fino a 50 anni.\r\n\r\nAl minuto 43 è stato citato un popolare e controverso software proprietario di tracciamento dei visitatori. Se possiedi un sito web, utilizza [Piwik](https://piwik.org) per fare le stesse cose ma senza regalare i dati dei tuoi utenti ad altri intermediari.',NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,0,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (26,'talk-base-4','Linux al Comune di Torino',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00',NULL,0,1,1,1,1);
+INSERT INTO `ldto_event` VALUES (27,'talk-dev-2','Yocto Project, un generatore automatico di distribuzioni linux embedded',NULL,NULL,'Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall\'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po\' di ordine nel caos di sviluppo di Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di sviluppo Linux embedded completo con gli strumenti, i metadati e la documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette a disposizione sono potenti e facilmente generabili (compresi gli ambienti di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e permettono di realizzare e portare avanti progetti, senza causare la perdita delle ottimizzazioni e degli investimenti effettuati nel corso del fase di prototipazione. Il Progetto Yocto favorisce l\'adozione di questa tecnologia da parte della comunità open source permettendo agli utenti di concentrarsi sulle caratteristiche e lo sviluppo del proprio prodotto.',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,0,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (28,'talk-dev-3','Dieci anni dietro a FidoCadJ',NULL,NULL,'Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github.io/FidoCadJ/): un editor per l\'elettronica (e non solo), usato in diversi forum italiani.',NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/fidocadj.png',0,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (29,'talk-dev-4','Un bot di Telegram con Python',NULL,'Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi.','Slide con esempi di codice e presentazione del Raspberry dal vivo, se c\'è connettività e tempo una breve dimostrazione.',NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/bot_father.jpg',0,1,2,2,1);
+INSERT INTO `ldto_event` VALUES (30,'talk-sys-2','Docker: distribuiamo applicazioni',NULL,NULL,'Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\nUna risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?',NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00','/2016/static/libre-icons/docker.png',0,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (31,'talk-sys-4','Hadoop - BigData in streaming',NULL,NULL,'Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l\'elaborazione in streaming con Apache NiFi, Kafka e Solr.',NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/hadoop.png',0,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (32,'talk-sys-3','InfoSec. Istruzioni per l\'uso.',NULL,NULL,'InfoSec → Information Security → Sicurezza delle informazioni.\n\nIl talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\".',NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00',NULL,0,1,3,3,1);
+INSERT INTO `ldto_event` VALUES (33,'talk-misc-2','Sostenibilità e Open Culture all\'Università',NULL,'Le apparecchiature guaste sono una risorsa più che un rifiuto. Al Politecnico un gruppo di studenti intende costituire un team dove i ragazzi possano rigenerare le apparecchiature guaste, condividere informazioni e fornire alla società circostante apparecchiature elettroniche funzionanti gratuitamente.',NULL,NULL,NULL,'2016-10-22 15:00:00','2016-10-22 16:00:00',NULL,0,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscenza libera',NULL,NULL,NULL,NULL,NULL,'2016-10-22 16:00:00','2016-10-22 17:00:00','/2016/static/libre-icons/wikidata.png',0,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',0,1,4,4,1);
+INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di varie distribuzioni GNU/Linux.','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,0,1,9,5,2);
+INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,0,1,10,5,3);
+INSERT INTO `ldto_event` VALUES (45,'gnu-linux-base','Impariamo GNU/Linux base',NULL,NULL,'Un\'iniziativa del comitato Linux Day Torino.\r\n\r\nLezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan\r\n\r\nLezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto\r\n\r\nLezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan\r\n\r\nLezione 4: La shell e i comandi di base a cura di Luca Aguzzoli\r\n\r\nLezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci\r\n\r\nLezione 6: Spazio dedicato alle aziende',NULL,NULL,'2016-11-15 18:00:00','2016-11-15 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4);
 /*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,6 +195,8 @@ INSERT INTO `ldto_event_user` VALUES (32,17,0);
 INSERT INTO `ldto_event_user` VALUES (33,20,0);
 INSERT INTO `ldto_event_user` VALUES (34,23,0);
 INSERT INTO `ldto_event_user` VALUES (35,21,0);
+INSERT INTO `ldto_event_user` VALUES (45,1,0);
+INSERT INTO `ldto_event_user` VALUES (45,2,0);
 INSERT INTO `ldto_event_user` VALUES (33,24,1);
 /*!40000 ALTER TABLE `ldto_event_user` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -358,6 +363,35 @@ INSERT INTO `ldto_skill` VALUES (23,'haskell','Haskell','programming');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `ldto_subscription`
+--
+
+DROP TABLE IF EXISTS `ldto_subscription`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ldto_subscription` (
+  `subscription_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `subscription_email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscription_confirmed` tinyint(1) NOT NULL DEFAULT '0',
+  `subscription_date` datetime NOT NULL,
+  `subscription_token` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `event_ID` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`subscription_ID`),
+  UNIQUE KEY `subscription_email` (`event_ID`,`subscription_email`),
+  CONSTRAINT `ldto_subscription_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ldto_subscription`
+--
+
+LOCK TABLES `ldto_subscription` WRITE;
+/*!40000 ALTER TABLE `ldto_subscription` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ldto_subscription` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ldto_track`
 --
 
@@ -430,7 +464,7 @@ CREATE TABLE `ldto_user` (
 LOCK TABLES `ldto_user` WRITE;
 /*!40000 ALTER TABLE `ldto_user` DISABLE KEYS */;
 INSERT INTO `ldto_user` VALUES (1,'boz','admin',1,1,'Valerio','Bozzolan',NULL,NULL,NULL,'https://boz.reyboz.it','gnu-gpl','Qualcuno ha detto... software libero?','https://blog.reyboz.it','ValerioBozzolan',NULL,NULL,NULL,'valerio-bozzolan');
-INSERT INTO `ldto_user` VALUES (2,'oirasor','admin',1,1,'Rosario','Antoci',NULL,NULL,NULL,'','gnu-gpl','Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).\n\nNon mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.\n\nMi è capitato di organizzare questo Linux Day. =P\n\nSuonatore di Floppy, appassionato di Dama e Retrocomputing.',NULL,'0iras0r',NULL,NULL,NULL,'0iras0r');
+INSERT INTO `ldto_user` VALUES (2,'oirasor','admin',1,1,'Rosario','Antoci',NULL,NULL,NULL,'','gnu-gpl','Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).\r\n\r\nNon mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.\r\n\r\nMi è capitato di organizzare il Linux Day 2016. =P\r\n\r\nSuonatore di Floppy, appassionato di Dama e Retrocomputing.',NULL,'0iras0r',NULL,NULL,NULL,'0iras0r');
 INSERT INTO `ldto_user` VALUES (3,'dario','user',1,0,'Dario','Sera',NULL,NULL,'!',NULL,NULL,'Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).\n\nUtilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (7,'renzo','user',1,0,'Renzo','Davoli',NULL,'/2016/static/user/davoli.jpg','!',NULL,NULL,'Ricercatore, Maker, Insegnante, Sviluppatore...\nCinquantenne all\'anagrafe, continua a giocare e a pensare liberamente.\nIn realtà vuole salvare il mondo, ma non ditelo a nessuno.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (8,'luigi.maselli','user',1,0,'Luigi','Maselli',NULL,NULL,'!','https://grigio.org','mit','Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance.',NULL,'grigi0',NULL,NULL,NULL,'grigio');
@@ -524,4 +558,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-06 21:34:56
+-- Dump completed on 2016-11-10 15:39:04
