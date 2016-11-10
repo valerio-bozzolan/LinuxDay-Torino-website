@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-06 21:13+0100\n"
+"POT-Creation-Date: 2016-11-10 15:43+0100\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -277,7 +277,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:227 2016/event.php:134
+#: 2016/credits.php:227 2016/event.php:183
 msgid "Materiale"
 msgstr "Files"
 
@@ -329,66 +329,99 @@ msgid "%s: %s"
 msgstr "%s: %s"
 
 #: 2016/event.php:55
+msgid "Grazie per esserti iscritto."
+msgstr ""
+
+#: 2016/event.php:59
+msgid "E-mail non valida."
+msgstr ""
+
+#: 2016/event.php:73
 msgid "Modifica evento"
 msgstr "Edit event"
 
-#: 2016/event.php:80
+#: 2016/event.php:98
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:84
+#: 2016/event.php:102
 msgid "Dove"
 msgstr "Where"
 
-#: 2016/event.php:88
+#: 2016/event.php:106
 msgid "Quando"
 msgstr "When"
 
-#: 2016/event.php:90
+#: 2016/event.php:108
 #, php-format
 msgid "Ore %s"
 msgstr "Hour %s"
 
-#: 2016/event.php:103
+#: 2016/event.php:121
 msgid "Abstract"
 msgstr "Abstract"
 
-#: 2016/event.php:113
+#: 2016/event.php:131
 msgid "Descrizione"
 msgstr "Description"
 
-#: 2016/event.php:123
+#: 2016/event.php:142
+msgid ""
+"Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa "
+"pagina."
+msgstr ""
+
+#: 2016/event.php:148
+msgid "Iscrizioni"
+msgstr "Subscriptions"
+
+#: 2016/event.php:149
+msgid ""
+"Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare "
+"il tuo interesse:"
+msgstr ""
+"Subscriptions are still open. Insert your e-mail to express your interest:"
+
+#: 2016/event.php:152 2016/login.php:55
+msgid "E-mail"
+msgstr "E-mail"
+
+#: 2016/event.php:156
+msgid "Sottoscrivi"
+msgstr "Subscribe"
+
+#: 2016/event.php:172
 msgid "Note"
 msgstr "Notes"
 
-#: 2016/event.php:142
+#: 2016/event.php:191
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:161
+#: 2016/event.php:210
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr "See %s sharable under %s license."
 
-#: 2016/event.php:183
+#: 2016/event.php:232
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:196 2016/event.php:213
+#: 2016/event.php:245 2016/event.php:262
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:224
+#: 2016/event.php:273
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
 
-#: 2016/event.php:244
+#: 2016/event.php:293
 msgid "Preceduto da"
 msgstr "Previous"
 
-#: 2016/event.php:257
+#: 2016/event.php:306
 msgid "A seguire"
 msgstr "Next"
 
@@ -409,7 +442,7 @@ msgstr ""
 "at the <strong>%s</strong> of the %s, on <strong>%s</strong>, <strong>%s</"
 "strong>, from <strong>%s</strong>."
 
-#: 2016/index.php:72 2016/includes/class-Header.php:141
+#: 2016/index.php:72 2016/includes/class-Header.php:143
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
@@ -664,10 +697,6 @@ msgstr "You are logged in!"
 #: 2016/login.php:44
 msgid "Sloggati"
 msgstr "Log out"
-
-#: 2016/login.php:55
-msgid "E-mail"
-msgstr "E-mail"
 
 #: 2016/login.php:59
 msgid "Password"
@@ -932,16 +961,16 @@ msgstr ""
 "be considered something normal to don't give your sensitive informations to "
 "third parts!"
 
-#: 2016/includes/class-Header.php:46
+#: 2016/includes/class-Header.php:48
 #, php-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
-#: 2016/includes/class-Header.php:144
+#: 2016/includes/class-Header.php:146
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/includes/class-Header.php:164
+#: 2016/includes/class-Header.php:166
 msgid "This is Wikipedia"
 msgstr "This is Wikipedia"
 
@@ -1181,7 +1210,7 @@ msgstr ""
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: event[talk-misc-4]::event_title skill[wiki]::skill_title
+#: event[talk-misc-4]::event_title event[talk-base-1]::event_description2
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
@@ -1239,6 +1268,27 @@ msgstr ""
 "<br>\n"
 "Particular thanks go to the two groups that made this experience possible "
 "CoderDojo Turin and CoderDojo Turin 2."
+
+#: event[gnu-linux-base]::event_title
+msgid "Impariamo GNU/Linux base"
+msgstr ""
+
+#: event[gnu-linux-base]::event_description
+msgid ""
+"Un'iniziativa del comitato Linux Day Torino.\n"
+"\n"
+"Lezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan\n"
+"\n"
+"Lezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto\n"
+"\n"
+"Lezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan\n"
+"\n"
+"Lezione 4: La shell e i comandi di base a cura di Luca Aguzzoli\n"
+"\n"
+"Lezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci\n"
+"\n"
+"Lezione 6: Spazio dedicato alle aziende"
+msgstr ""
 
 #: location[1]::location_address
 msgid "Torino, Via Pessinetto 12"
@@ -1310,15 +1360,15 @@ msgstr "Other"
 msgid "Di tutto un po'"
 msgstr "A bit of everything"
 
-#: room[a]::room_name
+#: conference[2016]::conference_title2
 msgid "Aula B"
 msgstr "\"B\" room"
 
-#: room[b]::room_name
+#: conference[2016]::conference_title5
 msgid "Aula A"
 msgstr "\"A\" room"
 
-#: room[c]::room_name
+#: conference[2016]::conference_title8
 msgid "Aula D"
 msgstr "\"D\" room"
 
@@ -1334,15 +1384,15 @@ msgstr "CoderDojo area"
 msgid "Spazio Restart"
 msgstr "Restart area"
 
-#: conference[2016]::conference_title2
+#: room[first-floor]::room_name
 msgid "Primo piano"
 msgstr "First Floor"
 
-#: conference[2016]::conference_title5
+#: room[lab-touring]::room_name
 msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
-#: conference[2016]::conference_title8
+#: room[lab-djikstra]::room_name
 msgid "Laboratorio Djikstra"
 msgstr "Djikstra Lab"
 
@@ -1350,15 +1400,15 @@ msgstr "Djikstra Lab"
 msgid "Aula F"
 msgstr "\"F\" room"
 
-#: skill[asd]::skill_title
+#: conference[2015]::conference_title2
 msgid "asd"
 msgstr "asd"
 
-#: skill[php]::skill_title
+#: conference[2015]::conference_title5
 msgid "PHP"
 msgstr "PHP"
 
-#: skill[js]::skill_title
+#: conference[2015]::conference_title8
 msgid "JavaScript"
 msgstr "JavaScript"
 
@@ -1374,15 +1424,15 @@ msgstr "NodeJS"
 msgid "Apple"
 msgstr "Apple"
 
-#: conference[2015]::conference_title2
+#: skill[java]::skill_title
 msgid "Java"
 msgstr "Java"
 
-#: conference[2015]::conference_title5
+#: skill[cpp]::skill_title
 msgid "C++"
 msgstr "C++"
 
-#: conference[2015]::conference_title8
+#: skill[ubuntu]::skill_title
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -1390,15 +1440,15 @@ msgstr "Ubuntu"
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
-#: skill[turbo-pascal]::skill_title
+#: event[talk-base-1]::event_title2
 msgid "Turbo Pascal"
 msgstr "Turbo Pascal"
 
-#: skill[free-software]::skill_title
+#: event[talk-base-1]::event_title5
 msgid "Software Libero"
 msgstr "Free Software"
 
-#: skill[debian]::skill_title
+#: event[talk-base-1]::event_title8
 msgid "Debian"
 msgstr "Debian"
 
@@ -1414,15 +1464,15 @@ msgstr "Adobe Illustrator"
 msgid "Immagini vettoriali"
 msgstr "Vector Images"
 
-#: event[talk-base-1]::event_title2
+#: skill[teach]::skill_title
 msgid "Insegnare"
 msgstr "Teach"
 
-#: event[talk-base-1]::event_title5
+#: skill[raee]::skill_title
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: event[talk-base-1]::event_title8
+#: skill[blender]::skill_title
 msgid "Blender"
 msgstr "Blender"
 
@@ -1430,11 +1480,11 @@ msgstr "Blender"
 msgid "C"
 msgstr "C"
 
-#: skill[embedded]::skill_title
+#: event[talk-base-1]::event_description5
 msgid "Embedded"
 msgstr "Embedded"
 
-#: skill[haskell]::skill_title
+#: event[talk-base-1]::event_description8
 msgid "Haskell"
 msgstr "Haskell"
 
@@ -1450,7 +1500,7 @@ msgid ""
 "Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
 "avanzare per migliorare le risorse e la conoscenza di tutti.\n"
 "\n"
-"Mi è capitato di organizzare questo Linux Day. =P\n"
+"Mi è capitato di organizzare il Linux Day 2016. =P\n"
 "\n"
 "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
 msgstr ""
@@ -1459,11 +1509,11 @@ msgstr ""
 "I don't like technology for the sake of gadgets, but I like its incessant "
 "progress to improve resources and knowledge for everyone.\n"
 "\n"
-"I ended up organizing this Linux Day. =P\n"
+"I ended up organizing the Linux Day 2016. =P\n"
 "\n"
 "Floppy musician, checkers and Retrocomputing enthusiast."
 
-#: event[talk-base-1]::event_description5
+#: user[dario]::user_bio
 msgid ""
 "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
 "la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
@@ -1521,7 +1571,7 @@ msgstr ""
 "training on Linux embedded systems. When he is not using a computer, he is "
 "usually interested in mixing up Physics with Philosophy."
 
-#: user[davide]::user_bio
+#: event[talk-dev-1]::event_title1
 msgid ""
 "Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
 "bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
@@ -1553,7 +1603,7 @@ msgstr ""
 "interval, how does the ionic exchange work on glass and how to calculate "
 "movement of propagation in a dielectric waveguide."
 
-#: user[francesco]::user_bio
+#: event[talk-dev-1]::event_title6
 msgid ""
 "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
 "corrente, sistemista di professione, maker per diletto, podcaster (<http://"
@@ -1591,11 +1641,11 @@ msgstr ""
 "dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
 "system engineering. "
 
-#: user[davide.isoardi]::user_bio event[talk-dev-1]::event_title2
+#: user[davide.isoardi]::user_bio user[davide.vergari]::user_bio
 msgid "Big Data System Architect e sysadmin."
 msgstr "Big Data System Architect and sysadmin."
 
-#: event[talk-dev-1]::event_title5
+#: user[davide.mainardi]::user_bio
 msgid ""
 "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
 "sicurezza informatica, full stack Java developer, Consigliere della "
@@ -1605,7 +1655,7 @@ msgstr ""
 "security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
 "degli Ingegneri della Provincia di Torino\"."
 
-#: event[talk-dev-1]::event_title8
+#: user[marco.signoretto]::user_bio
 msgid ""
 "The trash king!\n"
 "\n"
@@ -1629,7 +1679,7 @@ msgstr ""
 "inclined to move around every field possible to creativity: from product "
 "design to graphics, from interaction design to sustainability."
 
-#: user[alessio]::user_bio
+#: event[talk-dev-1]::event_description3
 msgid ""
 "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
 "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
@@ -1642,7 +1692,7 @@ msgstr ""
 "new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
 "semantic Web. I love to play chess and drink orange soda. Even not together. "
 
-#: user[mario.lacaj]::user_bio
+#: event[talk-dev-1]::event_description6
 msgid ""
 "Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
 "Dipartimento di Informatica di Torino.\n"

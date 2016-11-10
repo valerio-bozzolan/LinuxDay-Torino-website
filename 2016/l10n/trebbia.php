@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-11-06T21:13:45+01:00
+# Last update: 2016-11-10T15:43:06+01:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -139,6 +139,24 @@ _("Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è d
 <br>
 <br>
 Un ringraziamento particolare ai due gruppi che hanno reso possibile quest'iniziativa CoderDojo Torino e CoderDojo Torino 2.");
+
+// event[gnu-linux-base]::event_title
+_("Impariamo GNU/Linux base");
+
+// event[gnu-linux-base]::event_description
+_("Un'iniziativa del comitato Linux Day Torino.
+
+Lezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan
+
+Lezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto
+
+Lezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan
+
+Lezione 4: La shell e i comandi di base a cura di Luca Aguzzoli
+
+Lezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci
+
+Lezione 6: Spazio dedicato alle aziende");
 
 // location[1]::location_name
 _("Dipartimento di Informatica");
@@ -297,7 +315,7 @@ _("Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe)
 
 Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.
 
-Mi è capitato di organizzare questo Linux Day. =P
+Mi è capitato di organizzare il Linux Day 2016. =P
 
 Suonatore di Floppy, appassionato di Dama e Retrocomputing.");
 
