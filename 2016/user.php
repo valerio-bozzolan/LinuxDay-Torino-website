@@ -136,8 +136,9 @@ new Header('user', [
 			<table>
 			<thead>
 			<tr>
-				<th><?php _e("Nome talk") ?></th>
-				<th><?php _e("Traccia") ?></th>
+				<th><?php _e("Nome") ?></th>
+				<th><?php _e("Tipo") ?></th>
+				<th><?php _e("Tema") ?></th>
 				<th><?php _e("Stanza") ?></th>
 				<th><?php _e("Orario") ?></th>
 			</tr>
@@ -156,6 +157,7 @@ new Header('user', [
 						$title
 					)
 				) ?></td>
+				<td><?php _esc_html( $event->getChapterName() ) ?></td>
 				<td><?php _esc_html( $event->getTrackName() ) ?></td>
 				<td><?php _esc_html( $event->getRoomName() ) ?></td>
 				<td><?php printf(

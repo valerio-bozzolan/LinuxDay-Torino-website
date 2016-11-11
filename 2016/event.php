@@ -100,14 +100,18 @@ new Header('event', $args);
 				</tr>
 				<tr>
 					<th><?php echo icon('access_time', 'left'); _e("Dove") ?></th>
-					<td><?php echo $event->getRoomName() ?><br /> <?php echo $event->getConferenceTitle() ?></td>
+					<td><?php echo $event->getRoomName() ?><br /> <?php echo $event->getLocationName() ?></td>
 				</tr>
 				<tr>
 					<th><?php echo icon('room', 'left'); _e("Quando") ?></th>
-					<td><?php printf(
-						_("Ore %s"),
-						$event->getEventStart('H:i')
-					) ?><br /> <?php echo $event->getEventStart('d/m/Y') ?></td>
+					<td>
+						<?php printf(
+							_("Ore %s"),
+							$event->getEventStart('H:i')
+						) ?><br />
+						<?php echo $event->getEventStart('d/m/Y') ?><br />
+						(<?php echo $event->getEventHumanStart() ?>)
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -294,6 +298,7 @@ new Header('event', $args);
 					<p class="flow-text">
 						<?php echo icon('access_time') ?>
 						<?php echo $previous->getEventStart('H:i') ?><br />
+						(<?php echo $previous->getEventHumanStart() ?>)<br />
 						<?php echo HTML::a(
 							$previous->getEventURL(),
 							$previous->getEventTitle()
@@ -307,6 +312,7 @@ new Header('event', $args);
 					<p class="flow-text">
 						<?php echo icon('access_time') ?>
 						<?php echo $next->getEventStart('H:i') ?><br />
+						(<?php echo $previous->getEventHumanStart() ?>)<br />
 						<?php echo HTML::a(
 							$next->getEventURL(),
 							$next->getEventTitle()

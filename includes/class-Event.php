@@ -61,6 +61,14 @@ trait EventTrait {
 		return isset( $this->user_uid );
 	}
 
+	function getEventHumanStart() {
+		return HumanTime::diff( $this->event_start );
+	}
+
+	function getEventHumanEnd() {
+		return HumanTime::diff( $this->event_end );
+	}
+
 	function getEventStart($f = 'Y-m-d H:i:s') {
 		return $this->event_start->format($f);
 	}
@@ -236,9 +244,10 @@ class_exists('Conference');
 class_exists('Chapter');
 class_exists('Room');
 class_exists('Track');
+class_exists('Location');
 
 class Event {
-	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait, RoomTrait, TrackTrait;
+	use EventTrait, UserTrait, ConferenceTrait, ChapterTrait, RoomTrait, TrackTrait, LocationTrait;
 
 	static $FULL_FIELDS = [
 		'event.event_ID',
@@ -263,7 +272,9 @@ class Event {
 		'chapter_name',
 		'conference.conference_ID',
 		'conference_uid',
-		'conference_title'
+		'conference_title',
+		'location_name',
+		'location_address'
 	];
 
 	function __construct() {
@@ -273,6 +284,7 @@ class Event {
 		Chapter::normalize($this);
 		Room::normalize($this);
 		Track::normalize($this);
+		Location::normalize($this);
 	}
 
 	static function normalize(& $t) {
@@ -295,11 +307,12 @@ class Event {
 	 */
 	static function getStandardQueryEvent() {
 		$q = new DynamicQuery();
-		$q->useTable( [ 'event', 'conference', 'room', 'track', 'chapter' ] );
+		$q->useTable( [ 'event', 'conference', 'room', 'track', 'chapter', 'location' ] );
 		$q->appendCondition('event.conference_ID = conference.conference_ID');
 		$q->appendCondition('event.room_ID = room.room_ID');
 		$q->appendCondition('event.chapter_ID = chapter.chapter_ID');
 		$q->appendCondition('event.track_ID = track.track_ID');
+		$q->appendCondition('conference.location_ID = location.location_ID');
 		return $q;
 	}
 
