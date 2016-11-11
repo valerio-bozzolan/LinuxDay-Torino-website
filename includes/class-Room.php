@@ -48,7 +48,7 @@ class Room {
 		}
 	}
 
-	static function getRoom($uid) {
+	static function get($uid) {
 		global $T;
 
 		return query_row(

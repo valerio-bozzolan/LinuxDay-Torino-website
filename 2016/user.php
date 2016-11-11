@@ -19,7 +19,7 @@ require 'load.php';
 
 $user = null;
 if( isset( $_GET['uid'] ) ) {
-	$user = User::getUser( $_GET['uid'] );
+	$user = User::get( $_GET['uid'] );
 }
 
 $user           || die_with_404();

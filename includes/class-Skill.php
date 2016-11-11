@@ -87,7 +87,7 @@ class Skill {
 		}
 	}
 
-	static function getSkill($uid) {
+	static function get($uid) {
 		global $T;
 
 		return query_row(

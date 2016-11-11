@@ -19,7 +19,7 @@ require 'load.php';
 
 $event = null;
 if( isset( $_GET['uid'], $_GET['conference'], $_GET['chapter'] ) ) {
-	$event = Event::getEventByConferenceChapter(
+	$event = Event::getByConferenceChapter(
 		$_GET['uid'],
 		$_GET['conference'],
 		$_GET['chapter']

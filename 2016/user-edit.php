@@ -19,7 +19,7 @@ require 'load.php';
 
 $user = null;
 if( isset( $_GET['uid'] ) ) {
-	$user = User::getUser( $_REQUEST['uid'] );
+	$user = User::get( $_REQUEST['uid'] );
 }
 
 $user	|| error_die("Missing user");

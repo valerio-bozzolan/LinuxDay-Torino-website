@@ -148,7 +148,7 @@ trait EventTrait {
 	}
 
 	function querySharables() {
-		return Sharable::querySharables( $this->getEventID() );
+		return Sharable::queryByEvent( $this->getEventID() );
 	}
 
 	/**
@@ -303,6 +303,22 @@ class Event {
 	}
 
 	/**
+	 * @return Event
+	 */
+	static function getByConference( $event_uid, $conference_uid ) {
+		return Event::getQueryEventByConference($event_uid, $conference_uid)
+		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
+	}
+
+	/**
+	 * @return Event
+	 */
+	static function getByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
+		return Event::getQueryEventByConferenceChapter($event_uid, $conference_uid, $chapter_uid)
+		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
+	}
+
+	/**
 	 * @return DynamicQuery
 	 */
 	static function getStandardQueryEvent() {
@@ -347,22 +363,6 @@ class Event {
 			"chapter_uid = '%s'",
 			esc_sql( luser_input( $chapter_uid, 64 ) )
 		) );
-	}
-
-	/**
-	 * @return Event
-	 */
-	static function getEventByConference( $event_uid, $conference_uid ) {
-		return Event::getQueryEventByConference($event_uid, $conference_uid)
-		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
-	}
-
-	/**
-	 * @return Event
-	 */
-	static function getEventByConferenceChapter( $event_uid, $conference_uid, $chapter_uid ) {
-		return Event::getQueryEventByConferenceChapter($event_uid, $conference_uid, $chapter_uid)
-		            ->selectField( self::$FULL_FIELDS )->getRow('Event');
 	}
 
 	/**

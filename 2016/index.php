@@ -19,7 +19,7 @@ require 'load.php';
 
 $conference = null;
 if( ! empty( $_GET['uid'] ) ) {
-	$conference = Conference::getConference( $_GET['uid'] );
+	$conference = Conference::get( $_GET['uid'] );
 }
 
 $conference

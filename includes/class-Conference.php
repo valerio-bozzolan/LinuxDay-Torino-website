@@ -98,7 +98,7 @@ class Conference {
 		}
 	}
 
-	static function getConference( $conference_uid ) {
+	static function get( $conference_uid ) {
 		global $JOIN;
 
 		return query_row(

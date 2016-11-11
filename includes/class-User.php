@@ -217,7 +217,7 @@ class User {
 		}
 	}
 
-	static function getUser($uid) {
+	static function get($uid) {
 		global $T;
 
 		return query_row(

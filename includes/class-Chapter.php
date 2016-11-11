@@ -48,7 +48,7 @@ class Chapter {
 		}
 	}
 
-	static function getChapter($uid) {
+	static function get($uid) {
 		global $T;
 
 		return query_row(

@@ -107,7 +107,7 @@ class Sharable {
 		}
 	}
 
-	static function querySharables($event_ID) {
+	static function queryByEvent($event_ID) {
 		global $T;
 
 		return query(
