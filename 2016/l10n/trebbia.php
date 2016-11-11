@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-11-10T15:43:06+01:00
+# Last update: 2016-11-11T01:29:48+01:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -208,6 +208,18 @@ _("Altro");
 // track[altro]::track_label
 _("Di tutto un po'");
 
+// chapter[talk]::chapter_name
+_("Talk");
+
+// chapter[party]::chapter_name
+_("Linux Installation Party");
+
+// chapter[coderdojo]::chapter_name
+_("Coderdojo");
+
+// chapter[learning]::chapter_name
+_("Corso");
+
 // room[a]::room_name
 _("Aula B");
 
@@ -381,6 +393,15 @@ Cosa c'entro? Te lo dico subito in questa intervista:
 
 // user[madbob]::user_bio
 _("Presidente [Italian Linux Society](http://www.ils.org/).");
+
+// user[silux]::user_bio
+_("Vivo fin dal lontano '92, la mia vocazione è di fare il mago.
+
+Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere in un antico linguaggio per incantare oggetti e materializzare oggetti dalla plastica, e mi diverto tantissimo a farlo.
+
+L’Open source e l’open hardware è quello di cui c'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.
+
+Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze.");
 
 ######################################
 ##### Th-th-th-that's all folks! #####

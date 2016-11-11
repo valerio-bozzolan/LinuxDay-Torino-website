@@ -196,8 +196,9 @@ INSERT INTO `ldto_event_user` VALUES (33,20,0);
 INSERT INTO `ldto_event_user` VALUES (34,23,0);
 INSERT INTO `ldto_event_user` VALUES (35,21,0);
 INSERT INTO `ldto_event_user` VALUES (45,1,0);
-INSERT INTO `ldto_event_user` VALUES (45,2,0);
 INSERT INTO `ldto_event_user` VALUES (33,24,1);
+INSERT INTO `ldto_event_user` VALUES (45,28,1);
+INSERT INTO `ldto_event_user` VALUES (45,2,2);
 /*!40000 ALTER TABLE `ldto_event_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -454,7 +455,7 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -484,6 +485,7 @@ INSERT INTO `ldto_user` VALUES (24,'mario.lacaj','user',1,0,'Mario','Lacaj',NULL
 INSERT INTO `ldto_user` VALUES (25,'valerio.sacchetto','user',1,0,'Valerio','Sacchetto',NULL,NULL,'!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (27,'madbob','user',1,0,'Roberto','Guido',NULL,NULL,'','http://www.madbob.org',NULL,'Presidente [Italian Linux Society](http://www.ils.org/).','http://blog.madbob.org','madbob',NULL,NULL,NULL,'madbob');
+INSERT INTO `ldto_user` VALUES (28,'silux','user',1,0,'Valerio','Cietto',NULL,NULL,'','https://siluxmedia.wordpress.com','gnu-gpl','Vivo fin dal lontano \'92, la mia vocazione è di fare il mago.\n\nVisto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere in un antico linguaggio per incantare oggetti e materializzare oggetti dalla plastica, e mi diverto tantissimo a farlo.\n\nL’Open source e l’open hardware è quello di cui c\'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.\n\nAmo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze.',NULL,NULL,'valerio.cietto','valerio-cietto-2ba01958',NULL,'ValerioCietto');
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -558,4 +560,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-10 15:56:28
+-- Dump completed on 2016-11-11  1:29:46

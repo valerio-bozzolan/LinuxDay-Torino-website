@@ -75,9 +75,10 @@ spawn_gnu('track', [
 	'track_uid'
 );
 
-spawn_gnu('room',  'room_name',   'room_uid');
-spawn_gnu('skill', 'skill_title', 'skill_uid');
-spawn_gnu('user',  'user_bio',    'user_uid');
+spawn_gnu('chapter', 'chapter_name', 'chapter_uid');
+spawn_gnu('room',    'room_name',    'room_uid');
+spawn_gnu('skill',   'skill_title',  'skill_uid');
+spawn_gnu('user',    'user_bio',     'user_uid');
 
 echo <<< EOF
 

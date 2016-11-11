@@ -59,13 +59,13 @@ new Header('conference', [
 	<div class="section">
 		<div class="row valign-wrapper">
 			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _e("Linux Day 2016") ?>" class="responsive-img" />
+				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _e("Linux Day Torino 2016") ?>" class="responsive-img" />
 			</div>
 			<div class="col s12 m10 l11">
 				<p class="flow-text"><?php printf(
 					_(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Il Linux Day 2016 si è tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
+						"Il Linux Day Torino 2016 si è tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
 					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
