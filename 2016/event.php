@@ -99,11 +99,11 @@ new Header('event', $args);
 					<td><?php echo $event->getTrackName() ?><br /><small><?php echo $event->getTrackLabel() ?></small></td>
 				</tr>
 				<tr>
-					<th><?php echo icon('access_time', 'left'); _e("Dove") ?></th>
+					<th><?php echo icon('room', 'left'); _e("Dove") ?></th>
 					<td><?php echo $event->getRoomName() ?><br /> <?php echo $event->getLocationName() ?></td>
 				</tr>
 				<tr>
-					<th><?php echo icon('room', 'left'); _e("Quando") ?></th>
+					<th><?php echo icon('access_time', 'left'); _e("Quando") ?></th>
 					<td>
 						<?php printf(
 							_("Ore %s"),
