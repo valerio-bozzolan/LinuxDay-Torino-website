@@ -43,6 +43,14 @@ trait ConferenceTrait {
 		}
 	}
 
+	function getConferenceHumanStart() {
+		return HumanTime::diff( $this->conference_start );
+	}
+
+	function getConferenceHumanEnd() {
+		return HumanTime::diff( $this->conference_end );
+	}
+
 	function getConferenceStart($f) {
 		return $this->conference_start->format($f);
 	}

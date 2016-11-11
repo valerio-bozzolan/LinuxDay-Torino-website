@@ -65,8 +65,7 @@ new Header('conference', [
 				<p class="flow-text"><?php printf(
 					_(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Quest'anno a Torino si terrà presso il <strong>%s</strong> dell'%s, di <strong>%s</strong>, il <strong>%s</strong>, ".
-						"dalle <strong>%s</strong>."
+						"Il Linux Day 2016 si è tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
 					),
 					HTML::a(
 						_('https://it.wikipedia.org/wiki/GNU'),
@@ -80,12 +79,8 @@ new Header('conference', [
 						null,
 						'black-text hoverable'
 					),
-					_("Dipartimento di Informatica"),
-					_("Università degli studi di Torino"),
-					_("sabato"),
-					_("22 ottobre 2016"),
-					$conference->getConferenceStart("H:i"),
-					$conference->getConferenceEnd("H:i")
+					$conference->getConferenceStart( _("d/m/Y") ),
+					$conference->getConferenceHumanStart()
 				) ?></p>
 			</div>
 		</div>
@@ -133,7 +128,7 @@ new Header('conference', [
 		<div class="row">
 			<div class="col s12 m4 l4">
 				<h3><?php _e("Planimetria") ?></h3>
-				<p class="flow-text"><?php _e("La manifestazione sarà suddivisa in aule tematiche.") ?></p>
+				<p class="flow-text"><?php _e("La manifestazione è suddivisa in aule tematiche.") ?></p>
 			</div>
 			<div class="col s12 m7 offset-m1 l6 offset-l2">
 				<div class="card-panel">

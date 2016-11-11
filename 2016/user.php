@@ -139,8 +139,8 @@ new Header('user', [
 				<th><?php _e("Nome") ?></th>
 				<th><?php _e("Tipo") ?></th>
 				<th><?php _e("Tema") ?></th>
-				<th><?php _e("Stanza") ?></th>
-				<th><?php _e("Orario") ?></th>
+				<th><?php _e("Dove") ?></th>
+				<th><?php _e("When") ?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -159,12 +159,20 @@ new Header('user', [
 				) ?></td>
 				<td><?php _esc_html( $event->getChapterName() ) ?></td>
 				<td><?php _esc_html( $event->getTrackName() ) ?></td>
-				<td><?php _esc_html( $event->getRoomName() ) ?></td>
-				<td><?php printf(
-					_("Ore <b>%s</b> (il %s)"),
-					$event->getEventStart("H:i"),
-					$event->getEventStart("d/m/Y")
-				) ?></td>
+				<td>
+					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $event->getLocationAddress() ) ?>">
+						<?php _esc_html( $event->getLocationName() ) ?>
+					</span><br />
+					<?php _esc_html( $event->getRoomName() ) ?>
+				</td>
+				<td>
+					<?php printf(
+						_("Ore <b>%s</b> (il %s)"),
+						$event->getEventStart("H:i"),
+						$event->getEventStart("d/m/Y")
+					) ?><br />
+					<small><?php echo $event->getEventHumanStart() ?></small>
+				</td>
 			</tr>
 			<?php endwhile ?>
 			</tbody>
