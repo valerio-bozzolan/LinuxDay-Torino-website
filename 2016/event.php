@@ -312,7 +312,7 @@ new Header('event', $args);
 					<p class="flow-text">
 						<?php echo icon('access_time') ?>
 						<?php echo $next->getEventStart('H:i') ?><br />
-						(<?php echo $previous->getEventHumanStart() ?>)<br />
+						(<?php echo $next->getEventHumanStart() ?>)<br />
 						<?php echo HTML::a(
 							$next->getEventURL(),
 							$next->getEventTitle()
