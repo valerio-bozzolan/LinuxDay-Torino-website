@@ -198,7 +198,8 @@ INSERT INTO `ldto_event_user` VALUES (35,21,0);
 INSERT INTO `ldto_event_user` VALUES (45,1,0);
 INSERT INTO `ldto_event_user` VALUES (33,24,1);
 INSERT INTO `ldto_event_user` VALUES (45,28,1);
-INSERT INTO `ldto_event_user` VALUES (45,2,2);
+INSERT INTO `ldto_event_user` VALUES (45,29,2);
+INSERT INTO `ldto_event_user` VALUES (45,2,3);
 /*!40000 ALTER TABLE `ldto_event_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -380,7 +381,7 @@ CREATE TABLE `ldto_subscription` (
   PRIMARY KEY (`subscription_ID`),
   UNIQUE KEY `subscription_email` (`event_ID`,`subscription_email`),
   CONSTRAINT `ldto_subscription_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -455,7 +456,7 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -486,6 +487,7 @@ INSERT INTO `ldto_user` VALUES (25,'valerio.sacchetto','user',1,0,'Valerio','Sac
 INSERT INTO `ldto_user` VALUES (26,'gloria.puppi','user',1,0,'Gloria','Puppi',NULL,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (27,'madbob','user',1,0,'Roberto','Guido',NULL,NULL,'','http://www.madbob.org',NULL,'Presidente [Italian Linux Society](http://www.ils.org/).','http://blog.madbob.org','madbob',NULL,NULL,NULL,'madbob');
 INSERT INTO `ldto_user` VALUES (28,'silux','user',1,0,'Valerio','Cietto',NULL,NULL,'','https://siluxmedia.wordpress.com','gnu-gpl','Vivo fin dal lontano \'92, la mia vocazione è di fare il mago.\n\nVisto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere in un antico linguaggio per incantare oggetti e materializzare oggetti dalla plastica, e mi diverto tantissimo a farlo.\n\nL’Open source e l’open hardware è quello di cui c\'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.\n\nAmo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze.',NULL,NULL,'valerio.cietto','valerio-cietto-2ba01958',NULL,'ValerioCietto');
+INSERT INTO `ldto_user` VALUES (29,'tinytanic','user',1,0,'Luca','Aguzzoli',NULL,NULL,'','http://aguzzoliluca.it','gnu-gpl','Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto che neanche nel 1983 sarebbe stato un buon computer.\r\n\r\nOra cerco di sviluppare il mio futuro libero... e tu?',NULL,NULL,'luka.agu','lucaaguzzoli',NULL,'TinyTanic');
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -560,4 +562,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-11  1:29:46
+-- Dump completed on 2016-11-14  1:29:03
