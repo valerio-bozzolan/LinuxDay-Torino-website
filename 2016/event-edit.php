@@ -39,9 +39,9 @@ if( isset( $_POST['action'] ) ) {
 	if( $_POST['action'] === 'add-user' && isset( $_POST['user'] ) ) {
 		// Add user
 
-		$user = User::getUser( $_POST['user'] );
+		$user = User::get( $_POST['user'] );
 		if( $user ) {
-			EventUser::deleteEventUser($event->getEventID(), $user->getUserID());
+			EventUser::delete($event->getEventID(), $user->getUserID());
 
 			insert_row('event_user', [
 				new DBCol('event_ID', $event->getEventID(), 'd'),
@@ -51,13 +51,13 @@ if( isset( $_POST['action'] ) ) {
 	} elseif( $_POST['action'] === 'update-user' && isset( $_POST['user'] ) ) {
 		// Update user order
 
-		$user = User::getUser( $_POST['user'] );
+		$user = User::get( $_POST['user'] );
 
 		if( $user ) {
 			if ( ! empty( $_POST['delete'] ) ) {
 				// Delete user
 
-				EventUser::deleteEventUser($event->getEventID(), $user->getUserID());
+				EventUser::delete($event->getEventID(), $user->getUserID());
 
 			} elseif( isset( $_POST['order'] ) ) {
 				// Change order

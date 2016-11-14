@@ -31,13 +31,9 @@ trait EventUserTrait {
 			$event_ID = $this->getEventID();
 		}
 		if( $user_ID === null ) {
-			$user_ID = $this->getUserID();
+			$user_ID  = $this->getUserID();
 		}
-		query( sprintf(
-			"DELETE FROM {$GLOBALS[T]('event_user')} WHERE event_ID = %d AND USER_ID = %d",
-			$event_ID,
-			$user_ID
-		) );
+		EventUser::delete($event_ID, $user_ID);
 	}
 }
 
@@ -57,5 +53,13 @@ class EventUser {
 		if( isset( $t->event_user_order ) ) {
 			$t->event_user_order = (int) $t->event_user_order;
 		}
+	}
+
+	static function delete($event_ID, $user_ID) {
+		query( sprintf(
+			"DELETE FROM {$GLOBALS[T]('event_user')} WHERE event_ID = %d AND USER_ID = %d",
+			$event_ID,
+			$user_ID
+		) );
 	}
 }
