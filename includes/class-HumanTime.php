@@ -32,6 +32,7 @@ class HumanTime {
 			$diff->s,
 			$diff->days,
 			$diff->invert,
+			$from,
 			$complete
 		);
 
@@ -52,7 +53,7 @@ class HumanTime {
 		);
 	}
 
-	static private function humanize($y, $m, $d, $h, $i, $s, $days, $invert, & $complete) {
+	static private function humanize($y, $m, $d, $h, $i, $s, $days, $invert, $from, & $complete) {
 		$complete = false;
 
 		// Top-down: From far away to recently
@@ -103,11 +104,7 @@ class HumanTime {
 		if( $d_fake === 1 ) {
 			$complete = true;
 
-			return self::at(
-				$invert ? _("ieri") : _("domani"),
-				$h,
-				$i
-			);
+			return $invert ? _("domani") : _("ieri");
 		}
 
 		// Today
@@ -121,7 +118,7 @@ class HumanTime {
 		if( $h_fake > 3 ) {
 			$complete = true;
 
-			return self::at( _("oggi"), $h, $i );
+			return _("oggi");
 		}
 
 		if( $h > 1 ) {
@@ -167,14 +164,5 @@ class HumanTime {
 		$complete = true;
 
 		return _("proprio ora");
-	}
-
-	static private function at($when, $h, $i) {
-		return sprintf(
-			_("%s alle %d:%d"),
-			$when,
-			$h,
-			$i
-		);
 	}
 }
