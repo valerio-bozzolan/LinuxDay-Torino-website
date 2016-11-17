@@ -146,7 +146,7 @@ INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscen
 INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',0,1,4,4,1);
 INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di varie distribuzioni GNU/Linux.','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,0,1,9,5,2);
 INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,0,1,10,5,3);
-INSERT INTO `ldto_event` VALUES (45,'gnu-linux-base','Impariamo GNU/Linux base',NULL,NULL,'Un\'iniziativa del comitato Linux Day Torino.\n\nLezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan\n\nLezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto\n\nLezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan\n\nLezione 4: La shell e i comandi di base a cura di Luca Aguzzoli\n\nLezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci\n\nLezione 6: Spazio dedicato alle aziende',NULL,NULL,'2016-11-15 18:00:00','2016-11-15 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4);
+INSERT INTO `ldto_event` VALUES (45,'gnu-linux-base','2. Installiamo insieme una distribuzione GNU/Linux',NULL,NULL,'Un\'iniziativa del comitato Linux Day Torino.\r\n\r\nLezione 1 ☑: Introduzione a GNU/Linux a cura di Valerio Bozzolan\r\n\r\nLezione 2 ☐: Installiamo insieme una distribuzione a cura di Valerio Cietto\r\n\r\nLezione 3 ☐: Manutenzione del sistema operativo a cura di Valerio Bozzolan\r\n\r\nLezione 4 ☐: La shell e i comandi di base a cura di Luca Aguzzoli\r\n\r\nLezione 5 ☐: Gestione del sistema e dei servizi a cura di Rosario Antoci\r\n\r\nLezione 6 ☐: Consegna attestati',NULL,NULL,'2016-11-23 18:00:00','2016-11-23 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4);
 /*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -562,4 +562,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-14  1:29:03
+-- Dump completed on 2016-11-15 22:12:07
