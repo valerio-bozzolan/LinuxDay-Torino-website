@@ -152,12 +152,12 @@ INSERT INTO `ldto_event` VALUES (34,'talk-misc-3','Wikidata: la base di conoscen
 INSERT INTO `ldto_event` VALUES (35,'talk-misc-4','Wikipedia',NULL,NULL,NULL,NULL,NULL,'2016-10-22 17:00:00','2016-10-22 18:00:00','/2016/static/libre-icons/wikipedia.png',0,1,4,4,1,NULL,NULL);
 INSERT INTO `ldto_event` VALUES (37,'lip','LIP','Linux Installation Party','Installazione di varie distribuzioni GNU/Linux.','Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari.',NULL,NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',NULL,0,1,9,5,2,NULL,NULL);
 INSERT INTO `ldto_event` VALUES (38,'coderdojo','Coderdojo',NULL,'Laboratorio di coding per i più piccoli a tema Linux Day.','Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po\' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n<br>\n<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n<br>\n<br>\nUn ringraziamento particolare ai due gruppi che hanno reso possibile quest\'iniziativa CoderDojo Torino e CoderDojo Torino 2.',NULL,NULL,'2016-10-22 14:30:00','2016-10-22 17:30:00',NULL,0,1,10,5,3,NULL,NULL);
-INSERT INTO `ldto_event` VALUES (45,'gnu-linux-base','Lezione introduttiva corso GNU/Linux',NULL,NULL,'Questa è stata la prima lezione introduttiva dell\'iniziativa del comitato Linux Day Torino.\r\n\r\nSi è trattata di un\'introduzione a GNU/Linux e al mondo del software libero.',NULL,NULL,'2016-11-15 18:00:00','2016-11-15 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,NULL,46);
-INSERT INTO `ldto_event` VALUES (46,'gnu-linux-installation','Installiamo insieme una distribuzione GNU/Linux',NULL,NULL,'Questa è la seconda lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-23 18:00:00','2016-11-23 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,45,47);
-INSERT INTO `ldto_event` VALUES (47,'debian-like-maintenance','Manutenzione di un sistema basato su Debian',NULL,NULL,'La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\r\n\r\nQuesta è la terza lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-23 18:00:00','2016-11-23 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,46,48);
-INSERT INTO `ldto_event` VALUES (48,'command-line-world','I comandi di base di un sistema GNU/Linux',NULL,NULL,'Conoscere i comandi di base per l\'amministrazione del filesystem e di altre parti del tuo sistema GNU/Linux.\r\n\r\nQuesta è la quarta lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-30 18:00:00','2016-11-30 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,47,49);
-INSERT INTO `ldto_event` VALUES (49,'sysadmin-base','Gestione del sistema e dei servizi in un sistema GNU/Linux',NULL,NULL,'Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come amministrarli al meglio.\r\n\r\nQuesta è la quinta lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-12-07 18:00:00','2016-12-07 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,48,50);
-INSERT INTO `ldto_event` VALUES (50,'award-ceremony','Consegna degli attestati',NULL,NULL,'I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\r\n\r\nQuesta giornata conclude le lezioni frutto di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-12-14 18:00:00','2016-12-14 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,49,NULL);
+INSERT INTO `ldto_event` VALUES (45,'gnu-linux-base','Lezione introduttiva corso GNU/Linux',NULL,NULL,'Questa è stata la prima lezione introduttiva dell\'iniziativa del comitato Linux Day Torino.\r\n\r\nSi è trattata di un\'introduzione a GNU/Linux e al mondo del software libero.',NULL,NULL,'2016-11-15 18:00:00','2016-11-15 19:30:00','/2016/static/corsi-unito.png',1,1,12,1,4,NULL,46);
+INSERT INTO `ldto_event` VALUES (46,'gnu-linux-base-installation','Installiamo insieme una distribuzione GNU/Linux',NULL,NULL,'Questa è la seconda lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-23 18:00:00','2016-11-23 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,45,47);
+INSERT INTO `ldto_event` VALUES (47,'gnu-linux-base-debian-maintenance','Manutenzione di un sistema basato su Debian',NULL,NULL,'La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\r\n\r\nQuesta è la terza lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-23 18:00:00','2016-11-23 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,46,48);
+INSERT INTO `ldto_event` VALUES (48,'gnu-linux-base-command-line','I comandi di base di un sistema GNU/Linux',NULL,NULL,'Conoscere i comandi di base per l\'amministrazione del filesystem e di altre parti del tuo sistema GNU/Linux.\r\n\r\nQuesta è la quarta lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-11-30 18:00:00','2016-11-30 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,47,49);
+INSERT INTO `ldto_event` VALUES (49,'gnu-linux-base-sysadmin','Gestione del sistema e dei servizi in un sistema GNU/Linux',NULL,NULL,'Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come amministrarli al meglio.\r\n\r\nQuesta è la quinta lezione di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-12-07 18:00:00','2016-12-07 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,48,50);
+INSERT INTO `ldto_event` VALUES (50,'gnu-linux-base-award-ceremony','Consegna degli attestati',NULL,NULL,'I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\r\n\r\nQuesta giornata conclude le lezioni frutto di un\'iniziativa promossa dal comitato Linux Day Torino.',NULL,NULL,'2016-12-14 18:00:00','2016-12-14 19:30:00','/2016/static/corsi-unito.png',1,1,10,1,4,49,NULL);
 /*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,7 +263,7 @@ CREATE TABLE `ldto_room` (
   UNIQUE KEY `room_uid` (`room_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_room_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,6 +282,7 @@ INSERT INTO `ldto_room` VALUES (8,'first-floor','Primo piano',2);
 INSERT INTO `ldto_room` VALUES (9,'lab-touring','Laboratorio Turing',1);
 INSERT INTO `ldto_room` VALUES (10,'lab-djikstra','Laboratorio Djikstra',1);
 INSERT INTO `ldto_room` VALUES (11,'f','Aula F',1);
+INSERT INTO `ldto_room` VALUES (12,'lab-von-neumann','Laboratorio von Neumann',1);
 /*!40000 ALTER TABLE `ldto_room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -577,4 +578,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-20 15:43:56
+-- Dump completed on 2016-11-20 22:51:29
