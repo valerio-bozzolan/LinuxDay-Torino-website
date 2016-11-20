@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-11 01:29+0100\n"
+"POT-Creation-Date: 2016-11-20 23:00+0100\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -17,105 +17,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: includes/class-HumanTime.php:44
+#: includes/class-HumanTime.php:45
 #, php-format
 msgid "fra %s"
 msgstr "in %s"
 
-#: includes/class-HumanTime.php:50
+#: includes/class-HumanTime.php:51
 #, php-format
 msgid "%s fa"
 msgstr "%s ago"
 
-#: includes/class-HumanTime.php:66
+#: includes/class-HumanTime.php:67
 #, php-format
 msgid "%d anni"
 msgstr "%d years"
 
-#: includes/class-HumanTime.php:70
+#: includes/class-HumanTime.php:71
 msgid "un anno"
 msgstr "one year"
 
-#: includes/class-HumanTime.php:76
+#: includes/class-HumanTime.php:77
 #, php-format
 msgid "%d mesi"
 msgstr "%d months"
 
-#: includes/class-HumanTime.php:80
+#: includes/class-HumanTime.php:81
 msgid "un mese"
 msgstr "one month"
 
-#: includes/class-HumanTime.php:92
+#: includes/class-HumanTime.php:93
 #, php-format
 msgid "%d settimane"
 msgstr "%d weeks"
 
-#: includes/class-HumanTime.php:96
+#: includes/class-HumanTime.php:97
 msgid "una settimana"
 msgstr "one week"
 
-#: includes/class-HumanTime.php:100
+#: includes/class-HumanTime.php:101
 #, php-format
 msgid "%d giorni"
 msgstr "%d days"
 
 #: includes/class-HumanTime.php:107
-msgid "ieri"
-msgstr "yesterday"
-
-#: includes/class-HumanTime.php:107
 msgid "domani"
 msgstr "tomorrow"
 
-#: includes/class-HumanTime.php:124
+#: includes/class-HumanTime.php:107
+msgid "ieri"
+msgstr "yesterday"
+
+#: includes/class-HumanTime.php:121
 msgid "oggi"
 msgstr "today"
 
-#: includes/class-HumanTime.php:129
+#: includes/class-HumanTime.php:126
 #, php-format
 msgid "%d ore e %d minuti"
 msgstr "%d hours and %d minutes"
 
-#: includes/class-HumanTime.php:132
+#: includes/class-HumanTime.php:129
 #, php-format
 msgid "%d ore"
 msgstr "%d hours"
 
-#: includes/class-HumanTime.php:144
+#: includes/class-HumanTime.php:141
 msgid "un'ora"
 msgstr "one hours"
 
-#: includes/class-HumanTime.php:148
+#: includes/class-HumanTime.php:145
 msgid "tre quarti d'ora"
 msgstr "three-quarters of an hour"
 
-#: includes/class-HumanTime.php:152
+#: includes/class-HumanTime.php:149
 msgid "mezzora"
 msgstr "half an hours"
 
-#: includes/class-HumanTime.php:156
+#: includes/class-HumanTime.php:153
 #, php-format
 msgid "%d minuti"
 msgstr "%d minutes"
 
-#: includes/class-HumanTime.php:160
+#: includes/class-HumanTime.php:157
 #, php-format
 msgid "un minuto"
 msgstr "one minute"
 
-#: includes/class-HumanTime.php:164
+#: includes/class-HumanTime.php:161
 #, php-format
 msgid "%d secondi"
 msgstr "%d seconds"
 
-#: includes/class-HumanTime.php:169
+#: includes/class-HumanTime.php:166
 msgid "proprio ora"
 msgstr "just now"
-
-#: includes/class-HumanTime.php:174
-#, php-format
-msgid "%s alle %d:%d"
-msgstr "%s at %d:%d"
 
 #: includes/class-Licenses.php:23
 msgid "GNU General Public License, versione 3"
@@ -352,7 +347,7 @@ msgstr "Free as in Freedom geographic data"
 
 #: 2016/credits.php:179
 msgid "Controllo versione distribuito"
-msgstr "Distributed version control "
+msgstr "Distributed version control"
 
 #: 2016/credits.php:186
 msgid "Event manager open source"
@@ -560,7 +555,7 @@ msgstr ""
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr "This year, the national subject is... <code>coding</code>!"
 
-#: 2016/index.php:105 conference[2016]::conference_title2
+#: 2016/index.php:105 chapter[talk]::chapter_name
 msgid "Talk"
 msgstr "Talk"
 
@@ -692,7 +687,7 @@ msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 "LIP (Linux Installation Party) and technical assistance to GNU/Linux "
-"distributions. "
+"distributions."
 
 #: 2016/index.php:280
 msgid "volontari"
@@ -1292,7 +1287,7 @@ msgstr ""
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: event[talk-misc-4]::event_title skill[wiki]::skill_title
+#: event[talk-misc-4]::event_title event[talk-dev-1]::event_title5
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
@@ -1300,7 +1295,7 @@ msgstr "Wikipedia"
 msgid "LIP"
 msgstr "LIP"
 
-#: event[lip]::event_subtitle conference[2016]::conference_title5
+#: event[lip]::event_subtitle conference[2015]::conference_title3
 msgid "Linux Installation Party"
 msgstr "Linux Installation Party"
 
@@ -1316,7 +1311,7 @@ msgstr ""
 "Linux Installation Party and technical assistance on GNU/Linux "
 "distributions. Run by Volunteers."
 
-#: event[coderdojo]::event_title conference[2016]::conference_title8
+#: event[coderdojo]::event_title conference[2015]::conference_title6
 msgid "Coderdojo"
 msgstr "Coderdojo"
 
@@ -1352,24 +1347,75 @@ msgstr ""
 "CoderDojo Turin and CoderDojo Turin 2."
 
 #: event[gnu-linux-base]::event_title
-msgid "Impariamo GNU/Linux base"
-msgstr "Learning GNU/Linux base"
+msgid "Lezione introduttiva corso GNU/Linux"
+msgstr ""
 
 #: event[gnu-linux-base]::event_description
 msgid ""
-"Un'iniziativa del comitato Linux Day Torino.\n"
+"Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
+"Linux Day Torino.\n"
 "\n"
-"Lezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan\n"
+"Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
+msgstr ""
+
+#: event[gnu-linux-base-installation]::event_title
+msgid "Installiamo insieme una distribuzione GNU/Linux"
+msgstr "Installation of a GNU/Linux distribution"
+
+#: event[gnu-linux-base-installation]::event_description
+msgid ""
+"Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: event[gnu-linux-base-debian-maintenance]::event_title
+msgid "Manutenzione di un sistema basato su Debian"
+msgstr ""
+
+#: event[gnu-linux-base-debian-maintenance]::event_description
+msgid ""
+"La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
 "\n"
-"Lezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto\n"
+"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: event[gnu-linux-base-command-line]::event_title
+msgid "I comandi di base di un sistema GNU/Linux"
+msgstr ""
+
+#: event[gnu-linux-base-command-line]::event_description
+msgid ""
+"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
+"parti del tuo sistema GNU/Linux.\n"
 "\n"
-"Lezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan\n"
+"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: event[gnu-linux-base-sysadmin]::event_title
+msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
+msgstr ""
+
+#: event[gnu-linux-base-sysadmin]::event_description
+msgid ""
+"Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
+"amministrarli al meglio.\n"
 "\n"
-"Lezione 4: La shell e i comandi di base a cura di Luca Aguzzoli\n"
+"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: event[gnu-linux-base-award-ceremony]::event_title
+msgid "Consegna degli attestati"
+msgstr ""
+
+#: event[gnu-linux-base-award-ceremony]::event_description
+msgid ""
+"I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
 "\n"
-"Lezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci\n"
-"\n"
-"Lezione 6: Spazio dedicato alle aziende"
+"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
+"comitato Linux Day Torino."
 msgstr ""
 
 #: location[1]::location_name
@@ -1406,19 +1452,19 @@ msgstr ""
 "**Nizza**'s underground station is at 50 mt from the Biotechnologies "
 "Department. "
 
-#: track[base]::track_name
+#: conference[2016]::conference_title0
 msgid "Base"
 msgstr "Base"
 
-#: track[base]::track_label
+#: conference[2016]::conference_title3
 msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
 msgstr "Non-technical"
 
-#: track[dev]::track_name
+#: conference[2016]::conference_title6
 msgid "Dev"
 msgstr "Dev"
 
-#: track[dev]::track_label
+#: conference[2016]::conference_title9
 msgid "Area sviluppatori"
 msgstr "Developers area"
 
@@ -1446,7 +1492,7 @@ msgstr "Other"
 msgid "Di tutto un po'"
 msgstr "A bit of everything"
 
-#: chapter[learning]::chapter_name
+#: conference[2015]::conference_title9
 msgid "Corso"
 msgstr "Lesson"
 
@@ -1474,21 +1520,25 @@ msgstr "CoderDojo area"
 msgid "Spazio Restart"
 msgstr "Restart area"
 
-#: conference[2015]::conference_title2
+#: event[talk-base-1]::event_title0
 msgid "Primo piano"
 msgstr "First Floor"
 
-#: conference[2015]::conference_title5
+#: event[talk-base-1]::event_title3
 msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
-#: conference[2015]::conference_title8
+#: event[talk-base-1]::event_title6
 msgid "Laboratorio Djikstra"
 msgstr "Djikstra Lab"
 
-#: room[f]::room_name
+#: event[talk-base-1]::event_title9
 msgid "Aula F"
 msgstr "\"F\" room"
+
+#: room[lab-von-neumann]::room_name
+msgid "Laboratorio von Neumann"
+msgstr "von Neumann Lab"
 
 #: skill[asd]::skill_title
 msgid "asd"
@@ -1510,19 +1560,19 @@ msgstr "Microsoft Windows"
 msgid "NodeJS"
 msgstr "NodeJS"
 
-#: skill[apple]::skill_title
+#: event[talk-base-1]::event_description0
 msgid "Apple"
 msgstr "Apple"
 
-#: event[talk-base-1]::event_title2
+#: event[talk-base-1]::event_description3
 msgid "Java"
 msgstr "Java"
 
-#: event[talk-base-1]::event_title5
+#: event[talk-base-1]::event_description6
 msgid "C++"
 msgstr "C++"
 
-#: event[talk-base-1]::event_title8
+#: event[talk-base-1]::event_description9
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -1554,23 +1604,23 @@ msgstr "Adobe Illustrator"
 msgid "Immagini vettoriali"
 msgstr "Vector Images"
 
-#: event[talk-base-1]::event_description2
+#: skill[teach]::skill_title
 msgid "Insegnare"
 msgstr "Teach"
 
-#: event[talk-base-1]::event_description5
+#: skill[raee]::skill_title
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: event[talk-base-1]::event_description8
+#: skill[blender]::skill_title
 msgid "Blender"
 msgstr "Blender"
 
-#: skill[c]::skill_title
+#: event[talk-dev-1]::event_title2
 msgid "C"
 msgstr "C"
 
-#: skill[embedded]::skill_title
+#: event[talk-dev-1]::event_title8
 msgid "Embedded"
 msgstr "Embedded"
 
@@ -1620,7 +1670,7 @@ msgstr ""
 "I've been using GNU/Linux for many years, and I help out at the Linux Day "
 "since 2010."
 
-#: event[talk-dev-1]::event_title0
+#: event[talk-dev-1]::event_description1
 msgid ""
 "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
@@ -1631,7 +1681,7 @@ msgstr ""
 "freely.\n"
 "Actually he wants to save the world, but don't tell it to anybody."
 
-#: event[talk-dev-1]::event_title5
+#: event[talk-dev-1]::event_description6
 msgid ""
 "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
 "freelance."
@@ -1639,7 +1689,7 @@ msgstr ""
 "Founder of <http://corso-javascript.it> and TorinoJS, software developer "
 "freelance."
 
-#: event[talk-dev-1]::event_title8
+#: event[talk-dev-1]::event_description9
 msgid ""
 "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
 "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
@@ -1731,11 +1781,11 @@ msgstr ""
 "dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
 "system engineering. "
 
-#: user[davide.isoardi]::user_bio event[talk-dev-1]::event_description2
+#: event[talk-sys-1]::event_title0 event[talk-sys-1]::event_title3
 msgid "Big Data System Architect e sysadmin."
 msgstr "Big Data System Architect and sysadmin."
 
-#: event[talk-dev-1]::event_description5
+#: event[talk-sys-1]::event_title6
 msgid ""
 "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
 "sicurezza informatica, full stack Java developer, Consigliere della "
@@ -1745,7 +1795,7 @@ msgstr ""
 "security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
 "degli Ingegneri della Provincia di Torino\"."
 
-#: event[talk-dev-1]::event_description8
+#: event[talk-sys-1]::event_title9
 msgid ""
 "The trash king!\n"
 "\n"
@@ -1829,3 +1879,11 @@ msgstr ""
 "\n"
 "I love the [WTFPL](https://en.wikipedia.org/wiki/WTFPL) to distribute "
 "examples and for who don't never read the text of the licenses."
+
+#: event[talk-sys-1]::event_description8
+msgid ""
+"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
+"che neanche nel 1983 sarebbe stato un buon computer.\n"
+"\n"
+"Ora cerco di sviluppare il mio futuro libero... e tu?"
+msgstr ""

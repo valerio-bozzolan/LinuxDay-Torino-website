@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-11-11T01:29:48+01:00
+# Last update: 2016-11-20T23:00:28+01:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
@@ -141,22 +141,50 @@ _("Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è d
 Un ringraziamento particolare ai due gruppi che hanno reso possibile quest'iniziativa CoderDojo Torino e CoderDojo Torino 2.");
 
 // event[gnu-linux-base]::event_title
-_("Impariamo GNU/Linux base");
+_("Lezione introduttiva corso GNU/Linux");
 
 // event[gnu-linux-base]::event_description
-_("Un'iniziativa del comitato Linux Day Torino.
+_("Questa è stata la prima lezione introduttiva dell'iniziativa del comitato Linux Day Torino.
 
-Lezione 1: Introduzione a GNU/Linux a cura di Valerio Bozzolan
+Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero.");
 
-Lezione 2: Installiamo insieme una distribuzione a cura di Valerio Cietto
+// event[gnu-linux-base-installation]::event_title
+_("Installiamo insieme una distribuzione GNU/Linux");
 
-Lezione 3: Manutenzione del sistema operativo a cura di Valerio Bozzolan
+// event[gnu-linux-base-installation]::event_description
+_("Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day Torino.");
 
-Lezione 4: La shell e i comandi di base a cura di Luca Aguzzoli
+// event[gnu-linux-base-debian-maintenance]::event_title
+_("Manutenzione di un sistema basato su Debian");
 
-Lezione 5: Gestione del sistema e dei servizi a cura di Rosario Antoci
+// event[gnu-linux-base-debian-maintenance]::event_description
+_("La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).
 
-Lezione 6: Spazio dedicato alle aziende");
+Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day Torino.");
+
+// event[gnu-linux-base-command-line]::event_title
+_("I comandi di base di un sistema GNU/Linux");
+
+// event[gnu-linux-base-command-line]::event_description
+_("Conoscere i comandi di base per l'amministrazione del filesystem e di altre parti del tuo sistema GNU/Linux.
+
+Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day Torino.");
+
+// event[gnu-linux-base-sysadmin]::event_title
+_("Gestione del sistema e dei servizi in un sistema GNU/Linux");
+
+// event[gnu-linux-base-sysadmin]::event_description
+_("Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come amministrarli al meglio.
+
+Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day Torino.");
+
+// event[gnu-linux-base-award-ceremony]::event_title
+_("Consegna degli attestati");
+
+// event[gnu-linux-base-award-ceremony]::event_description
+_("I più meritevoli e i più presenti saranno premiati con attestati e adesivi!
+
+Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal comitato Linux Day Torino.");
 
 // location[1]::location_name
 _("Dipartimento di Informatica");
@@ -249,6 +277,9 @@ _("Laboratorio Djikstra");
 
 // room[f]::room_name
 _("Aula F");
+
+// room[lab-von-neumann]::room_name
+_("Laboratorio von Neumann");
 
 // skill[asd]::skill_title
 _("asd");
@@ -402,6 +433,11 @@ Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere
 L’Open source e l’open hardware è quello di cui c'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.
 
 Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze.");
+
+// user[tinytanic]::user_bio
+_("Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto che neanche nel 1983 sarebbe stato un buon computer.
+
+Ora cerco di sviluppare il mio futuro libero... e tu?");
 
 ######################################
 ##### Th-th-th-that's all folks! #####
