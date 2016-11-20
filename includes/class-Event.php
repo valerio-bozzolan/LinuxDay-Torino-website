@@ -201,16 +201,28 @@ trait EventTrait {
 		return $q;
 	}
 
+	/**
+	 * Get a single Event if exists any next event.
+	 */
 	function getNextEvent($fields = null) {
-		if($fields === null) {
+		if( ! $fields ) {
 			$fields = Event::$FULL_FIELDS;
+		}
+		if( $next_ID = $this->getSpecifiedNextEventID() ) {
+			return Event::getByID( $next_ID, $fields );
 		}
 		return $this->getNextEventsQuery()->selectField($fields)->setLimit(1)->getRow('Event');
 	}
 
+	/**
+	 * Get a single Event if exists any previous event.
+	 */
 	function getPreviousEvent($fields = null) {
-		if($fields === null) {
+		if( ! $fields ) {
 			$fields = Event::$FULL_FIELDS;
+		}
+		if( $previous_ID = $this->getSpecifiedPreviousEventID() ) {
+			return Event::getByID( $previous_ID, $fields );
 		}
 		return $this->getPreviousEventsQuery()->selectField($fields)->setLimit(1)->getRow('Event');
 	}
@@ -237,6 +249,28 @@ trait EventTrait {
 		$now = new DateTime('now');
 		return $now->diff( $this->event_end )->invert === 1;
 	}
+
+	/**
+	 * The previous event can be specified or not.
+	 * @return NULL or int (event_ID)
+	 */
+	function getSpecifiedPreviousEventID() {
+		property_exists($this, 'event_previous')
+			|| error_die("Missing event_previous");
+
+		return $this->event_previous;
+	}
+
+	/**
+	 * The next event can be specified or not.
+	 * @return NULL or int (event_ID)
+	 */
+	function getSpecifiedNextEventID() {
+		property_exists($this, 'event_next')
+			|| error_die("Missing event_next");
+
+		return $this->event_next;
+	}
 }
 
 class_exists('User');
@@ -262,6 +296,8 @@ class Event {
 		'event_end',
 		'event_img',
 		'event_subscriptions',
+		'event_next',
+		'event_previous',
 		'room.room_ID',
 		'room_uid',
 		'room_name',
@@ -300,6 +336,21 @@ class Event {
 		if( isset( $t->event_subscriptions ) ) {
 			$t->event_subscriptions = (bool) (int) $t->event_subscriptions;
 		}
+		if( isset( $t->event_next ) ) {
+			$t->event_next = (int) $t->event_next;
+		}
+		if( isset( $t->event_previous) ) {
+			$t->event_previous = (int) $t->event_previous;
+		}
+	}
+
+	static function getByID($event_ID, $fields = [] ) {
+		$q = self::getStandardQueryEvent()->appendCondition( sprintf(
+			'event.event_ID = %d',
+			$event_ID
+		) );
+		$fields = $fields ? $fields : self::$FULL_FIELDS;
+		return $q->selectField($fields)->getRow('Event');
 	}
 
 	/**
