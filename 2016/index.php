@@ -63,14 +63,14 @@ new Header('conference', [
 			<tr>
 				<th><?php _e("Evento") ?></th>
 				<th><?php _e("Quando") ?></th>
-				<th><?php _e("Dove") ?></th>
+				<th class="hide-on-small-only"><?php _e("Dove") ?></th>
 			</tr>
 			<?php while( $event = $other_events->fetch_object('Event') ): ?>
 			<?php
-			$classes = 'hoverable';
-			if( $event->isEventPassed() ) {
-				$classes .= ' grey lighten-3';
-			}
+				$classes = 'hoverable';
+				if( $event->isEventPassed() ) {
+					$classes .= ' grey lighten-3';
+				}
 			?>
 			<tr class="<?php echo $classes ?>">
 				<td>
@@ -80,8 +80,15 @@ new Header('conference', [
 					) ?><br />
 					<small>(<?php echo $event->getChapterName() ?>)</small>
 				</td>
-				<td><?php echo $event->getEventHumanStart() ?></td>
 				<td>
+					<?php echo $event->getEventHumanStart() ?><br />
+					<small>(<?php printf(
+						"%s at %s",
+						 $event->getEventStart( _("d/m/Y") ),
+						 $event->getEventStart( _("H:i") )
+					) ?>)</small>
+				</td>
+				<td class="hide-on-small-only">
 					<?php echo $event->getLocationName() ?><br />
 					<small>(<?php echo $event->getRoomName() ?>)</small>
 				</td>
