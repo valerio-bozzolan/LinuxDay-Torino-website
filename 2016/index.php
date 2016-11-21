@@ -84,7 +84,7 @@ new Header('conference', [
 					<time datetime="<?php echo $event->getEventStart('Y-m-d H:i') ?>"><?php echo $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
 						_("%s alle %s"),
-						$event->getEventStart( _("d/m/Y") ),
+						$event->getEventStart('d/m/Y'),
 						$event->getEventStart('H:i')
 					) ?>)</small>
 				</td>
@@ -132,7 +132,7 @@ new Header('conference', [
 						null,
 						'black-text hoverable'
 					),
-					$conference->getConferenceStart( _("d/m/Y") ),
+					$conference->getConferenceStart('d/m/Y'),
 					$conference->getConferenceHumanStart()
 				) ?></p>
 			</div>

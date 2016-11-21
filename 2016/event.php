@@ -121,7 +121,7 @@ new Header('event', $args);
 						<?php echo $event->getEventHumanStart() ?><br />
 						<small><?php printf(
 							_("%s alle %s"),
-							$event->getEventStart( _("d/m/Y") ),
+							$event->getEventStart('d/m/Y'),
 							$event->getEventStart('H:i')
 						) ?></small>
 					</td>

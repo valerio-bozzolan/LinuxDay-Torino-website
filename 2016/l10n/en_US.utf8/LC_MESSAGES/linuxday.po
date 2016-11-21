@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-20 23:00+0100\n"
+"POT-Creation-Date: 2016-11-21 22:14+0100\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -372,7 +372,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:227 2016/event.php:187
+#: 2016/credits.php:227 2016/event.php:200
 msgid "Materiale"
 msgstr "Files"
 
@@ -439,28 +439,28 @@ msgstr "Edit event"
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:102 2016/user.php:142
+#: 2016/event.php:105 2016/index.php:66 2016/user.php:142
 msgid "Dove"
 msgstr "Where"
 
-#: 2016/event.php:106
+#: 2016/event.php:119 2016/index.php:65
 msgid "Quando"
 msgstr "When"
 
-#: 2016/event.php:109
+#: 2016/event.php:123 2016/index.php:86
 #, php-format
-msgid "Ore %s"
-msgstr "Hour %s"
+msgid "%s alle %s"
+msgstr "%s at %s"
 
-#: 2016/event.php:125
+#: 2016/event.php:138
 msgid "Abstract"
 msgstr "Abstract"
 
-#: 2016/event.php:135
+#: 2016/event.php:148
 msgid "Descrizione"
 msgstr "Description"
 
-#: 2016/event.php:146
+#: 2016/event.php:159
 msgid ""
 "Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa "
 "pagina."
@@ -468,65 +468,78 @@ msgstr ""
 "Invite your friends to subscribe in this page sharing the URL of this web "
 "page."
 
-#: 2016/event.php:152
+#: 2016/event.php:165
 msgid "Iscrizioni"
 msgstr "Subscriptions"
 
-#: 2016/event.php:153
+#: 2016/event.php:166
 msgid ""
 "Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare "
 "il tuo interesse:"
 msgstr ""
 "Subscriptions are still open. Insert your e-mail to express your interest:"
 
-#: 2016/event.php:156 2016/login.php:55
+#: 2016/event.php:169 2016/login.php:55
 msgid "E-mail"
 msgstr "E-mail"
 
-#: 2016/event.php:160
+#: 2016/event.php:173
 msgid "Sottoscrivi"
 msgstr "Subscribe"
 
-#: 2016/event.php:176
+#: 2016/event.php:189
 msgid "Note"
 msgstr "Notes"
 
-#: 2016/event.php:195
+#: 2016/event.php:208
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:214
+#: 2016/event.php:227
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr "See %s sharable under %s license."
 
-#: 2016/event.php:236
+#: 2016/event.php:249
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:249 2016/event.php:266
+#: 2016/event.php:262 2016/event.php:279
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:277
+#: 2016/event.php:290
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
 
-#: 2016/event.php:297
+#: 2016/event.php:310
 msgid "Preceduto da"
 msgstr "Previous"
 
-#: 2016/event.php:311
+#: 2016/event.php:322
 msgid "A seguire"
 msgstr "Next"
 
-#: 2016/index.php:62 2016/load.php:63 conference[2016]::conference_title
+#: 2016/index.php:60
+#, php-format
+msgid "Il %s si è concluso..."
+msgstr ""
+
+#: 2016/index.php:61
+msgid "Ma abbiamo altro!"
+msgstr ""
+
+#: 2016/index.php:64
+msgid "Evento"
+msgstr ""
+
+#: 2016/index.php:115 2016/load.php:63 conference[2016]::conference_title
 msgid "Linux Day Torino 2016"
 msgstr "Linux Day Turin 2016"
 
-#: 2016/index.php:67
+#: 2016/index.php:120
 #, php-format
 msgid ""
 "Il Linux Day è la principale manifestazione italiana di promozione di "
@@ -539,27 +552,23 @@ msgstr ""
 "was at <strong>%s</strong> (%s) at the <strong>Computer Science department</"
 "strong> of the Turin University of Studies."
 
-#: 2016/index.php:71 2016/includes/class-Header.php:143
+#: 2016/index.php:124 2016/includes/class-Header.php:143
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
-#: 2016/index.php:77
+#: 2016/index.php:130
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/index.php:82
-msgid "d/m/Y"
-msgstr ""
-
-#: 2016/index.php:98
+#: 2016/index.php:151
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr "This year, the national subject is... <code>coding</code>!"
 
-#: 2016/index.php:105 chapter[talk]::chapter_name
+#: 2016/index.php:158 chapter[talk]::chapter_name
 msgid "Talk"
 msgstr "Talk"
 
-#: 2016/index.php:110
+#: 2016/index.php:163
 #, php-format
 msgid ""
 "Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s "
@@ -572,149 +581,145 @@ msgstr ""
 "needs of a wide audience (from the younger, to the curious person, up to the "
 "experts)."
 
-#: 2016/index.php:118
+#: 2016/index.php:171
 #, php-format
 msgid "In seguito si riporta la tabella dei talk suddivisa in %s categorie:"
 msgstr "Here is the talk table divided in %s categories:"
 
-#: 2016/index.php:121
-msgid "La tabella potrebbe subire variazioni."
-msgstr "The table could change any time."
-
-#: 2016/index.php:130
+#: 2016/index.php:181
 msgid "Planimetria"
 msgstr "Planimetry"
 
-#: 2016/index.php:131
+#: 2016/index.php:182
 msgid "La manifestazione è suddivisa in aule tematiche."
 msgstr "The manifestation it was subdivided in thematic rooms:"
 
-#: 2016/index.php:136
+#: 2016/index.php:187
 msgid "Planimetria Dipartimento di Informatica"
 msgstr "Computer Science department planimetry"
 
-#: 2016/index.php:145
+#: 2016/index.php:196
 msgid "App Android"
 msgstr "Android App"
 
-#: 2016/index.php:147
+#: 2016/index.php:198
 #, php-format
 msgid ""
 "La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"
 msgstr "Are you reading the talks over a small screen? Try the %s app!"
 
-#: 2016/index.php:162 2016/index.php:174
+#: 2016/index.php:213 2016/index.php:225
 #, php-format
 msgid "Scarica e installa %s:"
 msgstr "Download and install %s:"
 
-#: 2016/index.php:168
+#: 2016/index.php:219
 msgid "Installa F-Droid"
 msgstr "Install F-Droid"
 
-#: 2016/index.php:180
+#: 2016/index.php:231
 msgid "Installa LDTO16"
 msgstr "Install LDTO16"
 
-#: 2016/index.php:189
+#: 2016/index.php:240
 msgid "Attività"
 msgstr "Activities"
 
-#: 2016/index.php:190
+#: 2016/index.php:241
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr "At the same time of the talks, various activity will take place: "
 
-#: 2016/index.php:194
+#: 2016/index.php:245
 #, php-format
 msgid "da %s"
 msgstr "by %s"
 
-#: 2016/index.php:215
+#: 2016/index.php:266
 #, php-format
 msgid "Gestito %s."
 msgstr "Run %s."
 
-#: 2016/index.php:221
+#: 2016/index.php:272
 msgid "Prenota"
 msgstr "Book"
 
-#: 2016/index.php:223
+#: 2016/index.php:274
 #, php-format
 msgid "Prenota la tua partecipazione a %s"
 msgstr "Book your presence to the %s"
 
-#: 2016/index.php:241
+#: 2016/index.php:292
 msgid "Riparazione di apparecchiature elettroniche."
 msgstr "Fixing electronic devices"
 
-#: 2016/index.php:242
+#: 2016/index.php:293
 msgid "Associazione Restarters Torino"
 msgstr "Restarters Torino association"
 
-#: 2016/index.php:244
+#: 2016/index.php:295
 #, php-format
 msgid "dall'%s"
 msgstr "by %s"
 
-#: 2016/index.php:248
+#: 2016/index.php:299
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
 msgstr "Coding lab for children themed Linux Day"
 
-#: 2016/index.php:250
+#: 2016/index.php:301
 #, php-format
 msgid "%s e %s."
 msgstr "%s and %s."
 
-#: 2016/index.php:253
+#: 2016/index.php:304
 msgid "CoderDojo Torino"
 msgstr "CoderDojo Turin"
 
-#: 2016/index.php:260
+#: 2016/index.php:311
 msgid "Coderdojo Torino 2"
 msgstr "CoderDojo Turin 2"
 
-#: 2016/index.php:272
+#: 2016/index.php:323
 msgid "Allestimento museale di Retrocomputing."
 msgstr "Retrocomputing museum exhibition"
 
-#: 2016/index.php:275
+#: 2016/index.php:326
 #, php-format
 msgid "dal %s"
 msgstr "by %s"
 
-#: 2016/index.php:279
+#: 2016/index.php:330
 msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 "LIP (Linux Installation Party) and technical assistance to GNU/Linux "
 "distributions."
 
-#: 2016/index.php:280
+#: 2016/index.php:331
 msgid "volontari"
 msgstr "volunteers"
 
-#: 2016/index.php:291
+#: 2016/index.php:342
 msgid "Come arrivare"
 msgstr "How to reach us"
 
-#: 2016/index.php:300
+#: 2016/index.php:351
 msgid "Abilitare JavaScript per la mappa interattiva."
 msgstr "Enable JavaScript for interactive map."
 
-#: 2016/index.php:311
+#: 2016/index.php:362
 #, php-format
 msgid "Vedi %s su OpenStreetMap"
 msgstr "See %s on OpenStreetMap"
 
-#: 2016/index.php:332
+#: 2016/index.php:383
 msgid "Le quattro libertà fontamentali del software libero"
 msgstr "The four fundamentals of Free as in Freedom software:"
 
-#: 2016/index.php:339
+#: 2016/index.php:390
 msgid "Ingresso gratuito"
 msgstr "Free (as in beer) entry"
 
-#: 2016/index.php:342
+#: 2016/index.php:393
 #, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
@@ -729,15 +734,15 @@ msgstr ""
 "Days always indipendent, Free and without costs.<br /> See you on <strong>"
 "%s</strong>!"
 
-#: 2016/index.php:349
+#: 2016/index.php:400
 msgid "22 ottobre"
 msgstr "October 22nd"
 
-#: 2016/index.php:355
+#: 2016/index.php:406
 msgid "Scopri i nostri partner"
 msgstr "Our partners"
 
-#: 2016/index.php:357
+#: 2016/index.php:408
 #, php-format
 msgid "Partner %s"
 msgstr "%s partner"
@@ -1348,7 +1353,7 @@ msgstr ""
 
 #: event[gnu-linux-base]::event_title
 msgid "Lezione introduttiva corso GNU/Linux"
-msgstr ""
+msgstr "Introduction to GNU/Linux"
 
 #: event[gnu-linux-base]::event_description
 msgid ""
@@ -1370,7 +1375,7 @@ msgstr ""
 
 #: event[gnu-linux-base-debian-maintenance]::event_title
 msgid "Manutenzione di un sistema basato su Debian"
-msgstr ""
+msgstr "Maintainment of a Debian-based system"
 
 #: event[gnu-linux-base-debian-maintenance]::event_description
 msgid ""
@@ -1382,7 +1387,7 @@ msgstr ""
 
 #: event[gnu-linux-base-command-line]::event_title
 msgid "I comandi di base di un sistema GNU/Linux"
-msgstr ""
+msgstr "GNU/Linux base commands"
 
 #: event[gnu-linux-base-command-line]::event_description
 msgid ""
@@ -1395,7 +1400,7 @@ msgstr ""
 
 #: event[gnu-linux-base-sysadmin]::event_title
 msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
-msgstr ""
+msgstr "GNU/Linux system and services maintainment"
 
 #: event[gnu-linux-base-sysadmin]::event_description
 msgid ""
@@ -1408,7 +1413,7 @@ msgstr ""
 
 #: event[gnu-linux-base-award-ceremony]::event_title
 msgid "Consegna degli attestati"
-msgstr ""
+msgstr "Award ceremony"
 
 #: event[gnu-linux-base-award-ceremony]::event_description
 msgid ""
