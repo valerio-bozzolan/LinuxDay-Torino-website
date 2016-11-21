@@ -164,8 +164,6 @@ new Header('conference', [
 			_("In seguito si riporta la tabella dei talk suddivisa in %s categorie:"),
 			"<b>{$eventsTable->countTracks()}</b>"
 		) ?></p>
-		<p><?php _e("La tabella potrebbe subire variazioni.") ?></p>
-
 		<?php $eventsTable->printTable(); ?>
 	</div>
 
