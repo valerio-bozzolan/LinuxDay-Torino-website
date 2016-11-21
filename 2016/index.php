@@ -46,6 +46,51 @@ new Header('conference', [
 	'url'        => $conference->getConferenceURL()
 ] );
 ?>
+	<?php
+		$other_events = Event::getStandardQueryEvent()->appendCondition( sprintf(
+			'event.conference_ID = %d',
+			$conference->getConferenceID()
+		) );
+		$other_events->appendCondition("event_end > '2016-10-22 23:00:00'");
+		$other_events->appendOrderBy('event_start');
+		$other_events = $other_events->query();
+	?>
+	<?php if( $other_events->num_rows ): ?>
+	<div class="section">
+		<h3><?php printf( _("Il %s si è concluso..."), SITE_NAME ) ?></h3>
+		<p class="flow-text"><?php _e("Ma abbiamo altro!") ?></p>
+		<table class="bordered hoverable">
+			<tr>
+				<th><?php _e("Evento") ?></th>
+				<th><?php _e("Quando") ?></th>
+				<th><?php _e("Dove") ?></th>
+			</tr>
+			<?php while( $event = $other_events->fetch_object('Event') ): ?>
+			<?php
+			$classes = 'hoverable';
+			if( $event->isEventPassed() ) {
+				$classes .= ' grey lighten-3';
+			}
+			?>
+			<tr class="<?php echo $classes ?>">
+				<td>
+					<?php echo HTML::a(
+						$event->getEventURL(),
+						$event->getEventTitle()
+					) ?><br />
+					<small>(<?php echo $event->getChapterName() ?>)</small>
+				</td>
+				<td><?php echo $event->getEventHumanStart() ?></td>
+				<td>
+					<?php echo $event->getLocationName() ?><br />
+					<small>(<?php echo $event->getRoomName() ?>)</small>
+				</td>
+			</tr>
+			<?php endwhile ?>
+		</table>
+	</div>
+	<?php endif ?>
+
 	<div class="header">
 		<div class="center-align">
 			<h1><?php echo HTML::a(
@@ -56,6 +101,7 @@ new Header('conference', [
 			) ?></h1>
 		</div>
 	</div>
+
 	<div class="section">
 		<div class="row valign-wrapper">
 			<div class="col s12 m2 l1 center-align hide-on-small-only">
