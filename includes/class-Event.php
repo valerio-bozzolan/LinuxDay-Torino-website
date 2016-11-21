@@ -310,6 +310,8 @@ class Event {
 		'conference_uid',
 		'conference_title',
 		'location_name',
+		'location_lat',
+		'location_lon',
 		'location_address'
 	];
 

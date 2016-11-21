@@ -81,11 +81,11 @@ new Header('conference', [
 					<small>(<?php echo $event->getChapterName() ?>)</small>
 				</td>
 				<td>
-					<?php echo $event->getEventHumanStart() ?><br />
+					<time datetime="<?php echo $event->getEventStart('Y-m-d H:i') ?>"><?php echo $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
-						"%s at %s",
-						 $event->getEventStart( _("d/m/Y") ),
-						 $event->getEventStart( _("H:i") )
+						_("%s alle %s"),
+						$event->getEventStart( _("d/m/Y") ),
+						$event->getEventStart('H:i')
 					) ?>)</small>
 				</td>
 				<td class="hide-on-small-only">

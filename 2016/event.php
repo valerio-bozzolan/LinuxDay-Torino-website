@@ -96,21 +96,34 @@ new Header('event', $args);
 			<table class="striped bordered">
 				<tr>
 					<th><?php echo icon('folder', 'left'); _e("Tema") ?></th>
-					<td><?php echo $event->getTrackName() ?><br /><small><?php echo $event->getTrackLabel() ?></small></td>
+					<td>
+						<?php echo $event->getTrackName() ?><br />
+						<small><?php echo $event->getTrackLabel() ?></small>
+					</td>
 				</tr>
 				<tr>
 					<th><?php echo icon('room', 'left'); _e("Dove") ?></th>
-					<td><?php echo $event->getRoomName() ?><br /> <?php echo $event->getLocationName() ?></td>
+					<td>
+						<?php echo $event->getRoomName() ?><br />
+						<small>@ <?php echo HTML::a(
+							$event->getLocationGeoOSM(),
+							$event->getLocationName(),
+							$event->getLocationAddress(),
+							null,
+							'target="_blank"'
+						) ?></small><br />
+						<small><?php echo $event->getLocationAddress() ?></small>
+					</td>
 				</tr>
 				<tr>
 					<th><?php echo icon('access_time', 'left'); _e("Quando") ?></th>
 					<td>
-						<?php printf(
-							_("Ore %s"),
+						<?php echo $event->getEventHumanStart() ?><br />
+						<small><?php printf(
+							_("%s alle %s"),
+							$event->getEventStart( _("d/m/Y") ),
 							$event->getEventStart('H:i')
-						) ?><br />
-						<?php echo $event->getEventStart('d/m/Y') ?><br />
-						(<?php echo $event->getEventHumanStart() ?>)
+						) ?></small>
 					</td>
 				</tr>
 			</table>
@@ -153,8 +166,8 @@ new Header('event', $args);
 							<p class="flow-text"><?php _e("Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:") ?></p>
 							<div class="row">
 								<div class="col s12 l6 input-field">
-									<label for="subscription-email"><?php _e("E-mail") ?></label>
-									<input type="email" name="subscription_email" />
+									<label for="subscription_email"><?php _e("E-mail") ?></label>
+									<input type="email" name="subscription_email" id="subscription_email" />
 								</div>
 								<div class="col s12 l6 input-field">
 									<button type="submit" class="btn purple darken-3 waves-effect"><?php _e("Sottoscrivi"); echo icon('send', 'right') ?></button>
@@ -296,13 +309,11 @@ new Header('event', $args);
 				<?php if( $previous ): ?>
 					<h3><?php echo icon('navigate_before'); _e("Preceduto da") ?></h3>
 					<p class="flow-text">
-						<?php echo icon('access_time') ?>
-						<?php echo $previous->getEventStart('H:i') ?><br />
-						(<?php echo $previous->getEventHumanStart() ?>)<br />
 						<?php echo HTML::a(
 							$previous->getEventURL(),
 							$previous->getEventTitle()
 						) ?>
+						<time datetime="<?php echo $previous->getEventStart('Y-m-d H:i') ?>"><?php echo $previous->getEventHumanStart() ?></time>
 					</p>
 				<?php endif ?>
 			</div>
@@ -310,13 +321,11 @@ new Header('event', $args);
 				<?php if( $next ): ?>
 					<h3><?php _e("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
-						<?php echo icon('access_time') ?>
-						<?php echo $next->getEventStart('H:i') ?><br />
-						(<?php echo $next->getEventHumanStart() ?>)<br />
 						<?php echo HTML::a(
 							$next->getEventURL(),
 							$next->getEventTitle()
 						) ?>
+						<time datetime="<?php echo $next->getEventStart('Y-m-d H:i') ?>"><?php echo $next->getEventHumanStart() ?></time>
 					</p>
 				<?php endif ?>
 			</div>
