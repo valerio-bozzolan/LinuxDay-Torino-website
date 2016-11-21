@@ -58,7 +58,7 @@ new Header('conference', [
 	<?php if( $other_events->num_rows ): ?>
 	<div class="section">
 		<h3><?php printf( _("Il %s si è concluso..."), SITE_NAME ) ?></h3>
-		<p class="flow-text"><?php _e("Ma abbiamo altro!") ?></p>
+		<h4><?php _e("Ma abbiamo altro!") ?></h4>
 		<table class="bordered hoverable">
 			<tr>
 				<th><?php _e("Evento") ?></th>
