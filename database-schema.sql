@@ -304,7 +304,7 @@ CREATE TABLE `ldto_sharable` (
   PRIMARY KEY (`sharable_ID`),
   KEY `event_ID` (`event_ID`),
   CONSTRAINT `ldto_sharable_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -327,6 +327,8 @@ INSERT INTO `ldto_sharable` VALUES (12,NULL,'/2016/static/uploads/Docker.odp','d
 INSERT INTO `ldto_sharable` VALUES (13,NULL,'/2016/static/learning/unito/terminale.html','document',NULL,'cc-by-sa-4.0',48);
 INSERT INTO `ldto_sharable` VALUES (14,NULL,'//static.reyboz.it/2016/linux-day-torino/corsi-unito-dip-info/glossario-del-software-libero.odp','document',NULL,'cc-by-sa-4.0',45);
 INSERT INTO `ldto_sharable` VALUES (15,NULL,'//static.reyboz.it/2016/linux-day-torino/corsi-unito-dip-info/glossario-del-software-libero.pdf','document',NULL,'cc-by-sa-4.0',45);
+INSERT INTO `ldto_sharable` VALUES (16,NULL,'//static.reyboz.it/2016/linux-day-torino/corsi-unito-dip-info/debian-gnu-linux-installation.pdf','document',NULL,'wtfpl',46);
+INSERT INTO `ldto_sharable` VALUES (17,NULL,'//static.reyboz.it/2016/linux-day-torino/corsi-unito-dip-info/debian-gnu-linux-installation.odp','document',NULL,'wtfpl',46);
 /*!40000 ALTER TABLE `ldto_sharable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -397,7 +399,7 @@ CREATE TABLE `ldto_subscription` (
   PRIMARY KEY (`subscription_ID`),
   UNIQUE KEY `subscription_email` (`event_ID`,`subscription_email`),
   CONSTRAINT `ldto_subscription_ibfk_1` FOREIGN KEY (`event_ID`) REFERENCES `ldto_event` (`event_ID`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -578,4 +580,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-21 13:57:07
+-- Dump completed on 2016-11-22 23:56:51
