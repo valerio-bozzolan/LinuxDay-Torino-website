@@ -269,11 +269,11 @@ _("Spazio Restart");
 // room[first-floor]::room_name
 _("Primo piano");
 
-// room[lab-touring]::room_name
+// room[lab-turing]::room_name
 _("Laboratorio Turing");
 
-// room[lab-djikstra]::room_name
-_("Laboratorio Djikstra");
+// room[lab-dijkstra]::room_name
+_("Laboratorio Dijkstra");
 
 // room[f]::room_name
 _("Aula F");

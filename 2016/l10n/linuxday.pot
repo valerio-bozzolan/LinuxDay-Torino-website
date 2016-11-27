@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Linux Day 2016 website contributors
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the linuxday package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-22 23:55+0100\n"
+"POT-Creation-Date: 2016-11-27 17:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1433,7 +1433,7 @@ msgid "Laboratorio Turing"
 msgstr ""
 
 #: event[talk-base-1]::event_title6
-msgid "Laboratorio Djikstra"
+msgid "Laboratorio Dijkstra"
 msgstr ""
 
 #: event[talk-base-1]::event_title9
