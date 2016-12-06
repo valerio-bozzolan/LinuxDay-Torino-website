@@ -15,7 +15,7 @@
 
 -> # Prima di Debian... <-
 
-Come installo `nsake`? 
+Come installo `nsnake`? 
 ^
 
 README: *Simple* installation instructions for the game "nsnake":
