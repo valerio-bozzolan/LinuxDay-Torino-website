@@ -37,7 +37,7 @@ Criticità dei vari Linux Day per ricordarsene nel momento del bisogno.
 * [ ] - Trovare una decina di [GxT](http://www.comune.torino.it/infogio/gxt/)
 * [ ] - Istruire e assegnare i GxT al loro ruoli
 * [ ] - Persone che ci sono già dal mattino compresi GxT
-* [ ] - Fotografie (~1 Gxt) (hanno macchina fotografica). Foto tipo questa: [http://linuxdaytorino.org/2015/images/slider/slide-3.jpg]
+* [ ] - Fotografie (~1 Gxt) (hanno macchina fotografica). Foto tipo queste: [2015](http://linuxdaytorino.org/2015/images/slider/slide-3.jpg) [2012](http://linuxdaytorino.org/2012/sites/default/files/DSC_0245_0.jpg)
 
 ## Post-evento
 * [ ] - Pizzata self-complaining
