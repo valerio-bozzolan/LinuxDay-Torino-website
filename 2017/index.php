@@ -176,7 +176,7 @@ new Header('conference', [
 				?></p>
 				<p>
 					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
-							<?php echo icon('file_download', 'left'); _e("Installa LDTO16") ?>
+							<?php echo icon('file_download', 'left'); _e("Installa LDTO") ?>
 					</a>
 				</p>
 			</div>
@@ -345,7 +345,7 @@ new Header('conference', [
 					"per far sì che altri Linux Day rimangano sempre indipendenti, liberi e gratuiti.<br /> ".
 					"Ci vediamo il <strong>%s</strong>!"
 					),
-					_("22 ottobre")
+					_("28 ottobre")
 				) ?></p>
 
 				<!--
