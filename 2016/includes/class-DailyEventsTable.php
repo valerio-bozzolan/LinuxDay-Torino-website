@@ -60,7 +60,7 @@ class DailyEventsTable {
 		}
 
 		// The number of hours is the hour of the last event
-		$this->hours = end($events)->hour;
+		$this->hours = $events ? end($events)->hour : 0;
 
 		$this->n = count($events);
 	}
