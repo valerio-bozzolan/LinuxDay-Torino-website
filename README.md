@@ -70,7 +70,7 @@ Il file viene generato ogni volta che si esegue `includes/api/tagliatella.php`. 
 È possibile far restituire l'XML direttamente da `includes/api/tagliatella.php` modificando le impostazioni in `includes/api/config.php`.
 
 ## Multilingua
-Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). Riassumere il fowkflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
+Il sito è multilingua grazie al pacchetto GNU Gettext (`php-gettext`). Riassumere il workflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
 
 * Per cambiare una stringa italiana, cambiala dal database o dal codice sorgente
 
