@@ -17,13 +17,8 @@
 
 require 'load.php';
 
-$conference = null;
-if( ! empty( $_GET['uid'] ) ) {
-	$conference = Conference::get( $_GET['uid'] );
-}
-
-$conference
-	|| die_with_404();
+$conference = FullConference::queryByUID( @ $_GET['uid'] );
+$conference or die_with_404();
 
 FORCE_PERMALINK
 	&& $conference->forceConferencePermalink();
@@ -103,9 +98,14 @@ new Header('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<h3><?php _e("Talk") ?></h3>
+		<?php $chapter = Chapter::queryByUID('talk') ?>
 
-		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
+		<h3><?php echo $chapter->getChapterName() ?></h3>
+
+		<?php $eventsTable = new DailyEventsTable(
+			$conference->getConferenceID(),
+			$chapter->getChapterID()
+		) ?>
 		<p class="flow-text"><?php printf(
 			_(
 				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".

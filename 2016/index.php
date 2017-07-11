@@ -151,9 +151,7 @@ Header::spawn('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<?php
-			$chapter = Chapter::queryByUID('talk');
-		?>
+		<?php $chapter = Chapter::queryByUID('talk'); ?>
 
 		<h3><?php echo $chapter->getChapterName() ?></h3>
 
