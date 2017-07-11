@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Print a daily rappresentation of events
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -41,21 +41,17 @@ class DailyEventsTable {
 	 */
 	private $n;
 
-	function __construct( $conference_ID, $chapter_uid ) {
+	function __construct( $conference_ID, $chapter_ID ) {
 
-		$events = Event::getDailyEvents( $conference_ID, $chapter_uid );
+		$events = DailyEvents::fromConferenceChapter( $conference_ID, $chapter_ID );
 
 		foreach($events as $event) {
-			///////////////////////////////////////////////////////////////////////
-			// @include the strangest note somewhere in the Event::queryEvents() //
-			///////////////////////////////////////////////////////////////////////
-			$this->events[ $event->hour ][ $event->track_uid ] = $event;
+			$track_uid = $event->getTrackUID();
 
-			///////////////////////////////////////////////////////////////////////
-			// @include the strangest note somewhere in the Event::queryEvents() //
-			///////////////////////////////////////////////////////////////////////
+			$this->events[ $event->hour ][ $track_uid ] = $event;
+
 			if( ! isset( $this->tracks[ $event->track_uid ] ) ) {
-				$this->tracks[ $event->track_uid  ] = $event;
+				$this->tracks[ $track_uid ] = $event;
 			}
 		}
 
@@ -100,7 +96,7 @@ class DailyEventsTable {
 						$event_title = $this->events[$h][$track->track_uid]->getEventTitle();
 
 						$title = HTML::a(
-							$this->events[$h][$track->track_uid]->getEventURL(),
+							$this->events[$h][$track->track_uid]->getEventURL( ROOT ),
 							sprintf(
 								"<strong>%s</strong>",
 								$event_title
@@ -129,17 +125,16 @@ class DailyEventsTable {
 	<?php
 	}
 
-	function getImplodedUsers($h, $t) {
+	private function getImplodedUsers($h, $t) {
 		$users = $this->getUsers($h, $t);
 
 		if( ! $users ) {
 			return "//";
 		}
 
-		$users = $this->events[$h][$t]->users;
 		$n = count($users);
 		foreach($users as & $user) {
-			$user = $user->getUserLink();
+			$user = $user->getUserLink( ROOT );
 		}
 
 		$last = $n > 1 ? array_pop($users) : false;
@@ -151,8 +146,16 @@ class DailyEventsTable {
 		return $s;
 	}
 
-	function getUsers($h, $t) {
-		return $this->events[$h][$t]->users;
+	private function getUsers($h, $t) {
+		$event_ID = $this->events[$h][$t]->getEventID();
+
+		return User::factoryByEvent( $event_ID )
+			->select(
+				'user_name',
+				'user_surname',
+				'user_uid'
+			)
+			->queryResults();
 	}
 
 	function getHours() {

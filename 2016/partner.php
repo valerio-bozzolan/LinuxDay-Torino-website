@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Media partner page
-# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,8 +17,7 @@
 
 require 'load.php';
 
-new Header('partner');
-
+Header::spawn('partner');
 ?>
 	<p class="flow-text"><?php _e(
 		"Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si festeggia in tutta Italia.".
@@ -182,4 +181,6 @@ new Header('partner');
 			</div>
 		</div>
 	</div>
-<?php new Footer(['home' => false]);
+<?php
+
+Footer::spawn( ['home' => false] );

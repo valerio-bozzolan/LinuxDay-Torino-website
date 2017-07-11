@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Footer
-# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Footer {
-	function __construct( $args = [] ) {
+	static function spawn( $args = [] ) {
 
 		$args = merge_args_defaults($args, [
 			'home' => true

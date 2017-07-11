@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Construct a database track
+# Linux Day 2016 - Construct a database conference (full of relations)
 # Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,48 +15,32 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-trait TrackTrait {
-	function getTrackID() {
-		return $this->nonnull('track_ID');
-	}
+class_exists('Conference');
+class_exists('Location');
 
-	function getTrackUID() {
-		return $this->get('track_uid');
-	}
-
-	function getTrackName() {
-		return _( $this->get('track_name') );
-	}
-
-	function getTrackLabel() {
-		return _( $this->get('track_label') );
-	}
-
-	private function normalizeTrack() {
-		$this->integers('track_ID');
-	}
-}
-
-class Track extends Queried {
-	use TrackTrait;
+class FullConference extends Queried {
+	use ConferenceTrait;
+	use LocationTrait;
 
 	function __construct() {
-		$this->normalizeTrack();
+		$this->normalizeConference();
+		$this->normalizeLocation();
 	}
 
 	static function factory() {
 		return Query::factory( __CLASS__ )
-			->from( 'track' );
+			->from( 'conference', 'location' )
+			->equals( 'conference.location_ID', 'location.location_ID' );
 	}
 
-	static function factoryByUID( $track_uid ) {
-		$track_uid = self::sanitizeUID( $track_uid );
+	static function factoryByUID( $conference_uid ) {
+		$conference_uid = Conference::sanitizeUID( $conference_uid );
 
 		return self::factory()
-			->whereStr( 'track_uid', $track_uid );
+			->whereStr( 'conference_uid', $conference_uid );
 	}
 
-	static function sanitizeUID( $track_uid ) {
-		return luser_input( $track_uid, 64 );
+	static function queryByUID( $conference_uid ) {
+		return self::factoryByUID( $conference_uid )->queryRow();
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database Location
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,45 +17,46 @@
 
 trait LocationTrait {
 	function getLocationName() {
-		return _( $this->location_name );
+		return _( $this->get('location_name') );
 	}
 
 	function getLocationAddress() {
-		isset( $this->location_address )
-			|| error_die("Missing location_address");
-
-		return _( $this->location_address );
+		return _( $this->get('location_address') );
 	}
 
 	function getLocationNote() {
-		return $this->location_note;
+		return _( $this->get('location_note') );
 	}
 
 	function getLocationNoteHTML($args = []) {
-		return Markdown::parse( _( $this->location_note ), $args );
+		return Markdown::parse( _( $this->getLocationNote() ), $args );
 	}
 
 	function getLocationGeothumb() {
 		$g = DEFAULT_IMAGE;
-		if( $this->location_geothumb ) {
-			$g = site_page( $this->location_geothumb, CONFERENCE );
+		$geothumb = $this->get('location_geothumb');
+		if( $geothumb ) {
+			$g = site_page( $geothumb, CONFERENCE );
 		}
 		return $g;
 	}
 
 	function locationHasGeo() {
-		return isset( $this->location_lat, $this->location_lon );
+		return
+			null !== $this->get('location_lat') &&
+			null !== $this->get('location_lng');
 	}
 
 	function getLocationZoom() {
-		return isset( $this->location_zoom ) ? $this->location_zoom : Location::DEFAULT_ZOOM;
+		$z = $this->get('location_zoom');
+		return isset( $z ) ? $z : Location::DEFAULT_ZOOM;
 	}
 
 	function getLocationGeoOSM() {
 		return sprintf(
 			'https://www.openstreetmap.org/?mlat=%1$s&mlon=%2$s#map=%3$s/%1$s/%2$s',
-			$this->location_lat,
-			$this->location_lon,
+			$this->get('location_lat'),
+			$this->get('location_lng'),
 			$this->getLocationZoom()
 		);
 	}
@@ -63,34 +64,50 @@ trait LocationTrait {
 	function printLocationLeaflet() {
 		printf(
 			'<div data-lat="%s" data-lng="%s" data-zoom="%s" id="map"></div>',
-			$this->location_lat,
-			$this->location_lon,
+			$this->get('location_lat'),
+			$this->get('location_lng'),
 			$this->getLocationZoom()
+		);
+	}
+
+	function normalizeLocation() {
+		$this->integers(
+			'location_ID',
+			'location_zoom'
+		);
+		$this->floats(
+			'location_lat',
+			'location_lng'
 		);
 	}
 }
 
-class Location {
+class Location extends Queried {
 	use LocationTrait;
 
 	const DEFAULT_ZOOM = 17;
 
 	function __construct() {
-		self::normalize($this);
+		$this->normalizeLocation($this);
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->location_ID ) ) {
-			$t->location_ID   = (int) $t->location_ID;
-		}
-		if( isset( $t->location_lat ) ) {
-			$t->location_lat   = (float) $t->location_lat;
-		}
-		if( isset( $t->location_lon ) ) {
-			$t->location_lon   = (float) $t->location_lon;
-		}
-		if( isset( $t->location_zoom ) ) {
-			$t->location_zoom = (int) $t->location_zoom;
-		}
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from( 'location' );
+	}
+
+	static function factoryByID( $location_ID ) {
+		return self::factory()
+			->whereInt( 'location_ID', $location_ID );
+	}
+
+	static function factoryByUID( $location_uid ) {
+		$location_uid = self::sanitizeUID( $location_uid );
+		return self::factory()
+			->whereStr( 'location_uid', $location_uid );
+	}
+
+	static function sanitizeUID( $location_uid ) {
+		return luser_input( $location_uid, 64 );
 	}
 }

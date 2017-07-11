@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Single user profile page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,15 +17,15 @@
 
 require 'load.php';
 
-$user = null;
-if( isset( $_GET['uid'] ) ) {
-	$user = User::get( $_GET['uid'] );
-}
+$conference = FullConference::queryByUID( @ $_GET['conference'] );
+$conference or die_with_404();
 
-$user           || die_with_404();
+$user       = User::queryByUID( $_GET['uid'] );
+$user or die_with_404();
+
 FORCE_PERMALINK && $user->forceUserPermalink();
 
-new Header('user', [
+Header::spawn('user', [
 	'title' => $user->getUserFullname(),
 	'url'   => $user->getUserURL(),
 	'og'    => [
@@ -85,12 +85,14 @@ new Header('user', [
 		<div class="col s12 m6 l8">
 
 			<!-- Start skills -->
-			<?php $skills = $user->queryUserSkills(); ?>
+			<?php $skills = $user->factoryUserSkills()
+				->query();
+			?>
 			<?php if( $skills->num_rows ): ?>
 			<div class="row">
 				<div class="col s12">
 					<p><?php _e("Le mie skill:") ?></p>
-					<?php while( $skill = $skills->fetch_object('Skill') ): ?>
+					<?php while( $skill = $skills->fetch_object('UserSkill') ): ?>
 						<div class="chip tooltipped hoverable" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
 					<?php endwhile ?>
 				</div>
@@ -121,7 +123,7 @@ new Header('user', [
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Bio") ?></h3>
-		<?php echo $user->getUserBioHTML(['p' => 'flow-text']) ?>
+		<?php echo $user->getUserBioHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End user bio -->
@@ -131,7 +133,10 @@ new Header('user', [
 	<div class="section">
 		<h3><?php _e("Talk condotti") ?></h3>
 
-		<?php $events = $user->queryUserEvents(); ?>
+		<?php $events = $user->factoryUserEvents()
+			->whereInt( 'event.conference_ID', $conference->getConferenceID() )
+			->query();
+		 ?>
 		<?php if($events->num_rows): ?>
 			<table>
 			<thead>
@@ -144,7 +149,7 @@ new Header('user', [
 			</tr>
 			</thead>
 			<tbody>
-			<?php while( $event = $events->fetch_object('Event') ): ?>
+			<?php while( $event = $events->fetch_object('FullEvent') ): ?>
 			<tr>
 				<td><?php echo HTML::a(
 					$event->getEventURL(),
@@ -160,8 +165,8 @@ new Header('user', [
 				<td><?php _esc_html( $event->getChapterName() ) ?></td>
 				<td><?php _esc_html( $event->getTrackName() ) ?></td>
 				<td>
-					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $event->getLocationAddress() ) ?>">
-						<?php _esc_html( $event->getLocationName() ) ?>
+					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $conference->getLocationAddress() ) ?>">
+						<?php _esc_html( $conference->getLocationName() ) ?>
 					</span><br />
 					<?php _esc_html( $event->getRoomName() ) ?>
 				</td>
@@ -199,15 +204,17 @@ new Header('user', [
 			<?php }; ?>
 
 			<?php
-			$user->user_rss    && $box($user, "RSS",      $user->user_rss,            'home.png'    );
-			$user->user_fb     && $box($user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png');
-			$user->user_googl  && $box($user, "Google+",  $user->getUserGuggolpluz(), 'google.png'  );
-			$user->user_twtr   && $box($user, "Twitter",  $user->getUserTuitt(),      'twitter.png' );
-			$user->user_lnkd   && $box($user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png');
-			$user->user_github && $box($user, "Github",   $user->getUserGithubbo(),   'github.png'  );
+			$user->get('user_rss')    and $box($user, "RSS",      $user->get('user_rss'),     'home.png');
+			$user->get('user_fb')     and $box($user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png');
+			$user->get('user_googl')  and $box($user, "Google+",  $user->getUserGuggolpluz(), 'google.png'  );
+			$user->get('user_twtr')   and $box($user, "Twitter",  $user->getUserTuitt(),      'twitter.png' );
+			$user->get('user_lnkd')   and $box($user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png');
+			$user->get('user_github') and $box($user, "Github",   $user->getUserGithubbo(),   'github.png'  );
 			?>
 		</div>
 	</div>
 	<?php endif ?>
 	<!-- End social -->
-<?php new Footer();
+<?php
+
+Footer::spawn();

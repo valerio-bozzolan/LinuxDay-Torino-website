@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database event-user relaction
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,10 +17,7 @@
 
 trait EventUserTrait {
 	function getEventUserOrder() {
-		isset( $this->event_user_order )
-			|| error_die("Missing event_user_order");
-
-		return $this->event_user_order;
+		return $this->get('event_user_order');
 	}
 
 	/**
@@ -35,24 +32,25 @@ trait EventUserTrait {
 		}
 		EventUser::delete($event_ID, $user_ID);
 	}
+
+	private function normalizeEventUser() {
+		$this->integers('event_user_order');
+
+		$this->normalizeEvent();
+		$this->normalizeUser();
+	}
 }
 
 class_exists('Event');
 class_exists('User');
 
-class EventUser {
-	use EventUserTrait, EventTrait, UserTrait;
+class EventUser extends Queried {
+	use EventUserTrait;
+	use EventTrait;
+	use UserTrait;
 
 	function __construct() {
-		self::normalize($this);
-		Event::normalize($this);
-		User::normalize($this);
-	}
-
-	static function normalize(& $t) {
-		if( isset( $t->event_user_order ) ) {
-			$t->event_user_order = (int) $t->event_user_order;
-		}
+		$this->normalizeEventUser();
 	}
 
 	static function delete($event_ID, $user_ID) {

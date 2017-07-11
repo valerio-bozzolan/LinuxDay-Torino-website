@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database conference
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,23 +17,19 @@
 
 trait ConferenceTrait {
 	function getConferenceID() {
-		isset( $this->conference_ID )
-			|| error_die("Missing conference_ID");
-		return $this->conference_ID;
+		return $this->nonnull('conference_ID');
 	}
 
 	function getConferenceUID() {
-		isset( $this->conference_uid )
-			|| error_die("Missing conference_uid");
-		return $this->conference_uid;
+		return $this->get('conference_uid');
 	}
 
 	function getConferenceTitle() {
-		return _( $this->conference_title );
+		return _( $this->get('conference_title') );
 	}
 
-	function getConferenceURL() {
-		return URL . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
+	function getConferenceURL( $base = URL ) {
+		return $base . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
 	}
 
 	function forceConferencePermalink() {
@@ -44,94 +40,74 @@ trait ConferenceTrait {
 	}
 
 	function getConferenceHumanStart() {
-		return HumanTime::diff( $this->conference_start );
+		return HumanTime::diff( $this->get('conference_start') );
 	}
 
 	function getConferenceHumanEnd() {
-		return HumanTime::diff( $this->conference_end );
+		return HumanTime::diff( $this->get('conference_end') );
 	}
 
 	function getConferenceStart($f) {
-		return $this->conference_start->format($f);
+		return $this->get('conference_start')->format($f);
 	}
 
 	function getConferenceEnd($f) {
-		return $this->conference_end->format($f);
+		return $this->get('conference_end')->format($f);
 	}
 
 	function getConferenceDescription() {
-		return nl2br( _( $this->conference_description ) );
+		return nl2br( _( $this->get('conference_description') ) );
 	}
 
 	function getConferenceQuote() {
-		return nl2br( _( $this->conference_quote ) );
+		return nl2br( _( $this->get('conference_quote') ) );
 	}
 
 	function getConferenceSubtitle() {
-		return _( $this->conference_subtitle );
+		return _( $this->get('conference_subtitle') );
 	}
 
-	function getDailyEventsTable($chapter_uid) {
-		return new DailyEventsTable( $this->getConferenceID(), $chapter_uid );
+	function factoryFullEventByConference() {
+		return FullEvent::factoryByConference( $this->getConferenceID() );
+	}
+
+	private function normalizeConference() {
+		$this->integers(
+			'conference_ID',
+			'location_ID'
+		);
+		$this->datetimes(
+			'conference_start',
+			'conference_end'
+		);
 	}
 }
 
-class_exists('Location');
-
-class Conference {
-	use ConferenceTrait, LocationTrait;
+class Conference extends Queried {
+	use ConferenceTrait;
 
 	function __construct() {
-		self::normalize($this);
-		Location::normalize($this);
+		$this->normalizeConference();
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->conference_ID ) ) {
-			$t->conference_ID   = (int) $t->conference_ID;
-		}
-		if( isset( $t->conference_start ) ) {
-			datetime2php($t->conference_start);
-		}
-		if( isset( $t->conference_end ) ) {
-			datetime2php($t->conference_end);
-		}
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from( 'conference' );
 	}
 
-	static function get( $conference_uid ) {
-		global $JOIN;
+	static function factoryByID( $conference_ID ) {
+		return self::factory()
+			->whereInt( 'conference_ID', $conference_ID );
+	}
 
-		return query_row(
-			sprintf(
-				'SELECT '.
-					'conference_ID, '.
-					'conference_uid, '.
-					'conference_title, '.
-					'conference_subtitle, '.
-					'conference_acronym, '.
-					'conference_description, '.
-					'conference_quote, '.
-					'conference_persons_url, '.
-					'conference_events_url, '.
-					'conference_days, '.
-					'conference_start, '.
-					'conference_end, '.
-					'conference_uid, '.
-					'location_name, '.
-					'location_address, '.
-					'location_note, '.
-					'location_geothumb, '.
-					'location_lat, '.
-					'location_lon, '.
-					'location_zoom '.
-					"FROM {$JOIN('conference', 'location')} ".
-				'WHERE '.
-					"conference_uid = '%s' AND ".
-					'conference.location_ID = location.location_ID'
-				,
-				esc_sql( luser_input( $conference_uid, 64 ) )
-			),
-			'Conference'
-		);
+	static function factoryByUID( $conference_uid ) {
+		$conference_uid = self::sanitizeUID( $conference_uid );
+
+		return self::factory()
+			->whereStr( 'conference_uid', $conference_uid );
+	}
+
+	static function sanitizeUID( $conference_uid ) {
+		return luser_input( $conference_uid, 64 );
 	}
 }

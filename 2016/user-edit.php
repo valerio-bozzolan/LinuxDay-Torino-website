@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Single event edit page
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,18 +17,13 @@
 
 require 'load.php';
 
-$user = null;
-if( isset( $_GET['uid'] ) ) {
-	$user = User::get( $_REQUEST['uid'] );
-}
+$user = User::queryByUID( @ $_GET['uid'] );
+$user or error_die("Missing user");
 
-$user	|| error_die("Missing user");
-
-$user->hasPermissionToEditUser()
-	|| error_die("Can't edit user");
+$user->hasPermissionToEditUser() or error_die("Can't edit user");
 
 if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
-	$skill = Skill::getSkill( $_POST['skill_uid'] );
+	$skill = Skill::queryByUID( $_POST['skill_uid'] );
 
 	$skill || error_die( sprintf(
 		"Skill '%s' not found",
@@ -58,7 +53,7 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 			break;
 
 		case 'add-skill':
-			$skill = Skill::getSkill( $_POST['skill_uid'] );
+			$skill = Skill::queryByUID( $_POST['skill_uid'] );
 
 			// If exists, delete it
 			query( sprintf(
@@ -76,7 +71,7 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 	}
 }
 
-new Header('user', [
+Header::spawn('user', [
 	'title' => sprintf(
 		_("Modifica utente %s"),
 		$user->getUserFullname()
@@ -99,10 +94,13 @@ new Header('user', [
 					<div class="row">
 						<div class="col s6">
 							<select name="skill_uid" class="browser-default">
-								<?php $skills = query("SELECT * FROM {$T('skill')} ORDER BY skill_uid") ?>
+								<?php $skills = Skill::factory()
+									->orderBy('skill_uid')
+									->query();
+								?>
 								<?php if($skills->num_rows): ?>
 									<?php while($skill = $skills->fetch_object('Skill') ): ?>
-										<option value="<?php echo $skill->getSkillUID() ?>"><?php _esc_html( $skill->skill_title ) ?></option>
+										<option value="<?php echo $skill->getSkillUID() ?>"><?php _esc_html( $skill->getSkillUID() ) ?></option>
 									<?php endwhile ?>
 								<?php endif ?>
 							</select>
@@ -120,11 +118,13 @@ new Header('user', [
 	</form>
 
 	<h3><?php _e("Modifica skill") ?></h3>
-	<?php $skills = $user->queryUserSkills(); ?>
+	<?php $skills = $user->factoryUserSkills()
+		->query();
+	?>
 	<?php if( $skills->num_rows ): ?>
 		<div class="row">
 		<?php $i = 0; ?>
-		<?php while( $skill = $skills->fetch_object('Skill') ): ?>
+		<?php while( $skill = $skills->fetch_object('UserSkill') ): ?>
 			<div class="col s12 m4">
 				<div class="card-panel">
 					<form method="post">
@@ -132,10 +132,10 @@ new Header('user', [
 						<input type="hidden" name="uid" value="<?php echo $user->getUserUID() ?>" />
 						<div class="row">
 							<div class="col s6">
-								<input type="text" name="skill_uid" value="<?php echo $skill->skill_uid ?>" />
+								<input type="text" name="skill_uid" value="<?php echo $skill->getSkillUID() ?>" />
 							</div>
 							<div class="col s6">
-								<input type="text" name="skill_score" value="<?php echo $skill->skill_score ?>" />
+								<input type="text" name="skill_score" value="<?php echo $skill->getSkillScore() ?>" />
 							</div>
 							<div class="col s6">
 								<input type="checkbox" name="skill_delete" value="yes" id="skill-<?php echo $i ?>" />
@@ -156,4 +156,6 @@ new Header('user', [
 	<?php endif ?>
 </form>
 
-<?php new Footer();
+<?php
+
+Footer::spawn();

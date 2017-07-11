@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database room
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,46 +17,42 @@
 
 trait RoomTrait {
 	function getRoomID() {
-		isset( $this->room_ID )
-			|| error_die("Missing room_ID");
-
-		return $this->room_ID;
+		return $this->get('room_ID');
 	}
 
 	function getRoomUID() {
-		isset( $this->room_uid )
-			|| error_die("Missing room_uid");
-
-		return $this->room_uid;
+		return $this->get('room_uid');
 	}
 
 	function getRoomName() {
-		return _( $this->room_name );
+		return _( $this->get('room_name') );
+	}
+
+	private function normalizeRoom() {
+		$this->integers('room_ID');
 	}
 }
 
-class Room {
+class Room extends Queried {
 	use RoomTrait;
 
 	function __construct() {
-		self::normalize($this);
+		$this->normalizeRoom();
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->room_ID ) ) {
-			$t->room_ID = (int) $t->room_ID;
-		}
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from( 'room' );
 	}
 
-	static function get($uid) {
-		global $T;
+	static function factoryByUID( $room_uid ) {
+		$room_uid = self::sanitizeUID( $room_uid );
 
-		return query_row(
-			sprintf(
-				"SELECT * FROM {$T('room')} WHERE room_uid = '%s'",
-				esc_sql( luser_input( $uid, 32) )
-			),
-			'Room'
-		);
+		return self::factory()
+			->whereStr( 'room_uid', $room_uid );
+	}
+
+	static function sanitizeUID( $room_uid ) {
+		return luser_input( $room_uid, 64 );
 	}
 }

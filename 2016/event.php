@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Single event page (an event lives in a conference)
-# Copyright (C) 2016 Valerio Bozzolan
+# Linux Day 2016 - single event page (an event lives in a conference)
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,16 +17,17 @@
 
 require 'load.php';
 
-$event = null;
-if( isset( $_GET['uid'], $_GET['conference'], $_GET['chapter'] ) ) {
-	$event = Event::getByConferenceChapter(
-		$_GET['uid'],
-		$_GET['conference'],
-		$_GET['chapter']
-	);
-}
+$conference = FullConference::queryByUID( @ $_GET['conference'] );
 
-$event          || die_with_404();
+$conference or die_with_404();
+
+$event = FullEvent::queryByConferenceAndUID(
+	$conference->getConferenceID(),
+	@ $_GET['uid']
+);
+
+$event or die_with_404();
+
 FORCE_PERMALINK && $event->forceEventPermalink();
 
 $args = [
@@ -62,9 +63,9 @@ if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvaila
 	}
 }
 
-new Header('event', $args);
+Header::spawn('event', $args);
 ?>
-	<?php if( $event->hasPermissionToEditEvent() ): ?>
+	<?php if( $event->isEventEditable() ): ?>
 	<p><?php echo HTML::a(
 		CONFERENCE . "/event-edit.php?" . http_build_query( [
 			'uid'        => $event->getEventUID(),
@@ -106,13 +107,13 @@ new Header('event', $args);
 					<td>
 						<?php echo $event->getRoomName() ?><br />
 						<small>@ <?php echo HTML::a(
-							$event->getLocationGeoOSM(),
-							$event->getLocationName(),
-							$event->getLocationAddress(),
+							$conference->getLocationGeoOSM(),
+							$conference->getLocationName(),
+							$conference->getLocationAddress(),
 							null,
 							'target="_blank"'
 						) ?></small><br />
-						<small><?php echo $event->getLocationAddress() ?></small>
+						<small><?php echo $conference->getLocationAddress() ?></small>
 					</td>
 				</tr>
 				<tr>
@@ -136,7 +137,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Abstract") ?></h3>
-		<?php echo $event->getEventAbstractHTML(['p' => 'flow-text']) ?>
+		<?php echo $event->getEventAbstractHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event abstract -->
@@ -146,7 +147,7 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Descrizione") ?></h3>
-		<?php echo $event->getEventDescriptionHTML(['p' => 'flow-text']) ?>
+		<?php echo $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
@@ -187,13 +188,15 @@ new Header('event', $args);
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Note") ?></h3>
-		<?php echo $event->getEventNoteHTML(['p' => 'flow-text']) ?>
+		<?php echo $event->getEventNoteHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
 
 	<!-- Start files -->
-	<?php $sharables = $event->querySharables() ?>
+	<?php $sharables = $event->factorySharebleByEvent()
+		->query();
+	 ?>
 	<?php if( $sharables->num_rows ): ?>
 	<div class="divider"></div>
 	<div class="section">
@@ -227,7 +230,7 @@ new Header('event', $args);
 							_("Vedi %s distribuibile sotto licenza %s."),
 							HTML::a(
 								$sharable->getSharablePath(),
-								icon('share', 'left') . $sharable->getSharableTitle(['prop' => true]),
+								icon('share', 'left') . $sharable->getSharableTitle( ['prop' => true] ),
 								null,
 								null,
 								'target="_blank"'
@@ -248,7 +251,8 @@ new Header('event', $args);
 	<div class="section">
 		<h3><?php _e("Relatori") ?></h3>
 
-		<?php $users = $event->queryEventUsers(); ?>
+		<?php $users = $event->factoryUserByEvent()
+			->query(); ?>
 
 		<?php if( $users->num_rows ): ?>
 			<div class="row">
@@ -257,7 +261,7 @@ new Header('event', $args);
 					<div class="row valign-wrapper">
 						<div class="col s4 l3">
 							<a class="tooltipped" href="<?php
-								echo $user->getUserURL()
+								echo $user->getUserURL( ROOT )
 							?>" title="<?php _esc_attr( sprintf(
 								_("Profilo di %s"),
 								$user->getUserFullname()
@@ -293,12 +297,15 @@ new Header('event', $args);
 	<!-- End speakers -->
 
 	<?php
-	$previous = $event->getPreviousEvent( [
-		'event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start'
-	] );
-	$next     = $event->getNextEvent( [
-		'event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start'
-	] );
+	$previous = $event->factoryPreviousFullEvent()
+		->select('event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start')
+		->limit(1)
+		->queryRow();
+
+	$next = $event->factoryNextFullEvent()
+		->select('event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start')
+		->limit(1)
+		->queryRow();
 	?>
 	<?php if($previous || $next): ?>
 	<!-- Stard previous/before -->
@@ -310,7 +317,7 @@ new Header('event', $args);
 					<h3><?php echo icon('navigate_before'); _e("Preceduto da") ?></h3>
 					<p class="flow-text">
 						<?php echo HTML::a(
-							$previous->getEventURL(),
+							$previous->getEventURL( ROOT ),
 							$previous->getEventTitle()
 						) ?>
 						<time datetime="<?php echo $previous->getEventStart('Y-m-d H:i') ?>"><?php echo $previous->getEventHumanStart() ?></time>
@@ -322,7 +329,7 @@ new Header('event', $args);
 					<h3><?php _e("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
 						<?php echo HTML::a(
-							$next->getEventURL(),
+							$next->getEventURL( ROOT ),
 							$next->getEventTitle()
 						) ?>
 						<time datetime="<?php echo $next->getEventStart('Y-m-d H:i') ?>"><?php echo $next->getEventHumanStart() ?></time>
@@ -339,4 +346,6 @@ new Header('event', $args);
 		$('.tooltipped').tooltip();
 	});
 	</script>
-<?php new Footer();
+<?php
+
+Footer::spawn();

@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Single event profile page
-# Copyright (C) 2016 Valerio Bozzolan
+# Linux Day 2016 - single event profile page
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,18 +17,16 @@
 
 require 'load.php';
 
-$event = null;
-if( isset( $_GET['uid'], $_GET['conference'] ) ) {
-	$event = Event::getByConference(
-		$_GET['uid'],
-		$_GET['conference']
-	);
-}
+$conference = FullConference::queryByUID( @ $_GET['conference'] );
+$conference or die_with_404();
 
-$event	|| error_die("Missing event");
+$event = FullEvent::queryByConferenceAndUID(
+	$conference->getConferenceID(),
+	@ $_GET['uid']
+);
+$event or die_with_404();
 
-$event->hasPermissionToEditevent()
-	|| error_die("Can't edit event");
+$event->isEventEditable() or error_die("Can't edit event");
 
 $permalink = CONFERENCE . "/event-edit.php?" . http_build_query( [
 	'uid'        => $event->getEventUID(),
@@ -76,7 +74,7 @@ if( isset( $_POST['action'] ) ) {
 	}
 }
 
-new Header('event', [
+Header::spawn('event', [
 	'title' => sprintf(
 		_("Modifica %s: %s"),
 		$event->getChapterName(),
@@ -86,7 +84,7 @@ new Header('event', [
 ] );
 ?>
 	<p><?php echo HTML::a(
-		$event->getEventURL(),
+		$event->getEventURL( ROOT ),
 		_("Vedi") . icon('account_box', 'left')
 	) ?></p>
 
@@ -113,7 +111,9 @@ new Header('event', [
 		</div>
 	</div>
 
-	<?php $users = $event->queryEventUsers('event_user_order') ?>
+	<?php $users = $event->factoryUserByEvent()
+		->orderBy('event_user_order')
+		->query(); ?>
 	<?php if( $users->num_rows ): ?>
 	<h2><?php _e("Modifica ordine") ?></h2>
 	<div class="row">
@@ -146,4 +146,6 @@ new Header('event', [
 	</div>
 	<?php endif ?>
 
-<?php new Footer();
+<?php
+
+Footer::spawn();

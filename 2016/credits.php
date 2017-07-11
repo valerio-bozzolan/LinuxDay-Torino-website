@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Credits
-# Copyright (C) 2016 Valerio Bozzolan, Rosario Antoci
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -21,7 +21,7 @@ inject_in_module('header', function() {
 	echo "\n\t<style>.libre-icon {min-height: 120px}</style>";
 } );
 
-new Header('credits');
+Header::spawn('credits');
 ?>
 	<div class="section">
 		<p class="flow-text"><?php _e("Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>.") ?></p>
@@ -255,4 +255,6 @@ new Header('credits');
 			?>
 		</ul>
 	</div>
-<?php new Footer(['home' => false]);
+<?php
+
+Footer::spawn( ['home' => false] );

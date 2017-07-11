@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database chapter
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,46 +17,47 @@
 
 trait ChapterTrait {
 	function getChapterID() {
-		isset( $this->chapter_ID )
-			|| error_die("Missing chapter_ID");
-
-		return $this->room_ID;
+		return $this->nonnull('chapter_ID');
 	}
 
 	function getChapterUID() {
-		isset( $this->chapter_uid )
-			|| error_die("Missing chapter_uid");
-
-		return $this->chapter_uid;
+		return $this->get('chapter_uid');
 	}
 
 	function getChapterName() {
-		return _( $this->chapter_name );
+		return _( $this->get('chapter_name') );
+	}
+
+	private function normalizeChapter() {
+		$this->integers('chapter_ID');
 	}
 }
 
-class Chapter {
+class Chapter extends Queried {
 	use ChapterTrait;
 
 	function __construct() {
-		self::normalize($this);
+		$this->normalizeChapter();
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->chapter_ID ) ) {
-			$t->chapter_ID = (int) $t->chapter_ID;
-		}
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from('chapter');
 	}
 
-	static function get($uid) {
-		global $T;
+	static function factoryByUID( $chapter_uid ) {
+		$chapter_uid = self::sanitizeUID( $chapter_uid );
 
-		return query_row(
-			sprintf(
-				"SELECT * FROM {$T('chapter')} WHERE chapter_uid = '%s'",
-				esc_sql( luser_input( $uid, 32) )
-			),
-			'Chapter'
-		);
+		return self::factory()
+			->whereStr( 'chapter_uid', $chapter_uid );
+	}
+
+	static function queryByUID( $chapter_uid ) {
+		return self::factoryByUID( $chapter_uid )->queryRow();
+
+	}
+
+	private static function sanitizeUID( $chapter_uid ) {
+		return luser_input( $chapter_uid, 32 );
 	}
 }

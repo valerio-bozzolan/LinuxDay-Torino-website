@@ -1,6 +1,6 @@
 <?php
 # Linux Day - Human time diff
-# Copyright (C)  Valerio Bozzolan
+# Copyright (C) 2016 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by

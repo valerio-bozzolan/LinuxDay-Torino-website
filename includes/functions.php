@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Construct a database conference
-# Copyright (C) 2016 Valerio Bozzolan
+# Linux Day 2016 - common functions
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,15 +15,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function datetime2php(& $s) {
-	$s = DateTime::createFromFormat('Y-m-d H:i:s', $s);
-	$s->setTimezone( new DateTimeZone( DB_TIMEZONE ) );
-}
-
 function license($code) {
-	expect('LICENSES');
-
-	return $GLOBALS['LICENSES']->get($code);
+	return expect('LICENSES')->get($code);
 }
 
 function request_uri() {

@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Boz-PHP configuration
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -24,7 +24,7 @@ define('CONFERENCE_DIR', '/2016');
 // Conference URI directory
 define('CONFERENCE', ROOT . CONFERENCE_DIR);
 
-define('REPO', 'https://github.com/0iras0r/ld2016');
+define('REPO', 'https://github.com/LinuxDayTorino/Linux-Day-Torino-website');
 
 // Autoload classes
 spl_autoload_register( function($c) {
@@ -47,6 +47,8 @@ define('GETTEXT_DEFAULT_ENCODE', 'utf8');
 
 register_language('en_US', ['en', 'en-us', 'en-en'] );
 register_language('it_IT', ['it', 'it-it'] );
+
+register_default_language('it_IT');
 
 $l = null;
 if( isset( $_REQUEST['l'] ) ) {

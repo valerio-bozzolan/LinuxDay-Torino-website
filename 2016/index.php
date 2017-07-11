@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Single conference page
-# Copyright (C) 2016 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci
+# Linux Day 2016 - homepage of the conference
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,13 +17,8 @@
 
 require 'load.php';
 
-$conference = null;
-if( ! empty( $_GET['uid'] ) ) {
-	$conference = Conference::get( $_GET['uid'] );
-}
-
-$conference
-	|| die_with_404();
+$conference = FullConference::queryByUID( @ $_GET['uid'] );
+$conference || die_with_404();
 
 FORCE_PERMALINK
 	&& $conference->forceConferencePermalink();
@@ -39,7 +34,7 @@ inject_in_module('header', function() {
 	echo "\n\t<noscript><style>#map {display: none}</style></noscript>";
 } );
 
-new Header('conference', [
+Header::spawn('conference', [
 	'show-title' => false,
 	'head-title' => $s = $conference->getConferenceTitle(),
 	'title'      => $s,
@@ -47,17 +42,19 @@ new Header('conference', [
 ] );
 ?>
 	<?php
-		$other_events = Event::getStandardQueryEvent()->appendCondition( sprintf(
-			'event.conference_ID = %d',
-			$conference->getConferenceID()
-		) );
-		$other_events->appendCondition("event_end > '2016-10-22 23:00:00'");
-		$other_events->appendOrderBy('event_start');
-		$other_events = $other_events->query();
+		$from = $conference->getConferenceEnd('Y-m-d H:i:s');
+
+		$other_events = $conference->factoryFullEventByConference()
+			->where( sprintf(
+				"event_end > '%s'",
+				esc_html( $from )
+			) )
+			->orderBy('event_start')
+			->query();
 	?>
 	<?php if( $other_events->num_rows ): ?>
 	<div class="section">
-		<h3><?php printf( _("Il %s si è concluso..."), SITE_NAME ) ?></h3>
+		<h3><?php printf( _("Il %s si è concluso..."), $conference->getConferenceTitle() ) ?></h3>
 		<h4><?php _e("Ma abbiamo altro!") ?></h4>
 		<table class="bordered hoverable">
 			<tr>
@@ -65,7 +62,7 @@ new Header('conference', [
 				<th><?php _e("Quando") ?></th>
 				<th class="hide-on-small-only"><?php _e("Dove") ?></th>
 			</tr>
-			<?php while( $event = $other_events->fetch_object('Event') ): ?>
+			<?php while( $event = $other_events->fetch_object('FullEvent') ): ?>
 			<?php
 				$classes = 'hoverable';
 				if( $event->isEventPassed() ) {
@@ -84,13 +81,12 @@ new Header('conference', [
 					<time datetime="<?php echo $event->getEventStart('Y-m-d H:i') ?>"><?php echo $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
 						_("%s alle %s"),
-						$event->getEventStart('d/m/Y'),
+						$event->getEventStart( _("d/m/Y") ),
 						$event->getEventStart('H:i')
 					) ?>)</small>
 				</td>
 				<td class="hide-on-small-only">
-					<?php echo $event->getLocationName() ?><br />
-					<small>(<?php echo $event->getRoomName() ?>)</small>
+					<?php echo $event->getRoomName() ?>
 				</td>
 			</tr>
 			<?php endwhile ?>
@@ -112,7 +108,7 @@ new Header('conference', [
 	<div class="section">
 		<div class="row valign-wrapper">
 			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _e("Linux Day Torino 2016") ?>" class="responsive-img" />
+				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
 			</div>
 			<div class="col s12 m10 l11">
 				<p class="flow-text"><?php printf(
@@ -155,9 +151,16 @@ new Header('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<h3><?php _e("Talk") ?></h3>
+		<?php
+			$chapter = Chapter::queryByUID('talk');
+		?>
 
-		<?php $eventsTable = $conference->getDailyEventsTable('talk') ?>
+		<h3><?php echo $chapter->getChapterName() ?></h3>
+
+		<?php $eventsTable = new DailyEventsTable(
+			$conference->getConferenceID(),
+			$chapter->getChapterID()
+		); ?>
 		<p class="flow-text"><?php printf(
 			_(
 				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
@@ -406,7 +409,7 @@ new Header('conference', [
 					_("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(
 						_("Partner %s"),
-						SITE_NAME
+						$conference->getConferenceTitle()
 					),
 					'btn purple white-text waves-effect waves-light'
 				) ?></p>
@@ -414,4 +417,6 @@ new Header('conference', [
 			</div>
 		</div>
 	</div>
-<?php new Footer(['home' => false]);
+<?php
+
+Footer::spawn( ['home' => false] );

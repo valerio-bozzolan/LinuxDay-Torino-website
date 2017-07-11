@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database sharable
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,105 +17,112 @@
 
 trait SharableTrait {
 	function getSharableID() {
-		isset( $this->sharable_ID )
-			|| error_die("Missing sharable_ID");
-
-		return $this->sharable_ID;
+		return $this->nonnull('sharable_ID');
 	}
 
-	function getSharableTitle($args = []) {
-		property_exists($this, 'sharable_title')
-			|| error_die("Missing sharable title");
+	function getSharableTitle( $args = [] ) {
+		$sharable_title = $this->get('sharable_title');
 
-		if( ! isset( $this->sharable_title ) ) {
+		if( ! isset( $sharable_title ) ) {
 			return $this->getDefaultSharableTitle($args);
 		}
 
-		return _( $this->sharable_title );
+		return _( $sharable_title );
 	}
 
 	/**
 	 * Retrieve something usable as a title
+	 *
+	 * @return string
 	 */
-	function getDefaultSharableTitle($args = []) {
+	function getDefaultSharableTitle( $args = [] ) {
 
-		if( $this->sharable_type === 'youtube' ) {
+		$sharable_type = $this->get('sharable_type');
+
+		if( $sharable_type === 'youtube' ) {
 			if( isset( $args['prop'] ) && $args['prop'] ) {
-				return sprintf(
-					_("il %s"),
-					_("video esterno")
-				);
+				return sprintf( _("il %s"), _("video esterno") );
 			} else {
 				return _("video esterno");
 			}
 		}
 
+		$sharable_path = $this->get('sharable_path');
+
 		// Get filename from "/asd/asd/asd/(filename)"
 		$i = 0;
-		while( strpos($this->sharable_path, '/', $i) !== false ) {
+		while( strpos($sharable_path, '/', $i) !== false ) {
 			$i++;
 		}
-		return substr($this->sharable_path, $i);
+		return substr($sharable_path, $i);
 	}
 
 	function isSharableImage() {
-		return $this->sharable_type === 'image';
+		return $this->isSharableType('image');
 	}
 
 	function isSharableVideo() {
-		return $this->sharable_type === 'video';
+		return $this->isSharableType('video');
 	}
 
 	function isSharableDocument() {
-		return $this->sharable_type === 'document';
+		return $this->isSharableType('document');
+	}
+
+	function isSharableIframe() {
+		return $this->isSharableType('youtube');
+	}
+
+	private function isSharableType( $type ) {
+		return $this->get('sharable_type') === $type;
+
 	}
 
 	function isSharableDownloadable() {
-		return $this->sharable_type !== 'youtube';
+		return ! $this->isSharableIframe();
 	}
 
-	function getSharableLicense() {
-		return license( $this->sharable_license );
-	}
+	function getSharablePath( $base = ROOT ) {
+		$sharable_type = $this->get('sharable_type');
+		$sharable_path = $this->get('sharable_path');
 
-	function getSharablePath() {
-		$t = $this->sharable_type;
-		$p = $this->sharable_path;
-
-		if($t === 'youtube') {
+		if($sharable_type === 'youtube') {
 			return "https://www.youtube.com/watch?v={$p}";
 		}
 
-		return site_page($p, ROOT);
+		return site_page($sharable_path, $base);
 	}
 
 	function getSharableMIME() {
-		return $this->sharable_mimetype;
+		return $this->get('sharable_mimetype');
+	}
+
+	function getSharableLicense() {
+		return license( $this->get('sharable_license') );
+	}
+
+	private function normalizeSharable() {
+		$this->integers(
+			'sharable_ID',
+			'event_ID'
+		);
 	}
 }
 
-class Sharable {
+class Sharable extends Queried {
 	use SharableTrait;
 
 	function __construct() {
-		self::normalize($this);
+		$this->normalizeSharable();
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->sharable_ID ) ) {
-			$t->sharable_ID = (int) $t->sharable_ID;
-		}
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from('sharable');
 	}
 
-	static function queryByEvent($event_ID) {
-		global $T;
-
-		return query(
-			sprintf(
-				"SELECT * FROM {$T('sharable')} WHERE event_ID = %d",
-				$event_ID
-			),
-			'Sharable'
-		);
+	static function factoryByEvent( $event_ID ) {
+		return self::factory()
+			->whereInt( 'sharable.event_ID', $event_ID );
 	}
 }

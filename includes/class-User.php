@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database user
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,41 +17,34 @@
 
 trait UserTrait {
 	function getUserID() {
-		isset( $this->user_ID )
-			|| error_die("Missing user_ID");
-
-		return $this->user_ID;
+		return $this->nonnull('user_ID');
 	}
 
 	function getUserUID() {
-		isset( $this->user_uid )
-			|| error_die("Missing user_uid");
+		return $this->get('user_uid');
+	}
 
-		return $this->user_uid;
+	function getUserEmail() {
+		return $this->get('user_email');
 	}
 
 	/**
 	 * N.B. Also if he is logged he's public.
 	 */
 	function isUserPublic() {
-		isset( $this->user_public )
-			|| die("Missing user_public");
-
-		$user_ID = $this->getUserID();
-
-		return $this->user_public || get_user('user_ID') === $user_ID;
+		return $this->get('user_public') || $this->isUserMyself();
 	}
 
 	function getUserFullname() {
 		return sprintf(
 			_("%s %s"),
-			$this->user_name,
-			$this->user_surname
+			$this->get('user_name'),
+			$this->get('user_surname')
 		);
 	}
 
-	function getUserURL() {
-		return URL . sprintf( PERMALINK_USER, $this->getUserUID() );
+	function getUserURL( $base = URL ) {
+		return $base . sprintf( PERMALINK_USER, $this->getUserUID() );
 	}
 
 	function forceUserPermalink() {
@@ -61,116 +54,65 @@ trait UserTrait {
 		}
 	}
 
-	function getUserLink($html_class = null) {
+	function getUserLink( $base = null, $html_class = null) {
 		$name = $this->getUserFullname();
 
 		return HTML::a(
-			$this->getUserURL(),
+			$this->getUserURL( $base ),
 			$name,
-			sprintf(
-				_("Profilo utente di %s"),
-				$name
-			),
+			sprintf( _("Profilo utente di %s"), $name ),
 			$html_class
 		);
 	}
 
-	function queryUserSkills() {
-		return query( Skill::getQueryUserSkills( $this->user_ID ) );
-	}
-
-	function getUserEvents() {
-		return query_results( Event::getQueryUserEvents( $this->user_ID ), 'Event');
-	}
-
-	function getUserSkills() {
-		return query_results( Skill::getQueryUserSkills( $this->user_ID ), 'Skill');
-	}
-
-	function getUserEmail() {
-		property_exists($this, 'user_email')
-			|| error_die("Missing user_email");
-
-		return $this->user_email;
-	}
-
 	function getUserImage($s = 256) {
-		$image = $this->user_image;
+		$image = $this->get('user_image');
 		if( ! $image ) {
 			$image = 'https://www.gravatar.com/avatar/' . md5( $this->getUserEmail() ) . '?s=' . $s;
 		}
-
 		return $image;
 	}
 
 	function hasUserBio() {
-		return isset( $this->user_bio );
+		return null !== $this->get('user_bio');
 	}
 
 	function getUserBio() {
-		return $this->user_bio;
+		return $this->get('user_bio');
 	}
 
 	function getUserBioHTML($args = []) {
-		return Markdown::parse( _( $this->user_bio ), $args);
+		return Markdown::parse( _( $this->getUserBIO() ), $args);
 	}
 
 	function isUserSocial() {
-		return isset( $this->user_rss )
-		    || isset( $this->user_fb )
-		    || isset( $this->user_lnkd )
-		    || isset( $this->user_googl )
-		    || isset( $this->user_twtr );
+		return
+			null !== $this->get('user_rss')   ||
+			null !== $this->get('user_fb')    ||
+			null !== $this->get('user_lnkd')  ||
+			null !== $this->get('user_googl') ||
+			null !== $this->get('user_twtr')  ||
+			null !== $this->get('user_github');
 	}
 
 	function getUserFacebruck() {
-		return 'https://facebook.com/' . $this->user_fb;
+		return 'https://facebook.com/' . $this->get('user_fb');
 	}
 
 	function getUserGuggolpluz() {
-		return 'https://plus.google.com/' . $this->user_googl;
+		return 'https://plus.google.com/' . $this->get('user_googl');
 	}
 
 	function getUserTuitt() {
-		return 'https://twitter.com/' . $this->user_twtr;
+		return 'https://twitter.com/' . $this->get('user_twtr');
 	}
 
 	function getUserLinkeddon() {
-		return 'https://www.linkedin.com/in/' . $this->user_lnkd;
+		return 'https://www.linkedin.com/in/' . $this->get('user_lnkd');
 	}
 
 	function getUserGithubbo() {
-		return 'https://github.com/' . $this->user_github;
-	}
-
-	private function getQueryUserEvents() {
-		$q = Event::getStandardQueryEvent();
-		$q->useTable('event_user');
-		$q->appendCondition('event.event_ID = event_user.event_ID');
-		return $q->appendCondition( sprintf(
-			'event_user.user_ID = %d',
-			$this->getUserID()
-		) );
-	}
-
-	private function getQueryUserEventsByConference($conference_ID) {
-		$q = $this->getQueryUserEvents();
-		$q->useTable('event');
-		$q->appendCondition('event_user.event_ID = event.event_ID');
-		return $q->appendCondition(
-			sprintf(
-				'event.conference_ID = %d',
-				$conference_ID
-			)
-		);
-	}
-
-	function queryUserEvents() {
-		return $this->getQueryUserEvents()->selectField( Event::$FULL_FIELDS )->query();
-	}
-
-	function queryUserEventsByConference($conference_ID) {
-		return $this->getQueryUserEventsByConference($conference_ID)->query();
+		return 'https://github.com/' . $this->get('user_github');
 	}
 
 	function hasPermissionToEditUser() {
@@ -184,7 +126,7 @@ trait UserTrait {
 	}
 
 	function isUserMyself() {
-		return get_user('user_ID') === $this->getUserID();
+		return is_logged() && get_user()->getUserID() === $this->getUserID();
 	}
 
 	function hasUserLovelicense() {
@@ -197,57 +139,61 @@ trait UserTrait {
 	function getUserLovelicense() {
 		return license( $this->user_lovelicense );
 	}
-}
 
-class_exists('Sessionuser');
-
-class User {
-	use UserTrait, SessionuserTrait;
-
-	function __construct() {
-		self::normalize($this);
+	function factoryUserSkills() {
+		return UserSkill::factorySkillByUser( $this->getUserID() );
 	}
 
-	static function normalize(& $t) {
-		if( isset( $t->user_ID ) ) {
-			$t->user_ID = (int) $t->user_ID;
-		}
-		if( isset( $t->user_public ) ) {
-			$t->user_public = (bool) (int) $t->user_public;
-		}
+	function factoryUserEvents() {
+		return FullEvent::factoryByUser( $this->getUserID() );
 	}
 
-	static function get($uid) {
-		global $T;
-
-		return query_row(
-			sprintf(
-				"SELECT * FROM {$T('user')} WHERE user_uid = '%s'",
-				esc_sql( luser_input( $uid, 32) )
-			),
-			'User'
+	private function normalizeUser() {
+		$this->integers('user_ID');
+		$this->booleans(
+			'user_public',
+			'user_acrive'
 		);
 	}
+}
 
-	/**
-	 * Return DynamicQuery
-	 */
-	static function getStandardQueryUsers() {
-		$q = new DynamicQuery();
-		return $q->useTable('user');
+// From Boz-PHP
+class_exists('Sessionuser');
+
+class User extends Queried {
+	use UserTrait;
+
+	// From Boz-PHP
+	use SessionuserTrait;
+
+	function __construct() {
+		$this->normalizeUser();
 	}
 
-	/**
-	 * @return DynamicQuery
-	 */
-	static function getQueryUsersByEvent( $event_ID ) {
-		$q = self::getStandardQueryUsers();
-		$q->useTable('event_user');
-		$q->appendCondition('event_user.user_ID = user.user_ID');
-		$q->appendCondition( sprintf(
-			'event_user.event_ID = %d',
-			$event_ID
-		) );
-		return $q->appendOrderBy('event_user_order');
+	static function factory() {
+		return Query::factory( __CLASS__ )
+			->from('user');
+	}
+
+	static function factoryByEvent( $event_ID ) {
+		return self::factory()
+			->from('event_user')
+			->equals('event_user.user_ID', 'user.user_ID')
+			->whereInt('event_user.event_ID', $event_ID );
+	}
+
+	static function factoryByUID( $user_uid ) {
+		$user_uid = self::sanitizeUID( $user_uid );
+		return self::factory()
+			->whereStr( 'user_uid', $user_uid );
+	}
+
+	static function queryByUID( $user_uid ) {
+		return self::factoryByUID( $user_uid )
+			->queryRow();
+	}
+
+	private static function sanitizeUID( $user_uid ) {
+		return luser_input( $user_uid, 20 );
 	}
 }
