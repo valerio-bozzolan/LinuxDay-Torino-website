@@ -1,8 +1,8 @@
--- MySQL dump 10.15  Distrib 10.0.28-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.15  Distrib 10.0.30-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: localhost
+-- Host: localhost    Database: linuxday2016
 -- ------------------------------------------------------
--- Server version	10.0.28-MariaDB-0+deb8u1
+-- Server version	10.0.30-MariaDB-0+deb8u2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -70,7 +70,7 @@ CREATE TABLE `ldto_conference` (
   UNIQUE KEY `conference_uid` (`conference_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_conference_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,8 +79,9 @@ CREATE TABLE `ldto_conference` (
 
 LOCK TABLES `ldto_conference` WRITE;
 /*!40000 ALTER TABLE `ldto_conference` DISABLE KEYS */;
-INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-09-22 14:00:00','2016-10-22 18:00:00',1,1);
+INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',1,1);
 INSERT INTO `ldto_conference` VALUES (2,'2015','LDTO15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2015-10-24 14:00:00','2015-10-24 18:00:00',1,2);
+INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO16','http://linuxdaytorino.org/2017/user/%1$s','http://linuxdaytorino.org/2017/talk/%1$s',NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
 /*!40000 ALTER TABLE `ldto_conference` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,7 +231,7 @@ CREATE TABLE `ldto_location` (
   `location_note` text COLLATE utf8mb4_unicode_ci,
   `location_geothumb` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `location_lat` float NOT NULL,
-  `location_lon` float NOT NULL,
+  `location_lng` float NOT NULL,
   `location_zoom` int(1) DEFAULT NULL,
   PRIMARY KEY (`location_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -581,4 +582,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-06 14:18:41
+-- Dump completed on 2017-07-12  0:39:39
