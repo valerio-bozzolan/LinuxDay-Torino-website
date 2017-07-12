@@ -37,7 +37,7 @@ class Header {
 		}
 
 		$args['og'] = merge_args_defaults($args['og'], [
-			'image'  => URL . XXX . '/ld-2016-logo-purple.png', // It's better an absolute URL here
+			'image'  => STATIC_URL . '/ld-2016-logo-purple.png', // It's better an absolute URL here
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
@@ -87,27 +87,27 @@ class Header {
 	<meta name="generator" content="GNU nano" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
 
-	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/favicon-192.png" />
-	<link rel="shortcut icon" href="<?php echo XXX ?>/favicon/favicon.ico" />
-	<link rel="icon" sizes="16x16 32x32 64x64" href="<?php echo XXX ?>/favicon/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo XXX ?>/favicon/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="<?php echo XXX ?>/favicon/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo XXX ?>/favicon/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="<?php echo XXX ?>/favicon/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo XXX ?>/favicon/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo XXX ?>/favicon/favicon-16.png">
-	<link rel="apple-touch-icon" href="<?php echo XXX ?>/favicon/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo XXX ?>/favicon/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo XXX ?>/favicon/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo XXX ?>/favicon/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo XXX ?>/favicon/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo XXX ?>/favicon/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo XXX ?>/favicon/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo XXX ?>/favicon/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo XXX ?>/favicon/favicon-180.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo STATIC_PATH ?>/favicon/favicon-192.png" />
+	<link rel="shortcut icon" href="<?php echo STATIC_PATH ?>/favicon/favicon.ico" />
+	<link rel="icon" sizes="16x16 32x32 64x64" href="<?php echo STATIC_PATH ?>/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo STATIC_PATH ?>/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="<?php echo STATIC_PATH ?>/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo STATIC_PATH ?>/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="<?php echo STATIC_PATH ?>/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo STATIC_PATH ?>/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo STATIC_PATH ?>/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="<?php echo STATIC_PATH ?>/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo STATIC_PATH ?>/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo STATIC_PATH ?>/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo STATIC_PATH ?>/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo STATIC_PATH ?>/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo STATIC_PATH ?>/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo STATIC_PATH ?>/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo STATIC_PATH ?>/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo STATIC_PATH ?>/favicon/favicon-180.png">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="<?php echo XXX ?>/favicon/favicon-144.png">
-	<meta name="msapplication-config" content="<?php echo XXX ?>/favicon/browserconfig.xml">
+	<meta name="msapplication-TileImage" content="<?php echo STATIC_PATH ?>/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="<?php echo STATIC_PATH ?>/favicon/browserconfig.xml">
 <?php load_module('header') ?>
 
 <?php foreach($args['og'] as $id=>$value): ?>
@@ -150,7 +150,7 @@ class Header {
 	<nav>
 		<div class="nav-wrapper purple darken-4">
 			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
-				<img src="<?php echo XXX ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
+				<img src="<?php echo STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
@@ -163,7 +163,7 @@ class Header {
 
 	</nav>
 	<div class="parallax-container">
-		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
+		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
 	</div>
 
 	<?php if( $args['alert'] ) {

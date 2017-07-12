@@ -37,7 +37,7 @@ class Header {
 		}
 
 		$args['og'] = merge_args_defaults($args['og'], [
-			'image'  => URL . XXX . '/ld-2017-logo-470.png', // It's better an absolute URL here
+			'image'  => STATIC_URL . '/ld-2017-logo-470.png', // It's better an absolute URL here
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
@@ -129,7 +129,7 @@ class Header {
 	<nav>
 		<div class="nav-wrapper purple darken-4">
 			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
-				<img src="<?php echo XXX ?>/ld-2017-logo-470.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
+				<img src="<?php echo STATIC_PATH ?>/ld-2017-logo-470.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
@@ -142,7 +142,7 @@ class Header {
 
 	</nav>
 	<div class="parallax-container">
-		<div class="parallax"><img src="<?php echo XXX ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
+		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
 	</div>
 
 	<?php if( $args['alert'] ) {

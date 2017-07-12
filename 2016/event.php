@@ -67,7 +67,7 @@ Header::spawn('event', $args);
 ?>
 	<?php if( $event->isEventEditable() ): ?>
 	<p><?php echo HTML::a(
-		CONFERENCE . "/event-edit.php?" . http_build_query( [
+		CURRENT_CONFERENCE_PATH . "/event-edit.php?" . http_build_query( [
 			'uid'        => $event->getEventUID(),
 			'conference' => $event->getConferenceUID()
 		] ),

@@ -31,7 +31,7 @@ Header::spawn('partner');
 			$url,
 			sprintf(
 				'<img class="responsive-img" src="%s" alt="%s"%s />',
-				XXX . "/partner/$logo",
+				STATIC_PATH . "/partner/$logo",
 				sprintf(
 					_("Logo di %s"),
 					$name

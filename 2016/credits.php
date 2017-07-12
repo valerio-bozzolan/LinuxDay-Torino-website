@@ -41,7 +41,7 @@ Header::spawn('credits');
 							$license->getShort()
 						) ?>" target="_blank">
 						<?php if($icon): ?>
-							<img class="hoverable responsive-img" src="<?php echo XXX . "/libre-icons/$icon" ?>" alt="<?php printf(
+							<img class="hoverable responsive-img" src="<?php echo STATIC_PATH . "/libre-icons/$icon" ?>" alt="<?php printf(
 								_("Logo di %s"),
 								$name
 							) ?>" />

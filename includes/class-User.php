@@ -43,12 +43,15 @@ trait UserTrait {
 		);
 	}
 
-	function getUserURL( $base = URL ) {
-		return $base . sprintf( PERMALINK_USER, $this->getUserUID() );
+	function getUserURL( $base = ROOT ) {
+		return $base . sprintf( PERMALINK_USER,
+			CURRENT_CONFERENCE_UID,
+			$this->getUserUID()
+		);
 	}
 
 	function forceUserPermalink() {
-		$url = $this->getUserURL();
+		$url = $this->getUserURL( URL );
 		if( $url !== request_uri() ) {
 			http_redirect( $url );
 		}

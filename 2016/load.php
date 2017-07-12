@@ -15,20 +15,18 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+define('CURRENT_CONFERENCE_UID', '2016');
+
 // Boz-PHP: start
 require '../load.php';
 
-// Conference directory in ROOT path
-define('CONFERENCE_DIR', '/2016');
-
-// Conference URI directory
-define('CONFERENCE', ROOT . CONFERENCE_DIR);
-
-define('REPO', 'https://github.com/LinuxDayTorino/Linux-Day-Torino-website');
+define('CURRENT_CONFERENCE_PATH',                   ROOT . _  . CURRENT_CONFERENCE_UID);
+define('CURRENT_CONFERENCE_URL',                    URL  . _  . CURRENT_CONFERENCE_UID);
+define('CURRENT_CONFERENCE_ABSPATH', ABSPATH . __ . ROOT . __ . CURRENT_CONFERENCE_UID);
 
 // Autoload classes
 spl_autoload_register( function($c) {
-	$path = ABSPATH . CONFERENCE_DIR . "/includes/class-$c.php";
+	$path = CURRENT_CONFERENCE_ABSPATH . __ . INCLUDES . __  . "class-$c.php";
 	if( is_file( $path ) ) {
 		require $path;
 	}
@@ -57,10 +55,11 @@ if( isset( $_REQUEST['l'] ) ) {
 define('LANGUAGE_APPLIED', apply_language( $l ) );
 
 ///////////////////////////////////////////////////////////////////
-define('STATIC_DIR', '/static');
+define('STITIC', 'static');
 
-// Boz-PHP: Helpful constants
-define('XXX', CONFERENCE . STATIC_DIR);
+define('STATIC_PATH',    CURRENT_CONFERENCE_PATH    . _ .  STITIC);
+define('STATIC_URL',     CURRENT_CONFERENCE_URL     . _ .  STITIC);
+define('STATIC_ABSPATH', CURRENT_CONFERENCE_ABSPATH . __ . STITIC);
 
 define('SITE_NAME',        _("Linux Day Torino 2016") );
 define('SITE_NAME_SHORT',  _("LDTO2016") );
@@ -68,16 +67,13 @@ define('SITE_DESCRIPTION', _("Manifestazione annuale sul software libero ed i si
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: CSS and JS (some aliases from `libjs-jquery` package)
-register_js('jquery',              JQUERY);
-register_js('leaflet',             LEAFLET_DIR . '/leaflet.js');
-register_js('leaflet.init',        XXX . '/leaflet-init.js');
-register_js('materialize',         XXX . '/materialize/js/materialize.min.js');
-register_css('leaflet',            LEAFLET_DIR . '/leaflet.css');
-register_css('materialize',        XXX . '/materialize/css/materialize.min.css');
-register_css('materialize.custom', XXX . '/materialize-custom.css');
-register_css('materialize.icons',  XXX . '/material-design-icons/material-icons.css');
-register_css('home',               XXX . '/home.css');
-register_js('scrollfire',          XXX . '/scrollfire.js');
+register_js('leaflet.init',        STATIC_PATH . '/leaflet-init.js');
+register_js('materialize',         STATIC_PATH . '/materialize/js/materialize.min.js');
+register_css('materialize',        STATIC_PATH . '/materialize/css/materialize.min.css');
+register_css('materialize.custom', STATIC_PATH . '/materialize-custom.css');
+register_css('materialize.icons',  STATIC_PATH . '/material-design-icons/material-icons.css');
+register_css('home',               STATIC_PATH . '/home.css');
+register_js('scrollfire',          STATIC_PATH . '/scrollfire.js');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries
@@ -87,11 +83,11 @@ add_menu_entries( [
 	new MenuEntry('conference',  null, null, 'hidden'),
 	new MenuEntry('404',         null, null, 'hidden'),
 
-	new MenuEntry('home',    URL . CONFERENCE . _,               _("Benvenuti")             ),
-	new MenuEntry('partner', URL . CONFERENCE . '/partner.php',  _("Partner")               ),
-	new MenuEntry('photos',  URL . CONFERENCE . '/photos.php',   _("Fotografie")            ),
-	new MenuEntry('credits', URL . CONFERENCE . '/credits.php',  _("Crediti")               ),
-	new MenuEntry('api',     URL . CONFERENCE . '/api',          _("API"),          'hidden')
+	new MenuEntry('home',    CURRENT_CONFERENCE_URL . _,               _("Benvenuti")             ),
+	new MenuEntry('partner', CURRENT_CONFERENCE_URL . '/partner.php',  _("Partner")               ),
+	new MenuEntry('photos',  CURRENT_CONFERENCE_URL . '/photos.php',   _("Fotografie")            ),
+	new MenuEntry('credits', CURRENT_CONFERENCE_URL . '/credits.php',  _("Crediti")               ),
+	new MenuEntry('api',     CURRENT_CONFERENCE_URL . '/api',          _("API"),          'hidden')
 ] );
 
-define('DEFAULT_IMAGE', XXX . '/gnu-linux-on-black.png');
+define('DEFAULT_IMAGE', STATIC_PATH . '/gnu-linux-on-black.png');

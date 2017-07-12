@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Boz-PHP configuration
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Dau Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -16,11 +16,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Die if called directly
-defined('ABSPATH') || exit;
+defined('BOZ_PHP') or exit;
+
+define('INCLUDES', 'includes');
 
 // Autoload classes
 spl_autoload_register( function($c) {
-	$path = ABSPATH . "/includes/class-$c.php";
+	$path = ABSPATH . __ . INCLUDES . __ . "class-$c.php";
 	if( is_file( $path ) ) {
 		require $path;
 	}
@@ -37,26 +39,39 @@ inherit_permissions( 'admin',   'user');
 register_permissions('admin',   'edit-users');
 register_permissions('admin',   'edit-events');
 
+defined('LATEST_CONFERENCE_UID')
+	or define('LATEST_CONFERENCE_UID', '2017');
+
+defined('CURRENT_CONFERENCE_UID')
+	or define('CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID);
+
+defined('REPO')
+	or define('REPO', 'https://github.com/LinuxDayTorino/LinuxDay-Torino-website');
+
 defined('LIBMARKDOWN_PATH')
-	|| define('LIBMARKDOWN_PATH', '/usr/share/php/markdown.php');
+	or define('LIBMARKDOWN_PATH', '/usr/share/php/markdown.php');
 
 defined('JQUERY')
-	|| define('JQUERY', '/javascript/jquery/jquery.min.js');
+	or define('JQUERY', '/javascript/jquery/jquery.min.js');
 
 defined('LEAFLET_DIR')
-	|| define('LEAFLET_DIR', '/javascript/leaflet');
+	or define('LEAFLET_DIR', '/javascript/leaflet');
 
 // /{conference_uid}/
 defined('PERMALINK_CONFERENCE')
-	|| define('PERMALINK_CONFERENCE', '/%s/');
+	or define('PERMALINK_CONFERENCE', '/%s/');
 
  // /{conference_uid}/{$chapter_uid}/{event_uid}
 defined('PERMALINK_EVENT')
-	|| define('PERMALINK_EVENT',      '/%1$s/%3$s/%2$s');
+	or define('PERMALINK_EVENT', '/%1$s/%3$s/%2$s');
 
 // /2016/{user_uid}
 defined('PERMALINK_USER')
-	|| define('PERMALINK_USER',       '/2016/user/%s');
+	or define('PERMALINK_USER', '/%1$s/user/%2$s');
 
 defined('FORCE_PERMALINK')
-	|| define('FORCE_PERMALINK', 1);
+	or define('FORCE_PERMALINK', 1);
+
+register_js('jquery',   JQUERY);
+register_js('leaflet',  LEAFLET_DIR . '/leaflet.js');
+register_css('leaflet', LEAFLET_DIR . '/leaflet.css');

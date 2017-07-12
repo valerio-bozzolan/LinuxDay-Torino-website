@@ -17,8 +17,6 @@
 
 require 'load.php';
 
-define('PHOTOS', '/photos');
-
 $alt = esc_attr( sprintf(
 	_("foto %s"),
 	SITE_NAME
@@ -29,12 +27,12 @@ Header::spawn('photos');
 	<div class="section">
 		<p class="flow-text"><?php _e("Alcuni scatti dal Linux Day 2016 a Torino.") ?></p>
 		<div class="row">
-			<?php if( $handle = opendir(ABSPATH . CONFERENCE_DIR . STATIC_DIR . PHOTOS ) ): ?>
+			<?php if( $handle = opendir(STATIC_ABSPATH . __ . 'photos' ) ): ?>
 				<?php while (false !== ($entry = readdir($handle) ) ): ?>
 					<?php if( $entry === '.' || $entry === '..' ) continue ?>
 
 					<div class="col s12 m3">
-						<img class="responsive-img ld-photo materialboxed" src="<?php echo XXX . PHOTOS . _ . $entry ?>" alt="<?php echo $alt ?>" />
+						<img class="responsive-img ld-photo materialboxed" src="<?php echo STATIC_PATH . "/photos/$entry" ?>" alt="<?php echo $alt ?>" />
 					</div>
 
 				<?php endwhile ?>

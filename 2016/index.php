@@ -108,7 +108,7 @@ Header::spawn('conference', [
 	<div class="section">
 		<div class="row valign-wrapper">
 			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<img src="<?php echo XXX ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
+				<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
 			</div>
 			<div class="col s12 m10 l11">
 				<p class="flow-text"><?php printf(
@@ -203,7 +203,7 @@ Header::spawn('conference', [
 			<div class="col s12 m5 l6">
 				<div class="row">
 					<div class="col s4 offset-s4 m12">
-						<img src="<?php echo XXX ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
+						<img src="<?php echo STATIC_PATH ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
 					</div>
 				</div>
 			</div>
@@ -257,7 +257,7 @@ Header::spawn('conference', [
 					<?php if( $img ): ?>
 					<div class="row"><!-- Start image row -->
 						<div class="col s4">
-							<img class="responsive-img" src="<?php echo XXX . "/partner/$img" ?>" alt="<?php _esc_attr($who_text) ?>" />
+							<img class="responsive-img" src="<?php echo STATIC_PATH . "/partner/$img" ?>" alt="<?php _esc_attr($who_text) ?>" />
 						</div>
 						<div class="col s8"><!-- Start text col -->
 					<?php endif ?>
@@ -380,7 +380,7 @@ Header::spawn('conference', [
 				<div class="row">
 					<div class="col s6 m12 offset-s3">
 						<div class="center-align">
-							<img class="responsive-img circle hoverable" src="<?php echo XXX ?>/4-liberta.png" alt="<?php
+							<img class="responsive-img circle hoverable" src="<?php echo STATIC_PATH ?>/4-liberta.png" alt="<?php
 								_("Le quattro libertà fontamentali del software libero")
 							?>" />
 						</div>

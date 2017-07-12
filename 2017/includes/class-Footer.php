@@ -65,14 +65,14 @@ class Footer {
 						_("%s su Facebook"),
 						SITE_NAME
 					) ?>">
-						<img src="<?php echo XXX ?>/social/facebook.png" height="32" alt="Facebook" />
+						<img src="<?php echo STATIC_PATH ?>/social/facebook.png" height="32" alt="Facebook" />
 					</a>
 
 					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" title="<?php printf(
 						_("%s su Twitter"),
 						SITE_NAME
 					) ?>">
-						<img src="<?php echo XXX ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
+						<img src="<?php echo STATIC_PATH ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
 					</a>
 
 					<?php echo HTML::a(

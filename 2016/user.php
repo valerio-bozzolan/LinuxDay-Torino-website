@@ -38,7 +38,7 @@ Header::spawn('user', [
 ?>
 	<?php if( $user->hasPermissionToEditUser() ): ?>
 		<p><?php echo HTML::a(
-			CONFERENCE . "/user-edit.php?uid={$user->getUserUID()}",
+			CURRENT_CONFERENCE_PATH . "/user-edit.php?uid={$user->getUserUID()}",
 			_("Modifica") . icon('edit', 'left')
 		) ?></p>
 	<?php endif ?>
@@ -197,7 +197,7 @@ Header::spawn('user', [
 			<div class="col s4 m3 l2">
 				<?php
 				$title = sprintf( _("%s su %s"), $user->getUserFullname(), $social );
-				$logo = $is_icon ? icon($path) : HTML::img(XXX . "/social/$path", $social, $title, 'responsive-img');
+				$logo = $is_icon ? icon($path) : HTML::img(STATIC_PATH . "/social/$path", $social, $title, 'responsive-img');
 				echo HTML::a($profile, $logo, $title, null, 'target="_blank"');
 				?>
 			</div>
