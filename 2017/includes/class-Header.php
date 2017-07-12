@@ -16,11 +16,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Header {
-	function __construct($menu_uid = null, $args = [] ) {
+	static function spawn($menu_uid = null, $args = [] ) {
 		$menu = get_menu_entry($menu_uid);
 
 		$args = merge_args_defaults($args, [
 			'show-title'  => true,
+			'nav'         => true,
 			'nav-title'   => SITE_NAME_SHORT,
 			'head-title'  => null,
 			'title'       => $menu->name,
@@ -121,6 +122,7 @@ __        _______
 
 -->
 <body>
+	<?php if( $args['nav'] ): ?>
 	<nav>
 		<div class="nav-wrapper green darken-4">
 			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
@@ -139,9 +141,7 @@ __        _______
 		] ) ?>
 
 	</nav>
-	<div class="parallax-container">
-		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/eff-nsa-banner.jpg" alt="<?php _e("EFF NSA banner") ?>"></div>
-	</div>
+	<?php endif ?>
 
 	<?php if( $args['alert'] ) {
 		new Messagebox( $args['alert'], $args['alert.type'] );

@@ -36,7 +36,7 @@ trait LocationTrait {
 		$g = DEFAULT_IMAGE;
 		$geothumb = $this->get('location_geothumb');
 		if( $geothumb ) {
-			$g = site_page( $geothumb, CONFERENCE );
+			$g = site_page( $geothumb, CURRENT_CONFERENCE_PATH );
 		}
 		return $g;
 	}

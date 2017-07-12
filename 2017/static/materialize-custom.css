@@ -14,18 +14,27 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+.much-padding-top {
+	padding-top:5rem;
+}
 .brand-logo img {
 	margin:2px 10px;
 	height:60px;
+}
+.parallax-container {
+	height:300px;
 }
 @media only screen and (max-width: 600px) {
 	.brand-logo img {
 		margin:0;
 		height:56px;
 	}
-}
-.parallax-container {
-	height:500px;
+	.parallax-container {
+		height:50px;
+	}
+	.much-padding-top {
+		padding-top:inherit;
+	}
 }
 .ld-social a {
 	margin:10px;

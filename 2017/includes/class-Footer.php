@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Footer {
-	function __construct( $args = [] ) {
+	static function spawn( $args = [] ) {
 
 		$args = merge_args_defaults($args, [
 			'home' => true

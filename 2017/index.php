@@ -34,15 +34,17 @@ inject_in_module('header', function() {
 	echo "\n\t<noscript><style>#map {display: none}</style></noscript>";
 } );
 
-new Header('conference', [
+Header::spawn('conference', [
+	'nav'        => false,
 	'show-title' => false,
 	'head-title' => $s = $conference->getConferenceTitle(),
 	'title'      => $s,
-	'url'        => $conference->getConferenceURL()
+	'url'        => $conference->getConferenceURL(),
+	'container'  => false
 ] );
 ?>
 
-	<div class="header">
+	<div class="header much-padding-top">
 		<div class="center-align">
 			<h1><?php echo HTML::a(
 				$conference->getConferenceURL(),
@@ -55,44 +57,17 @@ new Header('conference', [
 
 	<div class="container">
 		<div class="row valign-wrapper">
-			<div class="col s12 m10">
-				<p class="flow-text center"><?php _e("Il tema di quest'anno a livello nazionale è... la <strong>privacy</strong>!") ?></p>
-			</div>
-			<div class="col s12 m2">
-				<img class="responsive-img" src="<?php echo STATIC_PATH ?>/surveillance_notice.png" alt="<?php _e("Telecamera di videosorveglianza") ?>" />
+			<div class="col s12">
+				<p class="flow-text center-align"><?php _e("Il tema di quest'anno è... la <strong>privacy</strong>!") ?></p>
 			</div>
 		</div>
 	</div>
 
-	<div class="section">
-		<div class="row valign-wrapper">
-			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _e("Linux Day Torino 2017") ?>" class="responsive-img" />
-			</div>
-			<div class="col s12 m10 l11">
-				<p class="flow-text"><?php printf(
-					_(
-						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Il Linux Day Torino 2017 si terrà al <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
-					),
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/GNU'),
-						'GNU',
-						null,
-						'black-text hoverable'
-					),
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
-						'Linux',
-						null,
-						'black-text hoverable'
-					),
-					$conference->getConferenceStart('d/m/Y'),
-					$conference->getConferenceHumanStart()
-				) ?></p>
-			</div>
-		</div>
-	</div>
+<div class="parallax-container">
+	<div class="parallax"><img src="<?php echo STATIC_PATH ?>/eff-nsa-banner.jpg" alt="<?php _e("EFF NSA banner") ?>"></div>
+</div>
+
+<div class="container">
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
@@ -318,21 +293,40 @@ new Header('conference', [
 		</div>
 	</div>
 
+	<div class="section">
+		<div class="row valign-wrapper">
+			<div class="col s12 m2 l1 center-align hide-on-small-only">
+				<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _e("Linux Day Torino 2017") ?>" class="responsive-img" />
+			</div>
+			<div class="col s12 m10 l11">
+				<p class="flow-text"><?php printf(
+					_(
+						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
+						"Il Linux Day Torino 2017 si terrà al <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
+					),
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/GNU'),
+						'GNU',
+						null,
+						'black-text hoverable'
+					),
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
+						'Linux',
+						null,
+						'black-text hoverable'
+					),
+					$conference->getConferenceStart('d/m/Y'),
+					$conference->getConferenceHumanStart()
+				) ?></p>
+			</div>
+		</div>
+	</div>
+
 	<div id="price" class="divider" data-show="#price-section"></div>
 	<div class="section" id="price-section">
 		<div class="row">
-			<div class="col s12 m4">
-				<div class="row">
-					<div class="col s6 m12 offset-s3">
-						<div class="center-align">
-							<img class="responsive-img circle hoverable" src="<?php echo STATIC_PATH ?>/4-liberta.png" alt="<?php
-								_("Le quattro libertà fontamentali del software libero")
-							?>" />
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col s12 m8">
+			<div class="col s12 m9">
 				<h3><?php _e("Ingresso gratuito") ?></h3>
 				<p class="flow-text"><?php printf(
 					_(
@@ -348,7 +342,7 @@ new Header('conference', [
 
 				<!--
 				<p><?php echo HTML::a(
-					CONFERENCE . '/partner.php',
+					CONFERENCE_PATH . '/partner.php',
 					_("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(
 						_("Partner %s"),
@@ -358,6 +352,19 @@ new Header('conference', [
 				) ?></p>
 				-->
 			</div>
+			<div class="col s12 m3">
+				<div class="row">
+					<div class="col s6 m12 offset-s3">
+						<div class="center-align">
+							<img class="responsive-img" src="<?php echo STATIC_PATH ?>/surveillance_notice.png" alt="<?php _e("Telecamera di videosorveglianza") ?>" />
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-<?php new Footer(['home' => false]);
+</div>
+
+<?php
+
+Footer::spawn( ['home' => false] );
