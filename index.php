@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Homepage
-# Copyright (C) 2016 Linux Day Torino
+# Copyright (C) 2016, 2017 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -16,4 +16,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #whatelse
-header("Location: /2016");
+header("Location: /2017");

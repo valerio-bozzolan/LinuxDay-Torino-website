@@ -27,7 +27,7 @@ class Footer {
 	<?php if( $args['home'] ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<a class="btn purple darken-3 waves-effect" href="<?php echo URL ?>/">
+		<a class="btn green darken-3 waves-effect" href="<?php echo URL ?>/">
 			<?php
 				printf(
 					_("Torna a %s"),
@@ -77,9 +77,9 @@ class Footer {
 
 					<?php echo HTML::a(
 						'https://blog.linuxdaytorino.org',
-						icon('rss_feed', 'purple-text text-darken-3 ld-blog-icon'),
+						icon('rss_feed', 'green-text text-darken-3 ld-blog-icon'),
 						_("Blog del Linux Day Torino"),
-						'btn-floating waves-effect waves-purple white purple-text ld-blog',
+						'btn-floating waves-effect waves-green white green-text ld-blog',
 						'target="_blank"'
 					) ?>
 				</p>

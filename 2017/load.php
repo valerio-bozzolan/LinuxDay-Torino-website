@@ -34,8 +34,8 @@ spl_autoload_register( function($c) {
 
 require CURRENT_CONFERENCE_ABSPATH . __ . INCLUDES . __ . 'functions.php';
 
-define('TEXT', 'purple-text text-darken-4');
-define('BACK', 'purple darken-4');
+define('TEXT', 'green-text text-darken-4');
+define('BACK', 'green darken-4');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: GNU Gettext configuration

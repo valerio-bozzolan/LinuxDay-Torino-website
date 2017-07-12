@@ -81,17 +81,8 @@ new Header('conference', [
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s12 m8">
-				<blockquote class="flow-text">
-					// How to write good code<br />
-					<strong>$software</strong>: 
-					function(<span class="yellow hoverable">play</span>, 
-					<span class="teal white-text hoverable">freedom</span>, 
-					<span class="purple darken-2 white-text hoverable">friends</span>) { /* RTFM */ }
-				</blockquote>
-			</div>
 			<div class="col s12 m4">
-				<p class="flow-text"><?php _e("Il tema di quest'anno a livello nazionale è... il <code>coding</code>!") ?></p>
+				<p class="flow-text"><?php _e("Il tema di quest'anno a livello nazionale è... la <code>privacy</code>!") ?></p>
 			</div>
 		</div>
 	</div>
@@ -163,7 +154,7 @@ new Header('conference', [
 					);
 				?></p>
 				<p>
-					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org" target="_blank">
+					<a class="btn waves-effect green darken-2 waves-light" href="https://f-droid.org" target="_blank">
 						<?php echo icon('file_download', 'left'); _e("Installa F-Droid") ?>
 					</a>
 				</p>
@@ -175,7 +166,7 @@ new Header('conference', [
 					);
 				?></p>
 				<p>
-					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
+					<a class="btn waves-effect green darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
 							<?php echo icon('file_download', 'left'); _e("Installa LDTO") ?>
 					</a>
 				</p>
@@ -200,7 +191,7 @@ new Header('conference', [
 			?>
 
 			<div class="col s12 m6">
-				<div class="card-panel hoverable purple darken-3 white-text">
+				<div class="card-panel hoverable green darken-3 white-text">
 					<?php if( $img ): ?>
 					<div class="row"><!-- Start image row -->
 						<div class="col s4">
@@ -222,7 +213,7 @@ new Header('conference', [
 									_("Prenota la tua partecipazione a %s"),
 									$what
 								),
-								'btn white purple-text waves-effect waves-purple hoverable',
+								'btn white green-text waves-effect waves-green hoverable',
 								'target="_blank"'
 							) ?></p>
 							<?php endif ?>
@@ -310,7 +301,7 @@ new Header('conference', [
 									_("Vedi %s su OpenStreetMap"),
 									esc_html( $conference->getConferenceTitle() )
 								),
-								'btn-floating btn-large purple darken-3 waves-effect',
+								'btn-floating btn-large green darken-3 waves-effect',
 								'target="_blank"'
 							) ?></p>
 						</div>
@@ -356,7 +347,7 @@ new Header('conference', [
 						_("Partner %s"),
 						SITE_NAME
 					),
-					'btn purple white-text waves-effect waves-light'
+					'btn green white-text waves-effect waves-light'
 				) ?></p>
 				-->
 			</div>
