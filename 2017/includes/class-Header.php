@@ -140,7 +140,7 @@ __        _______
 
 	</nav>
 	<div class="parallax-container">
-		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
+		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/eff-nsa-banner.jpg" alt="<?php _e("EFF NSA banner") ?>"></div>
 	</div>
 
 	<?php if( $args['alert'] ) {
