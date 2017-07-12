@@ -124,7 +124,10 @@ __        _______
 	<nav>
 		<div class="nav-wrapper green darken-4">
 			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
+				<!--
 				<img src="<?php echo STATIC_PATH ?>/ld-2017-logo-470.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
+				-->
+				LDTO17
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>

@@ -80,9 +80,12 @@ new Header('conference', [
 				) ?></p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col s12 m4">
+		<div class="row valign-wrapper">
+			<div class="col s12 m10">
 				<p class="flow-text"><?php _e("Il tema di quest'anno a livello nazionale è... la <code>privacy</code>!") ?></p>
+			</div>
+			<div class="col s12 m2">
+				<img class="responsive-img" src="<?php echo STATIC_PATH ?>/surveillance_notice.png" alt="<?php _e("Telecamera di videosorveglianza") ?>" />
 			</div>
 		</div>
 	</div>
