@@ -245,18 +245,10 @@ Header::spawn('conference', [
 				'https://attendize.ldto.it/e/3/coderdojo-at-linuxday'
 			);
 			$box(
-				_("Allestimento museale di Retrocomputing."),
-				"MuBIT",
-				'http://mupin.it',
-				_("dal %s"),
-				'mubit.png'
-			);
-			$box(
 				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
 				_("volontari")
 			);
 			?>
-
 		</div>
 	</div>
 
