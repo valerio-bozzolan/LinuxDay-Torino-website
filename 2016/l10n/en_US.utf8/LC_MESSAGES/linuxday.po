@@ -635,7 +635,7 @@ msgstr "Activities"
 
 #: 2016/index.php:241
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
-msgstr "At the same time of the talks, various activity will take place: "
+msgstr "At the same time of the talks, various activities will take place:"
 
 #: 2016/index.php:245
 #, php-format
