@@ -75,6 +75,9 @@ Header::spawn('conference', [
 
 		<h3><?php echo $chapter->getChapterName() ?></h3>
 
+		<p><em><?php _e("Stiamo preparando un ampio programma :)") ?></em></p>
+
+		<?php /*
 		<?php $eventsTable = new DailyEventsTable(
 			$conference->getConferenceID(),
 			$chapter->getChapterID()
@@ -93,6 +96,7 @@ Header::spawn('conference', [
 			"<b>{$eventsTable->countTracks()}</b>"
 		) ?></p>
 		<?php $eventsTable->printTable(); ?>
+		*/ ?>
 	</div>
 
 	<div id="rooms" class="divider" data-show="#rooms-section"></div>
