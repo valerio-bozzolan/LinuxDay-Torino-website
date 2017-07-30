@@ -40,7 +40,7 @@ if( is_logged() ):
 ?>
 	<p class="flow-text"><?php _e("Sei loggato!") ?></p>
 	<p><?php echo HTML::a(
-		CONFERENCE . '/login.php?logout',
+		CURRENT_CONFERENCE_PATH . '/login.php?logout',
 		_("Sloggati") . icon('exit_to_app', 'left')
 	) ?></p>
 

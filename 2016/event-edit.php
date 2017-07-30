@@ -28,7 +28,7 @@ $event or die_with_404();
 
 $event->isEventEditable() or error_die("Can't edit event");
 
-$permalink = CONFERENCE . "/event-edit.php?" . http_build_query( [
+$permalink = CURRENT_CONFERENCE_PATH . "/event-edit.php?" . http_build_query( [
 	'uid'        => $event->getEventUID(),
 	'conference' => $event->getConferenceUID()
 ] );
