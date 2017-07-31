@@ -15,7 +15,7 @@
    width="873.75"
    height="678.75"
    viewBox="0 0 873.75 678.75"
-   sodipodi:docname="planimetria_ldto_2016.svg"
+   sodipodi:docname="planimetria_dip_info.svg"
    inkscape:export-filename="/tmp/planimetria_ldto_2016.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -47,7 +47,7 @@
      id="namedview6079"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="328.13055"
+     inkscape:cx="330.13055"
      inkscape:cy="320.1625"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -189,21 +189,24 @@
        id="tspan6164">AREA CODERDOJO</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:500;font-size:22.37062072999999884px;line-height:85.00000237999998376%;font-family:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:Ubuntu Medium;font-stretch:normal;font-variant:normal"
-     x="604.4267"
-     y="373.03854"
+     style="font-size:22.37062073px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+     x="458.4267"
+     y="377.03854"
      id="text6166"
-     sodipodi:linespacing="85.000002%"><tspan
+     sodipodi:linespacing="85.000002%"
+     inkscape:export-filename="/run/user/1000/gvfs/sftp:host=reyboz/home/www-data/vhosts/reyboz.it/linuxday2016/2017/static/porcodio.png"
+     inkscape:export-xdpi="500"
+     inkscape:export-ydpi="500"><tspan
        sodipodi:role="line"
        id="tspan6168"
-       x="604.4267"
-       y="373.03854"
-       style="line-height:85.00000237999998376%;text-align:center;text-anchor:middle;-inkscape-font-specification:Ubuntu Medium;font-family:Ubuntu;font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal">INFO</tspan><tspan
+       x="458.4267"
+       y="377.03854"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000238%;text-anchor:middle;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">INFO</tspan><tspan
        sodipodi:role="line"
-       x="604.4267"
-       y="392.05356"
+       x="458.4267"
+       y="396.05356"
        id="tspan6170"
-       style="line-height:85.00000237999998376%;text-align:center;text-anchor:middle;-inkscape-font-specification:Ubuntu Medium;font-family:Ubuntu;font-weight:500;font-style:normal;font-stretch:normal;font-variant:normal">POINT</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000238%;text-anchor:middle;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">POINT</tspan></text>
   <g
      id="g6184"
      transform="translate(-48.000061,-9.5063466)">
