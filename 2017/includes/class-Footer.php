@@ -45,7 +45,7 @@ class Footer {
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m7 l8">
-				<h5 class="white-text"><code>#LDTO2017</code></h5>
+				<h5 class="white-text"><code>#LDTO17</code></h5>
 				<p class="white-text"><?php printf(
 					_("Tutti i contenuti sono rilasciati sotto ".
 					  "licenza di <strong>contenuto culturale libero</strong> %s. ".
