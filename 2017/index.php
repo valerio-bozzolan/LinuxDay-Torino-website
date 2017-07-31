@@ -69,6 +69,36 @@ Header::spawn('conference', [
 
 <div class="container">
 
+	<div class="section">
+		<div class="row valign-wrapper">
+			<div class="col s12 m2 l1 center-align hide-on-small-only">
+				<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
+			</div>
+			<div class="col s12 m10 l11">
+				<p class="flow-text"><?php printf(
+					_(
+						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
+						"Il Linux Day Torino 2017 si svolgerà il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
+					),
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/GNU'),
+						'GNU',
+						null,
+						'black-text hoverable'
+					),
+					HTML::a(
+						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
+						'Linux',
+						null,
+						'black-text hoverable'
+					),
+					$conference->getConferenceStart('d/m/Y'),
+					$conference->getConferenceHumanStart()
+				) ?></p>
+			</div>
+		</div>
+	</div>
+
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
 		<?php $chapter = Chapter::queryByUID('talk') ?>
