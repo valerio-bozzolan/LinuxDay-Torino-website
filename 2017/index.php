@@ -113,8 +113,8 @@ var typed = new Typed('.typing-smanettone', {
 		<div class="col s12 l6 offset-l1">
 			<div class="row">
 				<?php
-					$fuffa_box( _("Dove"),     'ic_location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
-					$fuffa_box( _("Speakers"), 'ic_event_seat', sprintf(
+					$fuffa_box( _("Dove"),     'location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
+					$fuffa_box( _("Speakers"), 'event_seat', sprintf(
 						_("<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."),
 						16,
 						4
@@ -123,8 +123,8 @@ var typed = new Typed('.typing-smanettone', {
 			</div>
 			<div class="row">
 				<?php
-					$fuffa_box( _("Quando"), 'ic_access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
-					$fuffa_box( _("Extras"), 'ic_star_rate', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
+					$fuffa_box( _("Quando"), 'access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
+					$fuffa_box( _("Extras"), 'star_rate', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
 				?>
 			</div>
 		</div>
