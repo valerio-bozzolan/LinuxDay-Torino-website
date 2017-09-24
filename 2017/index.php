@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2017 - Single conference page
-# Copyright (C) 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2017 Roberto Guido, Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -9,11 +9,11 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 require 'load.php';
 
@@ -26,13 +26,9 @@ FORCE_PERMALINK
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
 enqueue_js('scrollfire');
+enqueue_js('typed');
 enqueue_css('leaflet');
 enqueue_css('home');
-
-// Support for non-JavaScript
-inject_in_module('header', function() {
-	echo "\n\t<noscript><style>#map {display: none}</style></noscript>";
-} );
 
 Header::spawn('conference', [
 	'nav'        => false,
@@ -44,325 +40,202 @@ Header::spawn('conference', [
 ] );
 ?>
 
-	<div class="header much-padding-top">
+<section id="introduction">
+	<div class="container">
 		<div class="center-align">
-			<h1><?php echo HTML::a(
-				$conference->getConferenceURL(),
-				strtoupper( SITE_NAME ),
-				null,
-				TEXT
-			) ?></h1>
+			<h1 class="uppercase"><?php _e("Linux Day<br />Torino") ?></h1>
+			<p class="flow-text typing-smanettone-container"><?php printf(
+				_("Se anche tu sei %suno smanettone%s, vieni a trovarci!"),
+				'<span class="typing-smanettone">',
+				'</span>'
+			) ?></p>
+			<p><a href="#about" class="btn waves-effect green"><?php _e("Sabato 28 ottobre") ?></a></p>
 		</div>
 	</div>
+</section>
+
+<script>
+$('.typing-smanettone').text('');
+var typed = new Typed('.typing-smanettone', {
+	strings: <?php echo json_encode( [
+		_("uno smanettone"),
+		_("un programmatore"),
+		_("un tipo curioso"),
+		_("un sistemista"),
+		_("un po' pinguino"),
+		_("in modalità incognito"),
+		_("un cucciolo di GNU")
+	] ); ?>,
+	loop: true,
+	typeSpeed: 100,
+	backDelay: 1000,
+	backSpeed: 20,
+	showCursor: false
+} );
+</script>
+
+<section class="container" id="about">
+	<div class="center-align">
+		<h2><?php _e("Cos'è il Linux Day Torino") ?></h2>
+		<p class="flow-text"><?php _e(
+			"L'edizione sabauda del Linux Day, il grande evento nazionale per la promozione e la ".
+			"diffusione di GNU/Linux e del software libero."
+		) ?></p>
+	</div>
+
+	<div class="row">
+		<div class="col s12 l5 long-description">
+			<p><?php _e(
+				"Il Linux Day è un evento che si svolge nello stesso giorno (quest'anno, ".
+				"sabato 28 ottobre) in tutta Italia."
+			) ?>
+			<p><?php _e(
+				"Il Comitato Linux Day Torino, costituito informalmente da volontari, ".
+				"associazioni e professionisti, organizza dal 2007 l'edizione torinese della ".
+				"manifestazione, che si articola su diverse sessioni parallele con talk per ogni ".
+				"tipo di interesse."
+			) ?></p>
+			<p><?php _e(
+				"Quest'anno siamo ospitati dal Dipartimento di Informatica dell'Università ".
+				"di Torino, in via Pessinetto. L'accesso all'evento è libero e gratuito."
+			) ?></p>
+			<p><a href="#schedule" class="btn green waves-effect"><?php _e("Vedi il programma") ?></a></p>
+		</div>
+
+		<!-- Fuffa :) -->
+		<?php $fuffa_box = function ($title, $icon, $phrase) { ?>
+			<div class="col s12 m6">
+				<h3><i class="material-icons right"><?php echo $icon ?></i> <?php echo $title ?></h3>
+				<p><?php echo $phrase ?></p>
+			</div>
+		<?php }; ?>
+
+		<div class="col s12 l6 offset-l1">
+			<div class="row">
+				<?php
+					$fuffa_box( _("Dove"),     'ic_location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
+					$fuffa_box( _("Speakers"), 'ic_event_seat', sprintf(
+						_("<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."),
+						16,
+						4
+					) );
+				?>
+			</div>
+			<div class="row">
+				<?php
+					$fuffa_box( _("Quando"), 'ic_access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
+					$fuffa_box( _("Extras"), 'ic_star_rate', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
+				?>
+			</div>
+		</div>
+		<?php unset( $fuffa_box ) ?>
+		<!-- /Fuffa :) -->
+	</div>
+</section>
+
+<section id="location">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m7 l6">
+				<div class="card-panel">
+					<h2><?php _e("Location") ?></h2>
+
+					<p><?php _e(
+						 "Per il secondo anno il Dipartimento di Informatica dell'Università di Torino ".
+						"ospita il Linux Day di Torino. Per avvicinare i professionisti di domani a GNU/Linux, ".
+						"al software libero e all'open source."
+					) ?></p>
+
+					<p><?php _e("Per raggiungerlo puoi:") ?></p>
+					<p><?php _e("Venire in auto, il parcheggio in zona non manca") ?>;<br />
+					<?php _e("Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")") ?>;<br />
+					<?php _e("Prendere il bus 59 o 50/") ?>
+					</p>
+					<noscript>Abilita JavaScript per vedere la mappa</noscript>
+					<?php $conference->printLocationLeaflet() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="schedule">
 
 	<div class="container">
-		<div class="row valign-wrapper">
-			<div class="col s12">
-				<p class="flow-text center-align"><?php _e("Il tema di quest'anno è... la <strong>privacy</strong>!") ?></p>
-			</div>
-		</div>
+		<h2><?php _e("Programma") ?></h2>
+		<p><?php _e("Il programma dei talk è in fase di definizione! :)") ?></p>
 	</div>
 
-<div class="parallax-container">
-	<div class="parallax"><img src="<?php echo STATIC_PATH ?>/eff-nsa-banner.jpg" alt="<?php _e("EFF NSA banner") ?>"></div>
-</div>
+	<div id="schedule-background">
 
-<div class="container">
-
-	<div class="section">
-		<div class="row valign-wrapper">
-			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<a href="http://www.linuxday.it" title="<?php _e("Linux Day nazionale") ?>">
-					<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
-				</a>
-			</div>
-			<div class="col s12 m10 l11">
-				<p class="flow-text"><?php printf(
-					_(
-						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
-						"Il Linux Day Torino 2017 si svolgerà il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
-					),
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/GNU'),
-						'GNU',
-						null,
-						'black-text hoverable'
-					),
-					HTML::a(
-						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
-						'Linux',
-						null,
-						'black-text hoverable'
-					),
-					$conference->getConferenceStart('d/m/Y'),
-					$conference->getConferenceHumanStart()
-				) ?></p>
-			</div>
-		</div>
-	</div>
-
-	<div id="talk" class="divider" data-show="#talk-section"></div>
-	<div class="section" id="talk-section">
-		<?php $chapter = Chapter::queryByUID('talk') ?>
-
-		<h3><?php echo $chapter->getChapterName() ?></h3>
-
-		<p><em><?php _e("Stiamo preparando un ampio programma :)") ?></em></p>
-
-		<?php /*
-		<?php $eventsTable = new DailyEventsTable(
-			$conference->getConferenceID(),
-			$chapter->getChapterID()
-		) ?>
-		<p class="flow-text"><?php printf(
-			_(
-				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
-				"affrontando tematiche riguardanti il software libero su più livelli, ".
-				"per soddisfare le esigenze di un ampio pubblico (dai più piccoli, al curioso, fino agli esperti)."
-			),
-			"<b>{$eventsTable->countEvents()}</b>",
-			"<b>{$eventsTable->getHours()}</b>"
-		) ?></p>
-		<p><?php printf(
-			_("In seguito si riporta la tabella dei talk suddivisa in %s categorie:"),
-			"<b>{$eventsTable->countTracks()}</b>"
-		) ?></p>
-		<?php $eventsTable->printTable(); ?>
-		*/ ?>
-	</div>
-
-	<div id="rooms" class="divider" data-show="#rooms-section"></div>
-	<div class="section" id="rooms-section">
+		<!-- Bigdata :) -->
 		<div class="row">
-			<div class="col s12 m4 l4">
-				<h3><?php _e("Planimetria") ?></h3>
-				<p class="flow-text"><?php _e("La manifestazione è suddivisa in aule tematiche.") ?></p>
-			</div>
-			<div class="col s12 m7 offset-m1 l6 offset-l2">
-				<div class="card-panel">
-					<div class="center-align">
-						<p><img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2017/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" /></p>
+			<?php
+				$bigdata_box = function ($title, $subject) {
+					?>
+					<div class="col s12 m4 center-align">
+						<h3 class="white-text"><?php echo $title ?></h3>
+						<p class="flow-text white-text"><?php echo $subject ?></p>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					<?php
+				};
 
-	<div id="fdroid" class="divider" data-show="#fdroid-section"></div>
-	<div class="section" id="fdroid-section">
-		<h3><?php _e("App Android") ?></h3>
-		<p class="flow-text"><?php printf(
-			_("La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"),
-			"<em>LDTO Companion</em>"
-		) ?></p>
-		<div class="row">
-			<div class="col s12 m5 l6">
-				<div class="row">
-					<div class="col s4 offset-s4 m12">
-						<img src="<?php echo STATIC_PATH ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
-					</div>
-				</div>
-			</div>
-			<div class="col s12 m7 l6">
-				<p><?php
-					echo icon('looks_one', 'left');
-					printf(
-						_("Scarica e installa %s:"),
-						"F-Droid"
-					);
-				?></p>
-				<p>
-					<a class="btn waves-effect green darken-2 waves-light" href="https://f-droid.org" target="_blank">
-						<?php echo icon('file_download', 'left'); _e("Installa F-Droid") ?>
-					</a>
-				</p>
-				<p><?php
-					echo icon('looks_two', 'left');
-					printf(
-						_("Scarica e installa %s:"),
-						"LDTO Companion"
-					);
-				?></p>
-				<p>
-					<a class="btn waves-effect green darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
-							<?php echo icon('file_download', 'left'); _e("Installa LDTO") ?>
-					</a>
-				</p>
-			</div>
-		</div>
-	</div>
+				$bigdata_box( 4,  _("sessioni") );
+				$bigdata_box( 4,  _("ore") );
+				$bigdata_box( 16, _("relatori") );
 
-	<div id="activities" class="divider" data-show="#activities-section"></div>
-	<div class="section" id="activities-section">
-		<h3><?php _e("Attività") ?></h3>
-		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
-		<div class="row">
-			<?php $box = function($what, $who, $url = null, $prep = null, $img = null, $attendize = null) {
-				if( ! $prep ) {
-					$prep = _("da %s");
-				}
-				$who_text = $who;
-				if( $url ) {
-					$who = HTML::a($url, $who, null, 'white-text', 'target="_blank"');
-				}
-				$who_prep = sprintf($prep, $who);
-			?>
-
-			<div class="col s12 m6">
-				<div class="card-panel hoverable green darken-3 white-text">
-					<?php if( $img ): ?>
-					<div class="row"><!-- Start image row -->
-						<div class="col s4">
-							<img class="responsive-img" src="<?php echo STATIC_PATH . "/partner/$img" ?>" alt="<?php _esc_attr($who_text) ?>" />
-						</div>
-						<div class="col s8"><!-- Start text col -->
-					<?php endif ?>
-
-							<p>
-								<span class="flow-text"><?php echo $what ?></span><br /> 
-								<?php printf( _("Gestito %s."), $who_prep ) ?>
-							</p>
-
-							<?php if($attendize): ?>
-							<p><?php echo HTML::a(
-								$attendize,
-								_("Prenota"),
-								sprintf(
-									_("Prenota la tua partecipazione a %s"),
-									$what
-								),
-								'btn white green-text waves-effect waves-green hoverable',
-								'target="_blank"'
-							) ?></p>
-							<?php endif ?>
-
-					<?php if( $img ): ?>
-						</div><!-- End text col -->
-					</div><!-- End image row -->
-					<?php endif ?>
-				</div>
-			</div>
-
-			<?php };
-
-			$box(
-				_("Riparazione di apparecchiature elettroniche."),
-				_("Associazione Restarters Torino"),
-				'http://www.associazionetesso.org',
-				_("dall'%s"),
-				'restart-party.png'
-			);
-			$box(
-				_("Laboratorio di coding per i più piccoli a tema Linux Day"),
-				sprintf(
-					_("%s e %s."),
-					HTML::a(
-						'http://www.coderdojotorino.it',
-						_("CoderDojo Torino"),
-						 null,
-						'white-text',
-						'target="_blank"'
-					),
-					HTML::a(
-						'http://www.coderdojotorino2.it',
-						_("Coderdojo Torino 2"),
-						null,
-						'white-text',
-						'target="_blank"'
-					)
-				),
-				null,
-				null,
-				'coderdojo.png',
-				'https://attendize.ldto.it/e/3/coderdojo-at-linuxday'
-			);
-			$box(
-				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
-				_("volontari")
-			);
+				unset( $bigdata_box );
 			?>
 		</div>
+		<!-- /Bigdata :) -->
 	</div>
+</section>
 
-	<div id="where" class="divider" data-show="#where-section"></div>
-	<div id="where-section" class="section">
-		<div class="row">
-			<div class="col s12 m4">
-				<h3><?php _e("Come arrivare") ?></h3>
-				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
-				<?php echo $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
-			</div>
-			<div class="col s10 m8">
-				<div class="card-panel">
-					<?php $conference->printLocationLeaflet() ?>
-					<noscript>
-						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
-						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
-					</noscript>
-					<div class="row valign-wrapper">
-						<div class="col s8">
-							<p class="flow-text"><?php echo $conference->getLocationAddress() ?></p>
-						</div>
-						<div class="col s4">
-							<p class="right"><?php echo HTML::a(
-								$conference->getLocationGeoOSM(),
-								icon('place', 'right'),
-								sprintf(
-									_("Vedi %s su OpenStreetMap"),
-									esc_html( $conference->getConferenceTitle() )
-								),
-								'btn-floating btn-large green darken-3 waves-effect',
-								'target="_blank"'
-							) ?></p>
-						</div>
-					</div>
-				</div>
+<section class="container" id="extras">
+	<h2><?php _e("Extras") ?></h2>
+	<p class="flow-text"><?php _e(
+		"Se i talk non dovessero bastare, abbiamo altro con cui animare la giornata!"
+	) ?></p>
+
+	<!-- extra boxes -->
+	<?php $extra_box = function($title, $content) { ?>
+		<div class="col s12 m6">
+			<div class="card-panel">
+				<h3><?php echo $title ?></h3>
+				<p><?php echo $content ?></p>
 			</div>
 		</div>
-	</div>
+	<?php }; ?>
 
-	<div id="price" class="divider" data-show="#price-section"></div>
-	<div class="section" id="price-section">
-		<div class="row">
-			<div class="col s12 m9">
-				<h3><?php _e("Ingresso gratuito") ?></h3>
-				<p class="flow-text"><?php printf(
-					_(
-					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".
-					"Non dimenticare di portarti a casa una <em>maglietta</em> o ".
-					"qualche dozzina di adesivi e spille! ".
-					"È il nostro modo per promuovere ulteriormente il software libero, ".
-					"per far sì che altri Linux Day rimangano sempre indipendenti, liberi e gratuiti.<br /> ".
-					"Ci vediamo il <strong>%s</strong>!"
-					),
-					_("28 ottobre")
-				) ?></p>
-
-				<!--
-				<p><?php echo HTML::a(
-					CONFERENCE_PATH . '/partner.php',
-					_("Scopri i nostri partner") . icon('business', 'right'),
-					sprintf(
-						_("Partner %s"),
-						SITE_NAME
-					),
-					'btn green white-text waves-effect waves-light'
-				) ?></p>
-				-->
-			</div>
-			<div class="col s12 m3">
-				<div class="row">
-					<div class="col s6 m12 offset-s3">
-						<div class="center-align">
-							<img class="responsive-img" src="<?php echo STATIC_PATH ?>/surveillance_notice.png" alt="<?php _e("Telecamera di videosorveglianza") ?>" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="row">
+		<?php
+			$extra_box( "Linux Install Party", _("Porta il tuo computer, ti aiuteremo ad installare Linux!") );
+			$extra_box( "Restart Party", _("Il frullatore non funziona più? Portalo e lo ripareremo insieme!") );
+		?>
 	</div>
-</div>
+	<div class="row">
+		<?php
+			$extra_box( "CoderDojo", sprintf(
+				_("Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni."),
+				7,
+				13
+			) );
+			$extra_box( "Open Source Saturday", _("Vieni a presentare il tuo progetto open source e smanettaci con altri appassionati!") );
+		?>
+	</div>
+	<?php unset( $extra_box ) ?>
+	<!-- /extra boxes -->
+</section>
+
+<section class="container align-center" id="sponsor">
+	<h2><?php _e("Sponsor") ?></h2>
+	<p class="flow-text"><?php _e("Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere l'evento.") ?></p>
+	<div class="center-align">
+		<a href="http://www.quadrata.it/">
+			<img src="<?php echo STATIC_PATH ?>/partner/quadrata.png" alt="Quadrata" />
+		</a>
+	</div>
+</section>
 
 <?php
-
 Footer::spawn( ['home' => false] );

@@ -1,1 +1,81 @@
-../../2016/static/home.css
+/*
+ * Copyright (C) 2017 Roberto Guido, Valerio Bozzolan, Linux Day Torino
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+body {
+	margin-top:0;
+}
+h1 {
+	text-transform:uppercase;
+}
+section {
+	padding-top:20px;
+	padding-bottom:15px;
+}
+#introduction {
+	background-image:url(ld-2017-banner-1920x960.png);
+	background-size:cover;
+	background-position:center top;
+	color:white;
+
+	padding-top:300px;
+}
+#introduction h1, #introduction p {
+	text-shadow: 5px 10px 20px #000;
+}
+#location {
+	background-image:url(ld-2016-location-banner.jpg);
+	background-size:cover;
+	background-position:center center;
+}
+#schedule-background {
+	background-image:url(ld-2016-people-banner.jpg);
+	background-size:cover;
+	background-position:center center;
+	padding-top:30px;
+	padding-bottom:15px;
+}
+.long-description {
+	text-align:justify;
+}
+#map {
+	height:300px;
+}
+i, button {
+	color:#66B772;
+}
+.ld-social img {
+	margin:10px;
+}
+.ld-text {
+	color: #66B772
+}
+.typing-smanettone-container {
+	min-height:60px;
+}
+@media only screen and (max-width: 500px) {
+	#introduction {
+		padding-top:30px;
+	}
+	h1 {
+		font-size:3em;
+	}
+	h2 {
+		font-size:2em;
+	}
+	h3 {
+		font-size:1.5em;
+	}
+}

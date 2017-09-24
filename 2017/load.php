@@ -64,7 +64,6 @@ define('SITE_NAME_SHORT',  _("LDTO2017") );
 define('SITE_DESCRIPTION', _("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
 
 ///////////////////////////////////////////////////////////////////
-// Boz-PHP: CSS and JS (some aliases from `libjs-jquery` package)
 register_js('leaflet.init',        STATIC_PATH . '/leaflet-init.js');
 register_js('materialize',         STATIC_PATH . '/materialize/js/materialize.min.js');
 register_css('materialize',        STATIC_PATH . '/materialize/css/materialize.min.css');
@@ -72,6 +71,7 @@ register_css('materialize.custom', STATIC_PATH . '/materialize-custom.css');
 register_css('materialize.icons',  STATIC_PATH . '/material-design-icons/material-icons.css');
 register_css('home',               STATIC_PATH . '/home.css');
 register_js('scrollfire',          STATIC_PATH . '/scrollfire.js');
+register_js('typed',               STATIC_PATH . '/typed/typed.min.js');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries

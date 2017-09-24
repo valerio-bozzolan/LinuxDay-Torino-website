@@ -20,4 +20,8 @@ https://www.gnu.org/licenses/fdl.html
 * Giovani per Torino (in concessione esclusiva a Linux Day Torino)
 http://www.comune.torino.it/infogio/gxt/cose.htm
 
-* Tutti gli altri loghi sotto licenza esclusiva Linux Day 2016
+* Quadrata (in concessione esclusiva a Linux Day Torino)
+http://www.quadrata.it/	
+
+
+* Altri loghi sotto sotto licenza esclusiva Linux Day Torino

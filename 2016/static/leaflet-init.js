@@ -24,7 +24,9 @@ $(document).ready(function () {
 	var center = L.latLng(lat, lng);
 	var url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	var thanks = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-	var map = L.map('map');
+	var map = L.map('map', {
+ 		scrollWheelZoom: false
+	} );
 	map.setView(center, z);
 	map.addLayer( new L.TileLayer(url, {
 		minZoom: 10,

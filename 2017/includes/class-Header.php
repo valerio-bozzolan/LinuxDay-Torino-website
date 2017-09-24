@@ -86,7 +86,7 @@ class Header {
 	<title><?php echo $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="GNU nano" />
-	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
+	<link rel="license" href="//creativecommons.org/licenses/by-sa/4.0/" />
 
 <?php load_module('header') ?>
 
