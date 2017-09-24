@@ -1,16 +1,18 @@
 # Relatori Linux Day Torino
 Si invitano i relatori a fornire più informazioni possibili riguardanti il proprio talk. In particolare:
 
-* Titolo — Il nome del talk (comparirà sul sito, max. 30 caratteri)
-* Abstract — Le tematiche del talk (comparirà sul sito, max. 200 caratteri)
+* Titolo — Il nome del talk (max. 30 caratteri)
+* Abstract — Le tematiche del talk (max. 200 caratteri)
 * Descrizione — Come saranno affrontate le tematiche del talk nell'ora a disposizione
-* Materiali — Le proprie slide o altro materiale (fornirle entro 7 giorni dal talk!)
+* Materiali — Le proprie slide o altro materiale
 * Immagine — Un'immagine o un logo per il proprio talk
+
+È molto apprezzata la traduzione in lingua inglese di titolo, abstract e descrizione.
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
 
 ## Relatore
-Per ogni relatore del talk, specificare:
+Per ogni relatore del talk, specificare (`*` = prodotto surgelato):
 
 * Nome\*
 * Cognome\*
@@ -21,7 +23,7 @@ Per ogni relatore del talk, specificare:
 * Breve biografia in Italiano e in Inglese
 * Vari social (GitHub, Twitter, Facebook, LinkedIn, Google+, ..)
 
-I relatori possono registrarsi in [https://it.gravatar.com](Gravatar.com) per cambiare l'immagine del proprio profilo sul sito. Alternativamente, per evitare di registrarsi in Gravatar, fornire un'immagine (possibilmente almeno 256x256px) che sarà caricata sul sito.
+È possibile specificare l'immagine del proprio profilo registrandosi in [Gravatar.com](https://it.gravatar.com) oppure fornendo un'immagine profilo almeno 256x256px.
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
 
@@ -37,9 +39,9 @@ I relatori sono fortemente invitati ad utilizzare una delle seguenti licenze cul
 
 All'interno del materiale non dimenticarsi di specificare:
 
-* Riferimenti al Linux Day Torino 2016
-* Nome e cognome dei relatori e contatti
+* Nome e cognome dei relatori ed eventuali contatti
 * Licenza scelta
+* Riferimenti al Linux Day Torino (+ data)
 
 Inviare il tutto al webmaster (webmaster at ldto dot it).
 

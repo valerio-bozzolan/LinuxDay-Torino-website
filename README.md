@@ -1,14 +1,7 @@
-# LD2016
-![Linux Day Torino 2016](https://raw.githubusercontent.com/0iras0r/ld2016/master/2016/static/linuxday-64.png)
+# Linux Day Torino website
+![Linux Day Torino](https://raw.githubusercontent.com/0iras0r/ld2016/master/2016/static/linuxday-64.png)
 
 Materiale per il Linux Day Torino dal 2016 al 2017.
-
-## TO-DO
-* Sito dell'evento (OK!)
-* Gestione prenotazioni CoderDojo (OK!)
-* Questionario sull'evento
-* Materiale informativo per ruoli interni
-* Registrazione talk (SEMBRA-OK!)
 
 ## Installazione sito web
 Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di ogni Linux Day Torino, centralizzandone le informazioni.
@@ -39,12 +32,12 @@ Il sito può rimanere tranquillamente in sola lettura per l'utente Apache:
 Se il sito ha una cartella diversa dalla root, ricordarsi di variare l'`.htaccess` in concordanza:
 
     # /.htaccess:
-    RewriteBase /ldto2016
+    RewriteBase /ldto
 
 E ricordarsi di aggiornare la relativa costante:
 
     # /load.php:
-    define('ROOT', '/ldto2016');
+    define('ROOT', '/ldto');
 
 ### Database
 Creare un database e importare `database-schema.sql`.
@@ -130,7 +123,7 @@ In ogni caso:
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
 ## Licenza
-Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino.
+Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](LICENSE.md). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
