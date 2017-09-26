@@ -137,7 +137,7 @@ var typed = new Typed('.typing-smanettone', {
 <section id="location">
 	<div class="container">
 		<div class="row">
-			<div class="col s12 m7 l6 offset-m5 offset-l6">
+			<div class="col s12 m7 l6">
 				<div class="card-panel">
 					<h2><?php _e("Location") ?></h2>
 
@@ -162,7 +162,7 @@ var typed = new Typed('.typing-smanettone', {
 
 <section id="schedule">
 
-	<div class="container">
+	<div class="container center-align">
 		<h2><?php _e("Programma") ?></h2>
 		<p><?php _e("Il programma dei talk è in fase di definizione! :)") ?></p>
 	</div>
@@ -193,16 +193,18 @@ var typed = new Typed('.typing-smanettone', {
 </section>
 
 <section class="container" id="extras">
+	<div class="center-align">
 	<h2><?php _e("Extras") ?></h2>
 	<p class="flow-text"><?php _e(
 		"Se i talk non dovessero bastare, abbiamo altro con cui animare la giornata!"
 	) ?></p>
+	</div>
 
 	<!-- extra boxes -->
 	<?php $extra_box = function($title, $content) { ?>
 		<div class="col s12 m6">
 			<div class="card-panel">
-				<h3><?php echo $title ?></h3>
+				<h5><?php echo $title ?></h5>
 				<p><?php echo $content ?></p>
 			</div>
 		</div>
@@ -228,7 +230,7 @@ var typed = new Typed('.typing-smanettone', {
 	<!-- /extra boxes -->
 </section>
 
-<section class="container align-center" id="sponsor">
+<section class="container center-align" id="sponsor">
 	<h2><?php _e("Sponsor") ?></h2>
 	<p class="flow-text"><?php _e("Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere l'evento.") ?></p>
 	<div class="center-align">
