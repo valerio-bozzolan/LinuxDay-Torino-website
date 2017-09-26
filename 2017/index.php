@@ -104,9 +104,9 @@ var typed = new Typed('.typing-smanettone', {
 
 		<!-- Fuffa :) -->
 		<?php $fuffa_box = function ($title, $icon, $phrase) { ?>
-			<div class="col s12 m6">
+			<div class="col s12 l6 center-align">
+				<p><i class="material-icons"><?php echo $icon ?></i></p>
 				<h3><?php echo $title ?></h3>
-				<i class="material-icons left medium"><?php echo $icon ?></i>
 				<p><?php echo $phrase ?></p>
 			</div>
 		<?php }; ?>
@@ -114,7 +114,7 @@ var typed = new Typed('.typing-smanettone', {
 		<div class="col s12 l6 offset-l1">
 			<div class="row">
 				<?php
-					$fuffa_box( _("Dove"),     'location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
+					$fuffa_box( _("Location"),     'location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
 					$fuffa_box( _("Speakers"), 'event_seat', sprintf(
 						_("<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."),
 						16,
