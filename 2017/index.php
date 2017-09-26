@@ -136,7 +136,7 @@ var typed = new Typed('.typing-smanettone', {
 <section id="location">
 	<div class="container">
 		<div class="row">
-			<div class="col s12 m7 l6">
+			<div class="col s12 m7 l6 offset-m5 offset-l6">
 				<div class="card-panel">
 					<h2><?php _e("Location") ?></h2>
 
@@ -151,7 +151,7 @@ var typed = new Typed('.typing-smanettone', {
 					<?php _e("Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")") ?>;<br />
 					<?php _e("Prendere il bus 59 o 50/") ?>
 					</p>
-					<noscript>Abilita JavaScript per vedere la mappa</noscript>
+					<noscript><?php _e("Abilita JavaScript per vedere la mappa") ?></noscript>
 					<?php $conference->printLocationLeaflet() ?>
 				</div>
 			</div>
