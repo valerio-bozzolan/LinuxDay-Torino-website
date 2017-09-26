@@ -105,7 +105,8 @@ var typed = new Typed('.typing-smanettone', {
 		<!-- Fuffa :) -->
 		<?php $fuffa_box = function ($title, $icon, $phrase) { ?>
 			<div class="col s12 m6">
-				<h3><i class="material-icons right"><?php echo $icon ?></i> <?php echo $title ?></h3>
+				<h3><?php echo $title ?></h3>
+				<i class="material-icons left medium"><?php echo $icon ?></i>
 				<p><?php echo $phrase ?></p>
 			</div>
 		<?php }; ?>
