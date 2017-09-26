@@ -125,7 +125,7 @@ var typed = new Typed('.typing-smanettone', {
 			<div class="row">
 				<?php
 					$fuffa_box( _("Quando"), 'access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
-					$fuffa_box( _("Extras"), 'star_rate', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
+					$fuffa_box( _("Extras"), 'extension', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
 				?>
 			</div>
 		</div>
