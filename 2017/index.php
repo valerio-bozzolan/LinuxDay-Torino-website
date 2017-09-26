@@ -217,7 +217,7 @@ var typed = new Typed('.typing-smanettone', {
 	<div class="row">
 		<?php
 			$extra_box( "CoderDojo", sprintf(
-				_("Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni."),
+				_("Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. Prenotazione obbligatoria (disponibile a breve)."),
 				7,
 				13
 			) );
