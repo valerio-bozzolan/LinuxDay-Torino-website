@@ -21,7 +21,7 @@ $conference = FullConference::queryByUID( @ $_GET['uid'] );
 $conference or die_with_404();
 
 FORCE_PERMALINK
-	&& $conference->forceConferencePermalink();
+	and $conference->forceConferencePermalink();
 
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
@@ -77,10 +77,12 @@ var typed = new Typed('.typing-smanettone', {
 <section class="container" id="about">
 	<div class="center-align">
 		<h2><?php _e("Cos'è il Linux Day Torino") ?></h2>
-		<p class="flow-text"><?php _e(
-			"L'edizione sabauda del Linux Day, il grande evento nazionale per la promozione e la ".
-			"diffusione di GNU/Linux e del software libero."
-		) ?></p>
+		<div class="container">
+			<p class="flow-text"><?php _e(
+				"L'edizione sabauda del Linux Day, il grande evento nazionale per la promozione e la ".
+				"diffusione di GNU/Linux e del software libero."
+			) ?></p>
+		</div>
 	</div>
 
 	<div class="row">

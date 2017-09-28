@@ -30,7 +30,7 @@ section {
 	background-position:center top;
 	color:white;
 
-	padding-top:300px;
+	padding-top:350px;
 }
 #introduction h1, #introduction p {
 	text-shadow: 5px 10px 20px #000;
@@ -65,9 +65,9 @@ i, button {
 .typing-smanettone-container {
 	min-height:60px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 	#introduction {
-		padding-top:30px;
+		padding-top:240px;
 	}
 	h1 {
 		font-size:3em;
@@ -77,5 +77,10 @@ i, button {
 	}
 	h3 {
 		font-size:1.5em;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#introduction {
+		padding-top:100px;
 	}
 }
