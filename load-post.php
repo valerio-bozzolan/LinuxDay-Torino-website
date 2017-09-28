@@ -57,6 +57,9 @@ defined('JQUERY')
 defined('LEAFLET_DIR')
 	or define('LEAFLET_DIR', '/javascript/leaflet');
 
+defined('NOINDEX')
+	or define('NOINDEX', false);
+
 // /{conference_uid}/
 defined('PERMALINK_CONFERENCE')
 	or define('PERMALINK_CONFERENCE', '/%s/');

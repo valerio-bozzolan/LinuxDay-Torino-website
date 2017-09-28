@@ -30,7 +30,8 @@ class Header {
 			'user-navbar' => true,
 			'container'   => true,
 			'alert'       => null,
-			'alert.type'  => null
+			'alert.type'  => null,
+			'noindex'     => NOINDEX
 		] );
 
 		if( ! isset( $args['og'] ) ) {
@@ -87,12 +88,14 @@ class Header {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="GNU nano" />
 	<link rel="license" href="//creativecommons.org/licenses/by-sa/4.0/" />
-
 <?php load_module('header') ?>
 
 <?php foreach($args['og'] as $id=>$value): ?>
 	<meta property="og:<?php echo $id ?>" content="<?php echo $value ?>" />
 <?php endforeach ?>
+<?php if( $args['noindex'] ): ?>
+	<meta name="robots" content="noindex" />
+<?php endif ?>
 </head>
 <!--
 __        _______
