@@ -18,6 +18,9 @@
 // Die if called directly
 defined('BOZ_PHP') or exit;
 
+// Custom Sessionuser class
+define('SESSIONUSER_CLASS', 'User');
+
 define('INCLUDES', 'includes');
 
 // Autoload classes
