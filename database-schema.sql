@@ -457,7 +457,7 @@ CREATE TABLE `ldto_user` (
   `user_surname` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_email` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_image` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Gravatar when NULL',
-  `user_password` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_password` varchar(40) COLLATE utf8mb4_unicode_ci,
   `user_site` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_lovelicense` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_bio` text COLLATE utf8mb4_unicode_ci,
