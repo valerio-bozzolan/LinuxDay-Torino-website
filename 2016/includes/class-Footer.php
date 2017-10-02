@@ -27,7 +27,7 @@ class Footer {
 	<?php if( $args['home'] ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<a class="btn purple darken-3 waves-effect" href="<?php echo URL ?>/">
+		<a class="btn purple darken-3 waves-effect" href="<?php echo CURRENT_CONFERENCE_PATH ?>/">
 			<?php
 				printf(
 					_("Torna a %s"),
