@@ -31,9 +31,11 @@ apt-get install --yes mariadb-server     \
 
 if [ ! -e "$BOZ_PHP" ]; then
 	bzr branch lp:boz-php-another-php-framework "$BOZ_PHP"
-	chmod --recursive 750                       "$BOZ_PHP"
-	chown --recursive root:www-data             "$BOZ_PHP"
+else
+	bzr pull --directory="$BOZ_PHP" lp:boz-php-another-php-framework
 fi
+chmod --recursive 750           "$BOZ_PHP"
+chown --recursive root:www-data "$BOZ_PHP"
 
 #if [ ! -h "$WWW" ]; then
 #	rm --recursive                     "$WWW"
@@ -88,6 +90,15 @@ cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
 	</Directory>
 </VirtualHost>
 EOF
+
+# https://wiki.debian.org/Locale#Manually
+cat > /etc/locale.gen <<EOF
+it_IT.UTF-8 UTF-8
+en_US.UTF-8 UTF-8
+EOF
+
+locale-gen
+locale -a
 
 a2enmod rewrite
 
