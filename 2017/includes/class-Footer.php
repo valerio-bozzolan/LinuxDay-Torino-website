@@ -44,8 +44,8 @@ class Footer {
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m7 l8">
-				<h5><code>#LDTO17</code></h5>
-				<p><?php printf(
+				<h5 class="black-text"><code>#LDTO17</code></h5>
+				<p class="black-text"><?php printf(
 					_("Tutti i contenuti sono rilasciati sotto ".
 					  "licenza di <strong>contenuto culturale libero</strong> %s. ".
 					  "Sei libero di distribuire e/o modificare i contenuti ".
@@ -54,7 +54,7 @@ class Footer {
 					),
 					license('cc-by-sa-4.0')->getLink('green-text')
 				) ?></p>
-				<p><?php printf(
+				<p class="black-text"><?php printf(
 					_("Contattare all'indirizzo %s o al numero %s."),
 					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'hoverable green-text'),
 					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'hoverable green-text', 'target="_blank"')
@@ -84,7 +84,7 @@ class Footer {
 				</p>
 			</div>
 			<div class="col s12 m5 l4">
-				<h5><?php _e("Edizioni Passate") ?></h5>
+				<h5 class="black-text"><?php _e("Edizioni Passate") ?></h5>
 				<ul>
 					<?php $ld = function($year, $where) { ?>
 					<li><?php echo HTML::a(
