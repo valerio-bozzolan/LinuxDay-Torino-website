@@ -100,6 +100,10 @@ EOF
 locale-gen
 locale -a
 
+# Patch for php-libmarkdown
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
+sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php/markdown.php
+
 a2enmod rewrite
 
 service apache2 restart
