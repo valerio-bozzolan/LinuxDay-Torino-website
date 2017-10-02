@@ -4,6 +4,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
+WELCOME=http://localhost:8080
 PROJECT=/vagrant
 WWW="$PROJECT"
 DB_NAME=ldto
@@ -24,6 +25,7 @@ apt-get install --yes mariadb-server     \
                       apache2            \
                       libapache2-mod-php \
                       php-php-gettext    \
+                      gettext            \
                       libmarkdown-php    \
                       libjs-jquery       \
                       libjs-leaflet      \
@@ -106,8 +108,16 @@ sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php
 
 a2enmod rewrite
 
-service apache2 restart
+# GNU Gettext workflow (trust me: 3 are enough.)
+cd "$WWW"
+php "$WWW"/2016/l10n/localize.php .
+php "$WWW"/2016/l10n/localize.php .
+php "$WWW"/2016/l10n/localize.php .
+cd -
+#/GNU Gettext workflow
 
 chown --recursive root:www-data "$WWW/"
 
-echo "End provision."
+service apache2 restart
+
+echo "End provision: \t$WELCOME"
