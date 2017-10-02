@@ -15,3 +15,6 @@ schedule.xml
 
 # htaccess.txt is just an example (that doesn't work even though it's formally correct in every way possible)
 /.htaccess
+
+# https://www.vagrantup.com/
+/.vagrant
