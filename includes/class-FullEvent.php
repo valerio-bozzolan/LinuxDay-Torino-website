@@ -32,8 +32,8 @@ trait FullEventTrait {
 	}
 
 	function forceEventPermalink() {
-		$url = $this->getEventURL();
-		if( $url !== request_uri() ) {
+		$url = $this->getEventURL( ROOT );
+		if( $url !== $_SERVER['REQUEST_URI'] ) {
 			http_redirect( $url );
 		}
 	}

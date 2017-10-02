@@ -51,8 +51,8 @@ trait UserTrait {
 	}
 
 	function forceUserPermalink() {
-		$url = $this->getUserURL( URL );
-		if( $url !== request_uri() ) {
+		$url = $this->getUserURL( ROOT );
+		if( $url !== $_SERVER['REQUEST_URI'] ) {
 			http_redirect( $url );
 		}
 	}

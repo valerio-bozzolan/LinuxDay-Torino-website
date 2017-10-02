@@ -33,8 +33,8 @@ trait ConferenceTrait {
 	}
 
 	function forceConferencePermalink() {
-		$url = $this->getConferenceURL();
-		if( $url !== request_uri() ) {
+		$url = $this->getConferenceURL( ROOT );
+		if( $url !== $_SERVER['REQUEST_URI'] ) {
 			http_redirect( $url );
 		}
 	}
