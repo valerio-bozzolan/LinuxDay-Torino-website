@@ -1,3 +1,0 @@
-[submodule "boz-php"]
-	path = includes/boz-php
-	url = git@github.com:valerio-bozzolan/boz-php-another-php-framework.git
