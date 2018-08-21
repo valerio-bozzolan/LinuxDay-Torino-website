@@ -107,8 +107,6 @@ php "$WWW"/2016/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
-chown --recursive root:www-data "$WWW/201*/l10n/*/LC_MESSAGES/*.mo"
-
 # disable an unuseful default Apache configuration that we do not use
 a2disconf serve-cgi-bin
 
