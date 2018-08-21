@@ -31,9 +31,6 @@ apt-get install --yes mariadb-server     \
                       libjs-leaflet      \
                       bzr
 
-# set a default Bazaar username to avoid a warning
-bzr whoami vagrant
-
 if [ ! -e "$BOZ_PHP" ]; then
 	bzr branch lp:boz-php-another-php-framework "$BOZ_PHP"
 else
