@@ -27,15 +27,17 @@ require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'load.php';
 // command line arguments
 $opts = getopt( 'h', [
 	'uid:',
+	'role:',
 	'pwd:',
 	'help',
 ] );
 
 // show help
-if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ] ) || isset( $opts[ 'help' ] ) || isset( $opts[ 'h' ] ) ) {
+if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ], $opts[ 'role' ] ) || isset( $opts[ 'help' ] ) || isset( $opts[ 'h' ] ) ) {
 	printf( "Usage: %s [OPTIONS]\n", $argv[ 0 ] );
 	echo "OPTIONS:\n";
 	echo "    --uid=UID          user UID (e-mail)\n";
+	echo "    --role=ROLE        user role (user|admin)\n";
 	echo "    --pwd=PASSWORD     password\n";
 	echo " -h --help             show this help and exit\n";
 	exit( 0 );
@@ -53,7 +55,8 @@ if( $user ) {
 
 $pwd = User::encryptPassword( $opts[ 'pwd' ] );
 insert_row( User::T, [
-	new DBCol( 'user_uid',      $opts[ 'uid' ], 's' ),
-	new DBCol( 'user_password', $pwd,           's' ),
-	new DBCol( 'user_active',   1,              'd' ),
+	new DBCol( 'user_uid',      $opts[ 'uid' ],  's' ),
+	new DBCol( 'user_role',     $opts[ 'role' ], 's' ),
+	new DBCol( 'user_password', $pwd,            's' ),
+	new DBCol( 'user_active',   1,               'd' ),
 ] );
