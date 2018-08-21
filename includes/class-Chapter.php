@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database chapter
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -36,28 +36,24 @@ trait ChapterTrait {
 class Chapter extends Queried {
 	use ChapterTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'chapter';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override
+	 */
+	const MAXLEN_UID = 32;
+
 	function __construct() {
 		$this->normalizeChapter();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('chapter');
-	}
-
-	static function factoryByUID( $chapter_uid ) {
-		$chapter_uid = self::sanitizeUID( $chapter_uid );
-
-		return self::factory()
-			->whereStr( 'chapter_uid', $chapter_uid );
 	}
 
 	static function queryByUID( $chapter_uid ) {
 		return self::factoryByUID( $chapter_uid )->queryRow();
 
-	}
-
-	private static function sanitizeUID( $chapter_uid ) {
-		return luser_input( $chapter_uid, 32 );
 	}
 }

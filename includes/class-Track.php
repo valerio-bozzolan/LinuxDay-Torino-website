@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database track
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -40,23 +40,17 @@ trait TrackTrait {
 class Track extends Queried {
 	use TrackTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'track';
+
+	/**
+	 * Maximum UID length
+	 */
+	const MAXLEN_UID = 64;
+
 	function __construct() {
 		$this->normalizeTrack();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( 'track' );
-	}
-
-	static function factoryByUID( $track_uid ) {
-		$track_uid = self::sanitizeUID( $track_uid );
-
-		return self::factory()
-			->whereStr( 'track_uid', $track_uid );
-	}
-
-	static function sanitizeUID( $track_uid ) {
-		return luser_input( $track_uid, 64 );
 	}
 }

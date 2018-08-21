@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database sharable
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -112,13 +112,13 @@ trait SharableTrait {
 class Sharable extends Queried {
 	use SharableTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'sharable';
+
 	function __construct() {
 		$this->normalizeSharable();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('sharable');
 	}
 
 	static function factoryByEvent( $event_ID ) {

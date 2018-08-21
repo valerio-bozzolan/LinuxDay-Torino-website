@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database conference
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -86,28 +86,19 @@ trait ConferenceTrait {
 class Conference extends Queried {
 	use ConferenceTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'chapter';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override
+	 */
+	const MAXLEN_UID = 32;
+
 	function __construct() {
 		$this->normalizeConference();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( 'conference' );
-	}
-
-	static function factoryByID( $conference_ID ) {
-		return self::factory()
-			->whereInt( 'conference_ID', $conference_ID );
-	}
-
-	static function factoryByUID( $conference_uid ) {
-		$conference_uid = self::sanitizeUID( $conference_uid );
-
-		return self::factory()
-			->whereStr( 'conference_uid', $conference_uid );
-	}
-
-	static function sanitizeUID( $conference_uid ) {
-		return luser_input( $conference_uid, 64 );
 	}
 }

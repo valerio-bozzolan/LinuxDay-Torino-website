@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database user skill
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -68,13 +68,13 @@ class UserSkill extends Queried {
 	use UserSkillTrait;
 	use SkillTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'user_skill';
+
 	function __construct() {
 		$this->normalizeUserSkill();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('user_skill');
 	}
 
 	static function factoryByUser( $user_ID ) {

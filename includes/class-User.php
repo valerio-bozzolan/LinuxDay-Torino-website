@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database user
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -160,22 +160,21 @@ trait UserTrait {
 	}
 }
 
-// From Boz-PHP
-class_exists('Sessionuser');
-
-class User extends Queried {
+class User extends Sessionuser {
 	use UserTrait;
 
-	// From Boz-PHP
-	use SessionuserTrait;
+	/**
+	 * Database table name
+	 */
+	const T = 'user';
+
+	/**
+	 * Maximum UID length
+	 */
+    const MAXLEN_UID = 20;
 
 	function __construct() {
 		$this->normalizeUser();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('user');
 	}
 
 	static function factoryByEvent( $event_ID ) {
@@ -185,18 +184,8 @@ class User extends Queried {
 			->whereInt('event_user.event_ID', $event_ID );
 	}
 
-	static function factoryByUID( $user_uid ) {
-		$user_uid = self::sanitizeUID( $user_uid );
-		return self::factory()
-			->whereStr( 'user_uid', $user_uid );
-	}
-
 	static function queryByUID( $user_uid ) {
 		return self::factoryByUID( $user_uid )
 			->queryRow();
-	}
-
-	private static function sanitizeUID( $user_uid ) {
-		return luser_input( $user_uid, 20 );
 	}
 }

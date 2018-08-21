@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database skill
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -32,26 +32,22 @@ trait SkillTrait {
 class Skill extends Queried {
 	use SkillTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'skill';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override
+	 */
+	const MAXLEN_UID = 32;
+
 	const SUBJECT     = 'subject';
 	const PROGRAMMING = 'programming';
 
 	function __construct() {
 		$this->normalizeSkill();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('skill');
-	}
-
-	static function factoryByUID( $skill_uid ) {
-		$skill_uid = self::normalizeUID( $skill_uid );
-
-		return self::factory()
-			->whereStr( 'skill_uid', $skill_uid );
-	}
-
-	private static function normalizeUID( $skill_uid ) {
-		return luser_input( $skill_uid, 32 );
 	}
 }

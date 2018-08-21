@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database Subscription
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -41,13 +41,13 @@ trait SubscriptionTrait {
 class Subscription extends Queried {
 	use SubscriptionTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'subscription';
+
 	function __construct() {
 		$this->normalizeSubscription();
-	}
-
-	static function factory() {
-		return Query::factory()
-			->from('subscription');
 	}
 
 	static function insert($email, $event_ID, $token = null) {

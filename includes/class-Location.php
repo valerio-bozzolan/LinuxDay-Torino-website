@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database Location
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -85,29 +85,21 @@ trait LocationTrait {
 class Location extends Queried {
 	use LocationTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'location';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override Queried::MAXLEN_UID
+	 */
+	const MAXLEN_UID = 64;
+
 	const DEFAULT_ZOOM = 17;
 
 	function __construct() {
 		$this->normalizeLocation($this);
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( 'location' );
-	}
-
-	static function factoryByID( $location_ID ) {
-		return self::factory()
-			->whereInt( 'location_ID', $location_ID );
-	}
-
-	static function factoryByUID( $location_uid ) {
-		$location_uid = self::sanitizeUID( $location_uid );
-		return self::factory()
-			->whereStr( 'location_uid', $location_uid );
-	}
-
-	static function sanitizeUID( $location_uid ) {
-		return luser_input( $location_uid, 64 );
 	}
 }

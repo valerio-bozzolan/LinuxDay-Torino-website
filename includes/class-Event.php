@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database event
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -141,16 +141,19 @@ class Event extends Queried {
 
 	use EventTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'event';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override
+	 */
+	const MAXLEN_UID = 100;
+
 	function __construct() {
 		$this->normalizeEvent();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from('event');
-	}
-
-	static function sanitizeUID( $event_uid ) {
-		return luser_input( $event_uid, 100 );
 	}
 }

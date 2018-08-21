@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database room
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -36,23 +36,19 @@ trait RoomTrait {
 class Room extends Queried {
 	use RoomTrait;
 
+	/**
+	 * Database table name
+	 */
+	const T = 'room';
+
+	/**
+	 * Maximum UID length
+	 *
+	 * @override Queried::MAXLEN_UID
+	 */
+	const MAXLEN_UID = 64;
+
 	function __construct() {
 		$this->normalizeRoom();
-	}
-
-	static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( 'room' );
-	}
-
-	static function factoryByUID( $room_uid ) {
-		$room_uid = self::sanitizeUID( $room_uid );
-
-		return self::factory()
-			->whereStr( 'room_uid', $room_uid );
-	}
-
-	static function sanitizeUID( $room_uid ) {
-		return luser_input( $room_uid, 64 );
 	}
 }
