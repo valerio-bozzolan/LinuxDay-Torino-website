@@ -16,20 +16,41 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait EventTrait {
-	function getEventID() {
-		return $this->nonnull('event_ID');
+
+	/**
+	 * Get event ID
+	 *
+	 * @return int
+	 */
+	public function getEventID() {
+		return $this->nonnull( Event::ID );
 	}
 
-	function getEventUID() {
-		return $this->get('event_uid');
+	/**
+	 * Get event UID
+	 *
+	 * @return string
+	 */
+	public function getEventUID() {
+		return $this->get( Event::UID );
 	}
 
-	function getEventTitle() {
-		return _( $this->get('event_title') );
+	/**
+	 * Get localized event title
+	 *
+	 * @return string
+	 */
+	public function getEventTitle() {
+		return _( $this->get( Event::TITLE ) );
 	}
 
-	function getEventSubtitle() {
-		return _( $this->get('event_subtitle') );
+	/**
+	 * Get localized event subtitle
+	 *
+	 * @return string
+	 */
+	public function getEventSubtitle() {
+		return _( $this->get( Event::SUBTITLE ) );
 	}
 
 	function getEventHumanStart() {
@@ -48,35 +69,70 @@ trait EventTrait {
 		return $this->get('event_end')->format($f);
 	}
 
-	function hasEventImage() {
-		return null !== $this->get('event_img');
+	/**
+	 * It has an event image?
+	 *
+	 * @return bool
+	 */
+	public function hasEventImage() {
+		return null !== $this->get( Event::IMAGE );
 	}
 
 	function getEventImage($base = URL) {
-		return site_page( $this->get('event_img') , $base );
+		return site_page( $this->get( Event::IMAGE ) , $base );
 	}
 
-	function hasEventDescription() {
-		return null !== $this->get('event_description');
+	/**
+	 * It has event description?
+	 *
+	 * @return bool
+	 */
+	public function hasEventDescription() {
+		return null !== $this->get( 'event_description' );
 	}
 
-	function hasEventAbstract() {
-		return null !== $this->get('event_abstract');
+	/**
+	 * It has an event abstract?
+	 *
+	 * @return bool
+	 */
+	public function hasEventAbstract() {
+		return null !== $this->get( 'event_abstract' );
 	}
 
+	/**
+	 * It has an event note?
+	 *
+	 * @return bool
+	 */
 	function hasEventNote() {
-		return null !== $this->get('event_note');
+		return null !== $this->get( 'event_note' );
 	}
 
-	function getEventDescription() {
-		return $this->get('event_description');
+	/**
+	 * Get the event description
+	 *
+	 * @return string
+	 */
+	public function getEventDescription() {
+		return $this->get( 'event_description' );
 	}
 
-	function getEventAbstract() {
+	/**
+	 * Get the event abstract
+	 *
+	 * @return string
+	 */
+	public function getEventAbstract() {
 		return $this->get('event_abstract');
 	}
 
-	function getEventNote() {
+	/**
+	 * Get the event note
+	 *
+	 * @return string
+	 */
+	public function getEventNote() {
 		return $this->get('event_note');
 	}
 
@@ -92,15 +148,30 @@ trait EventTrait {
 		return Markdown::parse( _( $this->getEventNote() ), $args );
 	}
 
-	function factoryUserByEvent() {
+	/**
+	 * Factory Users by this event
+	 *
+	 * @return Query
+	 */
+	public function factoryUserByEvent() {
 		return User::factoryByEvent( $this->getEventID() );
 	}
 
-	function factorySharebleByEvent() {
+	/**
+	 * Factory Sharables by this event
+	 *
+	 * @return Query
+	 */
+	public function factorySharebleByEvent() {
 		return Sharable::factoryByEvent( $this->getEventID() );
 	}
 
-	function isEventEditable() {
+	/**
+	 * You can edit this event?
+	 *
+	 * @return bool
+	 */
+	public function isEventEditable() {
 		return has_permission('edit-events');
 	}
 
@@ -115,20 +186,30 @@ trait EventTrait {
 		return $exists;
 	}
 
-	function areEventSubscriptionsAvailable() {
-		isset( $this->event_subscriptions )
-			|| error_die("Missing event_subscriptions");
-
-		return $this->event_subscriptions && ! $this->isEventPassed();
+	/**
+	 * Are event subscriptions available?
+	 *
+	 * @return bool
+	 */
+	public function areEventSubscriptionsAvailable() {
+		return $this->get( 'event_subscriptions' ) && ! $this->isEventPassed();
 	}
 
-	function isEventPassed() {
+	/**
+	 * Is event passed?
+	 *
+	 * @return bool
+	 */
+	public function isEventPassed() {
 		$now = new DateTime('now');
 		return $now->diff( $this->get('event_end') )->invert === 1;
 	}
 
-	function normalizeEvent() {
-		$this->integers('event_ID');
+	/**
+	 * Normalize an Event object
+	 */
+	protected function normalizeEvent() {
+		$this->integers( Event::ID );
 		$this->datetimes(
 			'event_start',
 			'event_end'
@@ -137,6 +218,9 @@ trait EventTrait {
 	}
 }
 
+/**
+ * An Event can be a talk or a lesson etc.
+ */
 class Event extends Queried {
 
 	use EventTrait;
@@ -147,13 +231,41 @@ class Event extends Queried {
 	const T = 'event';
 
 	/**
+	 * ID column name
+	 */
+	const ID = 'event_ID';
+
+	/**
+	 * UID column name
+	 */
+	const UID = 'event_uid';
+
+	/**
+	 * Title column name
+	 */
+	const TITLE = 'event_title';
+
+	/**
+	 * Subtitle column name
+	 */
+	const SUBTITLE = 'event_subtitle';
+
+	/**
+	 * Image column name
+	 */
+	const IMAGE = 'event_img';
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override
 	 */
 	const MAXLEN_UID = 100;
 
-	function __construct() {
+	/**
+	 * Constructor
+ 	 */
+	public function __construct() {
 		$this->normalizeEvent();
 	}
 }

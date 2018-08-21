@@ -16,28 +16,44 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait SubscriptionTrait {
-	function getSubscriptionID() {
-		return $this->nonnull('subscription_ID');
+
+	/**
+	 * Get the subscription ID
+	 *
+	 * @return int
+	 */
+	public function getSubscriptionID() {
+		return $this->nonnull( 'subscription_ID' );
 	}
 
-	function getSubscriptionEmail() {
+	/**
+	 * Get the subscription e-mail
+	 *
+	 * @return string
+	 */
+	public function getSubscriptionEmail() {
 		return $this->get('subscription_email');
 	}
-
 
 	function getSubscriptionDate($f = 'Y-m-d H:i:s') {
 		return $this->get('subscription_date')->format($f);
 	}
 
-	private function normalizeSubscription() {
+	/**
+	 * Normalize a Subscription object
+	 */
+	protected function normalizeSubscription() {
 		$this->integers(
 			'subscription_ID',
 			'event_ID'
 		);
-		$this->booleans('subscription_confirmed');
+		$this->booleans( 'subscription_confirmed' );
 	}
 }
 
+/**
+ * A Subscription is someone subscribed to a certain Event
+ */
 class Subscription extends Queried {
 	use SubscriptionTrait;
 
@@ -46,7 +62,10 @@ class Subscription extends Queried {
 	 */
 	const T = 'subscription';
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeSubscription();
 	}
 

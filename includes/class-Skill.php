@@ -16,19 +16,36 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait SkillTrait {
-	function getSkillID() {
-		return $this->nonnull('skill_ID');
+
+	/**
+	 * Get the skill ID
+	 *
+	 * @return int
+ 	 */
+	public function getSkillID() {
+		return $this->nonnull( 'skill_ID' );
 	}
 
-	function getSkillUID() {
-		return $this->get('skill_uid');
+	/**
+	 * Get the skill UID
+	 *
+	 * @return int
+ 	 */
+	public function getSkillUID() {
+		return $this->get( 'skill_uid' );
 	}
 
-	private function normalizeSkill() {
-		$this->integers('skill_ID');
+	/**
+	 * Normalize a Skill object
+	 */
+	protected function normalizeSkill() {
+		$this->integers( 'skill_ID' );
 	}
 }
 
+/**
+ * A Skill is something you are able to do it
+ */
 class Skill extends Queried {
 	use SkillTrait;
 
@@ -47,7 +64,10 @@ class Skill extends Queried {
 	const SUBJECT     = 'subject';
 	const PROGRAMMING = 'programming';
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeSkill();
 	}
 }

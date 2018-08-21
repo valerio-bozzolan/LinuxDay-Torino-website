@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - single event page (an event lives in a conference)
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -22,10 +22,10 @@ $conference = FullConference::factoryFromUID( @ $_GET['conference'] )
 
 $conference or die_with_404();
 
-$event = FullEvent::queryByConferenceAndUID(
+$event = FullEvent::factoryByConferenceAndUID(
 	$conference->getConferenceID(),
 	@ $_GET['uid']
-);
+)->queryRow();
 
 $event or die_with_404();
 
@@ -37,7 +37,7 @@ $args = [
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
-	'url'   => $event->getEventURL()
+	'url' => $event->getEventURL()
 ];
 
 if( $event->hasEventImage() ) {
@@ -157,7 +157,7 @@ Header::spawn('event', $args);
 	<?php if( $event->areEventSubscriptionsAvailable() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<?php if( $subscribed === true ): ?>
+		<?php if( true === $subscribed ): ?>
 			<p class="flow-text"><?php _e("Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina.") ?></p>
 		<?php else: ?>
 			<form method="post">
@@ -196,15 +196,14 @@ Header::spawn('event', $args);
 
 	<!-- Start files -->
 	<?php $sharables = $event->factorySharebleByEvent()
-		->query();
-	 ?>
-	<?php if( $sharables->num_rows ): ?>
+		->queryGenerator();
+	?>
+	<?php if( $sharables->valid() ): ?>
 	<div class="divider"></div>
 	<div class="section">
 		<h3><?php _e("Materiale") ?></h3>
 		<div class="row">
-			<?php $i = 0 ?>
-			<?php while( $sharable = $sharables->fetch_object('Sharable') ): ?>
+			<?php foreach( $sharables as $sharable ): ?>
 			<div class="col s12">
 				<?php if( $sharable->isSharableDownloadable() ): ?>
 					<p class="flow-text">
@@ -241,7 +240,7 @@ Header::spawn('event', $args);
 					</p>
 				<?php endif ?>
 			</div>
-			<?php endwhile ?>
+			<?php endforeach ?>
 		</div>
 	</div>
 	<?php endif ?>
@@ -253,11 +252,11 @@ Header::spawn('event', $args);
 		<h3><?php _e("Relatori") ?></h3>
 
 		<?php $users = $event->factoryUserByEvent()
-			->query(); ?>
+			->queryGenerator(); ?>
 
-		<?php if( $users->num_rows ): ?>
+		<?php if( $users->valid() ): ?>
 			<div class="row">
-			<?php while( $user = $users->fetch_object('User') ): ?>
+			<?php foreach( $users as $user ): ?>
 				<div class="col s12 m6">
 					<div class="row valign-wrapper">
 						<div class="col s4 l3">
@@ -289,7 +288,7 @@ Header::spawn('event', $args);
 						</div>
 					</div>
 				</div>
-			<?php endwhile ?>
+			<?php endforeach ?>
 			</div>
 		<?php else: ?>
 			<p><?php _e("L'elenco dei relatori non è ancora noto.") ?></p>

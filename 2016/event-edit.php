@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - single event profile page
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,7 +17,9 @@
 
 require 'load.php';
 
-$conference = FullConference::queryByUID( @ $_GET['conference'] );
+$conference = FullConference::factoryFromUID( @ $_GET['conference'] )
+	->queryRow();
+
 $conference or die_with_404();
 
 $event = FullEvent::queryByConferenceAndUID(
@@ -37,19 +39,24 @@ if( isset( $_POST['action'] ) ) {
 	if( $_POST['action'] === 'add-user' && isset( $_POST['user'] ) ) {
 		// Add user
 
-		$user = User::get( $_POST['user'] );
+		$user = User::factoryFromUID( $_POST['user'] )
+			->select( User::ID )
+			->queryRow();
+
 		if( $user ) {
 			EventUser::delete($event->getEventID(), $user->getUserID());
 
 			insert_row('event_user', [
-				new DBCol('event_ID', $event->getEventID(), 'd'),
-				new DBCol('user_ID',  $user->getUserID(),   'd')
+				new DBCol( Event::ID, $event->getEventID(), 'd' ),
+				new DBCol( User::ID,  $user->getUserID(),   'd' ),
 			] );
 		}
 	} elseif( $_POST['action'] === 'update-user' && isset( $_POST['user'] ) ) {
 		// Update user order
 
-		$user = User::get( $_POST['user'] );
+		$user = User::factoryFromUID( $_POST['user'] )
+			->select( User::ID )
+			->queryRow();
 
 		if( $user ) {
 			if ( ! empty( $_POST['delete'] ) ) {
@@ -80,7 +87,7 @@ Header::spawn('event', [
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
-	'url'   => $event->getEventURL()
+	'url' => $event->getEventURL()
 ] );
 ?>
 	<p><?php echo HTML::a(
@@ -95,15 +102,20 @@ Header::spawn('event', [
 				<form action="<?php echo $permalink ?>" method="post">
 					<input type="hidden" name="action" value="add-user" />
 					<select name="user" class="browser-default">
-						<?php $users = query(
-							"SELECT user_uid, user_name, user_surname ".
-							"FROM {$T('user')} ORDER BY user_name"
-						) ?>
-						<?php while( $user = $users->fetch_object('User') ): ?>
+						<?php $users = User::factory()
+							->select( [
+								User::UID,
+								User::NAME,
+								User::SURNAME,
+							] )
+							->orderBy( User::NAME )
+							->queryGenerator();
+						?>
+						<?php foreach( $users as $user ): ?>
 							<option value="<?php echo $user->getUserUID() ?>">
-								<?php echo $user->getUserFullname() ?>
+								<?php _esc_html( $user->getUserFullname() ) ?>
 							</option>
-						<?php endwhile ?>
+						<?php endforeach ?>
 					</select>
 					<p><button type="submit" class="btn"><?php _e("Aggiungi") ?></button></p>
 				</form>

@@ -16,27 +16,54 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait TrackTrait {
-	function getTrackID() {
-		return $this->nonnull('track_ID');
+
+	/**
+	 * Get the track ID
+	 *
+	 * @return int
+	 */
+	public function getTrackID() {
+		return $this->nonnull( 'track_ID' );
 	}
 
-	function getTrackUID() {
-		return $this->get('track_uid');
+	/**
+	 * Get the track UID
+	 *
+	 * @return string
+	 */
+	public function getTrackUID() {
+		return $this->get( 'track_uid' );
 	}
 
+	/**
+	 * Get the localized track name
+	 *
+	 * @return string
+	 */
 	function getTrackName() {
-		return _( $this->get('track_name') );
+		return _( $this->get( 'track_name' ) );
 	}
 
+	/**
+	 * Get the localized track label
+	 *
+	 * @return string
+	 */
 	function getTrackLabel() {
-		return _( $this->get('track_label') );
+		return _( $this->get( 'track_label' ) );
 	}
 
-	private function normalizeTrack() {
-		$this->integers('track_ID');
+	/**
+	 * Normalize a Track object
+	 */
+	protected function normalizeTrack() {
+		$this->integers( 'track_ID' );
 	}
 }
 
+/**
+ * A Track is the theme of a Talk
+ */
 class Track extends Queried {
 	use TrackTrait;
 
@@ -50,7 +77,10 @@ class Track extends Queried {
 	 */
 	const MAXLEN_UID = 64;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeTrack();
 	}
 }

@@ -16,12 +16,24 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait SharableTrait {
-	function getSharableID() {
-		return $this->nonnull('sharable_ID');
+
+	/**
+	 * Get the sharable ID
+	 *
+	 * @return int
+	 */
+	public function getSharableID() {
+		return $this->nonnull( 'sharable_ID' );
 	}
 
-	function getSharableTitle( $args = [] ) {
-		$sharable_title = $this->get('sharable_title');
+	/**
+	 * Get the localized sharable title
+	 *
+	 * @param $args array Title arguments like 'prop'
+	 * @return string
+	 */
+	public function getSharableTitle( $args = [] ) {
+		$sharable_title = $this->get( 'sharable_title' );
 
 		if( ! isset( $sharable_title ) ) {
 			return $this->getDefaultSharableTitle($args);
@@ -33,11 +45,12 @@ trait SharableTrait {
 	/**
 	 * Retrieve something usable as a title
 	 *
+	 * @param $args array Title arguments like 'prop'
 	 * @return string
 	 */
-	function getDefaultSharableTitle( $args = [] ) {
+	public function getDefaultSharableTitle( $args = [] ) {
 
-		$sharable_type = $this->get('sharable_type');
+		$sharable_type = $this->get( 'sharable_type' );
 
 		if( $sharable_type === 'youtube' ) {
 			if( isset( $args['prop'] ) && $args['prop'] ) {
@@ -57,28 +70,59 @@ trait SharableTrait {
 		return substr($sharable_path, $i);
 	}
 
-	function isSharableImage() {
-		return $this->isSharableType('image');
+	/**
+	 * Is it an image?
+	 *
+	 * @return bool
+	 */
+	public function isSharableImage() {
+		return $this->isSharableType( 'image' );
 	}
 
-	function isSharableVideo() {
-		return $this->isSharableType('video');
+	/**
+	 * Is it a video?
+	 *
+	 * @return bool
+	 */
+	public function isSharableVideo() {
+		return $this->isSharableType( 'video' );
 	}
 
-	function isSharableDocument() {
+	/**
+	 * Is it a document?
+	 *
+	 * @return bool
+	 */
+	public function isSharableDocument() {
 		return $this->isSharableType('document');
 	}
 
-	function isSharableIframe() {
+	/**
+	 * Is it an iframe (like a YouTube video?)
+	 *
+	 * @return bool
+	 */
+	public function isSharableIframe() {
 		return $this->isSharableType('youtube');
 	}
 
+	/**
+	 * Is it of a certain type?
+	 *
+	 * @param $type string
+	 * @return bool
+	 */
 	private function isSharableType( $type ) {
 		return $this->get('sharable_type') === $type;
 
 	}
 
-	function isSharableDownloadable() {
+	/**
+	 * It can be downloaded?
+	 *
+	 * @return bool
+	 */
+	public function isSharableDownloadable() {
 		return ! $this->isSharableIframe();
 	}
 
@@ -93,15 +137,28 @@ trait SharableTrait {
 		return site_page($sharable_path, $base);
 	}
 
-	function getSharableMIME() {
+	/**
+	 * Get the MIME type
+	 *
+	 * @return string|null
+	 */
+	public function getSharableMIME() {
 		return $this->get('sharable_mimetype');
 	}
 
-	function getSharableLicense() {
+	/**
+	 * Get the license
+	 *
+	 * @return License
+	 */
+	public function getSharableLicense() {
 		return license( $this->get('sharable_license') );
 	}
 
-	private function normalizeSharable() {
+	/**
+	 * Normalize a Sharable object
+	 */
+	protected function normalizeSharable() {
 		$this->integers(
 			'sharable_ID',
 			'event_ID'
@@ -109,6 +166,9 @@ trait SharableTrait {
 	}
 }
 
+/**
+ * A Sharable is an attachment related to a Talk
+ */
 class Sharable extends Queried {
 	use SharableTrait;
 
@@ -117,11 +177,20 @@ class Sharable extends Queried {
 	 */
 	const T = 'sharable';
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeSharable();
 	}
 
-	static function factoryByEvent( $event_ID ) {
+	/**
+	 * Factory by an event
+	 *
+	 * @param $event_ID int Event ID
+	 * @return Query
+	 */
+	public static function factoryByEvent( $event_ID ) {
 		return self::factory()
 			->whereInt( 'sharable.event_ID', $event_ID );
 	}

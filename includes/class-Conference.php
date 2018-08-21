@@ -16,16 +16,32 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait ConferenceTrait {
-	function getConferenceID() {
-		return $this->nonnull('conference_ID');
+
+	/**
+	 * Get conference ID
+	 *
+	 * @return int
+	 */
+	public function getConferenceID() {
+		return $this->nonnull( Conference::ID );
 	}
 
+	/**
+	 * Get conference UID
+	 *
+	 * @return string
+	 */
 	function getConferenceUID() {
-		return $this->get('conference_uid');
+		return $this->get( Conference::UID );
 	}
 
-	function getConferenceTitle() {
-		return _( $this->get('conference_title') );
+	/**
+	 * Get localized conference title
+	 *
+	 * @return string
+	 */
+	public function getConferenceTitle() {
+		return _( $this->get( Conference::TITLE ) );
 	}
 
 	function getConferenceURL( $base = URL ) {
@@ -40,7 +56,7 @@ trait ConferenceTrait {
 	}
 
 	function getConferenceHumanStart() {
-		return HumanTime::diff( $this->get('conference_start') );
+		return HumanTime::diff( $this->get( 'conference_start') );
 	}
 
 	function getConferenceHumanEnd() {
@@ -55,23 +71,46 @@ trait ConferenceTrait {
 		return $this->get('conference_end')->format($f);
 	}
 
-	function getConferenceDescription() {
-		return nl2br( _( $this->get('conference_description') ) );
+	/**
+	 * Get localized conference description
+	 *
+	 * @return string
+	 */
+	public function getConferenceDescription() {
+		return nl2br( _( $this->get( 'conference_description' ) ) );
 	}
 
-	function getConferenceQuote() {
-		return nl2br( _( $this->get('conference_quote') ) );
+	/**
+	 * Get localized conference quote
+	 *
+	 * @return string
+	 */
+	public function getConferenceQuote() {
+		return nl2br( _( $this->get( 'conference_quote' ) ) );
 	}
 
-	function getConferenceSubtitle() {
-		return _( $this->get('conference_subtitle') );
+	/**
+	 * Get localized conference subtitle
+	 *
+	 * @return string
+	 */
+	public function getConferenceSubtitle() {
+		return _( $this->get( 'conference_subtitle' ) );
 	}
 
-	function factoryFullEventByConference() {
+	/**
+	 * Factory a FullEvent by this conference
+	 *
+	 * @return Query
+	 */
+	public function factoryFullEventByConference() {
 		return FullEvent::factoryByConference( $this->getConferenceID() );
 	}
 
-	private function normalizeConference() {
+	/**
+	 * Normalize a Conference object
+	 */
+	protected function normalizeConference() {
 		$this->integers(
 			'conference_ID',
 			'location_ID'
@@ -83,6 +122,9 @@ trait ConferenceTrait {
 	}
 }
 
+/**
+ * A Conference is an event in a certain Location
+ */
 class Conference extends Queried {
 	use ConferenceTrait;
 
@@ -92,13 +134,31 @@ class Conference extends Queried {
 	const T = 'conference';
 
 	/**
+	 * Conference ID column
+	 */
+	const ID = 'conference_ID';
+
+	/**
+	 * Conference UID column
+	 */
+	const UID = 'conference_uid';
+
+	/**
+	 * Conference title column
+	 */
+	const TITLE = 'conference_title';
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override
 	 */
 	const MAXLEN_UID = 32;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeConference();
 	}
 }

@@ -16,15 +16,31 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait LocationTrait {
-	function getLocationName() {
-		return _( $this->get('location_name') );
+
+	/**
+	 * Get localized location name
+	 *
+	 * @return string
+	 */
+	public function getLocationName() {
+		return _( $this->get( 'location_name' ) );
 	}
 
-	function getLocationAddress() {
-		return _( $this->get('location_address') );
+	/**
+	 * Get localized location address
+	 *
+	 * @return string
+	 */
+	public function getLocationAddress() {
+		return _( $this->get( 'location_address' ) );
 	}
 
-	function getLocationNote() {
+	/**
+	 * Get localized location note
+	 *
+	 * @return string
+	 */
+	public function getLocationNote() {
 		return _( $this->get('location_note') );
 	}
 
@@ -82,6 +98,9 @@ trait LocationTrait {
 	}
 }
 
+/**
+ * A Location is a place that can host Conferences
+ */
 class Location extends Queried {
 	use LocationTrait;
 

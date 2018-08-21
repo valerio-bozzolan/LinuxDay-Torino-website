@@ -22,7 +22,9 @@ $conference = FullConference::factoryFromUID( @ $_GET['conference'] )
 
 $conference or die_with_404();
 
-$user       = User::queryByUID( $_GET['uid'] );
+$user = User::factoryByUID( $_GET['uid'] )
+	->queryRow();
+
 $user or die_with_404();
 
 FORCE_PERMALINK && $user->forceUserPermalink();

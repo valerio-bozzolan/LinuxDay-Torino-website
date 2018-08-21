@@ -16,23 +16,45 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait RoomTrait {
-	function getRoomID() {
-		return $this->get('room_ID');
+
+	/**
+	 * Get room ID
+	 *
+	 * @return int
+	 */
+	public function getRoomID() {
+		return $this->get( Room::ID );
 	}
 
-	function getRoomUID() {
-		return $this->get('room_uid');
+	/**
+	 * Get room UID
+	 *
+	 * @return string
+	 */
+	public function getRoomUID() {
+		return $this->get( Room::UID );
 	}
 
-	function getRoomName() {
-		return _( $this->get('room_name') );
+	/**
+	 * Get localized room name
+	 *
+	 * @return string
+	 */
+	public function getRoomName() {
+		return _( $this->get( ROOM::NAME ) );
 	}
 
-	private function normalizeRoom() {
-		$this->integers('room_ID');
+	/**
+	 * Normalize a Room object
+	 */
+	protected function normalizeRoom() {
+		$this->integers( Room::ID );
 	}
 }
 
+/**
+ * A Room host Talks and it's in a Location
+ */
 class Room extends Queried {
 	use RoomTrait;
 
@@ -48,7 +70,25 @@ class Room extends Queried {
 	 */
 	const MAXLEN_UID = 64;
 
-	function __construct() {
+	/**
+	 * Room ID column
+	 */
+	const ID = 'room_ID';
+
+	/**
+	 * Room UID column
+ 	 */
+	const UID = 'room_uid';
+
+	/**
+	 * Room name column
+	 */
+	const NAME = 'room_name';
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeRoom();
 	}
 }

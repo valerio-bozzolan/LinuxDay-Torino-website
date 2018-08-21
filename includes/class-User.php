@@ -16,30 +16,53 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait UserTrait {
-	function getUserID() {
-		return $this->nonnull('user_ID');
+
+	/**
+	 * Get the user ID
+	 *
+	 * @return int
+	 */
+	public function getUserID() {
+		return $this->nonnull( User::ID );
 	}
 
-	function getUserUID() {
-		return $this->get('user_uid');
+	/**
+	 * Get the user UID
+	 *
+	 * @return string
+	 */
+	public function getUserUID() {
+		return $this->get( User::UID );
 	}
 
-	function getUserEmail() {
-		return $this->get('user_email');
+	/**
+	 * Get the user e-mail
+	 *
+	 * @return string
+	 */
+	public function getUserEmail() {
+		return $this->getUserUID();
 	}
 
 	/**
 	 * N.B. Also if he is logged he's public.
+	 *
+	 * @return bool
 	 */
-	function isUserPublic() {
-		return $this->get('user_public') || $this->isUserMyself();
+	public function isUserPublic() {
+		return $this->get( User::IS_PUBLIC ) || $this->isUserMyself();
 	}
 
-	function getUserFullname() {
+	/**
+	 * Get the user full name
+	 *
+	 * @return string
+	 */
+	public function getUserFullname() {
 		return sprintf(
 			_("%s %s"),
-			$this->get('user_name'),
-			$this->get('user_surname')
+			$this->get( User::NAME ),
+			$this->get( User::SURNAME )
 		);
 	}
 
@@ -76,7 +99,12 @@ trait UserTrait {
 		return $image;
 	}
 
-	function hasUserBio() {
+	/**
+	 * It has an user bio?
+	 *
+	 * @return bool
+	 */
+	public function hasUserBio() {
 		return null !== $this->get('user_bio');
 	}
 
@@ -118,7 +146,12 @@ trait UserTrait {
 		return 'https://github.com/' . $this->get('user_github');
 	}
 
-	function hasPermissionToEditUser() {
+	/**
+	 * Can you edit this user?
+	 *
+	 * @return bool
+	 */
+	public function hasPermissionToEditUser() {
 		if( has_permission('edit-users') ) {
 			return true;
 		}
@@ -128,15 +161,17 @@ trait UserTrait {
 		return false;
 	}
 
-	function isUserMyself() {
+	/**
+	 * Is this user myself?
+	 *
+	 * @return bool
+	 */
+	public function isUserMyself() {
 		return is_logged() && get_user()->getUserID() === $this->getUserID();
 	}
 
 	function hasUserLovelicense() {
-		property_exists($this, 'user_lovelicense')
-			|| error_die("Missing user_lovelicense");
-
-		return isset( $this->user_lovelicense );
+		return null !== $this->get( 'user_lovelicense' );
 	}
 
 	function getUserLovelicense() {
@@ -151,11 +186,14 @@ trait UserTrait {
 		return FullEvent::factoryByUser( $this->getUserID() );
 	}
 
-	private function normalizeUser() {
-		$this->integers('user_ID');
+	/**
+	 * Normalize a User object
+	 */
+	protected function normalizeUser() {
+		$this->integers( User::ID );
 		$this->booleans(
-			'user_public',
-			'user_acrive'
+			User::IS_PUBLIC,
+			User::IS_ACTIVE
 		);
 	}
 }
@@ -164,28 +202,42 @@ class User extends Sessionuser {
 	use UserTrait;
 
 	/**
-	 * Database table name
+	 * Name column
 	 */
-	const T = 'user';
+	const NAME = 'user_name';
+
+	/**
+	 * ID column
+	 */
+	const SURNAME = 'user_surname';
+
+	/**
+	 * He/she public column
+	 */
+	const IS_PUBLIC = 'user_public';
 
 	/**
 	 * Maximum UID length
 	 */
 	const MAXLEN_UID = 20;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeUser();
 	}
 
-	static function factoryByEvent( $event_ID ) {
+	/**
+	 * Factory users by an event
+	 *
+	 * @param $event_ID int
+	 * @return Query
+	 */
+	public static function factoryByEvent( $event_ID ) {
 		return self::factory()
 			->from('event_user')
 			->equals('event_user.user_ID', 'user.user_ID')
 			->whereInt('event_user.event_ID', $event_ID );
-	}
-
-	static function queryByUID( $user_uid ) {
-		return self::factoryByUID( $user_uid )
-			->queryRow();
 	}
 }

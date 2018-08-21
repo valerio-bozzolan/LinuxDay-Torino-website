@@ -16,20 +16,39 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait ChapterTrait {
-	function getChapterID() {
-		return $this->nonnull('chapter_ID');
+
+	/**
+	 * Get chapter ID
+	 *
+	 * @return int
+	 */
+	public function getChapterID() {
+		return $this->nonnull( Chapter::ID );
 	}
 
-	function getChapterUID() {
-		return $this->get('chapter_uid');
+	/**
+	 * Get chapter UID
+	 *
+	 * @return string
+	 */
+	public function getChapterUID() {
+		return $this->get( Chapter::UID );
 	}
 
+	/**
+	 * Get localized chapter name
+	 *
+	 * @return string
+	 */
 	function getChapterName() {
-		return _( $this->get('chapter_name') );
+		return _( $this->get( Chapter::NAME ) );
 	}
 
-	private function normalizeChapter() {
-		$this->integers('chapter_ID');
+	/**
+	 * Normalize a Chapter object
+	 */
+	protected function normalizeChapter() {
+		$this->integers( Chapter::ID );
 	}
 }
 
@@ -40,6 +59,21 @@ class Chapter extends Queried {
 	 * Database table name
 	 */
 	const T = 'chapter';
+
+	/**
+	 * Chapter ID column
+	 */
+	const ID = 'chapter_ID';
+
+	/**
+	 * Chapter UID column
+	 */
+	const UID = 'chapter_uid';
+
+	/**
+	 * Chapter NAME column
+	 */
+	const NAME = 'chapter_name';
 
 	/**
 	 * Maximum UID length
