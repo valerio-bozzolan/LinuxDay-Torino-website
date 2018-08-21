@@ -112,6 +112,9 @@ cd -
 
 chown --recursive root:www-data "$WWW/"
 
+# disable an unuseful default Apache configuration that we do not use
+a2disconf serve-cgi-bin
+
 service apache2 restart
 
 echo "End provision: \t$WELCOME"
