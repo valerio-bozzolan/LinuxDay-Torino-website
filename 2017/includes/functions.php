@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016, 2017 - Lazy functions
-# Copyright (C) 2016 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -24,10 +24,10 @@
  */
 function print_menu($uid = null, $level = 0, $args = [] ) {
 
-	$args = merge_args_defaults( $args, [
+	$args = array_replace( [
 		'max-level' => 99,
 		'main-ul-intag' => 'class="collection"'
-	] );
+	], $args );
 
 	if( $level > $args['max-level'] ) {
 		return;

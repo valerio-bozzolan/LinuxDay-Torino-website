@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Header
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -19,7 +19,7 @@ class Header {
 	static function spawn($menu_uid = null, $args = [] ) {
 		$menu = get_menu_entry($menu_uid);
 
-		$args = merge_args_defaults($args, [
+		$args = array_replace( [
 			'show-title'  => true,
 			'nav'         => true,
 			'nav-title'   => SITE_NAME_SHORT,
@@ -32,18 +32,18 @@ class Header {
 			'alert'       => null,
 			'alert.type'  => null,
 			'noindex'     => NOINDEX
-		] );
+		], $args );
 
 		if( ! isset( $args['og'] ) ) {
 			$args['og'] = [];
 		}
 
-		$args['og'] = merge_args_defaults($args['og'], [
+		$args['og'] = array_replace( [
 			'image'  => STATIC_URL . '/ld-2017-logo-470.png', // It's better an absolute URL here
 			'type'   => 'website',
 			'url'    => $args['url'],
 			'title'  => $args['title']
-		] );
+		], $args['og'] );
 
 		if( $args['head-title'] === null ) {
 			$args['head-title'] = sprintf(
