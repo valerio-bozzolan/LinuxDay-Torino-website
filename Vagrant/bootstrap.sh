@@ -22,9 +22,9 @@ apt-get update
 apt-get install --yes mariadb-server     \
                       php                \
                       php-mysql          \
+                      php-mbstring       \
                       apache2            \
                       libapache2-mod-php \
-                      php-php-gettext    \
                       gettext            \
                       libmarkdown-php    \
                       libjs-jquery       \
@@ -92,15 +92,6 @@ cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
 	</Directory>
 </VirtualHost>
 EOF
-
-# https://wiki.debian.org/Locale#Manually
-cat > /etc/locale.gen <<EOF
-it_IT.UTF-8 UTF-8
-en_US.UTF-8 UTF-8
-EOF
-
-locale-gen
-locale -a
 
 # Patch for php-libmarkdown
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
