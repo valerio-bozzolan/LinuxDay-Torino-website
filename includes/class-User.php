@@ -171,7 +171,7 @@ class User extends Sessionuser {
 	/**
 	 * Maximum UID length
 	 */
-    const MAXLEN_UID = 20;
+	const MAXLEN_UID = 20;
 
 	function __construct() {
 		$this->normalizeUser();
