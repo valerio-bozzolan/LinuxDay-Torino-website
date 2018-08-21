@@ -52,9 +52,9 @@ Header::spawn('conference', [
 				esc_html( $from )
 			) )
 			->orderBy('event_start')
-			->query();
+			->queryGenerator();
 	?>
-	<?php if( $other_events->num_rows ): ?>
+	<?php if( $other_events->valid() ): ?>
 	<div class="section">
 		<h3><?php printf( _("Il %s si è concluso..."), $conference->getConferenceTitle() ) ?></h3>
 		<h4><?php _e("Ma abbiamo altro!") ?></h4>
@@ -64,7 +64,7 @@ Header::spawn('conference', [
 				<th><?php _e("Quando") ?></th>
 				<th class="hide-on-small-only"><?php _e("Dove") ?></th>
 			</tr>
-			<?php while( $event = $other_events->fetch_object('FullEvent') ): ?>
+			<?php foreach( $other_events as $event ): ?>
 			<?php
 				$classes = 'hoverable';
 				if( $event->isEventPassed() ) {
@@ -91,7 +91,7 @@ Header::spawn('conference', [
 					<?php echo $event->getRoomName() ?>
 				</td>
 			</tr>
-			<?php endwhile ?>
+			<?php endforeach ?>
 		</table>
 	</div>
 	<?php endif ?>
