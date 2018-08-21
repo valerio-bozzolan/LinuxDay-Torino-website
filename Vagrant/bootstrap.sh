@@ -15,9 +15,6 @@ BOZ_PHP=/usr/share/boz-php-another-php-framework
 DB_USER=ldto
 DB_PASSWORD=ldto
 
-# Very scaring
-export DEBIAN_FRONTEND=noninteractive
-
 apt-get update
 apt-get install --yes mariadb-server     \
                       php                \
