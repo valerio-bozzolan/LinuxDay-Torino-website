@@ -5,8 +5,8 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provision "shell", path: "Vagrant/bootstrap.sh"
 
-	# NFS merda! (anche rsync merda, ma almeno è merda che funziona)
-	config.vm.synced_folder ".", "/vagrant", type: "rsync"
+	# https://wiki.debian.org/Vagrant#Errors_on_NFS_mount
+	config.vm.synced_folder ".", "/vagrant", nfs_version: "3"
 
 	# Vagrant merda!
 	# https://stackoverflow.com/a/42397127
