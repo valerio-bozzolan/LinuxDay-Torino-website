@@ -29,9 +29,9 @@ apt-get install --yes mariadb-server     \
                       bzr
 
 if [ ! -e "$BOZ_PHP" ]; then
-	bzr branch lp:boz-php-another-php-framework "$BOZ_PHP"
+	bzr branch --quiet lp:boz-php-another-php-framework "$BOZ_PHP"
 else
-	bzr pull --directory="$BOZ_PHP" lp:boz-php-another-php-framework
+	bzr pull --quiet --directory="$BOZ_PHP" lp:boz-php-another-php-framework
 fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
@@ -94,7 +94,7 @@ EOF
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
 sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php/markdown.php
 
-a2enmod rewrite
+a2enmod --quiet rewrite
 
 # GNU Gettext workflow (trust me: 3 are enough.)
 cd  "$WWW"
@@ -105,7 +105,7 @@ cd -
 #/GNU Gettext workflow
 
 # disable an unuseful default Apache configuration that we do not use
-a2disconf serve-cgi-bin
+a2disconf --quiet serve-cgi-bin
 
 service apache2 restart
 
