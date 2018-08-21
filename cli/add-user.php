@@ -36,7 +36,7 @@ $opts = getopt( 'h', [
 if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ], $opts[ 'role' ] ) || isset( $opts[ 'help' ] ) || isset( $opts[ 'h' ] ) ) {
 	printf( "Usage: %s [OPTIONS]\n", $argv[ 0 ] );
 	echo "OPTIONS:\n";
-	echo "    --uid=UID          user UID (e-mail)\n";
+	echo "    --uid=UID          user UID\n";
 	echo "    --role=ROLE        user role (user|admin)\n";
 	echo "    --pwd=PASSWORD     password\n";
 	echo " -h --help             show this help and exit\n";

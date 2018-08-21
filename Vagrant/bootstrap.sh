@@ -110,10 +110,10 @@ a2disconf --quiet serve-cgi-bin
 service apache2 restart
 
 # add an admin user
-"$WWW"/cli/add-user.php --uid=admin@ldto.it --role=admin --pwd=admin
+"$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin
 
 echo "End provision: $WELCOME"
 echo "Login:         $WELCOME/2016/login.php"
 echo
-echo "Admin uid:     admin@ldto.it"
+echo "Admin uid:     admin"
 echo "      pwd:     admin"
