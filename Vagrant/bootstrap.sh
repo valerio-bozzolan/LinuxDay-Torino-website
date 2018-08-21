@@ -81,7 +81,7 @@ cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
 	php_admin_flag  html_errors            1
 	php_admin_value error_reporting       -1
 
-        LogLevel info
+	LogLevel info
 
 	DocumentRoot $WWW
 
