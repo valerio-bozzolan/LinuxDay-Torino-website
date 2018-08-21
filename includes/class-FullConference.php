@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database conference (full of relations)
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -33,14 +33,10 @@ class FullConference extends Queried {
 			->equals( 'conference.location_ID', 'location.location_ID' );
 	}
 
-	static function factoryByUID( $conference_uid ) {
+	static function factoryFromUID( $conference_uid ) {
 		$conference_uid = Conference::sanitizeUID( $conference_uid );
 
 		return self::factory()
 			->whereStr( 'conference_uid', $conference_uid );
-	}
-
-	static function queryByUID( $conference_uid ) {
-		return self::factoryByUID( $conference_uid )->queryRow();
 	}
 }

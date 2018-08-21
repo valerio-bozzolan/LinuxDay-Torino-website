@@ -89,7 +89,7 @@ class Conference extends Queried {
 	/**
 	 * Database table name
 	 */
-	const T = 'chapter';
+	const T = 'conference';
 
 	/**
 	 * Maximum UID length

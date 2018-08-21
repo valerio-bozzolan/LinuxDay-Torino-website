@@ -51,9 +51,4 @@ class Chapter extends Queried {
 	function __construct() {
 		$this->normalizeChapter();
 	}
-
-	static function queryByUID( $chapter_uid ) {
-		return self::factoryByUID( $chapter_uid )->queryRow();
-
-	}
 }

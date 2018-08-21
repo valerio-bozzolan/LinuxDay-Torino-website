@@ -17,7 +17,8 @@
 
 require 'load.php';
 
-$conference = FullConference::queryByUID( @ $_GET['conference'] );
+$conference = FullConference::factoryFromUID( @ $_GET['conference'] )
+	->queryRow();
 
 $conference or die_with_404();
 

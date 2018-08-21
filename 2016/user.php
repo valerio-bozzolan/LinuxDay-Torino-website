@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Single user profile page
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,7 +17,9 @@
 
 require 'load.php';
 
-$conference = FullConference::queryByUID( @ $_GET['conference'] );
+$conference = FullConference::factoryFromUID( @ $_GET['conference'] )
+	->queryRow();
+
 $conference or die_with_404();
 
 $user       = User::queryByUID( $_GET['uid'] );

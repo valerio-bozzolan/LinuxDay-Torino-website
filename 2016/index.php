@@ -17,7 +17,9 @@
 
 require 'load.php';
 
-$conference = FullConference::queryByUID( @ $_GET['uid'] );
+$conference = FullConference::factoryFromUID( @ $_GET['uid'] )
+	->queryRow();
+
 $conference || die_with_404();
 
 FORCE_PERMALINK
@@ -151,7 +153,7 @@ Header::spawn('conference', [
 
 	<div id="talk" class="divider" data-show="#talk-section"></div>
 	<div class="section" id="talk-section">
-		<?php $chapter = Chapter::queryByUID('talk'); ?>
+		<?php $chapter = Chapter::factoryFromUID('talk')->queryRow() ?>
 
 		<h3><?php echo $chapter->getChapterName() ?></h3>
 
