@@ -23,7 +23,7 @@ $conference = FullConference::factoryFromUID( @ $_GET['uid'] )
 $conference or die_with_404();
 
 FORCE_PERMALINK
-	&& $conference->forceConferencePermalink();
+	and $conference->forceConferencePermalink();
 
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');

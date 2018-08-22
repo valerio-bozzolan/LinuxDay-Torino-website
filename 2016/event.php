@@ -29,7 +29,7 @@ $event = FullEvent::factoryByConferenceAndUID(
 
 $event or die_with_404();
 
-FORCE_PERMALINK && $event->forceEventPermalink();
+FORCE_PERMALINK and $event->forceEventPermalink();
 
 $args = [
 	'title' => sprintf(
