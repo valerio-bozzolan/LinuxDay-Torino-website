@@ -127,14 +127,12 @@ trait SharableTrait {
 	}
 
 	function getSharablePath( $base = ROOT ) {
-		$sharable_type = $this->get('sharable_type');
-		$sharable_path = $this->get('sharable_path');
-
-		if($sharable_type === 'youtube') {
-			return "https://www.youtube.com/watch?v={$p}";
+		$type = $this->get('sharable_type');
+		$path = $this->get('sharable_path');
+		if( 'youtube' === $type ) {
+			return "https://www.youtube.com/watch?v={$path}";
 		}
-
-		return site_page($sharable_path, $base);
+		return site_page( $sharable_path, $base );
 	}
 
 	/**
