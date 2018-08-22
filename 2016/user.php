@@ -208,12 +208,12 @@ Header::spawn('user', [
 			<?php }; ?>
 
 			<?php
-			$user->get('user_rss')    and $box($user, "RSS",      $user->get('user_rss'),     'home.png');
-			$user->get('user_fb')     and $box($user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png');
-			$user->get('user_googl')  and $box($user, "Google+",  $user->getUserGuggolpluz(), 'google.png'  );
-			$user->get('user_twtr')   and $box($user, "Twitter",  $user->getUserTuitt(),      'twitter.png' );
-			$user->get('user_lnkd')   and $box($user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png');
-			$user->get('user_github') and $box($user, "Github",   $user->getUserGithubbo(),   'github.png'  );
+			$user->has( User::RSS         ) and $box( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );
+			$user->has( User::FACEBOOK    ) and $box( $user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png' );
+			$user->has( User::GOOGLE_PLUS ) and $box( $user, "Google+",  $user->getUserGuggolpluz(), 'google.png'        );
+			$user->has( User::TWITTER     ) and $box( $user, "Twitter",  $user->getUserTuitt(),      'twitter.png'       );
+			$user->has( User::LINKEDIN    ) and $box( $user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png'      );
+			$user->has( User::GITHUB      ) and $box( $user, "Github",   $user->getUserGithubbo(),   'github.png'        );
 			?>
 		</div>
 	</div>

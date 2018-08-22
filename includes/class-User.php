@@ -45,12 +45,21 @@ trait UserTrait {
 	}
 
 	/**
-	 * N.B. Also if he is logged he's public.
+	 * Check if the user is public
 	 *
 	 * @return bool
 	 */
 	public function isUserPublic() {
-		return $this->get( User::IS_PUBLIC ) || $this->isUserMyself();
+		return $this->get( User::IS_PUBLIC );
+	}
+
+	/**
+	 * Check if I can see this user
+	 *
+	 * @return bool
+	 */
+	public function isUserVisible() {
+		return $this->isUserPublic() || $this->isUserMyself();
 	}
 
 	/**
@@ -116,34 +125,63 @@ trait UserTrait {
 		return Markdown::parse( __( $this->getUserBIO() ), $args);
 	}
 
-	function isUserSocial() {
-		return
-			null !== $this->get('user_rss')   ||
-			null !== $this->get('user_fb')    ||
-			null !== $this->get('user_lnkd')  ||
-			null !== $this->get('user_googl') ||
-			null !== $this->get('user_twtr')  ||
-			null !== $this->get('user_github');
+	/**
+	 * Check if the user is somehow social
+	 *
+	 * @return bool
+	 */
+	public function isUserSocial() {
+		foreach( User::allSocialFields() as $field ) {
+			if( $this->has( $field ) ) {
+				return true;
+			}
+		}
+		return false;
 	}
 
-	function getUserFacebruck() {
-		return 'https://facebook.com/' . $this->get('user_fb');
+	/**
+	 * Get the user Facebook profile URL
+	 *
+	 * @return string URL
+	 */
+	public function getUserFacebruck() {
+		return 'https://facebook.com/' . $this->get( User::FACEBOOK );
 	}
 
-	function getUserGuggolpluz() {
-		return 'https://plus.google.com/' . $this->get('user_googl');
+	/**
+	 * Get the user Google+ profile URL
+	 *
+	 * @return string URL
+	 */
+	public function getUserGuggolpluz() {
+		return 'https://plus.google.com/' . $this->get( User::GOOGLE_PLUS );
 	}
 
-	function getUserTuitt() {
-		return 'https://twitter.com/' . $this->get('user_twtr');
+	/**
+	 * Get the user Twitter profile URL
+	 *
+	 * @return string URL
+	 */
+	public function getUserTuitt() {
+		return 'https://twitter.com/' . $this->get( User::TWITTER );
 	}
 
-	function getUserLinkeddon() {
-		return 'https://www.linkedin.com/in/' . $this->get('user_lnkd');
+	/**
+	 * Get the user Linkedin profile URL
+	 *
+	 * @return string URL
+	 */
+	public function getUserLinkeddon() {
+		return 'https://www.linkedin.com/in/' . $this->get( User::LINKEDIN );
 	}
 
-	function getUserGithubbo() {
-		return 'https://github.com/' . $this->get('user_github');
+	/**
+	 * Get the user GitHub profile URL
+	 *
+	 * @return string URL
+	 */
+	public function getUserGithubbo() {
+		return 'https://github.com/' . $this->get( User::GITHUB );
 	}
 
 	/**
@@ -217,6 +255,36 @@ class User extends Sessionuser {
 	const IS_PUBLIC = 'user_public';
 
 	/**
+	 * RSS column
+	 */
+	const RSS = 'user_rss';
+
+	/**
+	 * Facebook username column
+	 */
+	const FACEBOOK = 'user_fb';
+
+	/**
+	 * Linkedin username column
+	 */
+	const LINKEDIN = 'user_lnkd';
+
+	/**
+	 * Google+ username column
+	 */
+	const GOOGLE_PLUS = 'user_googl';
+
+	/**
+	 * Twitter username
+	 */
+	const TWITTER = 'user_twtr';
+
+	/**
+	 * GitHub username
+	 */
+	const GITHUB = 'user_github';
+
+	/**
 	 * Maximum UID length
 	 */
 	const MAXLEN_UID = 20;
@@ -226,6 +294,22 @@ class User extends Sessionuser {
 	 */
 	public function __construct() {
 		$this->normalizeUser();
+	}
+
+	/**
+	 * Get all the user social fields
+	 *
+	 * @return array
+	 */
+	public static function allSocialFields() {
+		return [
+			User::RSS,
+			User::FACEBOOK,
+			User::LINKEDIN,
+			User::GOOGLE_PLUS,
+			User::TWITTER,
+			User::GITHUB,
+		];
 	}
 
 	/**
