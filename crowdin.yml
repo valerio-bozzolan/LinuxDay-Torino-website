@@ -1,0 +1,3 @@
+files:
+  - source: /2016/l10n/linuxday.pot
+    translation: /2016/l10n/%locale_with_underscore%/LC_MESSAGES/linuxday.po
