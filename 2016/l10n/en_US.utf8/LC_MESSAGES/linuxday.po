@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 10:36+0000\n"
+"POT-Creation-Date: 2018-08-22 16:19+0000\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -84,15 +84,15 @@ msgstr "Delete"
 msgid "Salva"
 msgstr "Save"
 
-#: 2016/event.php:100 2016/user.php:150
+#: 2016/event.php:100 2016/user.php:161
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:107 2016/index.php:65 2016/user.php:151
+#: 2016/event.php:107 2016/index.php:75 2016/user.php:162
 msgid "Dove"
 msgstr "Where"
 
-#: 2016/event.php:121 2016/index.php:64
+#: 2016/event.php:121 2016/index.php:74
 msgid "Quando"
 msgstr "When"
 
@@ -151,59 +151,59 @@ msgstr "Previous"
 msgid "A seguire"
 msgstr "Next"
 
-#: 2016/index.php:60
+#: 2016/index.php:70
 msgid "Ma abbiamo altro!"
 msgstr ""
 
-#: 2016/index.php:63
+#: 2016/index.php:73
 msgid "Evento"
 msgstr ""
 
-#: 2016/index.php:149
+#: 2016/index.php:163
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr "This year, the national subject is... <code>coding</code>!"
 
-#: 2016/index.php:184
+#: 2016/index.php:205
 msgid "Planimetria"
 msgstr "Planimetry"
 
-#: 2016/index.php:185
+#: 2016/index.php:206
 msgid "La manifestazione è suddivisa in aule tematiche."
 msgstr "The manifestation it was subdivided in thematic rooms:"
 
-#: 2016/index.php:190
+#: 2016/index.php:211
 msgid "Planimetria Dipartimento di Informatica"
 msgstr "Computer Science department planimetry"
 
-#: 2016/index.php:199
+#: 2016/index.php:220
 msgid "App Android"
 msgstr "Android App"
 
-#: 2016/index.php:222
+#: 2016/index.php:243
 msgid "Installa F-Droid"
 msgstr "Install F-Droid"
 
-#: 2016/index.php:234
+#: 2016/index.php:255
 msgid "Installa LDTO16"
 msgstr "Install LDTO16"
 
-#: 2016/index.php:243
+#: 2016/index.php:264
 msgid "Attività"
 msgstr "Activities"
 
-#: 2016/index.php:244
+#: 2016/index.php:265
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr "At the same time of the talks, various activities will take place:"
 
-#: 2016/index.php:298
+#: 2016/index.php:319
 msgid "Come arrivare"
 msgstr "How to reach us"
 
-#: 2016/index.php:307
+#: 2016/index.php:328
 msgid "Abilitare JavaScript per la mappa interattiva."
 msgstr "Enable JavaScript for interactive map."
 
-#: 2016/index.php:346
+#: 2016/index.php:367
 msgid "Ingresso gratuito"
 msgstr "Free (as in beer) entry"
 
@@ -263,43 +263,43 @@ msgstr "Add skill"
 msgid "Modifica skill"
 msgstr "Edit skill"
 
-#: 2016/user.php:98
+#: 2016/user.php:109
 msgid "Le mie skill:"
 msgstr "My skills:"
 
-#: 2016/user.php:129
+#: 2016/user.php:140
 msgid "Bio"
 msgstr "Bio"
 
-#: 2016/user.php:138
+#: 2016/user.php:149
 msgid "Talk condotti"
 msgstr "Hosted talks"
 
-#: 2016/user.php:148
+#: 2016/user.php:159
 msgid "Nome"
 msgstr "Name"
 
-#: 2016/user.php:149
+#: 2016/user.php:160
 msgid "Tipo"
 msgstr "Type"
 
-#: 2016/user.php:152
+#: 2016/user.php:163
 msgid "When"
 msgstr ""
 
-#: 2016/user.php:190
+#: 2016/user.php:201
 msgid "Questo utente non ha ancora tenuto nessun talk."
 msgstr "This user has not had any talk yet."
 
-#: 2016/user.php:198
+#: 2016/user.php:209
 msgid "Social"
 msgstr "Social"
 
-#: 2016/includes/class-DailyEventsTable.php:70
+#: 2016/includes/class-DailyEventsTable.php:97
 msgid "asd! No."
 msgstr "asd! Nope."
 
-#: 2016/includes/class-DailyEventsTable.php:115
+#: 2016/includes/class-DailyEventsTable.php:152
 msgid "Nessun talk pianificato."
 msgstr "No talks planned."
 

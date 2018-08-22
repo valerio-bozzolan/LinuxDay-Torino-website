@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Fake source code generated from the database to feed GNU Gettext
-# Copyright (C) 2016 Linux Day Torino
+# Copyright (C) 2016, 2018 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,13 +15,16 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2016-12-06T14:18:13+01:00
+# Last update: 2018-08-22T16:18:32+00:00
 
 // conference[2016]::conference_title
 _("Linux Day Torino 2016");
 
 // conference[2015]::conference_title
 _("LDTO15");
+
+// conference[2017]::conference_title
+_("Linux Day Torino 2017");
 
 // event[talk-base-1]::event_title
 _("Didattica del coding");
@@ -269,11 +272,11 @@ _("Spazio Restart");
 // room[first-floor]::room_name
 _("Primo piano");
 
-// room[lab-touring]::room_name
+// room[lab-turing]::room_name
 _("Laboratorio Turing");
 
-// room[lab-djikstra]::room_name
-_("Laboratorio Djikstra");
+// room[lab-dijkstra]::room_name
+_("Laboratorio Dijkstra");
 
 // room[f]::room_name
 _("Aula F");
