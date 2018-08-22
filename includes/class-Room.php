@@ -41,7 +41,7 @@ trait RoomTrait {
 	 * @return string
 	 */
 	public function getRoomName() {
-		return _( $this->get( ROOM::NAME ) );
+		return __( $this->get( ROOM::NAME ) );
 	}
 
 	/**

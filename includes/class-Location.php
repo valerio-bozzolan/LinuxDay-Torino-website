@@ -23,7 +23,7 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationName() {
-		return _( $this->get( 'location_name' ) );
+		return __( $this->get( 'location_name' ) );
 	}
 
 	/**
@@ -32,7 +32,7 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationAddress() {
-		return _( $this->get( 'location_address' ) );
+		return __( $this->get( 'location_address' ) );
 	}
 
 	/**
@@ -41,11 +41,11 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationNote() {
-		return _( $this->get('location_note') );
+		return __( $this->get('location_note') );
 	}
 
 	function getLocationNoteHTML($args = []) {
-		return Markdown::parse( _( $this->getLocationNote() ), $args );
+		return Markdown::parse( __( $this->getLocationNote() ), $args );
 	}
 
 	function getLocationGeothumb() {

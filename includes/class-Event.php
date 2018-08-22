@@ -41,7 +41,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventTitle() {
-		return _( $this->get( Event::TITLE ) );
+		return __( $this->get( Event::TITLE ) );
 	}
 
 	/**
@@ -50,7 +50,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventSubtitle() {
-		return _( $this->get( Event::SUBTITLE ) );
+		return __( $this->get( Event::SUBTITLE ) );
 	}
 
 	function getEventHumanStart() {
@@ -137,15 +137,15 @@ trait EventTrait {
 	}
 
 	function getEventDescriptionHTML($args = []) {
-		return Markdown::parse( _( $this->getEventDescription() ), $args );
+		return Markdown::parse( __( $this->getEventDescription() ), $args );
 	}
 
 	function getEventAbstractHTML($args = []) {
-		return Markdown::parse( _( $this->getEventAbstract() ), $args );
+		return Markdown::parse( __( $this->getEventAbstract() ), $args );
 	}
 
 	function getEventNoteHTML($args = []) {
-		return Markdown::parse( _( $this->getEventNote() ), $args );
+		return Markdown::parse( __( $this->getEventNote() ), $args );
 	}
 
 	/**

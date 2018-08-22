@@ -35,16 +35,16 @@ trait UserSkillTrait {
 		$n = $this->get('skill_score');
 		$t = $this->get('skill_type');
 
-		if($n === 0)  return _("%s per me potrebbe essere qualcosa che si mangia");
-		if($n === 1 ) return _("ho conoscenze %s di base");
-		if($n === 2)  return $t === Skill::PROGRAMMING ? _("sono discretamente bravo in %s")   : _("sono molto interessato al mondo %s");
-		if($n === 3)  return $t === Skill::PROGRAMMING ? _("%s... il mio cavallo di battaglia!") : _("%s... è un mio pensiero fisso!");
-		if($n > 3)    return _("%s: l'essenza stessa della mia vita!");
-		if($n === -1) return _("%s, sto cercando di smettere...");
-		if($n === -2) return _("se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia");
-		if($n === -3) return _("se accenni a %s ti prendo a tastierate");
+		if($n === 0)  return __("%s per me potrebbe essere qualcosa che si mangia");
+		if($n === 1 ) return __("ho conoscenze %s di base");
+		if($n === 2)  return $t === Skill::PROGRAMMING ? __("sono discretamente bravo in %s")   : _("sono molto interessato al mondo %s");
+		if($n === 3)  return $t === Skill::PROGRAMMING ? __("%s... il mio cavallo di battaglia!") : _("%s... è un mio pensiero fisso!");
+		if($n > 3)    return __("%s: l'essenza stessa della mia vita!");
+		if($n === -1) return __("%s, sto cercando di smettere...");
+		if($n === -2) return __("se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia");
+		if($n === -3) return __("se accenni a %s ti prendo a tastierate");
 
-		return _("sono pronto ad uccidere se sento parlare di %s e non ho paura della galera");
+		return __("sono pronto ad uccidere se sento parlare di %s e non ho paura della galera");
 	}
 
 	function getSkillPhrase() {

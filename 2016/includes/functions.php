@@ -65,10 +65,10 @@ function icon($icon = 'send', $c = null) {
 
 function die_with_404() {
 	new Header('404', [
-		'title' => _("È un 404! Pagina non trovata :("),
+		'title' => __("È un 404! Pagina non trovata :("),
 		'not-found' => true
 	] );
-	error( _("Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di root <b>non</b> risolve la situazione!)") );
+	error( __("Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di root <b>non</b> risolve la situazione!)") );
 	new Footer();
 	exit;
 }

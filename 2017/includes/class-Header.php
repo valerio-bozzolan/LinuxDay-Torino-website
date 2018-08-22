@@ -47,7 +47,7 @@ class Header {
 
 		if( $args['head-title'] === null ) {
 			$args['head-title'] = sprintf(
-				_("%s - %s"),
+				__("%s - %s"),
 				$args['title'],
 				$args['nav-title']
 			);

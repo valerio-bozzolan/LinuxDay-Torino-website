@@ -41,7 +41,7 @@ trait TrackTrait {
 	 * @return string
 	 */
 	function getTrackName() {
-		return _( $this->get( 'track_name' ) );
+		return __( $this->get( 'track_name' ) );
 	}
 
 	/**
@@ -50,7 +50,7 @@ trait TrackTrait {
 	 * @return string
 	 */
 	function getTrackLabel() {
-		return _( $this->get( 'track_label' ) );
+		return __( $this->get( 'track_label' ) );
 	}
 
 	/**

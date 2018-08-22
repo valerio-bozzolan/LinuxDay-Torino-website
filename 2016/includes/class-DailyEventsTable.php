@@ -87,7 +87,7 @@ class DailyEventsTable {
 			<?php for($h = 1; $h <= $this->getHours(); $h++): ?>
 			<tr class="hoverable">
 				<th><?php printf(
-					_("%d° ora"),
+					__("%d° ora"),
 					$h
 				) ?></th>
 				<?php foreach($this->getTracks() as $track): ?>
@@ -102,12 +102,12 @@ class DailyEventsTable {
 								$event_title
 							),
 							sprintf(
-								_("Talk %s"),
+								__("Talk %s"),
 								$event_title
 							)
 						);
 						printf(
-							_("%s<br /> di %s."),
+							__("%s<br /> di %s."),
 							$title,
 							$this->getImplodedUsers($h, $track->track_uid)
 						);
@@ -138,9 +138,9 @@ class DailyEventsTable {
 		}
 
 		$last = $n > 1 ? array_pop($users) : false;
-		$s = implode( _(", "), $users);
+		$s = implode( __(", "), $users);
 		if($last) {
-			$s = sprintf( _("%s e %s"), $s, $last);
+			$s = sprintf( __("%s e %s"), $s, $last);
 		}
 
 		return $s;

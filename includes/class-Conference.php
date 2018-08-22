@@ -41,7 +41,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceTitle() {
-		return _( $this->get( Conference::TITLE ) );
+		return __( $this->get( Conference::TITLE ) );
 	}
 
 	function getConferenceURL( $base = URL ) {
@@ -77,7 +77,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceDescription() {
-		return nl2br( _( $this->get( 'conference_description' ) ) );
+		return nl2br( __( $this->get( 'conference_description' ) ) );
 	}
 
 	/**
@@ -86,7 +86,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceQuote() {
-		return nl2br( _( $this->get( 'conference_quote' ) ) );
+		return nl2br( __( $this->get( 'conference_quote' ) ) );
 	}
 
 	/**
@@ -95,7 +95,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceSubtitle() {
-		return _( $this->get( 'conference_subtitle' ) );
+		return __( $this->get( 'conference_subtitle' ) );
 	}
 
 	/**

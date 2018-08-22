@@ -41,7 +41,7 @@ trait ChapterTrait {
 	 * @return string
 	 */
 	function getChapterName() {
-		return _( $this->get( Chapter::NAME ) );
+		return __( $this->get( Chapter::NAME ) );
 	}
 
 	/**

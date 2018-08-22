@@ -31,7 +31,7 @@ class ActivityBox {
 	 */
 	public static function spawn( $what, $who, $url = null, $prep = null, $img = null, $attendize = null ) {
 		if( ! $prep ) {
-			$prep = _( "da %s" );
+			$prep = __( "da %s" );
 		}
 		$who_text = $who;
 		if( $url ) {
@@ -52,15 +52,15 @@ class ActivityBox {
 
 				<p>
 					<span class="flow-text"><?php echo $what ?></span><br />
-					<?php printf( _( "Gestito %s." ), $who_prep ) ?>
+					<?php printf( __( "Gestito %s." ), $who_prep ) ?>
 				</p>
 
 				<?php if( $attendize ): ?>
 					<p><?php echo HTML::a(
 						$attendize,
-						_("Prenota"),
+						__("Prenota"),
 						sprintf(
-							_( "Prenota la tua partecipazione a %s" ),
+							__( "Prenota la tua partecipazione a %s" ),
 							$what
 						),
 						'btn white purple-text waves-effect waves-purple hoverable',

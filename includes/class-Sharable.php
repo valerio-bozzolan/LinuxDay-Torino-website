@@ -39,7 +39,7 @@ trait SharableTrait {
 			return $this->getDefaultSharableTitle($args);
 		}
 
-		return _( $sharable_title );
+		return __( $sharable_title );
 	}
 
 	/**
@@ -54,9 +54,9 @@ trait SharableTrait {
 
 		if( $sharable_type === 'youtube' ) {
 			if( isset( $args['prop'] ) && $args['prop'] ) {
-				return sprintf( _("il %s"), _("video esterno") );
+				return sprintf( __("il %s"), _("video esterno") );
 			} else {
-				return _("video esterno");
+				return __("video esterno");
 			}
 		}
 

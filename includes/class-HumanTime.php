@@ -42,13 +42,13 @@ class HumanTime {
 
 		if( $diff->invert ) {
 			return sprintf(
-				_("fra %s"),
+				__("fra %s"),
 				$human
 			);
 		}
 
 		return sprintf(
-			_("%s fa"),
+			__("%s fa"),
 			$human
 		);
 	}
@@ -64,21 +64,21 @@ class HumanTime {
 		}
 
 		if( $y > 1 ) {
-			return sprintf( _("%d anni"), $y );
+			return sprintf( __("%d anni"), $y );
 		}
 
 		if( $y === 1 ) {
-			return _("un anno");
+			return __("un anno");
 		}
 
 		// This year
 
 		if( $m > 1 ) {
-			return sprintf( _("%d mesi"), $m );
+			return sprintf( __("%d mesi"), $m );
 		}
 
 		if( $m === 1 ) {
-			return _("un mese");
+			return __("un mese");
 		}
 
 		// This month
@@ -90,21 +90,21 @@ class HumanTime {
 		}
 
 		if( $d_fake > 13 ) {
-			return sprintf( _("%d settimane"), $d_fake / 7 );
+			return sprintf( __("%d settimane"), $d_fake / 7 );
 		}
 
 		if( $d_fake > 6 ) {
-			return _("una settimana");
+			return __("una settimana");
 		}
 
 		if( $d_fake > 1 ) {
-			return sprintf( _("%d giorni"), $d_fake );
+			return sprintf( __("%d giorni"), $d_fake );
 		}
 
 		if( $d_fake === 1 ) {
 			$complete = true;
 
-			return $invert ? _("domani") : _("ieri");
+			return $invert ? __("domani") : _("ieri");
 		}
 
 		// Today
@@ -118,15 +118,15 @@ class HumanTime {
 		if( $h_fake > 3 ) {
 			$complete = true;
 
-			return _("oggi");
+			return __("oggi");
 		}
 
 		if( $h > 1 ) {
 			if( $m > 0 ) {
-				return sprintf( _("%d ore e %d minuti"), $h, $i );
+				return sprintf( __("%d ore e %d minuti"), $h, $i );
 			}
 
-			return sprintf( _("%d ore"), $h );
+			return sprintf( __("%d ore"), $h );
 		}
 
 		// In this hour
@@ -138,31 +138,31 @@ class HumanTime {
 		}
 
 		if( $i_fake > 52 ) {
-			return _("un'ora");
+			return __("un'ora");
 		}
 
 		if( $i_fake > 37 ) {
-			return _("tre quarti d'ora");
+			return __("tre quarti d'ora");
 		}
 
 		if( $i_fake > 22 ) {
-			return _("mezzora");
+			return __("mezzora");
 		}
 
 		if( $i_fake > 1 ) {
-			return sprintf( _("%d minuti"), $i_fake );
+			return sprintf( __("%d minuti"), $i_fake );
 		}
 
 		if( $i_fake === 1 ) {
-			return sprintf( _("un minuto") );
+			return sprintf( __("un minuto") );
 		}
 
 		if( $s > 10 ) {
-			return sprintf( _("%d secondi"), $s );
+			return sprintf( __("%d secondi"), $s );
 		}
 
 		$complete = true;
 
-		return _("proprio ora");
+		return __("proprio ora");
 	}
 }

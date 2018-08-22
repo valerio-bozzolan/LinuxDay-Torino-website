@@ -29,7 +29,7 @@ class Footer {
 		<a class="btn green darken-3 waves-effect" href="<?php echo URL ?>/">
 			<?php
 			printf(
-				_("Torna a %s"),
+				__("Torna a %s"),
 				SITE_NAME
 			);
 			echo icon('home', 'right');
@@ -46,7 +46,7 @@ class Footer {
 			<div class="col s12 m7 l8">
 				<h5 class="black-text"><code>#LDTO17</code></h5>
 				<p class="black-text"><?php printf(
-					_("Tutti i contenuti sono rilasciati sotto ".
+					__("Tutti i contenuti sono rilasciati sotto ".
 					  "licenza di <strong>contenuto culturale libero</strong> %s. ".
 					  "Sei libero di distribuire e/o modificare i contenuti ".
 					  "anche per scopi commerciali, fintanto che si cita la provenienza e ".
@@ -55,20 +55,20 @@ class Footer {
 					license('cc-by-sa-4.0')->getLink('green-text')
 				) ?></p>
 				<p class="black-text"><?php printf(
-					_("Contattare all'indirizzo %s o al numero %s."),
+					__("Contattare all'indirizzo %s o al numero %s."),
 					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'hoverable green-text'),
 					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'hoverable green-text', 'target="_blank"')
 				) ?></p>
 				<p class="ld-social valign-wrapper">
 					<a class="hoverable" href="https://facebook.com/LinuxDayTorino" target="_blank" title="<?php printf(
-						_("%s su Facebook"),
+						__("%s su Facebook"),
 						SITE_NAME
 					) ?>">
 						<img src="<?php echo STATIC_PATH ?>/social/facebook.png" height="32" alt="Facebook" />
 					</a>
 
 					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" title="<?php printf(
-						_("%s su Twitter"),
+						__("%s su Twitter"),
 						SITE_NAME
 					) ?>">
 						<img src="<?php echo STATIC_PATH ?>/social/twitter.png" height="32" alt="Twitter" class="circle" />
@@ -77,7 +77,7 @@ class Footer {
 					<?php echo HTML::a(
 						'https://blog.linuxdaytorino.org',
 						icon('rss_feed', 'ld-blog-icon'),
-						_("Blog del Linux Day Torino"),
+						__("Blog del Linux Day Torino"),
 						'btn-floating waves-effect waves-green ld-blog',
 						'target="_blank"'
 					) ?>
@@ -99,15 +99,15 @@ class Footer {
 					) ?></li>
 					<?php };
 
-					$ld(2016, _("Dipartimento di Informatica") );
-					$ld(2015, _("Dipartimento di Biotecnologie")  );
-					$ld(2014, _("Politecnico di Torino")  );
-					$ld(2013, _("Politecnico di Torino")  );
-					$ld(2012, _("Cortile del Maglio")  );
+					$ld(2016, __("Dipartimento di Informatica") );
+					$ld(2015, __("Dipartimento di Biotecnologie")  );
+					$ld(2014, __("Politecnico di Torino")  );
+					$ld(2013, __("Politecnico di Torino")  );
+					$ld(2012, __("Cortile del Maglio")  );
 
 					// You want to fight about this?
 					for($year=2011; $year>2006; $year--) {
-						$ld($year, _("Cascina Roccafranca")  );
+						$ld($year, __("Cascina Roccafranca")  );
 					}
 					?>
 				</ul>

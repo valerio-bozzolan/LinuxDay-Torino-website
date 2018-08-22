@@ -60,7 +60,7 @@ trait UserTrait {
 	 */
 	public function getUserFullname() {
 		return sprintf(
-			_("%s %s"),
+			__("%s %s"),
 			$this->get( User::NAME ),
 			$this->get( User::SURNAME )
 		);
@@ -86,7 +86,7 @@ trait UserTrait {
 		return HTML::a(
 			$this->getUserURL( $base ),
 			$name,
-			sprintf( _("Profilo utente di %s"), $name ),
+			sprintf( __("Profilo utente di %s"), $name ),
 			$html_class
 		);
 	}
@@ -113,7 +113,7 @@ trait UserTrait {
 	}
 
 	function getUserBioHTML($args = []) {
-		return Markdown::parse( _( $this->getUserBIO() ), $args);
+		return Markdown::parse( __( $this->getUserBIO() ), $args);
 	}
 
 	function isUserSocial() {
