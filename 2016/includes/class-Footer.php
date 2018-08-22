@@ -112,6 +112,15 @@ class Footer {
 					?>
 				</ul>
 
+				<h5 class="white-text"><?php _e( "Lingua" ) ?></h5>
+				<form method="post">
+					<select name="l">
+						<?php foreach( all_languages() as $l ): ?>
+							<option value="<?php echo $l->getCode() ?>"<?php _selected( $l, latest_language() ) ?>><?php echo $l->getHuman() ?></option>
+						<?php endforeach ?>
+					</select>
+					<button type="submit" class="btn waves-effect"><?php _e( "Scegli" ) ?></button>
+				</form>
 			</div>
 		</div>
 		<div class="row darken-1 white-text">
@@ -137,6 +146,7 @@ class Footer {
 $(document).ready( function () {
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
+	$('select').material_select();
 } );
 </script>
 </body>
