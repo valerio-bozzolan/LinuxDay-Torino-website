@@ -41,16 +41,16 @@ $conference = $xml->createElement( 'conference' );
 $conference = $schedule->appendChild( $conference );
 
 $conference_fields = [
-	'title'       => Conference::TITLE,
-	'subtitle'    => Conference::SUBTITLE,
-	'acronym'     => Conference::ACRONYM,
-	'days'        => Conference::DAYS,
-	'persons_url' => Conference::PERSONS_URL,
-	'events_url'  => Conference::EVENTS_URL,
+	'title'       => $conference_row->getConferenceTitle(),
+	'subtitle'    => $conference_row->getConferenceSubtitle(),
+	'acronym'     => $conference_row->get( Conference::ACRONYM ),
+	'days'        => $conference_row->get( Conference::DAYS ),
+	'persons_url' => $conference_row->get( Conference::PERSONS_URL ),
+	'events_url'  => $conference_row->get( Conference::EVENTS_URL ),
 ];
 
 foreach( $conference_fields as $xml_field => $db_field ) {
-	add_child( $xml, $conference, $xml_field, $conference_row->get( $db_field ) );
+	add_child( $xml, $conference, $xml_field, $db_field );
 }
 
 add_child( $xml, $conference, 'start', $conference_row->getConferenceStart( 'Y-m-d H:i:s' ) );
