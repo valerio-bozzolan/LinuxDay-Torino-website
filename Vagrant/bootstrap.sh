@@ -20,6 +20,7 @@ apt-get install --yes mariadb-server     \
                       php                \
                       php-mysql          \
                       php-mbstring       \
+                      php-xml            \
                       apache2            \
                       libapache2-mod-php \
                       gettext            \
