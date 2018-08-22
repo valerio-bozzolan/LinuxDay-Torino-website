@@ -51,6 +51,7 @@ xgettext \
 	--package-name=$package \
 	--from-code=UTF-8 \
 	--keyword=_e \
+	--keyword=__ \
 	--default-domain=$package \
 	-o "$path"/2016/l10n/$package.pot \
 	"$path"/includes/*.php \
