@@ -29,178 +29,155 @@ Header::spawn('credits');
 
 	<div class="section">
 		<div class="row">
-
-		<?php $tech = function($name, $url, $license, $desc, $icon = null, $material = false) {
-			$license = license($license); ?>
-			<div class="col s3 m2 l1">
-				<div class="row libre-icon valign-wrapper">
-					<div class="col s12 valign">
-						<a href="<?php echo $url ?>" title="<?php printf(
-							__("%s: progetto a licenza %s"),
-							$name,
-							$license->getShort()
-						) ?>" target="_blank">
-						<?php if($icon): ?>
-							<img class="hoverable responsive-img" src="<?php echo STATIC_PATH . "/libre-icons/$icon" ?>" alt="<?php printf(
-								__("Logo di %s"),
-								$name
-							) ?>" />
-						<?php endif ?>
-						</a>
-					</div>
-				</div>
-			</div>
-		<?php }; ?>
-
 		<?php
-		$tech(
+		CreditBox::spawn(
 			"Debian GNU/Linux",
 			'https://debian.org',
 			'gnu-gpl',
 			__("Sistema operativo del server web."),
 			'debian.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Apache",
 			'https://httpd.apache.org',
 			'apache',
 			__("Server web."),
 			'apache.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"PHP5",
 			'http://php.net',
 			'php',
 			__("Pre-processore di ipertesti."),
 			'php.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"MariaDB",
 			'https://mariadb.org',
 			'gnu-gpl-v2',
 			__("MySQL guidato dalla comunità."),
 			'mariadb.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"MySQL",
 			'http://www.mysql.com',
 			'gnu-gpl-v2',
 			__("Database SQL relazionale."),
 			'mysql.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"GNU Gettext",
 			'https://www.gnu.org/software/gettext/',
 			'gnu-gpl',
 			__("Framework per internazionalizzazione e localizzazione dei messaggi."),
 			'gnu.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Boz-PHP",
 			'https://launchpad.net/boz-php-another-php-framework',
 			'gnu-agpl',
 			__("Framework PHP e MySQL/MariaDB."),
 			'boz.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Let's Encrypt",
 			'https://certbot.eff.org',
 			'apache',
 			__("Certificato SSL."),
 			'lets-encrypt.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"jQuery",
 			'http://jquery.com',
 			'jquery',
 			__("Framework JavaScript."),
 			'jquery.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Leaflet",
 			'http://leafletjs.com',
 			'bsd-2',
 			__("Framework JavaScript per mappe interattive"),
 			'leaflet.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Materialize",
 			'https://github.com/Dogfalo/materialize',
 			'mit',
 			__("Framework CSS e JavaScript in stile Material Design."),
 			'materialize.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Roboto 2.0",
 			'https://www.google.com/fonts/specimen/Roboto',
 			'apache',
 			__("Famiglia di caratteri."),
 			'roboto.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Material Design Icons",
 			'http://google.github.io/material-design-icons/',
 			'cc-by',
 			__("Collezione di icone Material Design."),
 			'material.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Inkscape",
 			__('https://inkscape.org/it/'),
 			'gnu-gpl-v2',
 			__("Programma per disegno vettoriale."),
 			'inkscape.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"GIMP",
 			__('https://www.gimp.org'),
 			'gnu-gpl',
 			__("Fotoritocchi e modifiche alle immagini"),
 			'gimp.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"GNU Nano",
 			'https://www.nano-editor.org',
 			'gnu-gpl',
 			__("Banale editor di testo da terminale."),
 			'gnu-nano.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"OpenStreetMap",
 			'http://www.openstreetmap.org',
 			'odbl',
 			__("Mappa planetaria libera"),
 			'osm.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Git",
 			'https://git-scm.com',
 			'gnu-gpl-v2',
 			__("Controllo versione distribuito"),
 			'git.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"Attendize",
 			'https://www.attendize.com',
 			'aal',
 			__("Event manager open source"),
 			'attendize.jpg'
 		);
-		$tech(
+		CreditBox::spawn(
 			"YOURLS",
 			'https://yourls.org',
 			'mit',
 			__("Your Own Url Shortener"),
 			'yourls.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"W3C Validator",
 			'https://validator.w3.org',
 			'mit',
 			__("Validatore standard HTML, JavaScript e CSS"),
 			'w3c.png'
 		);
-		$tech(
+		CreditBox::spawn(
 			"F-Droid",
 			'https://f-droid.org',
 			'gnu-gpl-v3',
