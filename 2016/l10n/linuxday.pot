@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 16:19+0000\n"
+"POT-Creation-Date: 2018-08-22 16:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -309,15 +309,15 @@ msgid ""
 "regalare i tuoi dati a terzi!"
 msgstr ""
 
-#: 2016/includes/class-Header.php:146
+#: 2016/includes/class-Header.php:155
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr ""
 
-#: 2016/includes/class-Header.php:149
-msgid "https://it.wikipedia.org/wiki/Linux__(kernel)"
+#: 2016/includes/class-Header.php:158
+msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr ""
 
-#: 2016/includes/class-Header.php:169
+#: 2016/includes/class-Header.php:178
 msgid "This is Wikipedia"
 msgstr ""
 

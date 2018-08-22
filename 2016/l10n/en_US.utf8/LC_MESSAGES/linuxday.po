@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 16:19+0000\n"
+"POT-Creation-Date: 2018-08-22 16:41+0000\n"
 "PO-Revision-Date: 2016-10-18 19:54+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -321,16 +321,16 @@ msgstr ""
 "be considered something normal to don't give your sensitive informations to "
 "third parts!"
 
-#: 2016/includes/class-Header.php:146
+#: 2016/includes/class-Header.php:155
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
-#: 2016/includes/class-Header.php:149
+#: 2016/includes/class-Header.php:158
 #, fuzzy
-msgid "https://it.wikipedia.org/wiki/Linux__(kernel)"
+msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/includes/class-Header.php:169
+#: 2016/includes/class-Header.php:178
 msgid "This is Wikipedia"
 msgstr "This is Wikipedia"
 
