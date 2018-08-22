@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-22 16:41+0000\n"
-"PO-Revision-Date: 2016-10-18 19:54+0100\n"
+"PO-Revision-Date: 2018-08-22 20:33+0200\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: includes/class-HumanTime.php:107
 msgid "ieri"
@@ -153,11 +153,11 @@ msgstr "Next"
 
 #: 2016/index.php:70
 msgid "Ma abbiamo altro!"
-msgstr ""
+msgstr "But we have more!"
 
 #: 2016/index.php:73
 msgid "Evento"
-msgstr ""
+msgstr "Event"
 
 #: 2016/index.php:163
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
@@ -213,7 +213,7 @@ msgstr "You are logged in!"
 
 #: 2016/login.php:55
 msgid "Nome utente"
-msgstr ""
+msgstr "Username"
 
 #: 2016/login.php:59
 msgid "Password"
@@ -285,7 +285,7 @@ msgstr "Type"
 
 #: 2016/user.php:163
 msgid "When"
-msgstr ""
+msgstr "Quando"
 
 #: 2016/user.php:201
 msgid "Questo utente non ha ancora tenuto nessun talk."
@@ -326,7 +326,6 @@ msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
 #: 2016/includes/class-Header.php:158
-#, fuzzy
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
@@ -343,9 +342,8 @@ msgid "LDTO15"
 msgstr "LDTO15"
 
 #: conference[2017]::conference_title
-#, fuzzy
 msgid "Linux Day Torino 2017"
-msgstr "Linux Day Turin 2016"
+msgstr "Linux Day Turin 2017"
 
 #: event[talk-base-1]::event_title
 msgid "Didattica del coding"
@@ -637,6 +635,9 @@ msgid ""
 "\n"
 "Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
 msgstr ""
+"This was the first introductive lesson by the Linux Day Turin committee.\n"
+"\n"
+"It was an introductive lesson about GNU/Linux and to the Free Software world."
 
 #: event[gnu-linux-base-installation]::event_title
 msgid "Installiamo insieme una distribuzione GNU/Linux"
@@ -647,6 +648,8 @@ msgid ""
 "Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
 "Torino."
 msgstr ""
+"This is the second lesson from an initiative promoted by the Linux Day Turin "
+"committee."
 
 #: event[gnu-linux-base-debian-maintenance]::event_title
 msgid "Manutenzione di un sistema basato su Debian"
@@ -659,6 +662,10 @@ msgid ""
 "Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
 "Torino."
 msgstr ""
+"The management of a Debian-like (Debian, various Ubuntu, etc.).\n"
+"\n"
+"This is the third lesson from an initiative promoted by the Linux Day Turin "
+"committee."
 
 #: event[gnu-linux-base-command-line]::event_title
 msgid "I comandi di base di un sistema GNU/Linux"
@@ -672,6 +679,11 @@ msgid ""
 "Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
 "Torino."
 msgstr ""
+"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
+"parti del tuo sistema GNU/Linux.\n"
+"\n"
+"This is the fourth lesson from an initiative promoted by the Linux Day Turin "
+"committee."
 
 #: event[gnu-linux-base-sysadmin]::event_title
 msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
@@ -685,6 +697,11 @@ msgid ""
 "Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
 "Torino."
 msgstr ""
+"Know which services and which parts build a GNU/Linux system and how to "
+"administrate them in the right way.\n"
+"\n"
+"This is the fifth lesson from an initiative promoted by the Linux Day Turin "
+"committee."
 
 #: event[gnu-linux-base-award-ceremony]::event_title
 msgid "Consegna degli attestati"
@@ -697,6 +714,10 @@ msgid ""
 "Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
 "comitato Linux Day Torino."
 msgstr ""
+"We will give certificates and stickers!\n"
+"\n"
+"This day ends the lessons from an initiative promoted by the Linux Day Turin "
+"committee."
 
 #: location[1]::location_name
 msgid "Dipartimento di Informatica"
@@ -817,9 +838,8 @@ msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
 #: conference[2017]::conference_title9
-#, fuzzy
 msgid "Laboratorio Dijkstra"
-msgstr "Dijkstra Lab"
+msgstr "Dijkstra Laboratory"
 
 #: room[f]::room_name
 msgid "Aula F"
@@ -1176,6 +1196,10 @@ msgid ""
 "\n"
 "Ora cerco di sviluppare il mio futuro libero... e tu?"
 msgstr ""
+"Linux user since 2010 started from Ubuntu with GNOME (<3) on a very old "
+"computer that even in 1983 would not be a good one.\n"
+"\n"
+"Now I try to develop my free future... and you?"
 
 #~ msgid "fra %s"
 #~ msgstr "in %s"
