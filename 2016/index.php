@@ -251,8 +251,8 @@ Header::spawn('conference', [
 					);
 				?></p>
 				<p>
-					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/repository/browse/?fdid=it.linuxday.torino" target="_blank">
-							<?php echo icon('file_download', 'left'); _e("Installa LDTO16") ?>
+					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/en/packages/it.linuxday.torino/" target="_blank">
+						<?php echo icon('file_download', 'left'); _e("Installa LDTO16") ?>
 					</a>
 				</p>
 			</div>
