@@ -108,7 +108,7 @@ trait EventTrait {
 	 * @return bool
 	 */
 	public function hasEventDescription() {
-		return null !== $this->get( 'event_description' );
+		return null !== $this->get( Event::DESCRIPTION );
 	}
 
 	/**
@@ -117,7 +117,7 @@ trait EventTrait {
 	 * @return bool
 	 */
 	public function hasEventAbstract() {
-		return null !== $this->get( 'event_abstract' );
+		return null !== $this->get( Event::ABSTRACT );
 	}
 
 	/**
@@ -126,7 +126,7 @@ trait EventTrait {
 	 * @return bool
 	 */
 	function hasEventNote() {
-		return null !== $this->get( 'event_note' );
+		return null !== $this->get( Event::NOTE );
 	}
 
 	/**
@@ -135,7 +135,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventDescription() {
-		return $this->get( 'event_description' );
+		return $this->get( Event::DESCRIPTION );
 	}
 
 	/**
@@ -144,7 +144,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventAbstract() {
-		return $this->get('event_abstract');
+		return $this->get( Event::ABSTRACT );
 	}
 
 	/**
@@ -153,7 +153,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventNote() {
-		return $this->get('event_note');
+		return $this->get( Event::NOTE );
 	}
 
 	function getEventDescriptionHTML($args = []) {
@@ -284,6 +284,21 @@ class Event extends Queried {
 	 * End column name
 	 */
 	const END = 'event_end';
+
+	/**
+	 * Description column name
+	 */
+	const DESCRIPTION = 'event_description';
+
+	/**
+	 * Abstract column name
+	 */
+	const ABSTRACT = 'event_abstract';
+
+	/**
+	 * Note column name
+	 */
+	const NOTE = 'event_note';
 
 	/**
 	 * Maximum UID length

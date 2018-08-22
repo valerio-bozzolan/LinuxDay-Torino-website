@@ -23,7 +23,7 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationName() {
-		return __( $this->get( 'location_name' ) );
+		return __( $this->get( Location::NAME ) );
 	}
 
 	/**
@@ -32,7 +32,7 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationAddress() {
-		return __( $this->get( 'location_address' ) );
+		return __( $this->get( Location::ADDRESS ) );
 	}
 
 	/**
@@ -41,7 +41,7 @@ trait LocationTrait {
 	 * @return string
 	 */
 	public function getLocationNote() {
-		return __( $this->get('location_note') );
+		return __( $this->get( Location::NOTE ) );
 	}
 
 	function getLocationNoteHTML($args = []) {
@@ -108,6 +108,21 @@ class Location extends Queried {
 	 * Database table name
 	 */
 	const T = 'location';
+
+	/**
+	 * Name column name
+	 */
+	const NAME = 'location_name';
+
+	/**
+	 * Address column name
+	 */
+	const ADDRESS = 'location_address';
+
+	/**
+	 * Note column name
+	 */
+	const NOTE = 'location_note';
 
 	/**
 	 * Maximum UID length

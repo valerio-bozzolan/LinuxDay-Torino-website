@@ -55,6 +55,16 @@ class Skill extends Queried {
 	const T = 'skill';
 
 	/**
+	 * UID column name
+	 */
+	const UID = 'skill_uid';
+
+	/**
+	 * Title column name
+	 */
+	const TITLE = 'skill_title';
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override

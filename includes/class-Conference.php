@@ -77,7 +77,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceDescription() {
-		return nl2br( __( $this->get( 'conference_description' ) ) );
+		return nl2br( __( $this->get( Conference::DESCRIPTION ) ) );
 	}
 
 	/**
@@ -147,6 +147,11 @@ class Conference extends Queried {
 	 * Conference title column
 	 */
 	const TITLE = 'conference_title';
+
+	/**
+	 * Description column name
+	 */
+	const DESCRIPTION = 'conference_description';
 
 	/**
 	 * Maximum UID length

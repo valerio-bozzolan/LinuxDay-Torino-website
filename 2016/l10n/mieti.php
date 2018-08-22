@@ -1,6 +1,7 @@
+#!/usr/bin/php
 <?php
 # Linux Day 2016 - GNU Gettext feeder generating fake source code content from the database
-# Copyright (C) 2016 Linux Day Torino
+# Copyright (C) 2016, 2018 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -16,19 +17,20 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Usage:
-# php ./mieti.php > trebbia.php
+# ./mieti.php > trebbia.php
 
-require '../../load.php';
+require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'load.php';
 
 empty( $argv )
-	&& error_die("THIS FILE CAN SPAWN PHP CODE?!? RUN AWAY (╯°□°)╯");
+	and error_die("THIS FILE CAN SPAWN PHP CODE?!? RUN AWAY (╯°□°)╯");
 
-$date = date('c');
+$date = date( 'c' );
 
+// header to be put in trebbia.php
 echo <<< EOF
 <?php
 # Linux Day 2016 - Fake source code generated from the database to feed GNU Gettext
-# Copyright (C) 2016 Linux Day Torino
+# Copyright (C) 2016, 2018 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -45,41 +47,37 @@ echo <<< EOF
 
 # Last update: $date
 EOF;
+// end header
 
-spawn_gnu('conference', [
-		'conference_title',
-		'conference_description'
-	],
-	'conference_uid'
-);
+spawn_gnu( Conference::T, [
+	Conference::TITLE,
+	Conference::DESCRIPTION,
+], Conference::UID );
 
-spawn_gnu('event', [
-		'event_title',
-		'event_subtitle',
-		'event_abstract',
-		'event_description'
-	],
-	'event_uid'
-);
+spawn_gnu( Event::T, [
+	Event::TITLE,
+	Event::SUBTITLE,
+	Event::ABSTRACT,
+	Event::DESCRIPTION,
+], Event::UID );
 
-spawn_gnu('location', [
-	'location_name',
-	'location_address',
-	'location_note'
+spawn_gnu( Location::T, [
+	Location::NAME,
+	Location::ADDRESS,
+	Location::NOTE,
 ] );
 
-spawn_gnu('track', [
-		'track_name',
-		'track_label'
-	],
-	'track_uid'
-);
+spawn_gnu( Track::T, [
+	Track::NAME,
+	Track::LABEL,
+], Track::UID );
 
-spawn_gnu('chapter', 'chapter_name', 'chapter_uid');
-spawn_gnu('room',    'room_name',    'room_uid');
-spawn_gnu('skill',   'skill_title',  'skill_uid');
-spawn_gnu('user',    'user_bio',     'user_uid');
+spawn_gnu( Chapter::T, [ Chapter::NAME  ], Chapter::UID );
+spawn_gnu( Room   ::T, [ Room   ::NAME  ], Room   ::UID );
+spawn_gnu( Skill  ::T, [ Skill  ::TITLE ], Skill  ::UID );
+spawn_gnu( User   ::T, [ User   ::BIO   ], User   ::UID );
 
+// footer to be put in trebbia.php
 echo <<< EOF
 
 
@@ -87,44 +85,40 @@ echo <<< EOF
 ##### Th-th-th-that's all folks! #####
 ######################################
 EOF;
+// end footer
 
-function spawn_gnu($from, $fields, $identifier = null) {
-	force_array($fields);
-
-	if($identifier === null) {
+function spawn_gnu( $from, $fields, $identifier = null ) {
+	if( ! $identifier ) {
 		$identifier = "{$from}_ID";
 	}
 
 	// Stripping evil carriage returns from the database
-	$sql = [];
-	foreach($fields as $field) {
-		$sql[] = sprintf(
-			'`%1$s` = REPLACE(`%1$s`, \'\r\n\', \'\n\')',
+	$cols = [];
+	foreach( $fields as $field ) {
+		$cols[] = new DBCol( $field, sprintf(
+			'REPLACE(`%1$s`, \'\r\n\', \'\n\')',
 			$field
-		);
+		), '-' );
 	}
-	query("UPDATE {$GLOBALS[T]($from)} SET " . implode(', ', $sql) );
+	query_update( $from, $cols, '1' /* WHERE 1 */ );
 
-	$select = $fields;
-	$select[] = $identifier;
-	$q = new DynamicQuery();
-	$elements = $q->useTable($from)->selectField($select)->query();
+	$results = Query::factory()
+		->select( $fields )
+		->select( $identifier )
+		->from( $from )
+		->queryGenerator();
 
-	if( ! $elements->num_rows ) {
-		return;
-	}
-
-	while( $row = $elements->fetch_array() ) {
-		$uid = $row[$identifier];
-		spawn_linux($from, $uid, $row, $fields);
+	foreach( $results as $result ) {
+		$uid = $result->get( $identifier );
+		spawn_linux( $from, $uid, $result, $fields );
 	}
 }
 
-function spawn_linux($from, $uid, $obj, $properties) {
-	foreach($properties as $property) {
-		$value = $obj[ $property ];
+function spawn_linux( $from, $uid, $obj, $properties ) {
+	foreach( $properties as $property ) {
+		$value = $obj->get( $property );
 
-		if( empty($value) ) {
+		if( empty( $value ) ) {
 			continue;
 		}
 
@@ -136,8 +130,8 @@ function spawn_linux($from, $uid, $obj, $properties) {
 			$property
 		);
 
-		$value = addcslashes($value, '"\\');
+		$value = addcslashes( $value, '"\\' );
 
-		printf('_("%s");', $value);
+		printf( '_("%s");', $value );
 	}
 }
