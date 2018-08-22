@@ -202,7 +202,7 @@ Header::spawn('user', [
 				<?php
 				$title = sprintf( __("%s su %s"), $user->getUserFullname(), $social );
 				$logo = $is_icon ? icon($path) : HTML::img(STATIC_PATH . "/social/$path", $social, $title, 'responsive-img');
-				echo HTML::a($profile, $logo, $title, null, 'target="_blank"');
+				echo HTML::a( $profile, $logo, $title, null, 'target="_blank" rel="noreferrer nofollow"' );
 				?>
 			</div>
 			<?php }; ?>
