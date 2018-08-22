@@ -1,21 +1,20 @@
-# Linux Day 2016 website - GNU Gettext English translation file.
-# Copyright (C) 2016 Linux Day website contributors
-# This file is distributed under the same license as the Linux Day 2016 package.
-# Valerio Bozzolan <gnu@linux.it>, 2016.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: linuxday\n"
+"Project-Id-Version: linux-day-torino\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-22 10:36+0000\n"
-"PO-Revision-Date: 2016-10-18 19:54+0100\n"
-"Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2018-08-22 15:36\n"
+"Last-Translator: valerio.bozzolan <gnu@linux.it>\n"
+"Language-Team: English\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: crowdin.com\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: linux-day-torino\n"
+"X-Crowdin-Language: en\n"
+"X-Crowdin-File: /master/2016/l10n/en_US.utf8/LC_MESSAGES/linuxday.po\n"
 
 #: includes/class-HumanTime.php:107
 msgid "ieri"
@@ -52,13 +51,8 @@ msgid "%s... è un mio pensiero fisso!"
 msgstr "I think all the time about %s!"
 
 #: 2016/credits.php:27
-msgid ""
-"Di seguito sono riportati gli elementi utilizzati in questo sito, tra i "
-"migliori esempi di <strong>software libero</strong> e <strong>open source</"
-"strong>."
-msgstr ""
-"Here are reported some of the best exemples of Free as in freedom software "
-"elements used in this website."
+msgid "Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>."
+msgstr "Here are reported some of the best exemples of Free as in freedom software elements used in this website."
 
 #: 2016/credits.php:204 2016/event.php:204
 msgid "Materiale"
@@ -98,34 +92,27 @@ msgstr "When"
 
 #: 2016/event.php:140
 msgid "Abstract"
-msgstr "Abstract"
+msgstr ""
 
 #: 2016/event.php:150
 msgid "Descrizione"
 msgstr "Description"
 
 #: 2016/event.php:161
-msgid ""
-"Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa "
-"pagina."
-msgstr ""
-"Invite your friends to subscribe in this page sharing the URL of this web "
-"page."
+msgid "Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina."
+msgstr "Invite your friends to subscribe in this page sharing the URL of this web page."
 
 #: 2016/event.php:167
 msgid "Iscrizioni"
 msgstr "Subscriptions"
 
 #: 2016/event.php:168
-msgid ""
-"Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare "
-"il tuo interesse:"
-msgstr ""
-"Subscriptions are still open. Insert your e-mail to express your interest:"
+msgid "Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:"
+msgstr "Subscriptions are still open. Insert your e-mail to express your interest:"
 
 #: 2016/event.php:171
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #: 2016/event.php:175
 msgid "Sottoscrivi"
@@ -217,23 +204,15 @@ msgstr ""
 
 #: 2016/login.php:59
 msgid "Password"
-msgstr "Password"
+msgstr ""
 
 #: 2016/login.php:64
 msgid "Accedi"
 msgstr "Log in"
 
 #: 2016/partner.php:23
-msgid ""
-"Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si "
-"festeggia in tutta Italia.Tutto questo, a Torino, non sarebbe possibile "
-"senza una comunità incredibile. Grazie a tutti coloro che credono nella "
-"libertà digitale e culturale."
-msgstr ""
-"Did you know that the Linux Day is a national event? On the same day it is "
-"celebrated all over Italy. All of this, in Turin, would not be possible "
-"without an incredible community. Thanks to all those who believe in digital "
-"and cultural freedom."
+msgid "Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si festeggia in tutta Italia.Tutto questo, a Torino, non sarebbe possibile senza una comunità incredibile. Grazie a tutti coloro che credono nella libertà digitale e culturale."
+msgstr "Did you know that the Linux Day is a national event? On the same day it is celebrated all over Italy. All of this, in Turin, would not be possible without an incredible community. Thanks to all those who believe in digital and cultural freedom."
 
 #: 2016/partner.php:49
 msgid "Con la partecipazione di:"
@@ -241,11 +220,11 @@ msgstr "With the partnership of:"
 
 #: 2016/partner.php:96
 msgid "Main sponsor:"
-msgstr "Main sponsor:"
+msgstr ""
 
 #: 2016/partner.php:110
 msgid "Media partner:"
-msgstr "Media partner:"
+msgstr ""
 
 #: 2016/partner.php:131
 msgid "Con il patrocinio di:"
@@ -269,7 +248,7 @@ msgstr "My skills:"
 
 #: 2016/user.php:129
 msgid "Bio"
-msgstr "Bio"
+msgstr ""
 
 #: 2016/user.php:138
 msgid "Talk condotti"
@@ -293,7 +272,7 @@ msgstr "This user has not had any talk yet."
 
 #: 2016/user.php:198
 msgid "Social"
-msgstr "Social"
+msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:70
 msgid "asd! No."
@@ -312,27 +291,20 @@ msgid "<b>Alcuni</b> diritti riservati."
 msgstr "<b>Some</b> rights reserved."
 
 #: 2016/includes/class-Footer.php:144
-msgid ""
-"Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
-"Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
-"regalare i tuoi dati a terzi!"
-msgstr ""
-"Have you noticed something? There is not a user tracking software. It should "
-"be considered something normal to don't give your sensitive informations to "
-"third parts!"
+msgid "Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non regalare i tuoi dati a terzi!"
+msgstr "Have you noticed something? There is not a user tracking software. It should be considered something normal to don't give your sensitive informations to third parts!"
 
 #: 2016/includes/class-Header.php:146
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
 #: 2016/includes/class-Header.php:149
-#, fuzzy
 msgid "https://it.wikipedia.org/wiki/Linux__(kernel)"
-msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
+msgstr ""
 
 #: 2016/includes/class-Header.php:169
 msgid "This is Wikipedia"
-msgstr "This is Wikipedia"
+msgstr ""
 
 #: conference[2016]::conference_title
 msgid "Linux Day Torino 2016"
@@ -340,24 +312,20 @@ msgstr "Linux Day Turin 2016"
 
 #: conference[2015]::conference_title
 msgid "LDTO15"
-msgstr "LDTO15"
+msgstr ""
 
 #: conference[2017]::conference_title
-#, fuzzy
 msgid "Linux Day Torino 2017"
-msgstr "Linux Day Turin 2016"
+msgstr ""
 
 #: event[talk-base-1]::event_title
 msgid "Didattica del coding"
 msgstr "Coding didactics"
 
 #: event[talk-base-1]::event_description
-msgid ""
-"Le basi del coding sono fondamentali, come leggere e scrivere.\n"
-"Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
-"genitori?"
-msgstr ""
-"Coding basics are fundamentals, like reading and writing. \n"
+msgid "Le basi del coding sono fondamentali, come leggere e scrivere.\n"
+"Quali strumenti e metodi didattici hanno a disposizione insegnanti e genitori?"
+msgstr "Coding basics are fundamentals, like reading and writing. \n"
 "Which didactics tools and methods do teachers and parents have?"
 
 #: event[talk-dev-1]::event_title
@@ -365,27 +333,16 @@ msgid "Introduzione alla programmazione con JavaScript"
 msgstr "Introduction to JavaScript programming"
 
 #: event[talk-dev-1]::event_description
-msgid ""
-"Un viaggio nel magico mondo della programmazione con consigli pratici e "
-"tecnici per chi aspira a creare software e non solo subirlo."
-msgstr ""
-"A journey through the magical world of programming with practical and "
-"technical recommendation to whoever aspires to create software and not just "
-"having it imposed on them."
+msgid "Un viaggio nel magico mondo della programmazione con consigli pratici e tecnici per chi aspira a creare software e non solo subirlo."
+msgstr "A journey through the magical world of programming with practical and technical recommendation to whoever aspires to create software and not just having it imposed on them."
 
 #: event[talk-sys-1]::event_title
 msgid "Non bisogna aver paura di IPv6"
 msgstr "Do not fear IPv6"
 
 #: event[talk-sys-1]::event_description
-msgid ""
-"Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
-"potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
-"Linux."
-msgstr ""
-"A short, not technical, presentation of IPv6, from its characteristics to "
-"its potentiality, its difference with IPv4 and its implementation in GNU/"
-"Linux environments."
+msgid "Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/Linux."
+msgstr "A short, not technical, presentation of IPv6, from its characteristics to its potentiality, its difference with IPv4 and its implementation in GNU/Linux environments."
 
 #: event[talk-misc-1]::event_title
 msgid "La tecnologia LoRa e le sue applicazioni IoT"
@@ -396,29 +353,16 @@ msgid "Rinascimento 2.0"
 msgstr "Renaissance 2.0"
 
 #: event[talk-base-2]::event_description
-msgid ""
-"Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
-"leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
-"tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando "
-"in una nuova era."
-msgstr ""
-"It's not a History class... or maybe it is. We are writing the history that "
-"our grandchildren will study. We are often to taken by technological gadgets "
-"to realize that a revolution is taking place: we are entering a new era. "
+msgid "Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando in una nuova era."
+msgstr "It's not a History class... or maybe it is. We are writing the history that our grandchildren will study. We are often to taken by technological gadgets to realize that a revolution is taking place: we are entering a new era. "
 
 #: event[talk-base-3]::event_title
 msgid "Utilizzi di GNU/Linux"
 msgstr "GNU/Linux uses"
 
 #: event[talk-base-3]::event_description
-msgid ""
-"Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
-"del software libero della vita di tutti i giorni. Si suggerisce di invitare "
-"il vostro classico conoscente scettico e/o fanboy (╯°□°)╯."
-msgstr ""
-"Participants will be asked to answer an interactive poll on Free as in "
-"Freedom Software uses in every day life. It's recommended to bring with you "
-"your typical skeptic friend and/or the fanboy (╯°□°)╯."
+msgid "Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi del software libero della vita di tutti i giorni. Si suggerisce di invitare il vostro classico conoscente scettico e/o fanboy (╯°□°)╯."
+msgstr "Participants will be asked to answer an interactive poll on Free as in Freedom Software uses in every day life. It's recommended to bring with you your typical skeptic friend and/or the fanboy (╯°□°)╯."
 
 #: event[talk-base-4]::event_title
 msgid "Linux al Comune di Torino"
@@ -426,80 +370,31 @@ msgstr "Linux to Municipality of Turin"
 
 #: event[talk-dev-2]::event_title
 msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
-msgstr ""
-"Yocto Project, an automatic generator of embedded Linux distributions. "
+msgstr "Yocto Project, an automatic generator of embedded Linux distributions. "
 
 #: event[talk-dev-2]::event_description
-msgid ""
-"Lo Yocto Project è un progetto di collaborazione open source che fornisce "
-"modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
-"personalizzati per i prodotti embedded indipendenti dall'architettura "
-"hardware. Il progetto è stato creato nel 2010 come una collaborazione tra "
-"molti produttori di hardware, fornitori di sistemi operativi open-source e "
-"aziende di elettronica per portare un po' di ordine nel caos di sviluppo di "
-"Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di "
-"sviluppo Linux embedded completo con gli strumenti, i metadati e la "
-"documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette "
-"a disposizione sono potenti e facilmente generabili (compresi gli ambienti "
-"di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e "
-"permettono di realizzare e portare avanti progetti, senza causare la perdita "
-"delle ottimizzazioni e degli investimenti effettuati nel corso del fase di "
-"prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia "
-"da parte della comunità open source permettendo agli utenti di concentrarsi "
-"sulle caratteristiche e lo sviluppo del proprio prodotto."
-msgstr ""
-"The Yocto Project is a collaborative open source project that provides "
-"prototypes, tools and methods that let you create personalized Linux-based "
-"systems for embedded products independent from the hardware architecture. "
-"The project was born in 2010 as a partnership of many different hardware "
-"manufacturers, open-source operative systems providers and electronic "
-"companies,  to bring some order to the chaos that was the development of "
-"Linux Embedded. Why use Project Yocto? Because it's a development "
-"environment for Linux embedded complete with tools, meta-data and "
-"documentation - everything that one needs. The free of charge tools that "
-"Yocto makes available are powerful and easy to generate (included emulation "
-"environments, debuggers, a tool-kit to generate applications and others) and "
-"they let you create and continue projects, without causing you a loss of "
-"optimizations and investments made in the prototyping phase. Project Yocto "
-"supports the adoption of this technology by the open-source community "
-"letting users concentrate on the characteristics and development of their "
-"product."
+msgid "Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po' di ordine nel caos di sviluppo di Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di sviluppo Linux embedded completo con gli strumenti, i metadati e la documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette a disposizione sono potenti e facilmente generabili (compresi gli ambienti di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e permettono di realizzare e portare avanti progetti, senza causare la perdita delle ottimizzazioni e degli investimenti effettuati nel corso del fase di prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia da parte della comunità open source permettendo agli utenti di concentrarsi sulle caratteristiche e lo sviluppo del proprio prodotto."
+msgstr "The Yocto Project is a collaborative open source project that provides prototypes, tools and methods that let you create personalized Linux-based systems for embedded products independent from the hardware architecture. The project was born in 2010 as a partnership of many different hardware manufacturers, open-source operative systems providers and electronic companies,  to bring some order to the chaos that was the development of Linux Embedded. Why use Project Yocto? Because it's a development environment for Linux embedded complete with tools, meta-data and documentation - everything that one needs. The free of charge tools that Yocto makes available are powerful and easy to generate (included emulation environments, debuggers, a tool-kit to generate applications and others) and they let you create and continue projects, without causing you a loss of optimizations and investments made in the prototyping phase. Project Yocto supports the adoption of this technology by the open-source community letting users concentrate on the characteristics and development of their product."
 
 #: event[talk-dev-3]::event_title
 msgid "Dieci anni dietro a FidoCadJ"
 msgstr "Ten years put behind FidoCadj"
 
 #: event[talk-dev-3]::event_description
-msgid ""
-"Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
-"io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
-"forum italiani."
-msgstr ""
-"Behind the scenes of the [FidoCadJ](http://darwinne.github.io/FidoCadJ/) "
-"open-source project: an editor for electronics (and not only), used in "
-"different Italian forums."
+msgid "Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github.io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi forum italiani."
+msgstr "Behind the scenes of the [FidoCadJ](http://darwinne.github.io/FidoCadJ/) open-source project: an editor for electronics (and not only), used in different Italian forums."
 
 #: event[talk-dev-4]::event_title
 msgid "Un bot di Telegram con Python"
 msgstr "A Telegram bot with Python"
 
 #: event[talk-dev-4]::event_abstract
-msgid ""
-"Usare Python e la libreria Telepot per sviluppare un semplice bot su "
-"Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
-"piccolo, economico e parco in consumi."
-msgstr ""
-"Developing a simple Telegram bot using Python and the Telepot library  to "
-"create a simple 6-faces dice for us. The project is deployed on a  Raspberry "
-"PI, small, cheap and low energy."
+msgid "Usare Python e la libreria Telepot per sviluppare un semplice bot su Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, piccolo, economico e parco in consumi."
+msgstr "Developing a simple Telegram bot using Python and the Telepot library  to create a simple 6-faces dice for us. The project is deployed on a  Raspberry PI, small, cheap and low energy."
 
 #: event[talk-dev-4]::event_description
-msgid ""
-"Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
-"connettività e tempo una breve dimostrazione."
-msgstr ""
-"Slides with code examples and a live show of the Raspberry, and a brief "
-"demonstration if there is enough time."
+msgid "Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è connettività e tempo una breve dimostrazione."
+msgstr "Slides with code examples and a live show of the Raspberry, and a brief demonstration if there is enough time."
 
 #: event[talk-sys-2]::event_title
 msgid "Docker: distribuiamo applicazioni"
@@ -507,61 +402,36 @@ msgstr "Docker: we supply applications"
 
 # Come si traduce sistemi distribuiti? ~Liv
 #: event[talk-sys-2]::event_description
-msgid ""
-"Una introduzione ai sistemi distribuiti tramite la gestione dei container "
-"realizzati con Docker.\n"
-"Una risposta alle domande: Docker a cosa serve? Come si installa? Come si "
-"gestisce?"
-msgstr ""
-"An introduction to distributed systems through the management of Docker's "
-"containers.\n"
-"An answer to: what do we need Docker for? How to install it? How do I manage "
-"it?"
+msgid "Una introduzione ai sistemi distribuiti tramite la gestione dei container realizzati con Docker.\n"
+"Una risposta alle domande: Docker a cosa serve? Come si installa? Come si gestisce?"
+msgstr "An introduction to distributed systems through the management of Docker's containers.\n"
+"An answer to: what do we need Docker for? How to install it? How do I manage it?"
 
 #: event[talk-sys-4]::event_title
 msgid "Hadoop - BigData in streaming"
-msgstr "Hadoop - BigData in streaming"
+msgstr ""
 
 #: event[talk-sys-4]::event_description
-msgid ""
-"Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
-"l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
-msgstr ""
-"What are BigData and where do they go? Case use of a cluster Hadoop to "
-"elaborate while streaming with Apache NiFi, Kafka and Solr."
+msgid "Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
+msgstr "What are BigData and where do they go? Case use of a cluster Hadoop to elaborate while streaming with Apache NiFi, Kafka and Solr."
 
 #: event[talk-sys-3]::event_title
 msgid "InfoSec. Istruzioni per l'uso."
 msgstr "InfoSec. How to use."
 
 #: event[talk-sys-3]::event_description
-msgid ""
-"InfoSec → Information Security → Sicurezza delle informazioni.\n"
-"\n"
-"Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
-"maggiormente al sicuro la propria \"vita digitale\"."
-msgstr ""
-"InfoSec → Information Security.\n"
-"\n"
-"Talk will show application and give practical advice in order to keep "
-"(mainly) safe you \"digital life\"."
+msgid "InfoSec → Information Security → Sicurezza delle informazioni.\n\n"
+"Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere maggiormente al sicuro la propria \"vita digitale\"."
+msgstr "InfoSec → Information Security.\n\n"
+"Talk will show application and give practical advice in order to keep (mainly) safe you \"digital life\"."
 
 #: event[talk-misc-2]::event_title
 msgid "Sostenibilità e Open Culture all'Università"
 msgstr "Sustainability and Open Culture at University"
 
 #: event[talk-misc-2]::event_abstract
-msgid ""
-"Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
-"Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
-"possano rigenerare le apparecchiature guaste, condividere informazioni e "
-"fornire alla società circostante apparecchiature elettroniche funzionanti "
-"gratuitamente."
-msgstr ""
-"Broken devices are a resource rather than a waste. At Politecnico a group of "
-"students mean to build a team where kids can restore broken devices, share "
-"informations and provide society around them with free of charge working "
-"devices."
+msgid "Le apparecchiature guaste sono una risorsa più che un rifiuto. Al Politecnico un gruppo di studenti intende costituire un team dove i ragazzi possano rigenerare le apparecchiature guaste, condividere informazioni e fornire alla società circostante apparecchiature elettroniche funzionanti gratuitamente."
+msgstr "Broken devices are a resource rather than a waste. At Politecnico a group of students mean to build a team where kids can restore broken devices, share informations and provide society around them with free of charge working devices."
 
 #: event[talk-misc-3]::event_title
 msgid "Wikidata: la base di conoscenza libera"
@@ -569,72 +439,52 @@ msgstr "Wikidata: the ground of Free knowledge"
 
 #: event[talk-misc-4]::event_title skill[wiki]::skill_title
 msgid "Wikipedia"
-msgstr "Wikipedia"
+msgstr ""
 
 #: event[lip]::event_title
 msgid "LIP"
-msgstr "LIP"
+msgstr ""
 
 #: event[lip]::event_subtitle conference[2015]::conference_title6
 msgid "Linux Installation Party"
-msgstr "Linux Installation Party"
+msgstr ""
 
 #: event[lip]::event_abstract
 msgid "Installazione di varie distribuzioni GNU/Linux."
 msgstr "Installation of various GNU/Linux distributions."
 
 #: event[lip]::event_description
-msgid ""
-"Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
-"Gestito da volontari."
-msgstr ""
-"Linux Installation Party and technical assistance on GNU/Linux "
-"distributions. Run by Volunteers."
+msgid "Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. Gestito da volontari."
+msgstr "Linux Installation Party and technical assistance on GNU/Linux distributions. Run by Volunteers."
 
 #: event[coderdojo]::event_title conference[2015]::conference_title9
 msgid "Coderdojo"
-msgstr "Coderdojo"
+msgstr ""
 
 #: event[coderdojo]::event_abstract
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr "Coding lab for children themed Linux Day."
 
 #: event[coderdojo]::event_description
-msgid ""
-"Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
-"deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
-"confronteranno con tematiche fondamentali, come il Software Libero e lo "
-"sviluppo Open Source. Entra a far parte della gang del Software Libero! "
-"=D<br>\n"
+msgid "Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si confronteranno con tematiche fondamentali, come il Software Libero e lo sviluppo Open Source. Entra a far parte della gang del Software Libero! =D<br>\n"
 "<br>\n"
-"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui "
-"per prenotare</a>.\n"
+"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui per prenotare</a>.\n"
 "<br>\n"
 "<br>\n"
-"Un ringraziamento particolare ai due gruppi che hanno reso possibile "
-"quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
-msgstr ""
-"So yes, for the first time in all of Turin's editions of Linux Day, has been "
-"decided to host a CoderDojo, a bit unique. There ninjas will confront with "
-"fundamentals thematics, like Free Software and Open Source developement. Be "
-"a part of the Free Software gang! =D<br>\n"
+"Un ringraziamento particolare ai due gruppi che hanno reso possibile quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
+msgstr "So yes, for the first time in all of Turin's editions of Linux Day, has been decided to host a CoderDojo, a bit unique. There ninjas will confront with fundamentals thematics, like Free Software and Open Source developement. Be a part of the Free Software gang! =D<br>\n"
 "<br>\n"
-"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Click here "
-"to book</a>.\n"
+"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Click here to book</a>.\n"
 "<br>\n"
 "<br>\n"
-"Particular thanks go to the two groups that made this experience possible "
-"CoderDojo Turin and CoderDojo Turin 2."
+"Particular thanks go to the two groups that made this experience possible CoderDojo Turin and CoderDojo Turin 2."
 
 #: event[gnu-linux-base]::event_title
 msgid "Lezione introduttiva corso GNU/Linux"
 msgstr "Introduction to GNU/Linux"
 
 #: event[gnu-linux-base]::event_description
-msgid ""
-"Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
-"Linux Day Torino.\n"
-"\n"
+msgid "Questa è stata la prima lezione introduttiva dell'iniziativa del comitato Linux Day Torino.\n\n"
 "Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
 msgstr ""
 
@@ -643,9 +493,7 @@ msgid "Installiamo insieme una distribuzione GNU/Linux"
 msgstr "Installation of a GNU/Linux distribution"
 
 #: event[gnu-linux-base-installation]::event_description
-msgid ""
-"Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
+msgid "Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day Torino."
 msgstr ""
 
 #: event[gnu-linux-base-debian-maintenance]::event_title
@@ -653,11 +501,8 @@ msgid "Manutenzione di un sistema basato su Debian"
 msgstr "Maintainment of a Debian-based system"
 
 #: event[gnu-linux-base-debian-maintenance]::event_description
-msgid ""
-"La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
-"\n"
-"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
+msgid "La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n\n"
+"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day Torino."
 msgstr ""
 
 #: event[gnu-linux-base-command-line]::event_title
@@ -665,12 +510,8 @@ msgid "I comandi di base di un sistema GNU/Linux"
 msgstr "GNU/Linux base commands"
 
 #: event[gnu-linux-base-command-line]::event_description
-msgid ""
-"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
-"parti del tuo sistema GNU/Linux.\n"
-"\n"
-"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
+msgid "Conoscere i comandi di base per l'amministrazione del filesystem e di altre parti del tuo sistema GNU/Linux.\n\n"
+"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day Torino."
 msgstr ""
 
 #: event[gnu-linux-base-sysadmin]::event_title
@@ -678,12 +519,8 @@ msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
 msgstr "GNU/Linux system and services maintainment"
 
 #: event[gnu-linux-base-sysadmin]::event_description
-msgid ""
-"Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
-"amministrarli al meglio.\n"
-"\n"
-"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
+msgid "Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come amministrarli al meglio.\n\n"
+"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day Torino."
 msgstr ""
 
 #: event[gnu-linux-base-award-ceremony]::event_title
@@ -691,11 +528,8 @@ msgid "Consegna degli attestati"
 msgstr "Award ceremony"
 
 #: event[gnu-linux-base-award-ceremony]::event_description
-msgid ""
-"I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
-"\n"
-"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
-"comitato Linux Day Torino."
+msgid "I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n\n"
+"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal comitato Linux Day Torino."
 msgstr ""
 
 #: location[1]::location_name
@@ -707,18 +541,10 @@ msgid "Torino, Via Pessinetto 12"
 msgstr "Turin, Via Pessinetto 12"
 
 #: location[1]::location_note
-msgid ""
-"Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
-"Amedeo di Savoia / Dipartimento di Informatica*.\n"
-"\n"
-"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
-"°**59** e n°**59/** scendendo alla fermata *Svizzera*."
-msgstr ""
-"You can take the tram n°**9** and n°**3** getting of at *Amedeo di Savoia "
-"Hospital/Computer Science Department*.\n"
-"\n"
-"Taking the underground to *XIII Dicembre* and getting on the bus n°**59** or "
-"n°**59/** and getting off at the stop **Svizzera**."
+msgid "Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale Amedeo di Savoia / Dipartimento di Informatica*.\n\n"
+"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n°**59** e n°**59/** scendendo alla fermata *Svizzera*."
+msgstr "You can take the tram n°**9** and n°**3** getting of at *Amedeo di Savoia Hospital/Computer Science Department*.\n\n"
+"Taking the underground to *XIII Dicembre* and getting on the bus n°**59** or n°**59/** and getting off at the stop **Svizzera**."
 
 #: location[2]::location_name
 msgid "Dipartimento di Biotecnologie"
@@ -729,16 +555,12 @@ msgid "Via Nizza 52, Torino"
 msgstr "Via Nizza 52, Turin"
 
 #: conference[2016]::conference_title0
-msgid ""
-"La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
-"Biotecnologie."
-msgstr ""
-"**Nizza**'s underground station is at 50 mt from the Biotechnologies "
-"Department. "
+msgid "La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di Biotecnologie."
+msgstr "**Nizza**'s underground station is at 50 mt from the Biotechnologies Department. "
 
 #: conference[2016]::conference_title3
 msgid "Base"
-msgstr "Base"
+msgstr ""
 
 #: conference[2016]::conference_title6
 msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
@@ -746,7 +568,7 @@ msgstr "Non-technical"
 
 #: conference[2016]::conference_title9
 msgid "Dev"
-msgstr "Dev"
+msgstr ""
 
 #: track[dev]::track_label
 msgid "Area sviluppatori"
@@ -754,7 +576,7 @@ msgstr "Developers area"
 
 #: track[sys]::track_name
 msgid "Sys"
-msgstr "Sys"
+msgstr ""
 
 #: track[sys]::track_label
 msgid "Area sistemisti"
@@ -762,7 +584,7 @@ msgstr "Sysadmins area"
 
 #: track[misc]::track_name
 msgid "Misc"
-msgstr "Misc"
+msgstr ""
 
 #: track[misc]::track_label
 msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
@@ -778,7 +600,7 @@ msgstr "A bit of everything"
 
 #: conference[2015]::conference_title3
 msgid "Talk"
-msgstr "Talk"
+msgstr ""
 
 #: chapter[learning]::chapter_name
 msgid "Corso"
@@ -817,9 +639,8 @@ msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
 #: conference[2017]::conference_title9
-#, fuzzy
 msgid "Laboratorio Dijkstra"
-msgstr "Dijkstra Lab"
+msgstr ""
 
 #: room[f]::room_name
 msgid "Aula F"
@@ -831,47 +652,47 @@ msgstr "von Neumann Lab"
 
 #: skill[asd]::skill_title
 msgid "asd"
-msgstr "asd"
+msgstr ""
 
 #: skill[php]::skill_title
 msgid "PHP"
-msgstr "PHP"
+msgstr ""
 
 #: skill[js]::skill_title
 msgid "JavaScript"
-msgstr "JavaScript"
+msgstr ""
 
 #: skill[microsoft-windows]::skill_title
 msgid "Microsoft Windows"
-msgstr "Microsoft Windows"
+msgstr ""
 
 #: event[talk-base-1]::event_title0
 msgid "NodeJS"
-msgstr "NodeJS"
+msgstr ""
 
 #: event[talk-base-1]::event_title3
 msgid "Apple"
-msgstr "Apple"
+msgstr ""
 
 #: event[talk-base-1]::event_title6
 msgid "Java"
-msgstr "Java"
+msgstr ""
 
 #: event[talk-base-1]::event_title9
 msgid "C++"
-msgstr "C++"
+msgstr ""
 
 #: skill[ubuntu]::skill_title
 msgid "Ubuntu"
-msgstr "Ubuntu"
+msgstr ""
 
 #: skill[gnu-linux]::skill_title
 msgid "GNU/Linux"
-msgstr "GNU/Linux"
+msgstr ""
 
 #: skill[turbo-pascal]::skill_title
 msgid "Turbo Pascal"
-msgstr "Turbo Pascal"
+msgstr ""
 
 #: skill[free-software]::skill_title
 msgid "Software Libero"
@@ -879,15 +700,15 @@ msgstr "Free Software"
 
 #: skill[debian]::skill_title
 msgid "Debian"
-msgstr "Debian"
+msgstr ""
 
 #: skill[inkscape]::skill_title
 msgid "Inkscape"
-msgstr "Inkscape"
+msgstr ""
 
 #: event[talk-base-1]::event_description0
 msgid "Adobe Illustrator"
-msgstr "Adobe Illustrator"
+msgstr ""
 
 #: event[talk-base-1]::event_description3
 msgid "Immagini vettoriali"
@@ -903,277 +724,122 @@ msgstr "RAEE recovery"
 
 #: skill[blender]::skill_title
 msgid "Blender"
-msgstr "Blender"
+msgstr ""
 
 #: skill[c]::skill_title
 msgid "C"
-msgstr "C"
+msgstr ""
 
 #: skill[embedded]::skill_title
 msgid "Embedded"
-msgstr "Embedded"
+msgstr ""
 
 #: skill[haskell]::skill_title
 msgid "Haskell"
-msgstr "Haskell"
+msgstr ""
 
 #: user[boz]::user_bio
 msgid "Qualcuno ha detto... software libero?"
 msgstr "Did someone say... Free as in Freedom software?"
 
 #: user[oirasor]::user_bio
-msgid ""
-"Studente di Ingegneria Informatica, appassionato di tante cose (forse "
-"troppe).\n"
-"\n"
-"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
-"avanzare per migliorare le risorse e la conoscenza di tutti.\n"
-"\n"
-"Mi è capitato di organizzare il Linux Day 2016. =P\n"
-"\n"
+msgid "Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).\n\n"
+"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.\n\n"
+"Mi è capitato di organizzare il Linux Day 2016. =P\n\n"
 "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
-msgstr ""
-"Computer engineering student, enthusiast of many things (maybe too many).\n"
-"\n"
-"I don't like technology for the sake of gadgets, but I like its incessant "
-"progress to improve resources and knowledge for everyone.\n"
-"\n"
-"I ended up organizing the Linux Day 2016. =P\n"
-"\n"
+msgstr "Computer engineering student, enthusiast of many things (maybe too many).\n\n"
+"I don't like technology for the sake of gadgets, but I like its incessant progress to improve resources and knowledge for everyone.\n\n"
+"I ended up organizing the Linux Day 2016. =P\n\n"
 "Floppy musician, checkers and Retrocomputing enthusiast."
 
 #: user[dario]::user_bio
-msgid ""
-"Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
-"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
-"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
-"it).\n"
-"\n"
-"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
-"2010."
-msgstr ""
-"Dario Sera, 22 years old, Computer engineering student with a fascination "
-"for didactics. Co-founder of [CoderDojo Turin2](http://www.coderdojotorino2."
-"it) and of [Merende Digitali](http://www.merendedigitali.it).\n"
-"\n"
-"I've been using GNU/Linux for many years, and I help out at the Linux Day "
-"since 2010."
+msgid "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).\n\n"
+"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010."
+msgstr "Dario Sera, 22 years old, Computer engineering student with a fascination for didactics. Co-founder of [CoderDojo Turin2](http://www.coderdojotorino2.it) and of [Merende Digitali](http://www.merendedigitali.it).\n\n"
+"I've been using GNU/Linux for many years, and I help out at the Linux Day since 2010."
 
 #: event[talk-dev-1]::event_title4
-msgid ""
-"Ricercatore, Maker, Insegnante, Sviluppatore...\n"
+msgid "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
 "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
 "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
-msgstr ""
-"Researcher, Maker, Teacher, Developer...\n"
-"Fifty years old at the civil registry, but keeps on playing and thinking "
-"freely.\n"
+msgstr "Researcher, Maker, Teacher, Developer...\n"
+"Fifty years old at the civil registry, but keeps on playing and thinking freely.\n"
 "Actually he wants to save the world, but don't tell it to anybody."
 
 #: event[talk-dev-1]::event_title9
-msgid ""
-"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
-"freelance."
-msgstr ""
-"Founder of <http://corso-javascript.it> and TorinoJS, software developer "
-"freelance."
+msgid "Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance."
+msgstr "Founder of <http://corso-javascript.it> and TorinoJS, software developer freelance."
 
 #: user[marco.cavallini]::user_bio
-msgid ""
-"Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
-"Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
-"1999 con le prime schede StrongArm.\n"
-"\n"
-"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
-"ha fondato KOAN nel 1996, una software house specializzata in software "
-"embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
-"formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
-"è solitamente interessato a mescolare la Fisica con la Filosofia."
-msgstr ""
-"Marco Cavallini is a C/C++ programmer since mid '80s. He started to "
-"evangelize Open Source and Linux Embedded since 1999 with the first "
-"StrongArm's boards.\n"
-"\n"
-"A member of OpenEmbedded since 2009 and Yocto Project advocate since 2012. "
-"Marco founded KOAN in 1996, a software house specialized in embedded "
-"software with Italian offices, that offers kernel development services and "
-"training on Linux embedded systems. When he is not using a computer, he is "
-"usually interested in mixing up Physics with Philosophy."
+msgid "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.\n\n"
+"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia."
+msgstr "Marco Cavallini is a C/C++ programmer since mid '80s. He started to evangelize Open Source and Linux Embedded since 1999 with the first StrongArm's boards.\n\n"
+"A member of OpenEmbedded since 2009 and Yocto Project advocate since 2012. Marco founded KOAN in 1996, a software house specialized in embedded software with Italian offices, that offers kernel development services and training on Linux embedded systems. When he is not using a computer, he is usually interested in mixing up Physics with Philosophy."
 
 #: user[davide]::user_bio
-msgid ""
-"Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
-"bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
-"pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano "
-"gli amplificatori operazionali, in altre occasioni canta a squarciagola con "
-"altre persone. Appassionato di vecchi computer e di elettronica analogica, "
-"si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una "
-"macchina da scrivere ed un pianoforte. Coordinatore del progetto open source "
-"FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due "
-"posti, soprattutto se a motore centrale.\n"
-"\n"
-"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
-"generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
-"su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
-"ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
-"dielettrica."
-msgstr ""
-"Davide is a transalpine traveller, Sunday programmer (except when it's sunny "
-"and there's snow and he can go ski) and sometimes even of Saturday "
-"afternoon. Sometimes he tells boys and girls how to use operational "
-"amplifiers, some other times he sings to the top of his lungs with other "
-"people. Old computers and analogical electronics enthusiast, he has at home "
-"an embarrassing number of oscilloscopes, transistors, a typing machine and a "
-"piano. Coordinator of the open source project FidoCadj, Davide is sensitive "
-"to the charm of two seats convertibles, especially with mid-engine layout.\n"
-"\n"
-"Davide often uses Java, C and C++, he know how to build a impulse generator "
-"with step recovery diodes, he knows pretty well what is an augmented fourth "
-"interval, how does the ionic exchange work on glass and how to calculate "
-"movement of propagation in a dielectric waveguide."
+msgid "Davide è viaggiatore transalpino, programmatore della domenica (se non fa bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano gli amplificatori operazionali, in altre occasioni canta a squarciagola con altre persone. Appassionato di vecchi computer e di elettronica analogica, si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. Coordinatore del progetto open source FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due posti, soprattutto se a motore centrale.\n\n"
+"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d'onda dielettrica."
+msgstr "Davide is a transalpine traveller, Sunday programmer (except when it's sunny and there's snow and he can go ski) and sometimes even of Saturday afternoon. Sometimes he tells boys and girls how to use operational amplifiers, some other times he sings to the top of his lungs with other people. Old computers and analogical electronics enthusiast, he has at home an embarrassing number of oscilloscopes, transistors, a typing machine and a piano. Coordinator of the open source project FidoCadj, Davide is sensitive to the charm of two seats convertibles, especially with mid-engine layout.\n\n"
+"Davide often uses Java, C and C++, he know how to build a impulse generator with step recovery diodes, he knows pretty well what is an augmented fourth interval, how does the ionic exchange work on glass and how to calculate movement of propagation in a dielectric waveguide."
 
 #: user[francesco]::user_bio
-msgid ""
-"Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
-"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
-"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
-"mese.\n"
-"\n"
-"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
-"altre schedine embedded, basi di elettronica, programmatore a tempo perso "
-"(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
-"mi ostacola)."
-msgstr ""
-"He has fun when he's dealing with bits and electrical current, professional "
-"systems analyst, maker for his own plesure, podcaster (<http://geekcookies."
-"github.com> and <http://www.pilloledib.it>) at least once a month.\n"
-"\n"
-"Short résumé of my passions: Win/Linux/Mac systems, Arduino, Raspberry Pi "
-"and other embedded boards, electronics fundamentals, programmer as a pastime "
-"(what languages? It's not important, learning their syntax is not "
-"preclusive)."
+msgid "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (<http://geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al mese.\n\n"
+"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola)."
+msgstr "He has fun when he's dealing with bits and electrical current, professional systems analyst, maker for his own plesure, podcaster (<http://geekcookies.github.com> and <http://www.pilloledib.it>) at least once a month.\n\n"
+"Short résumé of my passions: Win/Linux/Mac systems, Arduino, Raspberry Pi and other embedded boards, electronics fundamentals, programmer as a pastime (what languages? It's not important, learning their syntax is not preclusive)."
 
 #: user[massimo]::user_bio
 msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
 msgstr "System Architect at Project Archivio SRL and Dicobit."
 
 #: event[talk-dev-1]::event_description0
-msgid ""
-"Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
-"dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
-"Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
-"Digitale. Consulente informatico si occupa di system engineering."
-msgstr ""
-"Elia Bellussi, 35 years old, is the founder of the \"Museo Internazionale "
-"dell'Informatica\" (previously known as \"Museo Piemontese dell'Informatica"
-"\") and of CoderDojo Torino. Associate of AICA, \"Stati Generali "
-"dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
-"system engineering. "
+msgid "Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering."
+msgstr "Elia Bellussi, 35 years old, is the founder of the \"Museo Internazionale dell'Informatica\" (previously known as \"Museo Piemontese dell'Informatica\") and of CoderDojo Torino. Associate of AICA, \"Stati Generali dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in system engineering. "
 
 #: event[talk-dev-1]::event_description3 event[talk-dev-1]::event_description6
 msgid "Big Data System Architect e sysadmin."
 msgstr "Big Data System Architect and sysadmin."
 
 #: event[talk-dev-1]::event_description9
-msgid ""
-"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
-"sicurezza informatica, full stack Java developer, Consigliere della "
-"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
-msgstr ""
-"Computer engineer, open source enthusiast, focused on IT privacy and "
-"security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
-"degli Ingegneri della Provincia di Torino\"."
+msgid "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
+msgstr "Computer engineer, open source enthusiast, focused on IT privacy and security, full stack Java developer, Councelor at \"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino\"."
 
 #: user[marco.signoretto]::user_bio
-msgid ""
-"The trash king!\n"
-"\n"
-"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
-"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
-"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
-"aziendale.\n"
-"\n"
-"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
-"muoversi in tutti i campi della creatività: dal product design alla grafica, "
-"dall'interaction design alla sostenibilità."
-msgstr ""
-"The trash king!\n"
-"\n"
-"Born and raised in Turin, Marco has spent the last few years at Politecnico, "
-"studying the last ring of the productive chain: garbage. In 2015 he "
-"graduated in Ecodesign with a thesis about RAEE management at a business "
-"level.\n"
-"\n"
-"Today, he has opened the little creative studio \"Olive Creative Lab\" "
-"inclined to move around every field possible to creativity: from product "
-"design to graphics, from interaction design to sustainability."
+msgid "The trash king!\n\n"
+"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello aziendale.\n\n"
+"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a muoversi in tutti i campi della creatività: dal product design alla grafica, dall'interaction design alla sostenibilità."
+msgstr "The trash king!\n\n"
+"Born and raised in Turin, Marco has spent the last few years at Politecnico, studying the last ring of the productive chain: garbage. In 2015 he graduated in Ecodesign with a thesis about RAEE management at a business level.\n\n"
+"Today, he has opened the little creative studio \"Olive Creative Lab\" inclined to move around every field possible to creativity: from product design to graphics, from interaction design to sustainability."
 
 #: user[alessio]::user_bio
-msgid ""
-"Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
-"conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
-"giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
-"e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
-"piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
-msgstr ""
-"Aficionado of many things, I forced my passion for knowledge and technology "
-"to meet in computer science. I work with data everyday at Synapta, adding "
-"new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
-"semantic Web. I love to play chess and drink orange soda. Even not together. "
+msgid "Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
+msgstr "Aficionado of many things, I forced my passion for knowledge and technology to meet in computer science. I work with data everyday at Synapta, adding new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a semantic Web. I love to play chess and drink orange soda. Even not together. "
 
 #: user[mario.lacaj]::user_bio
-msgid ""
-"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
-"Dipartimento di Informatica di Torino.\n"
-"\n"
-"Cosa c'entro? Te lo dico subito in questa intervista:\n"
-"\n"
-"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
-"dipartimento/>"
-msgstr ""
-"Nice to meet you! I'm one of the Students' Union Representative of the "
-"Computer Science Department of Turin.\n"
-"\n"
-"What do I do? Know more about it in this interview:\n"
-"\n"
-"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
-"dipartimento/>"
+msgid "Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Dipartimento di Informatica di Torino.\n\n"
+"Cosa c'entro? Te lo dico subito in questa intervista:\n\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>"
+msgstr "Nice to meet you! I'm one of the Students' Union Representative of the Computer Science Department of Turin.\n\n"
+"What do I do? Know more about it in this interview:\n\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>"
 
 #: user[madbob]::user_bio
 msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
 msgstr "[Italian Linux Society](http://www.ils.org/)'s president."
 
 #: event[talk-sys-1]::event_title2
-msgid ""
-"Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
-"\n"
-"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
-"scrivere in un antico linguaggio per incantare oggetti e materializzare "
-"oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
-"\n"
-"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
-"meglio la meravigliosa tecnologia intorno a noi.\n"
-"\n"
-"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi "
-"e per chi non legge mai i testi delle licenze."
-msgstr ""
-"Alive since the far ‘92, my main calling is to be a wizard.\n"
-"\n"
-"Turning out not be be feasible, I started making wizards, daemons, writing "
-"ancient runes that enchant objects, materialize elements out of plastic and "
-"having great fun with it.\n"
-"\n"
-"Open source and hardware it was is needed for anyone to make use of the "
-"wonderful things around us.\n"
-"\n"
-"I love the [WTFPL](https://en.wikipedia.org/wiki/WTFPL) to distribute "
-"examples and for who don't never read the text of the licenses."
+msgid "Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n\n"
+"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere in un antico linguaggio per incantare oggetti e materializzare oggetti dalla plastica, e mi diverto tantissimo a farlo.\n\n"
+"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.\n\n"
+"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze."
+msgstr "Alive since the far ‘92, my main calling is to be a wizard.\n\n"
+"Turning out not be be feasible, I started making wizards, daemons, writing ancient runes that enchant objects, materialize elements out of plastic and having great fun with it.\n\n"
+"Open source and hardware it was is needed for anyone to make use of the wonderful things around us.\n\n"
+"I love the [WTFPL](https://en.wikipedia.org/wiki/WTFPL) to distribute examples and for who don't never read the text of the licenses."
 
 #: user[tinytanic]::user_bio
-msgid ""
-"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
-"che neanche nel 1983 sarebbe stato un buon computer.\n"
-"\n"
+msgid "Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto che neanche nel 1983 sarebbe stato un buon computer.\n\n"
 "Ora cerco di sviluppare il mio futuro libero... e tu?"
 msgstr ""
 
@@ -1695,3 +1361,4 @@ msgstr ""
 #~ msgstr ""
 #~ "Nott foond! A.k.a erroro fourzzzerofffoooourr (N.B. do not try to reload "
 #~ "under root permissions... it will <b>not</b> save you!)"
+
