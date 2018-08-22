@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Boz-PHP configuration
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Dau Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -35,49 +35,40 @@ spl_autoload_register( function($c) {
 require ABSPATH . '/includes/functions.php';
 
 // Boz-PHP: On demand global objects
-register_expected('LICENSES', 'Licenses');
+register_expected( 'LICENSES', 'Licenses' );
 
-register_permissions('user',    'edit-account');
-inherit_permissions( 'admin',   'user');
-register_permissions('admin',   'edit-users');
-register_permissions('admin',   'edit-events');
+register_permissions( 'user', 'edit-account' );
+inherit_permissions( 'admin',   'user', [
+	'edit-users',
+	'edit-events',
+] );
 
-defined('LATEST_CONFERENCE_UID')
-	or define('LATEST_CONFERENCE_UID', '2017');
+define_default( 'LATEST_CONFERENCE_UID', '2017' );
 
-defined('CURRENT_CONFERENCE_UID')
-	or define('CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID);
+define_default( 'CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID );
 
-defined('REPO')
-	or define('REPO', 'https://github.com/LinuxDayTorino/LinuxDay-Torino-website');
+define_default( 'REPO', 'https://github.com/LinuxDayTorino/LinuxDay-Torino-website' );
 
-defined('LIBMARKDOWN_PATH')
-	or define('LIBMARKDOWN_PATH', '/usr/share/php/markdown.php');
+define_default( 'LIBMARKDOWN_PATH', '/usr/share/php/markdown.php' );
 
-defined('JQUERY')
-	or define('JQUERY', '/javascript/jquery/jquery.min.js');
+define_default( 'JQUERY', '/javascript/jquery/jquery.min.js' );
 
-defined('LEAFLET_DIR')
-	or define('LEAFLET_DIR', '/javascript/leaflet');
+define_default( 'LEAFLET_DIR', '/javascript/leaflet' );
 
-defined('NOINDEX')
-	or define('NOINDEX', false);
+define_default( 'NOINDEX', false );
 
 // /{conference_uid}/
-defined('PERMALINK_CONFERENCE')
-	or define('PERMALINK_CONFERENCE', '/%s/');
+define_default( 'PERMALINK_CONFERENCE', '/%s/' );
 
  // /{conference_uid}/{$chapter_uid}/{event_uid}
-defined('PERMALINK_EVENT')
-	or define('PERMALINK_EVENT', '/%1$s/%3$s/%2$s');
+define_default( 'PERMALINK_EVENT', '/%1$s/%3$s/%2$s' );
 
 // /2016/{user_uid}
-defined('PERMALINK_USER')
-	or define('PERMALINK_USER', '/%1$s/user/%2$s');
+define_default( 'PERMALINK_USER', '/%1$s/user/%2$s' );
 
-defined('FORCE_PERMALINK')
-	or define('FORCE_PERMALINK', 1);
+define_default( 'FORCE_PERMALINK', 1 );
 
-register_js('jquery',   JQUERY);
-register_js('leaflet',  LEAFLET_DIR . '/leaflet.js');
-register_css('leaflet', LEAFLET_DIR . '/leaflet.css');
+register_js( 'jquery', JQUERY );
+
+register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
+register_css( 'leaflet', LEAFLET_DIR . '/leaflet.css' );
