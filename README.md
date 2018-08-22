@@ -55,12 +55,9 @@ Posizionare il framework Boz-PHP:
 Se il framework viene posizionato in un altro posto, modificare oppurtunatamente `load.php`.
 
 ### API
-Creare il file `includes/api/config.php` copiandolo da `includes/api/config-sample.php`.
+Le API (aka "tagliatella") possono generare un documento XML che contiene l'elenco dei talk/eventi (in un formato che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
 
-Le API possono generare il file `includes/api/schedule.xml` che contiene l'elenco dei talk/eventi in formato XML (che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
-
-Il file viene generato ogni volta che si esegue `includes/api/tagliatella.php`. La tagliatella restituisce un codice HTTP 204 se è andato tutto bene, o un 500 e qualche uncaught exception se ci sono stati errori.
-È possibile far restituire l'XML direttamente da `includes/api/tagliatella.php` modificando le impostazioni in `includes/api/config.php`.
+La tagliatella restituisce un codice HTTP 500 e qualche uncaught exception se ci sono stati errori.
 
 ## Multilingua
 Il sito è multilingua grazie a GNU Gettext. GNU Gettext è un software un po' anziano ma decisamente rispettabile e adottato da tutti i principali CMS a cui puoi pensare. Riassumere il workflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
