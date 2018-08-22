@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: linux-day-torino\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-06 14:18+0100\n"
-"PO-Revision-Date: 2018-08-22 15:13\n"
+"PO-Revision-Date: 2018-08-22 15:29\n"
 "Last-Translator: valerio.bozzolan <gnu@linux.it>\n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -19,21 +19,21 @@ msgstr ""
 #: includes/class-HumanTime.php:45
 #, php-format
 msgid "fra %s"
-msgstr ""
+msgstr "in %s"
 
 #: includes/class-HumanTime.php:51
 #, php-format
 msgid "%s fa"
-msgstr ""
+msgstr "%s ago"
 
 #: includes/class-HumanTime.php:67
 #, php-format
 msgid "%d anni"
-msgstr ""
+msgstr "%d years"
 
 #: includes/class-HumanTime.php:71
 msgid "un anno"
-msgstr ""
+msgstr "one year"
 
 #: includes/class-HumanTime.php:77
 #, php-format
