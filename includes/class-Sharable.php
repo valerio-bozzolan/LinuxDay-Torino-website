@@ -54,7 +54,7 @@ trait SharableTrait {
 
 		if( $sharable_type === 'youtube' ) {
 			if( isset( $args['prop'] ) && $args['prop'] ) {
-				return sprintf( __("il %s"), _("video esterno") );
+				return sprintf( __("il %s"), __("video esterno") );
 			} else {
 				return __("video esterno");
 			}
@@ -132,7 +132,7 @@ trait SharableTrait {
 		if( 'youtube' === $type ) {
 			return "https://www.youtube.com/watch?v={$path}";
 		}
-		return site_page( $sharable_path, $base );
+		return site_page( $path, $base );
 	}
 
 	/**
