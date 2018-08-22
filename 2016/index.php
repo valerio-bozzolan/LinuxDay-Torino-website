@@ -20,7 +20,7 @@ require 'load.php';
 $conference = FullConference::factoryFromUID( @ $_GET['uid'] )
 	->queryRow();
 
-$conference || die_with_404();
+$conference or die_with_404();
 
 FORCE_PERMALINK
 	&& $conference->forceConferencePermalink();
