@@ -243,62 +243,15 @@ Header::spawn('conference', [
 		<h3><?php _e("Attività") ?></h3>
 		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
 		<div class="row">
-			<?php $box = function($what, $who, $url = null, $prep = null, $img = null, $attendize = null) {
-				if( ! $prep ) {
-					$prep = _("da %s");
-				}
-				$who_text = $who;
-				if( $url ) {
-					$who = HTML::a($url, $who, null, 'white-text', 'target="_blank"');
-				}
-				$who_prep = sprintf($prep, $who);
-			?>
-
-			<div class="col s12 m6">
-				<div class="card-panel hoverable purple darken-3 white-text">
-					<?php if( $img ): ?>
-					<div class="row"><!-- Start image row -->
-						<div class="col s4">
-							<img class="responsive-img" src="<?php echo STATIC_PATH . "/partner/$img" ?>" alt="<?php _esc_attr($who_text) ?>" />
-						</div>
-						<div class="col s8"><!-- Start text col -->
-					<?php endif ?>
-
-							<p>
-								<span class="flow-text"><?php echo $what ?></span><br /> 
-								<?php printf( _("Gestito %s."), $who_prep ) ?>
-							</p>
-
-							<?php if($attendize): ?>
-							<p><?php echo HTML::a(
-								$attendize,
-								_("Prenota"),
-								sprintf(
-									_("Prenota la tua partecipazione a %s"),
-									$what
-								),
-								'btn white purple-text waves-effect waves-purple hoverable',
-								'target="_blank"'
-							) ?></p>
-							<?php endif ?>
-
-					<?php if( $img ): ?>
-						</div><!-- End text col -->
-					</div><!-- End image row -->
-					<?php endif ?>
-				</div>
-			</div>
-
-			<?php };
-
-			$box(
+			<?php
+			ActivityBox::spawn(
 				_("Riparazione di apparecchiature elettroniche."),
 				_("Associazione Restarters Torino"),
 				'http://www.associazionetesso.org',
 				_("dall'%s"),
 				'restart-party.png'
 			);
-			$box(
+			ActivityBox::spawn(
 				_("Laboratorio di coding per i più piccoli a tema Linux Day"),
 				sprintf(
 					_("%s e %s."),
@@ -322,14 +275,14 @@ Header::spawn('conference', [
 				'coderdojo.png',
 				'https://attendize.ldto.it/e/3/coderdojo-at-linuxday'
 			);
-			$box(
+			ActivityBox::spawn(
 				_("Allestimento museale di Retrocomputing."),
 				"MuBIT",
 				'http://mupin.it',
 				_("dal %s"),
 				'mubit.png'
 			);
-			$box(
+			ActivityBox::spawn(
 				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
 				_("volontari")
 			);
