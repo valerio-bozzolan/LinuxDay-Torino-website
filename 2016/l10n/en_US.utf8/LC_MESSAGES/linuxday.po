@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-22 20:42+0200\n"
-"PO-Revision-Date: 2018-08-22 20:33+0200\n"
+"PO-Revision-Date: 2018-08-22 20:44+0200\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -522,7 +522,7 @@ msgstr "Next"
 #: 2016/index.php:69
 #, php-format
 msgid "Il %s si è concluso..."
-msgstr ""
+msgstr "The %s ended..."
 
 #: 2016/index.php:70
 msgid "Ma abbiamo altro!"
@@ -534,7 +534,7 @@ msgstr "Event"
 
 #: 2016/index.php:100
 msgid "d/m/Y"
-msgstr ""
+msgstr "m/d/Y"
 
 #: 2016/index.php:132
 #, php-format
