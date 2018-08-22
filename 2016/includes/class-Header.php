@@ -15,9 +15,20 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Header of the website
+ */
 class Header {
-	static function spawn($menu_uid = null, $args = [] ) {
-		$menu = get_menu_entry($menu_uid);
+
+	/**
+	 * Spawn the header
+	 *
+	 * @param $menu_uid string Menu entry UID (if any)
+	 * @param $args array Header arguments
+	 */
+	static function spawn( $menu_uid = null, $args = [] ) {
+
+		$menu = get_menu_entry( $menu_uid );
 
 		$args = array_replace( [
 			'show-title'  => true,
@@ -150,7 +161,7 @@ class Header {
 <body>
 	<nav>
 		<div class="nav-wrapper purple darken-4">
-			<a class="brand-logo" href="<?php echo URL . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
+			<a class="brand-logo" href="<?php echo ROOT . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
 				<img src="<?php echo STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
