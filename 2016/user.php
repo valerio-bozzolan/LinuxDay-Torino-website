@@ -197,23 +197,13 @@ Header::spawn('user', [
 	<div class="section">
 		<h3><?php _e("Social") ?></h3>
 		<div class="row">
-			<?php $box = function($user, $social, $profile, $path, $is_icon = false) { ?>
-			<div class="col s4 m3 l2">
-				<?php
-				$title = sprintf( __("%s su %s"), $user->getUserFullname(), $social );
-				$logo = $is_icon ? icon($path) : HTML::img(STATIC_PATH . "/social/$path", $social, $title, 'responsive-img');
-				echo HTML::a( $profile, $logo, $title, null, 'target="_blank" rel="noreferrer nofollow"' );
-				?>
-			</div>
-			<?php }; ?>
-
 			<?php
-			$user->has( User::RSS         ) and $box( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );
-			$user->has( User::FACEBOOK    ) and $box( $user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png' );
-			$user->has( User::GOOGLE_PLUS ) and $box( $user, "Google+",  $user->getUserGuggolpluz(), 'google.png'        );
-			$user->has( User::TWITTER     ) and $box( $user, "Twitter",  $user->getUserTuitt(),      'twitter.png'       );
-			$user->has( User::LINKEDIN    ) and $box( $user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png'      );
-			$user->has( User::GITHUB      ) and $box( $user, "Github",   $user->getUserGithubbo(),   'github.png'        );
+			$user->has( User::RSS         ) and SocialBox::spawn( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );
+			$user->has( User::FACEBOOK    ) and SocialBox::spawn( $user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png' );
+			$user->has( User::GOOGLE_PLUS ) and SocialBox::spawn( $user, "Google+",  $user->getUserGuggolpluz(), 'google.png'        );
+			$user->has( User::TWITTER     ) and SocialBox::spawn( $user, "Twitter",  $user->getUserTuitt(),      'twitter.png'       );
+			$user->has( User::LINKEDIN    ) and SocialBox::spawn( $user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png'      );
+			$user->has( User::GITHUB      ) and SocialBox::spawn( $user, "Github",   $user->getUserGithubbo(),   'github.png'        );
 			?>
 		</div>
 	</div>
