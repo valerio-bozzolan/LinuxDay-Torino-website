@@ -87,5 +87,16 @@ register_language( 'en_US', ['en', 'en-us', 'en-en'] );
 register_language( 'it_IT', ['it', 'it-it'] );
 register_default_language( 'it_IT' );
 
-// apply language from GET/COOKIE
-apply_language( @ $_REQUEST[ 'l' ] );
+// apply a language
+if( isset( $_GET[ 'l' ] ) ) {
+	// for this request only
+	apply_language( $_GET[ 'l' ] );
+} elseif( isset( $_POST[ 'l' ] ) ) {
+	if( false !== apply_language( $_POST[ 'l' ] ) ) {
+		// also for future requests
+		setcookie( 'l', latest_language()->getCode() );
+	}
+} else {
+	// when the cookie is empty is taken from browser language
+	apply_language( @ $_COOKIE[ 'l' ] );
+}
