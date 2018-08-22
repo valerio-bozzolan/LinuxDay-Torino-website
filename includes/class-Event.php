@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Construct a database event
+# Linux Day 2016 - Event
 # Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
@@ -53,20 +53,40 @@ trait EventTrait {
 		return __( $this->get( Event::SUBTITLE ) );
 	}
 
-	function getEventHumanStart() {
-		return HumanTime::diff( $this->get('event_start') );
+	/**
+	 * Get an human event start date
+	 *
+	 * @return string
+	 */
+	public function getEventHumanStart() {
+		return HumanTime::diff( $this->get( Event::START ) );
 	}
 
-	function getEventHumanEnd() {
-		return HumanTime::diff( $this->get('event_end') );
+	/**
+	 * Get an human event end date
+	 *
+	 * @return string
+	 */
+	public function getEventHumanEnd() {
+		return HumanTime::diff( $this->get( Event::END ) );
 	}
 
-	function getEventStart($f = 'Y-m-d H:i:s') {
-		return $this->get('event_start')->format($f);
+	/**
+	 * Get formatted event start date
+	 *
+	 * @return string
+	 */
+	public function getEventStart( $format = 'Y-m-d H:i:s' ) {
+		return $this->get( Event::START )->format( $format );
 	}
 
-	function getEventEnd($f = 'Y-m-d H:i:s') {
-		return $this->get('event_end')->format($f);
+	/**
+	 * When formatted event end date
+	 *
+	 * @return string
+	 */
+	public function getEventEnd( $format = 'Y-m-d H:i:s' ) {
+		return $this->get( Event::END )->format( $format );
 	}
 
 	/**
@@ -211,8 +231,8 @@ trait EventTrait {
 	protected function normalizeEvent() {
 		$this->integers( Event::ID );
 		$this->datetimes(
-			'event_start',
-			'event_end'
+			Event::START,
+			Event::END
 		);
 		$this->booleans('event_subscriptions');
 	}
@@ -254,6 +274,16 @@ class Event extends Queried {
 	 * Image column name
 	 */
 	const IMAGE = 'event_img';
+
+	/**
+	 * Start column name
+	 */
+	const START = 'event_start';
+
+	/**
+	 * End column name
+	 */
+	const END = 'event_end';
 
 	/**
 	 * Maximum UID length

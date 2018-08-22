@@ -23,8 +23,7 @@ class_exists('Track');
 
 trait FullEventTrait {
 	function getEventURL( $base = URL ) {
-		return $base . sprintf(
-			PERMALINK_EVENT,
+		return $base . FullEvent::permalink(
 			$this->getConferenceUID(),
 			$this->getEventUID(),
 			$this->getChapterUID()
@@ -123,5 +122,17 @@ class FullEvent extends Queried {
 	static function factoryByConferenceChapter( $conference_ID, $chapter_ID ) {
 		return self::factoryByConference( $conference_ID )
 			->whereInt( 'event.chapter_ID', $chapter_ID );
+	}
+
+	/**
+	 * Get an absolute FullEvent permalink
+	 *
+	 * @param $conference_uid string Conference UID
+	 * @param $event_uid string Event UID
+	 * @param $chapter_uid string Chapter UID
+	 */
+	public static function permalink( $conference_uid, $event_uid, $chapter_uid ) {
+		return sprintf( PERMALINK_EVENT, $conference_uid, $event_uid, $chapter_uid ) ;
+
 	}
 }

@@ -47,11 +47,21 @@ Header::spawn('conference', [
 		$from = $conference->getConferenceEnd('Y-m-d H:i:s');
 
 		$other_events = $conference->factoryFullEventByConference()
+			->select( [
+				Event::UID,
+				Event::TITLE,
+				Event::START,
+				Event::END,
+				Chapter::UID,
+				Chapter::NAME,
+				Room::NAME,
+			] )
 			->where( sprintf(
-				"event_end > '%s'",
-				esc_html( $from )
+				"%s > '%s'",
+				Event::END,
+				esc_sql( $from )
 			) )
-			->orderBy('event_start')
+			->orderBy( Event::START )
 			->queryGenerator();
 	?>
 	<?php if( $other_events->valid() ): ?>
@@ -74,17 +84,21 @@ Header::spawn('conference', [
 			<tr class="<?php echo $classes ?>">
 				<td>
 					<?php echo HTML::a(
-						$event->getEventURL(),
+						FullEvent::permalink(
+							$conference->getConferenceUID(),
+							$event->getEventUID(),
+							$event->getChapterUID()
+						),
 						$event->getEventTitle()
 					) ?><br />
 					<small>(<?php echo $event->getChapterName() ?>)</small>
 				</td>
 				<td>
-					<time datetime="<?php echo $event->getEventStart('Y-m-d H:i') ?>"><?php echo $event->getEventHumanStart() ?></time><br />
+					<time datetime="<?php echo $event->getEventStart( 'Y-m-d H:i' ) ?>"><?php echo $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
 						__("%s alle %s"),
-						$event->getEventStart( __("d/m/Y") ),
-						$event->getEventStart('H:i')
+						$event->getEventStart( __( "d/m/Y" ) ),
+						$event->getEventStart( 'H:i' )
 					) ?>)</small>
 				</td>
 				<td class="hide-on-small-only">
@@ -155,11 +169,18 @@ Header::spawn('conference', [
 	<div class="section" id="talk-section">
 		<?php $chapter = Chapter::factoryFromUID('talk')->queryRow() ?>
 
-		<h3><?php echo $chapter->getChapterName() ?></h3>
+		<h3><?php _esc_html( $chapter->getChapterName() ) ?></h3>
 
-		<?php $eventsTable = new DailyEventsTable(
-			$conference->getConferenceID(),
-			$chapter->getChapterID()
+		<?php $eventsTable = new DailyEventsTable( $conference, $chapter, [
+				Event::T . DOT . Event::ID,
+				Event::UID,
+				Event::TITLE,
+				Event::START,
+				Event::END,
+				Track::UID,
+				Track::NAME,
+				Track::LABEL,
+			]
 		); ?>
 		<p class="flow-text"><?php printf(
 			__(

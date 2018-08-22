@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Construct a database track
+# Linux Day 2016 - Track
 # Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ trait TrackTrait {
 	 * @return int
 	 */
 	public function getTrackID() {
-		return $this->nonnull( 'track_ID' );
+		return $this->nonnull( Track::ID );
 	}
 
 	/**
@@ -32,7 +32,7 @@ trait TrackTrait {
 	 * @return string
 	 */
 	public function getTrackUID() {
-		return $this->get( 'track_uid' );
+		return $this->get( Track::UID );
 	}
 
 	/**
@@ -41,7 +41,7 @@ trait TrackTrait {
 	 * @return string
 	 */
 	function getTrackName() {
-		return __( $this->get( 'track_name' ) );
+		return __( $this->get( Track::NAME ) );
 	}
 
 	/**
@@ -50,14 +50,17 @@ trait TrackTrait {
 	 * @return string
 	 */
 	function getTrackLabel() {
-		return __( $this->get( 'track_label' ) );
+		return __( $this->get( Track::LABEL ) );
 	}
 
 	/**
 	 * Normalize a Track object
 	 */
 	protected function normalizeTrack() {
-		$this->integers( 'track_ID' );
+		$this->integers(
+			Track::ID,
+			Track::ORDER
+		);
 	}
 }
 
@@ -71,6 +74,31 @@ class Track extends Queried {
 	 * Database table name
 	 */
 	const T = 'track';
+
+	/**
+	 * ID column name
+	 */
+	const ID = 'track_ID';
+
+	/**
+	 * UID column name
+	 */
+	const UID = 'track_uid';
+
+	/**
+	 * Name column name
+	 */
+	const NAME = 'track_name';
+
+	/**
+	 * Label column name
+	 */
+	const LABEL = 'track_label';
+
+	/**
+	 * Order column name
+	 */
+	const ORDER = 'track_order';
 
 	/**
 	 * Maximum UID length

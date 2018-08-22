@@ -15,31 +15,42 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Handle a table of daily events
+ */
 class DailyEvents {
 
 	/**
+	 * Get daily events from a conference and a chapter
+	 *
+	 * @param $conference object Conference
+	 * @param $chapter object Chapter
+	 * @param $fields array Fields to be selected
 	 * @return array
 	 */
-	static function fromConferenceChapter( $conference_ID, $chapter_ID ) {
+	public static function fromConferenceChapter( $conference, $chapter, $fields = [] ) {
 
-		$events = FullEvent::factoryByConferenceChapter( $conference_ID, $chapter_ID );
+		$conference_ID = $conference->getConferenceID();
+		$chapter_ID = $chapter->getChapterID();
 
-		$events = $events
-			->orderBy('event_start, track_order')
+		$events = FullEvent::factoryByConferenceChapter( $conference_ID, $chapter_ID )
+			->select( $fields )
+			->orderBy( Event::START )
+			->orderBy( Track::ORDER )
 			->queryResults();
 
 		$incremental_hour = 0;
 		$last_hour = -1;
 		$last_event_ID = -1;
-		foreach($events as $i => $event) {
+		foreach( $events as $i => $event ) {
 			// Remember that it's a JOIN with duplicates
-			if( $last_event_ID === $event->event_ID ) {
+			if( $last_event_ID === $event->getEventID() ) {
 				unset( $events[ $i ] );
 				continue;
 			}
 
 			// 'G': date() 0-24 hour format without leading zeros
-			$hour = (int) $event->getEventStart('G');
+			$hour = (int) $event->getEventStart( 'G' );
 
 			// Next hour
 			if( $hour !== $last_hour ) {
