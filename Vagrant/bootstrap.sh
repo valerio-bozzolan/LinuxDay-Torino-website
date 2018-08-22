@@ -97,11 +97,9 @@ sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php
 
 a2enmod --quiet rewrite
 
-# GNU Gettext workflow (trust me: 3 are enough.)
+# GNU Gettext workflow
 cd  "$WWW"
-php "$WWW"/2016/l10n/localize.php .
-php "$WWW"/2016/l10n/localize.php .
-php "$WWW"/2016/l10n/localize.php .
+php "$WWW"/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
