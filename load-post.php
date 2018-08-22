@@ -78,8 +78,8 @@ register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
 register_css( 'leaflet', LEAFLET_DIR . '/leaflet.css' );
 
 // GNU Gettext configuration
-define('GETTEXT_DOMAIN',         'linuxday' );
-define('GETTEXT_DIRECTORY',      'l10n' );
+define('GETTEXT_DOMAIN', 'linuxday' );
+define('GETTEXT_DIRECTORY', ABSPATH . __ . 'l10n' );
 define('GETTEXT_DEFAULT_ENCODE', 'utf8' );
 
 // register languages
