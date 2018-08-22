@@ -37,22 +37,6 @@ require CURRENT_CONFERENCE_ABSPATH . __ . INCLUDES . __ . 'functions.php';
 define('TEXT', 'green-text text-darken-4');
 define('BACK', 'green darken-4');
 
-///////////////////////////////////////////////////////////////////
-// Boz-PHP: GNU Gettext configuration
-define('GETTEXT_DOMAIN',         'linuxday');
-define('GETTEXT_DIRECTORY',      'l10n');
-define('GETTEXT_DEFAULT_ENCODE', 'utf8');
-
-register_language('en_US', ['en', 'en-us', 'en-en'] );
-register_language('it_IT', ['it', 'it-it'] );
-
-$l = null;
-if( isset( $_REQUEST['l'] ) ) {
-	$l = $_REQUEST['l'];
-}
-define('LANGUAGE_APPLIED', apply_language( $l ) );
-
-///////////////////////////////////////////////////////////////////
 define('STITIC', 'static');
 
 define('STATIC_PATH',    CURRENT_CONFERENCE_PATH    . _ .  STITIC);

@@ -2,7 +2,7 @@
 <?php
 #############################################################################
 #
-# Copyright (C) 2016  Valerio Bozzolan, Ludovico Pavesi
+# Copyright (C) 2016, 2018  Valerio Bozzolan, Ludovico Pavesi
 #
 # Automatize the entire GNU Gettext workflow
 #
@@ -24,7 +24,7 @@
 #############################################################################
 
 # The copyright holder of your localization
-$copyright="Linux Day 2016 website contributors";
+$copyright="Linux Day website contributors";
 
 # The prefix of your localization files
 # You have to know how GNU Gettext works to change it.
@@ -53,16 +53,16 @@ xgettext \
 	--keyword=_e \
 	--keyword=__ \
 	--default-domain=$package \
-	-o "$path"/2016/l10n/$package.pot \
-	"$path"/includes/*.php \
-	"$path"/2016/*.php \
-	"$path"/2016/*/*.php
+	-o "$path"/l10n/$package.pot \
+	"$path"/*.php \
+	"$path"/*/*.php \
+	"$path"/*/*/*.php
 EOT;
 
 exec($xgettext);
 
 # Get the pot
-$pot = file_get_contents($path."/2016/l10n/$package.pot");
+$pot = file_get_contents($path."/l10n/$package.pot");
 $useless_comments = [];
 
 # # Find all useless comments (= line numbers in trebbia.php)
@@ -79,17 +79,17 @@ foreach($useless_comments as $i => $comment) {
 if(isset($useless_couples)) {
 	foreach($useless_couples as $i => $couple) {
 		# This is O(n^2), or even worse.
-		$line = exec('sed -n ' . $couple[1] . 'p '."$path/2016/../" . $couple[0] . ' | cut -c 4-');
+		$line = exec('sed -n ' . $couple[1] . 'p '."$path/../" . $couple[0] . ' | cut -c 4-');
 		# Get the line, place it in the pot.
 		$pot = str_replace($useless_comments[$i], $line, $pot);
 	}
 }
 
 # write the pot
-file_put_contents($path."/2016/l10n/$package.pot", $pot);
+file_put_contents($path."/l10n/$package.pot", $pot);
 
 # Generate/update the .po files from the .pot file
-exec("find \"$path\"/2016/l10n -name \\*.po -execdir msgmerge -o $package.po $package.po ../../$package.pot \\;");
+exec("find \"$path\"/l10n -name \\*.po -execdir msgmerge -o $package.po $package.po ../../$package.pot \\;");
 
 # Generate/update the .mo files from .po files
-exec("find \"$path\"/2016/l10n -name \\*.po -execdir msgfmt -o $package.mo $package.po \\;");
+exec("find \"$path\"/l10n -name \\*.po -execdir msgfmt -o $package.mo $package.po \\;");

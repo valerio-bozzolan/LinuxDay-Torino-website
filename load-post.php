@@ -37,7 +37,10 @@ require ABSPATH . '/includes/functions.php';
 // Boz-PHP: On demand global objects
 register_expected( 'LICENSES', 'Licenses' );
 
+// user permissions
 register_permissions( 'user', 'edit-account' );
+
+// admin permissions
 inherit_permissions( 'admin',   'user', [
 	'edit-users',
 	'edit-events',
@@ -71,4 +74,18 @@ define_default( 'FORCE_PERMALINK', 1 );
 register_js( 'jquery', JQUERY );
 
 register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
+
 register_css( 'leaflet', LEAFLET_DIR . '/leaflet.css' );
+
+// GNU Gettext configuration
+define('GETTEXT_DOMAIN',         'linuxday' );
+define('GETTEXT_DIRECTORY',      'l10n' );
+define('GETTEXT_DEFAULT_ENCODE', 'utf8' );
+
+// register languages
+register_language( 'en_US', ['en', 'en-us', 'en-en'] );
+register_language( 'it_IT', ['it', 'it-it'] );
+register_default_language( 'it_IT' );
+
+// apply language from GET/COOKIE
+apply_language( @ $_REQUEST[ 'l' ] );
