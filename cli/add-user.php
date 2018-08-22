@@ -55,8 +55,8 @@ if( $user ) {
 
 $pwd = User::encryptPassword( $opts[ 'pwd' ] );
 insert_row( User::T, [
-	new DBCol( 'user_uid',      $opts[ 'uid' ],  's' ),
-	new DBCol( 'user_role',     $opts[ 'role' ], 's' ),
-	new DBCol( 'user_password', $pwd,            's' ),
-	new DBCol( 'user_active',   1,               'd' ),
+	new DBCol( User::UID,       $opts[ 'uid'  ], 's' ),
+	new DBCol( User::ROLE,      $opts[ 'role' ], 's' ),
+	new DBCol( User::PASSWORD,  $pwd,            's' ),
+	new DBCol( User::IS_ACTIVE, 1,               'd' ),
 ] );
