@@ -41,7 +41,7 @@ if( is_logged() ):
 	<p class="flow-text"><?php _e("Sei loggato!") ?></p>
 	<p><?php echo HTML::a(
 		CURRENT_CONFERENCE_PATH . '/login.php?logout',
-		_("Sloggati") . icon('exit_to_app', 'left')
+		__("Sloggati") . icon('exit_to_app', 'left')
 	) ?></p>
 
 <?php else: ?>
@@ -56,7 +56,7 @@ if( is_logged() ):
 				</div>
 				<div class="input-field col s12 m6">
 					<input name="user_password" id="user_password" type="password" class="validate" />
-					<label for="user_password"><?php _esc_attr( _("Password") ) ?></label>
+					<label for="user_password"><?php _esc_attr( __("Password") ) ?></label>
 				</div>
 			</div>
 			<div class="col s12">

@@ -36,13 +36,13 @@ Header::spawn('credits');
 				<div class="row libre-icon valign-wrapper">
 					<div class="col s12 valign">
 						<a href="<?php echo $url ?>" title="<?php printf(
-							_("%s: progetto a licenza %s"),
+							__("%s: progetto a licenza %s"),
 							$name,
 							$license->getShort()
 						) ?>" target="_blank">
 						<?php if($icon): ?>
 							<img class="hoverable responsive-img" src="<?php echo STATIC_PATH . "/libre-icons/$icon" ?>" alt="<?php printf(
-								_("Logo di %s"),
+								__("Logo di %s"),
 								$name
 							) ?>" />
 						<?php endif ?>
@@ -57,154 +57,154 @@ Header::spawn('credits');
 			"Debian GNU/Linux",
 			'https://debian.org',
 			'gnu-gpl',
-			_("Sistema operativo del server web."),
+			__("Sistema operativo del server web."),
 			'debian.png'
 		);
 		$tech(
 			"Apache",
 			'https://httpd.apache.org',
 			'apache',
-			_("Server web."),
+			__("Server web."),
 			'apache.png'
 		);
 		$tech(
 			"PHP5",
 			'http://php.net',
 			'php',
-			_("Pre-processore di ipertesti."),
+			__("Pre-processore di ipertesti."),
 			'php.png'
 		);
 		$tech(
 			"MariaDB",
 			'https://mariadb.org',
 			'gnu-gpl-v2',
-			_("MySQL guidato dalla comunità."),
+			__("MySQL guidato dalla comunità."),
 			'mariadb.png'
 		);
 		$tech(
 			"MySQL",
 			'http://www.mysql.com',
 			'gnu-gpl-v2',
-			_("Database SQL relazionale."),
+			__("Database SQL relazionale."),
 			'mysql.png'
 		);
 		$tech(
 			"GNU Gettext",
 			'https://www.gnu.org/software/gettext/',
 			'gnu-gpl',
-			_("Framework per internazionalizzazione e localizzazione dei messaggi."),
+			__("Framework per internazionalizzazione e localizzazione dei messaggi."),
 			'gnu.png'
 		);
 		$tech(
 			"Boz-PHP",
 			'https://launchpad.net/boz-php-another-php-framework',
 			'gnu-agpl',
-			_("Framework PHP e MySQL/MariaDB."),
+			__("Framework PHP e MySQL/MariaDB."),
 			'boz.png'
 		);
 		$tech(
 			"Let's Encrypt",
 			'https://certbot.eff.org',
 			'apache',
-			_("Certificato SSL."),
+			__("Certificato SSL."),
 			'lets-encrypt.png'
 		);
 		$tech(
 			"jQuery",
 			'http://jquery.com',
 			'jquery',
-			_("Framework JavaScript."),
+			__("Framework JavaScript."),
 			'jquery.png'
 		);
 		$tech(
 			"Leaflet",
 			'http://leafletjs.com',
 			'bsd-2',
-			_("Framework JavaScript per mappe interattive"),
+			__("Framework JavaScript per mappe interattive"),
 			'leaflet.png'
 		);
 		$tech(
 			"Materialize",
 			'https://github.com/Dogfalo/materialize',
 			'mit',
-			_("Framework CSS e JavaScript in stile Material Design."),
+			__("Framework CSS e JavaScript in stile Material Design."),
 			'materialize.png'
 		);
 		$tech(
 			"Roboto 2.0",
 			'https://www.google.com/fonts/specimen/Roboto',
 			'apache',
-			_("Famiglia di caratteri."),
+			__("Famiglia di caratteri."),
 			'roboto.png'
 		);
 		$tech(
 			"Material Design Icons",
 			'http://google.github.io/material-design-icons/',
 			'cc-by',
-			_("Collezione di icone Material Design."),
+			__("Collezione di icone Material Design."),
 			'material.png'
 		);
 		$tech(
 			"Inkscape",
-			_('https://inkscape.org/it/'),
+			__('https://inkscape.org/it/'),
 			'gnu-gpl-v2',
-			_("Programma per disegno vettoriale."),
+			__("Programma per disegno vettoriale."),
 			'inkscape.png'
 		);
 		$tech(
 			"GIMP",
-			_('https://www.gimp.org'),
+			__('https://www.gimp.org'),
 			'gnu-gpl',
-			_("Fotoritocchi e modifiche alle immagini"),
+			__("Fotoritocchi e modifiche alle immagini"),
 			'gimp.png'
 		);
 		$tech(
 			"GNU Nano",
 			'https://www.nano-editor.org',
 			'gnu-gpl',
-			_("Banale editor di testo da terminale."),
+			__("Banale editor di testo da terminale."),
 			'gnu-nano.png'
 		);
 		$tech(
 			"OpenStreetMap",
 			'http://www.openstreetmap.org',
 			'odbl',
-			_("Mappa planetaria libera"),
+			__("Mappa planetaria libera"),
 			'osm.png'
 		);
 		$tech(
 			"Git",
 			'https://git-scm.com',
 			'gnu-gpl-v2',
-			_("Controllo versione distribuito"),
+			__("Controllo versione distribuito"),
 			'git.png'
 		);
 		$tech(
 			"Attendize",
 			'https://www.attendize.com',
 			'aal',
-			_("Event manager open source"),
+			__("Event manager open source"),
 			'attendize.jpg'
 		);
 		$tech(
 			"YOURLS",
 			'https://yourls.org',
 			'mit',
-			_("Your Own Url Shortener"),
+			__("Your Own Url Shortener"),
 			'yourls.png'
 		);
 		$tech(
 			"W3C Validator",
 			'https://validator.w3.org',
 			'mit',
-			_("Validatore standard HTML, JavaScript e CSS"),
+			__("Validatore standard HTML, JavaScript e CSS"),
 			'w3c.png'
 		);
 		$tech(
 			"F-Droid",
 			'https://f-droid.org',
 			'gnu-gpl-v3',
-			_("Catalogo di software libero per Android"),
+			__("Catalogo di software libero per Android"),
 			'f-droid.png'
 		);
 		?>
@@ -213,7 +213,7 @@ Header::spawn('credits');
 
 	<div id="clone" class="divider"></div>
 	<p><?php printf(
-		_("Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"),
+		__("Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"),
 		license('gnu-agpl')->getLink()
 	) ?></p>
 	<div class="row">
@@ -230,7 +230,7 @@ Header::spawn('credits');
 			<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>
 			<?php $license = license($license) ?>
 			<li class="collection-item"><?php printf(
-				_("Grazie a %s per %s sotto licenza %s."),
+				__("Grazie a %s per %s sotto licenza %s."),
 				HTML::a($toURL, $to),
 				HTML::a($url, $what),
 				HTML::a( $license->getURL(), $license->getShort() )
@@ -241,14 +241,14 @@ Header::spawn('credits');
 			$thanks(
 				"User:VGrigas (WMF)",
 				'https://commons.wikimedia.org/wiki/User:VGrigas_%28WMF%29',
-				_("l'immagine estratta dal suo video «This is Wikipedia»"),
+				__("l'immagine estratta dal suo video «This is Wikipedia»"),
 				'https://commons.wikimedia.org/wiki/File:This_is_Wikipedia.webm',
 				'cc-by-sa-3.0'
 			);
 			$thanks(
 				"Rui Damas",
 				'https://www.gnu.org/graphics/gnu-slash-linux.html',
-				_("l'immagine predefinita di alcuni elementi"),
+				__("l'immagine predefinita di alcuni elementi"),
 				DEFAULT_IMAGE,
 				'gnu-gpl'
 			);

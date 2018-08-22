@@ -33,7 +33,7 @@ Header::spawn('partner');
 				'<img class="responsive-img" src="%s" alt="%s"%s />',
 				STATIC_PATH . "/partner/$logo",
 				sprintf(
-					_("Logo di %s"),
+					__("Logo di %s"),
 					$name
 				),
 				$max_size
@@ -50,7 +50,7 @@ Header::spawn('partner');
 		<div class="row">
 			<div class="col s12 m3">
 			<?php partner(
-				_("Associazione Tesso"),
+				__("Associazione Tesso"),
 				'http://www.associazionetesso.org',
 				'tesso.png',
 				1
@@ -66,7 +66,7 @@ Header::spawn('partner');
 			</div>
 			<div class="col s12 m3">
 			<?php partner(
-				_("Coderdojo Torino"),
+				__("Coderdojo Torino"),
 				'http://coderdojotorino.it',
 				'cd1.png',
 				1
@@ -133,7 +133,7 @@ Header::spawn('partner');
 		<?php function patrocinio ($who, $url, $img) {
 			partner(
 				sprintf(
-					_("Patrocinio %s"),
+					__("Patrocinio %s"),
 					$who
 				),
 				$url,
@@ -144,7 +144,7 @@ Header::spawn('partner');
 		<div class="row">
 			<div class="col s12 m2">
 			<?php patrocinio(
-				_("Regione Piemonte"),
+				__("Regione Piemonte"),
 				'http://www.comune.torino.it/circ4/',
 				'regione-piemonte.jpg'
 			); ?>
@@ -152,7 +152,7 @@ Header::spawn('partner');
 
 			<div class="col s12 m2">
 			<?php patrocinio(
-				_("Città Metropolitana di Torino"),
+				__("Città Metropolitana di Torino"),
 				'http://www.cittametropolitana.torino.it',
 				'metropoli.png'
 			); ?>
@@ -160,21 +160,21 @@ Header::spawn('partner');
 			</div>
 			<div class="col s12 m2">
 			<?php patrocinio(
-				_("Comune di Torino"),
+				__("Comune di Torino"),
 				'http://www.comune.torino.it',
 				'comune.jpg'
 			); ?>
 			</div>
 			<div class="col s12 m2">
 			<?php patrocinio(
-				_("Dipartimento di Informatica UniTO"),
+				__("Dipartimento di Informatica UniTO"),
 				'http://di.unito.it',
 				'dipinfounito.jpg'
 			); ?>
 			</div>
 			<div class="col s12 m2">
 			<?php patrocinio(
-				_("Torino Smart City"),
+				__("Torino Smart City"),
 				'http://www.torinosmartcity.it',
 				'smartcity.jpg'
 			); ?>

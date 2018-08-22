@@ -83,7 +83,7 @@ if( isset( $_POST['action'] ) ) {
 
 Header::spawn('event', [
 	'title' => sprintf(
-		_("Modifica %s: %s"),
+		__("Modifica %s: %s"),
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
@@ -92,7 +92,7 @@ Header::spawn('event', [
 ?>
 	<p><?php echo HTML::a(
 		$event->getEventURL( ROOT ),
-		_("Vedi") . icon('account_box', 'left')
+		__("Vedi") . icon('account_box', 'left')
 	) ?></p>
 
 	<div class="row">

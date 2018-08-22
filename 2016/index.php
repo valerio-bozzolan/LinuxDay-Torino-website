@@ -56,7 +56,7 @@ Header::spawn('conference', [
 	?>
 	<?php if( $other_events->valid() ): ?>
 	<div class="section">
-		<h3><?php printf( _("Il %s si è concluso..."), $conference->getConferenceTitle() ) ?></h3>
+		<h3><?php printf( __("Il %s si è concluso..."), $conference->getConferenceTitle() ) ?></h3>
 		<h4><?php _e("Ma abbiamo altro!") ?></h4>
 		<table class="bordered hoverable">
 			<tr>
@@ -82,8 +82,8 @@ Header::spawn('conference', [
 				<td>
 					<time datetime="<?php echo $event->getEventStart('Y-m-d H:i') ?>"><?php echo $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
-						_("%s alle %s"),
-						$event->getEventStart( _("d/m/Y") ),
+						__("%s alle %s"),
+						$event->getEventStart( __("d/m/Y") ),
 						$event->getEventStart('H:i')
 					) ?>)</small>
 				</td>
@@ -114,18 +114,18 @@ Header::spawn('conference', [
 			</div>
 			<div class="col s12 m10 l11">
 				<p class="flow-text"><?php printf(
-					_(
+					__(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
 						"Il Linux Day Torino 2016 si è tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
 					),
 					HTML::a(
-						_('https://it.wikipedia.org/wiki/GNU'),
+						__('https://it.wikipedia.org/wiki/GNU'),
 						'GNU',
 						null,
 						'black-text hoverable'
 					),
 					HTML::a(
-						_('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
+						__('https://it.wikipedia.org/wiki/Linux_%28kernel%29'),
 						'Linux',
 						null,
 						'black-text hoverable'
@@ -162,7 +162,7 @@ Header::spawn('conference', [
 			$chapter->getChapterID()
 		); ?>
 		<p class="flow-text"><?php printf(
-			_(
+			__(
 				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
 				"affrontando tematiche riguardanti il software libero su più livelli, ".
 				"per soddisfare le esigenze di un ampio pubblico (dai più piccoli, al curioso, fino agli esperti)."
@@ -171,7 +171,7 @@ Header::spawn('conference', [
 			"<b>{$eventsTable->getHours()}</b>"
 		) ?></p>
 		<p><?php printf(
-			_("In seguito si riporta la tabella dei talk suddivisa in %s categorie:"),
+			__("In seguito si riporta la tabella dei talk suddivisa in %s categorie:"),
 			"<b>{$eventsTable->countTracks()}</b>"
 		) ?></p>
 		<?php $eventsTable->printTable(); ?>
@@ -198,7 +198,7 @@ Header::spawn('conference', [
 	<div class="section" id="fdroid-section">
 		<h3><?php _e("App Android") ?></h3>
 		<p class="flow-text"><?php printf(
-			_("La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"),
+			__("La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"),
 			"<em>LDTO Companion</em>"
 		) ?></p>
 		<div class="row">
@@ -213,7 +213,7 @@ Header::spawn('conference', [
 				<p><?php
 					echo icon('looks_one', 'left');
 					printf(
-						_("Scarica e installa %s:"),
+						__("Scarica e installa %s:"),
 						"F-Droid"
 					);
 				?></p>
@@ -225,7 +225,7 @@ Header::spawn('conference', [
 				<p><?php
 					echo icon('looks_two', 'left');
 					printf(
-						_("Scarica e installa %s:"),
+						__("Scarica e installa %s:"),
 						"LDTO Companion"
 					);
 				?></p>
@@ -245,26 +245,26 @@ Header::spawn('conference', [
 		<div class="row">
 			<?php
 			ActivityBox::spawn(
-				_("Riparazione di apparecchiature elettroniche."),
-				_("Associazione Restarters Torino"),
+				__("Riparazione di apparecchiature elettroniche."),
+				__("Associazione Restarters Torino"),
 				'http://www.associazionetesso.org',
-				_("dall'%s"),
+				__("dall'%s"),
 				'restart-party.png'
 			);
 			ActivityBox::spawn(
-				_("Laboratorio di coding per i più piccoli a tema Linux Day"),
+				__("Laboratorio di coding per i più piccoli a tema Linux Day"),
 				sprintf(
-					_("%s e %s."),
+					__("%s e %s."),
 					HTML::a(
 						'http://www.coderdojotorino.it',
-						_("CoderDojo Torino"),
+						__("CoderDojo Torino"),
 						 null,
 						'white-text',
 						'target="_blank"'
 					),
 					HTML::a(
 						'http://www.coderdojotorino2.it',
-						_("Coderdojo Torino 2"),
+						__("Coderdojo Torino 2"),
 						null,
 						'white-text',
 						'target="_blank"'
@@ -276,15 +276,15 @@ Header::spawn('conference', [
 				'https://attendize.ldto.it/e/3/coderdojo-at-linuxday'
 			);
 			ActivityBox::spawn(
-				_("Allestimento museale di Retrocomputing."),
+				__("Allestimento museale di Retrocomputing."),
 				"MuBIT",
 				'http://mupin.it',
-				_("dal %s"),
+				__("dal %s"),
 				'mubit.png'
 			);
 			ActivityBox::spawn(
-				_("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
-				_("volontari")
+				__("LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."),
+				__("volontari")
 			);
 			?>
 
@@ -315,7 +315,7 @@ Header::spawn('conference', [
 								$conference->getLocationGeoOSM(),
 								icon('place', 'right'),
 								sprintf(
-									_("Vedi %s su OpenStreetMap"),
+									__("Vedi %s su OpenStreetMap"),
 									esc_html( $conference->getConferenceTitle() )
 								),
 								'btn-floating btn-large purple darken-3 waves-effect',
@@ -336,7 +336,7 @@ Header::spawn('conference', [
 					<div class="col s6 m12 offset-s3">
 						<div class="center-align">
 							<img class="responsive-img circle hoverable" src="<?php echo STATIC_PATH ?>/4-liberta.png" alt="<?php
-								_("Le quattro libertà fontamentali del software libero")
+								__("Le quattro libertà fontamentali del software libero")
 							?>" />
 						</div>
 					</div>
@@ -345,7 +345,7 @@ Header::spawn('conference', [
 			<div class="col s12 m8">
 				<h3><?php _e("Ingresso gratuito") ?></h3>
 				<p class="flow-text"><?php printf(
-					_(
+					__(
 					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".
 					"Non dimenticare di portarti a casa una <em>maglietta</em> o ".
 					"qualche dozzina di adesivi e spille! ".
@@ -353,15 +353,15 @@ Header::spawn('conference', [
 					"per far sì che altri Linux Day rimangano sempre indipendenti, liberi e gratuiti.<br /> ".
 					"Ci vediamo il <strong>%s</strong>!"
 					),
-					_("22 ottobre")
+					__("22 ottobre")
 				) ?></p>
 
 				<!--
 				<p><?php echo HTML::a(
 					CONFERENCE . '/partner.php',
-					_("Scopri i nostri partner") . icon('business', 'right'),
+					__("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(
-						_("Partner %s"),
+						__("Partner %s"),
 						$conference->getConferenceTitle()
 					),
 					'btn purple white-text waves-effect waves-light'

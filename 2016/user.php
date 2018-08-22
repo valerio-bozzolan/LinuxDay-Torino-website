@@ -43,7 +43,7 @@ Header::spawn('user', [
 	<?php if( $user->hasPermissionToEditUser() ): ?>
 		<p><?php echo HTML::a(
 			CURRENT_CONFERENCE_PATH . "/user-edit.php?uid={$user->getUserUID()}",
-			_("Modifica") . icon('edit', 'left')
+			__("Modifica") . icon('edit', 'left')
 		) ?></p>
 	<?php endif ?>
 
@@ -73,7 +73,7 @@ Header::spawn('user', [
 				<div class="col s12">
 					<p><?php echo HTML::a(
 						$user->user_site,
-						_("Sito personale") . icon('contact_mail', 'right'),
+						__("Sito personale") . icon('contact_mail', 'right'),
 						null,
 						'btn waves-effect purple darken-2',
 						'target="_blank"'
@@ -110,7 +110,7 @@ Header::spawn('user', [
 				<div class="col s12">
 					<?php $license = $user->getUserLovelicense() ?>
 					<p><?php printf(
-						_("La mia licenza di software libero preferita è la <b>%s</b>."),
+						__("La mia licenza di software libero preferita è la <b>%s</b>."),
 						$license->getLink()
 					) ?></p>
 				</div>
@@ -162,7 +162,7 @@ Header::spawn('user', [
 						esc_html( $title = $event->getEventTitle() )
 					),
 					sprintf(
-						_("Vedi %s"),
+						__("Vedi %s"),
 						$title
 					)
 				) ?></td>
@@ -176,7 +176,7 @@ Header::spawn('user', [
 				</td>
 				<td>
 					<?php printf(
-						_("Ore <b>%s</b> (il %s)"),
+						__("Ore <b>%s</b> (il %s)"),
 						$event->getEventStart("H:i"),
 						$event->getEventStart("d/m/Y")
 					) ?><br />
@@ -200,7 +200,7 @@ Header::spawn('user', [
 			<?php $box = function($user, $social, $profile, $path, $is_icon = false) { ?>
 			<div class="col s4 m3 l2">
 				<?php
-				$title = sprintf( _("%s su %s"), $user->getUserFullname(), $social );
+				$title = sprintf( __("%s su %s"), $user->getUserFullname(), $social );
 				$logo = $is_icon ? icon($path) : HTML::img(STATIC_PATH . "/social/$path", $social, $title, 'responsive-img');
 				echo HTML::a($profile, $logo, $title, null, 'target="_blank"');
 				?>

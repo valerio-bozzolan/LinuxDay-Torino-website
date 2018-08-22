@@ -59,9 +59,9 @@ define('STATIC_PATH',    CURRENT_CONFERENCE_PATH    . _ .  STITIC);
 define('STATIC_URL',     CURRENT_CONFERENCE_URL     . _ .  STITIC);
 define('STATIC_ABSPATH', CURRENT_CONFERENCE_ABSPATH . __ . STITIC);
 
-define('SITE_NAME',        _("Linux Day Torino 2017") );
-define('SITE_NAME_SHORT',  _("LDTO2017") );
-define('SITE_DESCRIPTION', _("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
+define('SITE_NAME',        __("Linux Day Torino 2017") );
+define('SITE_NAME_SHORT',  __("LDTO2017") );
+define('SITE_DESCRIPTION', __("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
 
 ///////////////////////////////////////////////////////////////////
 register_js('leaflet.init',        STATIC_PATH . '/leaflet-init.js');
@@ -81,11 +81,11 @@ add_menu_entries( [
 	new MenuEntry('conference',  null, null, 'hidden'),
 	new MenuEntry('404',         null, null, 'hidden'),
 
-	new MenuEntry('home',    CURRENT_CONFERENCE_URL . _,               _("Benvenuti")             ),
-//	new MenuEntry('partner', CURRENT_CONFERENCE_URL . '/partner.php',  _("Partner")               ),
-//	new MenuEntry('photos',  CURRENT_CONFERENCE_URL . '/photos.php',   _("Fotografie")            ),
-//	new MenuEntry('credits', CURRENT_CONFERENCE_URL . '/credits.php',  _("Crediti")               ),
-	new MenuEntry('api',     CURRENT_CONFERENCE_URL . '/api',          _("API"),          'hidden')
+	new MenuEntry('home',    CURRENT_CONFERENCE_URL . _,               __("Benvenuti")             ),
+//	new MenuEntry('partner', CURRENT_CONFERENCE_URL . '/partner.php',  __("Partner")               ),
+//	new MenuEntry('photos',  CURRENT_CONFERENCE_URL . '/photos.php',   __("Fotografie")            ),
+//	new MenuEntry('credits', CURRENT_CONFERENCE_URL . '/credits.php',  __("Crediti")               ),
+	new MenuEntry('api',     CURRENT_CONFERENCE_URL . '/api',          __("API"),          'hidden')
 ] );
 
 define('DEFAULT_IMAGE', STATIC_PATH . '/gnu-linux-on-black.png');

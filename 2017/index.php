@@ -47,7 +47,7 @@ Header::spawn('conference', [
 		<div class="center-align">
 			<h1 class="uppercase"><?php _e("Linux Day<br />Torino") ?></h1>
 			<p class="flow-text typing-smanettone-container"><?php printf(
-				_("Se anche tu sei %suno smanettone%s, vieni a trovarci!"),
+				__("Se anche tu sei %suno smanettone%s, vieni a trovarci!"),
 				'<span class="typing-smanettone">',
 				'</span>'
 			) ?></p>
@@ -60,13 +60,13 @@ Header::spawn('conference', [
 $('.typing-smanettone').text('');
 var typed = new Typed('.typing-smanettone', {
 	strings: <?php echo json_encode( [
-		_("uno smanettone"),
-		_("un programmatore"),
-		_("un tipo curioso"),
-		_("un sistemista"),
-		_("un po' pinguino"),
-		_("in modalità incognito"),
-		_("un cucciolo di GNU")
+		__("uno smanettone"),
+		__("un programmatore"),
+		__("un tipo curioso"),
+		__("un sistemista"),
+		__("un po' pinguino"),
+		__("in modalità incognito"),
+		__("un cucciolo di GNU")
 	] ); ?>,
 	loop: true,
 	typeSpeed: 100,
@@ -118,9 +118,9 @@ var typed = new Typed('.typing-smanettone', {
 		<div class="col s12 l6 offset-l1">
 			<div class="row">
 				<?php
-					$fuffa_box( _("Location"),     'location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
-					$fuffa_box( _("Speakers"), 'event_seat', sprintf(
-						_("<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."),
+					$fuffa_box( __("Location"),     'location_on', _("Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino.") );
+					$fuffa_box( __("Speakers"), 'event_seat', sprintf(
+						__("<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."),
 						16,
 						4
 					) );
@@ -128,8 +128,8 @@ var typed = new Typed('.typing-smanettone', {
 			</div>
 			<div class="row">
 				<?php
-					$fuffa_box( _("Quando"), 'access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
-					$fuffa_box( _("Extras"), 'extension', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
+					$fuffa_box( __("Quando"), 'access_time', _("<b>28 ottobre 2017</b> dalle 14:00 alle 19:00.") );
+					$fuffa_box( __("Extras"), 'extension', _("Linux Install Party, Restart Party, CoderDojo, Open Source Saturday") );
 				?>
 			</div>
 		</div>
@@ -185,9 +185,9 @@ var typed = new Typed('.typing-smanettone', {
 					<?php
 				};
 
-				$bigdata_box( 4,  _("sessioni") );
-				$bigdata_box( 4,  _("ore") );
-				$bigdata_box( 16, _("relatori") );
+				$bigdata_box( 4,  __("sessioni") );
+				$bigdata_box( 4,  __("ore") );
+				$bigdata_box( 16, __("relatori") );
 
 				unset( $bigdata_box );
 			?>
@@ -216,18 +216,18 @@ var typed = new Typed('.typing-smanettone', {
 
 	<div class="row">
 		<?php
-			$extra_box( "Linux Install Party", _("Porta il tuo computer, ti aiuteremo ad installare Linux!") );
-			$extra_box( "Restart Party", _("Il frullatore non funziona più? Portalo e lo ripareremo insieme!") );
+			$extra_box( "Linux Install Party", __("Porta il tuo computer, ti aiuteremo ad installare Linux!") );
+			$extra_box( "Restart Party", __("Il frullatore non funziona più? Portalo e lo ripareremo insieme!") );
 		?>
 	</div>
 	<div class="row">
 		<?php
 			$extra_box( "CoderDojo", sprintf(
-				_("Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. Prenotazione obbligatoria (disponibile a breve)."),
+				__("Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. Prenotazione obbligatoria (disponibile a breve)."),
 				7,
 				13
 			) );
-			$extra_box( "Open Source Saturday", _("Vieni a presentare il tuo progetto open source e smanettaci con altri appassionati!") );
+			$extra_box( "Open Source Saturday", __("Vieni a presentare il tuo progetto open source e smanettaci con altri appassionati!") );
 		?>
 	</div>
 	<?php unset( $extra_box ) ?>

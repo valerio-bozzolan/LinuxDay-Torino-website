@@ -84,7 +84,7 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 
 Header::spawn('user', [
 	'title' => sprintf(
-		_("Modifica utente %s"),
+		__("Modifica utente %s"),
 		$user->getUserFullname()
 	),
 	'url' => $user->getUserURL(),
@@ -92,7 +92,7 @@ Header::spawn('user', [
 ?>
 	<p><?php echo HTML::a(
 		$user->getUserURL(),
-		_("Vedi") . icon('account_box', 'left')
+		__("Vedi") . icon('account_box', 'left')
 	) ?></p>
 
 	<h3><?php _e("Aggiungi skill") ?></h3>

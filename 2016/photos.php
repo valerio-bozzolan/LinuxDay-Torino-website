@@ -18,7 +18,7 @@
 require 'load.php';
 
 $alt = esc_attr( sprintf(
-	_("foto %s"),
+	__("foto %s"),
 	SITE_NAME
 ) );
 

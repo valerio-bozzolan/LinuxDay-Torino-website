@@ -33,7 +33,7 @@ FORCE_PERMALINK and $event->forceEventPermalink();
 
 $args = [
 	'title' => sprintf(
-		_("%s: %s"),
+		__("%s: %s"),
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
@@ -54,11 +54,11 @@ if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvaila
 	if( filter_var($email, FILTER_VALIDATE_EMAIL)  ) {
 		$event->addSubscription($email);
 
-		$args['alert']      = _("Grazie per esserti iscritto.");
+		$args['alert']      = __("Grazie per esserti iscritto.");
 		$args['alert.type'] = Messagebox::INFO;
 		$subscribed         = true;
 	} else {
-		$args['alert']      = _("E-mail non valida.");
+		$args['alert']      = __("E-mail non valida.");
 		$args['alert.type'] = Messagebox::ERROR;
 		$subscribed         = false;
 	}
@@ -72,7 +72,7 @@ Header::spawn('event', $args);
 			'uid'        => $event->getEventUID(),
 			'conference' => $event->getConferenceUID()
 		] ),
-		_("Modifica evento") . icon('edit', 'left')
+		__("Modifica evento") . icon('edit', 'left')
 	) ?></p>
 	<?php endif ?>
 
@@ -122,7 +122,7 @@ Header::spawn('event', $args);
 					<td>
 						<?php echo $event->getEventHumanStart() ?><br />
 						<small><?php printf(
-							_("%s alle %s"),
+							__("%s alle %s"),
 							$event->getEventStart('d/m/Y'),
 							$event->getEventStart('H:i')
 						) ?></small>
@@ -208,7 +208,7 @@ Header::spawn('event', $args);
 				<?php if( $sharable->isSharableDownloadable() ): ?>
 					<p class="flow-text">
 						<?php printf(
-							_("Scarica %s distribuibile sotto licenza %s."),
+							__("Scarica %s distribuibile sotto licenza %s."),
 							HTML::a(
 								$sharable->getSharablePath(),
 								icon('attachment', 'left') . $sharable->getSharableTitle(['prop' => true]),
@@ -227,7 +227,7 @@ Header::spawn('event', $args);
 				<?php else: ?>
 					<p class="flow-text">
 						<?php printf(
-							_("Vedi %s distribuibile sotto licenza %s."),
+							__("Vedi %s distribuibile sotto licenza %s."),
 							HTML::a(
 								$sharable->getSharablePath(),
 								icon('share', 'left') . $sharable->getSharableTitle( ['prop' => true] ),
@@ -263,7 +263,7 @@ Header::spawn('event', $args);
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL( ROOT )
 							?>" title="<?php _esc_attr( sprintf(
-								_("Profilo di %s"),
+								__("Profilo di %s"),
 								$user->getUserFullname()
 							) ) ?>" data-tooltip="<?php _esc_attr(
 								$user->getUserFullname()
@@ -280,7 +280,7 @@ Header::spawn('event', $args);
 								$user->getUserURL(),
 								"<h4>{$user->getUserFullname()}</h4>",
 								sprintf(
-									_("Profilo di %s"),
+									__("Profilo di %s"),
 									$user->getUserFullname()
 								),
 								'valign'
