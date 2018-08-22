@@ -100,8 +100,14 @@ trait UserTrait {
 		);
 	}
 
-	function getUserImage($s = 256) {
-		$image = $this->get('user_image');
+	/**
+	 * Get the URL of the user image
+	 *
+	 * @param $s int Suggested width
+	 * @return string
+	 */
+	public function getUserImage( $s = 256 ) {
+		$image = $this->get( User::IMAGE );
 		if( ! $image ) {
 			$image = 'https://www.gravatar.com/avatar/' . md5( $this->getUserEmail() ) . '?s=' . $s;
 		}
@@ -255,6 +261,11 @@ class User extends Sessionuser {
 	const IS_PUBLIC = 'user_public';
 
 	/**
+	 * Image column
+	 */
+	const IMAGE = 'user_image';
+
+	/**
 	 * RSS column
 	 */
 	const RSS = 'user_rss';
@@ -283,6 +294,21 @@ class User extends Sessionuser {
 	 * GitHub username
 	 */
 	const GITHUB = 'user_github';
+
+	/**
+	 * Personal website column
+	 */
+	const WEBSITE = 'user_site';
+
+	/**
+	 * Loved license column
+	 */
+	const LOVED_LICENSE = 'user_lovelicense';
+
+	/**
+	 * Biography column
+	 */
+	const BIO = 'user_bio';
 
 	/**
 	 * Maximum UID length

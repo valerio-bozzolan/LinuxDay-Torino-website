@@ -23,6 +23,17 @@ $conference = FullConference::factoryFromUID( @ $_GET['conference'] )
 $conference or die_with_404();
 
 $user = User::factoryByUID( $_GET['uid'] )
+	->select( [
+		User::ID,
+		User::UID,
+		User::NAME,
+		User::SURNAME,
+		User::IMAGE,
+		User::WEBSITE,
+		User::LOVED_LICENSE,
+		User::BIO,
+	] )
+	->select( User::allSocialFields() )
 	->queryRow();
 
 $user or die_with_404();
@@ -53,15 +64,15 @@ Header::spawn('user', [
 		<div class="col s12 m6 l4">
 			<div class="row">
 				<div class="col s8">
-					<?php if( $user->user_site ): ?>
-						<a href="<?php echo $user->user_site ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>" target="_blank">
+					<?php if( $user->has( User::WEBSITE ) ): ?>
+						<a href="<?php _esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 					<?php endif ?>
 						<img class="responsive-img hoverable z-depth-1" src="<?php
-							echo $user->getUserImage()
+							_esc_attr( $user->getUserImage() )
 						?>" alt="<?php
 							_esc_attr( $user->getUserFullname() )
 						?>" />
-					<?php if( $user->user_site ): ?>
+					<?php if( $user->has( User::WEBSITE ) ): ?>
 						</a>
 					<?php endif ?>
 				</div>
