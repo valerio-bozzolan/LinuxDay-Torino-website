@@ -50,13 +50,13 @@ if( is_logged() ):
 			<div class="row">
 				<div class="input-field col s12 m6">
 					<input name="user_uid" id="user_uid" type="text" class="validate"<?php
-						echo HTML::property('value', @$_REQUEST['user_uid'] )
+						_value( @$_REQUEST['user_uid'] );
 					?> />
-					<label for="user_uid"><?php _e("E-mail") ?></label>
+					<label for="user_uid"><?php _e("Nome utente") ?></label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input name="user_password" id="user_password" type="password" class="validate" />
-					<label for="user_password"><?php _esc_attr( __("Password") ) ?></label>
+					<label for="user_password"><?php _e("Password") ?></label>
 				</div>
 			</div>
 			<div class="col s12">
