@@ -62,6 +62,9 @@ trait FullEventTrait {
 	}
 }
 
+/**
+ * An Event with all the bells and whistles
+ */
 class FullEvent extends Queried {
 	use FullEventTrait;
 	use EventTrait;
@@ -70,7 +73,7 @@ class FullEvent extends Queried {
 	use RoomTrait;
 	use TrackTrait;
 
-	function __construct() {
+	public function __construct() {
 		$this->normalizeEvent();
 		$this->normalizeConference();
 		$this->normalizeChapter();
@@ -78,19 +81,24 @@ class FullEvent extends Queried {
 		$this->normalizeTrack();
 	}
 
-	static function factory() {
+	/**
+	 * Query constructor
+	 *
+	 * @return Query
+	 */
+	public static function factory() {
 		return Query::factory( __CLASS__ )
-			->from(
-				'event',
-				'conference',
-				'room',
-				'track',
-				'chapter'
-			)
-			->equals('event.conference_ID', 'conference.conference_ID')
-			->equals('event.room_ID',       'room.room_ID')
-			->equals('event.track_ID',      'track.track_ID')
-			->equals('event.chapter_ID',    'chapter.chapter_ID');
+			->from( [
+				Event     ::T,
+				Conference::T,
+				Room      ::T,
+				Track     ::T,
+				Chapter   ::T,
+			] )
+			->equals( Event::T . DOT . Conference::ID, Conference::T . DOT . Conference::ID )
+			->equals( Event::T . DOT . Room      ::ID, Room      ::T . DOT . Room      ::ID )
+			->equals( Event::T . DOT . Track     ::ID, Track     ::T . DOT . Track     ::ID )
+			->equals( Event::T . DOT . Chapter   ::ID, Chapter   ::T . DOT . Chapter   ::ID );
 	}
 
 	static function factoryByConference( $conference_ID ) {

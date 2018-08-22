@@ -15,28 +15,50 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class_exists('Conference');
-class_exists('Location');
+class_exists( 'Conference' );
+class_exists( 'Location' );
 
+/**
+ * A conference with all the bells and whistles
+ */
 class FullConference extends Queried {
 	use ConferenceTrait;
 	use LocationTrait;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeConference();
 		$this->normalizeLocation();
 	}
 
-	static function factory() {
+	/**
+	 * Query constructor
+	 *
+	 * @return Query
+	 */
+	public static function factory() {
 		return Query::factory( __CLASS__ )
-			->from( 'conference', 'location' )
-			->equals( 'conference.location_ID', 'location.location_ID' );
+			->from( [
+				Conference::T,
+				Location  ::T,
+			] )
+			->equals(
+				Conference::T . DOT . Location::ID,
+				Location  ::T . DOT . Location::ID
+			);
 	}
 
-	static function factoryFromUID( $conference_uid ) {
+	/**
+	 * Query constructor from a certain Conference UID
+	 *
+	 * @param $conference_uid string Conference UID
+	 * @return Query
+	 */
+	public static function factoryFromUID( $conference_uid ) {
 		$conference_uid = Conference::sanitizeUID( $conference_uid );
-
 		return self::factory()
-			->whereStr( 'conference_uid', $conference_uid );
+			->whereStr( Conference::UID, $conference_uid );
 	}
 }

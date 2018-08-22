@@ -110,6 +110,11 @@ class Location extends Queried {
 	const T = 'location';
 
 	/**
+	 * ID column name
+	 */
+	const ID = 'location_ID';
+
+	/**
 	 * Name column name
 	 */
 	const NAME = 'location_name';

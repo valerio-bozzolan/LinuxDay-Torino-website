@@ -95,7 +95,7 @@ trait ConferenceTrait {
 	 * @return string
 	 */
 	public function getConferenceSubtitle() {
-		return __( $this->get( 'conference_subtitle' ) );
+		return __( $this->get( Conference::SUBTITLE ) );
 	}
 
 	/**
@@ -112,12 +112,13 @@ trait ConferenceTrait {
 	 */
 	protected function normalizeConference() {
 		$this->integers(
-			'conference_ID',
-			'location_ID'
+			Conference::ID,
+			Conference::DAYS,
+			Location::ID
 		);
 		$this->datetimes(
-			'conference_start',
-			'conference_end'
+			Conference::START,
+			Conference::END
 		);
 	}
 }
@@ -149,9 +150,49 @@ class Conference extends Queried {
 	const TITLE = 'conference_title';
 
 	/**
+	 * Subtitle column name
+	 */
+	const SUBTITLE = 'conference_subtitle';
+
+	/**
 	 * Description column name
 	 */
 	const DESCRIPTION = 'conference_description';
+
+	/**
+	 * Start column name
+	 */
+	const START = 'conference_start';
+
+	/**
+	 * End column name
+	 */
+	const END = 'conference_end';
+
+	/**
+	 * Acronym column name
+	 */
+	const ACRONYM = 'conference_acronym';
+
+	/**
+	 * Persons URL column name
+	 */
+	const PERSONS_URL = 'conference_persons_url';
+
+	/**
+	 * Events URL column name
+	 */
+	const EVENTS_URL = 'conference_events_url';
+
+	/**
+	 * Days column name
+	 */
+	const DAYS = 'conference_days';
+
+	/**
+	 * Complete ID column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
 
 	/**
 	 * Maximum UID length

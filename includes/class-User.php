@@ -311,6 +311,11 @@ class User extends Sessionuser {
 	const BIO = 'user_bio';
 
 	/**
+	 * Complete ID column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
 	 * Maximum UID length
 	 */
 	const MAXLEN_UID = 20;

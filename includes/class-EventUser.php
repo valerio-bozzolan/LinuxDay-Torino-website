@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database event-user relaction
-# Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -16,8 +16,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 trait EventUserTrait {
-	function getEventUserOrder() {
-		return $this->get('event_user_order');
+
+	/**
+	 * Get the event user order
+	 *
+	 * @return int
+	 */
+	public function getEventUserOrder() {
+		return $this->get( EventUser::ORDER );
 	}
 
 	/**
@@ -33,23 +39,51 @@ trait EventUserTrait {
 		EventUser::delete($event_ID, $user_ID);
 	}
 
-	private function normalizeEventUser() {
-		$this->integers('event_user_order');
-
+	/**
+	 * Normalize an EventUser object
+	 */
+	protected function normalizeEventUser() {
+		$this->integers( EventUser::ORDER );
 		$this->normalizeEvent();
 		$this->normalizeUser();
 	}
 }
 
-class_exists('Event');
-class_exists('User');
+class_exists( 'Event' );
+class_exists( 'User' );
 
+/**
+ * Relation between an event and users
+ */
 class EventUser extends Queried {
 	use EventUserTrait;
 	use EventTrait;
 	use UserTrait;
 
-	function __construct() {
+	/**
+	 * Database table name
+	 */
+	const T = 'event_user';
+
+	/**
+	 * Complete user column name
+	 */
+	const USER_  = self::T . DOT . User::ID;
+
+	/**
+	 * Complete event column name
+	 */
+	const EVENT_ = self::T . DOT . Event::ID;
+
+	/**
+	 * User order column name
+	 */
+	const ORDER = 'event_user_order';
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeEventUser();
 	}
 

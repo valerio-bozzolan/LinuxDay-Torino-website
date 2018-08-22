@@ -101,6 +101,11 @@ class Track extends Queried {
 	const ORDER = 'track_order';
 
 	/**
+	 * Complete ID column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
 	 * Maximum UID length
 	 */
 	const MAXLEN_UID = 64;

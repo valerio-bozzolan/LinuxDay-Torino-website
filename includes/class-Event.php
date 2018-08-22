@@ -90,6 +90,17 @@ trait EventTrait {
 	}
 
 	/**
+	 * Get the event duration
+	 *
+	 * @return DateInterval
+	 */
+	public function getEventDuration( $format ) {
+		$start = $this->get( Event::START );
+		$end   = $this->get( Event::END   );
+		return $start->diff( $end )->format( $format );
+	}
+
+	/**
 	 * It has an event image?
 	 *
 	 * @return bool
@@ -299,6 +310,21 @@ class Event extends Queried {
 	 * Note column name
 	 */
 	const NOTE = 'event_note';
+
+	/**
+	 * Language column name
+	 */
+	const LANGUAGE = 'event_language';
+
+	/**
+	 * Complete ID column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
+	 * Complete conference ID column name
+	 */
+	const CONFERENCE_ = self::T . DOT . Conference::ID;
 
 	/**
 	 * Maximum UID length

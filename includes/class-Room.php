@@ -86,6 +86,11 @@ class Room extends Queried {
 	const NAME = 'room_name';
 
 	/**
+	 * Complete ID column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
