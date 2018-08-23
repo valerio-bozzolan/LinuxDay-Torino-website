@@ -89,7 +89,7 @@ class Footer {
 				<ul>
 					<?php $ld = function($year, $where) { ?>
 					<li><?php echo HTML::a(
-						PROTOCOL . DOMAIN . "/$year/",
+						"/$year/",
 						"$year, $where",
 						sprintf(
 							"Linux Day %d %s",
