@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 02:02+0200\n"
-"PO-Revision-Date: 2018-08-22 20:44+0200\n"
+"POT-Creation-Date: 2018-08-22 23:49+0000\n"
+"PO-Revision-Date: 2018-08-23 02:04+0200\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -678,53 +678,49 @@ msgid "Social"
 msgstr "Social"
 
 #: 2017/index.php:48
-#, fuzzy
 msgid "Linux Day<br />Torino"
-msgstr "Linux Day Turin 2016"
+msgstr "Linux Day<br />Turin"
 
 #: 2017/index.php:50
 #, php-format
 msgid "Se anche tu sei %suno smanettone%s, vieni a trovarci!"
-msgstr ""
+msgstr "If you are %san hacker%s too, come visit us!"
 
 #: 2017/index.php:54
-#, fuzzy
 msgid "Sabato 28 ottobre"
-msgstr "October 22nd"
+msgstr "Saturday, October 22nd"
 
 #: 2017/index.php:63
 msgid "uno smanettone"
-msgstr ""
+msgstr "an hacker"
 
 #: 2017/index.php:64
 msgid "un programmatore"
-msgstr ""
+msgstr "a programmer"
 
 #: 2017/index.php:65
 msgid "un tipo curioso"
-msgstr ""
+msgstr "a "
 
 #: 2017/index.php:66
-#, fuzzy
 msgid "un sistemista"
-msgstr "Sysadmins area"
+msgstr "a sysadmin"
 
 #: 2017/index.php:67
 msgid "un po' pinguino"
-msgstr ""
+msgstr "a bit penguin"
 
 #: 2017/index.php:68
 msgid "in modalità incognito"
-msgstr ""
+msgstr "in privacy mode"
 
 #: 2017/index.php:69
 msgid "un cucciolo di GNU"
-msgstr ""
+msgstr "a cute GNU"
 
 #: 2017/index.php:81
-#, fuzzy
 msgid "Cos'è il Linux Day Torino"
-msgstr "Linux Day Torino Blog"
+msgstr "What is the Linux Day Turin"
 
 #: 2017/index.php:84
 msgid ""
@@ -761,26 +757,25 @@ msgid "Location"
 msgstr ""
 
 #: 2017/index.php:121
-#, fuzzy
 msgid "Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino."
-msgstr "UniTO Computer Science department."
+msgstr "UniTo Computer science department in Via Pessinetto 12, Turin."
 
 #: 2017/index.php:122
 msgid "Speakers"
-msgstr ""
+msgstr "Speakers"
 
 #: 2017/index.php:123
 #, php-format
 msgid "<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."
-msgstr ""
+msgstr "<b>%d</b> speakers, distributed on <b>%d</b> thematic sessions."
 
 #: 2017/index.php:131
 msgid "<b>28 ottobre 2017</b> dalle 14:00 alle 19:00."
-msgstr ""
+msgstr "<b>28 october 2017</b> from 14:00 to 19:00."
 
 #: 2017/index.php:132 2017/index.php:201
 msgid "Extras"
-msgstr ""
+msgstr "Extras"
 
 #: 2017/index.php:132
 msgid "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
@@ -795,28 +790,27 @@ msgstr ""
 
 #: 2017/index.php:154
 msgid "Per raggiungerlo puoi:"
-msgstr ""
+msgstr "To arrive you can:"
 
 #: 2017/index.php:155
 msgid "Venire in auto, il parcheggio in zona non manca"
-msgstr ""
+msgstr "Use a car, there are a lot of parking slots"
 
 #: 2017/index.php:156
 msgid "Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")"
-msgstr ""
+msgstr "Take the tram 9 or 3 (\"Ospedale Amedeo di Savoia\")"
 
 #: 2017/index.php:157
 msgid "Prendere il bus 59 o 50/"
-msgstr ""
+msgstr "Take the bus 59 or 50/"
 
 #: 2017/index.php:159
-#, fuzzy
 msgid "Abilita JavaScript per vedere la mappa"
-msgstr "Enable JavaScript for interactive map."
+msgstr "Enable JavaScript to see the map"
 
 #: 2017/index.php:170
 msgid "Programma"
-msgstr ""
+msgstr "Schedule"
 
 #: 2017/index.php:171
 msgid "Il programma dei talk è in fase di definizione! :)"
@@ -824,17 +818,15 @@ msgstr ""
 
 #: 2017/index.php:188
 msgid "sessioni"
-msgstr ""
+msgstr "sessions"
 
 #: 2017/index.php:189
-#, fuzzy
 msgid "ore"
-msgstr "%d hours"
+msgstr "hours"
 
 #: 2017/index.php:190
-#, fuzzy
 msgid "relatori"
-msgstr "Speakers"
+msgstr "speakers"
 
 #: 2017/index.php:203
 msgid ""
@@ -863,9 +855,8 @@ msgid ""
 msgstr ""
 
 #: 2017/index.php:238
-#, fuzzy
 msgid "Sponsor"
-msgstr "Main sponsor:"
+msgstr "Sponsor:"
 
 #: 2017/index.php:239
 msgid ""
@@ -878,9 +869,8 @@ msgid "Linux Day Torino 2017"
 msgstr "Linux Day Turin 2017"
 
 #: 2017/load.php:47
-#, fuzzy
 msgid "LDTO2017"
-msgstr "LDTO2016"
+msgstr "LDTO2017"
 
 #: includes/class-HumanTime.php:45
 #, php-format
@@ -2102,11 +2092,11 @@ msgstr "Cascina Roccafranca"
 
 #: 2016/includes/class-Footer.php:115
 msgid "Lingua"
-msgstr ""
+msgstr "Language"
 
 #: 2016/includes/class-Footer.php:122
 msgid "Scegli"
-msgstr ""
+msgstr "Choose"
 
 #: 2016/includes/class-Footer.php:131
 #, php-format
