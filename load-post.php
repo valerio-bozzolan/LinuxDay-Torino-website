@@ -38,7 +38,7 @@ require ABSPATH . '/includes/functions.php';
 register_expected( 'LICENSES', 'Licenses' );
 
 // user permissions
-register_permissions( 'user', 'edit-account' );
+register_permissions( 'user', [] );
 
 // admin permissions
 inherit_permissions( 'admin',   'user', [
