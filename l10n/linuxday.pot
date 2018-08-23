@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Linux Day 2016 website contributors
+# Copyright (C) YEAR Linux Day website contributors
 # This file is distributed under the same license as the linuxday package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 20:42+0200\n"
+"POT-Creation-Date: 2018-08-23 02:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,245 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: includes/class-HumanTime.php:45
-#, php-format
-msgid "fra %s"
-msgstr ""
-
-#: includes/class-HumanTime.php:51
-#, php-format
-msgid "%s fa"
-msgstr ""
-
-#: includes/class-HumanTime.php:67
-#, php-format
-msgid "%d anni"
-msgstr ""
-
-#: includes/class-HumanTime.php:71
-msgid "un anno"
-msgstr ""
-
-#: includes/class-HumanTime.php:77
-#, php-format
-msgid "%d mesi"
-msgstr ""
-
-#: includes/class-HumanTime.php:81
-msgid "un mese"
-msgstr ""
-
-#: includes/class-HumanTime.php:93
-#, php-format
-msgid "%d settimane"
-msgstr ""
-
-#: includes/class-HumanTime.php:97
-msgid "una settimana"
-msgstr ""
-
-#: includes/class-HumanTime.php:101
-#, php-format
-msgid "%d giorni"
-msgstr ""
-
-#: includes/class-HumanTime.php:107
-msgid "domani"
-msgstr ""
-
-#: includes/class-HumanTime.php:107
-msgid "ieri"
-msgstr ""
-
-#: includes/class-HumanTime.php:121
-msgid "oggi"
-msgstr ""
-
-#: includes/class-HumanTime.php:126
-#, php-format
-msgid "%d ore e %d minuti"
-msgstr ""
-
-#: includes/class-HumanTime.php:129
-#, php-format
-msgid "%d ore"
-msgstr ""
-
-#: includes/class-HumanTime.php:141
-msgid "un'ora"
-msgstr ""
-
-#: includes/class-HumanTime.php:145
-msgid "tre quarti d'ora"
-msgstr ""
-
-#: includes/class-HumanTime.php:149
-msgid "mezzora"
-msgstr ""
-
-#: includes/class-HumanTime.php:153
-#, php-format
-msgid "%d minuti"
-msgstr ""
-
-#: includes/class-HumanTime.php:157
-msgid "un minuto"
-msgstr ""
-
-#: includes/class-HumanTime.php:161
-#, php-format
-msgid "%d secondi"
-msgstr ""
-
-#: includes/class-HumanTime.php:166
-msgid "proprio ora"
-msgstr ""
-
-#: includes/class-Licenses.php:23
-msgid "GNU General Public License, versione 3"
-msgstr ""
-
-#: includes/class-Licenses.php:24
-msgid "GNU General Public License, versione 2"
-msgstr ""
-
-#: includes/class-Licenses.php:26
-msgid "Licenza Apache, versione 2.0"
-msgstr ""
-
-#: includes/class-Licenses.php:27
-msgid "Licenza MIT"
-msgstr ""
-
-#: includes/class-Licenses.php:28
-msgid "Licenza PHP"
-msgstr ""
-
-#: includes/class-Licenses.php:30
-msgid "Creative Commons - Attribuzione 4.0 Internazionale"
-msgstr ""
-
-#: includes/class-Licenses.php:30
-msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
-msgstr ""
-
-#: includes/class-Licenses.php:31
-msgid ""
-"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
-msgstr ""
-
-#: includes/class-Licenses.php:31
-msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
-msgstr ""
-
-#: includes/class-Licenses.php:32
-msgid ""
-"Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
-"Internazionale"
-msgstr ""
-
-#: includes/class-Licenses.php:32
-msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
-msgstr ""
-
-#: includes/class-Licenses.php:33
-msgid ""
-"Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
-"modo 4.0 Internazionale"
-msgstr ""
-
-#: includes/class-Licenses.php:33
-msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
-msgstr ""
-
-#: includes/class-Licenses.php:34
-msgid "Licenza jQuery"
-msgstr ""
-
-#: includes/class-Licenses.php:37
-msgid "Fai cosa c**** ti pare Public License"
-msgstr ""
-
-#: includes/class-Licenses.php:37
-msgid "https://it.wikipedia.org/wiki/WTFPL"
-msgstr ""
-
-#: includes/class-Sharable.php:57
-#, php-format
-msgid "il %s"
-msgstr ""
-
-#: includes/class-Sharable.php:57 includes/class-Sharable.php:59
-msgid "video esterno"
-msgstr ""
-
-#: includes/class-User.php:72
-#, php-format
-msgid "%s %s"
-msgstr ""
-
-#: includes/class-User.php:98
-#, php-format
-msgid "Profilo utente di %s"
-msgstr ""
-
-#: includes/class-UserSkill.php:38
-#, php-format
-msgid "%s per me potrebbe essere qualcosa che si mangia"
-msgstr ""
-
-#: includes/class-UserSkill.php:39
-#, php-format
-msgid "ho conoscenze %s di base"
-msgstr ""
-
-#: includes/class-UserSkill.php:40
-#, php-format
-msgid "sono discretamente bravo in %s"
-msgstr ""
-
-#: includes/class-UserSkill.php:40
-#, php-format
-msgid "sono molto interessato al mondo %s"
-msgstr ""
-
-#: includes/class-UserSkill.php:41
-#, php-format
-msgid "%s... il mio cavallo di battaglia!"
-msgstr ""
-
-#: includes/class-UserSkill.php:41
-#, php-format
-msgid "%s... è un mio pensiero fisso!"
-msgstr ""
-
-#: includes/class-UserSkill.php:42
-#, php-format
-msgid "%s: l'essenza stessa della mia vita!"
-msgstr ""
-
-#: includes/class-UserSkill.php:43
-#, php-format
-msgid "%s, sto cercando di smettere..."
-msgstr ""
-
-#: includes/class-UserSkill.php:44
-#, php-format
-msgid ""
-"se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
-msgstr ""
-
-#: includes/class-UserSkill.php:45
-#, php-format
-msgid "se accenni a %s ti prendo a tastierate"
-msgstr ""
-
-#: includes/class-UserSkill.php:47
-#, php-format
-msgid ""
-"sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
-msgstr ""
 
 #: 2016/credits.php:27
 msgid ""
@@ -436,7 +197,7 @@ msgstr ""
 msgid "Dove"
 msgstr ""
 
-#: 2016/event.php:121 2016/index.php:74
+#: 2016/event.php:121 2016/index.php:74 2017/index.php:131
 msgid "Quando"
 msgstr ""
 
@@ -699,36 +460,36 @@ msgstr ""
 msgid "Partner %s"
 msgstr ""
 
-#: 2016/load.php:64 conference[2016]::conference_title
+#: 2016/load.php:47 l10n/trebbia.php:21
 msgid "Linux Day Torino 2016"
 msgstr ""
 
-#: 2016/load.php:65
+#: 2016/load.php:48
 msgid "LDTO2016"
 msgstr ""
 
-#: 2016/load.php:66
+#: 2016/load.php:49 2017/load.php:48
 msgid ""
 "Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
 msgstr ""
 
-#: 2016/load.php:86
+#: 2016/load.php:69 2017/load.php:68
 msgid "Benvenuti"
 msgstr ""
 
-#: 2016/load.php:87
+#: 2016/load.php:70
 msgid "Partner"
 msgstr ""
 
-#: 2016/load.php:88
+#: 2016/load.php:71
 msgid "Fotografie"
 msgstr ""
 
-#: 2016/load.php:89
+#: 2016/load.php:72
 msgid "Crediti"
 msgstr ""
 
-#: 2016/load.php:90
+#: 2016/load.php:73 2017/load.php:72
 msgid "API"
 msgstr ""
 
@@ -891,6 +652,1110 @@ msgstr ""
 msgid "Social"
 msgstr ""
 
+#: 2017/index.php:48
+msgid "Linux Day<br />Torino"
+msgstr ""
+
+#: 2017/index.php:50
+#, php-format
+msgid "Se anche tu sei %suno smanettone%s, vieni a trovarci!"
+msgstr ""
+
+#: 2017/index.php:54
+msgid "Sabato 28 ottobre"
+msgstr ""
+
+#: 2017/index.php:63
+msgid "uno smanettone"
+msgstr ""
+
+#: 2017/index.php:64
+msgid "un programmatore"
+msgstr ""
+
+#: 2017/index.php:65
+msgid "un tipo curioso"
+msgstr ""
+
+#: 2017/index.php:66
+msgid "un sistemista"
+msgstr ""
+
+#: 2017/index.php:67
+msgid "un po' pinguino"
+msgstr ""
+
+#: 2017/index.php:68
+msgid "in modalità incognito"
+msgstr ""
+
+#: 2017/index.php:69
+msgid "un cucciolo di GNU"
+msgstr ""
+
+#: 2017/index.php:81
+msgid "Cos'è il Linux Day Torino"
+msgstr ""
+
+#: 2017/index.php:84
+msgid ""
+"L'edizione sabauda del Linux Day, il grande evento nazionale per la "
+"promozione e la diffusione di GNU/Linux e del software libero."
+msgstr ""
+
+#: 2017/index.php:93
+msgid ""
+"Il Linux Day è un evento che si svolge nello stesso giorno (quest'anno, "
+"sabato 28 ottobre) in tutta Italia."
+msgstr ""
+
+#: 2017/index.php:97
+msgid ""
+"Il Comitato Linux Day Torino, costituito informalmente da volontari, "
+"associazioni e professionisti, organizza dal 2007 l'edizione torinese della "
+"manifestazione, che si articola su diverse sessioni parallele con talk per "
+"ogni tipo di interesse."
+msgstr ""
+
+#: 2017/index.php:103
+msgid ""
+"Quest'anno siamo ospitati dal Dipartimento di Informatica dell'Università di "
+"Torino, in via Pessinetto. L'accesso all'evento è libero e gratuito."
+msgstr ""
+
+#: 2017/index.php:106
+msgid "Vedi il programma"
+msgstr ""
+
+#: 2017/index.php:121 2017/index.php:146
+msgid "Location"
+msgstr ""
+
+#: 2017/index.php:121
+msgid "Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino."
+msgstr ""
+
+#: 2017/index.php:122
+msgid "Speakers"
+msgstr ""
+
+#: 2017/index.php:123
+#, php-format
+msgid "<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."
+msgstr ""
+
+#: 2017/index.php:131
+msgid "<b>28 ottobre 2017</b> dalle 14:00 alle 19:00."
+msgstr ""
+
+#: 2017/index.php:132 2017/index.php:201
+msgid "Extras"
+msgstr ""
+
+#: 2017/index.php:132
+msgid "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
+msgstr ""
+
+#: 2017/index.php:149
+msgid ""
+"Per il secondo anno il Dipartimento di Informatica dell'Università di Torino "
+"ospita il Linux Day di Torino. Per avvicinare i professionisti di domani a "
+"GNU/Linux, al software libero e all'open source."
+msgstr ""
+
+#: 2017/index.php:154
+msgid "Per raggiungerlo puoi:"
+msgstr ""
+
+#: 2017/index.php:155
+msgid "Venire in auto, il parcheggio in zona non manca"
+msgstr ""
+
+#: 2017/index.php:156
+msgid "Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")"
+msgstr ""
+
+#: 2017/index.php:157
+msgid "Prendere il bus 59 o 50/"
+msgstr ""
+
+#: 2017/index.php:159
+msgid "Abilita JavaScript per vedere la mappa"
+msgstr ""
+
+#: 2017/index.php:170
+msgid "Programma"
+msgstr ""
+
+#: 2017/index.php:171
+msgid "Il programma dei talk è in fase di definizione! :)"
+msgstr ""
+
+#: 2017/index.php:188
+msgid "sessioni"
+msgstr ""
+
+#: 2017/index.php:189
+msgid "ore"
+msgstr ""
+
+#: 2017/index.php:190
+msgid "relatori"
+msgstr ""
+
+#: 2017/index.php:203
+msgid ""
+"Se i talk non dovessero bastare, abbiamo altro con cui animare la giornata!"
+msgstr ""
+
+#: 2017/index.php:219
+msgid "Porta il tuo computer, ti aiuteremo ad installare Linux!"
+msgstr ""
+
+#: 2017/index.php:220
+msgid "Il frullatore non funziona più? Portalo e lo ripareremo insieme!"
+msgstr ""
+
+#: 2017/index.php:226
+#, php-format
+msgid ""
+"Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. "
+"Prenotazione obbligatoria (disponibile a breve)."
+msgstr ""
+
+#: 2017/index.php:230
+msgid ""
+"Vieni a presentare il tuo progetto open source e smanettaci con altri "
+"appassionati!"
+msgstr ""
+
+#: 2017/index.php:238
+msgid "Sponsor"
+msgstr ""
+
+#: 2017/index.php:239
+msgid ""
+"Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere "
+"l'evento."
+msgstr ""
+
+#: 2017/load.php:46 l10n/trebbia.php:27
+msgid "Linux Day Torino 2017"
+msgstr ""
+
+#: 2017/load.php:47
+msgid "LDTO2017"
+msgstr ""
+
+#: includes/class-HumanTime.php:45
+#, php-format
+msgid "fra %s"
+msgstr ""
+
+#: includes/class-HumanTime.php:51
+#, php-format
+msgid "%s fa"
+msgstr ""
+
+#: includes/class-HumanTime.php:67
+#, php-format
+msgid "%d anni"
+msgstr ""
+
+#: includes/class-HumanTime.php:71
+msgid "un anno"
+msgstr ""
+
+#: includes/class-HumanTime.php:77
+#, php-format
+msgid "%d mesi"
+msgstr ""
+
+#: includes/class-HumanTime.php:81
+msgid "un mese"
+msgstr ""
+
+#: includes/class-HumanTime.php:93
+#, php-format
+msgid "%d settimane"
+msgstr ""
+
+#: includes/class-HumanTime.php:97
+msgid "una settimana"
+msgstr ""
+
+#: includes/class-HumanTime.php:101
+#, php-format
+msgid "%d giorni"
+msgstr ""
+
+#: includes/class-HumanTime.php:107
+msgid "domani"
+msgstr ""
+
+#: includes/class-HumanTime.php:107
+msgid "ieri"
+msgstr ""
+
+#: includes/class-HumanTime.php:121
+msgid "oggi"
+msgstr ""
+
+#: includes/class-HumanTime.php:126
+#, php-format
+msgid "%d ore e %d minuti"
+msgstr ""
+
+#: includes/class-HumanTime.php:129
+#, php-format
+msgid "%d ore"
+msgstr ""
+
+#: includes/class-HumanTime.php:141
+msgid "un'ora"
+msgstr ""
+
+#: includes/class-HumanTime.php:145
+msgid "tre quarti d'ora"
+msgstr ""
+
+#: includes/class-HumanTime.php:149
+msgid "mezzora"
+msgstr ""
+
+#: includes/class-HumanTime.php:153
+#, php-format
+msgid "%d minuti"
+msgstr ""
+
+#: includes/class-HumanTime.php:157
+msgid "un minuto"
+msgstr ""
+
+#: includes/class-HumanTime.php:161
+#, php-format
+msgid "%d secondi"
+msgstr ""
+
+#: includes/class-HumanTime.php:166
+msgid "proprio ora"
+msgstr ""
+
+#: includes/class-Licenses.php:23
+msgid "GNU General Public License, versione 3"
+msgstr ""
+
+#: includes/class-Licenses.php:24
+msgid "GNU General Public License, versione 2"
+msgstr ""
+
+#: includes/class-Licenses.php:26
+msgid "Licenza Apache, versione 2.0"
+msgstr ""
+
+#: includes/class-Licenses.php:27
+msgid "Licenza MIT"
+msgstr ""
+
+#: includes/class-Licenses.php:28
+msgid "Licenza PHP"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "Creative Commons - Attribuzione 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:30
+msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:31
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+msgstr ""
+
+#: includes/class-Licenses.php:31
+msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:32
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
+"Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:32
+msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:33
+msgid ""
+"Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
+"modo 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:33
+msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:34
+msgid "Licenza jQuery"
+msgstr ""
+
+#: includes/class-Licenses.php:37
+msgid "Fai cosa c**** ti pare Public License"
+msgstr ""
+
+#: includes/class-Licenses.php:37
+msgid "https://it.wikipedia.org/wiki/WTFPL"
+msgstr ""
+
+#: includes/class-Sharable.php:57
+#, php-format
+msgid "il %s"
+msgstr ""
+
+#: includes/class-Sharable.php:57 includes/class-Sharable.php:59
+msgid "video esterno"
+msgstr ""
+
+#: includes/class-User.php:72
+#, php-format
+msgid "%s %s"
+msgstr ""
+
+#: includes/class-User.php:98
+#, php-format
+msgid "Profilo utente di %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:38
+#, php-format
+msgid "%s per me potrebbe essere qualcosa che si mangia"
+msgstr ""
+
+#: includes/class-UserSkill.php:39
+#, php-format
+msgid "ho conoscenze %s di base"
+msgstr ""
+
+#: includes/class-UserSkill.php:40
+#, php-format
+msgid "sono discretamente bravo in %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:40
+#, php-format
+msgid "sono molto interessato al mondo %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:41
+#, php-format
+msgid "%s... il mio cavallo di battaglia!"
+msgstr ""
+
+#: includes/class-UserSkill.php:41
+#, php-format
+msgid "%s... è un mio pensiero fisso!"
+msgstr ""
+
+#: includes/class-UserSkill.php:42
+#, php-format
+msgid "%s: l'essenza stessa della mia vita!"
+msgstr ""
+
+#: includes/class-UserSkill.php:43
+#, php-format
+msgid "%s, sto cercando di smettere..."
+msgstr ""
+
+#: includes/class-UserSkill.php:44
+#, php-format
+msgid ""
+"se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
+msgstr ""
+
+#: includes/class-UserSkill.php:45
+#, php-format
+msgid "se accenni a %s ti prendo a tastierate"
+msgstr ""
+
+#: includes/class-UserSkill.php:47
+#, php-format
+msgid ""
+"sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
+msgstr ""
+
+#: l10n/trebbia.php:24
+msgid "LDTO15"
+msgstr ""
+
+#: l10n/trebbia.php:30
+msgid "Didattica del coding"
+msgstr ""
+
+#: l10n/trebbia.php:33
+msgid ""
+"Le basi del coding sono fondamentali, come leggere e scrivere.\n"
+"Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
+"genitori?"
+msgstr ""
+
+#: l10n/trebbia.php:37
+msgid "Introduzione alla programmazione con JavaScript"
+msgstr ""
+
+#: l10n/trebbia.php:40
+msgid ""
+"Un viaggio nel magico mondo della programmazione con consigli pratici e "
+"tecnici per chi aspira a creare software e non solo subirlo."
+msgstr ""
+
+#: l10n/trebbia.php:43
+msgid "Non bisogna aver paura di IPv6"
+msgstr ""
+
+#: l10n/trebbia.php:46
+msgid ""
+"Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
+"potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
+"Linux."
+msgstr ""
+
+#: l10n/trebbia.php:49
+msgid "La tecnologia LoRa e le sue applicazioni IoT"
+msgstr ""
+
+#: l10n/trebbia.php:52
+msgid "Rinascimento 2.0"
+msgstr ""
+
+#: l10n/trebbia.php:55
+msgid ""
+"Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
+"leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
+"tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando "
+"in una nuova era."
+msgstr ""
+
+#: l10n/trebbia.php:58
+msgid "Utilizzi di GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:61
+msgid ""
+"Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
+"del software libero della vita di tutti i giorni. Si suggerisce di invitare "
+"il vostro classico conoscente scettico e/o fanboy (╯°□°)╯."
+msgstr ""
+
+#: l10n/trebbia.php:64
+msgid "Linux al Comune di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:67
+msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
+msgstr ""
+
+#: l10n/trebbia.php:70
+msgid ""
+"Lo Yocto Project è un progetto di collaborazione open source che fornisce "
+"modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
+"personalizzati per i prodotti embedded indipendenti dall'architettura "
+"hardware. Il progetto è stato creato nel 2010 come una collaborazione tra "
+"molti produttori di hardware, fornitori di sistemi operativi open-source e "
+"aziende di elettronica per portare un po' di ordine nel caos di sviluppo di "
+"Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di "
+"sviluppo Linux embedded completo con gli strumenti, i metadati e la "
+"documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette "
+"a disposizione sono potenti e facilmente generabili (compresi gli ambienti "
+"di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e "
+"permettono di realizzare e portare avanti progetti, senza causare la perdita "
+"delle ottimizzazioni e degli investimenti effettuati nel corso del fase di "
+"prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia "
+"da parte della comunità open source permettendo agli utenti di concentrarsi "
+"sulle caratteristiche e lo sviluppo del proprio prodotto."
+msgstr ""
+
+#: l10n/trebbia.php:73
+msgid "Dieci anni dietro a FidoCadJ"
+msgstr ""
+
+#: l10n/trebbia.php:76
+msgid ""
+"Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
+"io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
+"forum italiani."
+msgstr ""
+
+#: l10n/trebbia.php:79
+msgid "Un bot di Telegram con Python"
+msgstr ""
+
+#: l10n/trebbia.php:82
+msgid ""
+"Usare Python e la libreria Telepot per sviluppare un semplice bot su "
+"Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
+"piccolo, economico e parco in consumi."
+msgstr ""
+
+#: l10n/trebbia.php:85
+msgid ""
+"Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
+"connettività e tempo una breve dimostrazione."
+msgstr ""
+
+#: l10n/trebbia.php:88
+msgid "Docker: distribuiamo applicazioni"
+msgstr ""
+
+#: l10n/trebbia.php:91
+msgid ""
+"Una introduzione ai sistemi distribuiti tramite la gestione dei container "
+"realizzati con Docker.\n"
+"Una risposta alle domande: Docker a cosa serve? Come si installa? Come si "
+"gestisce?"
+msgstr ""
+
+#: l10n/trebbia.php:95
+msgid "Hadoop - BigData in streaming"
+msgstr ""
+
+#: l10n/trebbia.php:98
+msgid ""
+"Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
+"l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
+msgstr ""
+
+#: l10n/trebbia.php:101
+msgid "InfoSec. Istruzioni per l'uso."
+msgstr ""
+
+#: l10n/trebbia.php:104
+msgid ""
+"InfoSec → Information Security → Sicurezza delle informazioni.\n"
+"\n"
+"Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
+"maggiormente al sicuro la propria \"vita digitale\"."
+msgstr ""
+
+#: l10n/trebbia.php:109
+msgid "Sostenibilità e Open Culture all'Università"
+msgstr ""
+
+#: l10n/trebbia.php:112
+msgid ""
+"Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
+"Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
+"possano rigenerare le apparecchiature guaste, condividere informazioni e "
+"fornire alla società circostante apparecchiature elettroniche funzionanti "
+"gratuitamente."
+msgstr ""
+
+#: l10n/trebbia.php:115
+msgid "Wikidata: la base di conoscenza libera"
+msgstr ""
+
+#: l10n/trebbia.php:118 l10n/trebbia.php:348
+msgid "Wikipedia"
+msgstr ""
+
+#: l10n/trebbia.php:121
+msgid "LIP"
+msgstr ""
+
+#: l10n/trebbia.php:124 l10n/trebbia.php:246
+msgid "Linux Installation Party"
+msgstr ""
+
+#: l10n/trebbia.php:127
+msgid "Installazione di varie distribuzioni GNU/Linux."
+msgstr ""
+
+#: l10n/trebbia.php:130
+msgid ""
+"Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
+"Gestito da volontari."
+msgstr ""
+
+#: l10n/trebbia.php:133 l10n/trebbia.php:249
+msgid "Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:136
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
+msgstr ""
+
+#: l10n/trebbia.php:139
+msgid ""
+"Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
+"deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
+"confronteranno con tematiche fondamentali, come il Software Libero e lo "
+"sviluppo Open Source. Entra a far parte della gang del Software Libero! "
+"=D<br>\n"
+"<br>\n"
+"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui "
+"per prenotare</a>.\n"
+"<br>\n"
+"<br>\n"
+"Un ringraziamento particolare ai due gruppi che hanno reso possibile "
+"quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
+msgstr ""
+
+#: l10n/trebbia.php:147
+msgid "Lezione introduttiva corso GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:150
+msgid ""
+"Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
+"Linux Day Torino.\n"
+"\n"
+"Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
+msgstr ""
+
+#: l10n/trebbia.php:155
+msgid "Installiamo insieme una distribuzione GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:158
+msgid ""
+"Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:161
+msgid "Manutenzione di un sistema basato su Debian"
+msgstr ""
+
+#: l10n/trebbia.php:164
+msgid ""
+"La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
+"\n"
+"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:169
+msgid "I comandi di base di un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:172
+msgid ""
+"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
+"parti del tuo sistema GNU/Linux.\n"
+"\n"
+"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:177
+msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:180
+msgid ""
+"Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
+"amministrarli al meglio.\n"
+"\n"
+"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:185
+msgid "Consegna degli attestati"
+msgstr ""
+
+#: l10n/trebbia.php:188
+msgid ""
+"I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
+"\n"
+"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
+"comitato Linux Day Torino."
+msgstr ""
+
+#: l10n/trebbia.php:193 2017/includes/class-Footer.php:102
+msgid "Dipartimento di Informatica"
+msgstr ""
+
+#: l10n/trebbia.php:196
+msgid "Torino, Via Pessinetto 12"
+msgstr ""
+
+#: l10n/trebbia.php:199
+msgid ""
+"Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
+"Amedeo di Savoia / Dipartimento di Informatica*.\n"
+"\n"
+"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
+"°**59** e n°**59/** scendendo alla fermata *Svizzera*."
+msgstr ""
+
+#: l10n/trebbia.php:204 2016/includes/class-Footer.php:103
+#: 2017/includes/class-Footer.php:103
+msgid "Dipartimento di Biotecnologie"
+msgstr ""
+
+#: l10n/trebbia.php:207
+msgid "Via Nizza 52, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:210
+msgid ""
+"La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
+"Biotecnologie."
+msgstr ""
+
+#: l10n/trebbia.php:213
+msgid "Base"
+msgstr ""
+
+#: l10n/trebbia.php:216
+msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
+msgstr ""
+
+#: l10n/trebbia.php:219
+msgid "Dev"
+msgstr ""
+
+#: l10n/trebbia.php:222
+msgid "Area sviluppatori"
+msgstr ""
+
+#: l10n/trebbia.php:225
+msgid "Sys"
+msgstr ""
+
+#: l10n/trebbia.php:228
+msgid "Area sistemisti"
+msgstr ""
+
+#: l10n/trebbia.php:231
+msgid "Misc"
+msgstr ""
+
+#: l10n/trebbia.php:234
+msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
+msgstr ""
+
+#: l10n/trebbia.php:237
+msgid "Altro"
+msgstr ""
+
+#: l10n/trebbia.php:240
+msgid "Di tutto un po'"
+msgstr ""
+
+#: l10n/trebbia.php:243
+msgid "Talk"
+msgstr ""
+
+#: l10n/trebbia.php:252
+msgid "Corso"
+msgstr ""
+
+#: l10n/trebbia.php:255
+msgid "Aula B"
+msgstr ""
+
+#: l10n/trebbia.php:258
+msgid "Aula A"
+msgstr ""
+
+#: l10n/trebbia.php:261
+msgid "Aula D"
+msgstr ""
+
+#: l10n/trebbia.php:264
+msgid "Aula C"
+msgstr ""
+
+#: l10n/trebbia.php:267
+msgid "Spazio Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:270
+msgid "Spazio Restart"
+msgstr ""
+
+#: l10n/trebbia.php:273
+msgid "Primo piano"
+msgstr ""
+
+#: l10n/trebbia.php:276
+msgid "Laboratorio Turing"
+msgstr ""
+
+#: l10n/trebbia.php:279
+msgid "Laboratorio Dijkstra"
+msgstr ""
+
+#: l10n/trebbia.php:282
+msgid "Aula F"
+msgstr ""
+
+#: l10n/trebbia.php:285
+msgid "Laboratorio von Neumann"
+msgstr ""
+
+#: l10n/trebbia.php:288
+msgid "asd"
+msgstr ""
+
+#: l10n/trebbia.php:291
+msgid "PHP"
+msgstr ""
+
+#: l10n/trebbia.php:294
+msgid "JavaScript"
+msgstr ""
+
+#: l10n/trebbia.php:297
+msgid "Microsoft Windows"
+msgstr ""
+
+#: l10n/trebbia.php:300
+msgid "NodeJS"
+msgstr ""
+
+#: l10n/trebbia.php:303
+msgid "Apple"
+msgstr ""
+
+#: l10n/trebbia.php:306
+msgid "Java"
+msgstr ""
+
+#: l10n/trebbia.php:309
+msgid "C++"
+msgstr ""
+
+#: l10n/trebbia.php:312
+msgid "Ubuntu"
+msgstr ""
+
+#: l10n/trebbia.php:315
+msgid "GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:318
+msgid "Turbo Pascal"
+msgstr ""
+
+#: l10n/trebbia.php:321
+msgid "Software Libero"
+msgstr ""
+
+#: l10n/trebbia.php:324
+msgid "Debian"
+msgstr ""
+
+#: l10n/trebbia.php:327
+msgid "Inkscape"
+msgstr ""
+
+#: l10n/trebbia.php:330
+msgid "Adobe Illustrator"
+msgstr ""
+
+#: l10n/trebbia.php:333
+msgid "Immagini vettoriali"
+msgstr ""
+
+#: l10n/trebbia.php:336
+msgid "Insegnare"
+msgstr ""
+
+#: l10n/trebbia.php:339
+msgid "Recupero del RAEE"
+msgstr ""
+
+#: l10n/trebbia.php:342
+msgid "Blender"
+msgstr ""
+
+#: l10n/trebbia.php:345
+msgid "C"
+msgstr ""
+
+#: l10n/trebbia.php:351
+msgid "Embedded"
+msgstr ""
+
+#: l10n/trebbia.php:354
+msgid "Haskell"
+msgstr ""
+
+#: l10n/trebbia.php:357
+msgid "Qualcuno ha detto... software libero?"
+msgstr ""
+
+#: l10n/trebbia.php:360
+msgid ""
+"Studente di Ingegneria Informatica, appassionato di tante cose (forse "
+"troppe).\n"
+"\n"
+"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
+"avanzare per migliorare le risorse e la conoscenza di tutti.\n"
+"\n"
+"Mi è capitato di organizzare il Linux Day 2016. =P\n"
+"\n"
+"Suonatore di Floppy, appassionato di Dama e Retrocomputing."
+msgstr ""
+
+#: l10n/trebbia.php:369
+msgid ""
+"Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
+"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
+"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
+"it).\n"
+"\n"
+"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
+"2010."
+msgstr ""
+
+#: l10n/trebbia.php:374
+msgid ""
+"Ricercatore, Maker, Insegnante, Sviluppatore...\n"
+"Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
+"In realtà vuole salvare il mondo, ma non ditelo a nessuno."
+msgstr ""
+
+#: l10n/trebbia.php:379
+msgid ""
+"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
+"freelance."
+msgstr ""
+
+#: l10n/trebbia.php:382
+msgid ""
+"Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
+"Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
+"1999 con le prime schede StrongArm.\n"
+"\n"
+"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
+"ha fondato KOAN nel 1996, una software house specializzata in software "
+"embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
+"formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
+"è solitamente interessato a mescolare la Fisica con la Filosofia."
+msgstr ""
+
+#: l10n/trebbia.php:387
+msgid ""
+"Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
+"bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
+"pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano "
+"gli amplificatori operazionali, in altre occasioni canta a squarciagola con "
+"altre persone. Appassionato di vecchi computer e di elettronica analogica, "
+"si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una "
+"macchina da scrivere ed un pianoforte. Coordinatore del progetto open source "
+"FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due "
+"posti, soprattutto se a motore centrale.\n"
+"\n"
+"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
+"generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
+"su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
+"ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
+"dielettrica."
+msgstr ""
+
+#: l10n/trebbia.php:392
+msgid ""
+"Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
+"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
+"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
+"mese.\n"
+"\n"
+"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
+"altre schedine embedded, basi di elettronica, programmatore a tempo perso "
+"(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
+"mi ostacola)."
+msgstr ""
+
+#: l10n/trebbia.php:397
+msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
+msgstr ""
+
+#: l10n/trebbia.php:400
+msgid ""
+"Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
+"dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
+"Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
+"Digitale. Consulente informatico si occupa di system engineering."
+msgstr ""
+
+#: l10n/trebbia.php:403 l10n/trebbia.php:406
+msgid "Big Data System Architect e sysadmin."
+msgstr ""
+
+#: l10n/trebbia.php:409
+msgid ""
+"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
+"sicurezza informatica, full stack Java developer, Consigliere della "
+"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
+msgstr ""
+
+#: l10n/trebbia.php:412
+msgid ""
+"The trash king!\n"
+"\n"
+"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
+"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
+"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
+"aziendale.\n"
+"\n"
+"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
+"muoversi in tutti i campi della creatività: dal product design alla grafica, "
+"dall'interaction design alla sostenibilità."
+msgstr ""
+
+#: l10n/trebbia.php:419
+msgid ""
+"Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
+"conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
+"giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
+"e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
+"piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
+msgstr ""
+
+#: l10n/trebbia.php:422
+msgid ""
+"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
+"Dipartimento di Informatica di Torino.\n"
+"\n"
+"Cosa c'entro? Te lo dico subito in questa intervista:\n"
+"\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+"dipartimento/>"
+msgstr ""
+
+#: l10n/trebbia.php:429
+msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
+msgstr ""
+
+#: l10n/trebbia.php:432
+msgid ""
+"Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
+"\n"
+"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
+"scrivere in un antico linguaggio per incantare oggetti e materializzare "
+"oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
+"\n"
+"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
+"meglio la meravigliosa tecnologia intorno a noi.\n"
+"\n"
+"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi "
+"e per chi non legge mai i testi delle licenze."
+msgstr ""
+
+#: l10n/trebbia.php:441
+msgid ""
+"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
+"che neanche nel 1983 sarebbe stato un buon computer.\n"
+"\n"
+"Ora cerco di sviluppare il mio futuro libero... e tu?"
+msgstr ""
+
 #: 2016/includes/class-ActivityBox.php:34
 #, php-format
 msgid "da %s"
@@ -916,43 +1781,50 @@ msgid "%s: progetto a licenza %s"
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:97
+#: 2017/includes/class-DailyEventsTable.php:97
 msgid "asd! No."
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:120
+#: 2017/includes/class-DailyEventsTable.php:120
 #, php-format
 msgid "%d° ora"
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:142
+#: 2017/includes/class-DailyEventsTable.php:142
 #, php-format
 msgid "Talk %s"
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:147
+#: 2017/includes/class-DailyEventsTable.php:147
 #, php-format
 msgid "%s<br /> di %s."
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:152
+#: 2017/includes/class-DailyEventsTable.php:152
 msgid "Nessun talk pianificato."
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:185
+#: 2017/includes/class-DailyEventsTable.php:185
 msgid ", "
 msgstr ""
 
 #: 2016/includes/class-DailyEventsTable.php:187
+#: 2017/includes/class-DailyEventsTable.php:187
 #, php-format
 msgid "%s e %s"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:33
+#: 2016/includes/class-Footer.php:33 2017/includes/class-Footer.php:32
 #, php-format
 msgid "Torna a %s"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:50
+#: 2016/includes/class-Footer.php:50 2017/includes/class-Footer.php:49
 #, php-format
 msgid ""
 "Tutti i contenuti sono rilasciati sotto licenza di <strong>contenuto "
@@ -961,62 +1833,67 @@ msgid ""
 "si ricondivide sotto la medesima licenza."
 msgstr ""
 
-#: 2016/includes/class-Footer.php:59
+#: 2016/includes/class-Footer.php:59 2017/includes/class-Footer.php:58
 #, php-format
 msgid "Contattare all'indirizzo %s o al numero %s."
 msgstr ""
 
-#: 2016/includes/class-Footer.php:65
+#: 2016/includes/class-Footer.php:65 2017/includes/class-Footer.php:64
 #, php-format
 msgid "%s su Facebook"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:72
+#: 2016/includes/class-Footer.php:72 2017/includes/class-Footer.php:71
 #, php-format
 msgid "%s su Twitter"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:81
+#: 2016/includes/class-Footer.php:81 2017/includes/class-Footer.php:80
 msgid "Blog del Linux Day Torino"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:88
+#: 2016/includes/class-Footer.php:88 2017/includes/class-Footer.php:87
 msgid "Edizioni Passate"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:103 location[2]::location_name
-msgid "Dipartimento di Biotecnologie"
-msgstr ""
-
 #: 2016/includes/class-Footer.php:104 2016/includes/class-Footer.php:105
+#: 2017/includes/class-Footer.php:104 2017/includes/class-Footer.php:105
 msgid "Politecnico di Torino"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:106
+#: 2016/includes/class-Footer.php:106 2017/includes/class-Footer.php:106
 msgid "Cortile del Maglio"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:110
+#: 2016/includes/class-Footer.php:110 2017/includes/class-Footer.php:110
 msgid "Cascina Roccafranca"
 msgstr ""
 
+#: 2016/includes/class-Footer.php:115
+msgid "Lingua"
+msgstr ""
+
 #: 2016/includes/class-Footer.php:122
+msgid "Scegli"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:131
 #, php-format
 msgid "Pagina generata in %s secondi con %d query al database."
 msgstr ""
 
-#: 2016/includes/class-Footer.php:132
+#: 2016/includes/class-Footer.php:141
 msgid "<b>Alcuni</b> diritti riservati."
 msgstr ""
 
-#: 2016/includes/class-Footer.php:144
+#: 2016/includes/class-Footer.php:154
 msgid ""
 "Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
 "Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
 "regalare i tuoi dati a terzi!"
 msgstr ""
 
-#: 2016/includes/class-Header.php:60
+#: 2016/includes/class-Header.php:60 2017/includes/class-Header.php:50
 #, php-format
 msgid "%s - %s"
 msgstr ""
@@ -1034,681 +1911,12 @@ msgstr ""
 msgid "%s su %s"
 msgstr ""
 
-#: 2016/includes/functions.php:68
+#: 2016/includes/functions.php:68 2017/includes/functions.php:68
 msgid "È un 404! Pagina non trovata :("
 msgstr ""
 
-#: 2016/includes/functions.php:71
+#: 2016/includes/functions.php:71 2017/includes/functions.php:71
 msgid ""
 "Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di "
 "root <b>non</b> risolve la situazione!)"
-msgstr ""
-
-#: conference[2015]::conference_title
-msgid "LDTO15"
-msgstr ""
-
-#: conference[2017]::conference_title
-msgid "Linux Day Torino 2017"
-msgstr ""
-
-#: event[talk-base-1]::event_title
-msgid "Didattica del coding"
-msgstr ""
-
-#: event[talk-base-1]::event_description
-msgid ""
-"Le basi del coding sono fondamentali, come leggere e scrivere.\n"
-"Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
-"genitori?"
-msgstr ""
-
-#: event[talk-dev-1]::event_title
-msgid "Introduzione alla programmazione con JavaScript"
-msgstr ""
-
-#: event[talk-dev-1]::event_description
-msgid ""
-"Un viaggio nel magico mondo della programmazione con consigli pratici e "
-"tecnici per chi aspira a creare software e non solo subirlo."
-msgstr ""
-
-#: event[talk-sys-1]::event_title
-msgid "Non bisogna aver paura di IPv6"
-msgstr ""
-
-#: event[talk-sys-1]::event_description
-msgid ""
-"Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
-"potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
-"Linux."
-msgstr ""
-
-#: event[talk-misc-1]::event_title
-msgid "La tecnologia LoRa e le sue applicazioni IoT"
-msgstr ""
-
-#: event[talk-base-2]::event_title
-msgid "Rinascimento 2.0"
-msgstr ""
-
-#: event[talk-base-2]::event_description
-msgid ""
-"Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
-"leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
-"tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando "
-"in una nuova era."
-msgstr ""
-
-#: event[talk-base-3]::event_title
-msgid "Utilizzi di GNU/Linux"
-msgstr ""
-
-#: event[talk-base-3]::event_description
-msgid ""
-"Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
-"del software libero della vita di tutti i giorni. Si suggerisce di invitare "
-"il vostro classico conoscente scettico e/o fanboy (╯°□°)╯."
-msgstr ""
-
-#: event[talk-base-4]::event_title
-msgid "Linux al Comune di Torino"
-msgstr ""
-
-#: event[talk-dev-2]::event_title
-msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
-msgstr ""
-
-#: event[talk-dev-2]::event_description
-msgid ""
-"Lo Yocto Project è un progetto di collaborazione open source che fornisce "
-"modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
-"personalizzati per i prodotti embedded indipendenti dall'architettura "
-"hardware. Il progetto è stato creato nel 2010 come una collaborazione tra "
-"molti produttori di hardware, fornitori di sistemi operativi open-source e "
-"aziende di elettronica per portare un po' di ordine nel caos di sviluppo di "
-"Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di "
-"sviluppo Linux embedded completo con gli strumenti, i metadati e la "
-"documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette "
-"a disposizione sono potenti e facilmente generabili (compresi gli ambienti "
-"di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e "
-"permettono di realizzare e portare avanti progetti, senza causare la perdita "
-"delle ottimizzazioni e degli investimenti effettuati nel corso del fase di "
-"prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia "
-"da parte della comunità open source permettendo agli utenti di concentrarsi "
-"sulle caratteristiche e lo sviluppo del proprio prodotto."
-msgstr ""
-
-#: event[talk-dev-3]::event_title
-msgid "Dieci anni dietro a FidoCadJ"
-msgstr ""
-
-#: event[talk-dev-3]::event_description
-msgid ""
-"Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
-"io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
-"forum italiani."
-msgstr ""
-
-#: event[talk-dev-4]::event_title
-msgid "Un bot di Telegram con Python"
-msgstr ""
-
-#: event[talk-dev-4]::event_abstract
-msgid ""
-"Usare Python e la libreria Telepot per sviluppare un semplice bot su "
-"Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
-"piccolo, economico e parco in consumi."
-msgstr ""
-
-#: event[talk-dev-4]::event_description
-msgid ""
-"Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
-"connettività e tempo una breve dimostrazione."
-msgstr ""
-
-#: event[talk-sys-2]::event_title
-msgid "Docker: distribuiamo applicazioni"
-msgstr ""
-
-#: event[talk-sys-2]::event_description
-msgid ""
-"Una introduzione ai sistemi distribuiti tramite la gestione dei container "
-"realizzati con Docker.\n"
-"Una risposta alle domande: Docker a cosa serve? Come si installa? Come si "
-"gestisce?"
-msgstr ""
-
-#: event[talk-sys-4]::event_title
-msgid "Hadoop - BigData in streaming"
-msgstr ""
-
-#: event[talk-sys-4]::event_description
-msgid ""
-"Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
-"l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
-msgstr ""
-
-#: event[talk-sys-3]::event_title
-msgid "InfoSec. Istruzioni per l'uso."
-msgstr ""
-
-#: event[talk-sys-3]::event_description
-msgid ""
-"InfoSec → Information Security → Sicurezza delle informazioni.\n"
-"\n"
-"Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
-"maggiormente al sicuro la propria \"vita digitale\"."
-msgstr ""
-
-#: event[talk-misc-2]::event_title
-msgid "Sostenibilità e Open Culture all'Università"
-msgstr ""
-
-#: event[talk-misc-2]::event_abstract
-msgid ""
-"Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
-"Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
-"possano rigenerare le apparecchiature guaste, condividere informazioni e "
-"fornire alla società circostante apparecchiature elettroniche funzionanti "
-"gratuitamente."
-msgstr ""
-
-#: event[talk-misc-3]::event_title
-msgid "Wikidata: la base di conoscenza libera"
-msgstr ""
-
-#: event[talk-misc-4]::event_title skill[wiki]::skill_title
-msgid "Wikipedia"
-msgstr ""
-
-#: event[lip]::event_title
-msgid "LIP"
-msgstr ""
-
-#: event[lip]::event_subtitle conference[2015]::conference_title6
-msgid "Linux Installation Party"
-msgstr ""
-
-#: event[lip]::event_abstract
-msgid "Installazione di varie distribuzioni GNU/Linux."
-msgstr ""
-
-#: event[lip]::event_description
-msgid ""
-"Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
-"Gestito da volontari."
-msgstr ""
-
-#: event[coderdojo]::event_title conference[2015]::conference_title9
-msgid "Coderdojo"
-msgstr ""
-
-#: event[coderdojo]::event_abstract
-msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
-msgstr ""
-
-#: event[coderdojo]::event_description
-msgid ""
-"Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
-"deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
-"confronteranno con tematiche fondamentali, come il Software Libero e lo "
-"sviluppo Open Source. Entra a far parte della gang del Software Libero! "
-"=D<br>\n"
-"<br>\n"
-"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui "
-"per prenotare</a>.\n"
-"<br>\n"
-"<br>\n"
-"Un ringraziamento particolare ai due gruppi che hanno reso possibile "
-"quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
-msgstr ""
-
-#: event[gnu-linux-base]::event_title
-msgid "Lezione introduttiva corso GNU/Linux"
-msgstr ""
-
-#: event[gnu-linux-base]::event_description
-msgid ""
-"Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
-"Linux Day Torino.\n"
-"\n"
-"Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
-msgstr ""
-
-#: event[gnu-linux-base-installation]::event_title
-msgid "Installiamo insieme una distribuzione GNU/Linux"
-msgstr ""
-
-#: event[gnu-linux-base-installation]::event_description
-msgid ""
-"Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
-msgstr ""
-
-#: event[gnu-linux-base-debian-maintenance]::event_title
-msgid "Manutenzione di un sistema basato su Debian"
-msgstr ""
-
-#: event[gnu-linux-base-debian-maintenance]::event_description
-msgid ""
-"La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
-"\n"
-"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
-msgstr ""
-
-#: event[gnu-linux-base-command-line]::event_title
-msgid "I comandi di base di un sistema GNU/Linux"
-msgstr ""
-
-#: event[gnu-linux-base-command-line]::event_description
-msgid ""
-"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
-"parti del tuo sistema GNU/Linux.\n"
-"\n"
-"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
-msgstr ""
-
-#: event[gnu-linux-base-sysadmin]::event_title
-msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
-msgstr ""
-
-#: event[gnu-linux-base-sysadmin]::event_description
-msgid ""
-"Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
-"amministrarli al meglio.\n"
-"\n"
-"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
-"Torino."
-msgstr ""
-
-#: event[gnu-linux-base-award-ceremony]::event_title
-msgid "Consegna degli attestati"
-msgstr ""
-
-#: event[gnu-linux-base-award-ceremony]::event_description
-msgid ""
-"I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
-"\n"
-"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
-"comitato Linux Day Torino."
-msgstr ""
-
-#: location[1]::location_name
-msgid "Dipartimento di Informatica"
-msgstr ""
-
-#: location[1]::location_address
-msgid "Torino, Via Pessinetto 12"
-msgstr ""
-
-#: location[1]::location_note
-msgid ""
-"Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
-"Amedeo di Savoia / Dipartimento di Informatica*.\n"
-"\n"
-"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
-"°**59** e n°**59/** scendendo alla fermata *Svizzera*."
-msgstr ""
-
-#: location[2]::location_address
-msgid "Via Nizza 52, Torino"
-msgstr ""
-
-#: conference[2016]::conference_title0
-msgid ""
-"La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
-"Biotecnologie."
-msgstr ""
-
-#: conference[2016]::conference_title3
-msgid "Base"
-msgstr ""
-
-#: conference[2016]::conference_title6
-msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
-msgstr ""
-
-#: conference[2016]::conference_title9
-msgid "Dev"
-msgstr ""
-
-#: track[dev]::track_label
-msgid "Area sviluppatori"
-msgstr ""
-
-#: track[sys]::track_name
-msgid "Sys"
-msgstr ""
-
-#: track[sys]::track_label
-msgid "Area sistemisti"
-msgstr ""
-
-#: track[misc]::track_name
-msgid "Misc"
-msgstr ""
-
-#: track[misc]::track_label
-msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
-msgstr ""
-
-#: track[altro]::track_name
-msgid "Altro"
-msgstr ""
-
-#: conference[2015]::conference_title0
-msgid "Di tutto un po'"
-msgstr ""
-
-#: conference[2015]::conference_title3
-msgid "Talk"
-msgstr ""
-
-#: chapter[learning]::chapter_name
-msgid "Corso"
-msgstr ""
-
-#: room[a]::room_name
-msgid "Aula B"
-msgstr ""
-
-#: room[b]::room_name
-msgid "Aula A"
-msgstr ""
-
-#: room[c]::room_name
-msgid "Aula D"
-msgstr ""
-
-#: room[d]::room_name
-msgid "Aula C"
-msgstr ""
-
-#: room[lab-1]::room_name
-msgid "Spazio Coderdojo"
-msgstr ""
-
-#: conference[2017]::conference_title0
-msgid "Spazio Restart"
-msgstr ""
-
-#: conference[2017]::conference_title3
-msgid "Primo piano"
-msgstr ""
-
-#: conference[2017]::conference_title6
-msgid "Laboratorio Turing"
-msgstr ""
-
-#: conference[2017]::conference_title9
-msgid "Laboratorio Dijkstra"
-msgstr ""
-
-#: room[f]::room_name
-msgid "Aula F"
-msgstr ""
-
-#: room[lab-von-neumann]::room_name
-msgid "Laboratorio von Neumann"
-msgstr ""
-
-#: skill[asd]::skill_title
-msgid "asd"
-msgstr ""
-
-#: skill[php]::skill_title
-msgid "PHP"
-msgstr ""
-
-#: skill[js]::skill_title
-msgid "JavaScript"
-msgstr ""
-
-#: skill[microsoft-windows]::skill_title
-msgid "Microsoft Windows"
-msgstr ""
-
-#: event[talk-base-1]::event_title0
-msgid "NodeJS"
-msgstr ""
-
-#: event[talk-base-1]::event_title3
-msgid "Apple"
-msgstr ""
-
-#: event[talk-base-1]::event_title6
-msgid "Java"
-msgstr ""
-
-#: event[talk-base-1]::event_title9
-msgid "C++"
-msgstr ""
-
-#: skill[ubuntu]::skill_title
-msgid "Ubuntu"
-msgstr ""
-
-#: skill[gnu-linux]::skill_title
-msgid "GNU/Linux"
-msgstr ""
-
-#: skill[turbo-pascal]::skill_title
-msgid "Turbo Pascal"
-msgstr ""
-
-#: skill[free-software]::skill_title
-msgid "Software Libero"
-msgstr ""
-
-#: skill[debian]::skill_title
-msgid "Debian"
-msgstr ""
-
-#: skill[inkscape]::skill_title
-msgid "Inkscape"
-msgstr ""
-
-#: event[talk-base-1]::event_description0
-msgid "Adobe Illustrator"
-msgstr ""
-
-#: event[talk-base-1]::event_description3
-msgid "Immagini vettoriali"
-msgstr ""
-
-#: event[talk-base-1]::event_description6
-msgid "Insegnare"
-msgstr ""
-
-#: event[talk-base-1]::event_description9
-msgid "Recupero del RAEE"
-msgstr ""
-
-#: skill[blender]::skill_title
-msgid "Blender"
-msgstr ""
-
-#: skill[c]::skill_title
-msgid "C"
-msgstr ""
-
-#: skill[embedded]::skill_title
-msgid "Embedded"
-msgstr ""
-
-#: skill[haskell]::skill_title
-msgid "Haskell"
-msgstr ""
-
-#: user[boz]::user_bio
-msgid "Qualcuno ha detto... software libero?"
-msgstr ""
-
-#: user[oirasor]::user_bio
-msgid ""
-"Studente di Ingegneria Informatica, appassionato di tante cose (forse "
-"troppe).\n"
-"\n"
-"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
-"avanzare per migliorare le risorse e la conoscenza di tutti.\n"
-"\n"
-"Mi è capitato di organizzare il Linux Day 2016. =P\n"
-"\n"
-"Suonatore di Floppy, appassionato di Dama e Retrocomputing."
-msgstr ""
-
-#: user[dario]::user_bio
-msgid ""
-"Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
-"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
-"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
-"it).\n"
-"\n"
-"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
-"2010."
-msgstr ""
-
-#: event[talk-dev-1]::event_title4
-msgid ""
-"Ricercatore, Maker, Insegnante, Sviluppatore...\n"
-"Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
-"In realtà vuole salvare il mondo, ma non ditelo a nessuno."
-msgstr ""
-
-#: event[talk-dev-1]::event_title9
-msgid ""
-"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
-"freelance."
-msgstr ""
-
-#: user[marco.cavallini]::user_bio
-msgid ""
-"Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
-"Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
-"1999 con le prime schede StrongArm.\n"
-"\n"
-"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
-"ha fondato KOAN nel 1996, una software house specializzata in software "
-"embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
-"formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
-"è solitamente interessato a mescolare la Fisica con la Filosofia."
-msgstr ""
-
-#: user[davide]::user_bio
-msgid ""
-"Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
-"bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
-"pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano "
-"gli amplificatori operazionali, in altre occasioni canta a squarciagola con "
-"altre persone. Appassionato di vecchi computer e di elettronica analogica, "
-"si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una "
-"macchina da scrivere ed un pianoforte. Coordinatore del progetto open source "
-"FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due "
-"posti, soprattutto se a motore centrale.\n"
-"\n"
-"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
-"generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
-"su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
-"ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
-"dielettrica."
-msgstr ""
-
-#: user[francesco]::user_bio
-msgid ""
-"Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
-"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
-"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
-"mese.\n"
-"\n"
-"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
-"altre schedine embedded, basi di elettronica, programmatore a tempo perso "
-"(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
-"mi ostacola)."
-msgstr ""
-
-#: user[massimo]::user_bio
-msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
-msgstr ""
-
-#: event[talk-dev-1]::event_description0
-msgid ""
-"Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
-"dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
-"Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
-"Digitale. Consulente informatico si occupa di system engineering."
-msgstr ""
-
-#: event[talk-dev-1]::event_description3 event[talk-dev-1]::event_description6
-msgid "Big Data System Architect e sysadmin."
-msgstr ""
-
-#: event[talk-dev-1]::event_description9
-msgid ""
-"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
-"sicurezza informatica, full stack Java developer, Consigliere della "
-"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
-msgstr ""
-
-#: user[marco.signoretto]::user_bio
-msgid ""
-"The trash king!\n"
-"\n"
-"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
-"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
-"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
-"aziendale.\n"
-"\n"
-"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
-"muoversi in tutti i campi della creatività: dal product design alla grafica, "
-"dall'interaction design alla sostenibilità."
-msgstr ""
-
-#: user[alessio]::user_bio
-msgid ""
-"Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
-"conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
-"giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
-"e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
-"piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
-msgstr ""
-
-#: user[mario.lacaj]::user_bio
-msgid ""
-"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
-"Dipartimento di Informatica di Torino.\n"
-"\n"
-"Cosa c'entro? Te lo dico subito in questa intervista:\n"
-"\n"
-"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
-"dipartimento/>"
-msgstr ""
-
-#: user[madbob]::user_bio
-msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
-msgstr ""
-
-#: event[talk-sys-1]::event_title2
-msgid ""
-"Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
-"\n"
-"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
-"scrivere in un antico linguaggio per incantare oggetti e materializzare "
-"oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
-"\n"
-"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
-"meglio la meravigliosa tecnologia intorno a noi.\n"
-"\n"
-"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi "
-"e per chi non legge mai i testi delle licenze."
-msgstr ""
-
-#: user[tinytanic]::user_bio
-msgid ""
-"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
-"che neanche nel 1983 sarebbe stato un buon computer.\n"
-"\n"
-"Ora cerco di sviluppare il mio futuro libero... e tu?"
 msgstr ""
