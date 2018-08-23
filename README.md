@@ -93,14 +93,12 @@ Il sito effettua content negotiation controllando la lingua accettata dal browse
 Copiare il template GNU Gettext `2016/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.utf8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./2016/load.php` e rieffettuare i passi della sezione [multilingua](#multilingua).
 
 ## Backend
-Per poter accedere al backend occorre generare l'hash della password nel database (`user`.`user_password`). Il nome utente sara il proprio `user_uid`.
 
-Per generare l'hash della password conviene abilitare momentaneamente queste due opzioni nel file `/load.php`:
+Per poter accedere al backend occorre registrarsi:
 
-    define('DEBUG', 1);
-    define('SHOW_EVERY_SQL', 1);
+	./cli/add-user.php --uid=mario.rossi --role=admin --pwd=password
 
-In questo modo, una volta effettuato il login da `2016/login.php` specificando una password inventata, si otterrà l'hash da inserire nel database.
+Effettuare poi il login nella pagina `2016/login.php`.
 
 ## Esportazione database
 **Nota**: a differenza del codice sorgente il database è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
@@ -120,7 +118,7 @@ In ogni caso:
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
 
 ## Licenza
-Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](LICENSE.md). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino.
+Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](LICENSE.md). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino, ed ad alcuni temi grafici degli anni 2015 e precedenti.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
