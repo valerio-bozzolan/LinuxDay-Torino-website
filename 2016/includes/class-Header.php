@@ -23,19 +23,21 @@ class Header {
 	/**
 	 * Spawn the header
 	 *
-	 * @param $menu_uid string Menu entry UID (if any)
+	 * @param $menu_uid string Menu entry UID (if any) or page title
 	 * @param $args array Header arguments
 	 */
 	static function spawn( $menu_uid = null, $args = [] ) {
 
-		$menu = get_menu_entry( $menu_uid );
+		$menu = $menu_uid
+			? get_menu_entry( $menu_uid )
+			: null;
 
 		$args = array_replace( [
 			'show-title'  => true,
 			'nav-title'   => SITE_NAME_SHORT,
 			'head-title'  => null,
-			'title'       => $menu->name,
-			'url'         => $menu->url,
+			'title'       => $menu ? $menu->name : null,
+			'url'         => $menu ? $menu->url  : null,
 			'not-found'   => false,
 			'user-navbar' => true,
 			'container'   => true,

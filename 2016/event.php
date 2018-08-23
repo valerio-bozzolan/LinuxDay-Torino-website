@@ -64,7 +64,7 @@ if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvaila
 	}
 }
 
-Header::spawn('event', $args);
+Header::spawn( null, $args );
 ?>
 	<?php if( $event->isEventEditable() ): ?>
 	<p><?php echo HTML::a(

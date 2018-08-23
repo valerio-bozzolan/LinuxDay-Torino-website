@@ -40,7 +40,7 @@ $user or die_with_404();
 
 FORCE_PERMALINK && $user->forceUserPermalink();
 
-Header::spawn('user', [
+Header::spawn( null, [
 	'title' => $user->getUserFullname(),
 	'url'   => $user->getUserURL(),
 	'og'    => [

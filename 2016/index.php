@@ -36,7 +36,7 @@ inject_in_module('header', function() {
 	echo "\n\t<noscript><style>#map {display: none}</style></noscript>";
 } );
 
-Header::spawn('conference', [
+Header::spawn( null, [
 	'show-title' => false,
 	'head-title' => $s = $conference->getConferenceTitle(),
 	'title'      => $s,

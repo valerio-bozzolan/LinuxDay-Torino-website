@@ -61,16 +61,10 @@ register_js('scrollfire',          STATIC_PATH . '/scrollfire.js');
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries
 add_menu_entries( [
-	new MenuEntry('user',        null, null, 'hidden'),
-	new MenuEntry('event',       null, null, 'hidden'),
-	new MenuEntry('conference',  null, null, 'hidden'),
-	new MenuEntry('404',         null, null, 'hidden'),
-
 	new MenuEntry('home',    CURRENT_CONFERENCE_URL . _,               __("Benvenuti")             ),
 	new MenuEntry('partner', CURRENT_CONFERENCE_URL . '/partner.php',  __("Partner")               ),
 	new MenuEntry('photos',  CURRENT_CONFERENCE_URL . '/photos.php',   __("Fotografie")            ),
 	new MenuEntry('credits', CURRENT_CONFERENCE_URL . '/credits.php',  __("Crediti")               ),
-	new MenuEntry('api',     CURRENT_CONFERENCE_URL . '/api',          __("API"),          'hidden')
 ] );
 
 define('DEFAULT_IMAGE', STATIC_PATH . '/gnu-linux-on-black.png');
