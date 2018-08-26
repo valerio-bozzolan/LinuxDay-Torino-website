@@ -101,7 +101,7 @@ Per poter accedere al backend occorre registrarsi:
 Effettuare poi il login nella pagina `2016/login.php`.
 
 ## Esportazione database
-**Nota**: a differenza del codice sorgente il database è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
+**Nota**: a differenza del codice sorgente il database in questo repository è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
 
 In ogni caso:
 
@@ -113,6 +113,10 @@ In ogni caso:
 
     # Stripping passwords (now are SHA1 salted)
     sed "s/'[a-f0-9]\{40\}'/NULL/g" -i database-schema.sql
+
+## Aggiornamento del database
+
+    ./cli/upgrade.php
 
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
