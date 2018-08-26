@@ -251,6 +251,11 @@ class User extends Sessionuser {
 	const NAME = 'user_name';
 
 	/**
+	 * Aristocratic title column
+	 */
+	const ARISTOCRATIC_TITLE = 'user_title';
+
+	/**
 	 * ID column
 	 */
 	const SURNAME = 'user_surname';
