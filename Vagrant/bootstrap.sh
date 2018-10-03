@@ -103,9 +103,6 @@ php "$WWW"/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
-# disable an unuseful default Apache configuration that we do not use
-a2disconf --quiet serve-cgi-bin
-
 service apache2 restart
 
 # add an admin user
