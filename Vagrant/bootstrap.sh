@@ -37,11 +37,6 @@ fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
 
-#if [ ! -h "$WWW" ]; then
-#	rm --recursive                     "$WWW"
-#	ln --symbolic --verbose "$PROJECT" "$WWW"
-#fi
-
 cp "$PROJECT/htaccess.txt" "$WWW/.htaccess"
 
 mysql <<EOF
