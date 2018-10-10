@@ -127,21 +127,40 @@ systemctl unmask nginx
 
 cat > /etc/nginx/sites-available/ldto.conf <<EOF
 server {
-	listen      8080 default_server;
-	listen [::]:8080 default_server;
-	root $WWW;
-	index index.php index.html;
+	listen      8008 default_server;
+	listen [::]:8008 default_server;
 	server_name localhost;
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
+	root /vagrant;
+	index index.php;
+
+	location /javascript {
+		alias /usr/share/javascript;
 	}
+
 	location ~ \.php$ {
 		include snippets/fastcgi-php.conf;
+		include fastcgi_params;
 
-		# With php-cgi (or other tcp sockets):
-		fastcgi_pass 127.0.0.1:9000;
+		# tcp socket
+		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+	}
+
+	location / {
+		try_files \$uri \$uri/ @rewrite;
+	}
+
+	location @rewrite {
+		# xml API
+		rewrite "^/xml/?$" /api/tagliatella.php last;
+
+		# user page
+		rewrite "^/([0-9]{4})/user/([0-9a-z\.-]+)/?$" /\$1/user.php?conference=\$1&uid=\$2 last;
+
+		# event page
+		rewrite "^/([0-9]{4})/([\w-.]+)/([\w-.]+)/?$" /\$1/event.php?conference=\$1&chapter=\$2&uid=\$3 last;
+		#           \          \         \-->event_uid
+		#            \          \----------->chapter_uid
+		#             \--------------------->conference_uid
 	}
 }
 EOF
