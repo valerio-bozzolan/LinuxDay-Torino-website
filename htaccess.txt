@@ -35,6 +35,3 @@ RewriteRule ^([0-9]{4})/(.+)/([0-9a-z\.-]+)/?$ /$1/event.php?conference=$1&chapt
 #             \          \    \-->event_uid
 #              \          \------>chapter_uid
 #               \---------------->conference_uid
-
-# N.B. It's a real folder, and Apache already redirects to "folder/" it it sees "folder"
-RewriteRule ^([0-9]{4})/$ /$1/index.php?uid=$1 [L,QSA]
