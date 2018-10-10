@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Homepage
-# Copyright (C) 2016, 2017 Linux Day Torino
+# Linux Day - Homepage
+# Copyright (C) 2016, 2017, 2018 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -9,11 +9,13 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-// #whatelse
-header("Location: /2017");
+require 'load.php';
+
+// redirect to latest conference with a temporary redirect
+http_redirect( _ . LATEST_CONFERENCE_UID, 307 );
