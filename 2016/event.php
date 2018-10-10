@@ -9,15 +9,15 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 require 'load.php';
 
-$conference = FullConference::factoryFromUID( @ $_GET['conference'] )
+$conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
 $conference or die_with_404();
@@ -51,7 +51,7 @@ $subscribed = null;
 if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvailable() ) {
 	$email = $_POST['subscription_email'];
 
-	if( filter_var($email, FILTER_VALIDATE_EMAIL)  ) {
+	if( filter_var($email, FILTER_VALIDATE_EMAIL) ) {
 		$event->addSubscription($email);
 
 		$args['alert']      = __("Grazie per esserti iscritto.");

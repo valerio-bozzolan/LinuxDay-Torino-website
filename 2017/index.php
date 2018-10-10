@@ -17,7 +17,7 @@
 
 require 'load.php';
 
-$conference = FullConference::factoryFromUID( @ $_GET['uid'] )
+$conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
 $conference or die_with_404();
