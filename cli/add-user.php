@@ -29,6 +29,7 @@ $opts = getopt( 'h', [
 	'uid:',
 	'role:',
 	'pwd:',
+	'force::',
 	'help',
 ] );
 
@@ -39,24 +40,36 @@ if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ], $opts[ 'role' ] ) || isset( $opts[ 
 	echo "    --uid=UID          user UID\n";
 	echo "    --role=ROLE        user role (user|admin)\n";
 	echo "    --pwd=PASSWORD     password\n";
+	echo "    --force            update the user password if exists\n";
 	echo " -h --help             show this help and exit\n";
 	exit( 0 );
 }
 
 // look for existing user
 $user = User::factoryFromUID( $opts[ 'uid' ] )
-	->select( 1 )
+	->select( User::ID )
 	->queryRow();
 
-if( $user ) {
+if( $user && ! isset( $opts[ 'force' ] ) ) {
 	printf( "User %s already exist\n", $opts[ 'uid' ] );
 	exit( 1 );
 }
 
 $pwd = User::encryptPassword( $opts[ 'pwd' ] );
-insert_row( User::T, [
-	new DBCol( User::UID,       $opts[ 'uid'  ], 's' ),
-	new DBCol( User::ROLE,      $opts[ 'role' ], 's' ),
-	new DBCol( User::PASSWORD,  $pwd,            's' ),
-	new DBCol( User::IS_ACTIVE, 1,               'd' ),
-] );
+
+if( $user ) {
+	query_update( User::T, [
+		new DBCol( User::PASSWORD,  $pwd,            's' ),
+	], sprintf(
+		'%s = %d',
+		User::ID,
+		$user->getUserID()
+	) );
+} else {
+	insert_row( User::T, [
+		new DBCol( User::UID,       $opts[ 'uid'  ], 's' ),
+		new DBCol( User::ROLE,      $opts[ 'role' ], 's' ),
+		new DBCol( User::PASSWORD,  $pwd,            's' ),
+		new DBCol( User::IS_ACTIVE, 1,               'd' ),
+	] );
+}
