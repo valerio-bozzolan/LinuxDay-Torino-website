@@ -4,7 +4,11 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-WELCOME=http://localhost:8080
+PORT_APACHE=8080
+PORT_NGINX=8008
+DOMAIN=localhost
+WELCOME_APACHE=http://$DOMAIN:$PORT_APACHE
+WELCOME_NGINX=http://$DOMAIN:$PORT_NGINX
 PROJECT=/vagrant
 WWW="$PROJECT"
 DB_NAME=ldto
@@ -67,7 +71,7 @@ EOF
 cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
 <VirtualHost *:80>
 	ServerName  ldto
-	ServerAlias localhost 127.0.0.1
+	ServerAlias $DOMAIN 127.0.0.1
 
 	php_admin_flag  display_errors         1
 	php_admin_flag  display_startup_errors 1
@@ -100,11 +104,58 @@ cd -
 
 service apache2 restart
 
-# add an admin user
-"$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin
+# add an admin user (or update its password)
+"$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin --force
 
-echo "End provision: $WELCOME"
-echo "Login:         $WELCOME/2016/login.php"
+##############################################
+# now as surplus we add an nginx environment #
+##############################################
+
+# avoid nginx to be started just after installation
+systemctl mask nginx
+
+# install nginx and it's php binary
+apt-get install --yes \
+	nginx-light \
+	php-fpm
+
+# remove the default site that listens to :80
+rm --force /etc/nginx/sites-enabled/default
+
+# allow nginx to be started and start it
+systemctl unmask nginx
+
+cat > /etc/nginx/sites-available/ldto.conf <<EOF
+server {
+	listen      8080 default_server;
+	listen [::]:8080 default_server;
+	root $WWW;
+	index index.php index.html;
+	server_name localhost;
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+
+		# With php-cgi (or other tcp sockets):
+		fastcgi_pass 127.0.0.1:9000;
+	}
+}
+EOF
+
+# enable the website
+ln --symbolic --force ../sites-available/ldto.conf /etc/nginx/sites-enabled/ldto.conf
+
+# start nginx
+systemctl start nginx
+
+echo "End provision: $WELCOME_APACHE (apache2)"
+echo "               $WELCOME_NGINX  (nginx)"
+echo "Login:         $WELCOME_APACHE/2016/login.php (apache)"
+echo "               $WELCOME_NGINX/2016/login.php  (nginx)"
 echo
 echo "Admin uid:     admin"
 echo "      pwd:     admin"
