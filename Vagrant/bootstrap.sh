@@ -41,9 +41,6 @@ fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
 
-# copy a default apache htaccess
-cp "$PROJECT/documentation/apache/htaccess.txt" "$WWW/.htaccess"
-
 mysql <<EOF
 DROP DATABASE IF EXISTS \`$DB_NAME\`;
 CREATE DATABASE \`$DB_NAME\`;
@@ -125,9 +122,9 @@ ln --symbolic --force ../sites-available/ldto.conf /etc/nginx/sites-enabled/ldto
 systemctl start nginx
 
 echo "End provision: $WELCOME_APACHE (apache2)"
-echo "               $WELCOME_NGINX  (nginx)"
+echo "               $WELCOME_NGINX (nginx)"
 echo "Login:         $WELCOME_APACHE/2016/login.php (apache)"
-echo "               $WELCOME_NGINX/2016/login.php  (nginx)"
+echo "               $WELCOME_NGINX/2016/login.php (nginx)"
 echo
 echo "Admin uid:     admin"
 echo "      pwd:     admin"
