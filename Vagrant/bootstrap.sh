@@ -68,27 +68,8 @@ define('CONTACT_PHONE', '555-555-555');
 require '$BOZ_PHP/load.php';
 EOF
 
-cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
-<VirtualHost *:80>
-	ServerName  ldto
-	ServerAlias $DOMAIN 127.0.0.1
-
-	php_admin_flag  display_errors         1
-	php_admin_flag  display_startup_errors 1
-	php_admin_flag  html_errors            1
-	php_admin_value error_reporting       -1
-
-	LogLevel info
-
-	DocumentRoot $WWW
-
-	<Directory $PROJECT>
-		Options Indexes FollowSymLinks
-		AllowOverride All
-		Require all granted
-	</Directory>
-</VirtualHost>
-EOF
+# copy apache configuration
+cp "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-enabled/000-default.conf
 
 # Patch for php-libmarkdown
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
@@ -125,45 +106,8 @@ rm --force /etc/nginx/sites-enabled/default
 # allow nginx to be started and start it
 systemctl unmask nginx
 
-cat > /etc/nginx/sites-available/ldto.conf <<EOF
-server {
-	listen      8008 default_server;
-	listen [::]:8008 default_server;
-	server_name localhost;
-	root /vagrant;
-	index index.php;
-
-	location /javascript {
-		alias /usr/share/javascript;
-	}
-
-	location ~ \.php$ {
-		include snippets/fastcgi-php.conf;
-		include fastcgi_params;
-
-		# tcp socket
-		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-	}
-
-	location / {
-		try_files \$uri \$uri/ @rewrite;
-	}
-
-	location @rewrite {
-		# xml API
-		rewrite "^/xml/?$" /api/tagliatella.php last;
-
-		# user page
-		rewrite "^/([0-9]{4})/user/([0-9a-z\.-]+)/?$" /\$1/user.php?conference=\$1&uid=\$2 last;
-
-		# event page
-		rewrite "^/([0-9]{4})/([\w-.]+)/([\w-.]+)/?$" /\$1/event.php?conference=\$1&chapter=\$2&uid=\$3 last;
-		#           \          \         \-->event_uid
-		#            \          \----------->chapter_uid
-		#             \--------------------->conference_uid
-	}
-}
-EOF
+# copy nginx configuration
+cp "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/ldto.conf
 
 # enable the website
 ln --symbolic --force ../sites-available/ldto.conf /etc/nginx/sites-enabled/ldto.conf
