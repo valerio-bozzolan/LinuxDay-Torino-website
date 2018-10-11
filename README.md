@@ -40,7 +40,7 @@ E ricordarsi di aggiornare la relativa costante:
     define('ROOT', '/ldto');
 
 ### Database
-Creare un database e importare `database-schema.sql`.
+Creare un database e importare `documentation/database/database-schema.sql`.
 
 Creare il file `load.php` (vedere l'esempio `load-example.php`) inserendovi le credenziali del database.
 

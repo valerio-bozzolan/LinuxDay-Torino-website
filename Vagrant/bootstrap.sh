@@ -51,7 +51,7 @@ GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$D
 FLUSH PRIVILEGES;
 EOF
 
-cat "$PROJECT/database-schema.sql" | mysql --user=$DB_USER --password=$DB_PASSWORD "$DB_NAME"
+cat "$PROJECT/documentation/database/database-schema.sql" | mysql --user=$DB_USER --password=$DB_PASSWORD "$DB_NAME"
 
 cat > "$WWW/load.php" <<EOF
 <?php
