@@ -41,7 +41,8 @@ fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
 
-cp "$PROJECT/htaccess.txt" "$WWW/.htaccess"
+# copy a default apache htaccess
+cp "$PROJECT/documentation/apache/htaccess.txt" "$WWW/.htaccess"
 
 mysql <<EOF
 DROP DATABASE IF EXISTS \`$DB_NAME\`;
