@@ -68,14 +68,21 @@ define('CONTACT_PHONE', '555-555-555');
 require '$BOZ_PHP/load.php';
 EOF
 
-# copy apache configuration
-cp "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-enabled/000-default.conf
+# disable the default apache site
+a2dissite --quiet 000-default
+
+# copy apache configuration for ldto site
+cp "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/ldto.conf
 
 # Patch for php-libmarkdown
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
 sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php/markdown.php
 
+# enable apache mod_rewrite
 a2enmod --quiet rewrite
+
+# enable ldto apache site
+a2ensite --quiet ldto
 
 # GNU Gettext workflow
 cd  "$WWW"
