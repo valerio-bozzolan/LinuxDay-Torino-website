@@ -379,7 +379,7 @@ Header::spawn( null, [
 
 				<!--
 				<p><?php echo HTML::a(
-					CONFERENCE . '/partner.php',
+					'./partner.php',
 					__("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(
 						__("Partner %s"),
