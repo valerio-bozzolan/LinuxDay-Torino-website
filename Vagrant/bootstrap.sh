@@ -66,6 +66,7 @@ define('ROOT', '');
 define('DB_TIMEZONE', 'Europe/Rome');
 define('CONTACT_EMAIL', 'asd@asd.asd');
 define('CONTACT_PHONE', '555-555-555');
+define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
 require '$BOZ_PHP/load.php';
 EOF
 

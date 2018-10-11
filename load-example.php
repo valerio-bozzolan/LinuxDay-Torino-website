@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Example Boz-PHP configuration file
-# Copyright (C) 2016 Valerio Bozzolan
+# Linux Day - Example Boz-PHP configuration file
+# Copyright (C) 2016, 2018 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -40,11 +40,14 @@ define('ABSPATH', __DIR__ );
 // E.g. '/linux-day'
 define('ROOT', '');
 
-// User for events
+// used for events
 define('DB_TIMEZONE', 'Europe/Rome');
 
 define('CONTACT_EMAIL',  '');
 define('CONTACT_PHONE',  '');
 
-// Path to Boz-PHP/load.php
+// which file should be loaded after boz-php
+define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
+
+// load boz-php
 require '/usr/share/boz-php-another-php-framework/load.php';
