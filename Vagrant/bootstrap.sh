@@ -48,7 +48,7 @@ GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$D
 FLUSH PRIVILEGES;
 EOF
 
-cat "$PROJECT/documentation/database/database-schema.sql" | mysql --user=$DB_USER --password=$DB_PASSWORD "$DB_NAME"
+mysql --user=$DB_USER --password=$DB_PASSWORD "$DB_NAME" < "$PROJECT/documentation/database/database-schema.sql"
 
 cat > "$WWW/load.php" <<EOF
 <?php
@@ -71,7 +71,7 @@ EOF
 a2dissite --quiet 000-default
 
 # copy apache configuration for ldto site
-cp "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/ldto.conf
+ln --symbolic --force "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/ldto.conf
 
 # Patch for php-libmarkdown
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
@@ -89,7 +89,8 @@ php "$WWW"/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
-service apache2 restart
+# restart apache
+systemctl restart apache2
 
 # add an admin user (or update its password)
 "$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin --force
@@ -113,7 +114,7 @@ rm --force /etc/nginx/sites-enabled/default
 systemctl unmask nginx
 
 # copy nginx configuration
-cp "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/ldto.conf
+ln --symbolic --force "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/ldto.conf
 
 # enable the website
 ln --symbolic --force ../sites-available/ldto.conf /etc/nginx/sites-enabled/ldto.conf
