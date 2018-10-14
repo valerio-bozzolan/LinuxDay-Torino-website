@@ -57,8 +57,8 @@ class Footer {
 				) ?></p>
 				<p class="white-text"><?php printf(
 					__("Contattare all'indirizzo %s o al numero %s."),
-					HTML::a('mailto:' . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text hoverable'),
-					HTML::a('tel:+39' . CONTACT_PHONE, CONTACT_PHONE, null, 'white-text hoverable', 'target="_blank"')
+					HTML::a('mailto:'                     . CONTACT_EMAIL, CONTACT_EMAIL, null, 'white-text hoverable'),
+					HTML::a('tel:' . CONTACT_PHONE_PREFIX . CONTACT_PHONE, CONTACT_PHONE, null, 'white-text hoverable', 'target="_blank"')
 				) ?></p>
 				<p class="ld-social valign-wrapper">
 					<a class="hoverable" href="https://facebook.com/LinuxDayTorino" target="_blank" title="<?php printf(

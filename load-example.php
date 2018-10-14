@@ -43,8 +43,10 @@ define('ROOT', '');
 // used for events
 define('DB_TIMEZONE', 'Europe/Rome');
 
-define('CONTACT_EMAIL',  '');
-define('CONTACT_PHONE',  '');
+// contact informations
+define('CONTACT_EMAIL',        'asd@asd.asd'    );
+define('CONTACT_PHONE',        '555-55-55-55'   );
+define('CONTACT_PHONE_PREFIX', '+39'            );
 
 // which file should be loaded after boz-php
 define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
