@@ -163,7 +163,7 @@ class Header {
 <body>
 	<nav>
 		<div class="nav-wrapper purple darken-4">
-			<a class="brand-logo" href="<?php echo ROOT . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
+			<a class="brand-logo" href="<?php echo CURRENT_CONFERENCE_PATH . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
 				<img src="<?php echo STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
