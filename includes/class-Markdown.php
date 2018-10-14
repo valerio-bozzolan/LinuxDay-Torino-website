@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Markdown autoloader
-# Copyright (C) 2016 Valerio Bozzolan
+# Copyright (C) 2016, 2018 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -9,13 +9,16 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-require LIBMARKDOWN_PATH;
+include LIBMARKDOWN_PATH;
+
+file_exists( LIBMARKDOWN_PATH ) or
+	error_die( 'please install php-markdown package or define a different LIBMARKDOWN_PATH into your /load.php' );
 
 class Markdown {
 	static function parse($s, $args = []) {
