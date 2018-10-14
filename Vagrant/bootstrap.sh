@@ -41,6 +41,7 @@ fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
 
+# create an empty database
 mysql <<EOF
 DROP DATABASE IF EXISTS \`$DB_NAME\`;
 CREATE DATABASE \`$DB_NAME\`;
@@ -48,8 +49,7 @@ GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$D
 FLUSH PRIVILEGES;
 EOF
 
-mysql --user=$DB_USER --password=$DB_PASSWORD "$DB_NAME" < "$PROJECT/documentation/database/database-schema.sql"
-
+# create a file with database credentials
 cat > "$WWW/load.php" <<EOF
 <?php
 \$database = '$DB_NAME';
@@ -66,6 +66,9 @@ define('CONTACT_PHONE', '555-555-555');
 define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
 require '$BOZ_PHP/load.php';
 EOF
+
+# populate the database
+"$PROJECT"/cli/populate.php
 
 # disable the default apache site
 a2dissite --quiet 000-default
