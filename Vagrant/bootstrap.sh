@@ -70,6 +70,9 @@ EOF
 # populate the database
 "$PROJECT"/cli/populate.php
 
+# TODO: try a SELECT FOR UPDATE into the add-user script
+sleep 10
+
 # disable the default apache site
 a2dissite --quiet 000-default
 
