@@ -437,6 +437,8 @@ INSERT INTO `ldto_track` VALUES (2,'dev','Dev',3,'Area sviluppatori');
 INSERT INTO `ldto_track` VALUES (3,'sys','Sys',4,'Area sistemisti');
 INSERT INTO `ldto_track` VALUES (4,'misc','Misc',1,'Argomenti relativi alla conoscenza e alla libertà digitale.');
 INSERT INTO `ldto_track` VALUES (5,'altro','Altro',5,'Di tutto un po\'');
+INSERT INTO `ldto_track` VALUES (6,'intermediate','Intermedio',6,'Adatto ad un pubblico abbastanza smanettone');
+INSERT INTO `ldto_track` VALUES (7,'advanced','Avanzato',7,'Adatto ad un pubblico di nerd disperati');
 /*!40000 ALTER TABLE `ldto_track` ENABLE KEYS */;
 UNLOCK TABLES;
 
