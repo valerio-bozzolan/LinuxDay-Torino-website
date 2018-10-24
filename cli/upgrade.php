@@ -25,6 +25,16 @@ require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'load.php';
 // check if the aristocratic title is created
 safe_alter_table_add_column_after( User::T, User::ARISTOCRATIC_TITLE, 'VARCHAR(16)', User::UID );
 
+// allow some event columns to be NULL
+$event_columns_allowed_to_be_null = [ Room::ID, Track::ID, Chapter::ID ];
+foreach( $event_columns_allowed_to_be_null as $event_column_allowed_to_be_null ) {
+	query( sprintf(
+		"ALTER TABLE %s MODIFY COLUMN %s int(10) unsigned",
+		T( Event::T ),
+		$event_column_allowed_to_be_null
+	) );
+}
+
 /**
  * Check if a table field does not exist
  *
