@@ -81,7 +81,7 @@ LOCK TABLES `ldto_conference` WRITE;
 /*!40000 ALTER TABLE `ldto_conference` DISABLE KEYS */;
 INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',1,1);
 INSERT INTO `ldto_conference` VALUES (2,'2015','LDTO15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2015-10-24 14:00:00','2015-10-24 18:00:00',1,2);
-INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO16','http://linuxdaytorino.org/2017/user/%1$s','http://linuxdaytorino.org/2017/talk/%1$s',NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
+INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO17','http://linuxdaytorino.org/2017/user/%1$s','http://linuxdaytorino.org/2017/talk/%1$s',NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
 /*!40000 ALTER TABLE `ldto_conference` ENABLE KEYS */;
 UNLOCK TABLES;
 
