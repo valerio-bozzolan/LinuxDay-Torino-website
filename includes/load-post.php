@@ -46,7 +46,7 @@ inherit_permissions( 'admin',   'user', [
 	'edit-events',
 ] );
 
-define_default( 'LATEST_CONFERENCE_UID', '2018' );
+define_default( 'LATEST_CONFERENCE_UID', '2017' );
 
 define_default( 'CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID );
 
