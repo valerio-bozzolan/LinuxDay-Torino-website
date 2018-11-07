@@ -106,9 +106,9 @@ CREATE TABLE `ldto_event` (
   `event_img` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `event_subscriptions` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Enable subscriptions',
   `conference_ID` int(10) unsigned NOT NULL,
-  `room_ID` int(10) unsigned,
-  `track_ID` int(10) unsigned,
-  `chapter_ID` int(10) unsigned,
+  `room_ID` int(10) unsigned DEFAULT NULL,
+  `track_ID` int(10) unsigned DEFAULT NULL,
+  `chapter_ID` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`event_ID`),
   UNIQUE KEY `event_uid` (`event_uid`,`conference_ID`),
   KEY `room_ID` (`room_ID`),
@@ -423,7 +423,7 @@ CREATE TABLE `ldto_track` (
   PRIMARY KEY (`track_ID`),
   UNIQUE KEY `track_uid` (`track_uid`),
   KEY `track_order` (`track_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -691,4 +691,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-03 21:10:41
+-- Dump completed on 2018-11-07 20:46:19
