@@ -95,22 +95,22 @@ class FullEvent extends Queried {
 				Track     ::T,
 				Chapter   ::T,
 			] )
-			->equals( Event::T . DOT . Conference::ID, Conference::T . DOT . Conference::ID )
-			->equals( Event::T . DOT . Room      ::ID, Room      ::T . DOT . Room      ::ID )
-			->equals( Event::T . DOT . Track     ::ID, Track     ::T . DOT . Track     ::ID )
-			->equals( Event::T . DOT . Chapter   ::ID, Chapter   ::T . DOT . Chapter   ::ID );
+			->equals( Event::CONFERENCE_, Conference::ID_ )
+			->equals( Event::ROOM_,       Room      ::ID_ )
+			->equals( Event::TRACK_,      Track     ::ID_ )
+			->equals( Event::CHAPTER_,    Chapter   ::ID_ );
 	}
 
 	static function factoryByConference( $conference_ID ) {
 		return self::factory()
-			->whereInt( 'event.conference_ID', $conference_ID );
+			->whereInt( Event::CONFERENCE_, $conference_ID );
 	}
 
 	static function factoryByConferenceAndUID( $conference_ID, $event_uid ) {
 		$event_uid = Event::sanitizeUID( $event_uid );
 
 		return self::factoryByConference( $conference_ID )
-			->whereStr( 'event_uid', $event_uid );
+			->whereStr( Event::UID, $event_uid );
 	}
 
 	static function queryByConferenceAndUID( $conference_ID, $event_uid ) {
@@ -118,18 +118,17 @@ class FullEvent extends Queried {
 			->queryRow();
 	}
 
-
 	static function factoryByUser( $user_ID ) {
 		return self::factory()
-			->from('event_user')
-			->equals('event_user.event_ID', 'event.event_ID')
-			->whereInt( 'event_user.user_ID', $user_ID )
-			->orderBy('event_user_order');
+			->from(     EventUser::T                  )
+			->equals(   EventUser::EVENT_, Event::ID_ )
+			->whereInt( EventUser::USER_,  $user_ID   )
+			->orderBy(  EventUser::ORDER              );
 	}
 
 	static function factoryByConferenceChapter( $conference_ID, $chapter_ID ) {
 		return self::factoryByConference( $conference_ID )
-			->whereInt( 'event.chapter_ID', $chapter_ID );
+			->whereInt( Event::CHAPTER_, $chapter_ID );
 	}
 
 	/**
