@@ -65,7 +65,7 @@ CREATE TABLE `ldto_conference` (
   `conference_start` datetime NOT NULL,
   `conference_end` datetime NOT NULL,
   `conference_days` int(11) NOT NULL,
-  `location_ID` int(10) unsigned NOT NULL,
+  `location_ID` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`conference_ID`),
   UNIQUE KEY `conference_uid` (`conference_uid`),
   KEY `location_ID` (`location_ID`),
