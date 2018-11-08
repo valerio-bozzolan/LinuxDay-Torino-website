@@ -143,10 +143,10 @@ class Footer {
 	</div>
 </footer>
 <script>
-$(document).ready( function () {
-	$('.button-collapse').sideNav();
-	$('.parallax').parallax();
-	$('select').material_select();
+$( function () {
+	$( '.button-collapse' ).sideNav();
+	$( '.parallax' ).parallax();
+	$( 'select' ).material_select();
 } );
 </script>
 </body>

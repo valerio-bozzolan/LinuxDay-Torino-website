@@ -342,8 +342,8 @@ Header::spawn( null, $args );
 	<?php endif ?>
 
 	<script>
-	$(document).ready(function () {
-		$('.tooltipped').tooltip();
+	$( function () {
+		$( '.tooltipped' ).tooltip();
 	});
 	</script>
 <?php
