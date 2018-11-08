@@ -101,15 +101,15 @@ Header::spawn( null, [
 
 			<!-- Start skills -->
 			<?php $skills = $user->factoryUserSkills()
-				->query();
+				->queryGenerator();
 			?>
-			<?php if( $skills->num_rows ): ?>
+			<?php if( $skills->valid() ): ?>
 			<div class="row">
 				<div class="col s12">
 					<p><?php _e("Le mie skill:") ?></p>
-					<?php while( $skill = $skills->fetch_object('UserSkill') ): ?>
+					<?php foreach( $skills as $skill ): ?>
 						<div class="chip tooltipped hoverable" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
-					<?php endwhile ?>
+					<?php endforeach ?>
 				</div>
 			</div>
 			<?php endif ?>
@@ -149,10 +149,10 @@ Header::spawn( null, [
 		<h3><?php _e("Talk condotti") ?></h3>
 
 		<?php $events = $user->factoryUserEvents()
-			->whereInt( 'event.conference_ID', $conference->getConferenceID() )
-			->query();
+			->whereInt( Event::CONFERENCE_, $conference->getConferenceID() )
+			->queryGenerator();
 		 ?>
-		<?php if($events->num_rows): ?>
+		<?php if( $events->valid() ): ?>
 			<table>
 			<thead>
 			<tr>
@@ -164,7 +164,7 @@ Header::spawn( null, [
 			</tr>
 			</thead>
 			<tbody>
-			<?php while( $event = $events->fetch_object('FullEvent') ): ?>
+			<?php foreach( $events as $event ): ?>
 			<tr>
 				<td><?php echo HTML::a(
 					$event->getEventURL(),
@@ -194,7 +194,7 @@ Header::spawn( null, [
 					<small><?php echo $event->getEventHumanStart() ?></small>
 				</td>
 			</tr>
-			<?php endwhile ?>
+			<?php endforeach ?>
 			</tbody>
 			</table>
 		<?php else: ?>
