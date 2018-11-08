@@ -23,7 +23,7 @@ trait SharableTrait {
 	 * @return int
 	 */
 	public function getSharableID() {
-		return $this->nonnull( 'sharable_ID' );
+		return $this->nonnull( Sharable::ID );
 	}
 
 	/**
@@ -33,10 +33,10 @@ trait SharableTrait {
 	 * @return string
 	 */
 	public function getSharableTitle( $args = [] ) {
-		$sharable_title = $this->get( 'sharable_title' );
+		$sharable_title = $this->get( Sharable::TITLE );
 
 		if( ! isset( $sharable_title ) ) {
-			return $this->getDefaultSharableTitle($args);
+			return $this->getDefaultSharableTitle( $args );
 		}
 
 		return __( $sharable_title );
@@ -50,7 +50,7 @@ trait SharableTrait {
 	 */
 	public function getDefaultSharableTitle( $args = [] ) {
 
-		$sharable_type = $this->get( 'sharable_type' );
+		$sharable_type = $this->get( Sharable::TYPE );
 
 		if( $sharable_type === 'youtube' ) {
 			if( isset( $args['prop'] ) && $args['prop'] ) {
@@ -60,14 +60,14 @@ trait SharableTrait {
 			}
 		}
 
-		$sharable_path = $this->get('sharable_path');
+		$sharable_path = $this->get( Sharable::PATH );
 
 		// Get filename from "/asd/asd/asd/(filename)"
 		$i = 0;
-		while( strpos($sharable_path, '/', $i) !== false ) {
+		while( strpos( $sharable_path, _, $i ) !== false ) {
 			$i++;
 		}
-		return substr($sharable_path, $i);
+		return substr( $sharable_path, $i );
 	}
 
 	/**
@@ -94,7 +94,7 @@ trait SharableTrait {
 	 * @return bool
 	 */
 	public function isSharableDocument() {
-		return $this->isSharableType('document');
+		return $this->isSharableType( 'document' );
 	}
 
 	/**
@@ -103,7 +103,7 @@ trait SharableTrait {
 	 * @return bool
 	 */
 	public function isSharableIframe() {
-		return $this->isSharableType('youtube');
+		return $this->isSharableType( 'youtube' );
 	}
 
 	/**
@@ -113,7 +113,7 @@ trait SharableTrait {
 	 * @return bool
 	 */
 	private function isSharableType( $type ) {
-		return $this->get('sharable_type') === $type;
+		return $this->get( Sharable::TYPE ) === $type;
 
 	}
 
@@ -127,8 +127,8 @@ trait SharableTrait {
 	}
 
 	function getSharablePath( $base = ROOT ) {
-		$type = $this->get('sharable_type');
-		$path = $this->get('sharable_path');
+		$type = $this->get( Sharable::TYPE );
+		$path = $this->get( Sharable::PATH );
 		if( 'youtube' === $type ) {
 			return "https://www.youtube.com/watch?v={$path}";
 		}
@@ -141,7 +141,7 @@ trait SharableTrait {
 	 * @return string|null
 	 */
 	public function getSharableMIME() {
-		return $this->get('sharable_mimetype');
+		return $this->get( Sharable::MIME );
 	}
 
 	/**
@@ -150,7 +150,7 @@ trait SharableTrait {
 	 * @return License
 	 */
 	public function getSharableLicense() {
-		return license( $this->get('sharable_license') );
+		return license( $this->get( Sharable::LICENSE ) );
 	}
 
 	/**
@@ -158,8 +158,8 @@ trait SharableTrait {
 	 */
 	protected function normalizeSharable() {
 		$this->integers(
-			'sharable_ID',
-			'event_ID'
+			Sharable::ID,
+			Event   ::ID
 		);
 	}
 }
@@ -176,6 +176,46 @@ class Sharable extends Queried {
 	const T = 'sharable';
 
 	/**
+	 * Sharable ID column
+	 */
+	const ID = 'sharable_ID';
+
+	/**
+	 * Sharable title column
+	 */
+	const TITLE = 'sharable_title';
+
+	/**
+	 * Sharable type column
+	 */
+	const TYPE = 'sharable_type';
+
+	/**
+	 * Sharable path column
+	 */
+	const PATH = 'sharable_path';
+
+	/**
+	 * Sharable mime type column
+	 */
+	const MIME = 'sharable_mimetype';
+
+	/**
+	 * Sharable license column
+	 */
+	const LICENSE = 'sharable_license';
+
+	/**
+	 * Sharable univoque ID
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
+	 * Sharable event ID
+	 */
+	const EVENT_ = self::T . DOT . Event::ID;
+
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
@@ -190,6 +230,6 @@ class Sharable extends Queried {
 	 */
 	public static function factoryByEvent( $event_ID ) {
 		return self::factory()
-			->whereInt( 'sharable.event_ID', $event_ID );
+			->whereInt( Sharable::EVENT_, $event_ID );
 	}
 }
