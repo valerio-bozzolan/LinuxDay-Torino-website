@@ -327,6 +327,21 @@ class Event extends Queried {
 	const CONFERENCE_ = self::T . DOT . Conference::ID;
 
 	/**
+	 * Complete room ID column name
+	 */
+	const ROOM_ = self::T . DOT . Room::ID;
+
+	/**
+	 * Complete track ID column name
+	 */
+	const TRACK_ = self::T . DOT . Track::ID;
+
+	/**
+	 * Complete chapter ID column name
+	 */
+	const CHAPTER_ = self::T . DOT . Chapter::ID;
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override

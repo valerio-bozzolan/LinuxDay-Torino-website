@@ -76,6 +76,11 @@ class Chapter extends Queried {
 	const NAME = 'chapter_name';
 
 	/**
+	 * Complete Chapter ID column
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override
