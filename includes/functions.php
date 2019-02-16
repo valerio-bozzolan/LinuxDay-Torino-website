@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - common functions
+# Linux Day website - common functions
 # Copyright (C) 2016, 2017 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 function license($code) {
-	return expect('LICENSES')->get($code);
+	return Licenses::instance()->get($code);
 }
 
 function request_uri() {
