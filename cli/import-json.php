@@ -48,6 +48,8 @@ if( ! $events ) {
 	exit( 1 );
 }
 
+query( 'START TRANSACTION' );
+
 foreach( $events as & $row ) {
 	$year     =  $row->year;
 	$title    =  $row->title;
@@ -127,3 +129,5 @@ foreach( $events as & $row ) {
 		] );
 	}
 }
+
+query( 'COMMIT' );
