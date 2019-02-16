@@ -34,9 +34,6 @@ spl_autoload_register( function($c) {
 // One day I will push these 2 functions in Boz-PHP
 require ABSPATH . '/includes/functions.php';
 
-// Boz-PHP: On demand global objects
-register_expected( 'LICENSES', 'Licenses' );
-
 // user permissions
 register_permissions( 'user', [] );
 

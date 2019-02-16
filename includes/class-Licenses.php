@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Licenses
-# Copyright (C) 2016 Valerio Bozzolan
+# Linux Day Torino website - Licenses
+# Copyright (C) 2016, 2018 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class Licenses {
+
 	private $licenses;
 
 	function __construct() {
@@ -35,6 +36,20 @@ class Licenses {
 		$this->add('bsd-2',           "BSD-2",             "BSD-2",                                   'https://www.gnu.org/licenses/license-list.html#FreeBSD');
 		$this->add('aal',             "AAL",               "Attribution Assurance License",           'https://opensource.org/licenses/AAL');
 		$this->add('wtfpl',           "WTFPL",           __("Fai cosa c**** ti pare Public License"), _('https://it.wikipedia.org/wiki/WTFPL') );
+	}
+
+	private static $_instance;
+
+	/**
+	 * Get the singleton instance
+	 *
+	 * @return self
+	 */
+	public static function instance() {
+		if( empty( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
 	}
 
 	function add($code, $short, $name, $url) {
