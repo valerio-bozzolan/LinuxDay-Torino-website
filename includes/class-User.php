@@ -271,6 +271,11 @@ class User extends Sessionuser {
 	const IMAGE = 'user_image';
 
 	/**
+	 * Gravatar column
+	 */
+	const GRAVATAR = 'user_gravatar';
+
+	/**
 	 * RSS column
 	 */
 	const RSS = 'user_rss';
