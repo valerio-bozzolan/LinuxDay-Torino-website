@@ -148,8 +148,10 @@ Header::spawn( null, [
 	<div class="section">
 		<h3><?php _e("Talk condotti") ?></h3>
 
-		<?php $events = $user->factoryUserEvents()
-			->whereInt( Event::CONFERENCE_, $conference->getConferenceID() )
+		<?php $events = ( new QueryEvent() )
+			->whereConference( $conference )
+			->whereUser(       $user       )
+			->joinTrackChapterRoom()
 			->queryGenerator();
 		 ?>
 		<?php if( $events->valid() ): ?>
@@ -201,6 +203,43 @@ Header::spawn( null, [
 			<p><?php _e("Questo utente non ha ancora tenuto nessun talk.") ?></p>
 		<?php endif ?>
 	</div>
+
+	<?php $events = ( new QueryEvent() )
+		->joinTrackChapterRoom()
+		->whereConferenceNot( $conference )
+		->whereUser( $user )
+		->orderBy( Event::START, 'DESC' )
+		->queryGenerator();
+	 ?>
+	<?php if( $events->valid() ): ?>
+		<div class="section">
+			<h3><?php _e("Altre partecipazioni") ?></h3>
+			<table>
+			<tbody>
+			<?php foreach( $events as $event ): ?>
+			<tr>
+				<td><?php _esc_html( $event->getEventTitle() ) ?></td>
+				<td><?php _esc_html( $event->getConferenceTitle() ) ?></td>
+				<td>
+					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $conference->getLocationAddress() ) ?>">
+						<?php _esc_html( $conference->getLocationName() ) ?>
+					</span><br />
+					<?php _esc_html( $event->getRoomName() ) ?>
+				</td>
+				<td>
+					<?php printf(
+						__("Ore <b>%s</b> (il %s)"),
+						$event->getEventStart("H:i"),
+						$event->getEventStart("d/m/Y")
+					) ?><br />
+					<small><?php echo $event->getEventHumanStart() ?></small>
+				</td>
+			</tr>
+			<?php endforeach ?>
+			</tbody>
+			</table>
+		</div>
+	<?php endif ?>
 
 	<!-- Start social -->
 	<?php if( $user->isUserSocial() ): ?>
