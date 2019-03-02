@@ -22,6 +22,18 @@ class_exists('Chapter');
 class_exists('Track');
 
 trait FullEventTrait {
+
+	/**
+	 * Check if the Event has a permalink
+	 *
+	 * @return bool
+	 */
+	public function hasEventPermalink() {
+		return $this->has( Conference::UID ) &&
+		       $this->has( Event     ::UID ) &&
+		       $this->has( Chapter   ::UID );
+	}
+
 	function getEventURL( $base = URL ) {
 		return $base . FullEvent::permalink(
 			$this->getConferenceUID(),
