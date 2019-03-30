@@ -132,6 +132,6 @@ function spawn_linux( $from, $uid, $obj, $properties ) {
 
 		$value = addcslashes( $value, '"\\' );
 
-		printf( '_("%s");', $value );
+		printf( '__("%s");', $value );
 	}
 }
