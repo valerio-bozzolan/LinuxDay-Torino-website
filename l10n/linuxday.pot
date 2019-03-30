@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 17:55+0100\n"
+"POT-Creation-Date: 2019-03-30 18:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -460,7 +460,7 @@ msgstr ""
 msgid "Partner %s"
 msgstr ""
 
-#: 2016/load.php:47
+#: 2016/load.php:47 l10n/trebbia.php:21
 msgid "Linux Day Torino 2016"
 msgstr ""
 
@@ -614,7 +614,7 @@ msgstr ""
 msgid "Bio"
 msgstr ""
 
-#: 2016/user.php:149
+#: 2016/user.php:149 l10n/trebbia.php:1370
 msgid "Talk"
 msgstr ""
 
@@ -839,7 +839,7 @@ msgid ""
 "l'evento."
 msgstr ""
 
-#: 2017/load.php:46
+#: 2017/load.php:46 l10n/trebbia.php:27
 msgid "Linux Day Torino 2017"
 msgstr ""
 
@@ -1090,6 +1090,2665 @@ msgid ""
 "sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
 msgstr ""
 
+#: l10n/trebbia.php:24
+msgid "Linux Day Torino 2015"
+msgstr ""
+
+#: l10n/trebbia.php:30
+msgid "Linux Day Torino 2009"
+msgstr ""
+
+#: l10n/trebbia.php:33
+msgid "Linux Day Torino 2010"
+msgstr ""
+
+#: l10n/trebbia.php:36
+msgid "Linux Day Torino 2011"
+msgstr ""
+
+#: l10n/trebbia.php:39
+msgid "Linux Day Torino 2012"
+msgstr ""
+
+#: l10n/trebbia.php:42
+msgid "Linux Day Torino 2013"
+msgstr ""
+
+#: l10n/trebbia.php:45
+msgid "Linux Day Torino 2014"
+msgstr ""
+
+#: l10n/trebbia.php:48
+msgid "Linux Day Torino 2001"
+msgstr ""
+
+#: l10n/trebbia.php:51
+msgid "Linux Day Torino 2002"
+msgstr ""
+
+#: l10n/trebbia.php:54
+msgid "Linux Day Torino 2008"
+msgstr ""
+
+#: l10n/trebbia.php:57
+msgid "Linux Day Torino 2007"
+msgstr ""
+
+#: l10n/trebbia.php:60
+msgid "Didattica del coding"
+msgstr ""
+
+#: l10n/trebbia.php:63
+msgid ""
+"Le basi del coding sono fondamentali, come leggere e scrivere.\n"
+"Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
+"genitori?"
+msgstr ""
+
+#: l10n/trebbia.php:67
+msgid "Introduzione alla programmazione con JavaScript"
+msgstr ""
+
+#: l10n/trebbia.php:70
+msgid ""
+"Un viaggio nel magico mondo della programmazione con consigli pratici e "
+"tecnici per chi aspira a creare software e non solo subirlo."
+msgstr ""
+
+#: l10n/trebbia.php:73
+msgid "Non bisogna aver paura di IPv6"
+msgstr ""
+
+#: l10n/trebbia.php:76
+msgid ""
+"Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
+"potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
+"Linux."
+msgstr ""
+
+#: l10n/trebbia.php:79
+msgid "La tecnologia LoRa e le sue applicazioni IoT"
+msgstr ""
+
+#: l10n/trebbia.php:82
+msgid "Rinascimento 2.0"
+msgstr ""
+
+#: l10n/trebbia.php:85
+msgid ""
+"Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
+"leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
+"tecnologici per accorgerci che è in corso una rivoluzione, stiamo entrando "
+"in una nuova era."
+msgstr ""
+
+#: l10n/trebbia.php:88
+msgid "Utilizzi di GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:91
+msgid ""
+"Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
+"del software libero della vita di tutti i giorni. Si suggerisce di invitare "
+"il vostro classico conoscente scettico e/o fanboy (╯°□°)╯."
+msgstr ""
+
+#: l10n/trebbia.php:94
+msgid "Linux al Comune di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:97
+msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
+msgstr ""
+
+#: l10n/trebbia.php:100
+msgid ""
+"Lo Yocto Project è un progetto di collaborazione open source che fornisce "
+"modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
+"personalizzati per i prodotti embedded indipendenti dall'architettura "
+"hardware. Il progetto è stato creato nel 2010 come una collaborazione tra "
+"molti produttori di hardware, fornitori di sistemi operativi open-source e "
+"aziende di elettronica per portare un po' di ordine nel caos di sviluppo di "
+"Linux Embedded. Perché usare il Progetto Yocto? Perchè è un ambiente di "
+"sviluppo Linux embedded completo con gli strumenti, i metadati e la "
+"documentazione - tutto ciò che serve. Gli strumenti gratuiti che Yocto mette "
+"a disposizione sono potenti e facilmente generabili (compresi gli ambienti "
+"di emulazione, debugger, un toolkit di generatore di applicazioni, ecc) e "
+"permettono di realizzare e portare avanti progetti, senza causare la perdita "
+"delle ottimizzazioni e degli investimenti effettuati nel corso del fase di "
+"prototipazione. Il Progetto Yocto favorisce l'adozione di questa tecnologia "
+"da parte della comunità open source permettendo agli utenti di concentrarsi "
+"sulle caratteristiche e lo sviluppo del proprio prodotto."
+msgstr ""
+
+#: l10n/trebbia.php:103
+msgid "Dieci anni dietro a FidoCadJ"
+msgstr ""
+
+#: l10n/trebbia.php:106
+msgid ""
+"Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
+"io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
+"forum italiani."
+msgstr ""
+
+#: l10n/trebbia.php:109
+msgid "Un bot di Telegram con Python"
+msgstr ""
+
+#: l10n/trebbia.php:112
+msgid ""
+"Usare Python e la libreria Telepot per sviluppare un semplice bot su "
+"Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
+"piccolo, economico e parco in consumi."
+msgstr ""
+
+#: l10n/trebbia.php:115
+msgid ""
+"Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
+"connettività e tempo una breve dimostrazione."
+msgstr ""
+
+#: l10n/trebbia.php:118
+msgid "Docker: distribuiamo applicazioni"
+msgstr ""
+
+#: l10n/trebbia.php:121
+msgid ""
+"Una introduzione ai sistemi distribuiti tramite la gestione dei container "
+"realizzati con Docker.\n"
+"Una risposta alle domande: Docker a cosa serve? Come si installa? Come si "
+"gestisce?"
+msgstr ""
+
+#: l10n/trebbia.php:125
+msgid "Hadoop - BigData in streaming"
+msgstr ""
+
+#: l10n/trebbia.php:128
+msgid ""
+"Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
+"l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
+msgstr ""
+
+#: l10n/trebbia.php:131
+msgid "InfoSec. Istruzioni per l'uso."
+msgstr ""
+
+#: l10n/trebbia.php:134
+msgid ""
+"InfoSec → Information Security → Sicurezza delle informazioni.\n"
+"\n"
+"Il talk illustrerà gli applicativi e darà i giusti consigli per poter tenere "
+"maggiormente al sicuro la propria \"vita digitale\"."
+msgstr ""
+
+#: l10n/trebbia.php:139
+msgid "Sostenibilità e Open Culture all'Università"
+msgstr ""
+
+#: l10n/trebbia.php:142
+msgid ""
+"Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
+"Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
+"possano rigenerare le apparecchiature guaste, condividere informazioni e "
+"fornire alla società circostante apparecchiature elettroniche funzionanti "
+"gratuitamente."
+msgstr ""
+
+#: l10n/trebbia.php:145
+msgid "Wikidata: la base di conoscenza libera"
+msgstr ""
+
+#: l10n/trebbia.php:148 l10n/trebbia.php:1529
+msgid "Wikipedia"
+msgstr ""
+
+#: l10n/trebbia.php:151
+msgid "LIP"
+msgstr ""
+
+#: l10n/trebbia.php:154 l10n/trebbia.php:1373
+msgid "Linux Installation Party"
+msgstr ""
+
+#: l10n/trebbia.php:157
+msgid "Installazione di varie distribuzioni GNU/Linux."
+msgstr ""
+
+#: l10n/trebbia.php:160
+msgid ""
+"Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
+"Gestito da volontari."
+msgstr ""
+
+#: l10n/trebbia.php:163 l10n/trebbia.php:1376
+msgid "Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:166
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
+msgstr ""
+
+#: l10n/trebbia.php:169
+msgid ""
+"Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
+"deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
+"confronteranno con tematiche fondamentali, come il Software Libero e lo "
+"sviluppo Open Source. Entra a far parte della gang del Software Libero! "
+"=D<br>\n"
+"<br>\n"
+"<a href=\"https://attendize.ldto.it/e/3/coderdojo-at-linuxday\">Clicca qui "
+"per prenotare</a>.\n"
+"<br>\n"
+"<br>\n"
+"Un ringraziamento particolare ai due gruppi che hanno reso possibile "
+"quest'iniziativa CoderDojo Torino e CoderDojo Torino 2."
+msgstr ""
+
+#: l10n/trebbia.php:177
+msgid "Lezione introduttiva corso GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:180
+msgid ""
+"Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
+"Linux Day Torino.\n"
+"\n"
+"Si è trattata di un'introduzione a GNU/Linux e al mondo del software libero."
+msgstr ""
+
+#: l10n/trebbia.php:185
+msgid "Installiamo insieme una distribuzione GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:188
+msgid ""
+"Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:191
+msgid "Manutenzione di un sistema basato su Debian"
+msgstr ""
+
+#: l10n/trebbia.php:194
+msgid ""
+"La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
+"\n"
+"Questa è la terza lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:199
+msgid "I comandi di base di un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:202
+msgid ""
+"Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
+"parti del tuo sistema GNU/Linux.\n"
+"\n"
+"Questa è la quarta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:207
+msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:210
+msgid ""
+"Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
+"amministrarli al meglio.\n"
+"\n"
+"Questa è la quinta lezione di un'iniziativa promossa dal comitato Linux Day "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:215
+msgid "Consegna degli attestati"
+msgstr ""
+
+#: l10n/trebbia.php:218
+msgid ""
+"I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
+"\n"
+"Questa giornata conclude le lezioni frutto di un'iniziativa promossa dal "
+"comitato Linux Day Torino."
+msgstr ""
+
+#: l10n/trebbia.php:223 l10n/trebbia.php:783 l10n/trebbia.php:903
+msgid "Primi passi con Linux"
+msgstr ""
+
+#: l10n/trebbia.php:226
+msgid "Come e perchè iniziare, quali programmi usare"
+msgstr ""
+
+#: l10n/trebbia.php:229
+msgid "Giocare con Linux"
+msgstr ""
+
+#: l10n/trebbia.php:232
+msgid "Divertirsi con il pinguino"
+msgstr ""
+
+#: l10n/trebbia.php:235
+msgid "OpenOffice.org"
+msgstr ""
+
+#: l10n/trebbia.php:238
+msgid "Introduzione al software libero di produttivita' personale"
+msgstr ""
+
+#: l10n/trebbia.php:241
+msgid "Firefox e Thunderbird"
+msgstr ""
+
+#: l10n/trebbia.php:244
+msgid "Ottieni il massimo da posta e web"
+msgstr ""
+
+#: l10n/trebbia.php:247
+msgid "Backup facile e incrementale"
+msgstr ""
+
+#: l10n/trebbia.php:250
+msgid "Mantenere una copia di riserva dei propri dati"
+msgstr ""
+
+#: l10n/trebbia.php:253
+msgid "Niente panico"
+msgstr ""
+
+#: l10n/trebbia.php:256
+msgid "I trucchi per passare a Linux senza l'aiuto degli esperti"
+msgstr ""
+
+#: l10n/trebbia.php:259
+msgid "Linux Community"
+msgstr ""
+
+#: l10n/trebbia.php:262
+msgid "Districarsi tra gli strumenti della comunità"
+msgstr ""
+
+#: l10n/trebbia.php:265
+msgid "Linux@scuola"
+msgstr ""
+
+#: l10n/trebbia.php:268
+msgid "Open-source a scuola: non solo utilizzatori, ma anche sviluppatori"
+msgstr ""
+
+#: l10n/trebbia.php:271
+msgid "Groupware & Intranet"
+msgstr ""
+
+#: l10n/trebbia.php:274
+msgid "Dal server al desktop!"
+msgstr ""
+
+#: l10n/trebbia.php:277
+msgid "Sicurezza reti wireless"
+msgstr ""
+
+#: l10n/trebbia.php:280
+msgid "Vulnerabilità di una rete senza fili"
+msgstr ""
+
+#: l10n/trebbia.php:283
+msgid "Videoediting"
+msgstr ""
+
+#: l10n/trebbia.php:286
+msgid "Tecniche e Software per il videoediting su GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:289
+msgid "OpenSolaris"
+msgstr ""
+
+#: l10n/trebbia.php:292
+msgid "OS Opensource non è solo Linux"
+msgstr ""
+
+#: l10n/trebbia.php:295
+msgid "Gimp&Blender"
+msgstr ""
+
+#: l10n/trebbia.php:298
+msgid "Grafica 2D e 3D"
+msgstr ""
+
+#: l10n/trebbia.php:301
+msgid "Green IT"
+msgstr ""
+
+#: l10n/trebbia.php:304
+msgid "Risparmio energetico con Linux"
+msgstr ""
+
+#: l10n/trebbia.php:307
+msgid "Python"
+msgstr ""
+
+#: l10n/trebbia.php:310
+msgid "Come diventare un hacker"
+msgstr ""
+
+#: l10n/trebbia.php:313
+msgid "Kernel Linux"
+msgstr ""
+
+#: l10n/trebbia.php:316
+msgid "Ricompilazione ed Ottimizzazione del Sistema"
+msgstr ""
+
+#: l10n/trebbia.php:319
+msgid "Cloud Computing"
+msgstr ""
+
+#: l10n/trebbia.php:322
+msgid "La nuova frontiera del calcolo distribuito"
+msgstr ""
+
+#: l10n/trebbia.php:325
+msgid "Arduino e Linux"
+msgstr ""
+
+#: l10n/trebbia.php:328
+msgid "Hardware e software OpenSource insieme"
+msgstr ""
+
+#: l10n/trebbia.php:331
+msgid "Bash"
+msgstr ""
+
+#: l10n/trebbia.php:334
+msgid "L'interfaccia utente piu' rapida al mondo"
+msgstr ""
+
+#: l10n/trebbia.php:337
+msgid "Subversion"
+msgstr ""
+
+#: l10n/trebbia.php:340
+msgid "Introduzione al Version Control"
+msgstr ""
+
+#: l10n/trebbia.php:343
+msgid "Sviluppo Web con CakePHP"
+msgstr ""
+
+#: l10n/trebbia.php:346
+msgid "Introduzione al framework MVC con esempi pratici"
+msgstr ""
+
+#: l10n/trebbia.php:349
+msgid "Linux a scuola"
+msgstr ""
+
+#: l10n/trebbia.php:352
+msgid ""
+"Sophia Danesino, docente dell'ITIS Peano di Torino, ha presentato insieme a "
+"altri colleghi la sua esperienza con il software libero a scuola, le "
+"impressioni degli alunni e la LIM (Lavagna Interattiva Multimediale)."
+msgstr ""
+
+#: l10n/trebbia.php:355
+msgid "Linux in azienda: \"not just for fun\""
+msgstr ""
+
+#: l10n/trebbia.php:358
+msgid ""
+"Fabrizio Reale, fondatore e proprietario di Redomino, ha presentato l'uso di "
+"Linux in azienda e risposto alla domanda: «Si può fare business col software "
+"libero?»."
+msgstr ""
+
+#: l10n/trebbia.php:361
+msgid "Plone 4"
+msgstr ""
+
+#: l10n/trebbia.php:364
+msgid ""
+"Presentazione dal vivo della nuovissima release di Plone, uno dei più "
+"potenti CMS open source oggi disponibili. Plone è lo strumento ideale per la "
+"realizzazione di siti web, intranet, piattaforme di gestione documentale, e-"
+"learning ed e-commerce. L'ultima versione introduce sostanziali innovazioni "
+"nelle performance, nell'interfaccia e nell'architettura. Scopriamole insieme!"
+msgstr ""
+
+#: l10n/trebbia.php:367
+msgid "Più veloce, più bello, più facile da usare!"
+msgstr ""
+
+#: l10n/trebbia.php:370
+msgid "Arduino 1.0"
+msgstr ""
+
+#: l10n/trebbia.php:373
+msgid ""
+"Arduino è il primo microcontrollore open source, e nasce in Piemonte cinque "
+"anni fa, con il preciso obiettivo di semplificare la prototipazione "
+"elettronica. Arduino ha semplificato la realizzazione di nuovi prodotti / "
+"progetti sia da un punto di vista della piattaforma elettronica (aperta, "
+"migliorabile dalla comunità), sia attraverso il programma di compilazione "
+"(opensource, crossplatform), e soprattutto attraverso l'utilizzo di una "
+"licenza CC S-A. Arduino festeggia i suoi primi cinque anni, passando alla "
+"versione UNO. Tema del Talk é la breve storia della scheda, degli ultimi "
+"cambiamenti, e la presa in esame di alcuni progetti."
+msgstr ""
+
+#: l10n/trebbia.php:376
+msgid "L'evoluzione di Arduino e i suoi (infiniti?) utilizzi a scopo didattico"
+msgstr ""
+
+#: l10n/trebbia.php:379
+msgid "Imparare a usare SW open a scuola"
+msgstr ""
+
+#: l10n/trebbia.php:382
+msgid ""
+"Perché studiare l'Open Source a scuola? esistono gli strumenti adatti? La "
+"discussione presenta alcune idee per studiare il software open source a "
+"scuola sia come oggetto diretto di studio sia come mezzo per l'apprendimento "
+"di altre discipline. Attraverso l'esperienza dell'adozione di un libro di "
+"testo che contiene delle parti rivolte al software open source si vuole "
+"riflettere sul ruolo e sulle potenzialità che ha il software Open nella "
+"didattica e nell'insegnamento. Il libro, edito dalla casa editrice Petrini, "
+"offre parecchi spunti per la discussione. Saranno presenti gli autori. Una "
+"descrizione del libro la trovate"
+msgstr ""
+
+#: l10n/trebbia.php:385
+msgid "Un libro per imparare a usare anche l'Open Source"
+msgstr ""
+
+#: l10n/trebbia.php:388
+msgid ".NET & GNU/Linux: Nemici o Amici"
+msgstr ""
+
+#: l10n/trebbia.php:391
+msgid ""
+"Ormai da qualche anno Mono è l'implementazione di riferimento (anche se non "
+"l'unica) del framework .NET di Microsoft in ambiente GNU/Linux. Il "
+"linguaggio C#, una matura libreria di base e l'Integrated Development "
+"Environment (IDE) MonoDevelop insieme forniscono un ambiente nel quale "
+"programmare -oltre che essere divertente- è anche estremamente produttivo. "
+"Sempre che la Microsoft non vi faccia causa. Amato, deriso ed osteggiato, "
+"Mono è comunque una realtà e nel corso dell'intervento vedremo cos'è, come "
+"funziona, cosa si può fare in C# e quanto ci sia di vero nelle voci che lo "
+"vogliono il cavallo di troia che la MS userà per conquistare Linux."
+msgstr ""
+
+#: l10n/trebbia.php:394
+msgid "Programmare in C# su Linux e vivere (quasi) felici"
+msgstr ""
+
+#: l10n/trebbia.php:397
+msgid "HTML 5"
+msgstr ""
+
+#: l10n/trebbia.php:400
+msgid ""
+"HTML5 è uno standard (attualmente in discussione) che racchiude una lunga "
+"serie di funzionalità per lo sviluppo di applicazioni web. Dopo una breve "
+"storia dello sviluppo web fino ad ora, esploreremo le nuove funzionalità "
+"introdotte dall'html5: geolocalizzazione, storage locale e applicazioni "
+"offline, video e audio embedded, funzioni grafiche 2D(3D), form, "
+"microformati e semantica... Infine proveremo a delineare cosa ci riserva il "
+"futuro dello sviluppo di applicazioni web e non solo."
+msgstr ""
+
+#: l10n/trebbia.php:403
+msgid "Le nuove frontiere del web"
+msgstr ""
+
+#: l10n/trebbia.php:406
+msgid "HTML5 Mobile Apps Offline"
+msgstr ""
+
+#: l10n/trebbia.php:409
+msgid ""
+"L'evoluzione degli standard W3C quali HTML5/CSS3 e il continuo diffondersi "
+"di disposivi mobili con web browser evoluti hanno aperto delle nuove strade "
+"per lo sviluppo di applicazioni multipiattaforma. Dover imparare una nuova "
+"SDK per ogni nuova piattaforma e il dover sottostare a limitanti condizioni "
+"degli \"AppStore\" non è l'ideale, quando invece sarebbe molto più semplice "
+"condividere le funzionalità attraverso un sito internet. HTML5 unito a un "
+"framework open source MVC come Ruby on Rails possono essere una buona "
+"ricetta per iniziare a realizzare webapp avanzate che possano accedere a "
+"dispositivi hardware (es GPS) senza complicarci troppo la vita. Visto che "
+"gli standard permetteranno al browser di accedere a sempre più hardware, "
+"aspettatevi di trovare in futuro una webapp per tutto."
+msgstr ""
+
+#: l10n/trebbia.php:412
+msgid ""
+"Potenzialità e limiti delle ultime tecnologie web che funzionano anche "
+"offline"
+msgstr ""
+
+#: l10n/trebbia.php:415
+msgid "Harald Dente Blu ed il bluetooth"
+msgstr ""
+
+#: l10n/trebbia.php:418
+msgid ""
+"Dopo una breve introduzione al nome ed alla nascita del bluetooth daremo "
+"un'occhiata alla sua struttura (i layers fisico e di trasporto), ai profili "
+"(per esempio DUN,FTP,OBEX) e vedremo brevemente cosa servono i comandi della "
+"suite bluez (hciattach, hciconfig; bluetooth-agent, hcitool, rfcomm, l2ping, "
+"sdptool) e come usarli."
+msgstr ""
+
+#: l10n/trebbia.php:421
+msgid "Che ce ne facciamo dei comandi di bluez"
+msgstr ""
+
+#: l10n/trebbia.php:424
+msgid "Asterisk"
+msgstr ""
+
+#: l10n/trebbia.php:427
+msgid ""
+"Dall'invenzione del primo combinatore telefonico manuale di Almon B. "
+"Strowger, il mondo della telefonia è diventato sempre più efficiente, "
+"complesso e semplice da gestire. Oggigiorno chiunque possiede un computer e "
+"un po' di tempo libero può assemblare la propria centrale telefonica. Questo "
+"seminario descriverà una panoramica di Asterisk: quali sono le sue "
+"potenzialità, quali le funzionalità e come lo si può integrare nel mondo "
+"reale."
+msgstr ""
+
+#: l10n/trebbia.php:430
+msgid "La Telefonia open source e la sua integrazione nel mondo reale"
+msgstr ""
+
+#: l10n/trebbia.php:433
+msgid "Camera oscura digitale"
+msgstr ""
+
+#: l10n/trebbia.php:436
+msgid ""
+"Presentazione dei migliori software per lo sviluppo e la gestione delle "
+"fotografia digitale come alternativa ad Adobe LightRoom e Adobe CameraRaw. "
+"Sviluppo in \"camera chiara\" dei files in formato RAW, post-produzione "
+"preliminare delle proprie fotografie, realizzazione di foto HDR, gestione "
+"dei dati EXIF, montaggio di foto panoramiche. Dedicato agli appassionati di "
+"fotografia digitale."
+msgstr ""
+
+#: l10n/trebbia.php:439
+msgid "Come ottenere il meglio dalle proprie foto"
+msgstr ""
+
+#: l10n/trebbia.php:442
+msgid "Tuffarsi in Vim"
+msgstr ""
+
+#: l10n/trebbia.php:445
+msgid ""
+"Trucchi e segreti per utilizzare al meglio quello che sembra solo un "
+"semplice editor di testo ma che invece ha alle spalle più di 20 anni di "
+"storia."
+msgstr ""
+
+#: l10n/trebbia.php:448
+msgid "vim - un editor, una leggenda"
+msgstr ""
+
+#: l10n/trebbia.php:451
+msgid "Regular Expressions"
+msgstr ""
+
+#: l10n/trebbia.php:454
+msgid ""
+"Sfruttare la potenza delle espressioni regolari nei Command LIne tools più "
+"usati: grep, sed, awk, find, locate. Il talk parte da una introduzione "
+"all'uso delle espressioni regolari per spiegarne l'utilità e la sintassi. "
+"Verranno poi proposti diversi esempi utili in attività comuni di gestione "
+"del filesystem o nella elaborazione di documenti di testo via riga di "
+"comando. Non sono richieste competenze preliminari, anche se si il talk si "
+"rivolge a chi ha già un buon grado di familiarità con la shell."
+msgstr ""
+
+#: l10n/trebbia.php:457
+msgid "Sfruttare le regexp in grep, sed, awk e find"
+msgstr ""
+
+#: l10n/trebbia.php:460
+msgid "Apache Directory Server"
+msgstr ""
+
+#: l10n/trebbia.php:463
+msgid ""
+"Verrà mostrata una panoramica delle funzionalità del server LDAP sviluppato "
+"in Java, la semplicità della configurazione, l'inserimento degli utenti e la "
+"creazione di un DIT per mezzo di Apache Directory Studio su Apache Directory "
+"Server, l'analisi delle proprietà dell'editor, la configurazione delle "
+"connessioni, SSL, ricerche, integrazione in Eclipse e gestione degli schema. "
+"Se opportuno in base all'uditorio verrà mostrato il funzionamento di base "
+"delle acl e l'integrazione con altri strumenti (Apache, PAM, ecc.)."
+msgstr ""
+
+#: l10n/trebbia.php:466
+msgid "Ldap diventa semplice"
+msgstr ""
+
+#: l10n/trebbia.php:469
+msgid "Bacula: il backup enterprise"
+msgstr ""
+
+#: l10n/trebbia.php:472
+msgid ""
+"Dice il saggio \"Il backup è buono, il backup è bello, il backup mi fa "
+"dormire sereno la notte\". Quando si ha a che fare con molte macchine "
+"distribuite e una mole di dati elevata, il backup può diventare un incubo. "
+"Bacula è una soluzione opensource cross-plataform che aiuta a risolvere "
+"problemi come questi. Verrà mostrata la complessa struttura di una "
+"piattaforma di backup con una panoramica sulle potenzialità del tool."
+msgstr ""
+
+#: l10n/trebbia.php:475
+msgid "Dormire sereni la notte"
+msgstr ""
+
+#: l10n/trebbia.php:478
+msgid "Sviluppo su Android"
+msgstr ""
+
+#: l10n/trebbia.php:481
+msgid ""
+"Il talk si propone di fornire una panoramica sullo sviluppo di applicazioni "
+"Android, utilizzando l'SDK basato su Eclipse e Java. Dopo una breve "
+"introduzione, verranno illustrati alcuni concetti fondamentali "
+"dell'architettura Android, tra cui Activities, Intents, Layout XML, risorse "
+"e Drawables. Durante il talk verrà creata una semplice applicazione di "
+"esempio e fatta girare sull'emulatore oltre che su un dispositivo reale. I "
+"prerequisiti preferenziali per fruire del talk sono: conoscenza minima del "
+"linguaggio Java e XML, infarinatura delle tematiche si sviluppo su "
+"piattaforma mobile."
+msgstr ""
+
+#: l10n/trebbia.php:484
+msgid "creazione pratica di una applicazione mobile"
+msgstr ""
+
+#: l10n/trebbia.php:487
+msgid "Bash 4.1"
+msgstr ""
+
+#: l10n/trebbia.php:490
+msgid ""
+"Il talk presenta una serie di comode funzionalità dell'interprete, meno "
+"famose, ma decisamente utili. Verrà presentato un cheatsheet con soluzioni "
+"rapide ad esigenze comuni. Verranno esaminate alcune forme di espansione di "
+"variabili come l'indirezione e verranno approfondite le principali "
+"funzionalità introdotte negli ultimi 2 anni (versioni 4.X), come ad esempio "
+"gli array associativi. Il talk si rivolge ad utenti che abbiano già "
+"esperienze, anche poche, di scripting in bash."
+msgstr ""
+
+#: l10n/trebbia.php:493
+msgid "Comodi trucchi da usare con bash"
+msgstr ""
+
+#: l10n/trebbia.php:496
+msgid "DB NoSQL"
+msgstr ""
+
+#: l10n/trebbia.php:499
+msgid ""
+"Una delle più importanti sfide all’elaborazione distribuita è rappresentata "
+"dalla necessità di implementare alcuni requisiti come la scalabilità delle "
+"soluzioni relative le basi di dati attraverso una famiglia di soluzioni che "
+"rientra in un generico termine NoSQL il quale indica sommariamente i "
+"database che non sfruttano la sintassi SQL e che spesso vengono anche "
+"classificati come “non relazionali”."
+msgstr ""
+
+#: l10n/trebbia.php:502
+msgid "Database Not Only SQL"
+msgstr ""
+
+#: l10n/trebbia.php:505
+msgid "Wireshark revealed"
+msgstr ""
+
+#: l10n/trebbia.php:508
+msgid ""
+"L'intervento verterà sul software wireshark e sul suo uso per capire le "
+"logiche delle rete, con focus sulle reti IP. Si partirà dai concetti di "
+"sniffer e network analyzer per poi passare a descrivere l'architettura delle "
+"libpcap (in generale) ed i concetti di filtri (pcap e wireshark). Si passerà "
+"poi ad approfondire wireshark, presentando una serie di use-case che "
+"metteranno in luce i principali aspetti peculiari del software, con "
+"dimostrazioni di live-capture e di uso dei tool incorporati al suo interno."
+msgstr ""
+
+#: l10n/trebbia.php:511
+msgid "Un occhio nei meandri della rete"
+msgstr ""
+
+#: l10n/trebbia.php:514
+msgid "20 Anni di Linux"
+msgstr ""
+
+#: l10n/trebbia.php:517
+msgid ""
+"Quest'anno ricorrono i primi 20 anni dalla nascita del kernel Linux. Come è "
+"nato, chi ci ha lavorato, e come ha impattato la sua esistenza nel corso "
+"della breve (ma intensa)..."
+msgstr ""
+
+#: l10n/trebbia.php:520
+msgid "Android, ChromiumOS, MeeGo: Quale Sicurezza?"
+msgstr ""
+
+#: l10n/trebbia.php:523
+msgid ""
+"Da qualche anno i dispositivi mobile sono entrati prepotentemente nella "
+"nostra vita. A loro affidiamo molti dei nostri dati più importanti anche se "
+"non tutti affrontano la..."
+msgstr ""
+
+#: l10n/trebbia.php:526
+msgid "CaeLinux per le Applicazioni Ingegneristiche"
+msgstr ""
+
+#: l10n/trebbia.php:529
+msgid ""
+"EDF (Electricitè de France) ha sviluppato una serie di programmi per "
+"progettare e costruire centrali idroelettriche e nucleari. Il pacchetto "
+"comprende un CAD tridimensionale, un \"..."
+msgstr ""
+
+#: l10n/trebbia.php:532
+msgid "Come Ottenere di Più da Gimp"
+msgstr ""
+
+#: l10n/trebbia.php:535
+msgid ""
+"The Gimp, il programma freesoftware per il fotoritocco alternativo a "
+"PhotoShop, già offre una gran quantità di funzioni ed opzioni, ma grazie a..."
+msgstr ""
+
+#: l10n/trebbia.php:538
+msgid "Contribuire al Kernel Linux"
+msgstr ""
+
+#: l10n/trebbia.php:541
+msgid ""
+"L'intervento verterà su una esperienza nell'inviare una patch al kernel "
+"Linux. Oltre ad alcuni brevi dettagli tecnici verrà data enfasi a come nasce "
+"una patch, come la si sviluppa..."
+msgstr ""
+
+#: l10n/trebbia.php:544
+msgid "Editing Fotografico"
+msgstr ""
+
+#: l10n/trebbia.php:547
+msgid ""
+"Panoramica sulle applicazioni per Linux dedicate all'editing fotografico "
+"piu' o meno avanzato."
+msgstr ""
+
+#: l10n/trebbia.php:550
+msgid "Hardware Obsoleto e LTSP: Sessione Pratica"
+msgstr ""
+
+#: l10n/trebbia.php:553
+msgid ""
+"Troppo spesso i laboratori informatici delle scuole presentano hardware "
+"obsoleto e non aggiornato. La soluzione a questo problema puo' essere "
+"LTSP,..."
+msgstr ""
+
+#: l10n/trebbia.php:556
+msgid "Hardware Obsoleto e LTSP: Sessione Teorica"
+msgstr ""
+
+#: l10n/trebbia.php:559
+msgid ""
+"Troppo spesso i laboratori informatici delle scuole presentano hardware "
+"obsoleto e non aggiornato. La soluzione a questo problema puo' essere LTSP..."
+msgstr ""
+
+#: l10n/trebbia.php:562
+msgid "I Desktop di Linux, GNOME3 Shell e Unity"
+msgstr ""
+
+#: l10n/trebbia.php:565
+msgid ""
+"Dalla versione 11.04 Ubuntu si presenta con un nuovo ambiente grafico, "
+"denominato Unity. Come funziona? Quali sono le sue caratteristiche? Qual'è "
+"il metodo migliore per sfruttare..."
+msgstr ""
+
+#: l10n/trebbia.php:568
+msgid "Impatto nell'uso del FLOSS nelle Piccole e Medie Imprese"
+msgstr ""
+
+#: l10n/trebbia.php:571
+msgid ""
+"Il software libero ed opensource può essere estremamente utile non solo a "
+"casa ma anche (e soprattutto) in azienda. Meno costoso, più sicuro, "
+"maggiormente personalizzabile, e..."
+msgstr ""
+
+#: l10n/trebbia.php:574
+msgid "Introduzione a Blender"
+msgstr ""
+
+#: l10n/trebbia.php:577
+msgid ""
+"Quando si parla di grafica 3D su Linux è impossibile non parlare di Blender. "
+"In questo talk una rapida introduzione al programma ed alle sue..."
+msgstr ""
+
+#: l10n/trebbia.php:580
+msgid "Introduzione a VIM"
+msgstr ""
+
+#: l10n/trebbia.php:583
+msgid ""
+"Chi penserebbe che uno dei più potenti IDE del pianeta sia una applicazione "
+"senza grafica, senza icone, ma con centinaia di comandi testuali per "
+"elaborare in pochi istanti i..."
+msgstr ""
+
+#: l10n/trebbia.php:586
+msgid "Le Migliori Estensioni per Firefox"
+msgstr ""
+
+#: l10n/trebbia.php:589
+msgid ""
+"Tutti conoscono - e magari usano - Firefox, il browser web alternativo a "
+"Internet Explorer, ma non tutti conoscono le..."
+msgstr ""
+
+#: l10n/trebbia.php:592 l10n/trebbia.php:749 l10n/trebbia.php:1113
+msgid "Primi Passi con Linux"
+msgstr ""
+
+#: l10n/trebbia.php:595
+msgid ""
+"Una introduzione a Linux ed al software libero: cos'è, com'è, e perché è "
+"davvero così importante avere accesso pieno ed incondizionato al codice "
+"degli applicativi che si usano sul..."
+msgstr ""
+
+#: l10n/trebbia.php:598
+msgid "Primi Passi con Linux... A Scuola"
+msgstr ""
+
+#: l10n/trebbia.php:601
+msgid ""
+"Una introduzione a Linux ed al software libero, con un approfondimento "
+"speciale al mondo della scuola ed all'utilizzo di strumenti (e di "
+"metodologie) open per la didattica."
+msgstr ""
+
+#: l10n/trebbia.php:604
+msgid "Programmazione in Qt"
+msgstr ""
+
+#: l10n/trebbia.php:607
+msgid ""
+"Nel panorama dei dispositivi mobili vediamo purtroppo una mancanza di un "
+"sistema con un modello di sviluppo aperto, sul modello di quanto succede in "
+"ambiente desktop, con progetti..."
+msgstr ""
+
+#: l10n/trebbia.php:610
+msgid "Sabayon, Fedora, openmamba: confronto tra distribuzioni"
+msgstr ""
+
+#: l10n/trebbia.php:613
+msgid ""
+"Quando si parla di Linux quasi tutti parlano di Ubuntu, ma esistono molte "
+"altre soluzioni più o meno diffuse ognuna delle quali gode di sue specifiche "
+"peculiarità. Insieme a Fabio..."
+msgstr ""
+
+#: l10n/trebbia.php:616
+msgid "Shotwell: come Organizzare le Foto su Linux"
+msgstr ""
+
+#: l10n/trebbia.php:619
+msgid ""
+"Approfondimento su Shotwell, diffusa applicazione open per organizzare al "
+"meglio le proprio fotografie. Dedicato a tutti coloro che hanno..."
+msgstr ""
+
+#: l10n/trebbia.php:622
+msgid "Software Libero in Classe: Esperienze di Vita Vissuta"
+msgstr ""
+
+#: l10n/trebbia.php:625
+msgid ""
+"Spesso si propone di introdurre Linux a scuola, ma qualcuno ci ha già "
+"provato? Esperienze pratiche e sincere di software libero tra i banchi: cosa "
+"è andato bene, cosa è andato..."
+msgstr ""
+
+#: l10n/trebbia.php:628
+msgid "Software Libero in Classe: Prove di Libertà"
+msgstr ""
+
+#: l10n/trebbia.php:631
+msgid ""
+"La cultura dominante impone modelli applicativi in ogni ambito della "
+"conoscenza: deve la scuola accettare questi modelli e progettare una "
+"formazione che vada incontro alle..."
+msgstr ""
+
+#: l10n/trebbia.php:634
+msgid "Software Libero Solidale: GASdotto"
+msgstr ""
+
+#: l10n/trebbia.php:637
+msgid ""
+"Presentazione di una applicazione freesoftware \"made in Torino\", GASdotto, "
+"utilizzata da diversi Gruppi di Acquisto della zona ed insieme a loro..."
+msgstr ""
+
+#: l10n/trebbia.php:640
+msgid "The Document Foundation: un Anno Dopo"
+msgstr ""
+
+#: l10n/trebbia.php:643
+msgid ""
+"La Document Foundation e' nata circa un anno fa' per promuovere lo sviluppo "
+"e la diffusione di LibreOffice, fork della ben nota..."
+msgstr ""
+
+#: l10n/trebbia.php:646
+msgid "Un Sito in 50 Minuti con Drupal"
+msgstr ""
+
+#: l10n/trebbia.php:649
+msgid ""
+"I siti Internet non sono tutti uguali, cosiccome non tutti uguali sono gli "
+"strumenti. Vediamo come Drupal, noto CMS opensource, è stato utilizzato..."
+msgstr ""
+
+#: l10n/trebbia.php:652
+msgid "Videogiochi Open"
+msgstr ""
+
+#: l10n/trebbia.php:655
+msgid ""
+"Linux è solo per i server? Decisamente no, a giudicare dalla quantità di "
+"videogiochi (liberi e gratuiti) a disposizione! Una panoramica sui "
+"videogames più popolari, dagli..."
+msgstr ""
+
+#: l10n/trebbia.php:658
+msgid "Webapp HTML5 e JSON con Ruby on Rails 3.1"
+msgstr ""
+
+#: l10n/trebbia.php:661
+msgid ""
+"Talk sulla versione 3.1 del framework Rails, e sulle tecnologie web "
+"associate: HTML5, Javascript e JSON."
+msgstr ""
+
+#: l10n/trebbia.php:664
+msgid "WiiLD: la Lavagna Interattiva Multimediale Low-Cost"
+msgstr ""
+
+#: l10n/trebbia.php:667
+msgid ""
+"Tanto si è parlato di Lavagna Interattiva Multimediale (nota anche come "
+"LIM), la quale però costa svariate migliaia di euro e a volte presenta "
+"qualche problema tecnico. In questo..."
+msgstr ""
+
+#: l10n/trebbia.php:670
+msgid "Software Libero nella Piccola Impresa: un Caso Concreto"
+msgstr ""
+
+#: l10n/trebbia.php:673
+msgid ""
+"La cooperativa MAG4 Piemonte (strumenti di finanza etica e di economia "
+"solidale) utilizza da diversi anni software libero per il proprio "
+"funzionamento: Debian, MySQL,..."
+msgstr ""
+
+#: l10n/trebbia.php:676
+msgid "Politiche per l’Open Source?"
+msgstr ""
+
+#: l10n/trebbia.php:679
+msgid ""
+"Una panoramica sul ruolo strategico del FLOSS.\n"
+"\n"
+"\n"
+"Mariella Berra - Dipartimento di Scienze della Comunicazione "
+"dell'Universita' di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:685
+msgid "Le Competenze Automotive di Akhela nell'Ambito di Genivi"
+msgstr ""
+
+#: l10n/trebbia.php:688
+msgid ""
+"Akhela è da tempo impegnata in molti settori dello sviluppo software per il "
+"mercato dell'Automotive. Uno dei campi nei quali Akhela si è distinta presso "
+"i più importanti Car..."
+msgstr ""
+
+#: l10n/trebbia.php:691
+msgid "Il Piemonte di Fronte alle Sfide dell'Agenda Digitale"
+msgstr ""
+
+#: l10n/trebbia.php:694
+msgid ""
+"Il Piemonte di fronte alle sfide dell'Agenda Digitale: appropriazione e "
+"utilizzo delle ICT da parte degli attori del sistema regionale.\n"
+"\n"
+"\n"
+"Alessandro Sciullo - Gruppo di..."
+msgstr ""
+
+#: l10n/trebbia.php:700
+msgid "Conclusioni"
+msgstr ""
+
+#: l10n/trebbia.php:703
+msgid ""
+"Conclusioni del convegno, a cura dell'Assessore al Lavoro, Formazione "
+"Professionale e Orientamento per il Mercato del Lavoro della Provincia di "
+"Torino."
+msgstr ""
+
+#: l10n/trebbia.php:706
+msgid "Free Software e Open Source"
+msgstr ""
+
+#: l10n/trebbia.php:709
+msgid ""
+"Codice, soldi, libertà e divertimento: ovvero perché il software libero e "
+"aperto è buono per chi lo usa e per chi lo fa.\n"
+"\n"
+"\n"
+"Un talk alla portata di tutti per capire cosa..."
+msgstr ""
+
+#: l10n/trebbia.php:715
+msgid "Mozilla in Mobilità"
+msgstr ""
+
+#: l10n/trebbia.php:718
+msgid ""
+"Negli ultimi anni il mercato degli smartphone e della connettività mobile in "
+"genere è aumentato e sta aumentando moltissimo.\n"
+"\n"
+"\n"
+"Di pari passo, Mozilla si sta muovendo..."
+msgstr ""
+
+#: l10n/trebbia.php:724
+msgid "Open Data"
+msgstr ""
+
+#: l10n/trebbia.php:727
+msgid ""
+"Cosa sono gli Open Data e come distinguerli dall' openfuffa. Best Practices, "
+"geolocalizzazione, strumenti per l'analisi ed esempi italiani e "
+"internazionali.\n"
+"..."
+msgstr ""
+
+#: l10n/trebbia.php:731
+msgid "How a 10 Million Dollars Company uses Free Software"
+msgstr ""
+
+#: l10n/trebbia.php:734
+msgid ""
+"Come viene usato il free software per creare un sito da un milione di "
+"visitatori al giorno?\n"
+"\n"
+"\n"
+"Quali strumenti usano le grandi aziende per ottimizzare lo stack..."
+msgstr ""
+
+#: l10n/trebbia.php:740
+msgid "Open Source VFX in Blender: \"Tears of Steel\""
+msgstr ""
+
+#: l10n/trebbia.php:743
+msgid ""
+"\"Tears of Steel\" - \"progetto Mango\" è il quarto open movie della Blender "
+"Foundation.\n"
+"\n"
+"\n"
+"Presentazione generale del progetto e degli strumenti di VFX 3D open source "
+"di..."
+msgstr ""
+
+#: l10n/trebbia.php:752
+msgid ""
+"Una introduzione a Linux ed al software libero: cos'è, com'è, e perché è "
+"davvero così importante avere accesso pieno ed incondizionato al codice "
+"degli applicativi che si usano..."
+msgstr ""
+
+#: l10n/trebbia.php:755
+msgid "Hello node.js"
+msgstr ""
+
+#: l10n/trebbia.php:758
+msgid ""
+"Node.js è una piattaforma per costruire facilmente applicazioni di rete "
+"veloci e scalabili. In questo talk vedremo quali sono i vantaggi di questa "
+"piattaforma, come cominciare..."
+msgstr ""
+
+#: l10n/trebbia.php:761
+msgid "Raspberry Pi: un Ponte tra IT e Embedded"
+msgstr ""
+
+#: l10n/trebbia.php:764
+msgid ""
+"Raspberry Pi, il nuovo, piccolissimo PC basato su ARM e su Linux, per via "
+"del suo bassissimo costo puo' essere usato sia come tradizionale postazione "
+"di lavoro che come..."
+msgstr ""
+
+#: l10n/trebbia.php:767
+msgid "Ploomcake: il CMS Plone con steroidi!"
+msgstr ""
+
+#: l10n/trebbia.php:770
+msgid ""
+"Ploomcake è un'evoluzione del CMS Plone che rende più semplice la creazione "
+"di siti web, intranet e portali collaborativi con una particolare attenzione "
+"ai dispositivi mobile..."
+msgstr ""
+
+#: l10n/trebbia.php:773
+msgid "Software Libero nelle P.A.: Novità Normative"
+msgstr ""
+
+#: l10n/trebbia.php:776
+msgid ""
+"Nell'ultimo anno si sono succedute molte novità normative che riguardano il "
+"software libero:\n"
+"\n"
+"\n"
+"la legge della Repubblica Italiana n. 214/2011\n"
+"la legge..."
+msgstr ""
+
+#: l10n/trebbia.php:786
+msgid ""
+"Ci siamo lasciati convincere dall'immancabile amico smanettone e finalmente "
+"abbiamo installato Linux. Subito cominciano le cattive notizie: è diverso da "
+"Windows! Ma dove sono i nostri programmi? Perchè xyz.exe non si installa? "
+"Come si installa nuovo software? E se non funzionano le periferiche? Come si "
+"fa ad \"andare su Internet\"? Introduzione alla sopravvivenza in ambienti "
+"(operativi) ostili."
+msgstr ""
+
+#: l10n/trebbia.php:789
+msgid "Installiamo insieme Debian"
+msgstr ""
+
+#: l10n/trebbia.php:792
+msgid ""
+"Installazione dal vivo di Debian Live 7.0 LXDE, utile per verificare la "
+"compatibilità dell'hardware, adatta a computer nuovi o un po' datati, facile "
+"da mantenere aggiornata: insomma un ottimo esempio di Software libero!"
+msgstr ""
+
+#: l10n/trebbia.php:795
+msgid "Come è strutturato un Sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:798
+msgid ""
+"Conoscere come è fatto GNU/Linux potrebbe esservi utile per non fare errori "
+"durante l'installazione, o  banalmente per sfruttarlo meglio.Vediamo di "
+"capire semplicemente come è fatto, seguendolo dall'accensione al lancio di "
+"una applicazione in ambiente grafico.Cercheremo anche di dare risposte a "
+"domande come \"32 o 64 bit?\" o \"metto tutto in una partizione?\" e altre "
+"che emergeranno durante la conversazione."
+msgstr ""
+
+#: l10n/trebbia.php:801
+msgid "Corsi Online per Insegnanti"
+msgstr ""
+
+#: l10n/trebbia.php:804
+msgid ""
+"Breve storia del percorso che dalla legge regionale sul Software Libero ha "
+"portato alla piattaforma teachmood.it e alla realizzazione di corsi per i "
+"docenti su diversi software liberi utilizzabili nella didattica. "
+"Presentazione della piattaforma e dei corsi."
+msgstr ""
+
+#: l10n/trebbia.php:807
+msgid "Fotografia Digitale"
+msgstr ""
+
+#: l10n/trebbia.php:810
+msgid ""
+"Panoramiche a 360 gradi con utilizzo del programma Hugin Panorama photo "
+"stitcher e Gimp per ritocco finale del cielo blu ed esportazione in jpeg "
+"compresso. Utilizzo di fotocamera digitale non reflex con obiettivi "
+"intercambiabili, utilizzo di vecchi obiettivi (di 40 anni fa) a focale fissa "
+"(non zoom), esposizione manuale e messa a fuoco manuale (fatta una sola "
+"volta per tutte le foto), uso del cavalletto, filo telecomando per scatti "
+"antivibrazioni."
+msgstr ""
+
+#: l10n/trebbia.php:813
+msgid "Il terminale per tutti"
+msgstr ""
+
+#: l10n/trebbia.php:816
+msgid ""
+"Un talk per \"assaggiare\" la potenza del terminale, farvi venire la voglia "
+"di utilizzare questo strumento nella vita quotidiana e consigliarvi qualche "
+"trucchetto."
+msgstr ""
+
+#: l10n/trebbia.php:819
+msgid "Arduino Yún"
+msgstr ""
+
+#: l10n/trebbia.php:822
+msgid ""
+"Introduzione ad Arduino Yún, la prima scheda Arduino dotata di un processore "
+"dedicato a Linux che affianca e potenzia le capacità del microcontrollore."
+msgstr ""
+
+#: l10n/trebbia.php:825
+msgid "Quante ne sai?"
+msgstr ""
+
+#: l10n/trebbia.php:828
+msgid ""
+"Torna a grande richiesta il talk interattivo tra hacking e fooling: \"premi "
+"la patata\" e rispondi alle domande! Quante SLOC ci sono in Debian? "
+"Kryptonite è un manuale di ...? Qual è la nave più veloce della galassia? "
+"Ispirato senza ritegno ai blasonati contest della costa ovest: un'oretta di "
+"svago tra nozioni tecniche, meno tecniche e decisamente bizzarre. Ricchi "
+"premi e cotillons. Con il supporto di: Raspberry Pi, node.js e gli "
+"immancabili, celeberrimi biscotti."
+msgstr ""
+
+#: l10n/trebbia.php:831
+msgid "Privacy ed anonimato su Internet"
+msgstr ""
+
+#: l10n/trebbia.php:834
+msgid ""
+"Il talk si prefigge di illustrare il modo in cui le nostre informazioni "
+"personali viaggino in rete: il tracking, il filter-bubbling dei motori di "
+"ricerca ed il caso PRISM. Successivamente si presenteranno tecniche e "
+"software open-source per navigare al sicuro da ogni tracciabilità ed "
+"eventualmente in anonimato."
+msgstr ""
+
+#: l10n/trebbia.php:837
+msgid "Asterisk: centralino VoIP FLOSS"
+msgstr ""
+
+#: l10n/trebbia.php:840
+msgid ""
+"Configurazione di un centralino telefonico (PBX) basato su Asterisk "
+"comprensivo di periferiche (telefoni VoIP, PortAdapter analogici, GSMbox, "
+"ecc.). Non tutti sanno che con un PC, GNU/Linux e Asterisk è possibile "
+"realizzare un centralino telefonico. Poche nozioni teoriche per passare "
+"subito alla configurazione del PBX Asterisk e delle periferiche che saranno "
+"utilizzate in diretta dai partecipanti."
+msgstr ""
+
+#: l10n/trebbia.php:843
+msgid "Zabbix: Monitoring is possible"
+msgstr ""
+
+#: l10n/trebbia.php:846
+msgid ""
+"Introduzione a Zabbix, soluzione di Monitoring Opensource adattabile a varie "
+"realta', dal privato all'Enterprise. Concetti, caratteristiche di base e "
+"scenari di utilizzo."
+msgstr ""
+
+#: l10n/trebbia.php:849
+msgid "Fastboot in sistemi embedded"
+msgstr ""
+
+#: l10n/trebbia.php:852
+msgid ""
+"Il talk ha l'obiettivo di introdurre le tecniche utilizzate per ottimizzare "
+"la sequenza di startup di un sistema embedded. Si partirà con la descrizione "
+"del bootloader (u-boot), passando per la configurazione del kernel e infine "
+"descrivendo la gestione dell'avvio di servizi in user space (systemd)."
+msgstr ""
+
+#: l10n/trebbia.php:855
+msgid "MITM e webapp"
+msgstr ""
+
+#: l10n/trebbia.php:858
+msgid ""
+"Partendo da concetti di base come ARP ed SSL si parlerà di tecniche di MITM "
+"in relazione con le tecnologie web con dimostrazioni pratiche e suggerimenti "
+"sia per la sicurezza personale sia che per quella della propria "
+"infrastruttura."
+msgstr ""
+
+#: l10n/trebbia.php:861
+msgid "Quando il nuovo rende insicure le VPN"
+msgstr ""
+
+#: l10n/trebbia.php:864
+msgid ""
+"Sfruttando il poco conosciuto IPv6 si può creare una condizione di rete per "
+"la quale il traffico, normalmente diretto su una vpn sicura, viene deviato "
+"verso un proxy dell'attaccante."
+msgstr ""
+
+#: l10n/trebbia.php:867
+msgid "Penetration Test con Kali Linux"
+msgstr ""
+
+#: l10n/trebbia.php:870
+msgid ""
+"Il crescente trend dei cyber attacchi pone a chiunque lavori nel campo IT "
+"alcuni importanti quesiti: Quali sono le armi che vengono usate? Siamo "
+"pronti? Per rispondere, parleremo di Kali Linux: distribuzione pensata per "
+"la sicurezza informatica e i suoi strumenti, che possono identificare una "
+"vulnerabilità o compromettere un sitema.  Il talk si snoderà affrontando "
+"alcuni aspetti di un attacco informatico, concludendo infine con alcune "
+"possibili contromisure."
+msgstr ""
+
+#: l10n/trebbia.php:873
+msgid "Mifare Ultralight: Istruzioni per l'uso"
+msgstr ""
+
+#: l10n/trebbia.php:876
+msgid ""
+"Uno degli utilizzi più comuni dei chip NFC riguarda i sistemi di trasporto "
+"pubblico, in cui spesso si può riscontrare una scorretta implementazione del "
+"protocollo Mifare Ultralight. Essendo sprovvisto di un sistema di cifratura "
+"hardware, è semplice interagire con il chip e accedere ai dati memorizzati "
+"sullo stesso. La nostra ricerca si prefigge di illustrare a tutti le "
+"caratteristiche di un biglietto NFC Mifare Ultralight ed evidenziare "
+"l’utilizzo adeguato dei bytes del settore \"OTP\"."
+msgstr ""
+
+#: l10n/trebbia.php:879
+msgid "I Database non Relazionali"
+msgstr ""
+
+#: l10n/trebbia.php:882
+msgid ""
+"I database non relazionali, pur non essendo una novità assoluta, hanno "
+"registrato una crescita esponenziale nel loro sviluppo e utilizzo negli "
+"ultimi anni grazie al sempre più crescente bisogno di scalare in "
+"orizzontale, dove i classici RDBMS (database relazionali) presentano diverse "
+"limitazioni. I giganti del web, che si trovano a dover gestire database di "
+"dimensioni veramente imponenti, hanno sviluppato (o contribuito allo "
+"sviluppo) vari NRDBMS (database non relazionali)."
+msgstr ""
+
+#: l10n/trebbia.php:885
+msgid "Redis per Linux"
+msgstr ""
+
+#: l10n/trebbia.php:888
+msgid ""
+"Redis come sistema di storage di configurazioni, Etcd. Oltre le sessioni: "
+"pub/sub (chat), hipache, AWS ElastiCache per Redis. Master/slave config (il "
+"problema di Twilio). Redis come logger e/o queue broker (Logstash)"
+msgstr ""
+
+#: l10n/trebbia.php:891
+msgid "MeteorJS & webapp in Realtime"
+msgstr ""
+
+#: l10n/trebbia.php:894
+msgid ""
+"Le applicazioni web per essere reattive e sicure devono fare controlli sia "
+"lato client che lato server, questo comporta duplicazione di codice e spesso "
+"l'utilizzo di diversi linguaggi di programmazione. MeteorJS, basato su "
+"NodeJS, offre un ambiente unico per poter programmare in javascript codice "
+"che potrà girare indifferentemente sul browser o sul server o su entrambi."
+msgstr ""
+
+#: l10n/trebbia.php:897
+msgid "Plone CMS & Ploomcake"
+msgstr ""
+
+#: l10n/trebbia.php:900
+msgid ""
+"Plone è un gestore di contenuti open source sviluppato in Python. Il suo "
+"punto di forza è la flessibilità. Con Plone si possono creare siti web, "
+"cataloghi prodotti, intranet, gestori documentali, gestori di progetti. "
+"Vediamo insieme alcuni esempi da fare in 10 minuti partendo da Ploomcake, "
+"una distribuzione Plone."
+msgstr ""
+
+#: l10n/trebbia.php:906
+msgid ""
+"Linux è un sistema semplice, veloce e adatto a tutti. Si può usare per "
+"navigare su Internet, salvare e modificare fotografie, scrivere documenti, e "
+"molto altro: sempre mantenendo la piena compatibilità con le persone intorno "
+"a noi. Una panoramica introduttiva su pregi e difetti del sistema operativo "
+"più stabile che c'è."
+msgstr ""
+
+#: l10n/trebbia.php:909
+msgid "Ma che è 'sto Linux Day?"
+msgstr ""
+
+#: l10n/trebbia.php:912
+msgid ""
+"Un meta-talk sul Linux Day, e non solo quello di Torino: come funziona (o "
+"non funziona) la più grande manifestazione nazionale a supporto di Linux e "
+"del software libero, dal coordinamento centrale al gruppo organizzatore più "
+"disperso."
+msgstr ""
+
+#: l10n/trebbia.php:915
+msgid "Creative Commons e Open Data"
+msgstr ""
+
+#: l10n/trebbia.php:918
+msgid ""
+"Le licenze Creative Commons permettono a singoli creatori o istituzioni di "
+"condividere le proprie opere secondo il modello \"alcuni diritti riservati"
+"\". Le licenze CC sono l'infrastruttura giuridica di un ecosistema di "
+"contenuti aperti complementare a quello del software libero. Gli esempi "
+"proposti si concentreranno sull'uso delle licenze Creative Commons per la "
+"messa a disposizione di dati."
+msgstr ""
+
+#: l10n/trebbia.php:921
+msgid "UEFI"
+msgstr ""
+
+#: l10n/trebbia.php:924
+msgid ""
+"Si fa prima una breve introduzione al processo di booting ed al ruolo che vi "
+"gioca(va) il BIOS ed i suoi limiti. Si fa quindi una breve storia del EFI e "
+"UEFI, infine si introduce il concetto del Secure Boot e di come alcune "
+"distro convivano con le ultime versioni del sistema operativo della "
+"Microsoft."
+msgstr ""
+
+#: l10n/trebbia.php:927
+msgid "Reti P2P"
+msgstr ""
+
+#: l10n/trebbia.php:930
+msgid ""
+"Si partirà dalle basi per comprendere ed esplorare i concetti fondamentali e "
+"strutturali di diverse categorie di reti peer to peer, evidenziando le "
+"differenze tra le più conosciute (FreeNet, BOINC, Gnutella ecc.) ed i vari "
+"problemi che esse hanno affrontato con successo."
+msgstr ""
+
+#: l10n/trebbia.php:933
+msgid "Privacy e anonimato su Android"
+msgstr ""
+
+#: l10n/trebbia.php:936
+msgid ""
+"La rapida diffusione degli smartphone, in grado di connettere gli individui "
+"in modo quanto mai personale, ha portato l'informatica al di fuori dei "
+"confini tradizionali. Il talk si prefigge di illustrare quanti e quali siano "
+"i dati che inconsapevolmente vengono inviati all'esterno. Successivamente "
+"verranno presentate le tecniche ed i software necessari per limitare la fuga "
+"di tali informazioni."
+msgstr ""
+
+#: l10n/trebbia.php:939
+msgid "Conosci il software libero?"
+msgstr ""
+
+#: l10n/trebbia.php:942
+msgid ""
+"A grande richiesta, torna il quiz interattivo tra hacking e fooling! Quante "
+"SLOC ci sono in Debian? Chi organizza il Caos Communication Camp? Qual è la "
+"licenza meno compatibile con la GNU GPL 3? Ispirato senza ritegno ai "
+"blasonati contest della costa ovest: un'oretta di svago tra nozioni "
+"tecniche, meno tecniche e decisamente bizzarre. Iron e Abacus faranno "
+"ballare la scimmia. Useranno: Raspberry Pi, node.js ...e ortaggi freschi "
+"dagli Antichi Borghi. (Non è una metafora: è proprio verdura.) Con la "
+"partecipazione di Elia dal MuPin. Ricchi premi e cotillons.Porta il tuo "
+"smartphone: gioca anche il pubblico!Sei un drago? Sali sul palco e vinci! "
+"Manda QUIZ14 a quantenesai14@ivnb.info :)"
+msgstr ""
+
+#: l10n/trebbia.php:945
+msgid "Reverse engineering 101"
+msgstr ""
+
+#: l10n/trebbia.php:948
+msgid ""
+"Verranno introdotti gli strumenti più utili per fare reverse engineering e "
+"verrà analizzato e risolto, passo dopo passo, un \"crackme\" (pseudo-"
+"programma che richiede una password, un codice seriale o altro, creato per "
+"scopo puramente didattico)."
+msgstr ""
+
+#: l10n/trebbia.php:951
+msgid "MeteorJS e le infografiche realtime"
+msgstr ""
+
+#: l10n/trebbia.php:954
+msgid ""
+"L'approccio client/server sta sempre più stretto per le nuove web/app, "
+"MeteorJS rivoluziona il paradigma e propone un'alternava per scrivere codice "
+"javascript che funzioni sul client, sul server o da entrambe le parti. In "
+"questo talk vedremo un'introduzione al framework isomorfico e alcuni esempi "
+"che utilizzano dati in streaming o opendata."
+msgstr ""
+
+#: l10n/trebbia.php:957
+msgid "Strumenti per lo sviluppo web"
+msgstr ""
+
+#: l10n/trebbia.php:960
+msgid ""
+"Migliora la tua esperienza di sviluppatore web adottando strumenti avanzati "
+"per automatizzare operazioni ripetitive e noiose: scaffolding nuovi "
+"progetti, css performance tooling, live reload browser, javascript linting, "
+"merge e minificazione asset, uncss, cdn, integrazione con framework web e "
+"tematiche legate al deploy."
+msgstr ""
+
+#: l10n/trebbia.php:963
+msgid "Scrivere driver per il kernel"
+msgstr ""
+
+#: l10n/trebbia.php:966
+msgid ""
+"Un'introduzione alla programmazione in spazio kernel. Dopo la presentazione "
+"di alcuni concetti di base e delle strutture dati che tengono insieme tutto "
+"il sistema, si passa a scrivere un semplice driver, sotto forma di modulo "
+"del kernel per pilotare un'ipotetica periferica.  La scrittura del codice "
+"direttamente in sala permette di motivare le scelte fatte e vedere, in "
+"piccolo, il modo in cui normalmente si imposta il codice in spazio kernel."
+msgstr ""
+
+#: l10n/trebbia.php:969
+msgid "Shield e librerie RaspberryPi"
+msgstr ""
+
+#: l10n/trebbia.php:972
+msgid ""
+"RaspberryPi non è solo un microcomputer per applicazioni classiche, ma una "
+"vera board per lo sviluppo e la comunicazione con altri sistemi Embedded. In "
+"questo talk vedremo come è possibile progettare degli Shield per la piccola "
+"Pi tramite gli strumenti open-source come KiCad e l'utilizzo delle "
+"periferiche per mettere in comunicazione la nostra scheda tramite le porte "
+"di connessione con il mondo esterno (GPIO, I2C, seriale etc.). Al termine "
+"del talk vedremo come sfruttare le potenzialità del linguaggio di "
+"programmazione Golang, progettato per architetture ARM, sulla RaspberryPi "
+"così da utilizzare in un linguaggio di alto livello per le librerie di "
+"comunicazione verso le altre periferiche!"
+msgstr ""
+
+#: l10n/trebbia.php:975
+msgid "Videosorveglianza RaspberryPi"
+msgstr ""
+
+#: l10n/trebbia.php:978
+msgid ""
+"Comprare una videocamera per la sorveglianza e il motion detection già "
+"configurata e funzionante è troppo facile. Partiamo dal RaspberryPi, il suo "
+"modulo videocamera, Twitter, un po' di programmazione ed ecco fatta la "
+"videosorveglianza gestita completamente via Twitter, che vi avvisa se "
+"succede qualcosa nella zona che volete controllare mentre voi non ci siete."
+msgstr ""
+
+#: l10n/trebbia.php:981
+msgid "Arduino"
+msgstr ""
+
+#: l10n/trebbia.php:984
+msgid ""
+"Forse la più famosa scheda elettronica al mondo, raccontata da chi ci lavora "
+"tutto il giorno: la community, la gamma di piattaforme, progetti pratici e "
+"spunti operativi. L'opensource allo stato solido!"
+msgstr ""
+
+#: l10n/trebbia.php:987
+msgid "OpenWRT"
+msgstr ""
+
+#: l10n/trebbia.php:990
+msgid ""
+"OpenWrt, soprannominatosi \"wireless freedom\", è una distribuzione Linux "
+"ultraleggera per sistemi embedded, presente in molti wireless router. Ora i "
+"cinesi hanno reso disponibili sistemi non chiusi, ma programmabili, atti a "
+"costruire sistemi Wi-Fi portatili e indossabili. Nell'arena si è ora gettata "
+"Intel con il modulo Edison, che non è OpenWrt, ma è sempre Linux. Chi "
+"vincerà?"
+msgstr ""
+
+#: l10n/trebbia.php:993
+msgid "Ettercap, sicurezza in LAN"
+msgstr ""
+
+#: l10n/trebbia.php:996
+msgid ""
+"Ettercap è un software libero, strumento progettato per la sicurezza della "
+"rete dagli attacchi LAN. Può essere usato per l'analisi della rete e "
+"controllarne quindi la sicurezza. Ettercap è in grado di intercettare il "
+"traffico nel segmento di rete, catturare le password e condurre "
+"intercettazioni attive contro una serie di protocolli comuni."
+msgstr ""
+
+#: l10n/trebbia.php:999
+msgid "Virtualizzazione con KVM"
+msgstr ""
+
+#: l10n/trebbia.php:1002
+msgid ""
+"La virtualizzazione è una delle tecnologie chiave dell'Informatica attuale, "
+"ma non tutti la conoscono e apprezzano per quello che realmente permette di "
+"fare. Oltre a introdurre qualche aspetto teorico si cercherà di fare vedere "
+"in funzione qemu e kvm, anche utilizzando l'interfaccia virt-manager."
+msgstr ""
+
+#: l10n/trebbia.php:1005
+msgid "Virtualizzazione con Docker"
+msgstr ""
+
+#: l10n/trebbia.php:1008
+msgid ""
+"Docker è uno dei progetti open source più giovani, ma con la sua grande "
+"velocità e scalabilità promette di rivoluzionare la virtualizzazione e i "
+"processi di deploy. Andremo ad introdurre il concetto di container rispetto "
+"alla virtualizzazione classica per poi analizzare docker e alcune "
+"possibilità di utilizzo in vari ambiti."
+msgstr ""
+
+#: l10n/trebbia.php:1011
+msgid "Zabbix"
+msgstr ""
+
+#: l10n/trebbia.php:1014
+msgid ""
+"Zabbix è uno tra i più noti software di monitoring open source, nato nel "
+"lontano 1999 da un'idea di Alexei Vladishev, ad oggi è una delle soluzioni "
+"più promettenti nel mercato mondiale. In questo talk cercherò di trasmettere "
+"le basi fondamentali su come installarlo e poter monitorare un host tramite "
+"soglie di allarme."
+msgstr ""
+
+#: l10n/trebbia.php:1017
+msgid "Il Software Libero per Tutti"
+msgstr ""
+
+#: l10n/trebbia.php:1020
+msgid ""
+"Dopo avere analizzato i concetti che stanno alla base del software libero, "
+"valuteremo insieme i passi che un utente può effettuare per migrare un "
+"computer ad una distribuzione libera senza difficoltà."
+msgstr ""
+
+#: l10n/trebbia.php:1023
+msgid "Adotta un Software"
+msgstr ""
+
+#: l10n/trebbia.php:1026
+msgid ""
+"Cosa fare quando il tuo programma preferito non viene più sviluppato, ovvero "
+"come diventare un developer KDE per pigrizia e fare parte di un progetto "
+"open source. Ispirato ad una storia vera."
+msgstr ""
+
+#: l10n/trebbia.php:1029
+msgid "Storage: Cos'è e Come è Fatto"
+msgstr ""
+
+#: l10n/trebbia.php:1032
+msgid ""
+"Struttura di un sistema storage, dai dischi alle interfacce di "
+"comunicazione: carrellata non tecnica sui contenuti di questi sistemi di "
+"archiviazione, sempre più diffusi anche in ambito casalingo."
+msgstr ""
+
+#: l10n/trebbia.php:1035
+msgid "F-Droid, Libera il tuo Smartphone!"
+msgstr ""
+
+#: l10n/trebbia.php:1038
+msgid ""
+"Lo smartphone è il libro (aperto) della tua vita privata. Puoi continuare a "
+"restare nel \"Grande Fratello\", se lo desideri, ma una via di uscita "
+"esiste. (A fine talk, installation-party sugli Android)."
+msgstr ""
+
+#: l10n/trebbia.php:1041
+msgid "Un Pinguino in Comune"
+msgstr ""
+
+#: l10n/trebbia.php:1044
+msgid ""
+"Non tutti sanno che in numerosi laboratori didattici nelle scuole di Torino "
+"si trova Linux. E la storia di come ci sia arrivato parte dall'assessorato "
+"all'istruzione..."
+msgstr ""
+
+#: l10n/trebbia.php:1047
+msgid "Fare il Software Libero"
+msgstr ""
+
+#: l10n/trebbia.php:1050
+msgid ""
+"Sviluppare software libero non vuol dire solamente mettere dei sorgenti su "
+"GitHub: lo scopo del talk è fornire le basi tecniche (e non) per sviluppare "
+"nuovi progetti e contribuire a quelli esistenti."
+msgstr ""
+
+#: l10n/trebbia.php:1053
+msgid "Non c'è Cloud senza Storage"
+msgstr ""
+
+#: l10n/trebbia.php:1056
+msgid ""
+"Eravamo abituati a RAID, ARRAY e dischi, ma il mondo evolve e questi sono un "
+"ricordo. Ceph è un Distributed Storage tra i più interessanti e pone le basi "
+"per le future soluzioni di memorizzazione dati."
+msgstr ""
+
+#: l10n/trebbia.php:1059
+msgid "Libera un Chromebook"
+msgstr ""
+
+#: l10n/trebbia.php:1062
+#, php-format
+msgid ""
+"Saremo destinati ad utilizzare solo applicazioni cloud? Forse. Nel frattempo "
+"godiamoci l'accesso hardware, decloudizziamo un Chromebook, installiamo GNU/"
+"Linux e godiamoci il 100% delle sue potenzialità."
+msgstr ""
+
+#: l10n/trebbia.php:1065
+msgid "Installiamo Linux!"
+msgstr ""
+
+#: l10n/trebbia.php:1068
+msgid ""
+"Consigli, dritte e warning su come installare sul proprio computer una delle "
+"distribuzioni Linux più famose. Installeremo Linux su un computer di prova "
+"per vedere \"live\" tutti i passaggi necessari."
+msgstr ""
+
+#: l10n/trebbia.php:1071
+msgid "Nel Labirinto dei Codec Futuri"
+msgstr ""
+
+#: l10n/trebbia.php:1074
+msgid ""
+"Negli ultimi anni abbiamo visto nuovi standard che promettono di essere "
+"superiori: HEVC, VP9/VP10, Daala ed Opus. L'intervento mira a dare una "
+"introduzione sugli specifici format e spiegare a che punto siamo."
+msgstr ""
+
+#: l10n/trebbia.php:1077
+msgid "IBM Bluemix, Digital Innovation Platform"
+msgstr ""
+
+#: l10n/trebbia.php:1080
+msgid ""
+"IBM Bluemix è la piattaforma cloud basata su open standard, per lo sviluppo, "
+"test e esecuzione di applicazioni in modalità PaaS. Qui una presentazione ed "
+"una dimostrazione live."
+msgstr ""
+
+#: l10n/trebbia.php:1083
+msgid "Riservatezza Digitale: Missione Impossibile?"
+msgstr ""
+
+#: l10n/trebbia.php:1086
+msgid ""
+"Oggigiorno i dispositivi personali ci accompagnano ovunque, registrando e "
+"trasmettendo tutte le attività. È ancora possibile fare uso dello strumento "
+"digitale tutelando al contempo la propria privacy?"
+msgstr ""
+
+#: l10n/trebbia.php:1089
+msgid "E con Linux che Programmi uso?"
+msgstr ""
+
+#: l10n/trebbia.php:1092
+msgid ""
+"Panoramica sui programmi più utili da installare sulla vostra nuova "
+"installazione di Linux, per non sentire la mancanza di Windows e rimanere "
+"sorpresi dalla varietà e qualità. Con regalo a fine talk."
+msgstr ""
+
+#: l10n/trebbia.php:1095
+msgid "A Summary of the Daala Project"
+msgstr ""
+
+#: l10n/trebbia.php:1098
+msgid ""
+"Daala is a \"next-next generation\" video codec project sponsored by Mozilla "
+"and Xiph.Org. The talk will cover what worked, what didn't and where we plan "
+"to go from here."
+msgstr ""
+
+#: l10n/trebbia.php:1101
+msgid "Ninux e Reti Wireless Comunitarie"
+msgstr ""
+
+#: l10n/trebbia.php:1104
+msgid ""
+"Ninux.org, la più grande community wireless italiana in salsa open source. "
+"Liberi di condividere e sperimentare. Teoria e pratica delle reti wireless "
+"comunitarie."
+msgstr ""
+
+#: l10n/trebbia.php:1107
+msgid "Copyright-Copyleft"
+msgstr ""
+
+#: l10n/trebbia.php:1110
+msgid ""
+"Capire insieme quali sono i diritti di chi fruisce e diffonde e di chi crea "
+"e produce contenuti in rete, per sapere cosa fare e prevedere come andrà a "
+"finire la battaglia sui contenuti in rete."
+msgstr ""
+
+#: l10n/trebbia.php:1116 l10n/trebbia.php:1140 l10n/trebbia.php:1164
+#: l10n/trebbia.php:1188
+msgid "14:30"
+msgstr ""
+
+#: l10n/trebbia.php:1119
+msgid "Privacy"
+msgstr ""
+
+#: l10n/trebbia.php:1122 l10n/trebbia.php:1146 l10n/trebbia.php:1170
+#: l10n/trebbia.php:1194
+msgid "15:30"
+msgstr ""
+
+#: l10n/trebbia.php:1125
+msgid "Il Nostro Diritto Digitale alla Città"
+msgstr ""
+
+#: l10n/trebbia.php:1128 l10n/trebbia.php:1152 l10n/trebbia.php:1176
+#: l10n/trebbia.php:1200
+msgid "16:30"
+msgstr ""
+
+#: l10n/trebbia.php:1131
+msgid "Quando un dato è cancellato"
+msgstr ""
+
+#: l10n/trebbia.php:1134 l10n/trebbia.php:1158 l10n/trebbia.php:1182
+#: l10n/trebbia.php:1206
+msgid "17:30"
+msgstr ""
+
+#: l10n/trebbia.php:1137
+msgid "Rust, perché e perché no"
+msgstr ""
+
+#: l10n/trebbia.php:1143
+msgid "Blockchain, da zero al codice"
+msgstr ""
+
+#: l10n/trebbia.php:1149 l10n/trebbia.php:1532
+msgid "Embedded"
+msgstr ""
+
+#: l10n/trebbia.php:1155
+msgid "Far parlare i dispositivi IoT"
+msgstr ""
+
+#: l10n/trebbia.php:1161
+msgid "Big Data RT Analytics"
+msgstr ""
+
+#: l10n/trebbia.php:1167
+msgid "Fun with Zabbix & IoT"
+msgstr ""
+
+#: l10n/trebbia.php:1173
+msgid "Da IPv4 a IPv6"
+msgstr ""
+
+#: l10n/trebbia.php:1179
+msgid "Varnish: quando la cache conta"
+msgstr ""
+
+#: l10n/trebbia.php:1185
+msgid "Dispositivi IoT con iottly"
+msgstr ""
+
+#: l10n/trebbia.php:1191
+msgid "Odoo, ERP open per l'azienda"
+msgstr ""
+
+#: l10n/trebbia.php:1197
+msgid "Quali alternative a WhatsApp?"
+msgstr ""
+
+#: l10n/trebbia.php:1203
+msgid "Bitcoin e Monero"
+msgstr ""
+
+#: l10n/trebbia.php:1209
+msgid "LUG Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1212
+msgid "Debian GNU/Linux news"
+msgstr ""
+
+#: l10n/trebbia.php:1215
+msgid "Billing tools with free software / Free software for network monitoring"
+msgstr ""
+
+#: l10n/trebbia.php:1218
+msgid "Software libero e impresa"
+msgstr ""
+
+#: l10n/trebbia.php:1221
+msgid "Open Media Streaming"
+msgstr ""
+
+#: l10n/trebbia.php:1224
+msgid "MOSIX"
+msgstr ""
+
+#: l10n/trebbia.php:1227
+msgid "presentazione del libro \"Informatica solidale\""
+msgstr ""
+
+#: l10n/trebbia.php:1230
+msgid "Le attività del GNU/Linux Users Group Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1233
+msgid ""
+"Software Libero, nuove opportunità per la Pubblica Amministrazione, la "
+"scuola e le imprese"
+msgstr ""
+
+#: l10n/trebbia.php:1236
+msgid ""
+"Software Libero e Pubblica Amministrazione: la proposta di mozione nel "
+"Comune di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1239
+msgid "Cluster Linux per il calcolo ad alte prestazioni in ambito Automotive"
+msgstr ""
+
+#: l10n/trebbia.php:1242
+msgid "Informatica solidale: perchè conviene cooperare?"
+msgstr ""
+
+#: l10n/trebbia.php:1245
+msgid "Il passaggio del LIASES all'Open Source"
+msgstr ""
+
+#: l10n/trebbia.php:1248
+msgid "Un sistema webmail per l'integrazione della comunicazione aziendale"
+msgstr ""
+
+#: l10n/trebbia.php:1251
+msgid "GNU/Linux: una piattaforma flessibile per l'azienda"
+msgstr ""
+
+#: l10n/trebbia.php:1254
+msgid "Procedura di gestione interventi tecnici"
+msgstr ""
+
+#: l10n/trebbia.php:1257
+msgid "Watch-Penguin: affrontare la sicurezza aziendale"
+msgstr ""
+
+#: l10n/trebbia.php:1260
+msgid "Soluzioni GNU/Linux: dal mercato enterprise alla PMI"
+msgstr ""
+
+#: l10n/trebbia.php:1263 2017/includes/class-Footer.php:102
+msgid "Dipartimento di Informatica"
+msgstr ""
+
+#: l10n/trebbia.php:1266
+msgid "Via Pessinetto 12, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1269
+msgid ""
+"Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
+"Amedeo di Savoia / Dipartimento di Informatica*.\n"
+"\n"
+"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
+"°**59** e n°**59/** scendendo alla fermata *Svizzera*."
+msgstr ""
+
+#: l10n/trebbia.php:1274 2016/includes/class-Footer.php:103
+#: 2017/includes/class-Footer.php:103
+msgid "Dipartimento di Biotecnologie"
+msgstr ""
+
+#: l10n/trebbia.php:1277
+msgid "Via Nizza 52, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1280
+msgid ""
+"La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
+"Biotecnologie."
+msgstr ""
+
+#: l10n/trebbia.php:1283
+msgid "Politecnico di Torino (sede centrale)"
+msgstr ""
+
+#: l10n/trebbia.php:1286
+msgid "Corso Duca degli Abruzzi 24, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1289
+msgid "Politecnico di Torino (cittadella)"
+msgstr ""
+
+#: l10n/trebbia.php:1292
+msgid "Corso Castelfidardo 34, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1295 2016/includes/class-Footer.php:110
+#: 2017/includes/class-Footer.php:110
+msgid "Cascina Roccafranca"
+msgstr ""
+
+#: l10n/trebbia.php:1298
+msgid "Via Edoardo Rubino 45, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1301 2016/includes/class-Footer.php:106
+#: 2017/includes/class-Footer.php:106
+msgid "Cortile del Maglio"
+msgstr ""
+
+#: l10n/trebbia.php:1304
+msgid "Via Vittorio Andreis 18, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1307
+msgid "Sala Consiglieri della Provincia di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1310
+msgid "Via Maria Vittoria 12, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1313
+msgid "Palazzo Cisterna"
+msgstr ""
+
+#: l10n/trebbia.php:1316
+msgid "Casa del Quartiere"
+msgstr ""
+
+#: l10n/trebbia.php:1319
+msgid "Via Oddino Morgari 14, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1322
+msgid "Torino Incontra"
+msgstr ""
+
+#: l10n/trebbia.php:1325
+msgid "Via Nino Costa 8, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:1328
+msgid "Base"
+msgstr ""
+
+#: l10n/trebbia.php:1331
+msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
+msgstr ""
+
+#: l10n/trebbia.php:1334
+msgid "Dev"
+msgstr ""
+
+#: l10n/trebbia.php:1337
+msgid "Area sviluppatori"
+msgstr ""
+
+#: l10n/trebbia.php:1340
+msgid "Sys"
+msgstr ""
+
+#: l10n/trebbia.php:1343
+msgid "Area sistemisti"
+msgstr ""
+
+#: l10n/trebbia.php:1346
+msgid "Misc"
+msgstr ""
+
+#: l10n/trebbia.php:1349
+msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
+msgstr ""
+
+#: l10n/trebbia.php:1352
+msgid "Altro"
+msgstr ""
+
+#: l10n/trebbia.php:1355
+msgid "Di tutto un po'"
+msgstr ""
+
+#: l10n/trebbia.php:1358
+msgid "Intermedio"
+msgstr ""
+
+#: l10n/trebbia.php:1361
+msgid "Adatto ad un pubblico abbastanza smanettone"
+msgstr ""
+
+#: l10n/trebbia.php:1364
+msgid "Avanzato"
+msgstr ""
+
+#: l10n/trebbia.php:1367
+msgid "Adatto ad un pubblico di nerd disperati"
+msgstr ""
+
+#: l10n/trebbia.php:1379
+msgid "Corso"
+msgstr ""
+
+#: l10n/trebbia.php:1382
+msgid "Aula B"
+msgstr ""
+
+#: l10n/trebbia.php:1385
+msgid "Aula A"
+msgstr ""
+
+#: l10n/trebbia.php:1388
+msgid "Aula D"
+msgstr ""
+
+#: l10n/trebbia.php:1391
+msgid "Aula C"
+msgstr ""
+
+#: l10n/trebbia.php:1394
+msgid "Spazio Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:1397
+msgid "Spazio Restart"
+msgstr ""
+
+#: l10n/trebbia.php:1400
+msgid "Primo piano"
+msgstr ""
+
+#: l10n/trebbia.php:1403
+msgid "Laboratorio Turing"
+msgstr ""
+
+#: l10n/trebbia.php:1406
+msgid "Laboratorio Dijkstra"
+msgstr ""
+
+#: l10n/trebbia.php:1409
+msgid "Aula F"
+msgstr ""
+
+#: l10n/trebbia.php:1412
+msgid "Laboratorio von Neumann"
+msgstr ""
+
+#: l10n/trebbia.php:1415
+msgid "Aula 1I"
+msgstr ""
+
+#: l10n/trebbia.php:1418
+msgid "Aula 3I"
+msgstr ""
+
+#: l10n/trebbia.php:1421
+msgid "Aula 5I"
+msgstr ""
+
+#: l10n/trebbia.php:1424
+msgid "Aula 2I"
+msgstr ""
+
+#: l10n/trebbia.php:1427
+msgid "Aula 4I"
+msgstr ""
+
+#: l10n/trebbia.php:1430
+msgid "Aula 2"
+msgstr ""
+
+#: l10n/trebbia.php:1433
+msgid "Aula 4"
+msgstr ""
+
+#: l10n/trebbia.php:1436
+msgid "Aula 6"
+msgstr ""
+
+#: l10n/trebbia.php:1439
+msgid "Aula 8"
+msgstr ""
+
+#: l10n/trebbia.php:1442
+msgid "Aula 7"
+msgstr ""
+
+#: l10n/trebbia.php:1445
+msgid "Aula 7I"
+msgstr ""
+
+#: l10n/trebbia.php:1448
+msgid "Aula corsi 1"
+msgstr ""
+
+#: l10n/trebbia.php:1451
+msgid "Aula corsi 2"
+msgstr ""
+
+#: l10n/trebbia.php:1454
+msgid "Incubatore"
+msgstr ""
+
+#: l10n/trebbia.php:1457
+msgid "Bottega"
+msgstr ""
+
+#: l10n/trebbia.php:1460
+msgid "Salone"
+msgstr ""
+
+#: l10n/trebbia.php:1463
+msgid "Sala Consiglio di Facoltà"
+msgstr ""
+
+#: l10n/trebbia.php:1466
+msgid "Sala Einaudi"
+msgstr ""
+
+#: l10n/trebbia.php:1469
+msgid "asd"
+msgstr ""
+
+#: l10n/trebbia.php:1472
+msgid "PHP"
+msgstr ""
+
+#: l10n/trebbia.php:1475
+msgid "JavaScript"
+msgstr ""
+
+#: l10n/trebbia.php:1478
+msgid "Microsoft Windows"
+msgstr ""
+
+#: l10n/trebbia.php:1481
+msgid "NodeJS"
+msgstr ""
+
+#: l10n/trebbia.php:1484
+msgid "Apple"
+msgstr ""
+
+#: l10n/trebbia.php:1487
+msgid "Java"
+msgstr ""
+
+#: l10n/trebbia.php:1490
+msgid "C++"
+msgstr ""
+
+#: l10n/trebbia.php:1493
+msgid "Ubuntu"
+msgstr ""
+
+#: l10n/trebbia.php:1496
+msgid "GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:1499
+msgid "Turbo Pascal"
+msgstr ""
+
+#: l10n/trebbia.php:1502
+msgid "Software Libero"
+msgstr ""
+
+#: l10n/trebbia.php:1505
+msgid "Debian"
+msgstr ""
+
+#: l10n/trebbia.php:1508
+msgid "Inkscape"
+msgstr ""
+
+#: l10n/trebbia.php:1511
+msgid "Adobe Illustrator"
+msgstr ""
+
+#: l10n/trebbia.php:1514
+msgid "Immagini vettoriali"
+msgstr ""
+
+#: l10n/trebbia.php:1517
+msgid "Insegnare"
+msgstr ""
+
+#: l10n/trebbia.php:1520
+msgid "Recupero del RAEE"
+msgstr ""
+
+#: l10n/trebbia.php:1523
+msgid "Blender"
+msgstr ""
+
+#: l10n/trebbia.php:1526
+msgid "C"
+msgstr ""
+
+#: l10n/trebbia.php:1535
+msgid "Haskell"
+msgstr ""
+
+#: l10n/trebbia.php:1538
+msgid "Qualcuno ha detto... software libero?"
+msgstr ""
+
+#: l10n/trebbia.php:1541
+msgid ""
+"Studente di Ingegneria Informatica, appassionato di tante cose (forse "
+"troppe).\n"
+"\n"
+"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
+"avanzare per migliorare le risorse e la conoscenza di tutti.\n"
+"\n"
+"Mi è capitato di organizzare il Linux Day 2016. =P\n"
+"\n"
+"Suonatore di Floppy, appassionato di Dama e Retrocomputing."
+msgstr ""
+
+#: l10n/trebbia.php:1550
+msgid ""
+"Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
+"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
+"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
+"it).\n"
+"\n"
+"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
+"2010."
+msgstr ""
+
+#: l10n/trebbia.php:1555
+msgid ""
+"Ricercatore, Maker, Insegnante, Sviluppatore...\n"
+"Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
+"In realtà vuole salvare il mondo, ma non ditelo a nessuno."
+msgstr ""
+
+#: l10n/trebbia.php:1560
+msgid ""
+"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
+"freelance."
+msgstr ""
+
+#: l10n/trebbia.php:1563
+msgid ""
+"Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
+"Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
+"1999 con le prime schede StrongArm.\n"
+"\n"
+"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
+"ha fondato KOAN nel 1996, una software house specializzata in software "
+"embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
+"formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
+"è solitamente interessato a mescolare la Fisica con la Filosofia."
+msgstr ""
+
+#: l10n/trebbia.php:1568
+msgid ""
+"Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
+"bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
+"pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano "
+"gli amplificatori operazionali, in altre occasioni canta a squarciagola con "
+"altre persone. Appassionato di vecchi computer e di elettronica analogica, "
+"si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una "
+"macchina da scrivere ed un pianoforte. Coordinatore del progetto open source "
+"FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due "
+"posti, soprattutto se a motore centrale.\n"
+"\n"
+"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
+"generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
+"su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
+"ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
+"dielettrica."
+msgstr ""
+
+#: l10n/trebbia.php:1573
+msgid ""
+"Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
+"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
+"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
+"mese.\n"
+"\n"
+"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
+"altre schedine embedded, basi di elettronica, programmatore a tempo perso "
+"(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
+"mi ostacola)."
+msgstr ""
+
+#: l10n/trebbia.php:1578
+msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
+msgstr ""
+
+#: l10n/trebbia.php:1581
+msgid ""
+"Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
+"dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
+"Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
+"Digitale. Consulente informatico si occupa di system engineering."
+msgstr ""
+
+#: l10n/trebbia.php:1584 l10n/trebbia.php:1587
+msgid "Big Data System Architect e sysadmin."
+msgstr ""
+
+#: l10n/trebbia.php:1590
+msgid ""
+"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
+"sicurezza informatica, full stack Java developer, Consigliere della "
+"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
+msgstr ""
+
+#: l10n/trebbia.php:1593
+msgid ""
+"The trash king!\n"
+"\n"
+"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
+"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
+"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
+"aziendale.\n"
+"\n"
+"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
+"muoversi in tutti i campi della creatività: dal product design alla grafica, "
+"dall'interaction design alla sostenibilità."
+msgstr ""
+
+#: l10n/trebbia.php:1600
+msgid ""
+"Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
+"conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
+"giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
+"e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
+"piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
+msgstr ""
+
+#: l10n/trebbia.php:1603
+msgid ""
+"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
+"Dipartimento di Informatica di Torino.\n"
+"\n"
+"Cosa c'entro? Te lo dico subito in questa intervista:\n"
+"\n"
+"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+"dipartimento/>"
+msgstr ""
+
+#: l10n/trebbia.php:1610
+msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
+msgstr ""
+
+#: l10n/trebbia.php:1613
+msgid ""
+"Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
+"\n"
+"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
+"scrivere in un antico linguaggio per incantare oggetti e materializzare "
+"oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
+"\n"
+"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
+"meglio la meravigliosa tecnologia intorno a noi.\n"
+"\n"
+"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi "
+"e per chi non legge mai i testi delle licenze."
+msgstr ""
+
+#: l10n/trebbia.php:1622
+msgid ""
+"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
+"che neanche nel 1983 sarebbe stato un buon computer.\n"
+"\n"
+"Ora cerco di sviluppare il mio futuro libero... e tu?"
+msgstr ""
+
 #: 2016/includes/class-ActivityBox.php:34
 #, php-format
 msgid "da %s"
@@ -1190,21 +3849,9 @@ msgstr ""
 msgid "Edizioni Passate"
 msgstr ""
 
-#: 2016/includes/class-Footer.php:103 2017/includes/class-Footer.php:103
-msgid "Dipartimento di Biotecnologie"
-msgstr ""
-
 #: 2016/includes/class-Footer.php:104 2016/includes/class-Footer.php:105
 #: 2017/includes/class-Footer.php:104 2017/includes/class-Footer.php:105
 msgid "Politecnico di Torino"
-msgstr ""
-
-#: 2016/includes/class-Footer.php:106 2017/includes/class-Footer.php:106
-msgid "Cortile del Maglio"
-msgstr ""
-
-#: 2016/includes/class-Footer.php:110 2017/includes/class-Footer.php:110
-msgid "Cascina Roccafranca"
 msgstr ""
 
 #: 2016/includes/class-Footer.php:115
@@ -1257,8 +3904,4 @@ msgstr ""
 msgid ""
 "Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di "
 "root <b>non</b> risolve la situazione!)"
-msgstr ""
-
-#: 2017/includes/class-Footer.php:102
-msgid "Dipartimento di Informatica"
 msgstr ""
