@@ -130,6 +130,11 @@ class Location extends Queried {
 	const NOTE = 'location_note';
 
 	/**
+	 * ID complete column name
+	 */
+	const ID_ = self::T . DOT . self::ID;
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override Queried::MAXLEN_UID

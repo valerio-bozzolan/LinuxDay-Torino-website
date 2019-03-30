@@ -195,6 +195,11 @@ class Conference extends Queried {
 	const ID_ = self::T . DOT . self::ID;
 
 	/**
+	 * Complete Location ID column name
+	 */
+	const LOCATION_ = self::T . DOT . Location::ID;
+
+	/**
 	 * Maximum UID length
 	 *
 	 * @override

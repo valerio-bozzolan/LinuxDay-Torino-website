@@ -52,24 +52,24 @@ class QueryEvent extends Query {
 	}
 
 	/**
-	 * Limit to a specific Conference
+	 * Exclude a specific Conference
 	 *
 	 * @param $conference Conference
 	 * @return self
 	 */
 	public function whereConferenceNot( $conference ) {
-		$this->joinConference();
-		return $this->where( sprintf(
-			'%s <> %d',
-		    Event::CONFERENCE_,
-		    $conference->getConferenceID()
-		) );
+		return $this->joinConference()
+		            ->where( sprintf(
+		                "%s <> %d",
+		                Event::CONFERENCE_,
+		                $conference->getConferenceID()
+		            ) );
 	}
 
 	/**
 	 * Join Events to their Conference
 	 *
-	 * You can call it multiple time safetly.
+	 * You can call it multiple time safely.
 	 *
 	 * @return self
 	 */
@@ -83,9 +83,27 @@ class QueryEvent extends Query {
 	}
 
 	/**
+	 * Join Events to their Location (and Conference. asd)
+	 *
+	 * You can call it multiple time safely.
+	 *
+	 * @TODO: move this method into QueryConference, and extends QueryEvent
+	 * @return self
+	 */
+	public function joinLocation() {
+		$this->joinConference();
+		if( empty( $this->joinedLocation ) ) {
+			$this->from(   Location::T                    );
+			$this->equals( Location::ID_, Conference::ID_ );
+			$this->joinedLocation = true;
+		}
+		return $this;
+	}
+
+	/**
 	 * Join Events to User IDs
 	 *
-	 * You can call it multiple time safetly.
+	 * You can call it multiple time safely.
 	 *
 	 * @return self
 	 */
@@ -101,7 +119,7 @@ class QueryEvent extends Query {
 	/**
 	 * Join Events and their Track, Chapter and Room (can be NULL).
 	 *
-	 * You can call it multiple time safetly.
+	 * You can call it multiple time safely.
 	 *
 	 * @return self
 	 */

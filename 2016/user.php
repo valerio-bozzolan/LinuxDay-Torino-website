@@ -146,7 +146,7 @@ Header::spawn( null, [
 	<div class="divider"></div>
 
 	<div class="section">
-		<h3><?php _e("Talk condotti") ?></h3>
+		<h3><?php _e("Talk") ?></h3>
 
 		<?php $events = ( new QueryEvent() )
 			->whereConference( $conference )
@@ -200,12 +200,12 @@ Header::spawn( null, [
 			</tbody>
 			</table>
 		<?php else: ?>
-			<p><?php _e("Questo utente non ha ancora tenuto nessun talk.") ?></p>
+			<p><?php _e("Quest'anno il relatore non ha tenuto nessun talk.") ?></p>
 		<?php endif ?>
 	</div>
 
 	<?php $events = ( new QueryEvent() )
-		->joinTrackChapterRoom()
+		->joinLocation()
 		->whereConferenceNot( $conference )
 		->whereUser( $user )
 		->orderBy( Event::START, 'DESC' )
@@ -222,9 +222,8 @@ Header::spawn( null, [
 				<td><?php _esc_html( $event->getConferenceTitle() ) ?></td>
 				<td>
 					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $conference->getLocationAddress() ) ?>">
-						<?php _esc_html( $conference->getLocationName() ) ?>
+						<?php _esc_html( $event->getLocationName() ) ?>
 					</span><br />
-					<?php _esc_html( $event->getRoomName() ) ?>
 				</td>
 				<td>
 					<?php printf(

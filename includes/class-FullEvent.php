@@ -17,6 +17,7 @@
 
 class_exists('Event');
 class_exists('Conference');
+class_exists('Location');
 class_exists('Room');
 class_exists('Chapter');
 class_exists('Track');
@@ -81,6 +82,7 @@ class FullEvent extends Queried {
 	use FullEventTrait;
 	use EventTrait;
 	use ConferenceTrait;
+	use LocationTrait;
 	use ChapterTrait;
 	use RoomTrait;
 	use TrackTrait;
