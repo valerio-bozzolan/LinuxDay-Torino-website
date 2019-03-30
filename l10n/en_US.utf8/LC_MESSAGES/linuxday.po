@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 23:49+0000\n"
+"POT-Creation-Date: 2019-03-30 17:45+0100\n"
 "PO-Revision-Date: 2018-08-23 02:04+0200\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -192,11 +192,11 @@ msgstr "E-mail invalid."
 msgid "Modifica evento"
 msgstr "Edit event"
 
-#: 2016/event.php:100 2016/user.php:161
+#: 2016/event.php:100 2016/user.php:163
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:107 2016/index.php:75 2016/user.php:162
+#: 2016/event.php:107 2016/index.php:75 2016/user.php:164
 msgid "Dove"
 msgstr "Where"
 
@@ -309,7 +309,7 @@ msgstr ""
 "was at <strong>%s</strong> (%s) at the <strong>Computer Science department</"
 "strong> of the Turin University of Studies."
 
-#: 2016/index.php:136 2016/includes/class-Header.php:155
+#: 2016/index.php:136 2016/includes/class-Header.php:157
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
@@ -494,25 +494,21 @@ msgid ""
 "Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
 msgstr "Annual event on Free software and GNU/Linux operating systems."
 
-#: 2016/load.php:69 2017/load.php:68
+#: 2016/load.php:64 2017/load.php:68
 msgid "Benvenuti"
 msgstr "Welcome"
 
-#: 2016/load.php:70
+#: 2016/load.php:65
 msgid "Partner"
 msgstr "Partners"
 
-#: 2016/load.php:71
+#: 2016/load.php:66
 msgid "Fotografie"
 msgstr "Photos"
 
-#: 2016/load.php:72
+#: 2016/load.php:67
 msgid "Crediti"
 msgstr "Credits"
-
-#: 2016/load.php:73 2017/load.php:72
-msgid "API"
-msgstr "API"
 
 #: 2016/login.php:41
 msgid "Sei loggato!"
@@ -643,37 +639,43 @@ msgstr "My favorite Free as in freedom software license is the <b>%s</b>."
 msgid "Bio"
 msgstr "Bio"
 
-#: 2016/user.php:149
-msgid "Talk condotti"
-msgstr "Hosted talks"
+#: 2016/user.php:149 l10n/trebbia.php:243
+msgid "Talk"
+msgstr "Talk"
 
-#: 2016/user.php:159
+#: 2016/user.php:161
 msgid "Nome"
 msgstr "Name"
 
-#: 2016/user.php:160
+#: 2016/user.php:162
 msgid "Tipo"
 msgstr "Type"
 
-#: 2016/user.php:163
+#: 2016/user.php:165
 msgid "When"
 msgstr "Quando"
 
-#: 2016/user.php:176
+#: 2016/user.php:178
 #, php-format
 msgid "Vedi %s"
 msgstr "See %s"
 
-#: 2016/user.php:190
+#: 2016/user.php:192 2016/user.php:230
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr "At <b>%s</b> (%s)"
 
-#: 2016/user.php:201
-msgid "Questo utente non ha ancora tenuto nessun talk."
+#: 2016/user.php:203
+#, fuzzy
+msgid "Quest'anno il relatore non ha tenuto nessun talk."
 msgstr "This user has not had any talk yet."
 
-#: 2016/user.php:209
+#: 2016/user.php:216
+#, fuzzy
+msgid "Altre partecipazioni"
+msgstr "With the partnership of:"
+
+#: 2016/user.php:247
 msgid "Social"
 msgstr "Social"
 
@@ -872,6 +874,10 @@ msgstr "Linux Day Turin 2017"
 msgid "LDTO2017"
 msgstr "LDTO2017"
 
+#: 2017/load.php:72
+msgid "API"
+msgstr "API"
+
 #: includes/class-HumanTime.php:45
 #, php-format
 msgid "fra %s"
@@ -966,73 +972,73 @@ msgstr "%d seconds"
 msgid "proprio ora"
 msgstr "just now"
 
-#: includes/class-Licenses.php:23
+#: includes/class-Licenses.php:24
 msgid "GNU General Public License, versione 3"
 msgstr "GNU General Public License, version 3"
 
-#: includes/class-Licenses.php:24
+#: includes/class-Licenses.php:25
 msgid "GNU General Public License, versione 2"
 msgstr "GNU General Public License, version 2"
 
-#: includes/class-Licenses.php:26
+#: includes/class-Licenses.php:27
 msgid "Licenza Apache, versione 2.0"
 msgstr "Apache License, version 2.0"
 
-#: includes/class-Licenses.php:27
+#: includes/class-Licenses.php:28
 msgid "Licenza MIT"
 msgstr "MIT License"
 
-#: includes/class-Licenses.php:28
+#: includes/class-Licenses.php:29
 msgid "Licenza PHP"
 msgstr "PHP License"
 
-#: includes/class-Licenses.php:30
+#: includes/class-Licenses.php:31
 msgid "Creative Commons - Attribuzione 4.0 Internazionale"
 msgstr "Creative Commons - Attribution 4.0 International"
 
-#: includes/class-Licenses.php:30
+#: includes/class-Licenses.php:31
 msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by/4.0/deed"
 
-#: includes/class-Licenses.php:31
+#: includes/class-Licenses.php:32
 msgid ""
 "Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
 msgstr "Creative Commons - Attribution - ShareAlike 3.0 Unported"
 
-#: includes/class-Licenses.php:31
+#: includes/class-Licenses.php:32
 msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by-sa/3.0/"
 
-#: includes/class-Licenses.php:32
+#: includes/class-Licenses.php:33
 msgid ""
 "Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
 "Internazionale"
 msgstr "Creative Commons Attribution - ShareAlike 4.0 International"
 
-#: includes/class-Licenses.php:32
+#: includes/class-Licenses.php:33
 msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by-sa/4.0/deed"
 
-#: includes/class-Licenses.php:33
+#: includes/class-Licenses.php:34
 msgid ""
 "Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
 "modo 4.0 Internazionale"
 msgstr ""
 "Creative Commons Attribution - Non Commercial - ShareAlike 4.0 International"
 
-#: includes/class-Licenses.php:33
+#: includes/class-Licenses.php:34
 msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by-nc-sa/4.0/deed"
 
-#: includes/class-Licenses.php:34
+#: includes/class-Licenses.php:35
 msgid "Licenza jQuery"
 msgstr "jQuery License"
 
-#: includes/class-Licenses.php:37
+#: includes/class-Licenses.php:38
 msgid "Fai cosa c**** ti pare Public License"
 msgstr "Do What The F*** you want to Public License"
 
-#: includes/class-Licenses.php:37
+#: includes/class-Licenses.php:38
 msgid "https://it.wikipedia.org/wiki/WTFPL"
 msgstr "https://en.wikipedia.org/wiki/WTFPL"
 
@@ -1568,10 +1574,6 @@ msgstr "Other"
 #: l10n/trebbia.php:240
 msgid "Di tutto un po'"
 msgstr "A bit of everything"
-
-#: l10n/trebbia.php:243
-msgid "Talk"
-msgstr "Talk"
 
 #: l10n/trebbia.php:252
 msgid "Corso"
@@ -2117,16 +2119,16 @@ msgstr ""
 "be considered something normal to don't give your sensitive informations to "
 "third parts!"
 
-#: 2016/includes/class-Header.php:60 2017/includes/class-Header.php:50
+#: 2016/includes/class-Header.php:62 2017/includes/class-Header.php:50
 #, php-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
-#: 2016/includes/class-Header.php:158
+#: 2016/includes/class-Header.php:160
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/includes/class-Header.php:178
+#: 2016/includes/class-Header.php:180
 msgid "This is Wikipedia"
 msgstr "This is Wikipedia"
 
@@ -2146,3 +2148,6 @@ msgid ""
 msgstr ""
 "Nott foond! A.k.a erroro fourzzzerofffoooourr (N.B. do not try to reload "
 "under root permissions... it will <b>not</b> save you!)"
+
+#~ msgid "Talk condotti"
+#~ msgstr "Hosted talks"
