@@ -19,7 +19,7 @@
 # Usage:
 # ./mieti.php > trebbia.php
 
-require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'load.php';
+require __DIR__ . '/../load.php';
 
 empty( $argv )
 	and error_die("THIS FILE CAN SPAWN PHP CODE?!? RUN AWAY (╯°□°)╯");
