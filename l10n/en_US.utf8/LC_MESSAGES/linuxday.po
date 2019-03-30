@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 17:45+0100\n"
-"PO-Revision-Date: 2018-08-23 02:04+0200\n"
+"POT-Creation-Date: 2019-03-30 17:52+0100\n"
+"PO-Revision-Date: 2019-03-30 17:52+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -666,14 +666,12 @@ msgid "Ore <b>%s</b> (il %s)"
 msgstr "At <b>%s</b> (%s)"
 
 #: 2016/user.php:203
-#, fuzzy
 msgid "Quest'anno il relatore non ha tenuto nessun talk."
-msgstr "This user has not had any talk yet."
+msgstr "This speaker has not had any talk this year."
 
 #: 2016/user.php:216
-#, fuzzy
 msgid "Altre partecipazioni"
-msgstr "With the partnership of:"
+msgstr "Other partecipations"
 
 #: 2016/user.php:247
 msgid "Social"
@@ -735,6 +733,8 @@ msgid ""
 "Il Linux Day è un evento che si svolge nello stesso giorno (quest'anno, "
 "sabato 28 ottobre) in tutta Italia."
 msgstr ""
+"The Linux Day is an event taking place the same day in every part of Italy "
+"(this year, Saturday 28 October)."
 
 #: 2017/index.php:97
 msgid ""
@@ -752,11 +752,11 @@ msgstr ""
 
 #: 2017/index.php:106
 msgid "Vedi il programma"
-msgstr ""
+msgstr "See the schedule"
 
 #: 2017/index.php:121 2017/index.php:146
 msgid "Location"
-msgstr ""
+msgstr "Location"
 
 #: 2017/index.php:121
 msgid "Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino."
@@ -781,7 +781,7 @@ msgstr "Extras"
 
 #: 2017/index.php:132
 msgid "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
-msgstr ""
+msgstr "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
 
 #: 2017/index.php:149
 msgid ""
@@ -838,10 +838,13 @@ msgstr ""
 #: 2017/index.php:219
 msgid "Porta il tuo computer, ti aiuteremo ad installare Linux!"
 msgstr ""
+"Take with you your computer, we will help you in installing Free Software!"
 
 #: 2017/index.php:220
 msgid "Il frullatore non funziona più? Portalo e lo ripareremo insieme!"
 msgstr ""
+"Your toaster does not work anymore? Take it with you and we will fix it "
+"together!"
 
 #: 2017/index.php:226
 #, php-format
@@ -855,6 +858,8 @@ msgid ""
 "Vieni a presentare il tuo progetto open source e smanettaci con altri "
 "appassionati!"
 msgstr ""
+"Come here to show off your Libre and Open Source project and hack it with "
+"enthusiasts!"
 
 #: 2017/index.php:238
 msgid "Sponsor"
@@ -864,7 +869,7 @@ msgstr "Sponsor:"
 msgid ""
 "Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere "
 "l'evento."
-msgstr ""
+msgstr "Thanks to our sponsor, who helps us to sustain the event."
 
 #: 2017/load.php:46 l10n/trebbia.php:27
 msgid "Linux Day Torino 2017"
