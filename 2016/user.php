@@ -221,7 +221,7 @@ Header::spawn( null, [
 				<td><?php _esc_html( $event->getEventTitle() ) ?></td>
 				<td><?php _esc_html( $event->getConferenceTitle() ) ?></td>
 				<td>
-					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $conference->getLocationAddress() ) ?>">
+					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $event->getLocationAddress() ) ?>">
 						<?php _esc_html( $event->getLocationName() ) ?>
 					</span><br />
 				</td>
