@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 18:00+0100\n"
-"PO-Revision-Date: 2019-03-30 17:52+0100\n"
+"PO-Revision-Date: 2019-03-30 18:03+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -1578,7 +1578,7 @@ msgstr ""
 
 #: l10n/trebbia.php:241
 msgid "Firefox e Thunderbird"
-msgstr ""
+msgstr "Firefox and Thunderbird"
 
 #: l10n/trebbia.php:244
 msgid "Ottieni il massimo da posta e web"
@@ -1594,7 +1594,7 @@ msgstr ""
 
 #: l10n/trebbia.php:253
 msgid "Niente panico"
-msgstr ""
+msgstr "Don't panic"
 
 #: l10n/trebbia.php:256
 msgid "I trucchi per passare a Linux senza l'aiuto degli esperti"
@@ -1623,15 +1623,15 @@ msgstr ""
 
 #: l10n/trebbia.php:274
 msgid "Dal server al desktop!"
-msgstr ""
+msgstr "From server to desktop!"
 
 #: l10n/trebbia.php:277
 msgid "Sicurezza reti wireless"
-msgstr ""
+msgstr "Security in wireless networks"
 
 #: l10n/trebbia.php:280
 msgid "Vulnerabilità di una rete senza fili"
-msgstr ""
+msgstr "Vulnerabilities of a wireless network"
 
 #: l10n/trebbia.php:283
 msgid "Videoediting"
@@ -1717,7 +1717,7 @@ msgstr "Introduction to JavaScript programming"
 
 #: l10n/trebbia.php:343
 msgid "Sviluppo Web con CakePHP"
-msgstr ""
+msgstr "Web development with CakePHP"
 
 #: l10n/trebbia.php:346
 msgid "Introduzione al framework MVC con esempi pratici"
@@ -1925,7 +1925,7 @@ msgstr ""
 
 #: l10n/trebbia.php:442
 msgid "Tuffarsi in Vim"
-msgstr ""
+msgstr "Swim in Vim"
 
 #: l10n/trebbia.php:445
 msgid ""
@@ -1974,7 +1974,7 @@ msgstr ""
 
 #: l10n/trebbia.php:466
 msgid "Ldap diventa semplice"
-msgstr ""
+msgstr "Ldap become simple"
 
 #: l10n/trebbia.php:469
 msgid "Bacula: il backup enterprise"
@@ -2182,7 +2182,7 @@ msgstr ""
 
 #: l10n/trebbia.php:574
 msgid "Introduzione a Blender"
-msgstr ""
+msgstr "Blender introduction"
 
 #: l10n/trebbia.php:577
 msgid ""
