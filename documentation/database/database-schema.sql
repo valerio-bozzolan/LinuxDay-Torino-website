@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: ldto
 -- ------------------------------------------------------
--- Server version	10.1.26-MariaDB-0+deb9u1
+-- Server version	10.1.37-MariaDB-0+deb9u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -70,7 +70,7 @@ CREATE TABLE `ldto_conference` (
   UNIQUE KEY `conference_uid` (`conference_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_conference_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,16 +82,17 @@ LOCK TABLES `ldto_conference` WRITE;
 INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',1,1);
 INSERT INTO `ldto_conference` VALUES (2,'2015','Linux Day Torino 2015',NULL,'LDTO15',NULL,NULL,NULL,'Torino',NULL,'2015-10-24 14:00:00','2015-10-24 18:00:00',1,2);
 INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO17','http://linuxdaytorino.org/2017/user/%1$s','http://linuxdaytorino.org/2017/talk/%1$s',NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
-INSERT INTO `ldto_conference` VALUES (4,'2009','Linux Day Torino 2009',NULL,'LDTO2009',NULL,NULL,NULL,'Torino',NULL,'2009-10-24 14:00:00','2009-10-24 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (5,'2010','Linux Day Torino 2010',NULL,'LDTO2010',NULL,NULL,NULL,'Torino',NULL,'2010-10-23 10:00:00','2010-10-23 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (6,'2011','Linux Day Torino 2011',NULL,'LDTO2011',NULL,NULL,NULL,'Torino',NULL,'2011-10-22 14:00:00','2011-10-22 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (7,'2012','Linux Day Torino 2012',NULL,'LDTO2012',NULL,NULL,NULL,'Torino',NULL,'2012-10-26 10:00:00','2012-10-27 18:00:00',2,NULL);
-INSERT INTO `ldto_conference` VALUES (8,'2013','Linux Day Torino 2013',NULL,'LDTO2013',NULL,NULL,NULL,'Torino',NULL,'2013-10-26 14:00:00','2013-10-26 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (9,'2014','Linux Day Torino 2014',NULL,'LDTO2014',NULL,NULL,NULL,'Torino',NULL,'2014-10-25 14:00:00','2014-10-25 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (10,'2001','Linux Day Torino 2001',NULL,'LDTO2001',NULL,NULL,NULL,'Torino',NULL,'2001-12-01 09:00:00','2001-12-01 15:30:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (11,'2002','Linux Day Torino 2002',NULL,'LDTO2002',NULL,NULL,NULL,'Torino',NULL,'2002-11-23 09:00:00','2002-11-23 15:30:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (12,'2008','Linux Day Torino 2008',NULL,'LDTO2008',NULL,NULL,NULL,'Torino',NULL,'2008-10-25 13:30:00','2008-10-25 18:00:00',1,NULL);
-INSERT INTO `ldto_conference` VALUES (13,'2007','Linux Day Torino 2007',NULL,'LDTO2017',NULL,NULL,NULL,'Torino',NULL,'2007-10-27 14:00:00','2007-10-27 18:00:00',1,NULL);
+INSERT INTO `ldto_conference` VALUES (4,'2009','Linux Day Torino 2009',NULL,'LDTO2009',NULL,NULL,NULL,'Torino',NULL,'2009-10-24 14:00:00','2009-10-24 18:00:00',1,5);
+INSERT INTO `ldto_conference` VALUES (5,'2010','Linux Day Torino 2010',NULL,'LDTO2010',NULL,NULL,NULL,'Torino',NULL,'2010-10-23 10:00:00','2010-10-23 18:00:00',1,5);
+INSERT INTO `ldto_conference` VALUES (6,'2011','Linux Day Torino 2011',NULL,'LDTO2011',NULL,NULL,NULL,'Torino',NULL,'2011-10-22 14:00:00','2011-10-22 18:00:00',1,5);
+INSERT INTO `ldto_conference` VALUES (7,'2012','Linux Day Torino 2012',NULL,'LDTO2012',NULL,NULL,NULL,'Torino',NULL,'2012-10-26 10:00:00','2012-10-27 18:00:00',2,6);
+INSERT INTO `ldto_conference` VALUES (8,'2013','Linux Day Torino 2013',NULL,'LDTO2013',NULL,NULL,NULL,'Torino',NULL,'2013-10-26 14:00:00','2013-10-26 18:00:00',1,4);
+INSERT INTO `ldto_conference` VALUES (9,'2014','Linux Day Torino 2014',NULL,'LDTO2014',NULL,NULL,NULL,'Torino',NULL,'2014-10-25 14:00:00','2014-10-25 18:00:00',1,4);
+INSERT INTO `ldto_conference` VALUES (10,'2001','Linux Day Torino 2001',NULL,'LDTO2001',NULL,NULL,NULL,'Torino',NULL,'2001-12-01 09:00:00','2001-12-01 15:30:00',1,3);
+INSERT INTO `ldto_conference` VALUES (11,'2002','Linux Day Torino 2002',NULL,'LDTO2002',NULL,NULL,NULL,'Torino',NULL,'2002-11-23 09:00:00','2002-11-23 15:30:00',1,9);
+INSERT INTO `ldto_conference` VALUES (12,'2008','Linux Day Torino 2008',NULL,'LDTO2008',NULL,NULL,NULL,'Torino',NULL,'2008-10-25 13:30:00','2008-10-25 18:00:00',1,5);
+INSERT INTO `ldto_conference` VALUES (13,'2007','Linux Day Torino 2007',NULL,'LDTO2017',NULL,NULL,NULL,'Torino',NULL,'2007-10-27 14:00:00','2007-10-27 18:00:00',1,5);
+INSERT INTO `ldto_conference` VALUES (14,'2019','Linux Day Torino 2010',NULL,'LDTO19','http://linuxdaytorino.org/2019/user/%1$s','http://linuxdaytorino.org/2019/talk/%1$s',NULL,'Torino',NULL,'2019-10-26 14:00:00','2019-10-26 19:00:00',1,10);
 /*!40000 ALTER TABLE `ldto_conference` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -593,7 +594,7 @@ CREATE TABLE `ldto_location` (
   `location_lng` float NOT NULL,
   `location_zoom` int(1) DEFAULT NULL,
   PRIMARY KEY (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -611,6 +612,8 @@ INSERT INTO `ldto_location` VALUES (6,'cortile-del-maglio','Cortile del Maglio',
 INSERT INTO `ldto_location` VALUES (7,'sala-consiglieri-della-provincia-di-torino','Sala Consiglieri della Provincia di Torino','Via Maria Vittoria 12, Torino','Palazzo Cisterna',NULL,45.0671,7.68531,NULL);
 INSERT INTO `ldto_location` VALUES (8,'cdq','Casa del Quartiere','Via Oddino Morgari 14, Torino',NULL,NULL,45.0542,7.67816,NULL);
 INSERT INTO `ldto_location` VALUES (9,'torino-incontra','Torino Incontra','Via Nino Costa 8, Torino',NULL,NULL,45.0648,7.68596,NULL);
+INSERT INTO `ldto_location` VALUES (10,'toolbox-coworking','Toolbox Coworking','Via Agostino da Montefeltro 2, Torino',NULL,NULL,45.0502,7.6671,NULL);
+INSERT INTO `ldto_location` VALUES (11,'fablab','Fablab','Via Egeo 16, Torino',NULL,NULL,45.0501,7.66605,NULL);
 /*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -813,7 +816,7 @@ CREATE TABLE `ldto_track` (
   PRIMARY KEY (`track_ID`),
   UNIQUE KEY `track_uid` (`track_uid`),
   KEY `track_order` (`track_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -829,6 +832,8 @@ INSERT INTO `ldto_track` VALUES (4,'misc','Misc',1,'Argomenti relativi alla cono
 INSERT INTO `ldto_track` VALUES (5,'altro','Altro',5,'Di tutto un po\'');
 INSERT INTO `ldto_track` VALUES (6,'intermediate','Intermedio',6,'Adatto ad un pubblico abbastanza smanettone');
 INSERT INTO `ldto_track` VALUES (7,'advanced','Avanzato',7,'Adatto ad un pubblico di nerd disperati');
+INSERT INTO `ldto_track` VALUES (8,'sikurezza','Sikurezza',3,NULL);
+INSERT INTO `ldto_track` VALUES (9,'sicurezza','Sicurezza',3,NULL);
 /*!40000 ALTER TABLE `ldto_track` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1008,7 +1013,7 @@ INSERT INTO `ldto_user` VALUES (139,'gianpaolo-perego','user',1,0,'Gianpaolo','P
 INSERT INTO `ldto_user` VALUES (140,'dario-guerrieri','user',1,0,'Dario','Guerrieri',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (141,'jean-francois-panico','user',1,0,'Jean François','Panico',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (142,'marco-musso','user',1,0,'Marco','Musso',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (143,'admin','admin',1,1,'','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (143,'admin','admin',1,1,'','',NULL,NULL,NULL,NULL,'e3ebe6f5b201d382ce29fbde2fca43516c07d777',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1083,4 +1088,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-30 16:43:07
+-- Dump completed on 2019-04-25  9:56:04
