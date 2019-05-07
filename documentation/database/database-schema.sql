@@ -92,7 +92,7 @@ INSERT INTO `ldto_conference` VALUES (10,'2001','Linux Day Torino 2001',NULL,'LD
 INSERT INTO `ldto_conference` VALUES (11,'2002','Linux Day Torino 2002',NULL,'LDTO2002',NULL,NULL,NULL,'Torino',NULL,'2002-11-23 09:00:00','2002-11-23 15:30:00',1,9);
 INSERT INTO `ldto_conference` VALUES (12,'2008','Linux Day Torino 2008',NULL,'LDTO2008',NULL,NULL,NULL,'Torino',NULL,'2008-10-25 13:30:00','2008-10-25 18:00:00',1,5);
 INSERT INTO `ldto_conference` VALUES (13,'2007','Linux Day Torino 2007',NULL,'LDTO2017',NULL,NULL,NULL,'Torino',NULL,'2007-10-27 14:00:00','2007-10-27 18:00:00',1,5);
-INSERT INTO `ldto_conference` VALUES (14,'2019','Linux Day Torino 2010',NULL,'LDTO19','http://linuxdaytorino.org/2019/user/%1$s','http://linuxdaytorino.org/2019/talk/%1$s',NULL,'Torino',NULL,'2019-10-26 14:00:00','2019-10-26 19:00:00',1,10);
+INSERT INTO `ldto_conference` VALUES (14,'2019','Linux Day Torino 2019',NULL,'LDTO19','http://linuxdaytorino.org/2019/user/%1$s','http://linuxdaytorino.org/2019/talk/%1$s',NULL,'Torino',NULL,'2019-10-26 14:00:00','2019-10-26 19:00:00',1,10);
 /*!40000 ALTER TABLE `ldto_conference` ENABLE KEYS */;
 UNLOCK TABLES;
 
