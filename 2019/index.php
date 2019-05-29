@@ -116,7 +116,7 @@ template( 'header', [
 			</div>
 			<div class="col-md-6 col-sm-10">
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6sqk9MT9Tfg" allowfullscreen></iframe>
+					<!-- iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6sqk9MT9Tfg" allowfullscreen></iframe -->
 				</div>
 			</div>
 

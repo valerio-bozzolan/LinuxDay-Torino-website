@@ -51,8 +51,9 @@ http://www.templatemo.com/tm-486-new-event
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+<!-- Organic fonts grown locally, hand-picked for your enojyment. Guaranteed tracking-free, absolutely no CDNs! -->
+<!-- Do you want even faster loading times with sites that use CDNs? Try https://decentraleyes.org/ (not sponsored, just a good extension) -->
+<link href='/2019/css/poppins.css' rel='stylesheet' type='text/css'>
 
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
