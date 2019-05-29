@@ -13,7 +13,7 @@ PROJECT=/vagrant
 WWW="$PROJECT"
 DB_NAME=ldto
 DB_PREFIX=ldto_
-BOZ_PHP=/usr/share/boz-php-another-php-framework
+BOZ_PHP=/usr/share/php/boz-php
 
 # Very scaring
 DB_USER=ldto
@@ -41,15 +41,13 @@ fi
 chmod --recursive 750           "$BOZ_PHP"
 chown --recursive root:www-data "$BOZ_PHP"
 
-# create an empty database
+echo "create an empty database"
 mysql <<EOF
 DROP DATABASE IF EXISTS \`$DB_NAME\`;
 CREATE DATABASE \`$DB_NAME\`;
-GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$DB_PASSWORD';
-FLUSH PRIVILEGES;
 EOF
 
-# create a file with database credentials
+echo "create a file with database credentials"
 cat > "$WWW/load.php" <<EOF
 <?php
 \$database = '$DB_NAME';
@@ -67,19 +65,26 @@ define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
 require '$BOZ_PHP/load.php';
 EOF
 
-# populate the database
+echo "grant database permissions"
+mysql <<EOF
+GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$DB_PASSWORD';
+FLUSH PRIVILEGES;
+EOF
+
+echo "populate the database"
 "$PROJECT"/cli/populate.php
 
-# TODO: try a SELECT FOR UPDATE into the add-user script
-sleep 10
+# TODO: WHAT THE FUCK - error: Table 'ldto.ldto_user' doesn't exist
+echo "add an admin user or update its password"
+"$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin --force
 
-# disable the default apache site
+echo "disable the default apache site"
 a2dissite --quiet 000-default
 
-# copy apache configuration for ldto site
+echo "copy apache configuration for ldto site"
 ln --symbolic --force "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/ldto.conf
 
-# Patch for php-libmarkdown
+echo "patch for php-libmarkdown"
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
 sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php/markdown.php
 
@@ -89,17 +94,14 @@ a2enmod --quiet rewrite
 # enable ldto apache site
 a2ensite --quiet ldto
 
-# GNU Gettext workflow
+echo "GNU Gettext workflow"
 cd  "$WWW"
 php "$WWW"/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
-# restart apache
+echo "restart apache"
 systemctl restart apache2
-
-# add an admin user (or update its password)
-"$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin --force
 
 ##############################################
 # now as surplus we add an nginx environment #
