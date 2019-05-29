@@ -1,69 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!--
-New Event
-http://www.templatemo.com/tm-486-new-event
--->
-<title>Linux Day Torino 2019</title>
-<meta name="description" content="">
-<meta name="author" content="Comitato Linux Day Torino">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<?php
+# Linux Day Torino website
+# Copyright (C) 2019 Ludovico Pavesi, Valerio Bozzolan and contributors
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
+require 'load.php';
 
-<!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
+$conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
+	->queryRow();
 
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+$conference or die_with_404();
 
-</head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+FORCE_PERMALINK
+	and $conference->forceConferencePermalink();
 
+template( 'header', [
+	'conference' => $conference,
+] );
 
+?>
 <!-- =========================
-     NAVIGATION LINKS     
-============================== -->
-<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-	<div class="container">
-
-		<!-- navbar header -->
-		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-			</button>
-			<a href="#" class="navbar-brand">Linux Day Torino 2019</a>
-		</div>
-
-		<div class="collapse navbar-collapse">
-
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#intro" class="smoothScroll">Intro</a></li>
-				<li><a href="#overview" class="smoothScroll">Overview</a></li>
-				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
-				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#register" class="smoothScroll">Register</a></li>
-				<li><a href="#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
-				<li><a href="#contact" class="smoothScroll">Contact</a></li>
-			</ul>
-
-		</div>
-
-	</div>
-</div>
-
-
-<!-- =========================
-    INTRO SECTION   
+    INTRO SECTION
 ============================== -->
 <section id="intro" class="parallax-section">
 	<div class="container">
@@ -148,7 +116,7 @@ http://www.templatemo.com/tm-486-new-event
 			</div>
 			<div class="col-md-6 col-sm-10">
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6sqk9MT9Tfg" allowfullscreen></iframe>
+					<!-- iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6sqk9MT9Tfg" allowfullscreen></iframe -->
 				</div>
 			</div>
 
@@ -612,45 +580,4 @@ http://www.templatemo.com/tm-486-new-event
 		</div>
 	</div>
 </section>
-
-
-<!-- =========================
-    FOOTER SECTION   
-============================== -->
-<footer>
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-sm-12">
-				<p>Copyright &copy; 2019 Comitato Linux Day torino
-
-                    | Design: <a rel="nofollow" href="http://www.templatemo.com/page/1" target="_parent">Templatemo</a></p>
-
-				<ul class="social-icon">
-					<li><a href="https://www.facebook.com/LinuxDayTorino/" class="fa fa-facebook"></a></li>
-					<li><a href="https://twitter.com/linuxdaytorino" class="fa fa-twitter"></a></li>
-				</ul>
-
-			</div>
-			
-		</div>
-	</div>
-</footer>
-
-
-<!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
-
-<!-- =========================
-     SCRIPTS   
-============================== -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.parallax.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/custom.js"></script>
-
-</body>
-</html>
+<?php template( 'footer' );
