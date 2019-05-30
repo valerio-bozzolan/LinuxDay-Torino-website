@@ -29,7 +29,7 @@ class Header {
 	static function spawn( $menu_uid = null, $args = [] ) {
 
 		$menu = $menu_uid
-			? get_menu_entry( $menu_uid )
+			? menu_entry( $menu_uid )
 			: null;
 
 		$args = array_replace( [

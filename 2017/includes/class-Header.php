@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Header
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,7 +17,7 @@
 
 class Header {
 	static function spawn($menu_uid = null, $args = [] ) {
-		$menu = get_menu_entry($menu_uid);
+		$menu = menu_entry($menu_uid);
 
 		$args = array_replace( [
 			'show-title'  => true,
