@@ -1,12 +1,12 @@
 # Linux Day Torino website
 ![Linux Day Torino](https://raw.githubusercontent.com/0iras0r/ld2016/master/2016/static/linuxday-64.png)
 
-Materiale per il Linux Day Torino dal 2016 al 2017.
+Materiale per il Linux Day Torino dal 2016 al 2019.
 
 ## Installazione sito web
 Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di ogni Linux Day Torino, centralizzandone le informazioni.
 
-È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework Boz-PHP.
+È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework [sucklessPhp](https://github.com/valerio-bozzolan/suckless-php).
 
 ### Preparazione
 Su un sistema Debian `stable`:
