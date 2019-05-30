@@ -13,7 +13,8 @@ PROJECT=/vagrant
 WWW="$PROJECT"
 DB_NAME=ldto
 DB_PREFIX=ldto_
-BOZ_PHP=/usr/share/php/boz-php
+SUCKLESS_PHP=$PROJECT/includes/suckless-php
+SUCKLESS_PHP_REPO=https://github.com/valerio-bozzolan/suckless-php.git
 
 # Very scaring
 DB_USER=ldto
@@ -31,15 +32,13 @@ apt-get install --yes mariadb-server     \
                       libmarkdown-php    \
                       libjs-jquery       \
                       libjs-leaflet      \
-                      bzr
+                      git
 
-if [ ! -e "$BOZ_PHP" ]; then
-	bzr branch --quiet lp:boz-php-another-php-framework "$BOZ_PHP"
+if [ ! -e "$SUCKLESS_PHP" ]; then
+	git clone "$SUCKLESS_PHP_REPO" "$SUCKLESS_PHP"
 else
-	bzr pull --quiet --directory="$BOZ_PHP" lp:boz-php-another-php-framework
+	git -C "$SUCKLESS_PHP" pull
 fi
-chmod --recursive 750           "$BOZ_PHP"
-chown --recursive root:www-data "$BOZ_PHP"
 
 echo "create an empty database"
 mysql <<EOF
@@ -62,7 +61,7 @@ define('DB_TIMEZONE', 'Europe/Rome');
 define('CONTACT_EMAIL', 'asd@asd.asd');
 define('CONTACT_PHONE', '555-555-555');
 define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
-require '$BOZ_PHP/load.php';
+require '$SUCKLESS_PHP/load.php';
 EOF
 
 echo "grant database permissions"

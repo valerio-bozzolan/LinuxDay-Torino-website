@@ -51,5 +51,5 @@ define('CONTACT_PHONE_PREFIX', '+39'            );
 // which file should be loaded after boz-php
 define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
 
-// load boz-php
-require '/usr/share/boz-php-another-php-framework/load.php';
+// load suckless-php
+require 'includes/suckless-php/load.php';
