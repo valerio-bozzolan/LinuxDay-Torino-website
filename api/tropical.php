@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - API to generate a strange XML file format
+# Linux Day Torino - API to generate a strange iCal file format
 # Copyright (C) 2019 Ludovico Pavesi, Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
@@ -14,12 +14,6 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-/*
- * This is the Linux Day Torino Tropical (trop-iCal) API
- *
- * It print a (hopefully) valid iCal file of a Linux Day Torino event.
- */
 
 /*
  * This is the Linux Day Torino Tropical (trop-iCal) API
@@ -91,6 +85,8 @@ if( $conference->locationHasGeo() ) {
 if( empty( $_GET['debug'] ) ) {
 	header( 'Content-Type: text/calendar' );
 	header( sprintf( 'Content-Disposition: attachment; filename=%s.ics', $event_uid ) );
+} else {
+	header( 'Content-Type: text/plain' );
 }
 
 echo get_ical(
@@ -104,32 +100,51 @@ echo get_ical(
 	$event_geo_lng
 );
 
-function get_ical( $id, $title, $start, $end, $url = null, $description = null, $geo_lat = null, $geo_lng = null ) {
-    $rn = "\r\n";
-    $dtstart = date( 'Ymd\Tgis\Z', $start );
-    $dtend   = date( 'Ymd\Tgis\Z', $end   );
-    $dtstamp = date( 'Ymd\Tgis\Z', time() );
-    $title = htmlspecialchars( $title );
-	if( !$description ) {
-        $opt_description = '';
-    } else {
-    	$description = str_replace( "\n", " ", $description );
-    	$description = strip_tags( $description );
-    	$description = htmlspecialchars( $description );
-        $opt_description = "DESCRIPTION:$description";
-    }
-    if( !$url ) {
-        $opt_url = '';
-    } else {
-        $opt_url = 'URL;VALUE=URI:' . htmlspecialchars( $url );
-    }
-    if( !$geo_lat || !$geo_lng ) {
-        $opt_geo = '';
-    } else {
-        $opt_geo = "GEO:$geo_lat;$geo_lng";
-    }
+function timestamp_to_ical( $timestamp ) {
+	// TODO: add \Z at the end once timestamp is an actual UNIX timestamp
+	return date( 'Ymd\THis', $timestamp );
+}
 
-    $ics = <<<EOD
+/**
+ * Get an event (or conference as a single event) in iCal format.
+ *
+ * @param string $id Unique ID for this event
+ * @param string $title Event title
+ * @param int $start Start time (UNIX timestamp)
+ * @param int $end End time (UNIX timestamp)
+ * @param string $url Event URL
+ * @param string $description Longer description of the event
+ * @param float $geo_lat Latitude of the location
+ * @param float $geo_lon Longitude of the location
+ *
+ * @return string the event in iCal format
+ */
+function get_ical( $id, $title, $start, $end, $url = null, $description = null, $geo_lat = null, $geo_lng = null ) {
+	$rn = "\r\n";
+	$dtstart = timestamp_to_ical( $start );
+	$dtend   = timestamp_to_ical( $end   );
+	$dtstamp = timestamp_to_ical( time() );
+	$title = htmlspecialchars( $title );
+	if( !$description ) {
+		$opt_description = '';
+	} else {
+		$description = str_replace( "\n", " ", $description );
+		$description = strip_tags( $description );
+		$description = htmlspecialchars( $description );
+		$opt_description = "DESCRIPTION:$description";
+	}
+	if( !$url ) {
+		$opt_url = '';
+	} else {
+		$opt_url = 'URL;VALUE=URI:' . htmlspecialchars( $url );
+	}
+	if( !$geo_lat || !$geo_lng ) {
+		$opt_geo = '';
+	} else {
+		$opt_geo = "GEO:$geo_lat;$geo_lng";
+	}
+
+	$ics = <<<EOD
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ldto/asd//NONSGML v1.0//EN
