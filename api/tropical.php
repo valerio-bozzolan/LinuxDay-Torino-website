@@ -79,6 +79,10 @@ if( !$event ) {
 
 if( empty( $_GET['debug'] ) ) {
 	header( 'Content-Type: text/calendar' );
+	header( sprintf( 'Content-Disposition: attachment; filename=%s-%s.ics',
+		$conference->getConferenceUID(),
+		$event->getEventUID()
+	) );
 }
 
 echo get_ical(
