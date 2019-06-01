@@ -79,7 +79,7 @@ http://www.templatemo.com/tm-486-new-event
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#intro" class="smoothScroll">Intro</a></li>
-				<li><a href="#overview" class="smoothScroll">Overview</li>
+				<li><a href="#overview" class="smoothScroll">Overview</a></li>
 				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
 				<li><a href="#program" class="smoothScroll">Programs</a></li>
 				<li><a href="#register" class="smoothScroll">Register</a></li>
