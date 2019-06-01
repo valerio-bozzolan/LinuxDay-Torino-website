@@ -120,9 +120,26 @@ class FullEvent extends Queried {
 			->whereInt( Event::CONFERENCE_, $conference_ID );
 	}
 
+	/**
+	 * @deprecate Use self::factoryFromConferenceAndUID() instead
+	 */
 	static function factoryByConferenceAndUID( $conference_ID, $event_uid ) {
 		$event_uid = Event::sanitizeUID( $event_uid );
 
+		return self::factoryByConference( $conference_ID )
+			->whereStr( Event::UID, $event_uid );
+	}
+
+	/**
+	 * Factory from a Conference object and the Event UID
+	 *
+	 * @param object $conference
+	 * @param string $event_uid
+	 * @return Query
+	 */
+	public static function factoryFromConferenceAndEventUID( $conference, $event_uid ) {
+		$event_uid =  Event::sanitizeUID( $event_uid );
+		$conference_ID = $conference->getConferenceID();
 		return self::factoryByConference( $conference_ID )
 			->whereStr( Event::UID, $event_uid );
 	}

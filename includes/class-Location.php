@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database Location
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -36,6 +36,24 @@ trait LocationTrait {
 	}
 
 	/**
+	 * Get the Location latitude
+	 *
+	 * @return float|null
+	 */
+	public function getLocationGeoLat() {
+		return $this->get( 'location_lat' );
+	}
+
+	/**
+	 * Get the Location longitude
+	 *
+	 * @return float|null
+	 */
+	public function getLocationGeoLng() {
+		return $this->get( 'location_lng' );
+	}
+
+	/**
 	 * Get localized location note
 	 *
 	 * @return string
@@ -57,10 +75,14 @@ trait LocationTrait {
 		return $g;
 	}
 
-	function locationHasGeo() {
-		return
-			null !== $this->get('location_lat') &&
-			null !== $this->get('location_lng');
+	/**
+	 * Check if the location has geographical informations
+	 *
+	 * @return boolean
+	 */
+	public function locationHasGeo() {
+		return $this->has('location_lat') &&
+		       $this->has('location_lng');
 	}
 
 	function getLocationZoom() {
@@ -71,8 +93,8 @@ trait LocationTrait {
 	function getLocationGeoOSM() {
 		return sprintf(
 			'https://www.openstreetmap.org/?mlat=%1$s&mlon=%2$s#map=%3$s/%1$s/%2$s',
-			$this->get('location_lat'),
-			$this->get('location_lng'),
+			$this->getLocationLat(),
+			$this->getLocationLng(),
 			$this->getLocationZoom()
 		);
 	}
@@ -80,8 +102,8 @@ trait LocationTrait {
 	function printLocationLeaflet() {
 		printf(
 			'<div data-lat="%s" data-lng="%s" data-zoom="%s" id="map"></div>',
-			$this->get('location_lat'),
-			$this->get('location_lng'),
+			$this->getLocationLat(),
+			$this->getLocationLng(),
 			$this->getLocationZoom()
 		);
 	}
