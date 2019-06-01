@@ -47,51 +47,59 @@ if( !$conference ) {
 }
 
 // die if missing Event UID
-if( empty( $_GET['event'] ) ) {
-	http_response_code( 400 );
-	die( "Missing 'event' argument" );
+if( isset( $_GET['event'] ) ) {
+	$event = FullEvent::factoryFromConferenceAndEventUID( $conference, $_GET['event'] )
+		->queryRow();
+
+	if( !$event ) {
+		http_response_code( 404 );
+		die( "Event not found" );
+	}
 }
 
-$event = FullEvent::factoryFromConferenceAndEventUID( $conference, $_GET['event'] )
-	->queryRow();
-
-if( !$event ) {
-	http_response_code( 404 );
-	die( "Event not found" );
+$event_url = null;
+if( $event ) {
+	$event_ID    = $event->getEventID();
+	$event_title = $event->getEventTitle();
+	$event_start = $event->getEventStart( 'U' );
+	$event_end   = $event->getEventEnd( 'U' );
+	$event_desc  = $event->getEventDescription();
+	if( $event->hasEventPermalink() ) {
+		$event_url = $event->getEventURL();
+	}
+} else {
+	$event_ID    = $conference->getConferenceID();
+	$event_title = $conference->getConferenceTitle();
+	$event_url   = $conference->getConferenceURL();
+	$event_start = $conference->getConferenceStart( 'U' );
+	$event_end   = $conference->getConferenceEnd( 'U' );
+	$event_desc  = $conference->getConferenceDescription();
 }
 
-$event_url     = null;
+$event_uid = $conference->getConferenceUID();
+if( $event ) {
+	$event_uid .= '-' . $event->getEventUID();
+}
+
 $event_geo_lat = null;
 $event_geo_lng = null;
-if( $event->hasEventPermalink() ) {
-	$event_url = $event->getEventURL();
-}
-
 if( $conference->locationHasGeo() ) {
 	$event_geo_lat = $conference->getLocationGeoLat();
 	$event_geo_lng = $conference->getLocationGeoLng();
 }
 
-if( !$event ) {
-	http_response_code( 404 );
-	die( "Cannot find event" );
-}
-
 if( empty( $_GET['debug'] ) ) {
 	header( 'Content-Type: text/calendar' );
-	header( sprintf( 'Content-Disposition: attachment; filename=%s-%s.ics',
-		$conference->getConferenceUID(),
-		$event->getEventUID()
-	) );
+	header( sprintf( 'Content-Disposition: attachment; filename=%s.ics', $event_uid ) );
 }
 
 echo get_ical(
-	$event->getEventID(),
-	$event->getEventTitle(),
-	$event->getEventStart( 'U' ),
-	$event->getEventEnd(   'U' ),
+	$event_ID,
+	$event_title,
+	$event_start,
+	$event_end,
 	$event_url,
-	$event->getEventDescription(),
+	$event_desc,
 	$event_geo_lat,
 	$event_geo_lng
 );
@@ -102,11 +110,13 @@ function get_ical( $id, $title, $start, $end, $url = null, $description = null, 
     $dtend   = date( 'Ymd\Tgis\Z', $end   );
     $dtstamp = date( 'Ymd\Tgis\Z', time() );
     $title = htmlspecialchars( $title );
-    if( !$description ) {
+	if( !$description ) {
         $opt_description = '';
     } else {
     	$description = str_replace( "\n", " ", $description );
-        $opt_description = 'DESCRIPTION:' . htmlspecialchars( strip_tags( $description ) );
+    	$description = strip_tags( $description );
+    	$description = htmlspecialchars( $description );
+        $opt_description = "DESCRIPTION:$description";
     }
     if( !$url ) {
         $opt_url = '';
