@@ -72,6 +72,14 @@ trait ConferenceTrait {
 	}
 
 	/**
+	 * Get URL to trop-iCal API for this conference
+	 */
+	function getConferenceCalURL() {
+		$conf = urlencode( $this->getConferenceUID() );
+		return "/api/tropical.php?conference=$conf";
+	}
+
+	/**
 	 * Get localized conference description
 	 *
 	 * @return string

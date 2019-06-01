@@ -218,6 +218,15 @@ trait EventTrait {
 	}
 
 	/**
+	 * Get URL to trop-iCal API for this event
+	 */
+	function getEventCalURL() {
+		$event = urlencode( $this->getEventUID() );
+		$conf  = urlencode( $this->getConferenceUID() );
+		return "/api/tropical.php?conference=$conf&event=$event";
+	}
+
+	/**
 	 * Are event subscriptions available?
 	 *
 	 * @return bool
