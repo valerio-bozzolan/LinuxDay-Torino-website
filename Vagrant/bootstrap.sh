@@ -18,7 +18,14 @@ SUCKLESS_PHP_REPO=https://github.com/valerio-bozzolan/suckless-php.git
 
 # Very scaring
 DB_USER=ldto
-DB_PASSWORD=ldto
+DB_PASS=ldto
+
+# prevent interaction during phpmyadmin installation
+echo "phpmyadmin phpmyadmin/dbconfig-install      boolean     true"     | debconf-set-selections
+echo "phpmyadmin phpmyadmin/app-password-confirm  password    $DB_PASS" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/mysql/admin-pass      password    $DB_PASS" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/mysql/app-pass        password    $DB_PASS" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"  | debconf-set-selections
 
 apt-get update
 apt-get install --yes mariadb-server     \
@@ -32,7 +39,8 @@ apt-get install --yes mariadb-server     \
                       libmarkdown-php    \
                       libjs-jquery       \
                       libjs-leaflet      \
-                      git
+                      git                \
+                      phpmyadmin
 
 if [ ! -e "$SUCKLESS_PHP" ]; then
 	git clone "$SUCKLESS_PHP_REPO" "$SUCKLESS_PHP"
@@ -51,7 +59,7 @@ cat > "$WWW/load.php" <<EOF
 <?php
 \$database = '$DB_NAME';
 \$username = '$DB_USER';
-\$password = '$DB_PASSWORD';
+\$password = '$DB_PASS';
 \$location = 'localhost';
 \$prefix   = '$DB_PREFIX';
 define('DEBUG', true);
@@ -66,7 +74,7 @@ EOF
 
 echo "grant database permissions"
 mysql <<EOF
-GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$DB_PASSWORD';
+GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@localhost IDENTIFIED BY '$DB_PASS';
 FLUSH PRIVILEGES;
 EOF
 
