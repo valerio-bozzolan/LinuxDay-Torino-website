@@ -75,6 +75,12 @@ if( $event ) {
 	$event_uid .= '-' . $event->getEventUID();
 }
 
+if( $event ) {
+	$event_stable_guid = $conference->getConferenceUID() . '-' . $event_ID . '@linuxdaytorino.org';
+} else {
+	$event_stable_guid = $conference->getConferenceUID() . '@linuxdaytorino.org';
+}
+
 $event_location = null; // TODO: get this one (e.g. "Room A" or "Via Fasulla 123, Springfield")
 $event_geo_lat = null;
 $event_geo_lng = null;
@@ -91,7 +97,7 @@ if( empty( $_GET['debug'] ) ) {
 }
 
 echo get_ical(
-	$event_ID,
+	$event_stable_guid,
 	$event_title,
 	$event_start,
 	$event_end,
@@ -127,6 +133,7 @@ function get_ical( $id, $title, $start, $end, $url = null, $description = null, 
 	$dtstart = timestamp_to_ical( $start );
 	$dtend   = timestamp_to_ical( $end   );
 	$dtstamp = timestamp_to_ical( time() );
+	$id = htmlspecialchars( $id );
 	$title = htmlspecialchars( $title );
 	if( !$description ) {
 		$opt_description = '';
