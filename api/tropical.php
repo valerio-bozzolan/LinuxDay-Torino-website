@@ -30,29 +30,35 @@
 // load the framework
 require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'load.php';
 
-// conference UID e.g. '2019'
-$conference_uid = isset( $_GET['conference'] )
-                       ? $_GET['conference']
-                       : CURRENT_CONFERENCE_UID;
+// die if missing Conference UIR
+if( empty( $_GET['conference'] ) ) {
+	http_response_code( 404 );
+	die( "Missing 'conference' argument" );
+}
 
 $event      = null;
-$conference = FullConference::factoryFromUID( $conference_uid )
+$conference = FullConference::factoryFromUID( $_GET['conference'] )
 	->queryRow();
 
 // die if missing Conference
 if( !$conference ) {
 	http_response_code( 404 );
-	die( "Cannot find conference" );
+	die( "Conference not found" );
 }
 
-// die if missing Event parameter
+// die if missing Event UID
 if( empty( $_GET['event'] ) ) {
 	http_response_code( 400 );
-	die( "If you specify the 'conference' (string) you must specify 'event' (str)" );
+	die( "Missing 'event' argument" );
 }
 
 $event = FullEvent::factoryFromConferenceAndEventUID( $conference, $_GET['event'] )
 	->queryRow();
+
+if( !$event ) {
+	http_response_code( 404 );
+	die( "Event not found" );
+}
 
 $event_url     = null;
 $event_geo_lat = null;
