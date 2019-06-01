@@ -75,6 +75,7 @@ if( $event ) {
 	$event_uid .= '-' . $event->getEventUID();
 }
 
+$event_location = null; // TODO: get this one (e.g. "Room A" or "Via Fasulla 123, Springfield")
 $event_geo_lat = null;
 $event_geo_lng = null;
 if( $conference->locationHasGeo() ) {
@@ -96,6 +97,7 @@ echo get_ical(
 	$event_end,
 	$event_url,
 	$event_desc,
+	$event_location,
 	$event_geo_lat,
 	$event_geo_lng
 );
@@ -114,12 +116,13 @@ function timestamp_to_ical( $timestamp ) {
  * @param int $end End time (UNIX timestamp)
  * @param string $url Event URL
  * @param string $description Longer description of the event
+ * @param string $location Name of event location, e.g. "Room A"
  * @param float $geo_lat Latitude of the location
  * @param float $geo_lon Longitude of the location
  *
  * @return string the event in iCal format
  */
-function get_ical( $id, $title, $start, $end, $url = null, $description = null, $geo_lat = null, $geo_lng = null ) {
+function get_ical( $id, $title, $start, $end, $url = null, $description = null, $location = null, $geo_lat = null, $geo_lng = null ) {
 	$rn = "\r\n";
 	$dtstart = timestamp_to_ical( $start );
 	$dtend   = timestamp_to_ical( $end   );
@@ -143,6 +146,12 @@ function get_ical( $id, $title, $start, $end, $url = null, $description = null, 
 	} else {
 		$opt_geo = "GEO:$geo_lat;$geo_lng";
 	}
+	if( !$location ) {
+		$opt_location = '';
+	} else {
+		$location = htmlspecialchars( $location );
+		$opt_location = "LOCATION:$location";
+	}
 
 	$ics = <<<EOD
 BEGIN:VCALENDAR
@@ -154,6 +163,7 @@ UID:$id
 SUMMARY:$title
 $opt_description
 $opt_url
+$opt_location
 $opt_geo
 DTSTART:$dtstart
 DTEND:$dtend
