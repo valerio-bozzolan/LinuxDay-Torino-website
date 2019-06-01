@@ -21,3 +21,6 @@ schedule.xml
 
 # Adminer
 adminer.php
+
+# The framework
+includes/suckless-php
