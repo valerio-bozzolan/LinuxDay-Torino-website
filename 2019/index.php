@@ -59,6 +59,7 @@ template( 'header', [
 
 			<div class="col-md-6 col-sm-6">
 				<h3>Linux Day Torino 2019 è un evento bello.</h3>
+				<p><a href="<?= $conference->getConferenceCalURL() ?>">Salvalo immantinente sul calendario</a>! Save the date! Salvala ora!</p>
 				<p>Lorem ipsum bla bla bla.</p>
 				<p>Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
 			</div>
