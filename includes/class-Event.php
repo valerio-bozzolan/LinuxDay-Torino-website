@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Event
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Linux Day Torino - Event
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -219,11 +219,14 @@ trait EventTrait {
 
 	/**
 	 * Get URL to trop-iCal API for this event
+	 *
+	 * @param boolean $absolute Set to true for an absolute URL
+	 * @return string
 	 */
-	function getEventCalURL() {
+	public function getEventCalURL( $absolute = false ) {
 		$event = urlencode( $this->getEventUID() );
 		$conf  = urlencode( $this->getConferenceUID() );
-		return "/api/tropical.php?conference=$conf&event=$event";
+		return site_page( "api/tropical.php?conference=$conf&event=$event", $absolute );
 	}
 
 	/**

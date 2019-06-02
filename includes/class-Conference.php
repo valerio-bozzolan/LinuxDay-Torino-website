@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Construct a database conference
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Linux Day Torino - Construct a database conference
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -73,10 +73,13 @@ trait ConferenceTrait {
 
 	/**
 	 * Get URL to trop-iCal API for this conference
+	 *
+	 * @param boolean $absolute Set to true for an absolute URL
+	 * @return string
 	 */
-	function getConferenceCalURL() {
+	function getConferenceCalURL( $absolute = false ) {
 		$conf = urlencode( $this->getConferenceUID() );
-		return "/api/tropical.php?conference=$conf";
+		return site_page( "api/tropical.php?conference=$conf", $absolute );
 	}
 
 	/**
