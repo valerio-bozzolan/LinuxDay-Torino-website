@@ -125,6 +125,10 @@ Header::spawn( null, $args );
 							__("%s alle %s"),
 							$event->getEventStart('d/m/Y'),
 							$event->getEventStart('H:i')
+						) ?></small><br />
+						<small><?= HTML::a(
+							$event->getEventCalURL(),
+							__( "Scarica promemoria calendario" )
 						) ?></small>
 					</td>
 				</tr>
