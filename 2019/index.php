@@ -58,10 +58,10 @@ template( 'header', [
 		<div class="row">
 
 			<div class="col-md-6 col-sm-6">
-				<h3>Linux Day Torino 2019 è un evento bello.</h3>
-				<p><a href="<?= esc_attr( $conference->getConferenceCalURL() ) ?>">Salvalo immantinente sul calendario</a>! Save the date! Salvala ora!</p>
-				<p>Lorem ipsum bla bla bla.</p>
-				<p>Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<h3>Linux Day Torino 2019 sarà un evento bello.</h3>
+				<p><a href="<?= esc_attr( $conference->getConferenceCalURL() ) ?>" title="iCal">Salvalo immantinente sul calendario</a>!</p>
+				<h4>Fase 1: Call for Paper!</h4>
+				<p>Hai <b>idee</b>? Concept? Proposte? Hai un <b>logo</b> e un motto meno orribili di questa immagine? Entra nella <a href="https://lists.linux.it/listinfo/ldto"><b>mailing list comitato Linux Day Torino</b></a>!</p>
 			</div>
 
 			<div class="col-md-6 col-sm-6">
@@ -82,25 +82,27 @@ template( 'header', [
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-group"></i>
-				<h3>650 Participants</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+				<h3>All toghether</h3>
+				<p>LAN party, installation party. Porta un amico da convertire: ci divertiremo.</p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-clock-o"></i>
-				<h3>24 Programs</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+				<h3>Multi-Sessions</h3>
+				<p>Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o <b>programmatori</b>.</p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-microphone"></i>
-				<h3>11 Speakers</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+				<h3>Lot of speakers</h3>
+				<p>Stiamo raccogliendo i tuoi interessi e scegliendo le persone che sapranno stupirci su questi temi.</p>
 			</div>
 
 		</div>
 	</div>
 </section>
+
+<?php /*
 
 
 <!-- =========================
@@ -109,7 +111,6 @@ template( 'header', [
 <section id="video" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-6 col-sm-10">
 				<h2>Watch Video</h2>
 				<h3>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</h3>
@@ -126,6 +127,8 @@ template( 'header', [
 </section>
 
 
+*/ ?>
+
 <!-- =========================
     SPEAKERS SECTION   
 ============================== -->
@@ -136,7 +139,8 @@ template( 'header', [
 			<div class="col-md-12 col-sm-12">
 				<div class="section-title">
 					<h2>Creative Speakers</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+					<p>Non vogliamo annoiarti. Ti caricheremo di <b>idee</b>, energia e <b>libertà digitali</b>.</p>
+					<p>I candidati relatori saranno vagliati dal comitato Linux Day Torino e mostrati a breve.</b>
 				</div>
 			</div>
 
@@ -178,8 +182,8 @@ template( 'header', [
 					<div class="speakers-wrapper">
 						<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="speakers">
 							<div class="speakers-thumb">
-								<h3>Mario Rossi</h3>
-								<h6>Smanettone</h6>
+								<h3>Mariolino Rossino</h3>
+								<h6>Smanettino</h6>
 							</div>
 					</div>
 				</div>
@@ -210,17 +214,18 @@ template( 'header', [
 
 			<div class="col-md-12 col-sm-12">
 				<div class="section-title">
-					<h2>Our Programs</h2>
-					<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+					<h2>Our Program</h2>
+					<p>I temi affrontati e i talk sono in fase di definizione.</p>
 				</div>
 			</div>
 
 			<div class="col-md-10 col-sm-10">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">FIRST DAY</a></li>
-					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">SECOND DAY</a></li>
-					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">THIRD DAY</a></li>
+					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">Base</a></li>
+					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">Dev</a></li>
+					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">Sys</a></li>
+					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">Misc</a></li>
 				</ul>
 				<!-- tab panes -->
 				<div class="tab-content">
@@ -235,9 +240,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 09.00 AM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 240</span>
 							</h6>
-							<h3>Introduction to Design</h3>
-							<h4>By Jenny Green</h4>
-							<p>Maecenas accumsan metus turpis, eu faucibus ligula interdum in. Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum.</p>
+							<h3>Introduction to Digital Freedom</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -252,9 +257,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 10.00 AM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 360</span>
 							</h6>
-							<h3>Front-End Development</h3>
-							<h4>By Johnathan Mark</h4>
-							<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -269,9 +274,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 450</span>
 							</h6>
-							<h3>Social Media Marketing</h3>
-							<h4>By Johnathan Doe</h4>
-							<p>Nam pulvinar, elit vitae rhoncus pretium, massa urna bibendum ex, aliquam efficitur lorem odio vitae erat. Integer rutrum viverra magna, nec ultrices risus rutrum nec.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 					</div>
 
@@ -285,9 +290,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 240</span>
 							</h6>
-							<h3>Backend Development</h3>
-							<h4>By Matt Lee</h4>
-							<p>Integer rutrum viverra magna, nec ultrices risus rutrum nec. Pellentesque interdum vel nisi nec tincidunt. Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -302,9 +307,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 01.00 PM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 450</span>
 							</h6>
-							<h3>Web Application Lite</h3>
-							<h4>By David Orlando</h4>
-							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -319,9 +324,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 650</span>
 							</h6>
-							<h3>Professional UX Design</h3>
-							<h4>By James Lee Mark</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 					</div>
 
@@ -335,9 +340,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 750</span>
 							</h6>
-							<h3>Online Shopping Business</h3>
-							<h4>By Michael Walker</h4>
-							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -352,9 +357,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 05.00 PM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 850</span>
 							</h6>
-							<h3>Introduction to Mobile App</h3>
-							<h4>By Cherry Stella</h4>
-							<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 
 						<!-- program divider -->
@@ -369,9 +374,9 @@ template( 'header', [
 								<span><i class="fa fa-clock-o"></i> 07.00 PM</span> 
 								<span><i class="fa fa-map-marker"></i> Room 750</span>
 							</h6>
-							<h3>Bootstrap UI Design</h3>
-							<h4>By John David</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+							<h3>??</h3>
+							<h4>By //</h4>
+							<p>//</p>
 						</div>
 					</div>
 
@@ -380,7 +385,6 @@ template( 'header', [
 		</div>
 	</div>
 </section>
-
 
 <!-- =========================
    REGISTER SECTION   
@@ -391,18 +395,18 @@ template( 'header', [
 
 			<div class="col-md-7 col-sm-7">
 				<h2>Register Here</h2>
-				<h3>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
+				<h3>Le registrazioni non sono ancora aperte</h3>
+				<p>Per essere il primo a registrarti, resta aggiornato in mailing list o sui social.</p>
 			</div>
 
 			<div class="col-md-5 col-sm-5">
 				<form action="#" method="post">
-					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name">
-					<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Last Name">
-					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Phone Number">
-					<input name="email" type="email" class="form-control" id="email" placeholder="Email Address">
+					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name" disabled="disabled">
+					<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Last Name" disabled="disabled">
+					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Phone Number" disabled="disabled">
+					<input name="email" type="email" class="form-control" id="email" placeholder="Email Address" disabled="disabled">
 					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
-						<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER">
+						<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER" disabled="disabled">
 					</div>
 				</form>
 			</div>
@@ -425,8 +429,8 @@ template( 'header', [
 			================================================== -->
 			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
 				<div class="section-title">
-					<h2>Do you have Questions?</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+					<h2>FAQ</h2>
+					<p>Domande frequenti</p>
 				</div>
 			</div>
 
@@ -437,14 +441,13 @@ template( 'header', [
    						<div class="panel-heading" role="tab" id="headingOne">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          							 What is Responsive Design?
+        							Cos'è il Linux Day?
         						</a>
       						</h4>
     					</div>
    						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       						<div class="panel-body">
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-								<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+        						<p>È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia. Parallelamente. A Torino non mancheremo.</p>
       						</div>
    						 </div>
  					</div>
@@ -453,14 +456,13 @@ template( 'header', [
    						<div class="panel-heading" role="tab" id="headingTwo">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          							What are latest UX Developments?
+          							Posso portare un amico che non capisce nulla?
         						</a>
       						</h4>
     					</div>
    						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       						<div class="panel-body">
-                            	<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+                            	<p>Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! Abbandonalo all'aula "base" e vedrai che non si annoierà. Oppure portalo all'installation party e lo aiuteremo nella migrazione al software libero!</p>
       						</div>
    						 </div>
  					</div>
@@ -469,14 +471,29 @@ template( 'header', [
    						<div class="panel-heading" role="tab" id="headingThree">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          							What things about Social Media will be discussed?
+        							Quanto costa?
         						</a>
       						</h4>
     					</div>
    						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       						<div class="panel-body">
-                            	<p>Aenean vulputate finibus justo et feugiat. Ut turpis lacus, dapibus quis justo id, porttitor tempor justo. Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa.</p>
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+      							<p>L'evento è completamente gratuito.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+        							Come prenoto una T-shirt?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+      						<div class="panel-body">
+      							<p>Contattaci e comunicaci la tua taglia e te la terremo da parte fresca per l'evento!</p>
+      							<p>Ti conviene farlo perchè alcune taglie finiscono molto velocemente.</p>
       						</div>
    						 </div>
  					 </div>
@@ -497,12 +514,11 @@ template( 'header', [
 		<div class="row">
 
 			<div class="col-md-offset-1 col-md-5 col-sm-8">
-				<h2>Venue</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-				<h4>New Event</h4>
-  				<h4>120 Market Street, Suite 110</h4>
-  				<h4>San Francisco, CA 10110</h4>
-				<h4>Tel: 010-020-0120</h4>		
+				<h2>Where</h2>
+				<p>Stiamo terminando il vaglio delle sedi proposte. Iscriviti alla mailing list o sui social per rimanere aggiornato.</p>
+				<h4>Address: <del>secret</del></h4>
+				<h4>CAP: <del>secret</del></h4>
+				<h4>Lat/Long: <del>secret</del></h4>
 			</div>
 
 		</div>
@@ -519,8 +535,8 @@ template( 'header', [
 
 			<div class="col-md-12 col-sm-12">
 				<div class="section-title">
-					<h2>Our Sponsors</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+					<h2>Sponsor</h2>
+					<p>La società per cui lavori (o la tua società!) potrebbe avere questo spazio! Hai tempo fino al 30 agosto ore 23:59 per candidarsi.</p>
 				</div>
 			</div>
 
@@ -544,6 +560,7 @@ template( 'header', [
 	</div>
 </section>
 
+<?php /*
 
 <!-- =========================
     CONTACT SECTION   
@@ -581,4 +598,6 @@ template( 'header', [
 		</div>
 	</div>
 </section>
+
+*/ ?>
 <?php template( 'footer' );

@@ -262,7 +262,7 @@ footer {
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('/2019/images/placeholder-bg.png') 50% 0 repeat-y fixed;
+    background: url('/2019/images/linux-day-torino-heading-clean.jpg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -424,7 +424,7 @@ footer {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    color: #ffffff;
+    color: black;
 }
 
 #register .form-control {

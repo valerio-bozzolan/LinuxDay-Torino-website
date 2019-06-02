@@ -60,7 +60,7 @@ http://www.templatemo.com/tm-486-new-event
 
 
 <!-- =========================
-     NAVIGATION LINKS     
+     NAVIGATION LINKS
 ============================== -->
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
 	<div class="container">

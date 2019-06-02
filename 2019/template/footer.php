@@ -31,8 +31,8 @@ defined( 'ABSPATH' ) or exit;
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<p>Copyright &copy; 2019 Comitato Linux Day torino
-                    | Theme forked by <a rel="noreferrer nofollow" href="http://www.templatemo.com/page/1">Templatemo</a></p>
+				<p>Copyright &copy; 2019 CC BY-SA 4.0 Linux Day Torino contributors
+                    | Theme forked with &hearts; from <a rel="noreferrer nofollow" href="http://www.templatemo.com/page/1">Templatemo</a> by Linux Day Torino</p>
 
 				<ul class="social-icon">
 					<li><a href="https://www.facebook.com/LinuxDayTorino/" class="fa fa-facebook"></a></li>
