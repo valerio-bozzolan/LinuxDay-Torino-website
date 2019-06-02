@@ -47,12 +47,10 @@ Creare il file `load.php` (vedere l'esempio `load-example.php`) inserendovi le c
 Si può applicare un prefisso alle tabelle, specificandolo nella variabile `$prefix` del file `load.php`.
 
 ### Framework
-Posizionare il framework Boz-PHP:
+Posizionare il framework Suckless-PHP nella directory `includes`:
 
-    # apt-get install bzr
-    bzr branch lp:boz-php-another-php-framework /usr/share/boz-php-another-php-framework
-
-Se il framework viene posizionato in un altro posto, modificare oppurtunatamente `load.php`.
+    # apt-get install git
+    git clone https://github.com/valerio-bozzolan/suckless-php includes/suckless-php
 
 ### API
 Le API (aka "tagliatella") possono generare un documento XML che contiene l'elenco dei talk/eventi (in un formato che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
