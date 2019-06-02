@@ -1,5 +1,5 @@
 <?php
-# Linux Day 2016 - Construct a database Location
+# Linux Day Torino - Construct a database Location
 # Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
@@ -90,20 +90,29 @@ trait LocationTrait {
 		return isset( $z ) ? $z : Location::DEFAULT_ZOOM;
 	}
 
-	function getLocationGeoOSM() {
+	/**
+	 * Get the URL to this location on OpenStreetMap
+	 *
+	 * @return string
+	 */
+	public function getLocationGeoOSM() {
 		return sprintf(
 			'https://www.openstreetmap.org/?mlat=%1$s&mlon=%2$s#map=%3$s/%1$s/%2$s',
-			$this->getLocationLat(),
-			$this->getLocationLng(),
+			$this->getLocationGeoLat(),
+			$this->getLocationGeoLng(),
 			$this->getLocationZoom()
 		);
 	}
 
-	function printLocationLeaflet() {
+	/**
+	 * PrintGet a <div> that can be used to plot a Leaflet map
+	 *
+	 */
+	public function printLocationLeaflet() {
 		printf(
 			'<div data-lat="%s" data-lng="%s" data-zoom="%s" id="map"></div>',
-			$this->getLocationLat(),
-			$this->getLocationLng(),
+			$this->getLocationGeoLat(),
+			$this->getLocationGeoLng(),
 			$this->getLocationZoom()
 		);
 	}
