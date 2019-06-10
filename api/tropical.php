@@ -108,6 +108,11 @@ echo get_ical(
 	$event_geo_lng
 );
 
+function timestamp_to_ical( $timestamp ) {
+	return date( 'Ymd\THis\Z', $timestamp );
+}
+
+
 /**
  * Get an event (or conference as a single event) in iCal format.
  *
@@ -124,22 +129,12 @@ echo get_ical(
  * @return string the event in iCal format
  */
 function get_ical( $id, $title, $start, $end, $url = null, $description = null, $location = null, $geo_lat = null, $geo_lng = null ) {
-	$start = clone $start;
-	$end   = clone $end;
-	$now   = new DateTime();
-
-	$utc = new DateTimeZone( 'UTC' );
-	$start->setTimezone( $utc );
-	$end  ->setTimezone( $utc );
-	$now  ->setTimezone( $utc );
-
-	$dtstart = $start->format( 'U\Z' );
-	$dtend   = $end  ->format( 'U\Z' );
-	$dtstamp = $now  ->format( 'U\Z' );
-
 	$rn = "\r\n";
-	$id    = htmlspecialchars( $id    );
-	$title = htmlspecialchars( $title );
+	$dtstart = timestamp_to_ical( $start->getTimestamp() );
+	$dtend   = timestamp_to_ical( $end->getTimestamp() );
+	$dtstamp = timestamp_to_ical( time() );
+	$id      = htmlspecialchars( $id    );
+	$title   = htmlspecialchars( $title );
 	if( !$description ) {
 		$opt_description = '';
 	} else {
