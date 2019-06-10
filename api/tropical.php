@@ -55,8 +55,8 @@ $event_url = null;
 if( $event ) {
 	$event_ID    = $event->getEventID();
 	$event_title = $event->getEventTitle();
-	$event_start = $event->getEventStart( 'U' );
-	$event_end   = $event->getEventEnd( 'U' );
+	$event_start = $event->getEventStart();
+	$event_end   = $event->getEventEnd();
 	$event_desc  = $event->getEventDescription();
 	if( $event->hasEventPermalink() ) {
 		$event_url = $event->getEventURL();
@@ -65,8 +65,8 @@ if( $event ) {
 	$event_ID    = $conference->getConferenceID();
 	$event_title = $conference->getConferenceTitle();
 	$event_url   = $conference->getConferenceURL();
-	$event_start = $conference->getConferenceStart( 'U' );
-	$event_end   = $conference->getConferenceEnd( 'U' );
+	$event_start = $conference->getConferenceStart();
+	$event_end   = $conference->getConferenceEnd();
 	$event_desc  = $conference->getConferenceDescription();
 }
 
@@ -108,11 +108,6 @@ echo get_ical(
 	$event_geo_lng
 );
 
-function timestamp_to_ical( $timestamp ) {
-	// TODO: add \Z at the end once timestamp is an actual UNIX timestamp
-	return date( 'Ymd\THis', $timestamp );
-}
-
 /**
  * Get an event (or conference as a single event) in iCal format.
  *
@@ -129,11 +124,21 @@ function timestamp_to_ical( $timestamp ) {
  * @return string the event in iCal format
  */
 function get_ical( $id, $title, $start, $end, $url = null, $description = null, $location = null, $geo_lat = null, $geo_lng = null ) {
+	$start = clone $start;
+	$end   = clone $end;
+	$now   = new DateTime();
+
+	$utc = new DateTimeZone( 'UTC' );
+	$start->setTimezone( $utc );
+	$end  ->setTimezone( $utc );
+	$now  ->setTimezone( $utc );
+
+	$dtstart = $start->format( 'U\Z' );
+	$dtend   = $end  ->format( 'U\Z' );
+	$dtstamp = $now  ->format( 'U\Z' );
+
 	$rn = "\r\n";
-	$dtstart = timestamp_to_ical( $start );
-	$dtend   = timestamp_to_ical( $end   );
-	$dtstamp = timestamp_to_ical( time() );
-	$id = htmlspecialchars( $id );
+	$id    = htmlspecialchars( $id    );
 	$title = htmlspecialchars( $title );
 	if( !$description ) {
 		$opt_description = '';

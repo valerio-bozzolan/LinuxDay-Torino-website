@@ -56,19 +56,38 @@ trait ConferenceTrait {
 	}
 
 	function getConferenceHumanStart() {
-		return HumanTime::diff( $this->get( 'conference_start') );
+		return HumanTime::diff( $this->getConferenceStart() );
 	}
 
 	function getConferenceHumanEnd() {
-		return HumanTime::diff( $this->get('conference_end') );
+		return HumanTime::diff( $this->getConferenceEnd() );
 	}
 
-	function getConferenceStart($f) {
-		return $this->get('conference_start')->format($f);
+	/**
+	 * Get the Conference date start
+	 *
+	 * @param string $format If specified, return the formatted date
+	 * @return DateTime|string
+	 */
+	public function getConferenceStart( $format = null ) {
+		$date = $this->get( 'conference_start' );
+		if( $format ) {
+			return $date->format( $format );
+		}
+		return $date;
 	}
 
-	function getConferenceEnd($f) {
-		return $this->get('conference_end')->format($f);
+	/**
+	 * Get the Conference date end
+	 *
+	 * @param string $format If specified, return the formatted date
+	 */
+	public function getConferenceEnd( $format = null ) {
+		$date = $this->get( 'conference_end' );
+		if( $format ) {
+			return $date->format( $f );
+		}
+		return $date;
 	}
 
 	/**

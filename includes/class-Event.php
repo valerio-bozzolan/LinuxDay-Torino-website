@@ -59,7 +59,7 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventHumanStart() {
-		return HumanTime::diff( $this->get( Event::START ) );
+		return HumanTime::diff( $this->getEventStart() );
 	}
 
 	/**
@@ -68,25 +68,35 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getEventHumanEnd() {
-		return HumanTime::diff( $this->get( Event::END ) );
+		return HumanTime::diff( $this->getEventEnd() );
 	}
 
 	/**
-	 * Get formatted event start date
+	 * Get event start date
 	 *
-	 * @return string
+	 * @param string If present, format of the date
+	 * @return DateTime|string
 	 */
-	public function getEventStart( $format = 'Y-m-d H:i:s' ) {
-		return $this->get( Event::START )->format( $format );
+	public function getEventStart( $format = null ) {
+		$date = $this->get( Event::START );
+		if( $format ) {
+			return $date->format( $format );
+		}
+		return $date;
 	}
 
 	/**
-	 * When formatted event end date
+	 * When event end date
 	 *
-	 * @return string
+	 * @param string If present, format of the date
+	 * @return DateTime|string
 	 */
-	public function getEventEnd( $format = 'Y-m-d H:i:s' ) {
-		return $this->get( Event::END )->format( $format );
+	public function getEventEnd( $format = null ) {
+		$date = $this->get( Event::END );
+		if( $format ) {
+			return $date->format( $format );
+		}
+		return $date;
 	}
 
 	/**
