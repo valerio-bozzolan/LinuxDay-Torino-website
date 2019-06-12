@@ -70,6 +70,9 @@ define_default( 'PERMALINK_USER', '/%1$s/user/%2$s' );
 
 define_default( 'FORCE_PERMALINK', 1 );
 
+// timezone of database dates
+define_default( 'DEFAULT_TIMEZONE', 'Europe/Rome' );
+
 register_js( 'jquery', JQUERY );
 
 register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
@@ -77,14 +80,17 @@ register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
 register_css( 'leaflet', LEAFLET_DIR . '/leaflet.css' );
 
 // GNU Gettext configuration
-define('GETTEXT_DOMAIN', 'linuxday' );
-define('GETTEXT_DIRECTORY', ABSPATH . __ . 'l10n' );
-define('GETTEXT_DEFAULT_ENCODE', 'utf8' );
+define( 'GETTEXT_DOMAIN', 'linuxday' );
+define( 'GETTEXT_DIRECTORY', ABSPATH . __ . 'l10n' );
+define( 'GETTEXT_DEFAULT_ENCODE', 'utf8' );
 
 // register languages
 register_language( 'en_US', ['en', 'en-us', 'en-en'], null, null, 'English'  );
 register_language( 'it_IT', ['it', 'it-it'],          null, null, 'Italiano' );
 register_default_language( 'it_IT' );
+
+// apply the global timezone
+date_default_timezone_set( DEFAULT_TIMEZONE );
 
 // apply a language
 if( isset( $_GET[ 'l' ] ) ) {
