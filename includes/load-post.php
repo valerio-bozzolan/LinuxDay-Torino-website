@@ -79,6 +79,8 @@ register_js(  'leaflet', LEAFLET_DIR . '/leaflet.js' );
 
 register_css( 'leaflet', LEAFLET_DIR . '/leaflet.css' );
 
+register_js('typed',  ROOT . '/2017/static/typed/typed.min.js');
+
 // GNU Gettext configuration
 define( 'GETTEXT_DOMAIN', 'linuxday' );
 define( 'GETTEXT_DIRECTORY', ABSPATH . __ . 'l10n' );

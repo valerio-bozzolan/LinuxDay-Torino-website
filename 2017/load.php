@@ -55,7 +55,6 @@ register_css('materialize.custom', STATIC_PATH . '/materialize-custom.css');
 register_css('materialize.icons',  STATIC_PATH . '/material-design-icons/material-icons.css');
 register_css('home',               STATIC_PATH . '/home.css');
 register_js('scrollfire',          STATIC_PATH . '/scrollfire.js');
-register_js('typed',               STATIC_PATH . '/typed/typed.min.js');
 
 ///////////////////////////////////////////////////////////////////
 // Boz-PHP: Menu entries

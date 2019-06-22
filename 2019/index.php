@@ -17,6 +17,9 @@
 
 require 'load.php';
 
+enqueue_js('jquery');
+enqueue_js('typed');
+
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
@@ -38,16 +41,41 @@ template( 'header', [
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<h3>Sabato 32 Ottobre 2019</h3>
+				<h3>Sabato 26 Ottobre 2019</h3>
 				<h1>Linux Day Torino</h1>
-				<a href="#overview" class="btn btn-lg btn-default smoothScroll hidden-xs">LEARN MORE</a>
-				<a href="#register" class="btn btn-lg btn-danger smoothScroll">REGISTER NOW</a>
+				<div class="typing-smanettone-container text-white"><?php printf(
+                    __("Se anche tu sei %suno smanettone%s, vieni a trovarci!"),
+                    '<span class="typing-smanettone">',
+                    '</span>'
+                ) ?></div>
+				<a href="#overview" class="btn btn-lg btn-default smoothScroll hidden-xs">SCOPRI DI PIÙ</a>
+				<!-- <a href="#register" class="btn btn-lg btn-danger smoothScroll">CIAO</a>-->
 			</div>
 
 
 		</div>
 	</div>
 </section>
+
+<script>
+$('.typing-smanettone').text('');
+var typed = new Typed('.typing-smanettone', {
+	strings: <?php echo json_encode( [
+		__("uno smanettone"),
+		__("un programmatore"),
+		__("un tipo curioso"),
+		__("un sistemista"),
+		__("un po' pinguino"),
+		__("in modalità incognito"),
+		__("un cucciolo di GNU")
+	] ); ?>,
+	loop: true,
+	typeSpeed: 100,
+	backDelay: 1000,
+	backSpeed: 20,
+	showCursor: false
+} );
+</script>
 
 
 <!-- =========================

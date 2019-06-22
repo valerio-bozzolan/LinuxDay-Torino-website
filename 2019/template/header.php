@@ -55,6 +55,8 @@ http://www.templatemo.com/tm-486-new-event
 <!-- Do you want even faster loading times with sites that use CDNs? Try https://decentraleyes.org/ (not sponsored, just a good extension) -->
 <link href='/2019/css/poppins.css' rel='stylesheet' type='text/css'>
 
+<?php load_module('header') ?>
+
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
