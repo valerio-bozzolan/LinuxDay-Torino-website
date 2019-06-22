@@ -60,7 +60,7 @@ template( 'header', [
 <script>
 $('.typing-smanettone').text('');
 var typed = new Typed('.typing-smanettone', {
-	strings: <?php echo json_encode( [
+	strings: <?= json_encode( [
 		__("uno smanettone"),
 		__("un programmatore"),
 		__("un tipo curioso"),
@@ -79,7 +79,7 @@ var typed = new Typed('.typing-smanettone', {
 
 
 <!-- =========================
-    OVERVIEW SECTION   
+    OVERVIEW SECTION
 ============================== -->
 <section id="overview" class="parallax-section">
 	<div class="container">
@@ -102,7 +102,7 @@ var typed = new Typed('.typing-smanettone', {
 
 
 <!-- =========================
-    DETAIL SECTION   
+    DETAIL SECTION
 ============================== -->
 <section id="detail" class="parallax-section">
 	<div class="container">
@@ -134,7 +134,7 @@ var typed = new Typed('.typing-smanettone', {
 
 
 <!-- =========================
-    VIDEO SECTION   
+    VIDEO SECTION
 ============================== -->
 <section id="video" class="parallax-section">
 	<div class="container">
@@ -420,7 +420,14 @@ var typed = new Typed('.typing-smanettone', {
 <!-- 			<div class="col-md-7 col-sm-7"> -->
 			<div class="col-12">
 				<h2><?= __( "Contattaci" ) ?></h2>
-				<p><?= __( "Per contattare per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email linuxdaytorino@gmail.com o al numero <a href=\"tel:+39 3290075073\">+39 3290075073</a>" ) ?></p>
+				<p><?= printf(
+					__( "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email %s o al numero %s." ),
+					CONTACT_EMAIL,
+					HTML::a(
+						'tel:' . CONTACT_PHONE_PREFIX . CONTACT_PHONE,
+						CONTACT_PHONE
+					)
+				) ?></p>
 			</div>
 <!--
 			<div class="col-md-5 col-sm-5">
@@ -454,7 +461,7 @@ var typed = new Typed('.typing-smanettone', {
 			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
 				<div class="section-title">
 					<h2>FAQ</h2>
-					<p>Domande frequenti</p>
+					<p><?= __( "Domande frequenti" ) ?></p>
 				</div>
 			</div>
 
@@ -471,7 +478,7 @@ var typed = new Typed('.typing-smanettone', {
     					</div>
    						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       						<div class="panel-body">
-        						<p>È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia. Parallelamente. A Torino non mancheremo.</p>
+        						<p><?= __( "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia. Parallelamente. A Torino non mancheremo." ) ?></p>
       						</div>
    						 </div>
  					</div>
