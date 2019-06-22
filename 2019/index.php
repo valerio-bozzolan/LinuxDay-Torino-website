@@ -414,19 +414,15 @@ var typed = new Typed('.typing-smanettone', {
 	</div>
 </section>
 
-<!-- =========================
-   REGISTER SECTION   
-============================== -->
 <section id="register" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
-			<div class="col-md-7 col-sm-7">
-				<h2>Register Here</h2>
-				<h3>Le registrazioni non sono ancora aperte</h3>
-				<p>Per essere il primo a registrarti, resta aggiornato in mailing list o sui social.</p>
+<!-- 			<div class="col-md-7 col-sm-7"> -->
+			<div class="col-12">
+				<h2><?= __( "Contattaci" ) ?></h2>
+				<p><?= __( "Per contattare per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email linuxdaytorino@gmail.com o al numero <a href=\"tel:+39 3290075073\">+39 3290075073</a>" ) ?></p>
 			</div>
-
+<!--
 			<div class="col-md-5 col-sm-5">
 				<form action="#" method="post">
 					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name" disabled="disabled">
@@ -440,7 +436,7 @@ var typed = new Typed('.typing-smanettone', {
 			</div>
 
 			<div class="col-md-1"></div>
-
+-->
 		</div>
 	</div>
 </section>

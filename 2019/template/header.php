@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) or exit;
 
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo latest_language()->getISO() ?>">
+<html lang="<?= latest_language()->getISO() ?>">
 <head>
 <!--
 New Event
