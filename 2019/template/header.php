@@ -84,7 +84,6 @@ http://www.templatemo.com/tm-486-new-event
 				<li><a href="#overview" class="smoothScroll">Overview</a></li>
 				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
 				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#register" class="smoothScroll">Register</a></li>
 				<li><a href="#venue" class="smoothScroll">Venue</a></li>
 				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
 				<li><a href="#contact" class="smoothScroll">Contact</a></li>
