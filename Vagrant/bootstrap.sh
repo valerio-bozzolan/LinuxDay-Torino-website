@@ -27,6 +27,9 @@ echo "phpmyadmin phpmyadmin/mysql/admin-pass      password    $DB_PASS" | debcon
 echo "phpmyadmin phpmyadmin/mysql/app-pass        password    $DB_PASS" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"  | debconf-set-selections
 
+# avoid warnings in apt
+export DEBIAN_FRONTEND=noninteractive
+
 apt-get update
 apt-get install --yes mariadb-server     \
                       php                \
