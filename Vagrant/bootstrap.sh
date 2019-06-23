@@ -4,16 +4,16 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-PORT_APACHE=8080
-PORT_NGINX=8008
+PORT_APACHE=8070
+PORT_NGINX=8071
 DOMAIN=localhost
-WELCOME_APACHE=http://$DOMAIN:$PORT_APACHE
-WELCOME_NGINX=http://$DOMAIN:$PORT_NGINX
+WELCOME_APACHE=http://"$DOMAIN":"$PORT_APACHE"
+WELCOME_NGINX=http://"$DOMAIN":"$PORT_NGINX"
 PROJECT=/vagrant
 WWW="$PROJECT"
 DB_NAME=ldto
 DB_PREFIX=ldto_
-SUCKLESS_PHP=$PROJECT/includes/suckless-php
+SUCKLESS_PHP="$PROJECT"/includes/suckless-php
 SUCKLESS_PHP_REPO=https://github.com/valerio-bozzolan/suckless-php.git
 
 # Very scaring
@@ -81,15 +81,14 @@ EOF
 echo "populate the database"
 "$PROJECT"/cli/populate.php
 
-# TODO: WHAT THE FUCK - error: Table 'ldto.ldto_user' doesn't exist
 echo "add an admin user or update its password"
 "$WWW"/cli/add-user.php --uid=admin --role=admin --pwd=admin --force
 
 echo "disable the default apache site"
 a2dissite --quiet 000-default
 
-echo "copy apache configuration for ldto site"
-cp -a "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/project.conf
+# "copy apache configuration for ldto site"
+cp --verbose "$PROJECT"/Vagrant/apache.conf /etc/apache2/sites-available/project.conf
 
 echo "patch for php-libmarkdown"
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
@@ -129,10 +128,10 @@ rm --force /etc/nginx/sites-enabled/default
 systemctl unmask nginx
 
 # copy nginx configuration
-ln --symbolic --force "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/project.conf
+cp --verbose "$PROJECT"/Vagrant/nginx.conf /etc/nginx/sites-available/project.conf
 
 # enable the website
-ln --symbolic --force ../sites-available/project.conf /etc/nginx/sites-enabled/project.conf
+ln --symbolic --force /etc/nginx/sites-available/project.conf /etc/nginx/sites-enabled/project.conf
 
 # start nginx
 systemctl start nginx
