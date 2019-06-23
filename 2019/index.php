@@ -66,7 +66,7 @@ var typed = new Typed('.typing-smanettone', {
 	strings: <?= json_encode( [
 		__("uno smanettone"),
 		__("un programmatore"),
-		__("un tipo curioso"),
+		__("una persona curiosa"),
 		__("un sistemista"),
 		__("un po' pinguino"),
 		__("in modalità incognito"),
