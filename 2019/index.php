@@ -426,7 +426,7 @@ var typed = new Typed('.typing-smanettone', {
 		</div>
 
 		<div class="row">
-			<noscript><?php _e("Abilita JavaScript per vedere la mappa") ?></noscript>
+			<noscript><?= __("Abilita JavaScript per vedere la mappa") ?></noscript>
 			<?= $conference->printLocationLeaflet() ?>
 		</div>
 	</div>

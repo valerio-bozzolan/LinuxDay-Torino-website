@@ -38,7 +38,7 @@ http://www.templatemo.com/tm-486-new-event
 -->
 <title>Linux Day Torino 2019</title>
 <meta name="description" content="">
-<meta name="author" content="<?php _e( "Comitato Linux Day Torino" ) ?>">
+<meta name="author" content="<?= __( "Comitato Linux Day Torino" ) ?>">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -74,7 +74,7 @@ http://www.templatemo.com/tm-486-new-event
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand"><?php _esc_html( $conference->getConferenceTitle() ) ?></a>
+			<a href="#" class="navbar-brand"><?= esc_html( $conference->getConferenceTitle() ) ?></a>
 		</div>
 
 		<div class="collapse navbar-collapse">
