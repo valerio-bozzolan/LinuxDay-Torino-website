@@ -85,7 +85,7 @@ trait ConferenceTrait {
 	public function getConferenceEnd( $format = null ) {
 		$date = $this->get( 'conference_end' );
 		if( $format ) {
-			return $date->format( $f );
+			return $date->format( $format );
 		}
 		return $date;
 	}
