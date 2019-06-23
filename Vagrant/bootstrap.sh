@@ -89,7 +89,7 @@ echo "disable the default apache site"
 a2dissite --quiet 000-default
 
 echo "copy apache configuration for ldto site"
-ln --symbolic --force "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/ldto.conf
+cp -a "$PROJECT/Vagrant/apache.conf" /etc/apache2/sites-available/project.conf
 
 echo "patch for php-libmarkdown"
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
@@ -99,7 +99,7 @@ sed --in-place "s/function Markdown_Parser/function __construct/" /usr/share/php
 a2enmod --quiet rewrite
 
 # enable ldto apache site
-a2ensite --quiet ldto
+a2ensite --quiet project
 
 echo "GNU Gettext workflow"
 cd  "$WWW"
@@ -129,10 +129,10 @@ rm --force /etc/nginx/sites-enabled/default
 systemctl unmask nginx
 
 # copy nginx configuration
-ln --symbolic --force "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/ldto.conf
+ln --symbolic --force "$PROJECT/Vagrant/nginx.conf" /etc/nginx/sites-available/project.conf
 
 # enable the website
-ln --symbolic --force ../sites-available/ldto.conf /etc/nginx/sites-enabled/ldto.conf
+ln --symbolic --force ../sites-available/project.conf /etc/nginx/sites-enabled/project.conf
 
 # start nginx
 systemctl start nginx
