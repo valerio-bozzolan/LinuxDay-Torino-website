@@ -36,4 +36,13 @@ spl_autoload_register( function($c) {
 	}
 } );
 
+define('STATIC_PATH',    CURRENT_CONFERENCE_ROOT    . _ .  'static');
+define('STATIC_URL',     CURRENT_CONFERENCE_URL     . _ .  'static');
+define('STATIC_ABSPATH', CURRENT_CONFERENCE_ABSPATH . __ . 'static');
+
+define('SITE_NAME',        __("Linux Day Torino 2019") );
+define('SITE_NAME_SHORT',  __("LDTO2019") );
+define('SITE_DESCRIPTION', __("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
+register_js('leaflet.init', STATIC_PATH . '/leaflet-init.js');
+
 require 'include/functions.php';

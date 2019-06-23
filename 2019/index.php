@@ -19,6 +19,9 @@ require 'load.php';
 
 enqueue_js('jquery');
 enqueue_js('typed');
+enqueue_js('leaflet');
+enqueue_js('leaflet.init');
+enqueue_css('leaflet');
 
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
@@ -362,15 +365,22 @@ var typed = new Typed('.typing-smanettone', {
 <section id="venue" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-offset-1 col-md-5 col-sm-8">
-				<h2>Where</h2>
-				<p>Stiamo terminando il vaglio delle sedi proposte. Iscriviti alla mailing list o sui social per rimanere aggiornato.</p>
-				<h4>Address: <del>secret</del></h4>
-				<h4>CAP: <del>secret</del></h4>
-				<h4>Lat/Long: <del>secret</del></h4>
+				<h2>Luogo</h2>
+				<p>La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da Montefeltro 2.</p>
+				<p>Per raggiungerci puoi:
+				<ul>
+					<li>Prendere il tram 4, fermata Ospedale Mauriziano</li>
+					<li>Prendere il bus 42, fermata Mauriziano</li>
+					<li>Prendere la metropolitana, fermata Dante</li>
+					<li>Anche i bus 14, 24, 35 e 63 fermano abbastanza vicino, forse.</li>
+				</ul>
 			</div>
+		</div>
 
+		<div class="row">
+			<noscript><?php _e("Abilita JavaScript per vedere la mappa") ?></noscript>
+			<?= $conference->printLocationLeaflet() ?>
 		</div>
 	</div>
 </section>
