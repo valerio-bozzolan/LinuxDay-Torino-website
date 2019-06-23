@@ -119,8 +119,14 @@ trait EventTrait {
 		return null !== $this->get( Event::IMAGE );
 	}
 
-	function getEventImage($base = URL) {
-		return site_page( $this->get( Event::IMAGE ) , $base );
+	/**
+	 * Get the path to the Event image
+	 *
+	 * @param boolean $absolute Try to force an absolute URL
+	 * @return string
+	 */
+	public function getEventImage( $absolute = false ) {
+		return site_page( $this->get( Event::IMAGE ), $absolute );
 	}
 
 	/**
@@ -177,15 +183,15 @@ trait EventTrait {
 		return $this->get( Event::NOTE );
 	}
 
-	function getEventDescriptionHTML($args = []) {
+	function getEventDescriptionHTML( $args = [] ) {
 		return Markdown::parse( __( $this->getEventDescription() ), $args );
 	}
 
-	function getEventAbstractHTML($args = []) {
+	function getEventAbstractHTML( $args = [] ) {
 		return Markdown::parse( __( $this->getEventAbstract() ), $args );
 	}
 
-	function getEventNoteHTML($args = []) {
+	function getEventNoteHTML( $args = [] ) {
 		return Markdown::parse( __( $this->getEventNote() ), $args );
 	}
 

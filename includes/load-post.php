@@ -39,6 +39,7 @@ register_permissions( 'user', [] );
 
 // admin permissions
 inherit_permissions( 'admin',   'user', [
+	'add-event',
 	'edit-users',
 	'edit-events',
 ] );

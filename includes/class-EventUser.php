@@ -87,11 +87,13 @@ class EventUser extends Queried {
 		$this->normalizeEventUser();
 	}
 
-	static function delete($event_ID, $user_ID) {
-		query( sprintf(
-			"DELETE FROM {$GLOBALS[T]('event_user')} WHERE event_ID = %d AND USER_ID = %d",
-			$event_ID,
-			$user_ID
-		) );
+	/**
+	 * Delete the connection of an Event to an User
+	 */
+	public static function delete( $event_ID, $user_ID ) {
+		EventUser::factory()
+			->whereInt( 'event_ID', $event_ID )
+			->whereInt( 'user_ID',  $user_ID  )
+			->delete();
 	}
 }
