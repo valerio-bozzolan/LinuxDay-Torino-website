@@ -414,41 +414,6 @@ var typed = new Typed('.typing-smanettone', {
 	</div>
 </section>
 
-<section id="register" class="parallax-section">
-	<div class="container">
-		<div class="row">
-<!-- 			<div class="col-md-7 col-sm-7"> -->
-			<div class="col-12">
-				<h2><?= __( "Contattaci" ) ?></h2>
-				<p><?= printf(
-					__( "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email %s o al numero %s." ),
-					CONTACT_EMAIL,
-					HTML::a(
-						'tel:' . CONTACT_PHONE_PREFIX . CONTACT_PHONE,
-						CONTACT_PHONE
-					)
-				) ?></p>
-			</div>
-<!--
-			<div class="col-md-5 col-sm-5">
-				<form action="#" method="post">
-					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name" disabled="disabled">
-					<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Last Name" disabled="disabled">
-					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Phone Number" disabled="disabled">
-					<input name="email" type="email" class="form-control" id="email" placeholder="Email Address" disabled="disabled">
-					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
-						<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER" disabled="disabled">
-					</div>
-				</form>
-			</div>
-
-			<div class="col-md-1"></div>
--->
-		</div>
-	</div>
-</section>
-
-
 <!-- =========================
     FAQ SECTION   
 ============================== -->
@@ -591,11 +556,26 @@ var typed = new Typed('.typing-smanettone', {
 	</div>
 </section>
 
-<?php /*
-
 <!-- =========================
-    CONTACT SECTION   
+    CONTACT SECTION
 ============================== -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="col-12">
+			<h2><?= __( "Contattaci" ) ?></h2>
+			<p><?= printf(
+				__( "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email %s o al numero %s." ),
+				CONTACT_EMAIL,
+				HTML::a(
+					'tel:' . CONTACT_PHONE_PREFIX . CONTACT_PHONE,
+					CONTACT_PHONE
+				)
+			) ?></p>
+		</div>
+	</div>
+</section>
+
+<?php /*
 <section id="contact" class="parallax-section">
 	<div class="container">
 		<div class="row">
