@@ -239,176 +239,30 @@ var typed = new Typed('.typing-smanettone', {
 <section id="program" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
-			<div class="col-md-12 col-sm-12">
+			<div class="col-sm-12">
 				<div class="section-title">
-					<h2>Our Program</h2>
+					<h2>Programma</h2>
 					<p>I temi affrontati e i talk sono in fase di definizione.</p>
 				</div>
 			</div>
+		</div>
 
-			<div class="col-md-10 col-sm-10">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">Base</a></li>
-					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">Dev</a></li>
-					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">Sys</a></li>
-					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">Misc</a></li>
-				</ul>
-				<!-- tab panes -->
-				<div class="tab-content">
-
-					<div role="tabpanel" class="tab-pane active" id="fday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 09.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 240</span>
-							</h6>
-							<h3>Introduction to Digital Freedom</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 10.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 360</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 450</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-					</div>
-
-					<div role="tabpanel" class="tab-pane" id="sday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 240</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 01.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 450</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 650</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-					</div>
-
-					<div role="tabpanel" class="tab-pane" id="tday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 750</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 05.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 850</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="/2019/images/placeholder-person.png" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 07.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 750</span>
-							</h6>
-							<h3>??</h3>
-							<h4>By //</h4>
-							<p>//</p>
-						</div>
-					</div>
-
+			<?php foreach(['14:00', '15:00', '16:00', '17:00'] as $time): ?>
+			<div class="row border-bottom">
+				<?php foreach(['Base', 'Dev', 'Sys', 'Misc'] as $room): ?>
+				<div class="col-xs-12 col-sm-3">
+					<h3>Da definire</h3>
+					<h4>Di <a href="#">Relatore Da Definire</a></h4>
+					<h6>
+						<span><i class="fa fa-clock-o"></i>&nbsp;<?= $time ?></span><!--
+						--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $room ?></a></span><br>
+					</h6>
+					<p>Breve descrizione. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros at semper egestas.</p>
+					<p><i class="fa fa-info-circle"></i><a href="#">&nbsp;γνῶθι σαυτόν</a><br><i class="fa fa-calendar"></i><a href="tropical.php?cose=robe" title="Talk da definire">&nbsp;Salva sul calendario</a></p>
 				</div>
+				<?php endforeach ?>
+			</div>
+			<?php endforeach ?>
 
 		</div>
 	</div>
