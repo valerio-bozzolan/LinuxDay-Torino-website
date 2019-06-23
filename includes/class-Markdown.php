@@ -21,27 +21,49 @@ file_exists( LIBMARKDOWN_PATH ) or
 	error_die( 'please install php-markdown package or define a different LIBMARKDOWN_PATH into your /load.php' );
 
 class Markdown {
-	static function parse($s, $args = []) {
-		$s = markdown($s);
+
+	/**
+	 * Prase a string in markdown and return an HTML rappresentation
+	 *
+	 * @param  string $s
+	 * @param  array  $args
+	 * @return array
+	 */
+	public static function parse( $s, $args = [] ) {
+
+		// avoid <script> tags and so on
+		$s = strip_tags( $s );
+
+		// call libmarkdown stuff
+		$s = markdown( $s );
 
 		// Custom paragraph class
 		if( ! empty( $args['p'] ) ) {
+
 			$p = sprintf(
 				'<p class="%s">',
 				$args['p']
 			);
 
-			$s = str_replace('<p>', $p, $s);
+			$s = str_replace( '<p>', $p, $s );
 		}
 
-		// Stripping displayed link protocols
+		// stripping displayed link protocols
 		$s = str_replace( [
 			'>http://',
 			'>https://'
 		], '>', $s);
 
-		// Tartet blank as default
-		$s = str_replace('<a ', '<a target="_blank" ', $s);
+		// target blank as default
+		$s = str_replace('<a ', '<a target="_blank" ', $s );
+
+		// avoid 'javascript:' as URL
+		if( preg_match( '/ href=. *javascript/', $s ) ) {
+			$s = '<!-- XSS -->';
+		}
+
+		// avoid headings
+		$s = strip_tags( $s, '<b><em><a><code>' );
 
 		return $s;
 	}
