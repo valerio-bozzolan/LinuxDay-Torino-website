@@ -38,13 +38,13 @@ class CreditBox {
 		<div class="col s3 m2 l1">
 			<div class="row libre-icon valign-wrapper">
 				<div class="col s12 valign">
-					<a href="<?php echo $url ?>" title="<?php printf(
+					<a href="<?= $url ?>" title="<?php printf(
 						__( "%s: progetto a licenza %s" ),
 						$name,
 						$license->getShort()
 					) ?>" target="_blank">
 					<?php if( $icon ): ?>
-						<img class="hoverable responsive-img" src="<?php echo STATIC_PATH . "/libre-icons/$icon" ?>" alt="<?php printf(
+						<img class="hoverable responsive-img" src="<?= STATIC_PATH . "/libre-icons/$icon" ?>" alt="<?php printf(
 							__( "Logo di %s" ),
 							$name
 						) ?>" />

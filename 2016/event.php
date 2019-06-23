@@ -67,7 +67,7 @@ if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvaila
 Header::spawn( null, $args );
 ?>
 	<?php if( $event->isEventEditable() ): ?>
-	<p><?php echo HTML::a(
+	<p><?= HTML::a(
 		CURRENT_CONFERENCE_PATH . "/event-edit.php?" . http_build_query( [
 			'uid'        => $event->getEventUID(),
 			'conference' => $event->getConferenceUID()
@@ -87,7 +87,7 @@ Header::spawn( null, $args );
 							echo DEFAULT_IMAGE;
 						}
 					?>" alt="<?php
-						_esc_attr( $event->getEventTitle() )
+						echo esc_attr( $event->getEventTitle() )
 					?>" />
 				</div>
 			</div>
@@ -97,30 +97,30 @@ Header::spawn( null, $args );
 		<div class="col s12 m6 offset-m1 l5 offset-l3">
 			<table class="striped bordered">
 				<tr>
-					<th><?php echo icon('folder', 'left'); _e("Tema") ?></th>
+					<th><?= icon('folder', 'left'); echo __("Tema") ?></th>
 					<td>
-						<?php echo $event->getTrackName() ?><br />
-						<small><?php echo $event->getTrackLabel() ?></small>
+						<?= $event->getTrackName() ?><br />
+						<small><?= $event->getTrackLabel() ?></small>
 					</td>
 				</tr>
 				<tr>
-					<th><?php echo icon('room', 'left'); _e("Dove") ?></th>
+					<th><?= icon('room', 'left'); echo __("Dove") ?></th>
 					<td>
-						<?php echo $event->getRoomName() ?><br />
-						<small>@ <?php echo HTML::a(
+						<?= $event->getRoomName() ?><br />
+						<small>@ <?= HTML::a(
 							$conference->getLocationGeoOSM(),
 							$conference->getLocationName(),
 							$conference->getLocationAddress(),
 							null,
 							'target="_blank"'
 						) ?></small><br />
-						<small><?php echo $conference->getLocationAddress() ?></small>
+						<small><?= $conference->getLocationAddress() ?></small>
 					</td>
 				</tr>
 				<tr>
-					<th><?php echo icon('access_time', 'left'); _e("Quando") ?></th>
+					<th><?= icon('access_time', 'left'); echo __("Quando") ?></th>
 					<td>
-						<?php echo $event->getEventHumanStart() ?><br />
+						<?= $event->getEventHumanStart() ?><br />
 						<small><?php printf(
 							__("%s alle %s"),
 							$event->getEventStart('d/m/Y'),
@@ -141,8 +141,8 @@ Header::spawn( null, $args );
 	<?php if( $event->hasEventAbstract() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Abstract") ?></h3>
-		<?php echo $event->getEventAbstractHTML( ['p' => 'flow-text'] ) ?>
+		<h3><?= __("Abstract") ?></h3>
+		<?= $event->getEventAbstractHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event abstract -->
@@ -151,8 +151,8 @@ Header::spawn( null, $args );
 	<?php if( $event->hasEventDescription() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Descrizione") ?></h3>
-		<?php echo $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
+		<h3><?= __("Descrizione") ?></h3>
+		<?= $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
@@ -162,21 +162,21 @@ Header::spawn( null, $args );
 	<div class="divider"></div>
 	<div class="section">
 		<?php if( true === $subscribed ): ?>
-			<p class="flow-text"><?php _e("Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina.") ?></p>
+			<p class="flow-text"><?= __("Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina.") ?></p>
 		<?php else: ?>
 			<form method="post">
 				<div class="row">
 					<div class="col s12 m6 l8">
 						<div class="card-panel">
-							<h3><?php _e("Iscrizioni") ?></h3>
-							<p class="flow-text"><?php _e("Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:") ?></p>
+							<h3><?= __("Iscrizioni") ?></h3>
+							<p class="flow-text"><?= __("Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:") ?></p>
 							<div class="row">
 								<div class="col s12 l6 input-field">
-									<label for="subscription_email"><?php _e("E-mail") ?></label>
+									<label for="subscription_email"><?= __("E-mail") ?></label>
 									<input type="email" name="subscription_email" id="subscription_email" />
 								</div>
 								<div class="col s12 l6 input-field">
-									<button type="submit" class="btn purple darken-3 waves-effect"><?php _e("Sottoscrivi"); echo icon('send', 'right') ?></button>
+									<button type="submit" class="btn purple darken-3 waves-effect"><?= __("Sottoscrivi"); echo icon('send', 'right') ?></button>
 								</div>
 							</div>
 						</div>
@@ -192,8 +192,8 @@ Header::spawn( null, $args );
 	<?php if( $event->hasEventNote() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Note") ?></h3>
-		<?php echo $event->getEventNoteHTML( ['p' => 'flow-text'] ) ?>
+		<h3><?= __("Note") ?></h3>
+		<?= $event->getEventNoteHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
@@ -205,7 +205,7 @@ Header::spawn( null, $args );
 	<?php if( $sharables->valid() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Materiale") ?></h3>
+		<h3><?= __("Materiale") ?></h3>
 		<div class="row">
 			<?php foreach( $sharables as $sharable ): ?>
 			<div class="col s12">
@@ -225,7 +225,7 @@ Header::spawn( null, $args );
 					</p>
 					<?php if( $sharable->isSharableVideo() ): ?>
 					<video class="responsive-video" controls="controls">
-						<source src="<?php echo $sharable->getSharablePath() ?>" type="<?php echo $sharable->getSharableMIME() ?>" />
+						<source src="<?= $sharable->getSharablePath() ?>" type="<?= $sharable->getSharableMIME() ?>" />
 					</video>
 					<?php endif ?>
 				<?php else: ?>
@@ -253,7 +253,7 @@ Header::spawn( null, $args );
 	<!-- Start speakers -->
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Relatori") ?></h3>
+		<h3><?= __("Relatori") ?></h3>
 
 		<?php $users = $event->factoryUserByEvent()
 			->queryGenerator(); ?>
@@ -266,21 +266,21 @@ Header::spawn( null, $args );
 						<div class="col s4 l3">
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL( ROOT )
-							?>" title="<?php _esc_attr( sprintf(
+							?>" title="<?= esc_attr( sprintf(
 								__("Profilo di %s"),
 								$user->getUserFullname()
-							) ) ?>" data-tooltip="<?php _esc_attr(
+							) ) ?>" data-tooltip="<?= esc_attr(
 								$user->getUserFullname()
 							) ?>">
 								<img class="circle responsive-img hoverable" src="<?php
 									echo $user->getUserImage(256)
-								?>" alt="<?php _esc_attr(
+								?>" alt="<?= esc_attr(
 									$user->getUserFullname()
 								) ?>" />
 							</a>
 						</div>
 						<div class="col s8 l9">
-							<?php echo HTML::a(
+							<?= HTML::a(
 								$user->getUserURL(),
 								"<h4>{$user->getUserFullname()}</h4>",
 								sprintf(
@@ -295,7 +295,7 @@ Header::spawn( null, $args );
 			<?php endforeach ?>
 			</div>
 		<?php else: ?>
-			<p><?php _e("L'elenco dei relatori non è ancora noto.") ?></p>
+			<p><?= __("L'elenco dei relatori non è ancora noto.") ?></p>
 		<?php endif ?>
 	</div>
 	<!-- End speakers -->
@@ -318,25 +318,25 @@ Header::spawn( null, $args );
 		<div class="row">
 			<div class="col s12 m6">
 				<?php if( $previous ): ?>
-					<h3><?php echo icon('navigate_before'); _e("Preceduto da") ?></h3>
+					<h3><?= icon('navigate_before'); echo __("Preceduto da") ?></h3>
 					<p class="flow-text">
-						<?php echo HTML::a(
+						<?= HTML::a(
 							$previous->getEventURL( ROOT ),
 							$previous->getEventTitle()
 						) ?>
-						<time datetime="<?php echo $previous->getEventStart('Y-m-d H:i') ?>"><?php echo $previous->getEventHumanStart() ?></time>
+						<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
 					</p>
 				<?php endif ?>
 			</div>
 			<div class="col s12 m6 right-align">
 				<?php if( $next ): ?>
-					<h3><?php _e("A seguire"); echo icon('navigate_next') ?></h3>
+					<h3><?= __("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
-						<?php echo HTML::a(
+						<?= HTML::a(
 							$next->getEventURL( ROOT ),
 							$next->getEventTitle()
 						) ?>
-						<time datetime="<?php echo $next->getEventStart('Y-m-d H:i') ?>"><?php echo $next->getEventHumanStart() ?></time>
+						<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
 					</p>
 				<?php endif ?>
 			</div>

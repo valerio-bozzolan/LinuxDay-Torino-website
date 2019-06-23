@@ -23,8 +23,8 @@ class Messagebox {
 	function __construct($message, $type = 'info') { ?>
 
 	<div class="container">
-		<div class="card-panel <?php echo self::color($type) ?>">
-			<p class="flow-text"><?php echo icon( self::icon($type), 'left' ); echo $message ?></p>
+		<div class="card-panel <?= self::color($type) ?>">
+			<p class="flow-text"><?= icon( self::icon($type), 'left' ); echo $message ?></p>
 		</div>
 	</div>
 

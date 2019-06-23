@@ -27,7 +27,7 @@ class Footer {
 	<?php if( $args['home'] ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<a class="btn purple darken-3 waves-effect" href="<?php echo CURRENT_CONFERENCE_PATH ?>/">
+		<a class="btn purple darken-3 waves-effect" href="<?= CURRENT_CONFERENCE_PATH ?>/">
 			<?php
 				printf(
 					__("Torna a %s"),
@@ -41,7 +41,7 @@ class Footer {
 
 <?php load_module('footer') ?>
 
-<footer class="page-footer <?php echo BACK ?>">
+<footer class="page-footer <?= BACK ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m7 l8">
@@ -65,17 +65,17 @@ class Footer {
 						__("%s su Facebook"),
 						SITE_NAME
 					) ?>">
-						<img src="<?php echo STATIC_PATH ?>/social/facebook.png" height="32" alt="Facebook" />
+						<img src="<?= STATIC_PATH ?>/social/facebook.png" height="32" alt="Facebook" />
 					</a>
 
 					<a class="hoverable" href="https://twitter.com/LinuxDayTorino" target="_blank" title="<?php printf(
 						__("%s su Twitter"),
 						SITE_NAME
 					) ?>">
-						<img src="<?php echo STATIC_PATH ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
+						<img src="<?= STATIC_PATH ?>/social/twitter.png" height="32" alt="Twitter" class="circle white" />
 					</a>
 
-					<?php echo HTML::a(
+					<?= HTML::a(
 						'https://blog.linuxdaytorino.org',
 						icon('rss_feed', 'purple-text text-darken-3 ld-blog-icon'),
 						__("Blog del Linux Day Torino"),
@@ -85,10 +85,10 @@ class Footer {
 				</p>
 			</div>
 			<div class="col s12 m5 l4">
-				<h5 class="white-text"><?php _e("Edizioni Passate") ?></h5>
+				<h5 class="white-text"><?= __("Edizioni Passate") ?></h5>
 				<ul>
 					<?php $ld = function($year, $where) { ?>
-					<li><?php echo HTML::a(
+					<li><?= HTML::a(
 						"/$year/",
 						"$year, $where",
 						sprintf(
@@ -112,14 +112,14 @@ class Footer {
 					?>
 				</ul>
 
-				<h5 class="white-text"><?php _e( "Lingua" ) ?></h5>
+				<h5 class="white-text"><?= __( "Lingua" ) ?></h5>
 				<form method="post">
 					<select name="l">
 						<?php foreach( all_languages() as $l ): ?>
-							<option value="<?php echo $l->getCode() ?>"<?php _selected( $l, latest_language() ) ?>><?php echo $l->getHuman() ?></option>
+							<option value="<?= $l->getCode() ?>"<?= selected( $l, latest_language() ) ?>><?= $l->getHuman() ?></option>
 						<?php endforeach ?>
 					</select>
-					<button type="submit" class="btn waves-effect"><?php _e( "Scegli" ) ?></button>
+					<button type="submit" class="btn waves-effect"><?= __( "Scegli" ) ?></button>
 				</form>
 			</div>
 		</div>
@@ -138,7 +138,7 @@ class Footer {
 	</div>
 	<div class="footer-copyright">
 		<div class="container">
-			<p>&copy; <?php echo date('Y') ?> <?php echo SITE_NAME ?> - <?php _e("<b>Alcuni</b> diritti riservati.") ?></p>
+			<p>&copy; <?= date('Y') ?> <?= SITE_NAME ?> - <?= __("<b>Alcuni</b> diritti riservati.") ?></p>
 		</div>
 	</div>
 </footer>
@@ -151,6 +151,6 @@ $( function () {
 </script>
 </body>
 </html>
-<!-- <?php _e("Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non regalare i tuoi dati a terzi!") ?> --><?php
+<!-- <?= __("Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non regalare i tuoi dati a terzi!") ?> --><?php
 	}
 }

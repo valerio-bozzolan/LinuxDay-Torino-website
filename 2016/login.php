@@ -38,8 +38,8 @@ Header::spawn('home');
 
 if( is_logged() ):
 ?>
-	<p class="flow-text"><?php _e("Sei loggato!") ?></p>
-	<p><?php echo HTML::a(
+	<p class="flow-text"><?= __("Sei loggato!") ?></p>
+	<p><?= HTML::a(
 		CURRENT_CONFERENCE_PATH . '/login.php?logout',
 		__("Sloggati") . icon('exit_to_app', 'left')
 	) ?></p>
@@ -49,20 +49,18 @@ if( is_logged() ):
 		<form method="post">
 			<div class="row">
 				<div class="input-field col s12 m6">
-					<input name="user_uid" id="user_uid" type="text" class="validate"<?php
-						_value( @$_REQUEST['user_uid'] );
-					?> />
-					<label for="user_uid"><?php _e("Nome utente") ?></label>
+					<input name="user_uid" id="user_uid" type="text" class="validate"<?= value( @$_REQUEST['user_uid'] ) ?> />
+					<label for="user_uid"><?= __("Nome utente") ?></label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input name="user_password" id="user_password" type="password" class="validate" />
-					<label for="user_password"><?php _e("Password") ?></label>
+					<label for="user_password"><?= __("Password") ?></label>
 				</div>
 			</div>
 			<div class="col s12">
 				<p><button class="btn waves-effect purple" type="submit" name="action">
-					<?php _e("Accedi") ?>
-					<?php echo icon() ?>
+					<?= __("Accedi") ?>
+					<?= icon() ?>
 				</button></p>
 			</div>
 		</form>

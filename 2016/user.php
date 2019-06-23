@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Single user profile page
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -52,7 +52,7 @@ Header::spawn( null, [
 ] );
 ?>
 	<?php if( $user->hasPermissionToEditUser() ): ?>
-		<p><?php echo HTML::a(
+		<p><?= HTML::a(
 			CURRENT_CONFERENCE_PATH . "/user-edit.php?uid={$user->getUserUID()}",
 			__("Modifica") . icon('edit', 'left')
 		) ?></p>
@@ -65,12 +65,12 @@ Header::spawn( null, [
 			<div class="row">
 				<div class="col s8">
 					<?php if( $user->has( User::WEBSITE ) ): ?>
-						<a href="<?php _esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?php _esc_attr( $user->getUserFullname() ) ?>" target="_blank">
+						<a href="<?= esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?= esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 					<?php endif ?>
 						<img class="responsive-img hoverable z-depth-1" src="<?php
-							_esc_attr( $user->getUserImage() )
+							echo esc_attr( $user->getUserImage() )
 						?>" alt="<?php
-							_esc_attr( $user->getUserFullname() )
+							echo esc_attr( $user->getUserFullname() )
 						?>" />
 					<?php if( $user->has( User::WEBSITE ) ): ?>
 						</a>
@@ -82,7 +82,7 @@ Header::spawn( null, [
 			<?php if( $user->user_site ): ?>
 			<div class="row">
 				<div class="col s12">
-					<p><?php echo HTML::a(
+					<p><?= HTML::a(
 						$user->user_site,
 						__("Sito personale") . icon('contact_mail', 'right'),
 						null,
@@ -106,9 +106,9 @@ Header::spawn( null, [
 			<?php if( $skills->valid() ): ?>
 			<div class="row">
 				<div class="col s12">
-					<p><?php _e("Le mie skill:") ?></p>
+					<p><?= __("Le mie skill:") ?></p>
 					<?php foreach( $skills as $skill ): ?>
-						<div class="chip tooltipped hoverable" data-tooltip="<?php _esc_attr( $skill->getSkillPhrase() ) ?>"><code><?php echo $skill->getSkillCode() ?></code></div>
+						<div class="chip tooltipped hoverable" data-tooltip="<?= esc_attr( $skill->getSkillPhrase() ) ?>"><code><?= $skill->getSkillCode() ?></code></div>
 					<?php endforeach ?>
 				</div>
 			</div>
@@ -137,8 +137,8 @@ Header::spawn( null, [
 	<?php if( $user->hasUserBio() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Bio") ?></h3>
-		<?php echo $user->getUserBioHTML( ['p' => 'flow-text'] ) ?>
+		<h3><?= __("Bio") ?></h3>
+		<?= $user->getUserBioHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
 	<!-- End user bio -->
@@ -146,7 +146,7 @@ Header::spawn( null, [
 	<div class="divider"></div>
 
 	<div class="section">
-		<h3><?php _e("Talk") ?></h3>
+		<h3><?= __("Talk") ?></h3>
 
 		<?php $events = ( new QueryEvent() )
 			->whereConference( $conference )
@@ -158,17 +158,17 @@ Header::spawn( null, [
 			<table>
 			<thead>
 			<tr>
-				<th><?php _e("Nome") ?></th>
-				<th><?php _e("Tipo") ?></th>
-				<th><?php _e("Tema") ?></th>
-				<th><?php _e("Dove") ?></th>
-				<th><?php _e("When") ?></th>
+				<th><?= __("Nome") ?></th>
+				<th><?= __("Tipo") ?></th>
+				<th><?= __("Tema") ?></th>
+				<th><?= __("Dove") ?></th>
+				<th><?= __("When") ?></th>
 			</tr>
 			</thead>
 			<tbody>
 			<?php foreach( $events as $event ): ?>
 			<tr>
-				<td><?php echo HTML::a(
+				<td><?= HTML::a(
 					$event->getEventURL(),
 					sprintf(
 						"<strong>%s</strong>",
@@ -179,13 +179,13 @@ Header::spawn( null, [
 						$title
 					)
 				) ?></td>
-				<td><?php _esc_html( $event->getChapterName() ) ?></td>
-				<td><?php _esc_html( $event->getTrackName() ) ?></td>
+				<td><?= esc_html( $event->getChapterName() ) ?></td>
+				<td><?= esc_html( $event->getTrackName() ) ?></td>
 				<td>
-					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $conference->getLocationAddress() ) ?>">
-						<?php _esc_html( $conference->getLocationName() ) ?>
+					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $conference->getLocationAddress() ) ?>">
+						<?= esc_html( $conference->getLocationName() ) ?>
 					</span><br />
-					<?php _esc_html( $event->getRoomName() ) ?>
+					<?= esc_html( $event->getRoomName() ) ?>
 				</td>
 				<td>
 					<?php printf(
@@ -193,14 +193,14 @@ Header::spawn( null, [
 						$event->getEventStart("H:i"),
 						$event->getEventStart("d/m/Y")
 					) ?><br />
-					<small><?php echo $event->getEventHumanStart() ?></small>
+					<small><?= $event->getEventHumanStart() ?></small>
 				</td>
 			</tr>
 			<?php endforeach ?>
 			</tbody>
 			</table>
 		<?php else: ?>
-			<p><?php _e("Quest'anno il relatore non ha tenuto nessun talk.") ?></p>
+			<p><?= __("Quest'anno il relatore non ha tenuto nessun talk.") ?></p>
 		<?php endif ?>
 	</div>
 
@@ -213,16 +213,16 @@ Header::spawn( null, [
 	 ?>
 	<?php if( $events->valid() ): ?>
 		<div class="section">
-			<h3><?php _e("Altre partecipazioni") ?></h3>
+			<h3><?= __("Altre partecipazioni") ?></h3>
 			<table>
 			<tbody>
 			<?php foreach( $events as $event ): ?>
 			<tr>
-				<td><?php _esc_html( $event->getEventTitle() ) ?></td>
-				<td><?php _esc_html( $event->getConferenceTitle() ) ?></td>
+				<td><?= esc_html( $event->getEventTitle() ) ?></td>
+				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
 				<td>
-					<span class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $event->getLocationAddress() ) ?>">
-						<?php _esc_html( $event->getLocationName() ) ?>
+					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
+						<?= esc_html( $event->getLocationName() ) ?>
 					</span><br />
 				</td>
 				<td>
@@ -231,7 +231,7 @@ Header::spawn( null, [
 						$event->getEventStart("H:i"),
 						$event->getEventStart("d/m/Y")
 					) ?><br />
-					<small><?php echo $event->getEventHumanStart() ?></small>
+					<small><?= $event->getEventHumanStart() ?></small>
 				</td>
 			</tr>
 			<?php endforeach ?>
@@ -244,7 +244,7 @@ Header::spawn( null, [
 	<?php if( $user->isUserSocial() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Social") ?></h3>
+		<h3><?= __("Social") ?></h3>
 		<div class="row">
 			<?php
 			$user->has( User::RSS         ) and SocialBox::spawn( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );

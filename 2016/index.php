@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - homepage of the conference
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -67,12 +67,12 @@ Header::spawn( null, [
 	<?php if( $other_events->valid() ): ?>
 	<div class="section">
 		<h3><?php printf( __("Il %s si è concluso..."), $conference->getConferenceTitle() ) ?></h3>
-		<h4><?php _e("Ma abbiamo altro!") ?></h4>
+		<h4><?= __("Ma abbiamo altro!") ?></h4>
 		<table class="bordered hoverable">
 			<tr>
-				<th><?php _e("Evento") ?></th>
-				<th><?php _e("Quando") ?></th>
-				<th class="hide-on-small-only"><?php _e("Dove") ?></th>
+				<th><?= __("Evento") ?></th>
+				<th><?= __("Quando") ?></th>
+				<th class="hide-on-small-only"><?= __("Dove") ?></th>
 			</tr>
 			<?php foreach( $other_events as $event ): ?>
 			<?php
@@ -81,9 +81,9 @@ Header::spawn( null, [
 					$classes .= ' grey lighten-3';
 				}
 			?>
-			<tr class="<?php echo $classes ?>">
+			<tr class="<?= $classes ?>">
 				<td>
-					<?php echo HTML::a(
+					<?= HTML::a(
 						FullEvent::permalink(
 							$conference->getConferenceUID(),
 							$event->getEventUID(),
@@ -91,10 +91,10 @@ Header::spawn( null, [
 						),
 						$event->getEventTitle()
 					) ?><br />
-					<small>(<?php echo $event->getChapterName() ?>)</small>
+					<small>(<?= $event->getChapterName() ?>)</small>
 				</td>
 				<td>
-					<time datetime="<?php echo $event->getEventStart( 'Y-m-d H:i' ) ?>"><?php echo $event->getEventHumanStart() ?></time><br />
+					<time datetime="<?= $event->getEventStart( 'Y-m-d H:i' ) ?>"><?= $event->getEventHumanStart() ?></time><br />
 					<small>(<?php printf(
 						__("%s alle %s"),
 						$event->getEventStart( __( "d/m/Y" ) ),
@@ -102,7 +102,7 @@ Header::spawn( null, [
 					) ?>)</small>
 				</td>
 				<td class="hide-on-small-only">
-					<?php echo $event->getRoomName() ?>
+					<?= $event->getRoomName() ?>
 				</td>
 			</tr>
 			<?php endforeach ?>
@@ -112,7 +112,7 @@ Header::spawn( null, [
 
 	<div class="header">
 		<div class="center-align">
-			<h1><?php echo HTML::a(
+			<h1><?= HTML::a(
 				$conference->getConferenceURL(),
 				strtoupper( SITE_NAME ),
 				null,
@@ -124,7 +124,7 @@ Header::spawn( null, [
 	<div class="section">
 		<div class="row valign-wrapper">
 			<div class="col s12 m2 l1 center-align hide-on-small-only">
-				<img src="<?php echo STATIC_PATH ?>/linuxday-200.png" alt="<?php _esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
+				<img src="<?= STATIC_PATH ?>/linuxday-200.png" alt="<?= esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
 			</div>
 			<div class="col s12 m10 l11">
 				<p class="flow-text"><?php printf(
@@ -160,7 +160,7 @@ Header::spawn( null, [
 				</blockquote>
 			</div>
 			<div class="col s12 m4">
-				<p class="flow-text"><?php _e("Il tema di quest'anno a livello nazionale è... il <code>coding</code>!") ?></p>
+				<p class="flow-text"><?= __("Il tema di quest'anno a livello nazionale è... il <code>coding</code>!") ?></p>
 			</div>
 		</div>
 	</div>
@@ -169,7 +169,7 @@ Header::spawn( null, [
 	<div class="section" id="talk-section">
 		<?php $chapter = Chapter::factoryFromUID('talk')->queryRow() ?>
 
-		<h3><?php _esc_html( $chapter->getChapterName() ) ?></h3>
+		<h3><?= esc_html( $chapter->getChapterName() ) ?></h3>
 
 		<?php $eventsTable = new DailyEventsTable( $conference, $chapter, [
 				Event::T . DOT . Event::ID,
@@ -202,13 +202,13 @@ Header::spawn( null, [
 	<div class="section" id="rooms-section">
 		<div class="row">
 			<div class="col s12 m4 l4">
-				<h3><?php _e("Planimetria") ?></h3>
-				<p class="flow-text"><?php _e("La manifestazione è suddivisa in aule tematiche.") ?></p>
+				<h3><?= __("Planimetria") ?></h3>
+				<p class="flow-text"><?= __("La manifestazione è suddivisa in aule tematiche.") ?></p>
 			</div>
 			<div class="col s12 m7 offset-m1 l6 offset-l2">
 				<div class="card-panel">
 					<div class="center-align">
-						<p><img class="materialboxed responsive-img" src="<?php echo ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?php _e("Planimetria Dipartimento di Informatica") ?>" /></p>
+						<p><img class="materialboxed responsive-img" src="<?= ROOT ?>/2016/static/libre-icons/planimetria_dip_info.png" alt="<?= __("Planimetria Dipartimento di Informatica") ?>" /></p>
 					</div>
 				</div>
 			</div>
@@ -217,7 +217,7 @@ Header::spawn( null, [
 
 	<div id="fdroid" class="divider" data-show="#fdroid-section"></div>
 	<div class="section" id="fdroid-section">
-		<h3><?php _e("App Android") ?></h3>
+		<h3><?= __("App Android") ?></h3>
 		<p class="flow-text"><?php printf(
 			__("La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"),
 			"<em>LDTO Companion</em>"
@@ -226,7 +226,7 @@ Header::spawn( null, [
 			<div class="col s12 m5 l6">
 				<div class="row">
 					<div class="col s4 offset-s4 m12">
-						<img src="<?php echo STATIC_PATH ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
+						<img src="<?= STATIC_PATH ?>/libre-icons/f-droid.png" alt="F-Droid" class="responsive-img" />
 					</div>
 				</div>
 			</div>
@@ -240,7 +240,7 @@ Header::spawn( null, [
 				?></p>
 				<p>
 					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org" target="_blank">
-						<?php echo icon('file_download', 'left'); _e("Installa F-Droid") ?>
+						<?= icon('file_download', 'left'); echo __("Installa F-Droid") ?>
 					</a>
 				</p>
 				<p><?php
@@ -252,7 +252,7 @@ Header::spawn( null, [
 				?></p>
 				<p>
 					<a class="btn waves-effect purple darken-2 waves-light" href="https://f-droid.org/en/packages/it.linuxday.torino/" target="_blank">
-						<?php echo icon('file_download', 'left'); _e("Installa LDTO16") ?>
+						<?= icon('file_download', 'left'); echo __("Installa LDTO16") ?>
 					</a>
 				</p>
 			</div>
@@ -261,8 +261,8 @@ Header::spawn( null, [
 
 	<div id="activities" class="divider" data-show="#activities-section"></div>
 	<div class="section" id="activities-section">
-		<h3><?php _e("Attività") ?></h3>
-		<p class="flow-text"><?php _e("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
+		<h3><?= __("Attività") ?></h3>
+		<p class="flow-text"><?= __("In contemporanea ai talk avranno luogo diverse attività:") ?></p>
 		<div class="row">
 			<?php
 			ActivityBox::spawn(
@@ -316,23 +316,23 @@ Header::spawn( null, [
 	<div id="where-section" class="section">
 		<div class="row">
 			<div class="col s12 m4">
-				<h3><?php _e("Come arrivare") ?></h3>
-				<p class="flow-text"><?php echo $conference->getLocationName() ?></p>
-				<?php echo $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
+				<h3><?= __("Come arrivare") ?></h3>
+				<p class="flow-text"><?= $conference->getLocationName() ?></p>
+				<?= $conference->getLocationNoteHTML(['p' => 'flow-text']) ?>
 			</div>
 			<div class="col s10 m8">
 				<div class="card-panel">
 					<?php $conference->printLocationLeaflet() ?>
 					<noscript>
-						<img class="responsive-img" src="<?php echo $conference->getLocationGeothumb() ?>" alt="<?php _esc_html( $conference->getLocationName() ) ?>">
-						<p><?php _e("Abilitare JavaScript per la mappa interattiva.") ?></p>
+						<img class="responsive-img" src="<?= $conference->getLocationGeothumb() ?>" alt="<?= esc_html( $conference->getLocationName() ) ?>">
+						<p><?= __("Abilitare JavaScript per la mappa interattiva.") ?></p>
 					</noscript>
 					<div class="row valign-wrapper">
 						<div class="col s8">
-							<p class="flow-text"><?php echo $conference->getLocationAddress() ?></p>
+							<p class="flow-text"><?= $conference->getLocationAddress() ?></p>
 						</div>
 						<div class="col s4">
-							<p class="right"><?php echo HTML::a(
+							<p class="right"><?= HTML::a(
 								$conference->getLocationGeoOSM(),
 								icon('place', 'right'),
 								sprintf(
@@ -356,7 +356,7 @@ Header::spawn( null, [
 				<div class="row">
 					<div class="col s6 m12 offset-s3">
 						<div class="center-align">
-							<img class="responsive-img circle hoverable" src="<?php echo STATIC_PATH ?>/4-liberta.png" alt="<?php
+							<img class="responsive-img circle hoverable" src="<?= STATIC_PATH ?>/4-liberta.png" alt="<?php
 								__("Le quattro libertà fontamentali del software libero")
 							?>" />
 						</div>
@@ -364,7 +364,7 @@ Header::spawn( null, [
 				</div>
 			</div>
 			<div class="col s12 m8">
-				<h3><?php _e("Ingresso gratuito") ?></h3>
+				<h3><?= __("Ingresso gratuito") ?></h3>
 				<p class="flow-text"><?php printf(
 					__(
 					"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> ".
@@ -378,7 +378,7 @@ Header::spawn( null, [
 				) ?></p>
 
 				<!--
-				<p><?php echo HTML::a(
+				<p><?= HTML::a(
 					'./partner.php',
 					__("Scopri i nostri partner") . icon('business', 'right'),
 					sprintf(

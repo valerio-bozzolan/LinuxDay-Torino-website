@@ -25,14 +25,14 @@ $alt = esc_attr( sprintf(
 Header::spawn('photos');
 ?>
 	<div class="section">
-		<p class="flow-text"><?php _e("Alcuni scatti dal Linux Day 2016 a Torino.") ?></p>
+		<p class="flow-text"><?= __("Alcuni scatti dal Linux Day 2016 a Torino.") ?></p>
 		<div class="row">
 			<?php if( $handle = opendir(STATIC_ABSPATH . __ . 'photos' ) ): ?>
 				<?php while (false !== ($entry = readdir($handle) ) ): ?>
 					<?php if( $entry === '.' || $entry === '..' ) continue ?>
 
 					<div class="col s12 m3">
-						<img class="responsive-img ld-photo materialboxed" src="<?php echo STATIC_PATH . "/photos/$entry" ?>" alt="<?php echo $alt ?>" />
+						<img class="responsive-img ld-photo materialboxed" src="<?= STATIC_PATH . "/photos/$entry" ?>" alt="<?= $alt ?>" />
 					</div>
 
 				<?php endwhile ?>

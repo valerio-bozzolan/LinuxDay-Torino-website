@@ -24,7 +24,7 @@ inject_in_module('header', function() {
 Header::spawn('credits');
 ?>
 	<div class="section">
-		<p class="flow-text"><?php _e("Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>.") ?></p>
+		<p class="flow-text"><?= __("Di seguito sono riportati gli elementi utilizzati in questo sito, tra i migliori esempi di <strong>software libero</strong> e <strong>open source</strong>.") ?></p>
 	</div>
 
 	<div class="section">
@@ -195,13 +195,13 @@ Header::spawn('credits');
 	) ?></p>
 	<div class="row">
 		<div class="col s12 m6">
-			<blockquote class="hoverable"><code>git clone <?php echo REPO ?></code></blockquote>
+			<blockquote class="hoverable"><code>git clone <?= REPO ?></code></blockquote>
 		</div>
 	</div>
 
 	<div id="media" class="divider"></div>
 	<div class="section">
-		<h3><?php _e("Materiale") ?></h3>
+		<h3><?= __("Materiale") ?></h3>
 
 		<ul class="collection">
 			<?php $thanks = function($to, $toURL, $what, $url, $license) { ?>

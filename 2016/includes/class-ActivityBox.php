@@ -45,18 +45,18 @@ class ActivityBox {
 				<?php if( $img ): ?>
 					<div class="row"><!-- Start image row -->
 						<div class="col s4">
-							<img class="responsive-img" src="<?php echo STATIC_PATH . "/partner/$img" ?>" alt="<?php _esc_attr( $who_text ) ?>" />
+							<img class="responsive-img" src="<?= STATIC_PATH . "/partner/$img" ?>" alt="<?php echo esc_attr( $who_text ) ?>" />
 						</div>
 						<div class="col s8"><!-- Start text col -->
 				<?php endif ?>
 
 				<p>
-					<span class="flow-text"><?php echo $what ?></span><br />
+					<span class="flow-text"><?= $what ?></span><br />
 					<?php printf( __( "Gestito %s." ), $who_prep ) ?>
 				</p>
 
 				<?php if( $attendize ): ?>
-					<p><?php echo HTML::a(
+					<p><?= HTML::a(
 						$attendize,
 						__("Prenota"),
 						sprintf(

@@ -19,7 +19,7 @@ require 'load.php';
 
 Header::spawn('partner');
 ?>
-	<p class="flow-text"><?php _e(
+	<p class="flow-text"><?= __(
 		"Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si festeggia in tutta Italia.".
 		"Tutto questo, a Torino, non sarebbe possibile senza una comunità incredibile. Grazie a tutti coloro che credono ".
 		"nella libertà digitale e culturale."
@@ -46,7 +46,7 @@ Header::spawn('partner');
 
 	<div class="divider"></div>
 	<div class="section">
-		<p class="flow-text"><?php _e("Con la partecipazione di:") ?></p>
+		<p class="flow-text"><?= __("Con la partecipazione di:") ?></p>
 		<div class="row">
 			<div class="col s12 m3">
 			<?php partner(
@@ -93,7 +93,7 @@ Header::spawn('partner');
 
 	<div id="main-sponsor" class="divider"></div>
 	<div class="section">
-		<p class="flow-text"><?php _e("Main sponsor:") ?></p>
+		<p class="flow-text"><?= __("Main sponsor:") ?></p>
 		<div class="row">
 			<div class="col s12 m6 l4">
 				<?php partner(
@@ -107,7 +107,7 @@ Header::spawn('partner');
 
 	<div id="media-partner" class="divider"></div>
 	<div class="section">
-		<p class="flow-text"><?php _e("Media partner:") ?></p>
+		<p class="flow-text"><?= __("Media partner:") ?></p>
 		<div class="row">
 			<div class="col s12 m6 l4">
 			<?php partner(
@@ -128,7 +128,7 @@ Header::spawn('partner');
 
 	<div class="divider"></div>
 	<div class="section">
-		<p class="flow-text"><?php _e("Con il patrocinio di:") ?></p>
+		<p class="flow-text"><?= __("Con il patrocinio di:") ?></p>
 
 		<?php function patrocinio ($who, $url, $img) {
 			partner(

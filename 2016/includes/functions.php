@@ -44,7 +44,7 @@ function print_menu($uid = null, $level = 0, $args = [] ) {
 	<?php foreach($menuEntries as $menuEntry): ?>
 
 		<li>
-			<?php echo HTML::a($menuEntry->url, $menuEntry->name, $menuEntry->get('title')) ?>
+			<?= HTML::a($menuEntry->url, $menuEntry->name, $menuEntry->get('title')) ?>
 <?php print_menu( $menuEntry->uid, $level + 1, $args ) ?>
 
 		</li>

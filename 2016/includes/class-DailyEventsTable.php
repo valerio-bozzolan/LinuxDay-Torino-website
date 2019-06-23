@@ -94,7 +94,7 @@ class DailyEventsTable {
 	 */
 	public function printTable() {
 		if( ! isset( $this->tracks ) ) {
-			_e("asd! No.");
+			echo __("asd! No.");
 			return;
 		}
 
@@ -108,7 +108,7 @@ class DailyEventsTable {
 				<th><!-- asd --></th>
 
 				<?php foreach( $this->tracks as $track ): ?>
-				<th class="tooltipped" data-position="top" data-tooltip="<?php _esc_attr( $track->getTrackLabel() ) ?>"><?php _esc_html( $track->getTrackName() ) ?></th>
+				<th class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $track->getTrackLabel() ) ?>"><?= esc_html( $track->getTrackName() ) ?></th>
 				<?php endforeach ?>
 			</tr>
 		</thead>
@@ -149,7 +149,7 @@ class DailyEventsTable {
 							$this->getImplodedUsers( $h, $track_uid )
 						);
 					} else {
-						_e( "Nessun talk pianificato." );
+						echo __( "Nessun talk pianificato." );
 					}
 				?></td>
 				<?php endforeach ?>

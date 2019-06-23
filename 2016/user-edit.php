@@ -90,18 +90,18 @@ Header::spawn('user', [
 	'url' => $user->getUserURL(),
 ] );
 ?>
-	<p><?php echo HTML::a(
+	<p><?= HTML::a(
 		$user->getUserURL(),
 		__("Vedi") . icon('account_box', 'left')
 	) ?></p>
 
-	<h3><?php _e("Aggiungi skill") ?></h3>
+	<h3><?= __("Aggiungi skill") ?></h3>
 	<div class="row">
 		<div class="col s12 m4">
 			<div class="card-panel">
 				<form method="post">
 					<input type="hidden" name="action" value="add-skill" />
-					<input type="hidden" name="uid" value="<?php echo $user->getUserUID() ?>" />
+					<input type="hidden" name="uid" value="<?= $user->getUserUID() ?>" />
 					<div class="row">
 						<div class="col s6">
 							<select name="skill_uid" class="browser-default">
@@ -110,7 +110,7 @@ Header::spawn('user', [
 									->queryGenerator();
 								?>
 								<?php foreach( $skills as $skill ): ?>
-									<option value="<?php echo $skill->getSkillUID() ?>"><?php _esc_html( $skill->getSkillUID() ) ?></option>
+									<option value="<?= $skill->getSkillUID() ?>"><?= esc_html( $skill->getSkillUID() ) ?></option>
 								<?php endforeach ?>
 							</select>
 						</div>
@@ -118,7 +118,7 @@ Header::spawn('user', [
 							<input type="text" name="skill_score" value="0" />
 						</div>
 						<div class="col s6">
-							<button type="submit" class="btn"><?php _e("Aggiungi") ?></button>
+							<button type="submit" class="btn"><?= __("Aggiungi") ?></button>
 						</div>
 					</div>
 				</div>
@@ -126,7 +126,7 @@ Header::spawn('user', [
 		</div>
 	</form>
 
-	<h3><?php _e("Modifica skill") ?></h3>
+	<h3><?= __("Modifica skill") ?></h3>
 	<?php $skills = $user->factoryUserSkills()
 		->queryGenerator();
 	?>
@@ -138,23 +138,23 @@ Header::spawn('user', [
 				<div class="card-panel">
 					<form method="post">
 						<input type="hidden" name="action" value="change-skill" />
-						<input type="hidden" name="uid" value="<?php echo $user->getUserUID() ?>" />
+						<input type="hidden" name="uid" value="<?= $user->getUserUID() ?>" />
 						<div class="row">
 							<div class="col s6">
-								<input type="text" name="skill_uid" value="<?php echo $skill->getSkillUID() ?>" />
+								<input type="text" name="skill_uid" value="<?= $skill->getSkillUID() ?>" />
 							</div>
 							<div class="col s6">
-								<input type="text" name="skill_score" value="<?php echo $skill->getSkillScore() ?>" />
+								<input type="text" name="skill_score" value="<?= $skill->getSkillScore() ?>" />
 							</div>
 							<div class="col s6">
-								<input type="checkbox" name="skill_delete" value="yes" id="skill-<?php echo $i ?>" />
-								<label for="skill-<?php echo $i++ ?>"><?php _e("Elimina") ?></label>
+								<input type="checkbox" name="skill_delete" value="yes" id="skill-<?= $i ?>" />
+								<label for="skill-<?= $i++ ?>"><?= __("Elimina") ?></label>
 							</div>
 							<div class="col s6">
-								<button type="submit" class="btn"><?php _e("Salva") ?></button>
+								<button type="submit" class="btn"><?= __("Salva") ?></button>
 							</div>
 							<div class="col s12">
-								<p><?php echo $skill->getSkillPhrase() ?></p>
+								<p><?= $skill->getSkillPhrase() ?></p>
 							</div>
 						</div>
 					</form>

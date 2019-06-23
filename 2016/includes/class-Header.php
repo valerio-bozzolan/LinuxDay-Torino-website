@@ -94,37 +94,37 @@ class Header {
 		}
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $l ?>">
+<html lang="<?= $l ?>">
 <head>
-	<title><?php echo $args['head-title'] ?></title>
+	<title><?= $args['head-title'] ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="GNU nano" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
-	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo STATIC_PATH ?>/favicon/favicon-192.png" />
-	<link rel="shortcut icon" href="<?php echo STATIC_PATH ?>/favicon/favicon.ico" />
-	<link rel="icon" sizes="16x16 32x32 64x64" href="<?php echo STATIC_PATH ?>/favicon/favicon.ico" />
-	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo STATIC_PATH ?>/favicon/favicon-192.png" />
-	<link rel="icon" type="image/png" sizes="160x160" href="<?php echo STATIC_PATH ?>/favicon/favicon-160.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo STATIC_PATH ?>/favicon/favicon-96.png" />
-	<link rel="icon" type="image/png" sizes="64x64" href="<?php echo STATIC_PATH ?>/favicon/favicon-64.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo STATIC_PATH ?>/favicon/favicon-32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo STATIC_PATH ?>/favicon/favicon-16.png" />
-	<link rel="apple-touch-icon" href="<?php echo STATIC_PATH ?>/favicon/favicon-57.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo STATIC_PATH ?>/favicon/favicon-114.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo STATIC_PATH ?>/favicon/favicon-72.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo STATIC_PATH ?>/favicon/favicon-144.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo STATIC_PATH ?>/favicon/favicon-60.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo STATIC_PATH ?>/favicon/favicon-120.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo STATIC_PATH ?>/favicon/favicon-76.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo STATIC_PATH ?>/favicon/favicon-152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo STATIC_PATH ?>/favicon/favicon-180.png" />
+	<link rel="icon" type="image/png" sizes="196x196" href="<?= STATIC_PATH ?>/favicon/favicon-192.png" />
+	<link rel="shortcut icon" href="<?= STATIC_PATH ?>/favicon/favicon.ico" />
+	<link rel="icon" sizes="16x16 32x32 64x64" href="<?= STATIC_PATH ?>/favicon/favicon.ico" />
+	<link rel="icon" type="image/png" sizes="196x196" href="<?= STATIC_PATH ?>/favicon/favicon-192.png" />
+	<link rel="icon" type="image/png" sizes="160x160" href="<?= STATIC_PATH ?>/favicon/favicon-160.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="<?= STATIC_PATH ?>/favicon/favicon-96.png" />
+	<link rel="icon" type="image/png" sizes="64x64" href="<?= STATIC_PATH ?>/favicon/favicon-64.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= STATIC_PATH ?>/favicon/favicon-32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= STATIC_PATH ?>/favicon/favicon-16.png" />
+	<link rel="apple-touch-icon" href="<?= STATIC_PATH ?>/favicon/favicon-57.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="<?= STATIC_PATH ?>/favicon/favicon-114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="<?= STATIC_PATH ?>/favicon/favicon-72.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="<?= STATIC_PATH ?>/favicon/favicon-144.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="<?= STATIC_PATH ?>/favicon/favicon-60.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="<?= STATIC_PATH ?>/favicon/favicon-120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="<?= STATIC_PATH ?>/favicon/favicon-76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="<?= STATIC_PATH ?>/favicon/favicon-152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= STATIC_PATH ?>/favicon/favicon-180.png" />
 	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="<?php echo STATIC_PATH ?>/favicon/favicon-144.png" />
-	<meta name="msapplication-config" content="<?php echo STATIC_PATH ?>/favicon/browserconfig.xml" />
+	<meta name="msapplication-TileImage" content="<?= STATIC_PATH ?>/favicon/favicon-144.png" />
+	<meta name="msapplication-config" content="<?= STATIC_PATH ?>/favicon/browserconfig.xml" />
 <?php load_module('header') ?>
 
 <?php foreach($args['og'] as $id=>$value): ?>
-	<meta property="og:<?php echo $id ?>" content="<?php echo $value ?>" />
+	<meta property="og:<?= $id ?>" content="<?php echo $value ?>" />
 <?php endforeach ?>
 <?php if( $args['noindex'] ): ?>
 	<meta name="robots" content="noindex" />
@@ -154,19 +154,19 @@ class Header {
 |_|_| |_| |_|  |_|  \___|\___|\__,_|\___/|_| |_| |_(_)
 
 <3
-<?php _e('https://it.wikipedia.org/wiki/GNU') ?>
+<?= __('https://it.wikipedia.org/wiki/GNU') ?>
 
 <3
-<?php _e('https://it.wikipedia.org/wiki/Linux_(kernel)') ?>
+<?= __('https://it.wikipedia.org/wiki/Linux_(kernel)') ?>
 
 -->
 <body>
 	<nav>
 		<div class="nav-wrapper purple darken-4">
-			<a class="brand-logo" href="<?php echo CURRENT_CONFERENCE_PATH . _ ?>" title="<?php _esc_attr(SITE_NAME) ?>">
-				<img src="<?php echo STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php _esc_attr(SITE_DESCRIPTION) ?>" />
+			<a class="brand-logo" href="<?= CURRENT_CONFERENCE_PATH . _ ?>" title="<?php echo esc_attr(SITE_NAME) ?>">
+				<img src="<?= STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php echo esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
-			<a href="#" data-activates="slide-out" class="button-collapse"><?php echo icon('menu') ?></a>
+			<a href="#" data-activates="slide-out" class="button-collapse"><?= icon('menu') ?></a>
 			<?php print_menu('root', 0, ['main-ul-intag' => 'class="right hide-on-med-and-down"']) ?>
 
 		</div>
@@ -177,7 +177,7 @@ class Header {
 
 	</nav>
 	<div class="parallax-container">
-		<div class="parallax"><img src="<?php echo STATIC_PATH ?>/this-is-Wikipedia.jpg" alt="<?php _e("This is Wikipedia") ?>"></div>
+		<div class="parallax"><img src="<?= STATIC_PATH ?>/this-is-Wikipedia.jpg" alt="<?php echo __("This is Wikipedia") ?>"></div>
 	</div>
 
 	<?php if( $args['alert'] ) {
@@ -188,10 +188,10 @@ class Header {
 	<header class="container">
 		<?php if( isset( $args['url'] ) ): ?>
 
-		<h1><?php echo HTML::a($args['url'], $args['title'], null, TEXT) ?></h1>
+		<h1><?= HTML::a($args['url'], $args['title'], null, TEXT) ?></h1>
 		<?php else: ?>
 
-		<h1><?php echo $args['title'] ?></h1>
+		<h1><?= $args['title'] ?></h1>
 		<?php endif ?>
 	</header>
 	<?php endif ?>

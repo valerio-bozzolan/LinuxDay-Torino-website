@@ -90,7 +90,7 @@ Header::spawn('event', [
 	'url' => $event->getEventURL()
 ] );
 ?>
-	<p><?php echo HTML::a(
+	<p><?= HTML::a(
 		$event->getEventURL( ROOT ),
 		__("Vedi") . icon('account_box', 'left')
 	) ?></p>
@@ -98,8 +98,8 @@ Header::spawn('event', [
 	<div class="row">
 		<div class="col s12 m6">
 			<div class="card-panel">
-				<h3><?php _e("Aggiungi utente") ?></h3>
-				<form action="<?php echo $permalink ?>" method="post">
+				<h3><?= __("Aggiungi utente") ?></h3>
+				<form action="<?= $permalink ?>" method="post">
 					<input type="hidden" name="action" value="add-user" />
 					<select name="user" class="browser-default">
 						<?php $users = User::factory()
@@ -112,12 +112,12 @@ Header::spawn('event', [
 							->queryGenerator();
 						?>
 						<?php foreach( $users as $user ): ?>
-							<option value="<?php echo $user->getUserUID() ?>">
-								<?php _esc_html( $user->getUserFullname() ) ?>
+							<option value="<?= $user->getUserUID() ?>">
+								<?= esc_html( $user->getUserFullname() ) ?>
 							</option>
 						<?php endforeach ?>
 					</select>
-					<p><button type="submit" class="btn"><?php _e("Aggiungi") ?></button></p>
+					<p><button type="submit" class="btn"><?= __("Aggiungi") ?></button></p>
 				</form>
 			</div>
 		</div>
@@ -127,7 +127,7 @@ Header::spawn('event', [
 		->orderBy('event_user_order')
 		->query(); ?>
 	<?php if( $users->num_rows ): ?>
-	<h2><?php _e("Modifica ordine") ?></h2>
+	<h2><?= __("Modifica ordine") ?></h2>
 	<div class="row">
 		<?php $i = 0 ?>
 		<?php while( $user = $users->fetch_object('EventUser') ): ?>
@@ -135,20 +135,20 @@ Header::spawn('event', [
 			<div class="col s12 m6">
 				<div class="card-panel">
 					<div class="row">
-					<form action="<?php echo $permalink ?>" method="post">
+					<form action="<?= $permalink ?>" method="post">
 						<input type="hidden" name="action" value="update-user" />
 						<div class="col s12 m6">
-							<input type="text" name="user" value="<?php echo $user->getUserUID() ?>" />
+							<input type="text" name="user" value="<?= $user->getUserUID() ?>" />
 						</div>
 						<div class="col s12 m6">
-							<input type="number" name="order" value="<?php echo $user->getEventUserOrder() ?>" />
+							<input type="number" name="order" value="<?= $user->getEventUserOrder() ?>" />
 						</div>
 						<div class="col sq12 m6">
-							<input type="checkbox" name="delete" value="yes" id="asd-<?php echo $i ?>" />
-							<label for="asd-<?php echo $i ?>"><?php _e("Elimina") ?></label>
+							<input type="checkbox" name="delete" value="yes" id="asd-<?= $i ?>" />
+							<label for="asd-<?= $i ?>"><?= __("Elimina") ?></label>
 						</div>
 						<div class="col s12 m6">
-							<p><button type="submit" class="btn"><?php _e("Salva") ?></button></p>
+							<p><button type="submit" class="btn"><?= __("Salva") ?></button></p>
 						</div>
 					</form>
 					</div>
