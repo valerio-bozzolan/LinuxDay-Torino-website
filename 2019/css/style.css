@@ -733,6 +733,11 @@ footer {
   #intro {
     height: 100vh;
   }
-
 }
 
+/*
+ * Custom shit 2019 by LDTO
+ */
+#map {
+	height: 80vmin;
+}
