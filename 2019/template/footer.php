@@ -44,11 +44,6 @@ defined( 'ABSPATH' ) or exit;
 	</div>
 </footer>
 
-
-<!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
-
 <!-- =========================
      SCRIPTS
 ============================== -->
