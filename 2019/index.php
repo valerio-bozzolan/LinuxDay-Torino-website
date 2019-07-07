@@ -474,7 +474,7 @@ var typed = new Typed('.typing-smanettone', {
 	<div class="container">
 		<div class="col-12">
 			<h2><?= __( "Contattaci" ) ?></h2>
-			<p><?= printf(
+			<p><?php printf(
 				__( "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo email %s o al numero %s." ),
 				CONTACT_EMAIL,
 				HTML::a(
