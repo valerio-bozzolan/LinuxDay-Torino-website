@@ -407,12 +407,12 @@ var typed = new Typed('.typing-smanettone', {
 
 
 <!-- =========================
-    VENUE SECTION   
+    VENUE SECTION
 ============================== -->
 <section id="venue" class="parallax-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-offset-1 col-md-5 col-sm-8">
+			<div class="col-md-6 col-sm-8">
 				<h2>Luogo</h2>
 				<p>La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da Montefeltro 2.</p>
 				<p>Per raggiungerci puoi:
@@ -423,11 +423,10 @@ var typed = new Typed('.typing-smanettone', {
 					<li>Anche i bus 14, 24, 35 e 63 fermano abbastanza vicino, forse.</li>
 				</ul>
 			</div>
-		</div>
-
-		<div class="row">
-			<noscript><?= __("Abilita JavaScript per vedere la mappa") ?></noscript>
-			<?= $conference->printLocationLeaflet() ?>
+			<div class="col-md-6 col-sm-4">
+				<noscript><?= __("Abilita JavaScript per vedere la mappa") ?></noscript>
+				<?= $conference->printLocationLeaflet() ?>
+			</div>
 		</div>
 	</div>
 </section>
