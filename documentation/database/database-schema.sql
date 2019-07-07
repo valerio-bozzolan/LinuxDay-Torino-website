@@ -612,7 +612,7 @@ INSERT INTO `ldto_location` VALUES (6,'cortile-del-maglio','Cortile del Maglio',
 INSERT INTO `ldto_location` VALUES (7,'sala-consiglieri-della-provincia-di-torino','Sala Consiglieri della Provincia di Torino','Via Maria Vittoria 12, Torino','Palazzo Cisterna',NULL,45.0671,7.68531,NULL);
 INSERT INTO `ldto_location` VALUES (8,'cdq','Casa del Quartiere','Via Oddino Morgari 14, Torino',NULL,NULL,45.0542,7.67816,NULL);
 INSERT INTO `ldto_location` VALUES (9,'torino-incontra','Torino Incontra','Via Nino Costa 8, Torino',NULL,NULL,45.0648,7.68596,NULL);
-INSERT INTO `ldto_location` VALUES (10,'toolbox-coworking','Toolbox Coworking','Via Agostino da Montefeltro 2, Torino',NULL,NULL,45.0502418,7.6670973,NULL);
+INSERT INTO `ldto_location` VALUES (10,'toolbox-coworking','Toolbox Coworking','Via Agostino da Montefeltro 2, Torino',NULL,NULL,45.05025,7.66913,NULL);
 INSERT INTO `ldto_location` VALUES (11,'fablab','Fablab','Via Egeo 16, Torino',NULL,NULL,45.0501,7.66605,NULL);
 /*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
 UNLOCK TABLES;
