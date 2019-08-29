@@ -18,6 +18,15 @@
 trait LocationTrait {
 
 	/**
+	 * Get the Location ID
+	 *
+	 * @return int
+	 */
+	public function getLocationID() {
+		return $this->get( Location::ID );
+	}
+
+	/**
 	 * Get localized location name
 	 *
 	 * @return string

@@ -206,7 +206,85 @@ if( $event ) {
 					?> />
 				</div>
 			</div>
+
 		</div>
+
+		<div class="row">
+
+			<!-- chapters -->
+			<div class="col s12 m4 l3">
+				<div class="card-panel">
+					<label for="chapter"><?= __( "Capitolo" ) ?></label>
+					<select name="chapter">
+						<?php
+							$chapters =
+								Chapter::factory()
+									->orderBy( Chapter::NAME, 'DESC' )
+									->queryGenerator();
+
+							foreach( $chapters as $chapter ) {
+								$option = ( new HTML( 'option' ) )
+									->setText( esc_html( $chapter->getChapterName() ) )
+									->setAttr( 'value', $chapter->getChapterID() );
+
+								$selected = false;
+								if( $event ) {
+									$selected = $event->getChapterID() === $chapter->getChapterID();
+								} else {
+									$selected = isset( $_GET['chapter'] ) && $event->getChapterUID === $_GET['chapter'];
+								}
+
+								if( $selected ) {
+										$option->setAttr( 'selected', 'selected' );
+								}
+
+								echo $option->render();
+							}
+						?>
+					</select>
+				</div>
+			</div>
+			<!-- /chapters -->
+
+			<!-- chapters -->
+			<div class="col s12 m4 l3">
+				<div class="card-panel">
+					<label for="room"><?= __( "Stanza" ) ?></label>
+					<select name="room">
+						<?php
+							$rooms =
+								Room::factory()
+									->whereInt( Location::ID, $conference->getLocationID() )
+									->orderBy( Room::NAME, 'DESC' )
+									->queryGenerator();
+
+							foreach( $rooms as $room ) {
+								$option = ( new HTML( 'option' ) )
+									->setText( esc_html( $room->getRoomName() ) )
+									->setAttr( 'value', $room->getRoomID() );
+
+								$selected = false;
+								if( $event ) {
+									$selected = $event->getRoomID() === $room->getRoomID();
+								} else {
+									$selected = isset( $_GET['room'] ) && $event->getRoomUID === $_GET['room'];
+								}
+
+								if( $selected ) {
+										$option->setAttr( 'selected', 'selected' );
+								}
+
+								echo $option->render();
+							}
+						?>
+					</select>
+				</div>
+			</div>
+			<!-- /chapters -->
+
+		</div>
+
+
 		<div class="row">
 
 			<div class="col s12 m4 l3">
