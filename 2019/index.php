@@ -297,11 +297,11 @@ var typed = new Typed('.typing-smanettone', {
 			</div>
 		</div>
 		<div class="row border-bottom">
-		<?php foreach( [ 'base', 'dev', 'sys', 'misc' ] as $chapter ): ?>
+		<?php foreach( [ 'base', 'dev', 'sys', 'misc' ] as $track ): ?>
 			<div class="col-xs-12 col-sm-3">
 				<p><?php printf(
 					__( "Aula %s" ),
-					$chapter
+					$track
 				) ?></p>
 				<div class="row">
 					<?php
@@ -310,7 +310,7 @@ var typed = new Typed('.typing-smanettone', {
 						// order by date
 						$events =
 							FullEvent::factoryByConference( $conference->getConferenceID() )
-								->whereStr( Chapter::UID, $chapter )
+								->whereStr( Track::UID, $track )
 								->orderBy(  Event::START, 'ASC' )
 								->queryResults();
 					?>
@@ -320,7 +320,7 @@ var typed = new Typed('.typing-smanettone', {
 							<h4>Di <a href="#">Relatore Da Definire</a></h4>
 							<h6>
 								<span><i class="fa fa-clock-o"></i>&nbsp;<?= $time ?></span><!--
-								--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $chapter ?></a></span><br>
+								--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $track ?></a></span><br>
 							</h6>
 							<p>Breve descrizione. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros at semper egestas.</p>
 							<p><i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br><i class="fa fa-calendar"></i><a href="tropical.php?cose=robe" title="Talk da definire">&nbsp;Salva sul calendario</a></p>
@@ -329,7 +329,10 @@ var typed = new Typed('.typing-smanettone', {
 
 					<?php if( has_permission( 'add-event' ) ): ?>
 						<div class="col-xs-12">
-							<a href="<?= esc_attr( $conference->getURLToCreateEventInConference() ) ?>"><?= __( "Aggiungi" ) ?></a>
+							<a href="<?= esc_attr( $conference->getURLToCreateEventInConference( [
+								'chapter' => 'talk',
+								'track'   => $track,
+							] ) ) ?>"><?= __( "Aggiungi" ) ?></a>
 						</div>
 					<?php endif ?>
 				</div>
