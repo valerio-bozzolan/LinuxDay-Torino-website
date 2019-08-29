@@ -296,24 +296,45 @@ var typed = new Typed('.typing-smanettone', {
 				</div>
 			</div>
 		</div>
+		<div class="row border-bottom">
+		<?php foreach( [ 'base', 'dev', 'sys', 'misc' ] as $chapter ): ?>
+			<div class="col-xs-12 col-sm-3">
+				<p><?php printf(
+					__( "Aula %s" ),
+					$chapter
+				) ?></p>
+				<div class="row">
+					<?php
+						// query all the events that belongs to this conference
+						// and that belongs to this chapter
+						// order by date
+						$events =
+							FullEvent::factoryByConference( $conference->getConferenceID() )
+								->whereStr( Chapter::UID, $chapter )
+								->orderBy(  Event::START, 'ASC' )
+								->queryResults();
+					?>
+					<?php foreach( $events as $event ): ?>
+						<div class="col-xs-12">
+							<h3>Da definire</h3>
+							<h4>Di <a href="#">Relatore Da Definire</a></h4>
+							<h6>
+								<span><i class="fa fa-clock-o"></i>&nbsp;<?= $time ?></span><!--
+								--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $chapter ?></a></span><br>
+							</h6>
+							<p>Breve descrizione. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros at semper egestas.</p>
+							<p><i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br><i class="fa fa-calendar"></i><a href="tropical.php?cose=robe" title="Talk da definire">&nbsp;Salva sul calendario</a></p>
+						</div>
+					<?php endforeach ?>
 
-			<?php foreach(['14:00', '15:00', '16:00', '17:00'] as $time): ?>
-			<div class="row border-bottom">
-				<?php foreach(['Base', 'Dev', 'Sys', 'Misc'] as $room): ?>
-				<div class="col-xs-12 col-sm-3">
-					<h3>Da definire</h3>
-					<h4>Di <a href="#">Relatore Da Definire</a></h4>
-					<h6>
-						<span><i class="fa fa-clock-o"></i>&nbsp;<?= $time ?></span><!--
-						--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $room ?></a></span><br>
-					</h6>
-					<p>Breve descrizione. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros at semper egestas.</p>
-					<p><i class="fa fa-info-circle"></i><a href="#">&nbsp;γνῶθι σαυτόν</a><br><i class="fa fa-calendar"></i><a href="tropical.php?cose=robe" title="Talk da definire">&nbsp;Salva sul calendario</a></p>
+					<?php if( has_permission( 'add-event' ) ): ?>
+						<div class="col-xs-12">
+							<a href="<?= esc_attr( $conference->getURLToCreateEventInConference() ) ?>"><?= __( "Aggiungi" ) ?></a>
+						</div>
+					<?php endif ?>
 				</div>
-				<?php endforeach ?>
 			</div>
-			<?php endforeach ?>
-
+		<?php endforeach ?>
 		</div>
 	</div>
 </section>

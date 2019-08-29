@@ -68,6 +68,19 @@ trait FullEventTrait {
 			->orderBy('event_end DESC');
 	}
 
+	/**
+	 * Get the edit URL for this FullEvent
+	 *
+	 * @param  boolean $absolute Flag to require an absolute URL
+	 * @return string
+	 */
+	public function getFullEventEditURL( $absolute = false ) {
+		return FullEvent::editURL( [
+			'uid'        => $this->getEventUID(),
+			'conference' => $this->getConferenceUID()
+		], $absolute );
+	}
+
 	private function factoryFullEventInSameContext() {
 		return FullEvent::factory()
 			->whereInt( 'event.conference_ID', $this->getConferenceID() )
@@ -172,5 +185,17 @@ class FullEvent extends Queried {
 	public static function permalink( $conference_uid, $event_uid, $chapter_uid ) {
 		return sprintf( PERMALINK_EVENT, $conference_uid, $event_uid, $chapter_uid ) ;
 
+	}
+
+	/**
+	 * Get the edit URL to a FullEvent
+	 *
+	 * @param  array   $args     Arguments for the edit page
+	 * @param  boolean $absolute Flag to require an absolute URL
+	 * @return string
+	 */
+	public static function editURL( $args, $absolute = false ) {
+		$url = http_build_get_query( '/2016/event-edit.php', $args );
+		return site_page( $url, $absolute );
 	}
 }

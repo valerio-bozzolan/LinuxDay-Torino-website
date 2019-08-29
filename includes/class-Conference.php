@@ -138,6 +138,18 @@ trait ConferenceTrait {
 	}
 
 	/**
+	 * Get the URL to create an Event in this Conference
+	 *
+	 * @param  boolean $absolute Flag to have an absolute URL
+ 	 * @return string
+	 */
+	public function getURLToCreateEventInConference( $absolute = false ) {
+		return FullEvent::editURL( [
+			'conference' => $this->getConferenceUID(),
+		], $absolute );
+	}
+
+	/**
 	 * Normalize a Conference object
 	 */
 	protected function normalizeConference() {

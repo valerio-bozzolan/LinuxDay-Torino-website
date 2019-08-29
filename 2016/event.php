@@ -68,10 +68,7 @@ Header::spawn( null, $args );
 ?>
 	<?php if( $event->isEventEditable() ): ?>
 	<p><?= HTML::a(
-		CURRENT_CONFERENCE_PATH . "/event-edit.php?" . http_build_query( [
-			'uid'        => $event->getEventUID(),
-			'conference' => $event->getConferenceUID()
-		] ),
+		$event->getFullEventEditURL(),
 		__("Modifica evento") . icon('edit', 'left')
 	) ?></p>
 	<?php endif ?>
