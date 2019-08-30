@@ -63,29 +63,29 @@ if( $_POST ) {
 		if( is_action( 'save-event' ) ) {
 
 			$data = [];
-			$data[] = new DBCol( Event::TITLE,       $_POST['title'],       's' );
-			$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's' );
-			$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's' );
-			$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    's' );
-			$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 's' );
-			$data[] = new DBCol( Event::START,       $_POST['start'],       's' );
-			$data[] = new DBCol( Event::END,         $_POST['end'],         's' );
-			$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       's' );
+			$data[] = new DBCol( Event::TITLE,       $_POST['title'],       's'  );
+			$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's'  );
+			$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's'  );
+			$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    's'  );
+			$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 's'  );
+			$data[] = new DBCol( Event::START,       $_POST['start'],       's'  );
+			$data[] = new DBCol( Event::END,         $_POST['end'],         's'  );
+			$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       's'  );
+			$data[] = new DBCol( Chapter::ID,        $_POST['chapter'],     'd'  );
+			$data[] = new DBCol( Room::ID,           $_POST['room'],        'd'  );
+			$data[] = new DBCol( Track::ID,          $_POST['track'],       'd'  );
 
 			if( $event ) {
 				Event::factory()
-					->whereInt( Event::ID, $event->getEventID(), 'd' )
+					->whereInt( Event::ID, $event->getEventID() )
 					->update( $data );
 			} else {
 				Event::factory()
 					->insert( $data );
 
 				$id = last_inserted_ID();
-
-				die( "TODO: redirect to new Event with ID: $id. asd" );
-				// @TODO
-				$event = Event::factoryFromID( $id );
-				http_redirect( $event->getEventEditURL() );
+				$event = FullEvent::factoryFromID( $id );
+				http_redirect( $event->getFullEventEditURL(), 303 );
 			}
 		}
 
@@ -217,21 +217,24 @@ if( $event ) {
 					<label for="chapter"><?= __( "Capitolo" ) ?></label>
 					<select name="chapter">
 						<?php
+							// get every chapter
 							$chapters =
 								Chapter::factory()
-									->orderBy( Chapter::NAME, 'DESC' )
+									->orderBy( Chapter::NAME )
 									->queryGenerator();
 
+							// generate select options
 							foreach( $chapters as $chapter ) {
 								$option = ( new HTML( 'option' ) )
 									->setText( esc_html( $chapter->getChapterName() ) )
 									->setAttr( 'value', $chapter->getChapterID() );
 
+								// eventually select this chapter
 								$selected = false;
 								if( $event ) {
 									$selected = $event->getChapterID() === $chapter->getChapterID();
-								} else {
-									$selected = isset( $_GET['chapter'] ) && $event->getChapterUID === $_GET['chapter'];
+								} elseif( isset( $_GET['chapter'] ) ) {
+									$selected = $_GET['chapter'] === $event->getChapterUID();
 								}
 
 								if( $selected ) {
@@ -246,28 +249,69 @@ if( $event ) {
 			</div>
 			<!-- /chapters -->
 
-			<!-- chapters -->
+			<!-- tracks -->
+			<div class="col s12 m4 l3">
+				<div class="card-panel">
+					<label for="track"><?= __( "Traccia" ) ?></label>
+					<select name="track">
+						<?php
+							// select all the available tracks for this Location
+							$tracks =
+								Track::factory()
+									->orderBy( Track::NAME )
+									->queryGenerator();
+
+							// generate a select option for each track
+							foreach( $tracks as $track ) {
+								$option = ( new HTML( 'option' ) )
+									->setText( esc_html( $track->getTrackName() ) )
+									->setAttr( 'value', $track->getTrackID() );
+
+								// eventually auto-select this track
+								$selected = false;
+								if( $event ) {
+									$selected = $event->getTrackID() === $track->getTrackID();
+								} elseif( isset( $_GET['track'] ) ) {
+									$selected = $_GET['track'] === $event->getTrackUID();
+								}
+
+								if( $selected ) {
+										$option->setAttr( 'selected', 'selected' );
+								}
+
+								echo $option->render();
+							}
+						?>
+					</select>
+				</div>
+			</div>
+			<!-- /tracks -->
+
+			<!-- rooms -->
 			<div class="col s12 m4 l3">
 				<div class="card-panel">
 					<label for="room"><?= __( "Stanza" ) ?></label>
 					<select name="room">
 						<?php
+							// select all the available rooms for this Location
 							$rooms =
 								Room::factory()
 									->whereInt( Location::ID, $conference->getLocationID() )
-									->orderBy( Room::NAME, 'DESC' )
+									->orderBy( Room::NAME )
 									->queryGenerator();
 
+							// generate a select option for each room
 							foreach( $rooms as $room ) {
 								$option = ( new HTML( 'option' ) )
 									->setText( esc_html( $room->getRoomName() ) )
 									->setAttr( 'value', $room->getRoomID() );
 
+								// eventually auto-select this room
 								$selected = false;
 								if( $event ) {
 									$selected = $event->getRoomID() === $room->getRoomID();
-								} else {
-									$selected = isset( $_GET['room'] ) && $event->getRoomUID === $_GET['room'];
+								} elseif( isset( $_GET['room'] ) ) {
+									$selected = $_GET['room'] === $event->getRoomUID();
 								}
 
 								if( $selected ) {
@@ -280,7 +324,7 @@ if( $event ) {
 					</select>
 				</div>
 			</div>
-			<!-- /chapters -->
+			<!-- /rooms -->
 
 		</div>
 
