@@ -55,91 +55,93 @@ if( isset( $_GET['uid'] ) ) {
 
 if( $_POST ) {
 
-	if( $event ) {
+	if( is_action( 'save-event' ) ) {
 
-		/*
-		 *
-		 */
-		if( is_action( 'save-event' ) ) {
+		$conference_ID = $conference->getConferenceID();
 
-			$data = [];
-			$data[] = new DBCol( Event::TITLE,       $_POST['title'],       's'  );
-			$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's'  );
-			$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's'  );
-			$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    's'  );
-			$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 's'  );
-			$data[] = new DBCol( Event::START,       $_POST['start'],       's'  );
-			$data[] = new DBCol( Event::END,         $_POST['end'],         's'  );
-			$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       's'  );
-			$data[] = new DBCol( Chapter::ID,        $_POST['chapter'],     'd'  );
-			$data[] = new DBCol( Room::ID,           $_POST['room'],        'd'  );
-			$data[] = new DBCol( Track::ID,          $_POST['track'],       'd'  );
+		$data = [];
+		$data[] = new DBCol( Event::TITLE,       $_POST['title'],       's' );
+		$data[] = new DBCol( Event::UID,         $_POST['uid'],         's' );
+		$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's' );
+		$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's' );
+		$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    's' );
+		$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 's' );
+		$data[] = new DBCol( Event::START,       $_POST['start'],       's' );
+		$data[] = new DBCol( Event::END,         $_POST['end'],         's' );
+		$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       's' );
+		$data[] = new DBCol( Chapter::ID,        $_POST['chapter'],     'd' );
+		$data[] = new DBCol( Room::ID,           $_POST['room'],        'd' );
+		$data[] = new DBCol( Track::ID,          $_POST['track'],       'd' );
+		$data[] = new DBCol( Conference::ID,     $conference_ID,        'd' );
 
-			if( $event ) {
-				Event::factory()
+		if( $event ) {
+			Event::factory()
+				->whereInt( Event::ID, $event->getEventID() )
+				->update( $data );
+		} else {
+			Event::factory()
+				->insertRow( $data );
+
+			$id = last_inserted_ID();
+			$event = FullEvent::factory()
+				->whereInt( Event::ID, $id )
+				->queryRow();
+
+			// redirect to the new Event
+			http_redirect( $event->getFullEventEditURL(), 303 );
+		}
+	}
+
+	/*
+	 * Add the user
+	 */
+	if( $event && is_action( 'add-user' ) && isset( $_POST['user'] ) ) {
+		// Add user
+
+		$user = User::factoryFromUID( $_POST['user'] )
+			->select( User::ID )
+			->queryRow();
+
+		if( $user ) {
+			EventUser::delete($event->getEventID(), $user->getUserID());
+
+			insert_row('event_user', [
+				new DBCol( Event::ID, $event->getEventID(), 'd' ),
+				new DBCol( User::ID,  $user->getUserID(),   'd' ),
+			] );
+		}
+	}
+
+	/**
+	 * Update an user order
+	 */
+	if( $event && is_action( 'update-user' ) && isset( $_POST['user'] ) ) {
+
+		$user = User::factoryFromUID( $_POST['user'] )
+			->select( User::ID )
+			->queryRow();
+
+		if( $user ) {
+			if ( !empty( $_POST['delete'] ) ) {
+				// Delete user
+
+				EventUser::delete( $event->getEventID(), $user->getUserID() );
+
+			} elseif( isset( $_POST['order'] ) ) {
+
+				// change order
+				EventUser::factory()
 					->whereInt( Event::ID, $event->getEventID() )
-					->update( $data );
-			} else {
-				Event::factory()
-					->insert( $data );
-
-				$id = last_inserted_ID();
-				$event = FullEvent::factoryFromID( $id );
-				http_redirect( $event->getFullEventEditURL(), 303 );
-			}
-		}
-
-		/*
-		 * Add the user
-		 */
-		if( is_action( 'add-user' ) && isset( $_POST['user'] ) ) {
-			// Add user
-
-			$user = User::factoryFromUID( $_POST['user'] )
-				->select( User::ID )
-				->queryRow();
-
-			if( $user ) {
-				EventUser::delete($event->getEventID(), $user->getUserID());
-
-				insert_row('event_user', [
-					new DBCol( Event::ID, $event->getEventID(), 'd' ),
-					new DBCol( User::ID,  $user->getUserID(),   'd' ),
-				] );
-			}
-		}
-
-		/**
-		 * Update an user order
-		 */
-		if( is_action( 'update-user' ) && isset( $_POST['user'] ) ) {
-
-			$user = User::factoryFromUID( $_POST['user'] )
-				->select( User::ID )
-				->queryRow();
-
-			if( $user ) {
-				if ( !empty( $_POST['delete'] ) ) {
-					// Delete user
-
-					EventUser::delete( $event->getEventID(), $user->getUserID() );
-
-				} elseif( isset( $_POST['order'] ) ) {
-
-					// change order
-					EventUser::factory()
-						->whereInt( Event::ID, $event->getEventID() )
-						->whereInt( User ::ID, $user->getUserID()   )
-						->update( [
-							new DBCol( EventUser::ORDER, $_POST['order'], 'd')
-						] );
-				}
+					->whereInt( User ::ID, $user->getUserID()   )
+					->update( [
+						new DBCol( EventUser::ORDER, $_POST['order'], 'd')
+					] );
 			}
 		}
 	}
 
-	// post -> redirect -> get
-	http_redirect( $_SERVER[ 'REQUEST_URI' ] );
+	// post -> redirect -> get (no: it hide errors)
+	// http_redirect( $_SERVER[ 'REQUEST_URI' ], 303 );
 }
 
 if( $event ) {
@@ -180,6 +182,17 @@ if( $event ) {
 					<input type="text" name="title" id="event-title" required<?php
 						if( $event ) {
 							echo value( $event->get( Event::TITLE ) );
+						}
+					?> />
+				</div>
+			</div>
+
+			<div class="col s12 m4 l3">
+				<div class="card-panel">
+					<label for="event-uid"><?= __( "Codice" ) ?></label>
+					<input type="text" name="uid" id="event-uid" required<?php
+						if( $event ) {
+							echo value( $event->get( Event::UID ) );
 						}
 					?> />
 				</div>
@@ -337,6 +350,8 @@ if( $event ) {
 					<input type="text" name="start" required placeholder="Y-m-d H:i:s"<?php
 						if( $event ) {
 							echo value( $event->getEventStart()->format( 'Y-m-d H:i:s' ) );
+						} elseif( isset( $_GET['start'] ) ) {
+							echo value( $_GET['start'] );
 						}
 					?> />
 				</div>
@@ -348,6 +363,8 @@ if( $event ) {
 					<input type="text" name="end" required placeholder="Y-m-d H:i:s"<?php
 						if( $event ) {
 							echo value( $event->getEventEnd()->format( 'Y-m-d H:i:s' ) );
+						} elseif( isset( $_GET['end'] ) ) {
+							echo value( $_GET['end'] );
 						}
 					?> />
 				</div>

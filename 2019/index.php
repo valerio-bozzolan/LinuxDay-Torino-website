@@ -305,6 +305,8 @@ var typed = new Typed('.typing-smanettone', {
 				) ?></p>
 				<div class="row">
 					<?php
+						$last_event_start = $conference->getConferenceStart();
+
 						// query all the events that belongs to this conference
 						// and that belongs to this chapter
 						// order by date
@@ -315,6 +317,7 @@ var typed = new Typed('.typing-smanettone', {
 								->queryResults();
 					?>
 					<?php foreach( $events as $event ): ?>
+						<?php $last_event_start = $event->get( Event::START ) ?>
 						<div class="col-xs-12">
 							<h3>Da definire</h3>
 							<h4>Di <a href="#">Relatore Da Definire</a></h4>
@@ -328,10 +331,22 @@ var typed = new Typed('.typing-smanettone', {
 					<?php endforeach ?>
 
 					<?php if( has_permission( 'add-event' ) ): ?>
+						<?php
+							$one_hour = new DateInterval('PT1H');
+
+							// add one hour to the last event to suggest a new one
+							$last_event_start = clone $last_event_start;
+							$last_event_start->add( $one_hour );
+
+							$last_event_end   = clone $last_event_start;
+							$last_event_end->add( $one_hour );
+						?>
 						<div class="col-xs-12">
 							<a href="<?= esc_attr( $conference->getURLToCreateEventInConference( [
 								'chapter' => 'talk',
 								'track'   => $track,
+								'start'   => $last_event_start->format( 'Y-m-d H:i:s' ),
+								'end'     => $last_event_end  ->format( 'Y-m-d H:i:s' ),
 							] ) ) ?>"><?= __( "Aggiungi" ) ?></a>
 						</div>
 					<?php endif ?>
