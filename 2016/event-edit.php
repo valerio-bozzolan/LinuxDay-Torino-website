@@ -234,7 +234,7 @@ if( $event ) {
 								if( $event ) {
 									$selected = $event->getChapterID() === $chapter->getChapterID();
 								} elseif( isset( $_GET['chapter'] ) ) {
-									$selected = $_GET['chapter'] === $event->getChapterUID();
+									$selected = $_GET['chapter'] === $chapter->getChapterUID();
 								}
 
 								if( $selected ) {
@@ -272,7 +272,7 @@ if( $event ) {
 								if( $event ) {
 									$selected = $event->getTrackID() === $track->getTrackID();
 								} elseif( isset( $_GET['track'] ) ) {
-									$selected = $_GET['track'] === $event->getTrackUID();
+									$selected = $_GET['track'] === $track->getTrackUID();
 								}
 
 								if( $selected ) {
@@ -311,7 +311,7 @@ if( $event ) {
 								if( $event ) {
 									$selected = $event->getRoomID() === $room->getRoomID();
 								} elseif( isset( $_GET['room'] ) ) {
-									$selected = $_GET['room'] === $event->getRoomUID();
+									$selected = $_GET['room'] === $room->getRoomUID();
 								}
 
 								if( $selected ) {
