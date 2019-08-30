@@ -27,16 +27,18 @@ trait EventUserTrait {
 	}
 
 	/**
-	 * Can be called statically.
+	 * Delete this Event-User from the database
+	 *
+	 * Can be called statically
 	 */
-	function deleteEventUser($event_ID = null, $user_ID = null) {
+	function deleteEventUser( $event_ID = null, $user_ID = null ) {
 		if( $event_ID === null ) {
 			$event_ID = $this->getEventID();
 		}
 		if( $user_ID === null ) {
 			$user_ID  = $this->getUserID();
 		}
-		EventUser::delete($event_ID, $user_ID);
+		EventUser::delete( $event_ID, $user_ID );
 	}
 
 	/**
@@ -89,6 +91,9 @@ class EventUser extends Queried {
 
 	/**
 	 * Delete the connection of an Event to an User
+	 *
+	 * @param int $event_ID Event ID
+	 * @param int $user_ID  User ID
 	 */
 	public static function delete( $event_ID, $user_ID ) {
 		EventUser::factory()
