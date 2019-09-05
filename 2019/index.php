@@ -114,6 +114,7 @@ var typed = new Typed('.typing-smanettone', {
 		__("uno smanettone"),
 		__("un programmatore"),
 		__("una persona curiosa"),
+		__("in cerca di lavoro"),
 		__("un sistemista"),
 		__("un po' pinguino"),
 		__("in modalità incognito"),
@@ -291,8 +292,8 @@ var typed = new Typed('.typing-smanettone', {
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="section-title">
-					<h2>Programma</h2>
-					<p>I temi affrontati e i talk sono in fase di definizione.</p>
+					<h2><?= __( "Programma" ) ?></h2>
+					<p><?= __( "I temi affrontati e i talk sono in fase di definizione." ) ?></p>
 				</div>
 			</div>
 		</div>
@@ -305,6 +306,7 @@ var typed = new Typed('.typing-smanettone', {
 				) ?></p>
 				<div class="row">
 					<?php
+						// every Event should start when the Conference starts
 						$last_event_start = $conference->getConferenceStart();
 
 						// query all the events that belongs to this conference
@@ -319,14 +321,26 @@ var typed = new Typed('.typing-smanettone', {
 					<?php foreach( $events as $event ): ?>
 						<?php $last_event_start = $event->get( Event::START ) ?>
 						<div class="col-xs-12">
-							<h3>Da definire</h3>
-							<h4>Di <a href="#">Relatore Da Definire</a></h4>
+							<h3><?= esc_html( $event->getEventTitle() ) ?></h3>
+							<h4><?= sprintf(
+								__( "Di %s"),
+								Homepage19::listEventAuthors( $event, __( "Speaker Segreto" ) )
+							) ?></h4>
 							<h6>
-								<span><i class="fa fa-clock-o"></i>&nbsp;<?= $time ?></span><!--
+								<span><i class="fa fa-clock-o"></i>&nbsp;<?=
+									$event->getEventStart( 'H:i' )
+								?></span><!--
 								--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $track ?></a></span><br>
 							</h6>
-							<p>Breve descrizione. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros at semper egestas.</p>
-							<p><i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br><i class="fa fa-calendar"></i><a href="tropical.php?cose=robe" title="Talk da definire">&nbsp;Salva sul calendario</a></p>
+
+							<?php if( $event->hasEventAbstract() ): ?>
+								<p><?= $event->getEventAbstractHTML() ?></p>
+							<?php endif ?>
+
+							<p>
+								<!--<i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br>-->
+								<i class="fa fa-calendar"></i><a href="<?= esc_attr( $event->getEventCalURL() ) ?>" title="<?= esc_attr( $event->getEventTitle() ) ?>">&nbsp;<?= __( "Salva sul calendario" ) ?></a>
+							</p>
 						</div>
 					<?php endforeach ?>
 
