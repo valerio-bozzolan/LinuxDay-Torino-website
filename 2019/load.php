@@ -29,7 +29,7 @@ define('CURRENT_CONFERENCE_URL',                    URL  . _  . CURRENT_CONFEREN
 define('CURRENT_CONFERENCE_ABSPATH', ABSPATH . __ . ROOT . __ . CURRENT_CONFERENCE_UID);
 
 // Autoload classes
-spl_autoload_register( function($c) {
+spl_autoload_register( function( $c ) {
 	$path = CURRENT_CONFERENCE_ABSPATH . "/include/class-$c.php";
 	if( is_file( $path ) ) {
 		require $path;
