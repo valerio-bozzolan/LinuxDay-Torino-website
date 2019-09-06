@@ -341,6 +341,13 @@ var typed = new Typed('.typing-smanettone', {
 								<!--<i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br>-->
 								<i class="fa fa-calendar"></i><a href="<?= esc_attr( $event->getEventCalURL() ) ?>" title="<?= esc_attr( $event->getEventTitle() ) ?>">&nbsp;<?= __( "Salva sul calendario" ) ?></a>
 							</p>
+
+							<?php if( $event->isEventEditable() ): ?>
+								<?= HTML::a(
+									$event->getFullEventEditURL(),
+									__( "Modifica" )
+								) ?>
+							<?php endif ?>
 						</div>
 					<?php endforeach ?>
 

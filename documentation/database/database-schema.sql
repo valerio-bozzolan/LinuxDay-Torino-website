@@ -131,7 +131,7 @@ CREATE TABLE `ldto_event` (
   CONSTRAINT `events_ibfk_6` FOREIGN KEY (`chapter_ID`) REFERENCES `ldto_chapter` (`chapter_ID`),
   CONSTRAINT `events_ibfk_7` FOREIGN KEY (`track_ID`) REFERENCES `ldto_track` (`track_ID`),
   CONSTRAINT `events_ibfk_8` FOREIGN KEY (`room_ID`) REFERENCES `ldto_room` (`room_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=221 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -334,6 +334,15 @@ INSERT INTO `ldto_event` VALUES (217,'gnulinux-una-piattaforma-flessibile-per-la
 INSERT INTO `ldto_event` VALUES (218,'procedura-di-gestione-interventi-tecnici','Procedura di gestione interventi tecnici',NULL,NULL,NULL,NULL,'it','2002-11-23 14:00:00','2002-11-23 15:00:00',NULL,0,11,NULL,NULL,1);
 INSERT INTO `ldto_event` VALUES (219,'watch-penguin-affrontare-la-sicurezza-aziendale','Watch-Penguin: affrontare la sicurezza aziendale',NULL,NULL,NULL,NULL,'it','2002-11-23 14:30:00','2002-11-23 15:30:00',NULL,0,11,NULL,NULL,1);
 INSERT INTO `ldto_event` VALUES (220,'soluzioni-gnulinux-dal-mercato-enterprise-alla-pmi','Soluzioni GNU/Linux: dal mercato enterprise alla PMI',NULL,NULL,NULL,NULL,'it','2002-11-23 15:00:00','2002-11-23 16:00:00',NULL,0,11,NULL,NULL,1);
+INSERT INTO `ldto_event` VALUES (221,'first-steps-with-gnu-linux','Primi passi con GNU/Linux','','50 minuti per sapere tutto ciò che serve per entrare nel mondo del software libero senza pentimento. Domande accette.','',NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00','',0,14,31,1,1);
+INSERT INTO `ldto_event` VALUES (222,'dont-touch-my-data','Don\'t Touch My Data','','Grazie a qualche volontario dimostreremo come viene compromessa la nostra privacy e come difendersi.\r\nPortate l\'amico «non ho niente da nascondere».','',NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,31,1,1);
+INSERT INTO `ldto_event` VALUES (223,'krita','Ecco Krita: computer grafica easy','','In questi minuti scopriremo cos\'è Krita e come effettuare fotoritocchi con la sua suite completamente libera e gratuita.','',NULL,'','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,31,1,1);
+INSERT INTO `ldto_event` VALUES (224,'big-data','Eccovi il Big Data','','Chi parla di Big Data è come i pescatori: c\'è sempre chi  si inventerà la storia su quel tonno gigante. Quindi parleremo nel concreto delle tecnologie usate in ambito enterprise.','',NULL,'','2019-10-26 15:00:00','2019-10-26 16:00:00','',0,14,31,3,1);
+INSERT INTO `ldto_event` VALUES (225,'go-programming-language','Il linguaggio Go','','In questi minuti sarete tutti convertiti al linguaggio di programmazione Go, quindi portatevi un dannato calcolatore per fare esperimenti.\r\nGo Go Go!','',NULL,'','2019-10-26 15:00:00','2019-10-26 16:00:00','',0,14,31,2,1);
+INSERT INTO `ldto_event` VALUES (226,'arduino','Workshop Arduino','','Arduino è una piattaforma di prototipizzazione. Ma cosa diavolo significa?','',NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00','',0,14,31,4,1);
+INSERT INTO `ldto_event` VALUES (227,'offensive-security','Offensive Security','','Abbiamo poco tempo per simulare un ambiente vulnerabile e poter testare insieme, uno ad uno, le più famose tecniche di penetration testing.\r\nNon rifatelo a casa.','',NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,31,4,1);
+INSERT INTO `ldto_event` VALUES (228,'ansible','Ansible','','Vi mostrerò come automatizzare il processo di deploy di vari servizi grazie adi playbooks di Ansible.','',NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,31,3,1);
+INSERT INTO `ldto_event` VALUES (229,'csi-piemonte','CSI Piemonte','','Il Consorzio per il Sistema Informativo del Piemonte. Cos\'è e cosa si svolge all\'interno sul piano sistemistico.','',NULL,'it','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,31,3,1);
 /*!40000 ALTER TABLE `ldto_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,6 +396,13 @@ INSERT INTO `ldto_event_user` VALUES (46,28,0);
 INSERT INTO `ldto_event_user` VALUES (47,1,0);
 INSERT INTO `ldto_event_user` VALUES (48,29,0);
 INSERT INTO `ldto_event_user` VALUES (49,2,0);
+INSERT INTO `ldto_event_user` VALUES (221,144,0);
+INSERT INTO `ldto_event_user` VALUES (222,1,0);
+INSERT INTO `ldto_event_user` VALUES (223,145,0);
+INSERT INTO `ldto_event_user` VALUES (224,2,0);
+INSERT INTO `ldto_event_user` VALUES (225,146,0);
+INSERT INTO `ldto_event_user` VALUES (228,128,0);
+INSERT INTO `ldto_event_user` VALUES (229,13,0);
 INSERT INTO `ldto_event_user` VALUES (33,24,1);
 INSERT INTO `ldto_event_user` VALUES (51,31,1);
 INSERT INTO `ldto_event_user` VALUES (52,32,1);
@@ -873,7 +889,7 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1018,6 +1034,10 @@ INSERT INTO `ldto_user` VALUES (140,'dario-guerrieri','user',1,0,'Dario','Guerri
 INSERT INTO `ldto_user` VALUES (141,'jean-francois-panico','user',1,0,'Jean François','Panico',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (142,'marco-musso','user',1,0,'Marco','Musso',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (143,'admin','admin',1,1,'','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (144,'g1bot','user',1,0,'Emanuele','Guido',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (145,'virginia','user',1,0,'Virginia','Hyd3l',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (146,'pau','user',1,0,'Alberto','Pau',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1092,4 +1112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-06  5:18:09
+-- Dump completed on 2019-09-06  6:17:53
