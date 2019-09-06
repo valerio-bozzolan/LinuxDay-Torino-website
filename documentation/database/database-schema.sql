@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: ldto
 -- ------------------------------------------------------
--- Server version	10.1.37-MariaDB-0+deb9u1
+-- Server version	10.1.38-MariaDB-0+deb9u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -612,7 +612,7 @@ INSERT INTO `ldto_location` VALUES (6,'cortile-del-maglio','Cortile del Maglio',
 INSERT INTO `ldto_location` VALUES (7,'sala-consiglieri-della-provincia-di-torino','Sala Consiglieri della Provincia di Torino','Via Maria Vittoria 12, Torino','Palazzo Cisterna',NULL,45.0671,7.68531,NULL);
 INSERT INTO `ldto_location` VALUES (8,'cdq','Casa del Quartiere','Via Oddino Morgari 14, Torino',NULL,NULL,45.0542,7.67816,NULL);
 INSERT INTO `ldto_location` VALUES (9,'torino-incontra','Torino Incontra','Via Nino Costa 8, Torino',NULL,NULL,45.0648,7.68596,NULL);
-INSERT INTO `ldto_location` VALUES (10,'toolbox-coworking','Toolbox Coworking','Via Agostino da Montefeltro 2, Torino',NULL,NULL,45.05025,7.66913,NULL);
+INSERT INTO `ldto_location` VALUES (10,'toolbox-coworking','Toolbox Coworking','Via Agostino da Montefeltro 2, Torino',NULL,NULL,45.0503,7.66913,NULL);
 INSERT INTO `ldto_location` VALUES (11,'fablab','Fablab','Via Egeo 16, Torino',NULL,NULL,45.0501,7.66605,NULL);
 /*!40000 ALTER TABLE `ldto_location` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -633,7 +633,7 @@ CREATE TABLE `ldto_room` (
   UNIQUE KEY `room_uid` (`room_uid`),
   KEY `location_ID` (`location_ID`),
   CONSTRAINT `ldto_room_ibfk_1` FOREIGN KEY (`location_ID`) REFERENCES `ldto_location` (`location_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -671,6 +671,10 @@ INSERT INTO `ldto_room` VALUES (27,5,'bottega','Bottega');
 INSERT INTO `ldto_room` VALUES (28,5,'salone','Salone');
 INSERT INTO `ldto_room` VALUES (29,3,'sala-consiglio-di-facolta','Sala Consiglio di Facoltà');
 INSERT INTO `ldto_room` VALUES (30,9,'sala-einaudi','Sala Einaudi');
+INSERT INTO `ldto_room` VALUES (31,10,'base','Aula Base');
+INSERT INTO `ldto_room` VALUES (32,10,'dev','Aula Dev');
+INSERT INTO `ldto_room` VALUES (33,10,'sys','Aula Sys');
+INSERT INTO `ldto_room` VALUES (34,10,'misc','Aula Misc');
 /*!40000 ALTER TABLE `ldto_room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1013,7 +1017,7 @@ INSERT INTO `ldto_user` VALUES (139,'gianpaolo-perego','user',1,0,'Gianpaolo','P
 INSERT INTO `ldto_user` VALUES (140,'dario-guerrieri','user',1,0,'Dario','Guerrieri',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (141,'jean-francois-panico','user',1,0,'Jean François','Panico',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (142,'marco-musso','user',1,0,'Marco','Musso',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (143,'admin','admin',1,1,'','',NULL,NULL,NULL,NULL,'e3ebe6f5b201d382ce29fbde2fca43516c07d777',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (143,'admin','admin',1,1,'','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1088,4 +1092,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-25  9:56:04
+-- Dump completed on 2019-09-06  5:18:09
