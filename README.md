@@ -98,19 +98,14 @@ Per poter accedere al backend occorre registrarsi:
 
 Effettuare poi il login nella pagina `2016/login.php`.
 
-## Esportazione database
+## Esportazione del database
 **Nota**: a differenza del codice sorgente il database in questo repository è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
 
 In ogni caso:
 
-    # Exporting one-row per data
-    mysqldump --extended-insert=FALSE linuxday2016 > database-schema.sql
-
-    # Stripping e-mail addresses
-    sed "s/'[a-z\.\-]*@[a-z\.\-]*'/NULL/g" -i database-schema.sql
-
-    # Stripping passwords (now are SHA1 salted)
-    sed "s/'[a-f0-9]\{40\}'/NULL/g" -i database-schema.sql
+	vagrant ssh
+	/vagrant/Vagrant/pull-database.php
+	exit
 
 ## Aggiornamento del database
 
