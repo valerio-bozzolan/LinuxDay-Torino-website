@@ -75,21 +75,25 @@ if( $_POST ) {
 		$data[] = new DBCol( Conference::ID,     $conference_ID,        'd' );
 
 		if( $event ) {
+			// update the existing Event
 			Event::factory()
 				->whereInt( Event::ID, $event->getEventID() )
 				->update( $data );
+
+
+			$id = $event->getEventID();
 		} else {
 			Event::factory()
 				->insertRow( $data );
-
-			$id = last_inserted_ID();
-			$event = FullEvent::factory()
-				->whereInt( Event::ID, $id )
-				->queryRow();
-
-			// redirect to the new Event
-			http_redirect( $event->getFullEventEditURL(), 303 );
 		}
+
+		// get the updated Event
+		$event = FullEvent::factory()
+			->whereInt( Event::ID, $id )
+			->queryRow();
+
+		// POST-redirect-GET (temporary redirect)
+		http_redirect( $event->getFullEventEditURL(), 302 );
 	}
 
 	/*
