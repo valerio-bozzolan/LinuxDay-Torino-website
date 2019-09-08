@@ -45,6 +45,16 @@ trait EventTrait {
 	}
 
 	/**
+	 * Check if the Event has a subtitle
+	 *
+	 * @return boolean
+	 */
+	public function hasEventSubtitle() {
+		$title = $this->get( Event::SUBTITLE );
+		return !empty( $title );
+	}
+
+	/**
 	 * Get localized event subtitle
 	 *
 	 * @return string
