@@ -209,9 +209,9 @@ var typed = new Typed('.typing-smanettone', {
 */ ?>
 
 <!-- =========================
-    SPEAKERS SECTION   
+    SPEAKERS SECTION
 ============================== -->
-<section id="speakers" class="parallax-section">
+<section id="speakers" class="parallax-section" style="display:none">
 	<div class="container">
 		<div class="row">
 
@@ -507,7 +507,7 @@ var typed = new Typed('.typing-smanettone', {
 			<div class="col-md-12 col-sm-12">
 				<div class="section-title">
 					<h2>Sponsor</h2>
-					<p>La società per cui lavori (o la tua società!) potrebbe avere questo spazio! Hai tempo fino al 30 agosto ore 23:59 per candidarsi.</p>
+					<p>La società per cui lavori (o la tua società!) potrebbe desiderare questo spazio per poter contribuire alla qualità dell'evento! Contattaci al +39 3290075073.</p>
 				</div>
 			</div>
 
