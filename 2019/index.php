@@ -293,7 +293,7 @@ var typed = new Typed('.typing-smanettone', {
 			<div class="col-sm-12">
 				<div class="section-title">
 					<h2><?= __( "Programma" ) ?></h2>
-					<p><?= __( "I temi affrontati e i talk sono in fase di definizione." ) ?></p>
+					<p><?= __( "Ecco un assaggio dei temi che verranno affrontati:" ) ?></p>
 				</div>
 			</div>
 		</div>
@@ -322,6 +322,11 @@ var typed = new Typed('.typing-smanettone', {
 						<?php $last_event_start = $event->get( Event::START ) ?>
 						<div class="col-xs-12">
 							<h3><?= esc_html( $event->getEventTitle() ) ?></h3>
+
+							<?php if( $event->hasEventSubtitle() ): ?>
+								<h3 class="event-subtitle"><?= esc_html( $event->getEventSubtitle() ) ?></h3>
+							<?php endif ?>
+
 							<h4><?= sprintf(
 								__( "Di %s"),
 								Homepage19::listEventAuthors( $event, __( "Speaker Segreto" ) )

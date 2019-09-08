@@ -741,3 +741,8 @@ footer {
 #map {
 	height: 80vmin;
 }
+.event-subtitle {
+	margin:0 !important;
+	font-style:italic;
+	font-size:1.2em;
+}
