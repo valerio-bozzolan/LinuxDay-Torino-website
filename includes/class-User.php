@@ -191,6 +191,18 @@ trait UserTrait {
 	}
 
 	/**
+	 * Get the edit URL to this user
+	 *
+	 * @return string
+	 */
+	public function getUserEditURL() {
+		$url = http_build_get_query( '2016/user-edit.php', [
+			'uid' => $this->getUserUID(),
+		] );
+		return site_page( $url );
+	}
+
+	/**
 	 * Can you edit this user?
 	 *
 	 * @return bool

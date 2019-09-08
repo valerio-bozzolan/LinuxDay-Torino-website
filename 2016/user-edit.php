@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - single user edit page
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,19 +17,56 @@
 
 require 'load.php';
 
-$user = User::factoryFromUID( @ $_GET['uid'] )
-	->select( [
-		User::T . DOT . User::ID,
-		User::UID,
-		User::NAME,
-		User::SURNAME,
-		User::ROLE,
-	] )
-	->queryRow();
+$user = null;
 
-$user or error_die("Missing user");
+if( isset( $_GET['uid'] ) ) {
+	$user = User::factoryFromUID( @ $_GET['uid'] )
+		->queryRow();
 
-$user->hasPermissionToEditUser() or error_die("Can't edit user");
+	if( !$user ) {
+		die( "not found" );
+	}
+
+	if( !$user->hasPermissionToEditUser() ) {
+		error_die( "Can't edit user" );
+	}
+
+} else {
+
+	if( !has_permission( 'edit-users' ) ) {
+		error_die( "Can't create user" );
+	}
+
+}
+
+if( is_action( 'save-user' ) ) {
+
+	$data = [];
+	$data[] = new DBCol( 'user_name',    $_POST['name'],    's' );
+	$data[] = new DBCol( 'user_surname', $_POST['surname'], 's' );
+	$data[] = new DBCol( 'user_uid',     $_POST['uid'],     's' );
+
+	if( $user ) {
+		// update existing user
+		User::factoryByID( $user->getUserID() )
+			->update( $data );
+	} else {
+		// insert a new User
+		User::factory()
+			->insertRow( $data );
+	}
+
+	$id = $user
+		? $user->getUserID()
+		: last_inserted_ID();
+
+	$user = User::factoryByID( $id )
+		->queryRow();
+
+	// POST -> redirect -> GET
+	http_redirect( $user->getUserEditURL(), 302 );
+
+}
 
 if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 	$skill = Skill::factoryFromUID( $_POST['skill_uid'] )
@@ -83,18 +120,79 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 }
 
 Header::spawn('user', [
-	'title' => sprintf(
-		__("Modifica utente %s"),
-		$user->getUserFullname()
-	),
-	'url' => $user->getUserURL(),
+	'title' =>
+		$user
+			? sprintf(
+			  	__("Modifica utente %s"),
+			  	$user->getUserFullname()
+			  )
+			: __( "Aggiungi Utente" )
+	,
+	'url' => $user ? $user->getUserURL() : null,
 ] );
 ?>
-	<p><?= HTML::a(
-		$user->getUserURL(),
-		__("Vedi") . icon('account_box', 'left')
-	) ?></p>
 
+	<?php if( $user ): ?>
+		<p><?= HTML::a(
+			$user->getUserURL(),
+			__( "Vedi" ) . icon('account_box', 'left')
+		) ?></p>
+	<?php endif ?>
+
+	<form method="post">
+		<?php form_action( 'save-user' ) ?>
+		<div class="row">
+
+			<!-- name -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-name"><?= __( "Nome" ) ?></label>
+						<input type="text" name="name" id="user-name"<?=
+							$user
+								? value( $user->get( User::NAME ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /name -->
+
+			<!-- surname -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-surname"><?= __( "Cognome" ) ?></label>
+						<input type="text" name="surname" id="user-surname"<?=
+							$user
+								? value( $user->get( User::SURNAME ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /surname -->
+
+			<!-- nickname -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-nickname"><?= __( "Nickname" ) ?></label>
+						<input type="text" name="uid" id="user-nickname"<?=
+							$user
+								? value( $user->get( User::UID ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /surname -->
+
+		</div>
+		<button type="submit" class="btn"><?= __( "Salva" ) ?></button>
+	</form>
+
+	<?php if( $user ): ?>
 	<h3><?= __("Aggiungi skill") ?></h3>
 	<div class="row">
 		<div class="col s12 m4">
@@ -125,7 +223,9 @@ Header::spawn('user', [
 			</div>
 		</div>
 	</form>
+	<?php endif ?>
 
+	<?php if( $user ): ?>
 	<h3><?= __("Modifica skill") ?></h3>
 	<?php $skills = $user->factoryUserSkills()
 		->queryGenerator();
@@ -162,6 +262,7 @@ Header::spawn('user', [
 			</div>
 		<?php endforeach ?>
 		</div>
+	<?php endif ?>
 	<?php endif ?>
 </form>
 
