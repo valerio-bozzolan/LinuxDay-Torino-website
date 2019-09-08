@@ -435,7 +435,7 @@ if( $event ) {
 		<div class="col s12 m6">
 			<div class="card-panel">
 				<h3><?php printf(
-					__( "Aggiungi %s" ),
+					__( "Associa %s" ),
 					__( "Utente" )
 				) ?></h3>
 				<form action="" method="post">
@@ -458,6 +458,17 @@ if( $event ) {
 					</select>
 					<p><button type="submit" class="btn"><?= __("Aggiungi") ?></button></p>
 				</form>
+
+				<p><?= HTML::a(
+					ROOT . '/2016/user-edit.php',
+					sprintf(
+						__( "Aggiungi %s" ),
+						sprintf(
+							__( "Nuovo %s" ),
+							__( "Utente" )
+						)
+					)
+				) ?></p>
 			</div>
 		</div>
 	</div>
