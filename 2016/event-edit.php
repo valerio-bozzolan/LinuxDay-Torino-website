@@ -79,13 +79,13 @@ if( $_POST ) {
 			Event::factory()
 				->whereInt( Event::ID, $event->getEventID() )
 				->update( $data );
-
-
-			$id = $event->getEventID();
 		} else {
+			// insert a new Event
 			Event::factory()
 				->insertRow( $data );
 		}
+
+		$id = $event ? $event->getEventID() : last_inserted_ID();
 
 		// get the updated Event
 		$event = FullEvent::factory()
@@ -498,6 +498,13 @@ if( $event ) {
 								</div>
 								<div class="col s12 m6">
 									<p><button type="submit" class="btn"><?= __("Salva") ?></button></p>
+									<p><small><?= HTML::a(
+										$user->getUserEditURL(),
+										sprintf(
+											__( "Modifica %s" ),
+											__( "Utente" )
+										)
+									) ?></small></p>
 								</div>
 							</form>
 							</div>
