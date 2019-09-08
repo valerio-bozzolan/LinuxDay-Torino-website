@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 18:00+0100\n"
+"POT-Creation-Date: 2019-09-08 18:40+0200\n"
 "PO-Revision-Date: 2019-03-30 18:03+0100\n"
 "Last-Translator: Valerio Bozzolan <boz@reyboz.it>\n"
 "Language-Team: \n"
@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:204 2016/event.php:204
+#: 2016/credits.php:204 2016/event.php:205
 msgid "Materiale"
 msgstr "Files"
 
@@ -146,34 +146,107 @@ msgstr "the image extracted from his video «This is Wikipedia»"
 msgid "l'immagine predefinita di alcuni elementi"
 msgstr "the default image of some elements"
 
-#: 2016/event-edit.php:86
+#: 2016/event-edit.php:154
 #, php-format
 msgid "Modifica %s: %s"
 msgstr "Edit %s: %s"
 
-#: 2016/event-edit.php:95 2016/user-edit.php:95
+#: 2016/event-edit.php:163 2016/event-edit.php:465
+#, php-format
+msgid "Aggiungi %s"
+msgstr "Add %s"
+
+#: 2016/event-edit.php:164 2016/index.php:73
+msgid "Evento"
+msgstr "Event"
+
+#: 2016/event-edit.php:174 2016/user-edit.php:138
 msgid "Vedi"
 msgstr "See"
 
-#: 2016/event-edit.php:101
-msgid "Aggiungi utente"
-msgstr "Add user"
+#: 2016/event-edit.php:185
+msgid "Titolo"
+msgstr ""
 
-#: 2016/event-edit.php:120 2016/user-edit.php:121
+#: 2016/event-edit.php:196
+msgid "Codice"
+msgstr ""
+
+#: 2016/event-edit.php:207
+msgid "Sottotitolo"
+msgstr ""
+
+#: 2016/event-edit.php:218 2016/includes/class-Footer.php:115
+msgid "Lingua"
+msgstr "Language"
+
+#: 2016/event-edit.php:234
+msgid "Capitolo"
+msgstr ""
+
+#: 2016/event-edit.php:272
+msgid "Traccia"
+msgstr ""
+
+#: 2016/event-edit.php:310
+msgid "Stanza"
+msgstr ""
+
+#: 2016/event-edit.php:353
+msgid "Inizio"
+msgstr "Start"
+
+#: 2016/event-edit.php:366
+msgid "Fine"
+msgstr "End"
+
+#: 2016/event-edit.php:382 2016/event.php:141
+msgid "Abstract"
+msgstr "Abstract"
+
+#: 2016/event-edit.php:396 2016/event.php:151
+msgid "Descrizione"
+msgstr "Description"
+
+#: 2016/event-edit.php:413
+msgid "Immagine"
+msgstr ""
+
+#: 2016/event-edit.php:428 2016/event-edit.php:511 2016/user-edit.php:192
+#: 2016/user-edit.php:254
+msgid "Salva"
+msgstr "Save"
+
+#: 2016/event-edit.php:438
+#, php-format
+msgid "Associa %s"
+msgstr "Associate %s"
+
+#: 2016/event-edit.php:439 2016/event-edit.php:468 2016/event-edit.php:516
+msgid "Utente"
+msgstr "User"
+
+#: 2016/event-edit.php:459 2016/user-edit.php:219 2019/index.php:376
 msgid "Aggiungi"
 msgstr "Add"
 
-#: 2016/event-edit.php:130
-msgid "Modifica ordine"
-msgstr "Edit order"
+#: 2016/event-edit.php:467
+#, php-format
+msgid "Nuovo %s"
+msgstr "New %s"
 
-#: 2016/event-edit.php:148 2016/user-edit.php:151
+#: 2016/event-edit.php:490 2016/event-edit.php:515
+#, php-format
+msgid "Modifica %s"
+msgstr "Edit %s"
+
+#: 2016/event-edit.php:491
+msgid "Ordinamento"
+msgstr "Order"
+
+#: 2016/event-edit.php:508 2016/user-edit.php:251
 msgid "Elimina"
 msgstr "Delete"
-
-#: 2016/event-edit.php:151 2016/user-edit.php:154
-msgid "Salva"
-msgstr "Save"
 
 #: 2016/event.php:36
 #, php-format
@@ -188,36 +261,32 @@ msgstr "Thank you for you subscription."
 msgid "E-mail non valida."
 msgstr "E-mail invalid."
 
-#: 2016/event.php:75
+#: 2016/event.php:72
 msgid "Modifica evento"
 msgstr "Edit event"
 
-#: 2016/event.php:100 2016/user.php:163
+#: 2016/event.php:97 2016/user.php:163
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:107 2016/index.php:75 2016/user.php:164
+#: 2016/event.php:104 2016/index.php:75 2016/user.php:164
 msgid "Dove"
 msgstr "Where"
 
-#: 2016/event.php:121 2016/index.php:74 2017/index.php:131
+#: 2016/event.php:118 2016/index.php:74 2017/index.php:131
 msgid "Quando"
 msgstr "When"
 
-#: 2016/event.php:125 2016/index.php:99
+#: 2016/event.php:122 2016/index.php:99
 #, php-format
 msgid "%s alle %s"
 msgstr "%s at %s"
 
-#: 2016/event.php:140
-msgid "Abstract"
-msgstr "Abstract"
+#: 2016/event.php:128
+msgid "Scarica promemoria calendario"
+msgstr ""
 
-#: 2016/event.php:150
-msgid "Descrizione"
-msgstr "Description"
-
-#: 2016/event.php:161
+#: 2016/event.php:162
 msgid ""
 "Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa "
 "pagina."
@@ -225,57 +294,57 @@ msgstr ""
 "Invite your friends to subscribe in this page sharing the URL of this web "
 "page."
 
-#: 2016/event.php:167
+#: 2016/event.php:168
 msgid "Iscrizioni"
 msgstr "Subscriptions"
 
-#: 2016/event.php:168
+#: 2016/event.php:169
 msgid ""
 "Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare "
 "il tuo interesse:"
 msgstr ""
 "Subscriptions are still open. Insert your e-mail to express your interest:"
 
-#: 2016/event.php:171
+#: 2016/event.php:172
 msgid "E-mail"
 msgstr "E-mail"
 
-#: 2016/event.php:175
+#: 2016/event.php:176
 msgid "Sottoscrivi"
 msgstr "Subscribe"
 
-#: 2016/event.php:191
+#: 2016/event.php:192
 msgid "Note"
 msgstr "Notes"
 
-#: 2016/event.php:211
+#: 2016/event.php:212
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:230
+#: 2016/event.php:231
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr "See %s sharable under %s license."
 
-#: 2016/event.php:252
+#: 2016/event.php:253
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:266 2016/event.php:283
+#: 2016/event.php:267 2016/event.php:284
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:294
+#: 2016/event.php:295
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
 
-#: 2016/event.php:317
+#: 2016/event.php:318
 msgid "Preceduto da"
 msgstr "Previous"
 
-#: 2016/event.php:329
+#: 2016/event.php:330
 msgid "A seguire"
 msgstr "Next"
 
@@ -287,10 +356,6 @@ msgstr "The %s ended..."
 #: 2016/index.php:70
 msgid "Ma abbiamo altro!"
 msgstr "But we have more!"
-
-#: 2016/index.php:73
-msgid "Evento"
-msgstr "Event"
 
 #: 2016/index.php:100
 msgid "d/m/Y"
@@ -489,12 +554,12 @@ msgstr "Linux Day Turin 2016"
 msgid "LDTO2016"
 msgstr "LDTO2016"
 
-#: 2016/load.php:49 2017/load.php:48
+#: 2016/load.php:49 2017/load.php:48 2019/load.php:45
 msgid ""
 "Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
 msgstr "Annual event on Free software and GNU/Linux operating systems."
 
-#: 2016/load.php:64 2017/load.php:68
+#: 2016/load.php:64 2017/load.php:67
 msgid "Benvenuti"
 msgstr "Welcome"
 
@@ -518,15 +583,15 @@ msgstr "You are logged in!"
 msgid "Sloggati"
 msgstr "Log out"
 
-#: 2016/login.php:55
+#: 2016/login.php:53
 msgid "Nome utente"
 msgstr "Username"
 
-#: 2016/login.php:59
+#: 2016/login.php:57
 msgid "Password"
 msgstr "Password"
 
-#: 2016/login.php:64
+#: 2016/login.php:62
 msgid "Accedi"
 msgstr "Log in"
 
@@ -605,20 +670,37 @@ msgstr "photo %s"
 msgid "Alcuni scatti dal Linux Day 2016 a Torino."
 msgstr "Some photos from the Linux Day 2016 at Turin."
 
-#: 2016/user-edit.php:87
+#: 2016/user-edit.php:126
 #, php-format
 msgid "Modifica utente %s"
 msgstr "Edit user %s"
 
-#: 2016/user-edit.php:98
+#: 2016/user-edit.php:129
+#, fuzzy
+msgid "Aggiungi Utente"
+msgstr "Add user"
+
+#: 2016/user-edit.php:150 2016/user.php:161
+msgid "Nome"
+msgstr "Name"
+
+#: 2016/user-edit.php:165
+msgid "Cognome"
+msgstr ""
+
+#: 2016/user-edit.php:180
+msgid "Nickname"
+msgstr ""
+
+#: 2016/user-edit.php:196
 msgid "Aggiungi skill"
 msgstr "Add skill"
 
-#: 2016/user-edit.php:129
+#: 2016/user-edit.php:229
 msgid "Modifica skill"
 msgstr "Edit skill"
 
-#: 2016/user.php:57
+#: 2016/user.php:57 2019/index.php:353
 msgid "Modifica"
 msgstr "Edit"
 
@@ -642,10 +724,6 @@ msgstr "Bio"
 #: 2016/user.php:149 l10n/trebbia.php:1370
 msgid "Talk"
 msgstr "Talk"
-
-#: 2016/user.php:161
-msgid "Nome"
-msgstr "Name"
 
 #: 2016/user.php:162
 msgid "Tipo"
@@ -681,7 +759,7 @@ msgstr "Social"
 msgid "Linux Day<br />Torino"
 msgstr "Linux Day<br />Turin"
 
-#: 2017/index.php:50
+#: 2017/index.php:50 2019/index.php:97
 #, php-format
 msgid "Se anche tu sei %suno smanettone%s, vieni a trovarci!"
 msgstr "If you are %san hacker%s too, come visit us!"
@@ -690,11 +768,11 @@ msgstr "If you are %san hacker%s too, come visit us!"
 msgid "Sabato 28 ottobre"
 msgstr "Saturday, October 22nd"
 
-#: 2017/index.php:63
+#: 2017/index.php:63 2019/index.php:114
 msgid "uno smanettone"
 msgstr "an hacker"
 
-#: 2017/index.php:64
+#: 2017/index.php:64 2019/index.php:115
 msgid "un programmatore"
 msgstr "a programmer"
 
@@ -702,19 +780,19 @@ msgstr "a programmer"
 msgid "un tipo curioso"
 msgstr "a "
 
-#: 2017/index.php:66
+#: 2017/index.php:66 2019/index.php:118
 msgid "un sistemista"
 msgstr "a sysadmin"
 
-#: 2017/index.php:67
+#: 2017/index.php:67 2019/index.php:119
 msgid "un po' pinguino"
 msgstr "a bit penguin"
 
-#: 2017/index.php:68
+#: 2017/index.php:68 2019/index.php:120
 msgid "in modalità incognito"
 msgstr "in privacy mode"
 
-#: 2017/index.php:69
+#: 2017/index.php:69 2019/index.php:121
 msgid "un cucciolo di GNU"
 msgstr "a cute GNU"
 
@@ -806,11 +884,11 @@ msgstr "Take the tram 9 or 3 (\"Ospedale Amedeo di Savoia\")"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Take the bus 59 or 50/"
 
-#: 2017/index.php:159
+#: 2017/index.php:159 2019/index.php:492
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Enable JavaScript to see the map"
 
-#: 2017/index.php:170
+#: 2017/index.php:170 2019/index.php:295
 msgid "Programma"
 msgstr "Schedule"
 
@@ -879,9 +957,72 @@ msgstr "Linux Day Turin 2017"
 msgid "LDTO2017"
 msgstr "LDTO2017"
 
-#: 2017/load.php:72
+#: 2017/load.php:71
 msgid "API"
 msgstr "API"
+
+#: 2019/index.php:116
+#, fuzzy
+msgid "una persona curiosa"
+msgstr "a "
+
+#: 2019/index.php:117
+msgid "in cerca di lavoro"
+msgstr ""
+
+#: 2019/index.php:296
+msgid "Ecco un assaggio dei temi che verranno affrontati:"
+msgstr ""
+
+#: 2019/index.php:304
+#, fuzzy, php-format
+msgid "Aula %s"
+msgstr "\"B\" room"
+
+#: 2019/index.php:331
+#, fuzzy, php-format
+msgid "Di %s"
+msgstr "See %s"
+
+#: 2019/index.php:332
+#, fuzzy
+msgid "Speaker Segreto"
+msgstr "Speakers"
+
+#: 2019/index.php:347
+msgid "Salva sul calendario"
+msgstr ""
+
+#: 2019/index.php:398
+msgid "Domande frequenti"
+msgstr ""
+
+#: 2019/index.php:415
+msgid ""
+"È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
+"Italia. Parallelamente. A Torino non mancheremo."
+msgstr ""
+
+#: 2019/index.php:540
+msgid "Contattaci"
+msgstr ""
+
+#: 2019/index.php:542
+#, fuzzy, php-format
+msgid ""
+"Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
+"email %s o al numero %s."
+msgstr "Contact us at the address %s or at the number %s."
+
+#: 2019/load.php:43
+#, fuzzy
+msgid "Linux Day Torino 2019"
+msgstr "Linux Day Turin 2016"
+
+#: 2019/load.php:44
+#, fuzzy
+msgid "LDTO2019"
+msgstr "LDTO2016"
 
 #: includes/class-HumanTime.php:45
 #, php-format
@@ -4131,10 +4272,6 @@ msgstr "Past editions"
 msgid "Politecnico di Torino"
 msgstr "Polytechnic of Turin"
 
-#: 2016/includes/class-Footer.php:115
-msgid "Lingua"
-msgstr "Language"
-
 #: 2016/includes/class-Footer.php:122
 msgid "Scegli"
 msgstr "Choose"
@@ -4187,6 +4324,122 @@ msgid ""
 msgstr ""
 "Nott foond! A.k.a erroro fourzzzerofffoooourr (N.B. do not try to reload "
 "under root permissions... it will <b>not</b> save you!)"
+
+#: 2019/template/header.php:41
+#, fuzzy
+msgid "Comitato Linux Day Torino"
+msgstr "What is the Linux Day Turin"
+
+#: includes/suckless-php/class-FileUploader.php:322
+msgid "Upload completato con successo."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:325
+msgid "Non è stato selezionato alcun file."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:328
+msgid "Per favore ricarica il file. È stato caricato solo parzialmente."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:332
+#, php-format
+msgid "Superati i limiti di upload (massimo %s)."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:337
+msgid "Il file eccede i limiti imposti."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:342
+#, php-format
+msgid "Il file pesa %s. Non può superare %s."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:343
+msgid "troppo"
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:348
+msgid "Impossibile salvare il file."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:351
+msgid "Il MIME del file non è validabile."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:356
+#, php-format
+msgid "Il file é di un MIME type non concesso: \"%s\"."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:371
+#, php-format
+msgid "Il file ha un'estensione non valida. Estensioni attese: <em>%s</em>."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:375
+#, php-format
+msgid "Il file ha un'estensione non valida. Estensione attesa: <em>%s</em>."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:380
+msgid "Il file ha un nome troppo breve."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:383
+msgid "Il file ha un nome troppo lungo."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:386
+msgid "Errore di caricamento sconosciuto."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:390
+msgid "Errore di caricamento alquanto sconosciuto."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:410
+#, php-format
+msgid ""
+"Il 5° argomento di %s dovrebbe essere il nome di una funzione ma non esiste "
+"alcuna funzione '%s'."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:563
+#, php-format
+msgid "La richiesta non è valida (inviati più di %s)."
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:149
+msgid "NaN"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:184
+msgid "Errore"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:190
+#, php-format
+msgid "Ci dispiace! C'è qualche piccolo problema tecnico! (DEBUG: %s)"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:191
+msgid "sì"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:191
+msgid "no"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:194
+msgid ""
+"Potrebbe essere utile comunicarci questo problema affinchè non si ripresenti "
+"in futuro. Grazie per la collaborazione."
+msgstr ""
+
+#~ msgid "Modifica ordine"
+#~ msgstr "Edit order"
 
 #~ msgid "LDTO15"
 #~ msgstr "LDTO15"
