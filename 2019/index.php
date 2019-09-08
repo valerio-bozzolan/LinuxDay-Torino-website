@@ -335,7 +335,10 @@ var typed = new Typed('.typing-smanettone', {
 								<span><i class="fa fa-clock-o"></i>&nbsp;<?=
 									$event->getEventStart( 'H:i' )
 								?></span><!--
-								--><span><i class="fa fa-map-marker"></i>&nbsp;<a href="#">Aula <?= $track ?></a></span><br>
+								--><span><i class="fa fa-map-marker"></i>&nbsp;<?php printf(
+									__( "Aula %s" ),
+									esc_html( $track )
+								) ?></span>
 							</h6>
 
 							<?php if( $event->hasEventAbstract() ): ?>
