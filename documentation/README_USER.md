@@ -9,8 +9,6 @@ Si invitano i relatori a fornire più informazioni possibili riguardanti il prop
 
 È molto apprezzata la traduzione in lingua inglese di titolo, abstract e descrizione.
 
-Inviare il tutto al webmaster (webmaster at ldto dot it).
-
 ## Relatore
 Per ogni relatore del talk, specificare (`*` = prodotto surgelato):
 
@@ -18,14 +16,13 @@ Per ogni relatore del talk, specificare (`*` = prodotto surgelato):
 * Cognome\*
 * Username amichevole\* (e.g. "boz")
 * Indirizzo e-mail (non sarà mostrato sul sito)
-* Sito web personale (business-card) e/o blog personale
-* Licenza di software libero preferita
+* Sito web personale (business-card e/o blog personale ecc.)
+* Licenza di software libero preferita (e.g. GNU AGPL; WTFPL; ecc.)
 * Breve biografia in Italiano e in Inglese
+* I tuoi interessi e le tue skill, auto-valutate (e.g. sono un campione di C++; vivo esclusivamente per il software libero; sono bravino in Python; odio con tutto il cuore il software non-libero; ecc.)
 * Vari social (GitHub, Twitter, Facebook, LinkedIn, Google+, ..)
 
 È possibile specificare l'immagine del proprio profilo registrandosi in [Gravatar.com](https://it.gravatar.com) oppure fornendo un'immagine profilo almeno 256x256px.
-
-Inviare il tutto al webmaster (webmaster at ldto dot it).
 
 ## Materiale
 I RELATORI NON DEVONO CREARE MATERIALE CONTENENTE VIOLAZIONI DI COPYRIGHT DATO CHE SARÀ RESO PUBBLICO A NOME DEL Linux Day Torino.
@@ -49,3 +46,12 @@ Inviare il tutto al webmaster (webmaster at ldto dot it).
 SI INVITANO I RELATORI A **NON PROMUOVERE SOFTWARE NON-LIBERO** DURANTE IL TALK, IN QUALSIASI MANIERA.
 
 È ad esempio inaccettabile che i computer utilizzati per le slide abbiano sistemi operativi non liberi.
+
+## Contatti
+
+Inviare il tutto al webmaster attuale per il 2019 su:
+
+* E-mail: gmail at succhia dot it
+* Telegram: @bozzy
+
+Buon divertimento :)
