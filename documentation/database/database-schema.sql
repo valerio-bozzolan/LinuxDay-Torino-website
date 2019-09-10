@@ -1052,9 +1052,9 @@ INSERT INTO `ldto_user` VALUES (144,'g1bot','user',1,0,'Emanuele','Guido',NULL,N
 INSERT INTO `ldto_user` VALUES (145,'virginia','user',1,0,'Virginia','Hyd3l',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (146,'pau','user',1,0,'Alberto','Pau',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Belprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (150,'davide-vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (151,'francesco-di-gregori','user',1,0,'Francesco','Di Gregorio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (151,'federico-di-gregorio','user',1,0,'Federico','Di Gregorio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
