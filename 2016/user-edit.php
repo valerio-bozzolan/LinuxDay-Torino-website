@@ -115,6 +115,19 @@ if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 			new DBCol('skill_score', $_POST['skill_score'], 'd'),
 		] );
 	}
+
+}
+
+// register action to delete the user
+if( $user && is_action( 'delete-user' ) ) {
+
+	// delete the user from the database
+	User::factory()
+		->whereInt( 'user_ID', $user->getUserID() )
+		->delete();
+
+	// POST -> redirect -> GET
+	http_redirect( $user->getUserEditURL(), 302 );
 }
 
 Header::spawn('user', [
@@ -270,6 +283,18 @@ Header::spawn('user', [
 		<?php endif ?>
 	<?php endif ?>
 
+	<!-- delete -->
+	<?php if( $user ): ?>
+		<div class="row">
+			<div class="col s12">
+				<form method="post">
+					<?php form_action( 'delete-user' ) ?>
+					<button type="submit" class="btn waves-effect red right"><?= __( "Elimina" ) ?></button>
+				</form>
+			</div>
+		</div>
+	<?php endif ?>
+	<!-- /delete -->
 <?php
 
 Footer::spawn();
