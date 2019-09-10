@@ -51,12 +51,6 @@ else
 	git -C "$SUCKLESS_PHP" pull
 fi
 
-echo "create an empty database"
-mysql <<EOF
-DROP DATABASE IF EXISTS \`$DB_NAME\`;
-CREATE DATABASE \`$DB_NAME\`;
-EOF
-
 echo "create a file with database credentials"
 cat > "$WWW/load.php" <<EOF
 <?php
@@ -73,6 +67,12 @@ define('CONTACT_EMAIL', 'asd@asd.asd');
 define('CONTACT_PHONE', '555-555-555');
 define('REQUIRE_LOAD_POST', ABSPATH . '/includes/load-post.php' );
 require '$SUCKLESS_PHP/load.php';
+EOF
+
+echo "create an empty database"
+mysql <<EOF
+DROP DATABASE IF EXISTS \`$DB_NAME\`;
+CREATE DATABASE \`$DB_NAME\`;
 EOF
 
 echo "grant database permissions"
