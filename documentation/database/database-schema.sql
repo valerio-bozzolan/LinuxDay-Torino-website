@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.41-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: ldto
 -- ------------------------------------------------------
--- Server version	10.1.38-MariaDB-0+deb9u1
+-- Server version	10.1.41-MariaDB-0+deb9u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -342,7 +342,7 @@ INSERT INTO `ldto_event` VALUES (225,'go-programming-language','Il linguaggio Go
 INSERT INTO `ldto_event` VALUES (226,'arduino','Workshop Arduino','','Arduino è una piattaforma di prototipizzazione. Ma cosa diavolo significa?','',NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,31,4,1);
 INSERT INTO `ldto_event` VALUES (227,'offensive-security','From Zer0 t0 R00t','Offensive Security','Abbiamo poco tempo per simulare un ambiente vulnerabile e poter testare insieme, uno ad uno, le più famose tecniche di penetration testing.\r\nNon rifatelo a casa.','',NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00','',0,14,31,4,1);
 INSERT INTO `ldto_event` VALUES (228,'ansible','Ansible','','Vi mostrerò come automatizzare il processo di deploy di vari servizi grazie adi playbooks di Ansible.','',NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,31,3,1);
-INSERT INTO `ldto_event` VALUES (229,'nivola','Nivola','','','',NULL,'it','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,31,3,1);
+INSERT INTO `ldto_event` VALUES (229,'nivola','Nivola','Il cloud Piemontese','\r\n\r\nNivola è una piattaforma completamente open source che semplifica l\'utilizzo dei servizi cloud da parte della pubblica amministrazione. Ce ne parleranno alcuni autori dal CSI Piemonte.','',NULL,'it','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,31,3,1);
 INSERT INTO `ldto_event` VALUES (230,'read-the-docs','ReadTheDocs','','Un consulente per il Team per la Trasformazione Digitale del governo italiano parlerà di Docs Italia (https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.','Durante il 2018 sono stato un consulente per il Team per la Trasformazione Digitale del governo italiano per lavorare su Docs Italia (https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.\r\n\r\nNon abbiamo scritto Docs Italia da zero, ma lo abbiamo costruito sopra a Read The Docs: la piattaforma di riferimento la documentazione di pacchetti Python.\r\nQuesto ci ha permesso di risparmiare un bel po\' di lavoro! Ma il software Open Source non si scrive da solo e abbiamo fatto la nostra parte contribuendo a Read The Docs. In questo talk racconterò cosa abbiamo fatto e cosa abbiamo imparato.',NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00','',0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (232,'rust','Rust','','Vi parleremo di Rust, il linguaggio di programmazione sviluppato da Mozilla Research che ha influenzato C# 7, Elm, Idris e Swift.','',NULL,'it','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (233,'mqtt','MQTT','','Che cos\'è l\'MQTT e che ruolo ha nelle nostre vite? Vi mostreremo gli utilizzi di questo protocollo di messaggistica.','',NULL,'','2019-10-26 17:00:00','2019-10-26 18:00:00','',0,14,34,4,1);
@@ -410,12 +410,13 @@ INSERT INTO `ldto_event_user` VALUES (225,146,0);
 INSERT INTO `ldto_event_user` VALUES (226,60,0);
 INSERT INTO `ldto_event_user` VALUES (227,147,0);
 INSERT INTO `ldto_event_user` VALUES (228,128,0);
+INSERT INTO `ldto_event_user` VALUES (229,152,0);
 INSERT INTO `ldto_event_user` VALUES (230,123,0);
 INSERT INTO `ldto_event_user` VALUES (232,124,0);
 INSERT INTO `ldto_event_user` VALUES (233,12,0);
 INSERT INTO `ldto_event_user` VALUES (234,148,0);
 INSERT INTO `ldto_event_user` VALUES (235,16,0);
-INSERT INTO `ldto_event_user` VALUES (236,151,0);
+INSERT INTO `ldto_event_user` VALUES (236,57,0);
 INSERT INTO `ldto_event_user` VALUES (33,24,1);
 INSERT INTO `ldto_event_user` VALUES (51,31,1);
 INSERT INTO `ldto_event_user` VALUES (52,32,1);
@@ -902,7 +903,7 @@ CREATE TABLE `ldto_user` (
   PRIMARY KEY (`user_ID`),
   UNIQUE KEY `user_uid` (`user_uid`),
   UNIQUE KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1053,7 +1054,7 @@ INSERT INTO `ldto_user` VALUES (146,'pau','user',1,0,'Alberto','Pau',NULL,NULL,N
 INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (150,'davide-vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (151,'federico-di-gregorio','user',1,0,'Federico','Di Gregorio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (152,'','user',1,0,'CSI Piemonte','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1128,4 +1129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-08 16:40:40
+-- Dump completed on 2019-09-10 21:05:24
