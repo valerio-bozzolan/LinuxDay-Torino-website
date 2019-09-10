@@ -269,7 +269,6 @@ Header::spawn('user', [
 			</div>
 		<?php endif ?>
 	<?php endif ?>
-</form>
 
 <?php
 
