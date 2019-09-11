@@ -157,35 +157,8 @@ var typed = new Typed('.typing-smanettone', {
 	</div>
 </section>
 
-<?php /*
-
-
 <!-- =========================
-    VIDEO SECTION
-============================== -->
-<section id="video" class="parallax-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-sm-10">
-				<h2>Watch Video</h2>
-				<h3>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
-			</div>
-			<div class="col-md-6 col-sm-10">
-				<div class="embed-responsive embed-responsive-16by9">
-					<!-- iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6sqk9MT9Tfg" allowfullscreen></iframe -->
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-
-*/ ?>
-
-<!-- =========================
-    PROGRAM SECTION   
+    PROGRAM SECTION
 ============================== -->
 <section id="program" class="parallax-section">
 	<div class="container">
