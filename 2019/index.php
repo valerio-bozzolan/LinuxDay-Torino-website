@@ -138,19 +138,19 @@ var typed = new Typed('.typing-smanettone', {
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-group"></i>
 				<h3>All toghether</h3>
-				<p>LAN party, installation party. Porta un amico da convertire: ci divertiremo.</p>
+				<p><?= __( "LAN party, installation party, mini Restart Party. Porta un amico da convertire: ci divertiremo insieme a tutte le community." ) ?></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-clock-o"></i>
 				<h3>Multi-Sessions</h3>
-				<p>Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o <b>programmatori</b>.</p>
+				<p><?= __( "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o <b>programmatori</b> e divertiti!" ) ?></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-microphone"></i>
 				<h3>Lot of speakers</h3>
-				<p>Stiamo raccogliendo i tuoi interessi e scegliendo le persone che sapranno stupirci su questi temi.</p>
+				<p><?= __( "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software libero. Tutti insieme a Torino." ) ?></p>
 			</div>
 
 		</div>
@@ -282,13 +282,17 @@ var typed = new Typed('.typing-smanettone', {
    						<div class="panel-heading" role="tab" id="headingOne">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        							Cos'è il Linux Day?
+        							<p><?= __( "Cos'è il Linux Day?" ) ?></p>
         						</a>
       						</h4>
     					</div>
    						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       						<div class="panel-body">
-        						<p><?= __( "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia. Parallelamente. A Torino non mancheremo." ) ?></p>
+        						<p><?= __( "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia, parallelamente, e a Torino non mancheremo." ) ?></p>
+        						<p><?= HTML::a(
+        							'http://linuxday.it/',
+        							__( "Informazioni sul Linux Day nazionale" )
+        						) ?></p>
       						</div>
    						 </div>
  					</div>
@@ -297,13 +301,13 @@ var typed = new Typed('.typing-smanettone', {
    						<div class="panel-heading" role="tab" id="headingTwo">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          							Posso portare un amico che non capisce nulla?
+          							<p><?= __( "Posso portare un amico che non capisce nulla?" ) ?></p>
         						</a>
       						</h4>
     					</div>
    						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       						<div class="panel-body">
-                            	<p>Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! Abbandonalo all'aula "base" e vedrai che non si annoierà. Oppure portalo all'installation party e lo aiuteremo nella migrazione al software libero!</p>
+                            	<p><?= __( "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo all'installation party e lo aiuteremo nella migrazione al software libero!" ) ?></p>
       						</div>
    						 </div>
  					</div>
@@ -312,13 +316,13 @@ var typed = new Typed('.typing-smanettone', {
    						<div class="panel-heading" role="tab" id="headingThree">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        							Quanto costa?
+        							<p><?= __( "Quanto costa?" ) ?></p>
         						</a>
       						</h4>
     					</div>
    						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       						<div class="panel-body">
-      							<p>L'evento è completamente gratuito.</p>
+      							<p><?= __( "L'evento è completamente gratuito ed è unicamente possibile grazie al sostegno di tutte le community di Torino e di chi crede in loro." ) ?></p>
       						</div>
    						 </div>
  					 </div>
@@ -327,14 +331,14 @@ var typed = new Typed('.typing-smanettone', {
    						<div class="panel-heading" role="tab" id="headingThree">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-        							Come prenoto una T-shirt?
+        							<p><?= __( "Come prenoto una T-shirt?" ) ?></p>
         						</a>
       						</h4>
     					</div>
    						<div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
       						<div class="panel-body">
-      							<p>Contattaci e comunicaci la tua taglia e te la terremo da parte fresca per l'evento!</p>
-      							<p>Ti conviene farlo perchè alcune taglie finiscono molto velocemente.</p>
+      							<p><?= __( "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!" ) ?></p>
+      							<p><?= __( "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto velocemente, e ogni anno molte persone rimangono spoglie." ) ?></p>
       						</div>
    						 </div>
  					 </div>
@@ -354,14 +358,43 @@ var typed = new Typed('.typing-smanettone', {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-8">
-				<h2>Luogo</h2>
-				<p>La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da Montefeltro 2.</p>
-				<p>Per raggiungerci puoi:
+				<h2><?= __( "Luogo" ) ?></h2>
+				<p><?= __( "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da Montefeltro 2." ) ?></p>
+				<p><?= __( "Per raggiungerci puoi:" ) ?></p>
 				<ul>
-					<li>Prendere il tram 4, fermata Ospedale Mauriziano</li>
-					<li>Prendere il bus 42, fermata Mauriziano</li>
-					<li>Prendere la metropolitana, fermata Dante</li>
-					<li>Anche i bus 14, 24, 35 e 63 fermano abbastanza vicino, forse.</li>
+					<li><?php printf(
+						__( "Prendere %s, fermata %s" ),
+						sprintf(
+							__( "il %s" ),
+							sprintf(
+								__( "tram %s" ),
+								"4"
+							)
+						),
+						__( "Ospedale Mauriziano" )
+					) ?></li>
+					<li><?php printf(
+						__( "Prendere %s, fermata %s" ),
+						sprintf(
+							__( "il %s" ),
+							__( "bus %s" ),
+							"42"
+						),
+						"Mauriziano"
+					) ?></li>
+					<li><?php printf(
+						__( "Prendere %s, fermata %s" ),
+						sprintf(
+							__( "la %s" ),
+							__( "metropolitana" )
+						),
+						"Dante"
+					) ?></li>
+					<li><?php printf(
+						__( "Anche i bus %s e %s fermano abbastanza vicino, forse." ),
+						"14, 24, 35",
+						"63"
+					) ?></li>
 				</ul>
 			</div>
 			<div class="col-md-6 col-sm-4">
