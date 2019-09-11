@@ -128,30 +128,6 @@ var typed = new Typed('.typing-smanettone', {
 } );
 </script>
 
-
-<!-- =========================
-    OVERVIEW SECTION
-============================== -->
-<section id="overview" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-6 col-sm-6">
-				<h3>Linux Day Torino 2019 sarà un evento bello.</h3>
-				<p><a href="<?= esc_attr( $conference->getConferenceCalURL() ) ?>" title="iCal">Salvalo immantinente sul calendario</a>!</p>
-				<h4>Fase 1: Call for Paper!</h4>
-				<p>Hai <b>idee</b>? Concept? Proposte? Hai un <b>logo</b> e un motto meno orribili di questa immagine? Entra nella <a href="https://lists.linux.it/listinfo/ldto"><b>mailing list comitato Linux Day Torino</b></a>!</p>
-			</div>
-
-			<div class="col-md-6 col-sm-6">
-				<img src="/2019/images/placeholder-cose.png" class="img-responsive" alt="Overview">
-			</div>
-
-		</div>
-	</div>
-</section>
-
-
 <!-- =========================
     DETAIL SECTION
 ============================== -->
