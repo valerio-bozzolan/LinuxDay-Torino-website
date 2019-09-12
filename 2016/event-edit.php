@@ -168,10 +168,18 @@ if( $event ) {
 
 ?>
 
+	<p><?= HTML::a(
+		$conference->getConferenceURL(),
+		$conference->getConferenceTitle() . icon( 'home', 'left' )
+	) ?></p>
+
 	<?php if( $event ): ?>
 		<p><?= HTML::a(
+			// href
 			$event->getEventURL(),
-			__("Vedi") . icon('account_box', 'left')
+
+			// text
+			__( "Vedi" ) . icon( 'account_box', 'left' )
 		) ?></p>
 	<?php endif ?>
 
@@ -386,6 +394,7 @@ if( $event ) {
 						}
 					?></textarea>
 					<?php if( $event ): ?>
+						<p><?= __( "Traduzione dalla community:" ) ?></p>
 						<div><?= $event->getEventAbstractHTML() ?></div>
 					<?php endif ?>
 				</div>
@@ -400,6 +409,7 @@ if( $event ) {
 						}
 					?></textarea>
 					<?php if( $event ): ?>
+						<p><?= __( "Traduzione dalla community:" ) ?></p>
 						<div><?= $event->getEventDescriptionHTML() ?></div>
 					<?php endif ?>
 				</div>
