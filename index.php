@@ -1,6 +1,6 @@
 <?php
 # Linux Day - Homepage
-# Copyright (C) 2016, 2017, 2018 Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
