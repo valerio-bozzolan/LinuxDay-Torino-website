@@ -45,6 +45,9 @@ apt-get install --yes mariadb-server     \
                       git                \
                       phpmyadmin
 
+echo "stop apache"
+systemctl stop apache2
+
 if [ ! -e "$SUCKLESS_PHP" ]; then
 	git clone "$SUCKLESS_PHP_REPO" "$SUCKLESS_PHP"
 else
@@ -109,8 +112,8 @@ php "$WWW"/l10n/localize.php .
 cd -
 #/GNU Gettext workflow
 
-echo "restart apache"
-systemctl restart apache2
+echo "start apache"
+systemctl start apache2
 
 ##############################################
 # now as surplus we add an nginx environment #
