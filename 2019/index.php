@@ -290,7 +290,7 @@ var typed = new Typed('.typing-smanettone', {
       						<div class="panel-body">
         						<p><?= __( "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta Italia, parallelamente, e a Torino non mancheremo." ) ?></p>
         						<p><?= HTML::a(
-        							'http://linuxday.it/',
+        							'https://www.linuxday.it/',
         							__( "Informazioni sul Linux Day nazionale" )
         						) ?></p>
       						</div>
