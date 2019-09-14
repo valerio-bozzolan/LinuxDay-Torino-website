@@ -60,4 +60,6 @@ http://www.templatemo.com/tm-486-new-event
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
-<?php template( 'navbar-home' ) ?>
+<?php template( 'navbar-home', [
+	'conference' => $conference,
+] ) ?>
