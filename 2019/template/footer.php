@@ -47,12 +47,12 @@ defined( 'ABSPATH' ) or exit;
 <!-- =========================
      SCRIPTS
 ============================== -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.parallax.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/custom.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/jquery.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/bootstrap.min.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/jquery.parallax.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/owl.carousel.min.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/smoothscroll.js"></script>
+<script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/custom.js"></script>
 
 </body>
 </html>

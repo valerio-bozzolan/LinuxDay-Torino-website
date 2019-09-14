@@ -36,24 +36,24 @@ defined( 'ABSPATH' ) or exit;
 New Event
 http://www.templatemo.com/tm-486-new-event
 -->
-<title>Linux Day Torino 2019</title>
+<title><?= esc_html( $conference->getConferenceTitle() ) ?></title>
 <meta name="description" content="">
-<meta name="author" content="<?= __( "Comitato Linux Day Torino" ) ?>">
+<meta name="author" content="<?= esc_attr( __( "Comitato Linux Day Torino" ) ) ?>">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/owl.theme.css">
+<link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/owl.carousel.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/style.css">
 
 <!-- Organic fonts grown locally, hand-picked for your enojyment. Guaranteed tracking-free, absolutely no CDNs! -->
 <!-- Do you want even faster loading times with sites that use CDNs? Try https://decentraleyes.org/ (not sponsored, just a good extension) -->
-<link href='/2019/css/poppins.css' rel='stylesheet' type='text/css'>
+<link href='<?= CURRENT_CONFERENCE_ROOT ?>/css/poppins.css' rel='stylesheet' type='text/css'>
 
 <?php load_module('header') ?>
 

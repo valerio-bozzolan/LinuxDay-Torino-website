@@ -40,18 +40,18 @@ defined( 'ABSPATH' ) or exit;
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand"><?= esc_html( $conference->getConferenceTitle() ) ?></a>
+			<a href="<?= CURRENT_CONFERENCE_ROOT ?>/#" class="navbar-brand"><?= esc_html( $conference->getConferenceTitle() ) ?></a>
 		</div>
 
 		<div class="collapse navbar-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#intro" class="smoothScroll">Intro</a></li>
-				<li><a href="#overview" class="smoothScroll">Overview</a></li>
-				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
-				<li><a href="#contact" class="smoothScroll">Contact</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#intro" class="smoothScroll">Intro</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#overview" class="smoothScroll">Overview</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#program" class="smoothScroll">Programs</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#venue" class="smoothScroll">Venue</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#sponsors" class="smoothScroll">Sponsors</a></li>
+				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#contact" class="smoothScroll">Contact</a></li>
 			</ul>
 
 		</div>
