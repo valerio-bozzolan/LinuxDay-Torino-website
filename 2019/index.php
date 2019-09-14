@@ -137,19 +137,19 @@ var typed = new Typed('.typing-smanettone', {
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-group"></i>
-				<h3>All toghether</h3>
+				<h3><?= __( "Tutti insieme" ) ?></h3>
 				<p><?= __( "LAN party, installation party, mini Restart Party. Porta un amico da convertire: ci divertiremo insieme a tutte le community." ) ?></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-clock-o"></i>
-				<h3>Multi-Sessions</h3>
+				<h3><?= __( "Varie sessioni" ) ?></h3>
 				<p><?= __( "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o <b>programmatori</b> e divertiti!" ) ?></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-microphone"></i>
-				<h3>Lot of speakers</h3>
+				<h3><?= __( "Molti relatori" ) ?></h3>
 				<p><?= __( "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software libero. Tutti insieme a Torino." ) ?></p>
 			</div>
 
