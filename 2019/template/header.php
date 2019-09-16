@@ -60,6 +60,11 @@ http://www.templatemo.com/tm-486-new-event
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
+<?php template( 'easter-egg' ) ?>
+
 <?php template( 'navbar-home', [
 	'conference' => $conference,
 ] ) ?>
+
+
+<?php template( 'intro' ) ?>

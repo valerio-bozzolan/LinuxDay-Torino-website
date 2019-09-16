@@ -36,97 +36,6 @@ template( 'header', [
 ] );
 
 ?>
-<!--
-
-    _-`````-,           ,- '- .
-  .'   .- - |          | - .   `.
- /.'  /                     `.   \
-:/   :      _...   ..._      ``   :
-::   :     /._ .`:'_.._\.    ||   :
-::    `._ ./  ,`  :    \ . _.''   .
-`:.      |   |  -.  \-. \\_      /
-  \:._ _/  ..'  .@)  \@) ` `\ ,.'
-     _/,-—'       .- .\,-.`—-`.
-       ,'/''     (( \ `  )
-        /'/'  \    `-'  (
-         '/''  `._,—-—-—-'
-          ''/'    .,-—-'
-           ''/'      ;:
-             ''/''  ''/
-               ''/''/''
-                 '/'/'
-                  `;
-
-                    ..- - .
-                   '        `.
-                  '.- .  .—-. .
-                 |: _ | :  _ :|
-                 |`(@)——`.(@) |
-                 : .'     `-, :
-                 :(_____.-'.' `
-                 : `-.__.-'   :
-                 `  _.    _.   .
-                /  /  `_ '  \    .
-               .  :          \\   \
-              .  : _      __  .\   .
-             .  /             : `.  \
-            :  /      '        : `.  .
-           '  `      :          : :  `.
-         .`_ :       :          / '   |
-         :' \ .      :           '__  :
-      .-—'   \`-._    .      .' :    `).
-    ..|       \   )          :   '._.'  :
-   ;           \-'.        ..:         /
-   '.           \  - ....-   |        '
-      -.         :   _____   |      .'
-        ` -.    .'-¯       ¯-`.   .'
-            `-¯¯               ¯¯¯
-
--->
-<!-- =========================
-    INTRO SECTION
-============================== -->
-<section id="intro" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-sm-12">
-				<h3>Sabato 26 Ottobre 2019</h3>
-				<h1>Linux Day Torino</h1>
-				<div class="typing-smanettone-container text-white"><?php printf(
-                    __("Se anche tu sei %suno smanettone%s, vieni a trovarci!"),
-                    '<span class="typing-smanettone">',
-                    '</span>'
-                ) ?></div>
-				<a href="#overview" class="btn btn-lg btn-default smoothScroll hidden-xs">SCOPRI DI PIÙ</a>
-				<!-- <a href="#register" class="btn btn-lg btn-danger smoothScroll">CIAO</a>-->
-			</div>
-
-
-		</div>
-	</div>
-</section>
-
-<script>
-$('.typing-smanettone').text('');
-var typed = new Typed('.typing-smanettone', {
-	strings: <?= json_encode( [
-		__("uno smanettone"),
-		__("un programmatore"),
-		__("una persona curiosa"),
-		__("in cerca di lavoro"),
-		__("un sistemista"),
-		__("un po' pinguino"),
-		__("in modalità incognito"),
-		__("un cucciolo di GNU")
-	] ); ?>,
-	loop: true,
-	typeSpeed: 100,
-	backDelay: 1000,
-	backSpeed: 20,
-	showCursor: false
-} );
-</script>
 
 <!-- =========================
     DETAIL SECTION
@@ -143,13 +52,19 @@ var typed = new Typed('.typing-smanettone', {
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-clock-o"></i>
-				<h3><?= __( "Varie sessioni" ) ?></h3>
+				<h3><?php printf(
+					__( "%s sessioni" ),
+					4
+				) ?></h3>
 				<p><?= __( "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o <b>programmatori</b> e divertiti!" ) ?></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-microphone"></i>
-				<h3><?= __( "Molti relatori" ) ?></h3>
+				<h3><?php printf(
+					__( "%s relatori" ),
+					16
+				) ?></h3>
 				<p><?= __( "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software libero. Tutti insieme a Torino." ) ?></p>
 			</div>
 
@@ -377,8 +292,10 @@ var typed = new Typed('.typing-smanettone', {
 						__( "Prendere %s, fermata %s" ),
 						sprintf(
 							__( "il %s" ),
-							__( "bus %s" ),
-							"42"
+							sprintf(
+								__( "bus %s" ),
+								"42"
+							)
 						),
 						"Mauriziano"
 					) ?></li>
