@@ -409,7 +409,7 @@ var typed = new Typed('.typing-smanettone', {
 <!-- =========================
     SPONSORS SECTION   
 ============================== -->
-<section id="sponsors" class="parallax-section">
+<section id="sponsors" class="parallax-section" style="display:none">
 	<div class="container">
 		<div class="row">
 
