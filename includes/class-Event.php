@@ -121,12 +121,12 @@ trait EventTrait {
 	}
 
 	/**
-	 * It has an event image?
+	 * It has an Event image?
 	 *
 	 * @return bool
 	 */
 	public function hasEventImage() {
-		return null !== $this->get( Event::IMAGE );
+		return $this->has( Event::IMAGE );
 	}
 
 	/**
