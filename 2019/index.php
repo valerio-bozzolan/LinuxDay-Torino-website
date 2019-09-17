@@ -134,7 +134,9 @@ template( 'header', [
 							<?php endif ?>
 
 							<p>
-								<!--<i class="fa fa-info-circle"></i>&nbsp;<a href="#">info</a><br>-->
+								<i class="fa fa-info-circle"></i>&nbsp;<a href="<?= esc_attr( $event->getEventURL() ) ?>">info</a>
+							</p>
+							<p>
 								<i class="fa fa-calendar"></i><a href="<?= esc_attr( $event->getEventCalURL() ) ?>" title="<?= esc_attr( $event->getEventTitle() ) ?>">&nbsp;<?= __( "Salva sul calendario" ) ?></a>
 							</p>
 
