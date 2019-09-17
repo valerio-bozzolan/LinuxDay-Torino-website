@@ -72,7 +72,7 @@ template( 'header', $args );
 		<div class="col-sm-12 col-md-5 col-lg-4">
 			<div class="row">
 				<div class="col-sm-6 col-md-12">
-					<img class="responsive-img hoverable" src="<?php
+					<img class="img-responsive hoverable" src="<?php
 						if( $event->hasEventImage() ) {
 							echo esc_attr( $event->getEventImage() );
 						} else {
@@ -222,7 +222,7 @@ template( 'header', $args );
 			<?php foreach( $users as $user ): ?>
 				<div class="col-sm-12 col-md-6">
 					<div class="row valign-wrapper">
-						<div class="s4 l3">
+						<div class="col-sm-4 col-lg-3">
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL( ROOT )
 							?>" title="<?= esc_attr( sprintf(
@@ -231,17 +231,17 @@ template( 'header', $args );
 							) ) ?>" data-tooltip="<?= esc_attr(
 								$user->getUserFullname()
 							) ?>">
-								<img class="circle responsive-img hoverable" src="<?php
-									echo $user->getUserImage(256)
-								?>" alt="<?= esc_attr(
+								<img class="circle img-responsive hoverable" src="<?= esc_attr(
+									$user->getUserImage( 256 )
+								) ?>" alt="<?= esc_attr(
 									$user->getUserFullname()
 								) ?>" />
 							</a>
 						</div>
-						<div class="s8 l9">
+						<div class="col-sm-8 col-lg-9">
 							<?= HTML::a(
 								$user->getUserURL(),
-								"<h4>{$user->getUserFullname()}</h4>",
+								"<h4>" . esc_html( $user->getUserFullname() ) . "</h4>",
 								sprintf(
 									__("Profilo di %s"),
 									$user->getUserFullname()
