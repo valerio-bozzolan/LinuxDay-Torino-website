@@ -87,7 +87,7 @@ template( 'header', $args );
 
 		<!-- Start room -->
 		<div class="col-sm-12 col-md-6 offset-md-1 col-lg-5 offset-lg-3">
-			<table class="striped bordered">
+			<table class="table table-responsive">
 				<tr>
 					<th><?= icon('folder', 'left'); echo __("Tema") ?></th>
 					<td>
