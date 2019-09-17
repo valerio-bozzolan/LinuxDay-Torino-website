@@ -53,6 +53,10 @@ defined( 'ABSPATH' ) or exit;
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/owl.carousel.min.js"></script>
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/smoothscroll.js"></script>
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/custom.js"></script>
-
+<script>
+jQuery( function(){
+    jQuery( '[data-toggle="tooltip"]' ).tooltip();
+} );
+</script>
 </body>
 </html>
