@@ -48,7 +48,10 @@ class Homepage19 {
 		// collect the entries
 		$all = [];
 		foreach( $users as $user ) {
-			$all[] = $user->getUserFullName();
+			$all[] = HTML::a(
+				$user->getUserURL(),
+				esc_html( $user->getUserFullName() )
+			);
 		}
 
 		return $all
