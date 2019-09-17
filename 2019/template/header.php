@@ -66,5 +66,4 @@ http://www.templatemo.com/tm-486-new-event
 	'conference' => $conference,
 ] ) ?>
 
-
 <?php template( 'intro' ) ?>
