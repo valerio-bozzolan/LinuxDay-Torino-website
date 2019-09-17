@@ -34,9 +34,7 @@ function template( $template_name, $template_args = [] ) {
  */
 function icon( $icon = 'send', $c = null ) {
 	if( $c !== null ) {
-		$c = " $c";
-	} else {
-		$c = '';
+		$icon = "$icon $c";
 	}
-	return "<i class=\"material-icons$c\">$icon</i>";
+	return "<i class=\"fa fa-$icon\" aria-hidden=\"true\"></i>";
 }
