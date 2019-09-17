@@ -20,14 +20,20 @@ require 'load.php';
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
-$conference or die_with_404();
+if( !$conference ) {
+	die_with_404();
+}
 
 $user = User::factoryByUID( $_GET['uid'] )
 	->queryRow();
 
-$user or die_with_404();
+if( !$user ) {
+	die_with_404();
+}
 
-FORCE_PERMALINK && $user->forceUserPermalink();
+if( FORCE_PERMALINK ) {
+	$user->forceUserPermalink();
+}
 
 enqueue_js('jquery');
 

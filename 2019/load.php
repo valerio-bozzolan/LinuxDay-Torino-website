@@ -43,6 +43,10 @@ define('STATIC_ABSPATH', CURRENT_CONFERENCE_ABSPATH . __ . 'static');
 define('SITE_NAME',        __("Linux Day Torino 2019") );
 define('SITE_NAME_SHORT',  __("LDTO2019") );
 define('SITE_DESCRIPTION', __("Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux.") );
-register_js('leaflet.init', STATIC_PATH . '/leaflet-init.js');
+
+register_js( 'leaflet.init', STATIC_PATH . '/leaflet-init.js' );
+
+define( 'DEFAULT_IMAGE', ROOT . '/2016/static/gnu-linux-on-black.png' );
+
 
 require 'include/functions.php';

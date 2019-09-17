@@ -20,7 +20,9 @@ require 'load.php';
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
-$conference or die_with_404();
+if( !$conference ) {
+	die_with_404();
+}
 
 $event = FullEvent::factoryByConferenceAndUID(
 	$conference->getConferenceID(),
@@ -31,9 +33,12 @@ if( !$event ) {
 	die_with_404();
 }
 
-FORCE_PERMALINK and $event->forceEventPermalink();
+if( FORCE_PERMALINK ) {
+	$event->forceEventPermalink();
+}
 
 $args = [
+	'conference' => $conference,
 	'title' => sprintf(
 		__("%s: %s"),
 		$event->getChapterName(),
@@ -44,46 +49,34 @@ $args = [
 
 if( $event->hasEventImage() ) {
 	$args['og'] = [
-		'image' => $event->getEventImage()
+		'image' => $event->getEventImage( true ),
 	];
 }
 
-// Adding subscribers
-$subscribed = null;
-if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvailable() ) {
-	$email = $_POST['subscription_email'];
-
-	if( filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-		$event->addSubscription($email);
-
-		$args['alert']      = __("Grazie per esserti iscritto.");
-		$args['alert.type'] = Messagebox::INFO;
-		$subscribed         = true;
-	} else {
-		$args['alert']      = __("E-mail non valida.");
-		$args['alert.type'] = Messagebox::ERROR;
-		$subscribed         = false;
-	}
-}
-
-Header::spawn( null, $args );
+template( 'header', $args );
 ?>
+
+<section class="container">
+	<h1><?= esc_html( $event->getEventTitle() ) ?></h1>
+
 	<?php if( $event->isEventEditable() ): ?>
 	<p><?= HTML::a(
 		$event->getFullEventEditURL(),
-		__("Modifica evento") . icon('edit', 'left')
+		__("Modifica") . icon('edit', 'left')
 	) ?></p>
 	<?php endif ?>
+</section>
 
+<section class="container">
 	<div class="row">
-		<div class="col s12 m5 l4">
+		<div class="col-sm-12 col-md-5 col-lg-4">
 			<div class="row">
-				<div class="col s6 m12">
+				<div class="col-sm-6 col-md-12">
 					<img class="responsive-img hoverable" src="<?php
 						if( $event->hasEventImage() ) {
-							echo $event->getEventImage();
+							echo esc_attr( $event->getEventImage() );
 						} else {
-							echo DEFAULT_IMAGE;
+							echo esc_attr( DEFAULT_IMAGE );
 						}
 					?>" alt="<?php
 						echo esc_attr( $event->getEventTitle() )
@@ -93,7 +86,7 @@ Header::spawn( null, $args );
 		</div>
 
 		<!-- Start room -->
-		<div class="col s12 m6 offset-m1 l5 offset-l3">
+		<div class="col-sm-12 col-md-6 offset-md-1 col-lg-5 offset-lg-3">
 			<table class="striped bordered">
 				<tr>
 					<th><?= icon('folder', 'left'); echo __("Tema") ?></th>
@@ -108,12 +101,12 @@ Header::spawn( null, $args );
 						<?= $event->getRoomName() ?><br />
 						<small>@ <?= HTML::a(
 							$conference->getLocationGeoOSM(),
-							$conference->getLocationName(),
+							esc_html( $conference->getLocationName() ),
 							$conference->getLocationAddress(),
 							null,
 							'target="_blank"'
 						) ?></small><br />
-						<small><?= $conference->getLocationAddress() ?></small>
+						<small><?= esc_html( $conference->getLocationAddress() ) ?></small>
 					</td>
 				</tr>
 				<tr>
@@ -135,65 +128,34 @@ Header::spawn( null, $args );
 		</div>
 		<!-- End room -->
 	</div>
+</section>
 
 	<!-- Start event abstract -->
 	<?php if( $event->hasEventAbstract() ): ?>
-	<div class="divider"></div>
-	<div class="section">
-		<h3><?= __("Abstract") ?></h3>
-		<?= $event->getEventAbstractHTML( ['p' => 'flow-text'] ) ?>
-	</div>
+		<section class="container">
+			<div class="jumbotron">
+				<h3><?= __("Abstract") ?></h3>
+				<?= $event->getEventAbstractHTML( ['p' => 'flow-text'] ) ?>
+			</div>
+		</section>
 	<?php endif ?>
 	<!-- End event abstract -->
 
 	<!-- Start event description -->
 	<?php if( $event->hasEventDescription() ): ?>
-	<div class="divider"></div>
-	<div class="section">
-		<h3><?= __("Descrizione") ?></h3>
-		<?= $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
-	</div>
+		<section class="container">
+			<h3><?= __("Descrizione") ?></h3>
+			<?= $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
+		</section>
 	<?php endif ?>
 	<!-- End event description -->
 
-	<!-- Start subscriptions -->
-	<?php if( $event->areEventSubscriptionsAvailable() ): ?>
-	<div class="divider"></div>
-	<div class="section">
-		<?php if( true === $subscribed ): ?>
-			<p class="flow-text"><?= __("Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina.") ?></p>
-		<?php else: ?>
-			<form method="post">
-				<div class="row">
-					<div class="col s12 m6 l8">
-						<div class="card-panel">
-							<h3><?= __("Iscrizioni") ?></h3>
-							<p class="flow-text"><?= __("Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:") ?></p>
-							<div class="row">
-								<div class="col s12 l6 input-field">
-									<label for="subscription_email"><?= __("E-mail") ?></label>
-									<input type="email" name="subscription_email" id="subscription_email" />
-								</div>
-								<div class="col s12 l6 input-field">
-									<button type="submit" class="btn purple darken-3 waves-effect"><?= __("Sottoscrivi"); echo icon('send', 'right') ?></button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-		<?php endif ?>
-	</div>
-	<?php endif ?>
-	<!-- End subscriptions -->
-
 	<!-- Start event description -->
 	<?php if( $event->hasEventNote() ): ?>
-	<div class="divider"></div>
-	<div class="section">
-		<h3><?= __("Note") ?></h3>
-		<?= $event->getEventNoteHTML( ['p' => 'flow-text'] ) ?>
-	</div>
+		<section class="container">
+			<h3><?= __("Note") ?></h3>
+			<?= $event->getEventNoteHTML( ['p' => 'flow-text'] ) ?>
+		</section>
 	<?php endif ?>
 	<!-- End event description -->
 
@@ -202,12 +164,11 @@ Header::spawn( null, $args );
 		->queryGenerator();
 	?>
 	<?php if( $sharables->valid() ): ?>
-	<div class="divider"></div>
-	<div class="section">
+		<section class="container">
 		<h3><?= __("Materiale") ?></h3>
 		<div class="row">
 			<?php foreach( $sharables as $sharable ): ?>
-			<div class="col s12">
+			<div class="col-sm-12">
 				<?php if( $sharable->isSharableDownloadable() ): ?>
 					<p class="flow-text">
 						<?php printf(
@@ -245,13 +206,12 @@ Header::spawn( null, $args );
 			</div>
 			<?php endforeach ?>
 		</div>
-	</div>
+		</section>
 	<?php endif ?>
 	<!-- End files -->
 
 	<!-- Start speakers -->
-	<div class="divider"></div>
-	<div class="section">
+	<section class="container">
 		<h3><?= __("Relatori") ?></h3>
 
 		<?php $users = $event->factoryUserByEvent()
@@ -260,9 +220,9 @@ Header::spawn( null, $args );
 		<?php if( $users->valid() ): ?>
 			<div class="row">
 			<?php foreach( $users as $user ): ?>
-				<div class="col s12 m6">
+				<div class="col-sm-12 col-md-6">
 					<div class="row valign-wrapper">
-						<div class="col s4 l3">
+						<div class="s4 l3">
 							<a class="tooltipped" href="<?php
 								echo $user->getUserURL( ROOT )
 							?>" title="<?= esc_attr( sprintf(
@@ -278,7 +238,7 @@ Header::spawn( null, $args );
 								) ?>" />
 							</a>
 						</div>
-						<div class="col s8 l9">
+						<div class="s8 l9">
 							<?= HTML::a(
 								$user->getUserURL(),
 								"<h4>{$user->getUserFullname()}</h4>",
@@ -296,7 +256,7 @@ Header::spawn( null, $args );
 		<?php else: ?>
 			<p><?= __("L'elenco dei relatori non è ancora noto.") ?></p>
 		<?php endif ?>
-	</div>
+	</section>
 	<!-- End speakers -->
 
 	<?php
@@ -312,10 +272,9 @@ Header::spawn( null, $args );
 	?>
 	<?php if($previous || $next): ?>
 	<!-- Stard previous/before -->
-	<div class="divider"></div>
-	<div class="section">
+	<section class="container">
 		<div class="row">
-			<div class="col s12 m6">
+			<div class="col-sm-12 col-md-6">
 				<?php if( $previous ): ?>
 					<h3><?= icon('navigate_before'); echo __("Preceduto da") ?></h3>
 					<p class="flow-text">
@@ -327,7 +286,7 @@ Header::spawn( null, $args );
 					</p>
 				<?php endif ?>
 			</div>
-			<div class="col s12 m6 right-align">
+			<div class="col-sm-12 col-md-6 text-right">
 				<?php if( $next ): ?>
 					<h3><?= __("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
@@ -340,15 +299,10 @@ Header::spawn( null, $args );
 				<?php endif ?>
 			</div>
 		</div>
-	</div>
+	</section>
 	<!-- End previous/before -->
 	<?php endif ?>
 
-	<script>
-	$( function () {
-		$( '.tooltipped' ).tooltip();
-	});
-	</script>
 <?php
 
-Footer::spawn();
+template( 'footer' );
