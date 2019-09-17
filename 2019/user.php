@@ -29,6 +29,8 @@ $user or die_with_404();
 
 FORCE_PERMALINK && $user->forceUserPermalink();
 
+enqueue_js('jquery');
+
 template( 'header', [
 	'conference' => $conference,
 	'title' => $user->getUserFullname(),
@@ -47,6 +49,8 @@ template( 'header', [
 		<div class="row">
 			<div class="col-sm-12">
 
+				<h1><?= esc_html( $user->getUserFullName() ) ?></h1>
+
 				<?php if( $user->hasPermissionToEditUser() ): ?>
 					<p><?= HTML::a(
 						CURRENT_CONFERENCE_PATH . "/user-edit.php?uid={$user->getUserUID()}",
@@ -64,7 +68,7 @@ template( 'header', [
 		<div class="row">
 
 			<!-- Profile image -->
-			<div class="col-sm-12 m6 l4">
+			<div class="col-sm-12 col-md-6 col-lg-4">
 				<div class="row">
 					<div class="col-sm-8">
 						<?php if( $user->has( User::WEBSITE ) ): ?>
@@ -87,7 +91,7 @@ template( 'header', [
 					<div class="col-sm-12">
 						<p><?= HTML::a(
 							$user->user_site,
-							__("Sito personale") . icon('contact_mail', 'right'),
+							__("Sito personale") . icon('inbox', 'right'),
 							null,
 							'btn waves-effect purple darken-2',
 							'target="_blank"'
@@ -100,7 +104,7 @@ template( 'header', [
 			<!-- End profile image -->
 
 			<!-- Start sidebar -->
-			<div class="col-sm-12 m6 l8">
+			<div class="col-sm-12 col-md-6 col-lg-8">
 
 				<!-- Start skills -->
 				<?php $skills = $user->factoryUserSkills()
@@ -111,7 +115,7 @@ template( 'header', [
 					<div class="col-sm-12">
 						<p><?= __("Le mie skill:") ?></p>
 						<?php foreach( $skills as $skill ): ?>
-							<div class="chip tooltipped hoverable" data-tooltip="<?= esc_attr( $skill->getSkillPhrase() ) ?>"><code><?= $skill->getSkillCode() ?></code></div>
+							<div class="badge badge-pill" title="<?= esc_attr( $skill->getSkillPhrase() ) ?>" data-toggle="tooltip"><?= esc_html( $skill->getSkillCode() ) ?></div>
 						<?php endforeach ?>
 					</div>
 				</div>
@@ -143,7 +147,7 @@ template( 'header', [
 
 		<!-- Start user bio -->
 		<?php if( $user->hasUserBio() ): ?>
-		<div class="section">
+		<div class="jumbotron">
 			<h3><?= __("Bio") ?></h3>
 			<?= $user->getUserBioHTML( ['p' => 'flow-text'] ) ?>
 		</div>
@@ -151,23 +155,26 @@ template( 'header', [
 		<!-- End user bio -->
 
 		<div class="section">
-			<h3><?= __("Talk") ?></h3>
+			<h3><?= esc_html( __( "Talk" ) ) ?></h3>
 
-			<?php $events = ( new QueryEvent() )
+			<?php
+			// get the Events of this USer in this Conference
+			$events = ( new QueryEvent() )
 				->whereConference( $conference )
 				->whereUser(       $user       )
 				->joinTrackChapterRoom()
 				->queryGenerator();
-			 ?>
+			?>
 			<?php if( $events->valid() ): ?>
-				<table>
+			<div class="table-responsive">
+				<table class="table table-hover">
 				<thead>
 				<tr>
 					<th><?= __("Nome") ?></th>
 					<th><?= __("Tipo") ?></th>
 					<th><?= __("Tema") ?></th>
 					<th><?= __("Dove") ?></th>
-					<th><?= __("When") ?></th>
+					<th><?= __("Quando") ?></th>
 				</tr>
 				</thead>
 				<tbody>
@@ -204,6 +211,7 @@ template( 'header', [
 				<?php endforeach ?>
 				</tbody>
 				</table>
+			</div>
 			<?php else: ?>
 				<p><?= __("Quest'anno il relatore non ha tenuto nessun talk.") ?></p>
 			<?php endif ?>
@@ -225,27 +233,27 @@ template( 'header', [
 			<div class="section">
 				<h3><?= __("Altre partecipazioni") ?></h3>
 				<table>
-				<tbody>
-				<?php foreach( $events as $event ): ?>
-				<tr>
-					<td><?= esc_html( $event->getEventTitle() ) ?></td>
-					<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
-					<td>
-						<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
-							<?= esc_html( $event->getLocationName() ) ?>
-						</span><br />
-					</td>
-					<td>
-						<?php printf(
-							__("Ore <b>%s</b> (il %s)"),
-							$event->getEventStart("H:i"),
-							$event->getEventStart("d/m/Y")
-						) ?><br />
-						<small><?= $event->getEventHumanStart() ?></small>
-					</td>
-				</tr>
-				<?php endforeach ?>
-				</tbody>
+					<tbody>
+					<?php foreach( $events as $event ): ?>
+					<tr>
+						<td><?= esc_html( $event->getEventTitle() ) ?></td>
+						<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
+						<td>
+							<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
+								<?= esc_html( $event->getLocationName() ) ?>
+							</span><br />
+						</td>
+						<td>
+							<?php printf(
+								__("Ore <b>%s</b> (il %s)"),
+								$event->getEventStart("H:i"),
+								$event->getEventStart("d/m/Y")
+							) ?><br />
+							<small><?= $event->getEventHumanStart() ?></small>
+						</td>
+					</tr>
+					<?php endforeach ?>
+					</tbody>
 				</table>
 			</div>
 		<?php endif ?>
