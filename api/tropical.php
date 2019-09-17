@@ -59,7 +59,7 @@ if( $event ) {
 	$event_end   = $event->getEventEnd();
 	$event_desc  = $event->getEventDescription();
 	if( $event->hasEventPermalink() ) {
-		$event_url = $event->getEventURL();
+		$event_url = $event->getEventURL( true );
 	}
 } else {
 	$event_ID    = $conference->getConferenceID();

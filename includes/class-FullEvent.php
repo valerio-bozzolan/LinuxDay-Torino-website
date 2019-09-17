@@ -35,11 +35,15 @@ trait FullEventTrait {
 		       $this->has( Chapter   ::UID );
 	}
 
-	function getEventURL( $base = URL ) {
-		return $base . FullEvent::permalink(
+	/**
+	 * Get the Event URL
+	 */
+	public function getEventURL( $absolute = false ) {
+		return FullEvent::permalink(
 			$this->getConferenceUID(),
 			$this->getEventUID(),
-			$this->getChapterUID()
+			$this->getChapterUID(),
+			$absolute
 		);
 	}
 
@@ -181,10 +185,12 @@ class FullEvent extends Queried {
 	 * @param $conference_uid string Conference UID
 	 * @param $event_uid string Event UID
 	 * @param $chapter_uid string Chapter UID
+	 * @param string $absolute Force an absolute URL
+	 * @return string
 	 */
-	public static function permalink( $conference_uid, $event_uid, $chapter_uid ) {
-		return sprintf( PERMALINK_EVENT, $conference_uid, $event_uid, $chapter_uid ) ;
-
+	public static function permalink( $conference_uid, $event_uid, $chapter_uid, $absolute = false ) {
+		$url = sprintf( PERMALINK_EVENT, $conference_uid, $event_uid, $chapter_uid ) ;
+		return site_page( $url, $absolute );
 	}
 
 	/**

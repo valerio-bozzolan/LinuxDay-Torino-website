@@ -64,7 +64,7 @@ define_default( 'NOINDEX', false );
 define_default( 'PERMALINK_CONFERENCE', '/%s/' );
 
  // /{conference_uid}/{$chapter_uid}/{event_uid}
-define_default( 'PERMALINK_EVENT', '/%1$s/%3$s/%2$s' );
+define_default( 'PERMALINK_EVENT', '%1$s/%3$s/%2$s' );
 
 // /2016/{user_uid}
 define_default( 'PERMALINK_USER', '/%1$s/user/%2$s' );

@@ -37,12 +37,12 @@ $args = [
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
-	'url' => $event->getEventURL()
+	'url' => $event->getEventURL( true ),
 ];
 
 if( $event->hasEventImage() ) {
 	$args['og'] = [
-		'image' => $event->getEventImage()
+		'image' => $event->getEventImage( true ),
 	];
 }
 
