@@ -59,7 +59,7 @@ template( 'header', [
 
 				<?php if( $user->hasPermissionToEditUser() ): ?>
 					<p><?= HTML::a(
-						CURRENT_CONFERENCE_PATH . "/user-edit.php?uid={$user->getUserUID()}",
+						ROOT . "/2016/user-edit.php?uid={$user->getUserUID()}",
 						__("Modifica") . icon('edit', 'left')
 					) ?></p>
 				<?php endif ?>
