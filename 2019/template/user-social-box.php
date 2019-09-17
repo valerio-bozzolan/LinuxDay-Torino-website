@@ -33,7 +33,7 @@
 defined( 'ABSPATH' ) or exit;
 ?>
 
-	<div class="col s4 m3 l2">
+	<div class="col-sm-4 col-md-3 col-lg-2">
 		<?php
 			$title = sprintf(
 				__("%s su %s"),
