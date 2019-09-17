@@ -64,15 +64,19 @@ if( $_POST ) {
 		$data[] = new DBCol( Event::UID,         $_POST['uid'],         's' );
 		$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's' );
 		$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's' );
-		$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    's' );
-		$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 's' );
+		$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    'snull' );
+		$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 'snull' );
 		$data[] = new DBCol( Event::START,       $_POST['start'],       's' );
 		$data[] = new DBCol( Event::END,         $_POST['end'],         's' );
-		$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       's' );
+		$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       'snull' );
 		$data[] = new DBCol( Chapter::ID,        $_POST['chapter'],     'd' );
 		$data[] = new DBCol( Room::ID,           $_POST['room'],        'd' );
 		$data[] = new DBCol( Track::ID,          $_POST['track'],       'd' );
 		$data[] = new DBCol( Conference::ID,     $conference_ID,        'd' );
+
+		foreach( $data as $row ) {
+			$row->promoteNULL();
+		}
 
 		if( $event ) {
 			// update the existing Event
