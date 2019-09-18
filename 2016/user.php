@@ -26,6 +26,7 @@ $user = User::factoryByUID( $_GET['uid'] )
 	->select( [
 		User::ID,
 		User::UID,
+		User::GRAVATAR,
 		User::NAME,
 		User::SURNAME,
 		User::IMAGE,
@@ -67,10 +68,10 @@ Header::spawn( null, [
 					<?php if( $user->has( User::WEBSITE ) ): ?>
 						<a href="<?= esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?= esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 					<?php endif ?>
-						<img class="responsive-img hoverable z-depth-1" src="<?php
-							echo esc_attr( $user->getUserImage() )
-						?>" alt="<?php
-							echo esc_attr( $user->getUserFullname() )
+						<img class="responsive-img hoverable z-depth-1" src="<?=
+							esc_attr( $user->getUserImage() )
+						?>" alt="<?=
+							esc_attr( $user->getUserFullname() )
 						?>" />
 					<?php if( $user->has( User::WEBSITE ) ): ?>
 						</a>
@@ -106,9 +107,9 @@ Header::spawn( null, [
 			<?php if( $skills->valid() ): ?>
 			<div class="row">
 				<div class="col s12">
-					<p><?= __("Le mie skill:") ?></p>
+					<p><?= esc_html( __( "Le mie skill:" ) ) ?></p>
 					<?php foreach( $skills as $skill ): ?>
-						<div class="chip tooltipped hoverable" data-tooltip="<?= esc_attr( $skill->getSkillPhrase() ) ?>"><code><?= $skill->getSkillCode() ?></code></div>
+						<div class="chip tooltipped hoverable" data-tooltip="<?= esc_attr( $skill->getSkillPhrase() ) ?>"><code><?= esc_html( $skill->getSkillCode() ) ?></code></div>
 					<?php endforeach ?>
 				</div>
 			</div>
@@ -121,8 +122,8 @@ Header::spawn( null, [
 				<div class="col s12">
 					<?php $license = $user->getUserLovelicense() ?>
 					<p><?php printf(
-						__("La mia licenza di software libero preferita è la <b>%s</b>."),
-						$license->getLink()
+						esc_html( __( "La mia licenza di software libero preferita è la %s." ) ),
+						"<b>" . $license->getLink() . "</b>"
 					) ?></p>
 				</div>
 			</div>
@@ -137,7 +138,7 @@ Header::spawn( null, [
 	<?php if( $user->hasUserBio() ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<h3><?= __("Bio") ?></h3>
+		<h3><?= esc_html( __("Bio") ) ?></h3>
 		<?= $user->getUserBioHTML( ['p' => 'flow-text'] ) ?>
 	</div>
 	<?php endif ?>
@@ -200,16 +201,18 @@ Header::spawn( null, [
 			</tbody>
 			</table>
 		<?php else: ?>
-			<p><?= __("Quest'anno il relatore non ha tenuto nessun talk.") ?></p>
+			<p><?= esc_html( __("Quest'anno il relatore non ha tenuto nessun talk.") ) ?></p>
 		<?php endif ?>
 	</div>
 
-	<?php $events = ( new QueryEvent() )
-		->joinLocation()
-		->whereConferenceNot( $conference )
-		->whereUser( $user )
-		->orderBy( Event::START, 'DESC' )
-		->queryGenerator();
+	<?php
+		// query the Events of this User in other Conference(s)
+		$events = ( new QueryEvent() )
+			->joinLocation()
+			->whereConferenceNot( $conference )
+			->whereUser( $user )
+			->orderBy( Event::START, 'DESC' )
+			->queryGenerator();
 	 ?>
 	<?php if( $events->valid() ): ?>
 		<div class="section">
