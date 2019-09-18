@@ -38,3 +38,8 @@ function icon( $icon = 'send', $c = null ) {
 	}
 	return "<i class=\"fa fa-$icon\" aria-hidden=\"true\"></i>";
 }
+
+function die_with_404() {
+	http_response_code( 404 );
+	die( "Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di root non risolve la situazione!)" );
+}
