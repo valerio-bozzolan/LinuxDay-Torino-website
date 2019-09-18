@@ -120,6 +120,15 @@ trait UserTrait {
 	}
 
 	/**
+	 * Check if the User has an image
+	 *
+	 * @return boolean
+	 */
+	public function hasUserImage() {
+		return $this->has( User::IMAGE ) || $this->has( User::GRAVATAR );
+	}
+
+	/**
 	 * Get the URL of the user image
 	 *
 	 * @param  int     $size     Suggested width

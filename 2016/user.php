@@ -45,7 +45,7 @@ Header::spawn( null, [
 	'title' => $user->getUserFullname(),
 	'url'   => $user->getUserURL(),
 	'og'    => [
-		'image' => $user->getUserImage(),
+		'image' => $user->hasUserImage() ? $user->getUserImage() : null,
 		'type'  => 'profile',
 		'profile:first_name' => $user->user_name,
 		'profile:last_name'  => $user->user_surname
@@ -68,11 +68,13 @@ Header::spawn( null, [
 					<?php if( $user->has( User::WEBSITE ) ): ?>
 						<a href="<?= esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?= esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 					<?php endif ?>
-						<img class="responsive-img hoverable z-depth-1" src="<?=
-							esc_attr( $user->getUserImage() )
-						?>" alt="<?=
-							esc_attr( $user->getUserFullname() )
-						?>" />
+						<?php if( $user->hasUserImage() ): ?>
+							<img class="responsive-img hoverable z-depth-1" src="<?=
+								esc_attr( $user->getUserImage() )
+							?>" alt="<?=
+								esc_attr( $user->getUserFullname() )
+							?>" />
+						<?php endif ?>
 					<?php if( $user->has( User::WEBSITE ) ): ?>
 						</a>
 					<?php endif ?>
