@@ -409,6 +409,7 @@ INSERT INTO `ldto_event_user` VALUES (224,2,0);
 INSERT INTO `ldto_event_user` VALUES (225,146,0);
 INSERT INTO `ldto_event_user` VALUES (226,60,0);
 INSERT INTO `ldto_event_user` VALUES (227,147,0);
+INSERT INTO `ldto_event_user` VALUES (227,153,0);
 INSERT INTO `ldto_event_user` VALUES (228,128,0);
 INSERT INTO `ldto_event_user` VALUES (229,152,0);
 INSERT INTO `ldto_event_user` VALUES (230,123,0);
@@ -1055,7 +1056,7 @@ INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio
 INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (150,'davide-vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (152,'','user',1,0,'CSI Piemonte','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (153,'not_a_numb3r','user',1,0,'Mauro','Foti',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (153,'not_a_numb3r','user',1,0,'Mauro','Foti',NULL,'maurofoti1900@gmail.com','1c009e95f5878fc6884e802a24cf356a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `ldto_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1130,4 +1131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-18 17:25:17
+-- Dump completed on 2019-09-18 19:09:53
