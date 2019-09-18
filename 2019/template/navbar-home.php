@@ -28,11 +28,12 @@
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
 
+$classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 ?>
 <!-- =========================
      NAVIGATION LINKS
 ============================== -->
-<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+<div class="navbar custom-navbar <?= $classes ?>" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

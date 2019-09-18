@@ -22,7 +22,8 @@
 /*
  * Args that should be passed:
  *
- * $conference (object) Current conference
+ * $conference (object)         Current conference
+ * $intro      (true|undefined) If true, you want that damn splash screen
  */
 
 // do not visit directly
@@ -60,10 +61,14 @@ http://www.templatemo.com/tm-486-new-event
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
-<?php template( 'easter-egg' ) ?>
+<?php
+template( 'easter-egg' );
 
-<?php template( 'navbar-home', [
-	'conference' => $conference,
-] ) ?>
+template( 'navbar-home', [
+	'conference'       => $conference,
+	'top_nav_collapse' => !isset( $intro ),
+] );
 
-<?php template( 'intro' ) ?>
+if( isset( $intro ) ) {
+	template( 'intro' );
+}
