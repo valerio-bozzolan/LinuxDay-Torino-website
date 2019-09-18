@@ -39,12 +39,30 @@ if( isset( $_GET['uid'] ) ) {
 
 }
 
+// register form submit action
 if( is_action( 'save-user' ) ) {
 
+	// avoid spaces
+	if( $_POST['email'] ) {
+		$_POST['email'] = luser_input( $_POST['email'], 32 );
+	}
+
+	// generate Gravatar
+	if( $_POST['email'] ) {
+		$_POST['gravatar'] = md5( $_POST['email'] );
+	}
+
 	$data = [];
-	$data[] = new DBCol( 'user_name',    $_POST['name'],    's' );
-	$data[] = new DBCol( 'user_surname', $_POST['surname'], 's' );
-	$data[] = new DBCol( 'user_uid',     $_POST['uid'],     's' );
+	$data[] = new DBCol( 'user_name',     $_POST['name'],     's' );
+	$data[] = new DBCol( 'user_surname',  $_POST['surname'],  's' );
+	$data[] = new DBCol( 'user_uid',      $_POST['uid'],      's' );
+	$data[] = new DBCol( 'user_email',    $_POST['email'],    'snull' );
+	$data[] = new DBCol( 'user_gravatar', $_POST['gravatar'], 'snull' );
+
+	// promote empty strings to null
+	foreach( $data as $row ) {
+		$row->promoteNULL();
+	}
 
 	if( $user ) {
 		// update existing user
@@ -191,7 +209,37 @@ Header::spawn('user', [
 						<label for="user-nickname"><?= __( "Nickname" ) ?></label>
 						<input type="text" name="uid" id="user-nickname"<?=
 							$user
-								? value( $user->get( User::UID ) )
+								? value( $user->getUserUID() )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /surname -->
+
+			<!-- e-mail -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-email"><?= __( "E-mail" ) ?></label>
+						<input type="text" name="email" id="user-email"<?=
+							$user
+								? value( $user->getUserEmail() )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /e-mail -->
+
+			<!-- gravatar -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-gravatar"><?= __( "Gravatar" ) ?></label>
+						<input type="text" name="gravatar" id="user-gravatar"<?=
+							$user && $user->hasUserGravatar()
+								? value( $user->getUserGravatarUID() )
 								: ''
 						?> />
 					</div>

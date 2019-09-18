@@ -41,7 +41,7 @@ trait UserTrait {
 	 * @return string
 	 */
 	public function getUserEmail() {
-		return $this->getUserUID();
+		return $this->get( User::EMAIL );
 	}
 
 	/**
@@ -101,17 +101,37 @@ trait UserTrait {
 	}
 
 	/**
+	 * Check if the User has a Gravatar image
+	 *
+	 * @return int
+	 */
+	public function hasUserGravatar() {
+		return $this->has( User::GRAVATAR ) || $this->has( User::EMAIL );
+	}
+
+	/**
+	 * Get the md5 of the E-mail
+	 *
+	 * @return string|null
+	 */
+	public function getUserGravatarUID() {
+		$gravatar = $this->get( User::GRAVATAR );
+		return $gravatar ? $gravatar : md5( $this->getUserEmail() );
+	}
+
+	/**
 	 * Get the URL of the user image
 	 *
-	 * @param $s int Suggested width
+	 * @param  int     $size     Suggested width
+	 * @param  boolean $absolute Set true to force an absolute URL
 	 * @return string
 	 */
-	public function getUserImage( $s = 256 ) {
+	public function getUserImage( $size = 256, $absolute = false ) {
 		$image = $this->get( User::IMAGE );
 		if( ! $image ) {
-			$image = 'https://www.gravatar.com/avatar/' . md5( $this->getUserEmail() ) . '?s=' . $s;
+			$image = 'https://www.gravatar.com/avatar/' . $this->getUserGravatarUID() . '?s=' . $size;
 		}
-		return $image;
+		return site_page( $image, $absolute );
 	}
 
 	/**
@@ -281,6 +301,11 @@ class User extends Sessionuser {
 	 * Image column
 	 */
 	const IMAGE = 'user_image';
+
+	/**
+	 * E-mail
+	 */
+	const EMAIL = 'user_email';
 
 	/**
 	 * Gravatar column
