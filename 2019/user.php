@@ -225,66 +225,62 @@ template( 'header', [
 	</div>
 </section>
 
-<section style="display:none">
-	<div class="container">
+<?php
+// query the Event(s) of this User from other Conference(s)
+$events = ( new QueryEvent() )
+	->joinLocation()
+	->whereUser( $user )
+	->whereConferenceNot( $conference )
+	->orderBy( Event::START, 'DESC' )
+	->queryGenerator();
+ ?>
+<?php if( $events->valid() ): ?>
+	<section class="container">
+		<h3><?= __("Altre partecipazioni passate") ?></h3>
+		<div class="table-responsive">
+		<table class="table table-hover">
+			<tbody>
+			<?php foreach( $events as $event ): ?>
+			<tr>
+				<td><?= esc_html( $event->getEventTitle() ) ?></td>
+				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
+				<td>
+					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
+						<?= esc_html( $event->getLocationName() ) ?>
+					</span><br />
+				</td>
+				<td>
+					<?php printf(
+						__("Ore <b>%s</b> (il %s)"),
+						$event->getEventStart("H:i"),
+						$event->getEventStart("d/m/Y")
+					) ?><br />
+					<small><?= $event->getEventHumanStart() ?></small>
+				</td>
+			</tr>
+			<?php endforeach ?>
+			</tbody>
+		</table>
+	</section>
+<?php endif ?>
 
-		<?php $events = ( new QueryEvent() )
-			->joinLocation()
-			->whereConferenceNot( $conference )
-			->whereUser( $user )
-			->orderBy( Event::START, 'DESC' )
-			->queryGenerator();
-		 ?>
-		<?php if( $events->valid() ): ?>
-			<div class="section">
-				<h3><?= __("Altre partecipazioni") ?></h3>
-				<table>
-					<tbody>
-					<?php foreach( $events as $event ): ?>
-					<tr>
-						<td><?= esc_html( $event->getEventTitle() ) ?></td>
-						<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
-						<td>
-							<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
-								<?= esc_html( $event->getLocationName() ) ?>
-							</span><br />
-						</td>
-						<td>
-							<?php printf(
-								__("Ore <b>%s</b> (il %s)"),
-								$event->getEventStart("H:i"),
-								$event->getEventStart("d/m/Y")
-							) ?><br />
-							<small><?= $event->getEventHumanStart() ?></small>
-						</td>
-					</tr>
-					<?php endforeach ?>
-					</tbody>
-				</table>
-			</div>
-		<?php endif ?>
-
-		<!-- Start social -->
-		<?php if( $user->isUserSocial() ): ?>
-		<div class="divider"></div>
-		<div class="section">
-			<h3><?= __("Social") ?></h3>
-			<div class="row">
-				<?php
-				$user->has( User::RSS         ) and UserSocialBox::spawn( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );
-				$user->has( User::FACEBOOK    ) and UserSocialBox::spawn( $user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png' );
-				$user->has( User::GOOGLE_PLUS ) and UserSocialBox::spawn( $user, "Google+",  $user->getUserGuggolpluz(), 'google.png'        );
-				$user->has( User::TWITTER     ) and UserSocialBox::spawn( $user, "Twitter",  $user->getUserTuitt(),      'twitter.png'       );
-				$user->has( User::LINKEDIN    ) and UserSocialBox::spawn( $user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png'      );
-				$user->has( User::GITHUB      ) and UserSocialBox::spawn( $user, "Github",   $user->getUserGithubbo(),   'github.png'        );
-				?>
-			</div>
+<!-- Start social -->
+<?php if( $user->isUserSocial() ): ?>
+	<section class="container">
+		<h3><?= __("Social") ?></h3>
+		<div class="row">
+			<?php
+			$user->has( User::RSS         ) and UserSocialBox::spawn( $user, "RSS",      $user->get( User::RSS ),    'home.png'          );
+			$user->has( User::FACEBOOK    ) and UserSocialBox::spawn( $user, "Facebook", $user->getUserFacebruck(),  'facebook_logo.png' );
+			$user->has( User::GOOGLE_PLUS ) and UserSocialBox::spawn( $user, "Google+",  $user->getUserGuggolpluz(), 'google.png'        );
+			$user->has( User::TWITTER     ) and UserSocialBox::spawn( $user, "Twitter",  $user->getUserTuitt(),      'twitter.png'       );
+			$user->has( User::LINKEDIN    ) and UserSocialBox::spawn( $user, "Linkedin", $user->getUserLinkeddon(),  'linkedin.png'      );
+			$user->has( User::GITHUB      ) and UserSocialBox::spawn( $user, "Github",   $user->getUserGithubbo(),   'github.png'        );
+			?>
 		</div>
-		<?php endif ?>
-		<!-- End social -->
-	</div>
-</section>
+	</section>
+<?php endif ?>
+<!-- End social -->
 
 <?php
-
 template( 'footer' );
