@@ -378,4 +378,44 @@ template( 'header', [
 	</div>
 </section>
 
+<script>
+$( function () {
+
+	var $window   = $( window );
+	var $chapters = $( '#program > .container > .row > .col-xs-12 > .row' );
+
+	/**
+	 * Make columns at the same minimum height on desktop
+	 *
+	 * The name is because of this feature is a madbob order. asd
+	 */
+	function tableBobbification() {
+		var windowWidth = $window.width();
+		var minHeight = 0;
+		var column = 0;
+
+		if( windowWidth < 768 ) {
+			$chapters.children().css( 'min-height', 'unset' );
+			return;
+		}
+
+		do {
+			column++;
+			var $firstRow = $chapters.children( ':nth-child(' + column + ')' );
+			$firstRow.each( function () {
+				var height = $(this).height();
+				if( height > minHeight ) {
+					minHeight = height;
+				}
+			} );
+			$firstRow.css( 'min-height', minHeight + 'px' );
+		} while( $firstRow.length > 0 );
+	};
+
+	tableBobbification();
+
+	$(window).resize( tableBobbification );
+} );
+</script>
+
 <?php template( 'footer' );
