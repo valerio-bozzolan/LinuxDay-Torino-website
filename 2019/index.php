@@ -119,15 +119,16 @@ template( 'header', [
 								__( "Di %s"),
 								Homepage19::listEventAuthors( $event, __( "Speaker Segreto" ) )
 							) ?></h4>
-							<h6>
+							<p>
 								<span><i class="fa fa-clock-o"></i>&nbsp;<?=
 									$event->getEventStart( 'H:i' )
-								?></span><!--
-								--><span><i class="fa fa-map-marker"></i>&nbsp;<?php printf(
+								?> (<?=	$event->getHumanEventDuration( [ 'long' => false ] ) ?>)</span>
+								<br />
+								<span><i class="fa fa-map-marker"></i>&nbsp;<?php printf(
 									__( "Aula %s" ),
 									esc_html( $track )
 								) ?></span>
-							</h6>
+							</p>
 
 							<?php if( $event->hasEventAbstract() ): ?>
 								<p><?= $event->getEventAbstractHTML() ?></p>

@@ -121,6 +121,20 @@ trait EventTrait {
 	}
 
 	/**
+	 * Get the Event duration in a human-readable format
+	 *
+	 * @return string
+	 */
+	public function getHumanEventDuration( $args = [] ) {
+		$complete = true;
+		return HumanTime::diff(
+			$this->get( Event::START ),
+			$this->get( Event::END   ),
+			$args
+		);
+	}
+
+	/**
 	 * It has an Event image?
 	 *
 	 * @return bool

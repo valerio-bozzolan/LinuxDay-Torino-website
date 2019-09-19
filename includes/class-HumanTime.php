@@ -1,6 +1,6 @@
 <?php
 # Linux Day - Human time diff
-# Copyright (C) 2016 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,11 +15,32 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Handle time difference in a human-readable format
+ */
 class HumanTime {
-	static function diff($from, $to = null) {
+
+	/**
+	 * Get the time difference between two dates (or just one date and now)
+	 *
+	 * @param  DateTime $from
+	 * @param  DateTime $to
+	 * @param  array    $args
+	 * @return string
+	 */
+	public static function diff( $from, $to = null, & $args = [] ) {
+
+		if( !isset( $args['complete'] ) ) {
+			$args['complete'] = false;
+		}
+
+		if( !isset( $args['long'] ) ) {
+			$args['long'] = true;
+		}
+
 		if( $to === null ) {
 			$to = new DateTime('now');
-	        }
+        }
 
 		$diff = $from->diff( $to );
 
@@ -33,10 +54,10 @@ class HumanTime {
 			$diff->days,
 			$diff->invert,
 			$from,
-			$complete
+			$args
 		);
 
-		if( $complete ) {
+		if( $args['complete'] ) {
 			return $human;
 		}
 
@@ -53,8 +74,10 @@ class HumanTime {
 		);
 	}
 
-	static private function humanize($y, $m, $d, $h, $i, $s, $days, $invert, $from, & $complete) {
-		$complete = false;
+	private static function humanize( $y, $m, $d, $h, $i, $s, $days, $invert, $from, & $args ) {
+
+		$long     = & $args['long'];
+		$complete = & $args['complete'];
 
 		// Top-down: From far away to recently
 
@@ -64,21 +87,31 @@ class HumanTime {
 		}
 
 		if( $y > 1 ) {
-			return sprintf( __("%d anni"), $y );
+			$phrase = $long
+				? __("%d anni")
+				: __( "%d y" );
+			return sprintf( $phrase, $y );
 		}
 
 		if( $y === 1 ) {
-			return __("un anno");
+			return $long
+				? __( "un anno" )
+				: __( "1 y" );
 		}
 
 		// This year
 
 		if( $m > 1 ) {
-			return sprintf( __("%d mesi"), $m );
+			$phrase = $long
+				? __( "%d mesi" )
+				: __( "%d m" );
+			return sprintf( $phrase, $m );
 		}
 
 		if( $m === 1 ) {
-			return __("un mese");
+			return $long
+				? __( "un mese" )
+				: __( "1 m" );
 		}
 
 		// This month
@@ -89,16 +122,19 @@ class HumanTime {
 			$d_fake++;
 		}
 
-		if( $d_fake > 13 ) {
+		if( $d_fake > 13 && !$long ) {
 			return sprintf( __("%d settimane"), $d_fake / 7 );
 		}
 
-		if( $d_fake > 6 ) {
+		if( $d_fake > 6 && !$long ) {
 			return __("una settimana");
 		}
 
 		if( $d_fake > 1 ) {
-			return sprintf( __("%d giorni"), $d_fake );
+			$phrase = $long
+				? __( "%d giorni" )
+				: __( "%d d" );
+			return sprintf( $phrase, $d_fake );
 		}
 
 		if( $d_fake === 1 ) {
@@ -132,13 +168,15 @@ class HumanTime {
 		// In this hour
 
 		// We are human
-		$i_fake = $i;
+		$i_fake = $i + $h * 60;
 		if( $s > 50 ) {
 			$i_fake++;
 		}
 
 		if( $i_fake > 52 ) {
-			return __("un'ora");
+			return $long
+				? __( "un'ora" )
+				: __( "1 h" );
 		}
 
 		if( $i_fake > 37 ) {
@@ -146,7 +184,9 @@ class HumanTime {
 		}
 
 		if( $i_fake > 22 ) {
-			return __("mezzora");
+			return $long
+				? __( "mezzora" )
+				: __( "½ h" );
 		}
 
 		if( $i_fake > 1 ) {
