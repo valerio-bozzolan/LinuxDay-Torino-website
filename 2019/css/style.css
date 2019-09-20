@@ -746,3 +746,23 @@ footer {
 	font-style:italic;
 	font-size:1.2em;
 }
+
+.room-title {
+  padding:1em 2em;
+  font-size:1.5em;
+  text-align:center;
+  border:3px dashed black;
+}
+.room-title-base {
+  background-color:#bbdefb;
+}
+.room-title-dev {
+  background-color:#f2545f;
+  color:white;
+}
+.room-title-sys {
+  background-color:#d1c4e9;
+}
+.room-title-misc {
+  background-color:#b2dfdb;
+}

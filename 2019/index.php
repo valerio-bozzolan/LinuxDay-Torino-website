@@ -88,10 +88,10 @@ template( 'header', [
 		<div class="row border-bottom">
 		<?php foreach( [ 'base', 'dev', 'sys', 'misc' ] as $track ): ?>
 			<div class="col-xs-12 col-sm-3">
-				<p><?php printf(
+				<h2 class="room-title room-title-<?= esc_attr( $track ) ?>"><?php printf(
 					__( "Aula %s" ),
 					$track
-				) ?></p>
+				) ?></h2>
 				<div class="row">
 					<?php
 						// every Event should start when the Conference starts
