@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
 
 ?>
 <!-- =========================
-    FOOTER SECTION
+	FOOTER SECTION
 ============================== -->
 <footer>
 	<div class="container">
@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) or exit;
 
 			<div class="col-md-12 col-sm-12">
 				<p>Copyright &copy; 2019 CC BY-SA 4.0 Linux Day Torino contributors
-                    | Theme forked with &hearts; from <a rel="noreferrer nofollow" href="http://www.templatemo.com/page/1">Templatemo</a> by Linux Day Torino</p>
+					| Theme forked with &hearts; from <a rel="noreferrer nofollow" href="http://www.templatemo.com/page/1">Templatemo</a> by Linux Day Torino</p>
 
 				<ul class="social-icon">
 					<li><a href="https://www.facebook.com/LinuxDayTorino/" class="fa fa-facebook"></a></li>
@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) or exit;
 </footer>
 
 <!-- =========================
-     SCRIPTS
+	 SCRIPTS
 ============================== -->
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/jquery.js"></script>
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/bootstrap.min.js"></script>
@@ -55,7 +55,7 @@ defined( 'ABSPATH' ) or exit;
 <script src="<?= CURRENT_CONFERENCE_ROOT ?>/js/custom.js"></script>
 <script>
 jQuery( function(){
-    jQuery( '[data-toggle="tooltip"]' ).tooltip();
+	jQuery( '[data-toggle="tooltip"]' ).tooltip();
 } );
 </script>
 </body>
