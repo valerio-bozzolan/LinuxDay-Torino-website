@@ -50,7 +50,7 @@ define_default( 'CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID );
 
 define_default( 'CONTACT_PHONE_PREFIX', '+39' );
 
-define_default( 'REPO', 'https://github.com/valerio-bozzolan/LinuxDay-Torino-website' );
+define_default( 'REPO', 'https://github.com/LinuxDayTorino/LinuxDay-Torino-website' );
 
 define_default( 'LIBMARKDOWN_PATH', '/usr/share/php/markdown.php' );
 
