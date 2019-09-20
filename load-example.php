@@ -20,6 +20,7 @@ $database = 'insert-here-database-name';
 $username = 'insert-here-database-username';
 $password = 'insert-here-database-password';
 $location = 'localhost';
+$charset  = 'utf8mb4';
 
 // Database table prefix (if any)
 // E.g. 'asd_'

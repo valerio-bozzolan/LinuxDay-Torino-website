@@ -61,6 +61,7 @@ cat > "$WWW/load.php" <<EOF
 \$username = '$DB_USER';
 \$password = '$DB_PASS';
 \$location = 'localhost';
+\$charset  = 'utf8mb4';
 \$prefix   = '$DB_PREFIX';
 define('DEBUG', true);
 define('ABSPATH', __DIR__);
