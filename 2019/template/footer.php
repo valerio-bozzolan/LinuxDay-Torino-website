@@ -31,14 +31,40 @@ defined( 'ABSPATH' ) or exit;
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<p>Copyright &copy; 2019 CC BY-SA 4.0 Linux Day Torino contributors
-					| Theme forked with &hearts; from <a rel="noreferrer nofollow" href="http://www.templatemo.com/page/1">Templatemo</a> by Linux Day Torino</p>
+				<p><?= sprintf(
+					__( "I contenuti di questo sito sono liberamente fruibili in licenza di contenuto libero %s." ),
+					Licenses::instance()->get( 'cc-by-sa-4.0' )->getLink()
+				) ?></p>
+				<p><?= sprintf(
+					__( "Puoi clonare questo design con &hearts; scaricandolo da %s." ),
+					'<a href="http://www.templatemo.com/page/1">Templatemo</a>'
+				) ?></p>
+				<p><?= sprintf(
+					__( "Il motore del sito è rilasciato in licenza di software libero %s." ),
+					Licenses::instance()->get( 'gnu-agpl' )->getLink()
+				) ?></p>
+				<p><?= __( "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti abbiamo trasmesso cookie o altre tecnologie di tracciamento personale." ) ?></p>
+
+				<div class="footer-hack">
+					<p><?= __( "Gli Hacker sono i benvenuti su questo sito!" ) ?></p>
+<pre>
+git clone <?= REPO ?>
+
+cd LinuxDay-Torino-website
+vagrant up
+</pre>
+				</div>
 
 				<ul class="social-icon">
 					<li><a href="https://www.facebook.com/LinuxDayTorino/" class="fa fa-facebook"></a></li>
 					<li><a href="https://twitter.com/linuxdaytorino" class="fa fa-twitter"></a></li>
 				</ul>
 
+			</div>
+		</div>
+		<div class="row" id="happy-hacking">
+			<div class="col-md-12 col-sm-12">
+				<p><em>Share your Freedom!</em></p>
 			</div>
 		</div>
 	</div>

@@ -766,3 +766,8 @@ footer {
 .room-title-misc {
   background-color:#b2dfdb;
 }
+.footer-hack pre {
+	margin:0 auto;
+	max-width:400px;
+	text-align:left;
+}
