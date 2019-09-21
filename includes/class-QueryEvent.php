@@ -28,6 +28,11 @@ class QueryEvent extends Query {
 	protected $CHAPTER_ID = 'event.chapter_ID';
 
 	/**
+	 * Univoque location ID column name (useful with conference joins)
+	 */
+	protected $LOCATION_ID = 'conference.location_ID';
+
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
@@ -104,11 +109,8 @@ class QueryEvent extends Query {
 	 * @return self
 	 */
 	public function joinLocation() {
-		$this->joinConference();
 		if( empty( $this->joinedLocation ) ) {
-			$this->from(   Location::T                    );
-			$this->equals( Location::ID_, Conference::ID_ );
-			$this->joinedLocation = true;
+			$this->joinOn( 'INNER', Location::T, $this->LOCATION_ID, 'location.location_ID' );
 		}
 		return $this;
 	}
