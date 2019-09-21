@@ -48,6 +48,15 @@ trait ConferenceTrait {
 		return $base . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
 	}
 
+	/**
+	 * Check if the Conference has URLs for every Event
+	 *
+	 * @return boolean
+	 */
+	public function hasConferenceEventsURL() {
+		return $this->has( 'conference_events_url' );
+	}
+
 	function forceConferencePermalink() {
 		$url = $this->getConferenceURL( ROOT );
 		if( $url !== $_SERVER['REQUEST_URI'] ) {

@@ -21,6 +21,13 @@
 class QueryEvent extends Query {
 
 	/**
+	 * Univoque Chapter ID column name
+	 *
+	 * @var
+	 */
+	protected $CHAPTER_ID = 'event.chapter_ID';
+
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
@@ -58,12 +65,9 @@ class QueryEvent extends Query {
 	 * @return self
 	 */
 	public function whereConferenceNot( $conference ) {
+		$id = $conference->getConferenceID();
 		return $this->joinConference()
-		            ->where( sprintf(
-		                "%s <> %d",
-		                Event::CONFERENCE_,
-		                $conference->getConferenceID()
-		            ) );
+		            ->whereInt( Event::CONFERENCE_, $id, '<>' );
 	}
 
 	/**
@@ -80,6 +84,15 @@ class QueryEvent extends Query {
 			$this->joinedConference = true;
 		}
 		return $this;
+	}
+
+	/**
+	 * Join a table with the Chapter table
+	 *
+	 * @return self
+	 */
+	public function joinChapter() {
+		return $this->joinOn( 'INNER', 'chapter', 'chapter.chapter_ID' , $this->CHAPTER_ID );
 	}
 
 	/**

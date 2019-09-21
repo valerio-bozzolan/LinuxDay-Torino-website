@@ -211,11 +211,12 @@ Header::spawn( null, [
 		// query the Events of this User in other Conference(s)
 		$events = ( new QueryEvent() )
 			->joinLocation()
+			->joinChapter()
 			->whereConferenceNot( $conference )
 			->whereUser( $user )
 			->orderBy( Event::START, 'DESC' )
 			->queryGenerator();
-	 ?>
+	?>
 	<?php if( $events->valid() ): ?>
 		<div class="section">
 			<h3><?= __("Altre partecipazioni") ?></h3>

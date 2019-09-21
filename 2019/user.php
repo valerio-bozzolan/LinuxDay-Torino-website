@@ -228,7 +228,9 @@ template( 'header', [
 <?php
 // query the Event(s) of this User from other Conference(s)
 $events = ( new QueryEvent() )
+	->joinConference()
 	->joinLocation()
+	->joinChapter()
 	->whereUser( $user )
 	->whereConferenceNot( $conference )
 	->orderBy( Event::START, 'DESC' )
@@ -242,7 +244,21 @@ $events = ( new QueryEvent() )
 			<tbody>
 			<?php foreach( $events as $event ): ?>
 			<tr>
-				<td><?= esc_html( $event->getEventTitle() ) ?></td>
+				<td><?php
+					// check if this Conference have Event permalinks
+					if( $event->hasConferenceEventsURL() ) {
+
+						// print the Event permalink
+						echo HTML::a(
+							$event->getEventURL(),
+							esc_html( $event->getEventTitle() )
+						);
+					} else {
+
+						// just print the Event title
+						echo esc_html( $event->getEventTitle() );
+					}
+				?></td>
 				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
 				<td>
 					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
