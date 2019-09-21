@@ -224,7 +224,7 @@ template( 'header', $args );
 					<div class="row valign-wrapper">
 						<div class="col-sm-4 col-lg-3">
 							<a class="tooltipped" href="<?php
-								echo $user->getUserURL( ROOT )
+								echo $user->getUserURL()
 							?>" title="<?= esc_attr( sprintf(
 								__("Profilo di %s"),
 								$user->getUserFullname()
@@ -277,7 +277,7 @@ template( 'header', $args );
 					<h3><?= icon('navigate_before'); echo __("Preceduto da") ?></h3>
 					<p class="flow-text">
 						<?= HTML::a(
-							$previous->getEventURL( ROOT ),
+							$previous->getEventURL(),
 							$previous->getEventTitle()
 						) ?>
 						<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
@@ -289,7 +289,7 @@ template( 'header', $args );
 					<h3><?= __("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
 						<?= HTML::a(
-							$next->getEventURL( ROOT ),
+							$next->getEventURL(),
 							$next->getEventTitle()
 						) ?>
 						<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
