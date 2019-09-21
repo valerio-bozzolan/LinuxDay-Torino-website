@@ -81,7 +81,7 @@ LOCK TABLES `ldto_conference` WRITE;
 /*!40000 ALTER TABLE `ldto_conference` DISABLE KEYS */;
 INSERT INTO `ldto_conference` VALUES (1,'2016','Linux Day Torino 2016',NULL,'LDTO16','http://linuxdaytorino.org/2016/user/%1$s','http://linuxdaytorino.org/2016/talk/%1$s',NULL,'Torino',NULL,'2016-10-22 14:00:00','2016-10-22 18:00:00',1,1);
 INSERT INTO `ldto_conference` VALUES (2,'2015','Linux Day Torino 2015',NULL,'LDTO15',NULL,NULL,NULL,'Torino',NULL,'2015-10-24 14:00:00','2015-10-24 18:00:00',1,2);
-INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO17','http://linuxdaytorino.org/2017/user/%1$s','http://linuxdaytorino.org/2017/talk/%1$s',NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
+INSERT INTO `ldto_conference` VALUES (3,'2017','Linux Day Torino 2017',NULL,'LDTO17',NULL,NULL,NULL,'Torino',NULL,'2017-10-28 14:00:00','2017-10-28 18:00:00',1,1);
 INSERT INTO `ldto_conference` VALUES (4,'2009','Linux Day Torino 2009',NULL,'LDTO2009',NULL,NULL,NULL,'Torino',NULL,'2009-10-24 14:00:00','2009-10-24 18:00:00',1,5);
 INSERT INTO `ldto_conference` VALUES (5,'2010','Linux Day Torino 2010',NULL,'LDTO2010',NULL,NULL,NULL,'Torino',NULL,'2010-10-23 10:00:00','2010-10-23 18:00:00',1,5);
 INSERT INTO `ldto_conference` VALUES (6,'2011','Linux Day Torino 2011',NULL,'LDTO2011',NULL,NULL,NULL,'Torino',NULL,'2011-10-22 14:00:00','2011-10-22 18:00:00',1,5);
@@ -1131,4 +1131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-21 11:36:52
+-- Dump completed on 2019-09-21 12:11:09
