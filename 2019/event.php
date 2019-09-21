@@ -261,13 +261,11 @@ template( 'header', $args );
 
 	<?php
 	$previous = $event->factoryPreviousFullEvent()
-		->select('event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start')
-		->limit(1)
+		->limit( 1 )
 		->queryRow();
 
 	$next = $event->factoryNextFullEvent()
-		->select('event_uid', 'event_title', 'chapter_uid', 'conference_uid', 'event_start')
-		->limit(1)
+		->limit( 1 )
 		->queryRow();
 	?>
 	<?php if($previous || $next): ?>
