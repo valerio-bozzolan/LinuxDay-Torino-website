@@ -54,22 +54,28 @@ trait FullEventTrait {
 		}
 	}
 
-	function factoryNextFullEvent() {
+	/**
+	 * Create a Query to find the next Event in the same Room
+	 *
+	 * @return Query
+	 */
+	public function factoryNextFullEvent() {
+		$date = $this->getEventEnd( 'Y-m-d H:i:s' );
 		return $this->factoryFullEventInSameContext()
-			->where( sprintf(
-				"event_start >= '%s'",
-				esc_sql( $this->getEventEnd('Y-m-d H:i:s') )
-			) )
-			->orderBy('event_start');
+			->whereStr( 'event_start', $date, '>=' )
+			->orderBy(  'event_start', 'ASC' );
 	}
 
-	function factoryPreviousFullEvent() {
+	/**
+	 * Create a Query to find the previous Event in the same Room
+	 *
+	 * @return Query
+	 */
+	public function factoryPreviousFullEvent( $compare = '<=' ) {
+		$date = $this->getEventStart( 'Y-m-d H:i:s' );
 		return $this->factoryFullEventInSameContext()
-			->where( sprintf(
-				"event_end <= '%s'",
-				esc_sql( $this->getEventStart('Y-m-d H:i:s') )
-			) )
-			->orderBy('event_end DESC');
+			->whereStr( 'event_end', $date, '<=' )
+			->orderBy(  'event_end', 'DESC' );
 	}
 
 	/**
