@@ -10,9 +10,9 @@ Criticità dei vari Linux Day per ricordarsene nel momento del bisogno.
 * [ ] - Blog continuato su social
 * [ ] - Sponsor (anni precedenti; [TED](http://www.tedxtorino.com/partners/); ...)
 * [ ] - Sito e app
-* [ ] - Patrocinio Regione Piemonte
-* [ ] - Patrocinio Città metropolitana di Torino
-* [ ] - Patrocinio [Comune di Torino](http://www.comune.torino.it)
+* [ ] - [Patrocinio Regione Piemonte](https://www.regione.piemonte.it/web/amministrazione/regione-utile/patrocini/patrocinio-convegni-eventi-manifestazioni)
+* [ ] - [Patrocinio Città metropolitana di Torino](http://www.cittametropolitana.torino.it/turismo/patrocini/index.shtml)
+* [ ] - [Patrocinio Comune di Torino](http://www.comune.torino.it/torinogiovani/vivere-a-torino/i-passi-necessari)
 * [ ] - Patrocinio [Torino Smart City](http://www.torinosmartcity.it)
 * [ ] - Logo
 * [ ] - Magliette e borse (Gufo Rosso?)
