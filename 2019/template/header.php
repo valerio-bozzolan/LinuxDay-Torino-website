@@ -29,6 +29,18 @@
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
 
+// as default declare empty OG Meta tags
+if( ! isset( $args['og'] ) ) {
+	$args['og'] = [];
+}
+
+// set default OG Meta tags
+$args['og'] = array_replace( [
+	'image'  => CURRENT_CONFERENCE_URL . '/images/linux-day-2019.png', // It's better an absolute URL here
+	'type'   => 'website',
+	'title'  => $conference->getConferenceTitle(),
+], $args['og'] );
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= latest_language()->getISO() ?>">
@@ -38,7 +50,6 @@ New Event
 http://www.templatemo.com/tm-486-new-event
 -->
 <title><?= esc_html( $conference->getConferenceTitle() ) ?></title>
-<meta name="description" content="">
 <meta name="author" content="<?= esc_attr( __( "Comitato Linux Day Torino" ) ) ?>">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -55,6 +66,10 @@ http://www.templatemo.com/tm-486-new-event
 <!-- Organic fonts grown locally, hand-picked for your enojyment. Guaranteed tracking-free, absolutely no CDNs! -->
 <!-- Do you want even faster loading times with sites that use CDNs? Try https://decentraleyes.org/ (not sponsored, just a good extension) -->
 <link href='<?= CURRENT_CONFERENCE_ROOT ?>/css/poppins.css' rel='stylesheet' type='text/css'>
+
+<?php foreach( $args['og'] as $id => $value ): ?>
+	<meta property="og:<?= esc_attr( $id ) ?>" content="<?= esc_attr( $value ) ?>" />
+<?php endforeach ?>
 
 <?php load_module('header') ?>
 
