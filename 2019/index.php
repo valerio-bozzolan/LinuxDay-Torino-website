@@ -325,41 +325,6 @@ template( 'header', [
 	</div>
 </section>
 
-
-<!-- =========================
-    SPONSORS SECTION   
-============================== -->
-<section id="sponsors" class="parallax-section" style="display:none">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-sm-12">
-				<div class="section-title">
-					<h2>Sponsor</h2>
-					<p>La società per cui lavori (o la tua società!) potrebbe desiderare questo spazio per poter contribuire alla qualità dell'evento! Contattaci al +39 3290075073.</p>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-6 col-xs-6">
-				<img src="images/sponsor-img1.jpg" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="col-md-3 col-sm-6 col-xs-6">
-				<img src="images/sponsor-img2.jpg" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="col-md-3 col-sm-6 col-xs-6">
-				<img src="images/sponsor-img3.jpg" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="col-md-3 col-sm-6 col-xs-6">
-				<img src="images/sponsor-img4.jpg" class="img-responsive" alt="sponsors">	
-			</div>
-
-		</div>
-	</div>
-</section>
-
 <!-- =========================
     CONTACT SECTION
 ============================== -->

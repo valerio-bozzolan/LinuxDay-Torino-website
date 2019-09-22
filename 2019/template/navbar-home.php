@@ -51,7 +51,6 @@ $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#overview" class="smoothScroll">Overview</a></li>
 				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#program" class="smoothScroll">Programs</a></li>
 				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#sponsors" class="smoothScroll">Sponsors</a></li>
 				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#contact" class="smoothScroll">Contact</a></li>
 			</ul>
 
