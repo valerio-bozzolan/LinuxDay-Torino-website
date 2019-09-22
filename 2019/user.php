@@ -39,13 +39,13 @@ enqueue_js('jquery');
 
 template( 'header', [
 	'conference' => $conference,
-	'title' => $user->getUserFullname(),
-	'url'   => $user->getUserURL(),
-	'og'    => [
-		'image' => $user->getUserImage(),
+	'title'      => $user->getUserFullname(),
+	'og' => [
+		'image' => $user->getUserImage( true ),
+		'url'   => $user->getUserURL( true ),
 		'type'  => 'profile',
-		'profile:first_name' => $user->user_name,
-		'profile:last_name'  => $user->user_surname
+		'profile:first_name' => $user->get( 'user_name'    ),
+		'profile:last_name'  => $user->get( 'user_surname' ),
 	]
 ] );
 ?>
