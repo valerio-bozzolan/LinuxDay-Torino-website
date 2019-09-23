@@ -160,7 +160,7 @@ class License {
 	 * @return string
 	 */
 	public function getLink( $classes = null, $other = null ) {
-		if( null !== $other ) {
+		if( null === $other ) {
 			$other = 'target="_blank"';
 		}
 
