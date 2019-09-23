@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database user
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -255,12 +255,22 @@ trait UserTrait {
 		return is_logged() && get_user()->getUserID() === $this->getUserID();
 	}
 
-	function hasUserLovelicense() {
-		return null !== $this->get( 'user_lovelicense' );
+	/**
+	 * Check if the User has a loved license
+	 *
+	 * @return
+	 */
+	public function hasUserLovelicense() {
+		return $this->has( 'user_lovelicense' );
 	}
 
-	function getUserLovelicense() {
-		return license( $this->user_lovelicense );
+	/**
+	 * Get the User loved license
+	 *
+	 * @return License
+	 */
+	public function getUserLovelicense() {
+		return license( $this->get( 'user_lovelicense' ) );
 	}
 
 	function factoryUserSkills() {

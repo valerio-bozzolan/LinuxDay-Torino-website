@@ -57,7 +57,9 @@ if( is_action( 'save-user' ) ) {
 	$data[] = new DBCol( 'user_surname',  $_POST['surname'],  's' );
 	$data[] = new DBCol( 'user_uid',      $_POST['uid'],      's' );
 	$data[] = new DBCol( 'user_email',    $_POST['email'],    'snull' );
+	$data[] = new DBCol( 'user_site',     $_POST['site'],     'snull' );
 	$data[] = new DBCol( 'user_gravatar', $_POST['gravatar'], 'snull' );
+	$data[] = new DBCol( 'user_lovelicense', $_POST['lovelicense'], 'snull' );
 
 	// promote empty strings to null
 	foreach( $data as $row ) {
@@ -245,7 +247,47 @@ Header::spawn('user', [
 					</div>
 				</div>
 			</div>
-			<!-- /surname -->
+			<!-- /gravatar -->
+
+			<!-- website -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-website"><?= __( "Sito web" ) ?></label>
+						<input type="text" name="website" id="user-website"<?=
+							$user
+								? value( $user->get( User::WEBSITE ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /website -->
+
+			<!-- license -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<label><?= __( "Licenza" ) ?></label>
+					<select name="lovelicense">
+						<option value=""<?= selected( !$user->hasUserLovelicense() ) ?>><?= __( "Nessuna" ) ?></option>
+						<?php foreach( Licenses::instance()->all() as $license ): ?>
+							<option<?=
+								value( $license->getCode() )
+								.
+								selected( $license->getCode(), $user->get( 'user_lovelicense' ) )
+
+							?>><?= esc_html( $license->getShort() ) ?></option>
+						<?php endforeach ?>
+					</select>
+
+					<?php
+						if( $user->hasUserLovelicense() ) {
+							echo $user->getUserLovelicense()->getLink();
+						}
+					?>
+				</div>
+			</div>
+			<!-- /license -->
 
 		</div>
 		<button type="submit" class="btn"><?= __( "Salva" ) ?></button>
