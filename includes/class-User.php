@@ -261,7 +261,7 @@ trait UserTrait {
 	 * @return
 	 */
 	public function hasUserLovelicense() {
-		return $this->has( 'user_lovelicense' );
+		return $this->has( User::LOVED_LICENSE );
 	}
 
 	/**
@@ -270,7 +270,7 @@ trait UserTrait {
 	 * @return License
 	 */
 	public function getUserLovelicense() {
-		return license( $this->get( 'user_lovelicense' ) );
+		return license( $this->get( User::LOVED_LICENSE ) );
 	}
 
 	function factoryUserSkills() {

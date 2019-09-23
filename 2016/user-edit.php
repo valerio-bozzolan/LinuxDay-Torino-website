@@ -52,14 +52,15 @@ if( is_action( 'save-user' ) ) {
 		$_POST['gravatar'] = md5( $_POST['email'] );
 	}
 
+	// prepare data sent via POST
 	$data = [];
-	$data[] = new DBCol( 'user_name',     $_POST['name'],     's' );
-	$data[] = new DBCol( 'user_surname',  $_POST['surname'],  's' );
-	$data[] = new DBCol( 'user_uid',      $_POST['uid'],      's' );
-	$data[] = new DBCol( 'user_email',    $_POST['email'],    'snull' );
-	$data[] = new DBCol( 'user_site',     $_POST['site'],     'snull' );
-	$data[] = new DBCol( 'user_gravatar', $_POST['gravatar'], 'snull' );
-	$data[] = new DBCol( 'user_lovelicense', $_POST['lovelicense'], 'snull' );
+	$data[] = new DBCol( User::NAME,          $_POST['name'],     's' );
+	$data[] = new DBCol( User::SURNAME,       $_POST['surname'],  's' );
+	$data[] = new DBCol( User::UID,           $_POST['uid'],      's' );
+	$data[] = new DBCol( User::EMAIL,         $_POST['email'],    'snull' );
+	$data[] = new DBCol( User::WEBSITE,       $_POST['site'],     'snull' );
+	$data[] = new DBCol( User::GRAVATAR,      $_POST['gravatar'], 'snull' );
+	$data[] = new DBCol( User::LOVED_LICENSE, $_POST['lovelicense'], 'snull' );
 
 	// promote empty strings to null
 	foreach( $data as $row ) {
@@ -267,13 +268,15 @@ Header::spawn('user', [
 			<!-- license -->
 			<div class="col s12 m6 l4">
 				<div class="card-panel">
-					<label><?= __( "Licenza" ) ?></label>
+					<label><?= __( "Licenza preferita" ) ?></label>
 					<select name="lovelicense">
 						<option value=""<?= selected( !$user->hasUserLovelicense() ) ?>><?= __( "Nessuna" ) ?></option>
 						<?php foreach( Licenses::instance()->all() as $license ): ?>
 							<option<?=
+								// option value
 								value( $license->getCode() )
 								.
+								// option selected or not
 								selected( $license->getCode(), $user->get( 'user_lovelicense' ) )
 
 							?>><?= esc_html( $license->getShort() ) ?></option>
