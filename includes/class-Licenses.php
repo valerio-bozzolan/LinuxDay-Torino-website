@@ -50,21 +50,21 @@ class Licenses {
 	 * Constructor
 	 */
 	public function __construct() {
-		$this->add('gnu-gpl',         "GNU GPL",           "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html');
-		$this->add('gnu-gpl-v3',      "GNU GPL v3",      __("GNU General Public License, versione 3"), 'https://www.gnu.org/licenses/gpl-3.0.html');
-		$this->add('gnu-gpl-v2',      "GNU GPL v2",      __("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html');
-		$this->add('gnu-agpl',        "GNU AGPL",          "GNU Affero General Public License",       'https://www.gnu.org/licenses/agpl-3.0.html');
+		$this->add('aal',             "AAL",               "Attribution Assurance License",           'https://opensource.org/licenses/AAL');
 		$this->add('apache',          "Apache 2.0",      __("Licenza Apache, versione 2.0"),           'https://www.apache.org/licenses/LICENSE-2.0.html');
-		$this->add('mit',             "MIT",             __("Licenza MIT"),                            'https://opensource.org/licenses/MIT');
-		$this->add('php',             "PHP",             __("Licenza PHP"),                            'http://www.php.net/license/3_01.txt');
-		$this->add('odbl',            "ODbl",              "Open Data Commons Open Database License", 'http://opendatacommons.org/licenses/odbl/');
+		$this->add('bsd-2',           "BSD-2",             "BSD-2",                                   'https://www.gnu.org/licenses/license-list.html#FreeBSD');
 		$this->add('cc-by',           "CC By 4.0",       __("Creative Commons - Attribuzione 4.0 Internazionale"), _('https://creativecommons.org/licenses/by/4.0/deed.it') );
 		$this->add('cc-by-sa-3.0',    "CC By-Sa 3.0",    __("Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"), _('https://creativecommons.org/licenses/by-sa/3.0/deed.it') );
 		$this->add('cc-by-sa-4.0',    "CC By-Sa 4.0",    __("Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-sa/4.0/deed.it') );
 		$this->add('cc-by-nc-sa-4.0', "CC By-Nc-Sa 4.0", __("Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale"), _('https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it') );
+		$this->add('gnu-gpl',         "GNU GPL",           "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html');
+		$this->add('gnu-gpl-v3',      "GNU GPL v3",      __("GNU General Public License, versione 3"), 'https://www.gnu.org/licenses/gpl-3.0.html');
+		$this->add('gnu-gpl-v2',      "GNU GPL v2",      __("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html');
+		$this->add('gnu-agpl',        "GNU AGPL",          "GNU Affero General Public License",       'https://www.gnu.org/licenses/agpl-3.0.html');
 		$this->add('jquery',          "jQuery",          __("Licenza jQuery"),                         'https://github.com/jquery/jquery/blob/master/LICENSE.txt');
-		$this->add('bsd-2',           "BSD-2",             "BSD-2",                                   'https://www.gnu.org/licenses/license-list.html#FreeBSD');
-		$this->add('aal',             "AAL",               "Attribution Assurance License",           'https://opensource.org/licenses/AAL');
+		$this->add('mit',             "MIT",             __("Licenza MIT"),                            'https://opensource.org/licenses/MIT');
+		$this->add('odbl',            "ODbl",              "Open Data Commons Open Database License", 'http://opendatacommons.org/licenses/odbl/');
+		$this->add('php',             "PHP",             __("Licenza PHP"),                            'http://www.php.net/license/3_01.txt');
 		$this->add('wtfpl',           "WTFPL",           __("Fai cosa c**** ti pare Public License"), _('https://it.wikipedia.org/wiki/WTFPL') );
 	}
 
