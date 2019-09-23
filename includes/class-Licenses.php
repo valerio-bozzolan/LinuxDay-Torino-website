@@ -15,11 +15,41 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Collector of some known licenses
+ */
 class Licenses {
 
-	private $licenses;
+	/**
+	 * All the registered licenses indexed by code
+	 *
+	 * @var array
+	 */
+	private $licenses = [];
 
-	function __construct() {
+	/**
+	 * Instance of this singleton
+	 *
+	 * @var self
+	 */
+	private static $instance = null;
+
+	/**
+	 * Get the singleton instance
+	 *
+	 * @return self
+	 */
+	public static function instance() {
+		if( !self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->add('gnu-gpl',         "GNU GPL",           "GNU General Public License",              'https://www.gnu.org/licenses/gpl-3.0.html');
 		$this->add('gnu-gpl-v3',      "GNU GPL v3",      __("GNU General Public License, versione 3"), 'https://www.gnu.org/licenses/gpl-3.0.html');
 		$this->add('gnu-gpl-v2',      "GNU GPL v2",      __("GNU General Public License, versione 2"), 'https://www.gnu.org/licenses/gpl-2.0.html');
@@ -38,62 +68,106 @@ class Licenses {
 		$this->add('wtfpl',           "WTFPL",           __("Fai cosa c**** ti pare Public License"), _('https://it.wikipedia.org/wiki/WTFPL') );
 	}
 
-	private static $_instance;
-
 	/**
-	 * Get the singleton instance
+	 * Register another License
 	 *
+	 * @param  string $code  License code
+	 * @param  string $short License short name (English)
+	 * @param  string $name  License long name  (internationalized)
+	 * @param  string $url   License URL (internationalized)
 	 * @return self
 	 */
-	public static function instance() {
-		if( empty( self::$_instance ) ) {
-			self::$_instance = new self();
-		}
-		return self::$_instance;
-	}
-
-	function add($code, $short, $name, $url) {
-		$this->licenses[$code] = new License($short, $name, $url);
+	public function add( $code, $short, $name, $url ) {
+		$this->licenses[ $code ] = new License( $code, $short, $name, $url );
 		return $this;
 	}
 
-	function get($code) {
-		return $this->licenses[$code];
+	/**
+	 * Get all the registered Licenses
+	 *
+	 * @return array
+	 */
+	public function all() {
+		return $this->licenses;
+	}
+
+	/**
+	 * Get a single License
+	 *
+	 * @param  string $code License code
+	 * @return License
+	 */
+	public function get( $code ) {
+		return $this->licenses[ $code ];
 	}
 }
 
 class License {
+
+	public $code;
 	public $short;
 	public $name;
 	public $url;
 
-	function __construct($short, $name, $url) {
+	function __construct( $code, $short, $name, $url ) {
+		$this->code  = $code;
 		$this->short = $short;
 		$this->name  = $name;
 		$this->url   = $url;
 	}
 
-	function getShort() {
+	/**
+	 * Get the License code
+	 *
+	 * @return string
+	 */
+	public function getCode() {
+		return $this->code;
+	}
+
+	/**
+	 * Get the License short name
+	 *
+	 * @return string
+	 */
+	public function getShort() {
 		return $this->short;
 	}
 
-	function getName() {
+	/**
+	 * Get the License long name
+	 *
+	 * @return string
+	 */
+	public function getName() {
 		return $this->name;
 	}
 
-	function getURL() {
+	/**
+	 * Get the License URL
+	 *
+	 * @return string
+	 */
+	public function getURL() {
 		return $this->url;
 	}
 
-	function getLink($classes = null, $other = null) {
-		if(null === $other) {
+	/**
+	 * Get a link to this License
+	 *
+	 * @param  string $classes Set custom classes
+	 * @param  string $other Set custom inline tags
+	 * @return string
+	 */
+	public function getLink( $classes = null, $other = null ) {
+		if( null !== $other ) {
 			$other = 'target="_blank"';
 		}
 
 		return HTML::a(
 			$this->getURL(),
 			$this->getShort(),
-			$this->getName(),
+			esc_html( $this->getName() ),
 			$classes,
 			$other
 		);
