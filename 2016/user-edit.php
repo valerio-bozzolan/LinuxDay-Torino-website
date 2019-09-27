@@ -270,21 +270,23 @@ Header::spawn('user', [
 				<div class="card-panel">
 					<label><?= __( "Licenza preferita" ) ?></label>
 					<select name="lovelicense">
-						<option value=""<?= selected( !$user->hasUserLovelicense() ) ?>><?= __( "Nessuna" ) ?></option>
+						<option value=""<?= selected( $user && !$user->hasUserLovelicense() ) ?>><?= __( "Nessuna" ) ?></option>
 						<?php foreach( Licenses::instance()->all() as $license ): ?>
-							<option<?=
+							<option<?php
 								// option value
-								value( $license->getCode() )
-								.
+								echo value( $license->getCode() );
+
 								// option selected or not
-								selected( $license->getCode(), $user->get( 'user_lovelicense' ) )
+								if( $user ) {
+									echo selected( $license->getCode(), $user->get( 'user_lovelicense' ) );
+								}
 
 							?>><?= esc_html( $license->getShort() ) ?></option>
 						<?php endforeach ?>
 					</select>
 
 					<?php
-						if( $user->hasUserLovelicense() ) {
+						if( $user && $user->hasUserLovelicense() ) {
 							echo $user->getUserLovelicense()->getLink();
 						}
 					?>
