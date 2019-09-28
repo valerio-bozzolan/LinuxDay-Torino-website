@@ -140,8 +140,10 @@ template( 'header', $args );
 	<!-- Start event description -->
 	<?php if( $event->hasEventDescription() ): ?>
 		<section class="container">
-			<h3><?= __("Descrizione") ?></h3>
-			<?= $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
+			<div class="jumbotron">
+				<h3><?= __( "Descrizione" ) ?></h3>
+				<?= $event->getEventDescriptionHTML( ['p' => 'flow-text'] ) ?>
+			</div>
 		</section>
 	<?php endif ?>
 	<!-- End event description -->
