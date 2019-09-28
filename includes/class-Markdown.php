@@ -63,7 +63,7 @@ class Markdown {
 		}
 
 		// avoid headings
-		$s = strip_tags( $s, '<b><em><a><code>' );
+		$s = strip_tags( $s, '<b><em><a><code><br><p><strong>' );
 
 		return $s;
 	}
