@@ -434,4 +434,13 @@ class User extends Sessionuser {
 			->equals('event_user.user_ID', 'user.user_ID')
 			->whereInt('event_user.event_ID', $event_ID );
 	}
+
+	/**
+	 * Generate the appropriate SELECT for the User Bio
+	 *
+	 * @return string
+	 */
+	public static function BIO_L10N() {
+		return i18n_coalesce( 'user_bio', 'user_bio_%s' );
+	}
 }

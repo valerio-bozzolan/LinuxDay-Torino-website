@@ -25,6 +25,18 @@ if( !$conference ) {
 }
 
 $user = User::factoryByUID( $_GET['uid'] )
+	->select( [
+		User::ID,
+		User::UID,
+		User::GRAVATAR,
+		User::NAME,
+		User::SURNAME,
+		User::IMAGE,
+		User::WEBSITE,
+		User::LOVED_LICENSE,
+		User::BIO_L10N(),
+	] )
+	->select( User::allSocialFields() )
 	->queryRow();
 
 if( !$user ) {
@@ -80,7 +92,7 @@ template( 'header', [
 						<?php if( $user->has( User::WEBSITE ) ): ?>
 							<a href="<?= esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?= esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 						<?php endif ?>
-							<img class="responsive-img hoverable z-depth-1" src="<?= esc_html(
+							<img class="img-responsive hoverable z-depth-1" src="<?= esc_html(
 								$user->getUserImage()
 							) ?>" alt="<?= esc_html(
 								$user->getUserFullname()

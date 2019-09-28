@@ -62,6 +62,19 @@ if( is_action( 'save-user' ) ) {
 	$data[] = new DBCol( User::GRAVATAR,      $_POST['gravatar'], 'snull' );
 	$data[] = new DBCol( User::LOVED_LICENSE, $_POST['lovelicense'], 'snull' );
 
+	// for each language
+	foreach( all_languages() as $lang ) {
+
+		// generic column name in this language
+		$field = sprintf( 'user_bio_%s', $lang->getISO() );
+
+		// sent column value
+		$value = $_POST[ $field ] ?? null;
+
+		// prepare to be saved
+		$data[] = new DBCol( $field, $value, 'snull' );
+	}
+
 	// promote empty strings to null
 	foreach( $data as $row ) {
 		$row->promoteNULL();
@@ -293,8 +306,33 @@ Header::spawn('user', [
 				</div>
 			</div>
 			<!-- /license -->
-
 		</div>
+
+		<!-- bio -->
+		<div class="row">
+			<?php foreach( all_languages() as $lang ): ?>
+				<?php $field = sprintf( 'user_bio_%s', $lang->getISO() ) ?>
+				<div class="col s12">
+					<div class="card-panel">
+						<p><?= sprintf(
+							__( "Biografia (%s)" ),
+							$lang->getHuman()
+						) ?><?p>
+						<textarea name="<?= esc_attr( $field ) ?>" class="materialize-textarea"><?= esc_html(
+							$user
+								? $user->get( $field )
+								: ''
+						) ?></textarea>
+						<?php if( $user && $lang->getISO() === 'it' ): ?>
+							<p>Legacy description translated by the community:</p>
+							<textarea class="materialize-textarea"><?= esc_html( __( $user->get( $field ) ) ) ?></textarea>
+						<?php endif ?>
+					</div>
+				</div>
+			<?php endforeach ?>
+		</div>
+		<!-- bio -->
+
 		<button type="submit" class="btn"><?= __( "Salva" ) ?></button>
 	</form>
 

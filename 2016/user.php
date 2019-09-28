@@ -32,7 +32,7 @@ $user = User::factoryByUID( $_GET['uid'] )
 		User::IMAGE,
 		User::WEBSITE,
 		User::LOVED_LICENSE,
-		User::BIO,
+		User::BIO_L10N(),
 	] )
 	->select( User::allSocialFields() )
 	->queryRow();
