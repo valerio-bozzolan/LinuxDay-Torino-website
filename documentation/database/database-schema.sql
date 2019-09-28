@@ -881,7 +881,7 @@ DROP TABLE IF EXISTS `ldto_user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ldto_user` (
   `user_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_uid` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_uid` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_role` enum('admin','user') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
   `user_public` tinyint(1) NOT NULL DEFAULT '1',
   `user_active` tinyint(4) NOT NULL DEFAULT '0',
@@ -1028,7 +1028,7 @@ INSERT INTO `ldto_user` VALUES (119,'gianfranco-costamagn','user',1,0,'Gianfranc
 INSERT INTO `ldto_user` VALUES (120,'gilberto-conti','user',1,0,'Gilberto','Conti',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (121,'davide-gianforte','user',1,0,'Davide','Gianforte',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (122,'mariagrazia-pellerin','user',1,0,'Mariagrazia','Pellerino','assessore',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (123,'riccardo-magliocchet','user',1,0,'Riccardo','Magliocchetti',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (123,'riccardo-magliocchetti','user',1,0,'Riccardo','Magliocchetti',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (124,'luca-barbato','user',1,0,'Luca','Barbato',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (125,'greta-boffi','user',1,0,'Greta','Boffi',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (126,'timothy-b-terriberry','user',1,0,'Timothy','B. Terriberry',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
@@ -1133,4 +1133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-27 12:21:07
+-- Dump completed on 2019-09-28  7:55:42
