@@ -75,17 +75,30 @@ trait UserTrait {
 		);
 	}
 
-	function getUserURL( $base = ROOT ) {
-		return $base . sprintf( PERMALINK_USER,
+	/**
+	 * Get the User URL
+	 *
+	 * The User URL is based on the CURRENT_CONFERENCE_UID.
+	 *
+	 * @param boolean $absolute Set to true to force an absolute URL
+	 * @return string
+	 */
+	public function getUserURL( $absolute = false ) {
+		$url = sprintf( PERMALINK_USER,
 			CURRENT_CONFERENCE_UID,
 			$this->getUserUID()
 		);
+		return site_page( $url, $absolute );
 	}
 
-	function forceUserPermalink() {
-		$url = $this->getUserURL( ROOT );
-		if( $url !== $_SERVER['REQUEST_URI'] ) {
-			http_redirect( $url );
+	/**
+	 * Force this request to the correct User permalink
+	 */
+	public function forceUserPermalink() {
+		$from = BASE_URL . $_SERVER['REQUEST_URI'];
+		$to = $this->getUserURL( true );
+		if( $from !== $to ) {
+			http_redirect( $to, 303 );
 		}
 	}
 
@@ -94,7 +107,7 @@ trait UserTrait {
 
 		return HTML::a(
 			$this->getUserURL( $base ),
-			$name,
+			esc_html( $name ),
 			sprintf( __("Profilo utente di %s"), $name ),
 			$html_class
 		);

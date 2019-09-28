@@ -44,8 +44,15 @@ trait ConferenceTrait {
 		return __( $this->get( Conference::TITLE ) );
 	}
 
-	function getConferenceURL( $base = URL ) {
-		return $base . sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
+	/**
+	 * Get the Conference URL
+	 *
+	 * @param boolean $absolute Set to true to force an absolute URL
+	 * @return string
+	 */
+	public function getConferenceURL( $absolute = false ) {
+		$url = sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
+		return site_page( $url, $absolute );
 	}
 
 	/**
@@ -57,10 +64,14 @@ trait ConferenceTrait {
 		return $this->has( 'conference_events_url' );
 	}
 
-	function forceConferencePermalink() {
-		$url = $this->getConferenceURL( ROOT );
-		if( $url !== $_SERVER['REQUEST_URI'] ) {
-			http_redirect( $url );
+	/**
+	 * Force this request to the correct Conference permalink
+	 */
+	public function forceConferencePermalink() {
+		$from = BASE_URL . $_SERVER['REQUEST_URI'];
+		$to = $this->getConferenceURL( true );
+		if( $from !== $to ) {
+			http_redirect( $to, 303 );
 		}
 	}
 

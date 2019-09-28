@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Boz-PHP configuration
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -61,13 +61,13 @@ define_default( 'LEAFLET_DIR', '/javascript/leaflet' );
 define_default( 'NOINDEX', false );
 
 // /{conference_uid}/
-define_default( 'PERMALINK_CONFERENCE', '/%s/' );
+define_default( 'PERMALINK_CONFERENCE', '%s/' );
 
  // /{conference_uid}/{$chapter_uid}/{event_uid}
 define_default( 'PERMALINK_EVENT', '%1$s/%3$s/%2$s' );
 
 // /2016/{user_uid}
-define_default( 'PERMALINK_USER', '/%1$s/user/%2$s' );
+define_default( 'PERMALINK_USER', '%1$s/user/%2$s' );
 
 define_default( 'FORCE_PERMALINK', 1 );
 

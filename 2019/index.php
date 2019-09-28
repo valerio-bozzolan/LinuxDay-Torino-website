@@ -26,10 +26,13 @@ enqueue_css('leaflet');
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
-$conference or die_with_404();
+if( !$conference ) {
+	die_with_404();
+}
 
-FORCE_PERMALINK
-	and $conference->forceConferencePermalink();
+if( FORCE_PERMALINK ) {
+	$conference->forceConferencePermalink();
+}
 
 template( 'header', [
 	'conference' => $conference,

@@ -37,6 +37,9 @@ trait FullEventTrait {
 
 	/**
 	 * Get the Event URL
+	 *
+	 * @param boolean $absolute Set to true to force an absolute URL
+	 * @return string
 	 */
 	public function getEventURL( $absolute = false ) {
 		return FullEvent::permalink(
@@ -47,10 +50,14 @@ trait FullEventTrait {
 		);
 	}
 
-	function forceEventPermalink() {
-		$url = $this->getEventURL( ROOT );
-		if( $url !== $_SERVER['REQUEST_URI'] ) {
-			http_redirect( $url );
+	/**
+	 * Force the current request to the correct Event permalink
+	 */
+	public function forceEventPermalink() {
+		$from = BASE_URL . $_SERVER['REQUEST_URI'];
+		$to = $this->getEventURL( true );
+		if( $from !== $to ) {
+			http_redirect( $to, 303 );
 		}
 	}
 
