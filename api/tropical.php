@@ -129,7 +129,6 @@ function timestamp_to_ical( $timestamp ) {
  * @return string the event in iCal format
  */
 function get_ical( $id, $title, $start, $end, $url = null, $description = null, $location = null, $geo_lat = null, $geo_lng = null ) {
-	$rn = "\r\n";
 	$dtstart = timestamp_to_ical( $start->getTimestamp() );
 	$dtend   = timestamp_to_ical( $end->getTimestamp() );
 	$dtstamp = timestamp_to_ical( time() );
@@ -160,24 +159,36 @@ function get_ical( $id, $title, $start, $end, $url = null, $description = null, 
 		$opt_location = "LOCATION:$location";
 	}
 
-	$ics = <<<EOD
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//ldto/asd//NONSGML v1.0//EN
-CALSCALE:GREGORIAN
-BEGIN:VEVENT
-UID:$id
-SUMMARY:$title
-$opt_description
-$opt_url
-$opt_location
-$opt_geo
-DTSTART:$dtstart
-DTEND:$dtend
-DTSTAMP:$dtstamp
-END:VEVENT
-END:VCALENDAR
-EOD;
+	$ics = [];
+	$ics[] = 'BEGIN:VCALENDAR';
+	$ics[] = 'VERSION:2.0';
+	$ics[] = 'PRODID:-//ldto/asd//NONSGML v1.0//EN';
+	$ics[] = 'CALSCALE:GREGORIAN';
+	$ics[] = 'BEGIN:VEVENT';
+	$ics[] = "UID:$id";
+	$ics[] = "SUMMARY:$title";
 
-	return str_replace( "\n", "\r\n", $ics );
+	if( $opt_description ) {
+		$ics[] = $opt_description;
+	}
+
+	if( $opt_url ) {
+		$ics[] = $opt_url;
+	}
+
+	if( $opt_location ) {
+		$ics[] = $opt_location;
+	}
+
+	if( $opt_geo ) {
+		$ics[] = $opt_geo;
+	}
+
+	$ics[] = "DTSTART:$dtstart";
+	$ics[] = "DTEND:$dtend";
+	$ics[] = "DTSTAMP:$dtstamp";
+	$ics[] = 'END:VEVENT';
+	$ics[] = 'END:VCALENDAR';
+
+	return implode( "\r\n", $ics );
 }
