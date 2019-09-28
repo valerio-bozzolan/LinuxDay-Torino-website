@@ -54,16 +54,20 @@ if( is_action( 'save-user' ) ) {
 
 	// prepare data sent via POST
 	$data = [];
-	$data[] = new DBCol( User::NAME,          $_POST['name'],     's' );
-	$data[] = new DBCol( User::SURNAME,       $_POST['surname'],  's' );
-	$data[] = new DBCol( User::UID,           $_POST['uid'],      's' );
+	$data[] = new DBCol( User::NAME,          $_POST['name'],     's'     );
+	$data[] = new DBCol( User::SURNAME,       $_POST['surname'],  's'     );
+	$data[] = new DBCol( User::UID,           $_POST['uid'],      's'     );
 	$data[] = new DBCol( User::EMAIL,         $_POST['email'],    'snull' );
 	$data[] = new DBCol( User::WEBSITE,       $_POST['site'],     'snull' );
 	$data[] = new DBCol( User::IMAGE,         $_POST['image'],    'snull' );
 	$data[] = new DBCol( User::GRAVATAR,      $_POST['gravatar'], 'snull' );
+	$data[] = new DBCol( User::FACEBOOK,      $_POST['facebook'], 'snull' );
+	$data[] = new DBCol( User::LINKEDIN,      $_POST['linkedin'], 'snull' );
+	$data[] = new DBCol( User::GITHUB,        $_POST['github'],   'snull' );
+	$data[] = new DBCol( User::TWITTER,       $_POST['twitter'],  'snull' );
 	$data[] = new DBCol( User::LOVED_LICENSE, $_POST['lovelicense'], 'snull' );
 
-	// for each language
+	// for each language save the biography
 	foreach( all_languages() as $lang ) {
 
 		// generic column name in this language
@@ -314,6 +318,66 @@ Header::spawn('user', [
 				</div>
 			</div>
 			<!-- /website -->
+
+			<!-- Facebook -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-facebook">Facebook</label>
+						<input type="text" name="facebook" id="user-facebook"<?=
+							$user
+								? value( $user->get( User::FACEBOOK ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /Facebook -->
+
+			<!-- Twitter -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-twitter">Twitter</label>
+						<input type="text" name="twitter" id="user-twitter"<?=
+							$user
+								? value( $user->get( User::TWITTER ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /Twitter ->
+
+			<!-- Linkedin -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-linkedin">Linkedin</label>
+						<input type="text" name="linkedin" id="user-linkedin"<?=
+							$user
+								? value( $user->get( User::LINKEDIN ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /Linkedin -->
+
+			<!-- GitHub -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-github">GitHub</label>
+						<input type="text" name="github" id="user-github"<?=
+							$user
+								? value( $user->get( User::GITHUB ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /GitHub -->
 
 			<!-- image -->
 			<div class="col s12 m6 l4">
