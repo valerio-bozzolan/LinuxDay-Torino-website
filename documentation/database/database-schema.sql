@@ -523,7 +523,7 @@ INSERT INTO `ldto_event_user` VALUES (151,111,1);
 INSERT INTO `ldto_event_user` VALUES (152,77,1);
 INSERT INTO `ldto_event_user` VALUES (153,27,1);
 INSERT INTO `ldto_event_user` VALUES (154,112,1);
-INSERT INTO `ldto_event_user` VALUES (155,113,1);
+INSERT INTO `ldto_event_user` VALUES (155,58,1);
 INSERT INTO `ldto_event_user` VALUES (156,143,1);
 INSERT INTO `ldto_event_user` VALUES (157,17,1);
 INSERT INTO `ldto_event_user` VALUES (158,77,1);
@@ -1019,7 +1019,6 @@ INSERT INTO `ldto_user` VALUES (109,'andrea-negro','user',1,0,'Andrea','Negro',N
 INSERT INTO `ldto_user` VALUES (110,'mariano-fiorentino','user',1,0,'Mariano','Fiorentino',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (111,'andrea-deste','user',1,0,'Andrea','D\'Este',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (112,'federico-morando','user',1,0,'Federico','Morando',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (113,'igor-pesandro','user',1,0,'Igor','Pesandro',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (114,'flavio-giobergia','user',1,0,'Flavio','Giobergia',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (115,'alessandro-rubini','user',1,0,'Alessandro','Rubini',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (116,'walter-dal-mut','user',1,0,'Walter','Dal Mut',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'walterdalmut',NULL,NULL,NULL,NULL);
@@ -1055,8 +1054,6 @@ INSERT INTO `ldto_user` VALUES (145,'virginia','user',1,0,'Virginia','Hyd3l',NUL
 INSERT INTO `ldto_user` VALUES (146,'pau','user',1,0,'Alberto','Pau',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (150,'davide-vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (152,'','user',1,0,'CSI Piemonte','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (153,'not_a_numb3r','user',1,0,'Mauro','Foti',NULL,'maurofoti1900@gmail.com','1c009e95f5878fc6884e802a24cf356a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (154,'fabio-di-ninno','user',1,0,'Fabio','Di Ninno',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Ingegnere informatico. Da un anno lavoro nel mondo dell\'AI, di questi tempi sembra molto _cool_ dirlo!\r\n\r\nLa verità è che vorrei portare questa tecnologia ai cittadini, nella\r\nvita di tutti i giorni.\r\n\r\nMi piace tutto ciò che è nuovo e rompe gli schemi con il passato soprattutto se è fatto di zeri e uno.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (155,'fabrizio-massara','user',1,0,'Fabrizio','Massara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
@@ -1134,4 +1131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-28 11:17:54
+-- Dump completed on 2019-09-28 11:34:39
