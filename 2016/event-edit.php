@@ -53,6 +53,8 @@ if( isset( $_GET['uid'] ) ) {
 	}
 }
 
+$warning = null;
+
 if( $_POST ) {
 
 	if( is_action( 'save-event' ) ) {
@@ -96,8 +98,44 @@ if( $_POST ) {
 			->whereInt( Event::ID, $id )
 			->queryRow();
 
-		// POST-redirect-GET (temporary redirect)
-		http_redirect( $event->getFullEventEditURL(), 302 );
+		// POST-redirect-GET
+		http_redirect( $event->getFullEventEditURL(), 303 );
+	}
+
+	/**
+	 * Change the Image
+	 */
+	if( $event && is_action( 'change-image' ) ) {
+
+		// prepare the image uploader
+		$image = new FileUploader( 'image', [
+			'category'          => 'image',
+			'override-filename' => $event->getEventUID(),
+		] );
+
+		// prepare the image pathnames
+		$img_url  =                $event->getConferenceUID() . _ .  'images';
+		$img_path = ABSPATH . __ . $event->getConferenceUID() . __ . 'images';
+
+		// really upload that shitty image somewhere
+		if( $image->fileChoosed() ) {
+			$ok = $image->uploadTo( $img_path, $status, $filename, $ext );
+			if( $ok ) {
+
+				// now update
+				( new QueryEvent() )
+					->whereEvent( $event )
+					->update( [
+						'event_img' => $img_url . "/$filename.$ext",
+					] );
+
+				// POST-redirect-GET
+				http_redirect( $event->getFullEventEditURL(), 303 );
+
+			} else {
+				$warning = $image->getErrorMessage();
+			}
+		}
 	}
 
 	/*
@@ -111,7 +149,7 @@ if( $_POST ) {
 			->queryRow();
 
 		if( $user ) {
-			EventUser::delete($event->getEventID(), $user->getUserID());
+			EventUser::delete( $event->getEventID(), $user->getUserID() );
 
 			insert_row('event_user', [
 				new DBCol( Event::ID, $event->getEventID(), 'd' ),
@@ -171,6 +209,10 @@ if( $event ) {
 }
 
 ?>
+
+	<?php if( $warning ): ?>
+		<div class="card-panel yellow"><?= esc_html( $warning ) ?></div>
+	<?php endif ?>
 
 	<p><?= HTML::a(
 		$conference->getConferenceURL(),
@@ -443,6 +485,33 @@ if( $event ) {
 			</div>
 		</div>
 	</form>
+
+	<!-- image -->
+	<?php if( $event ): ?>
+		<form method="post" enctype="multipart/form-data">
+			<?php form_action( 'change-image' ) ?>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel">
+
+						<h3><?= __( "Nuova Immagine" ) ?></h3>
+
+						<div class="file-field input-field">
+							<div class="btn">
+								<span><?= __( "Sfoglia" ) ?></span>
+								<input name="image" type="file" />
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text" />
+							</div>
+						</div>
+						<button type="submit" class="btn waves-effect"><?= __( "Carica" ) ?></button>
+					</div>
+				</div>
+			</div>
+		</form>
+	<?php endif ?>
+	<!-- /image -->
 
 	<?php if( $event ): ?>
 	<div class="row">

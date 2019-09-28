@@ -21,6 +21,13 @@
 class QueryEvent extends Query {
 
 	/**
+	 * Univoque Event ID column name
+	 *
+	 * @var
+	 */
+	protected $EVENT_ID = 'event.event_ID';
+
+	/**
 	 * Univoque Chapter ID column name
 	 *
 	 * @var
@@ -39,6 +46,25 @@ class QueryEvent extends Query {
 		parent::__construct();
 		$this->from( Event::T );
 		$this->defaultClass( FullEvent::class );
+	}
+
+	/**
+	 * Where the Event is...
+	 *
+	 * @return self
+	 */
+	public function whereEvent( $event ) {
+		return $this->whereEventID( $event->getEventID() );
+	}
+
+	/**
+	 * Where the Event ID is...
+	 *
+	 * @param  int  $id Event ID
+	 * @return self
+	 */
+	public function whereEventID( $id ) {
+		return $this->whereInt( $this->EVENT_ID, $id );
 	}
 
 	/**
