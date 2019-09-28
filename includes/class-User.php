@@ -128,8 +128,7 @@ trait UserTrait {
 	 * @return string|null
 	 */
 	public function getUserGravatarUID() {
-		$gravatar = $this->get( User::GRAVATAR );
-		return $gravatar ? $gravatar : md5( $this->getUserEmail() );
+		return $this->get( User::GRAVATAR );
 	}
 
 	/**
