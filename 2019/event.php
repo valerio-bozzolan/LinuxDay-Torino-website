@@ -72,15 +72,11 @@ template( 'header', $args );
 		<div class="col-sm-12 col-md-5 col-lg-4">
 			<div class="row">
 				<div class="col-sm-6 col-md-12">
-					<img class="img-responsive hoverable" src="<?php
-						if( $event->hasEventImage() ) {
-							echo esc_attr( $event->getEventImage() );
-						} else {
-							echo esc_attr( DEFAULT_IMAGE );
-						}
-					?>" alt="<?php
-						echo esc_attr( $event->getEventTitle() )
-					?>" />
+					<img class="img-responsive hoverable" src="<?= esc_attr(
+						$event->hasEventImage()
+							? $event->getEventImage()
+							: DEFAULT_IMAGE
+					) ?>" alt="<?= esc_attr( $event->getEventTitle() ) ?>" />
 				</div>
 			</div>
 		</div>
@@ -223,9 +219,9 @@ template( 'header', $args );
 				<div class="col-sm-12 col-md-6">
 					<div class="row valign-wrapper">
 						<div class="col-sm-4 col-lg-3">
-							<a class="tooltipped" href="<?php
-								echo $user->getUserURL()
-							?>" title="<?= esc_attr( sprintf(
+							<a class="tooltipped" href="<?= esc_attr(
+								$user->getUserURL()
+							) ?>" title="<?= esc_attr( sprintf(
 								__("Profilo di %s"),
 								$user->getUserFullname()
 							) ) ?>" data-tooltip="<?= esc_attr(
@@ -278,7 +274,7 @@ template( 'header', $args );
 					<p class="flow-text">
 						<?= HTML::a(
 							$previous->getEventURL(),
-							$previous->getEventTitle()
+							esc_html( $previous->getEventTitle() )
 						) ?>
 						<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
 					</p>
@@ -290,7 +286,7 @@ template( 'header', $args );
 					<p class="flow-text">
 						<?= HTML::a(
 							$next->getEventURL(),
-							$next->getEventTitle()
+							esc_html( $next->getEventTitle() )
 						) ?>
 						<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
 					</p>

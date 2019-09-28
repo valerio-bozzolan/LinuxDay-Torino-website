@@ -80,11 +80,11 @@ template( 'header', [
 						<?php if( $user->has( User::WEBSITE ) ): ?>
 							<a href="<?= esc_attr( $user->get( User::WEBSITE ) ) ?>" title="<?= esc_attr( $user->getUserFullname() ) ?>" target="_blank">
 						<?php endif ?>
-							<img class="responsive-img hoverable z-depth-1" src="<?php
-								echo esc_attr( $user->getUserImage() )
-							?>" alt="<?php
-								echo esc_attr( $user->getUserFullname() )
-							?>" />
+							<img class="responsive-img hoverable z-depth-1" src="<?= esc_html(
+								$user->getUserImage()
+							) ?>" alt="<?= esc_html(
+								$user->getUserFullname()
+							) ?>" />
 						<?php if( $user->has( User::WEBSITE ) ): ?>
 							</a>
 						<?php endif ?>

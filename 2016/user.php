@@ -37,9 +37,13 @@ $user = User::factoryByUID( $_GET['uid'] )
 	->select( User::allSocialFields() )
 	->queryRow();
 
-$user or die_with_404();
+if( !$user ) {
+	die_with_404();
+}
 
-FORCE_PERMALINK && $user->forceUserPermalink();
+if( FORCE_PERMALINK ) {
+	$user->forceUserPermalink();
+}
 
 Header::spawn( null, [
 	'title' => $user->getUserFullname(),

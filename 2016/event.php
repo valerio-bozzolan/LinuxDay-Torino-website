@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - single event page (an event lives in a conference)
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -20,16 +20,26 @@ require 'load.php';
 $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
-$conference or die_with_404();
+if( !$conference ) {
+	die_with_404();
+}
+
+if( !isset( $_GET['uid'] ) ) {
+	die_with_404();
+}
 
 $event = FullEvent::factoryByConferenceAndUID(
 	$conference->getConferenceID(),
-	@ $_GET['uid']
+	$_GET['uid']
 )->queryRow();
 
-$event or die_with_404();
+if( !$event ) {
+	die_with_404();
+}
 
-FORCE_PERMALINK and $event->forceEventPermalink();
+if( FORCE_PERMALINK ) {
+	$event->forceEventPermalink();
+}
 
 $args = [
 	'title' => sprintf(
@@ -77,15 +87,11 @@ Header::spawn( null, $args );
 		<div class="col s12 m5 l4">
 			<div class="row">
 				<div class="col s6 m12">
-					<img class="responsive-img hoverable" src="<?php
-						if( $event->hasEventImage() ) {
-							echo $event->getEventImage();
-						} else {
-							echo DEFAULT_IMAGE;
-						}
-					?>" alt="<?php
-						echo esc_attr( $event->getEventTitle() )
-					?>" />
+					<img class="responsive-img hoverable" src="<?= esc_attr(
+						$event->hasEventImage()
+							? $event->getEventImage()
+							: DEFAULT_IMAGE
+					) ?>" alt="<?= esc_attr( $event->getEventTitle() ) ?>" />
 				</div>
 			</div>
 		</div>
@@ -261,17 +267,17 @@ Header::spawn( null, $args );
 				<div class="col s12 m6">
 					<div class="row valign-wrapper">
 						<div class="col s4 l3">
-							<a class="tooltipped" href="<?php
-								echo $user->getUserURL( ROOT )
-							?>" title="<?= esc_attr( sprintf(
+							<a class="tooltipped" href="<?= esc_attr(
+								$user->getUserURL()
+							) ?>" title="<?= esc_attr( sprintf(
 								__("Profilo di %s"),
 								$user->getUserFullname()
 							) ) ?>" data-tooltip="<?= esc_attr(
 								$user->getUserFullname()
 							) ?>">
-								<img class="circle responsive-img hoverable" src="<?php
-									echo $user->getUserImage(256)
-								?>" alt="<?= esc_attr(
+								<img class="circle responsive-img hoverable" src="<?= esc_attr(
+									$user->getUserImage(256)
+								) ?>" alt="<?= esc_attr(
 									$user->getUserFullname()
 								) ?>" />
 							</a>
@@ -279,7 +285,7 @@ Header::spawn( null, $args );
 						<div class="col s8 l9">
 							<?= HTML::a(
 								$user->getUserURL(),
-								"<h4>{$user->getUserFullname()}</h4>",
+								"<h4>" . esc_html( $user->getUserFullname() ) . "</h4>",
 								sprintf(
 									__("Profilo di %s"),
 									$user->getUserFullname()
@@ -318,8 +324,8 @@ Header::spawn( null, $args );
 					<h3><?= icon('navigate_before'); echo __("Preceduto da") ?></h3>
 					<p class="flow-text">
 						<?= HTML::a(
-							$previous->getEventURL( ROOT ),
-							$previous->getEventTitle()
+							$previous->getEventURL(),
+							esc_html( $previous->getEventTitle() )
 						) ?>
 						<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
 					</p>
@@ -330,8 +336,8 @@ Header::spawn( null, $args );
 					<h3><?= __("A seguire"); echo icon('navigate_next') ?></h3>
 					<p class="flow-text">
 						<?= HTML::a(
-							$next->getEventURL( ROOT ),
-							$next->getEventTitle()
+							$next->getEventURL(),
+							esc_html( $next->getEventTitle() )
 						) ?>
 						<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
 					</p>
@@ -345,7 +351,7 @@ Header::spawn( null, $args );
 	<script>
 	$( function () {
 		$( '.tooltipped' ).tooltip();
-	});
+	} );
 	</script>
 <?php
 
