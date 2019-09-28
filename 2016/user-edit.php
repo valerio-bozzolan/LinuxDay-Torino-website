@@ -59,6 +59,7 @@ if( is_action( 'save-user' ) ) {
 	$data[] = new DBCol( User::UID,           $_POST['uid'],      's' );
 	$data[] = new DBCol( User::EMAIL,         $_POST['email'],    'snull' );
 	$data[] = new DBCol( User::WEBSITE,       $_POST['site'],     'snull' );
+	$data[] = new DBCol( User::IMAGE,         $_POST['image'],    'snull' );
 	$data[] = new DBCol( User::GRAVATAR,      $_POST['gravatar'], 'snull' );
 	$data[] = new DBCol( User::LOVED_LICENSE, $_POST['lovelicense'], 'snull' );
 
@@ -98,8 +99,44 @@ if( is_action( 'save-user' ) ) {
 		->queryRow();
 
 	// POST -> redirect -> GET
-	http_redirect( $user->getUserEditURL(), 302 );
+	http_redirect( $user->getUserEditURL(), 303 );
 
+}
+
+/**
+ * Change the Image
+ */
+if( $user && is_action( 'change-image' ) ) {
+
+	// prepare the image uploader
+	$image = new FileUploader( 'image', [
+		'category'          => 'image',
+		'override-filename' => "user-" . $user->getUserUID(),
+	] );
+
+	// prepare the image pathnames
+	$img_url  =                LATEST_CONFERENCE_UID . _ .  'images';
+	$img_path = ABSPATH . __ . LATEST_CONFERENCE_UID . __ . 'images';
+
+	// really upload that shitty image somewhere
+	if( $image->fileChoosed() ) {
+		$ok = $image->uploadTo( $img_path, $status, $filename, $ext );
+		if( $ok ) {
+
+			// now update
+			( new QueryUser() )
+				->whereUser( $user )
+				->update( [
+					'user_image' => $img_url . "/$filename.$ext",
+				] );
+
+			// POST-redirect-GET
+			http_redirect( $user->getUserEditURL(), 303 );
+
+		} else {
+			die( $image->getErrorMessage() );
+		}
+	}
 }
 
 if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
@@ -278,6 +315,21 @@ Header::spawn('user', [
 			</div>
 			<!-- /website -->
 
+			<!-- image -->
+			<div class="col s12 m6 l4">
+				<div class="card-panel">
+					<div class="input-field">
+						<label for="user-image"><?= __( "Immagine" ) ?></label>
+						<input type="text" name="image" id="user-image"<?=
+							$user
+								? value( $user->get( User::IMAGE ) )
+								: ''
+						?> />
+					</div>
+				</div>
+			</div>
+			<!-- /image -->
+
 			<!-- license -->
 			<div class="col s12 m6 l4">
 				<div class="card-panel">
@@ -306,6 +358,7 @@ Header::spawn('user', [
 				</div>
 			</div>
 			<!-- /license -->
+
 		</div>
 
 		<!-- bio -->
@@ -335,6 +388,33 @@ Header::spawn('user', [
 
 		<button type="submit" class="btn"><?= __( "Salva" ) ?></button>
 	</form>
+
+	<!-- image -->
+	<?php if( $user ): ?>
+		<form method="post" enctype="multipart/form-data">
+			<?php form_action( 'change-image' ) ?>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel">
+
+						<h3><?= __( "Nuova Immagine" ) ?></h3>
+
+						<div class="file-field input-field">
+							<div class="btn">
+								<span><?= __( "Sfoglia" ) ?></span>
+								<input name="image" type="file" />
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text" />
+							</div>
+						</div>
+						<button type="submit" class="btn waves-effect"><?= __( "Carica" ) ?></button>
+					</div>
+				</div>
+			</div>
+		</form>
+	<?php endif ?>
+	<!-- /image -->
 
 	<?php if( $user ): ?>
 		<h3><?php printf(

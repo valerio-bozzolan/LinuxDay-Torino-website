@@ -35,7 +35,7 @@ trait QueryUserTrait {
 	 */
 	public function whereUser( $user ) {
 		$id = $user->getUserID();
-		return $this->whereUserID();
+		return $this->whereUserID( $id );
 	}
 
 }

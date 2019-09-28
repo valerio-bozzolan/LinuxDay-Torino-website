@@ -110,7 +110,7 @@ if( $_POST ) {
 		// prepare the image uploader
 		$image = new FileUploader( 'image', [
 			'category'          => 'image',
-			'override-filename' => $event->getEventUID(),
+			'override-filename' => "event-" . $event->getEventUID(),
 		] );
 
 		// prepare the image pathnames
