@@ -30,12 +30,14 @@ class HumanTime {
 	 */
 	public static function diff( $from, $to = null, & $args = [] ) {
 
-		if( !isset( $args['complete'] ) ) {
-			$args['complete'] = false;
-		}
-
+		// enable long version as default
 		if( !isset( $args['long'] ) ) {
 			$args['long'] = true;
+		}
+
+		// enable '%s ago'/'in %s' adverbs as default
+		if( !isset( $args['adverb'] ) ) {
+			$args['adverb'] = true;
 		}
 
 		if( $to === null ) {
@@ -57,7 +59,7 @@ class HumanTime {
 			$args
 		);
 
-		if( $args['complete'] ) {
+		if( $args['complete'] || !$args['adverb'] ) {
 			return $human;
 		}
 
@@ -76,8 +78,12 @@ class HumanTime {
 
 	private static function humanize( $y, $m, $d, $h, $i, $s, $days, $invert, $from, & $args ) {
 
-		$long     = & $args['long'];
-		$complete = & $args['complete'];
+		$long = & $args['long'];
+
+		// as default it's not a complete construct (e.g. '3 years' VS 'today' )
+		if( !isset( $args['complete'] ) ) {
+			$args['complete'] = false;
+		}
 
 		// Top-down: From far away to recently
 

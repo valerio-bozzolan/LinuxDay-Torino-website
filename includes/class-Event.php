@@ -126,7 +126,9 @@ trait EventTrait {
 	 * @return string
 	 */
 	public function getHumanEventDuration( $args = [] ) {
-		$complete = true;
+		if( !isset( $args['adverb'] ) ) {
+			$args['adverb'] = false;
+		}
 		return HumanTime::diff(
 			$this->get( Event::START ),
 			$this->get( Event::END   ),
