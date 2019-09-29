@@ -95,16 +95,10 @@ register_default_language( 'it_IT' );
 // apply the global timezone
 date_default_timezone_set( DEFAULT_TIMEZONE );
 
-// apply a language
+// apply a language for this request only
 if( isset( $_GET[ 'l' ] ) ) {
-	// for this request only
-	apply_language( $_GET[ 'l' ] );
-} elseif( isset( $_POST[ 'l' ] ) ) {
-	if( false !== apply_language( $_POST[ 'l' ] ) ) {
-		// also for future requests
-		setcookie( 'l', latest_language()->getCode() );
-	}
+	apply_language( $_GET['l'] );
 } else {
-	// when the cookie is empty is taken from browser language
-	apply_language( @ $_COOKIE[ 'l' ] );
+	// as last resource, take from browser language
+	apply_language();
 }

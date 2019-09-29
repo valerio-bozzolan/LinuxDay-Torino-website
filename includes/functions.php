@@ -58,3 +58,44 @@ function i18n_coalesce( $name, $i18n ) {
 	// just pick the default
 	return "`$base_priority` AS $name";
 }
+
+/**
+ * Eventually redirect the request to this permalink
+ *
+ * It's allowed the 'lang' parameter to be present or not.
+ *
+ * @param  string $permalink URL of the incoming request (absolute or relative)
+ * @return string
+ */
+function force_permalink( $permalink ) {
+
+	// incoming URL
+	$from = BASE_URL . $_SERVER['REQUEST_URI'];
+
+	// force absolute
+	$permalink = site_page( $permalink, true );
+
+	// if it's the same request, do nothing
+	if( $from === $permalink ) {
+		return;
+	}
+
+	// redirect to the correct location
+	http_redirect( $permalink, 303 );
+}
+
+/**
+ * Force an URL to have the language argument it it requested the page with it
+ *
+ * @return string
+ */
+function keep_url_in_language( $url, $force = false ) {
+
+	if( isset( $_GET['l'] ) || $force ) {
+		$url = http_build_get_query( $url, [
+			'l' => latest_language()->getCode(),
+		] );
+	}
+
+	return $url;
+}
