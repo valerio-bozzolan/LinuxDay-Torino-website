@@ -96,7 +96,7 @@ register_default_language( 'it_IT' );
 date_default_timezone_set( DEFAULT_TIMEZONE );
 
 // apply a language for this request only
-if( isset( $_GET[ 'l' ] ) ) {
+if( isset( $_GET['l'] ) ) {
 	apply_language( $_GET['l'] );
 } else {
 	// as last resource, take from browser language

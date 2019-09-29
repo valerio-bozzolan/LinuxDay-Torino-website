@@ -26,6 +26,10 @@
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
 
+// get the current URL but without the query string (without the language)
+$current_url = $_SERVER['REQUEST_URI'];
+$current_url = strtok( $current_url, '?' );
+
 ?>
 <!-- =========================
 	FOOTER SECTION
@@ -78,6 +82,19 @@ vagrant up
 					<li><a href="https://www.facebook.com/LinuxDayTorino/" class="fa fa-facebook"></a></li>
 					<li><a href="https://twitter.com/linuxdaytorino" class="fa fa-twitter"></a></li>
 				</ul>
+
+				<p>
+					<?php foreach( all_languages() as $lang ): ?>
+						<?php if( $lang !== latest_language() ): ?>
+							<a hreflang="<?= $lang->getISO() ?>" href="<?=
+								// set the URL to this page, but with this language
+								esc_attr( http_build_get_query( $current_url, [
+									'l' => $lang->getCode(),
+								] ) )
+							?>"><?= icon( 'language' ) . ' ' . $lang->getHuman() ?></a>
+						<?php endif ?>
+					<?php endforeach ?>
+				</p>
 			</div>
 		</div>
 	</div>
