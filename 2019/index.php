@@ -314,7 +314,7 @@ template( 'header', [
 						"Dante"
 					) ?></li>
 					<li><?php printf(
-						__( "Anche i bus %s e %s fermano abbastanza vicino, forse." ),
+						__( "Anche i bus %s e %s fermano abbastanza vicino." ),
 						"14, 35",
 						"63"
 					) ?></li>
