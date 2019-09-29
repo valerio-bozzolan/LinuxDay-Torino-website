@@ -442,7 +442,7 @@ Header::spawn('user', [
 						) ?></textarea>
 						<?php if( $user && $lang->getISO() === 'it' ): ?>
 							<p>Legacy description translated by the community:</p>
-							<textarea class="materialize-textarea"><?= esc_html( __( $user->get( $field ) ) ) ?></textarea>
+							<textarea class="materialize-textarea" readonly="readonly"><?= esc_html( __( $user->get( $field ) ) ) ?></textarea>
 						<?php endif ?>
 					</div>
 				</div>
