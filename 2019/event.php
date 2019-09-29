@@ -301,4 +301,6 @@ template( 'header', $args );
 
 <?php
 
-template( 'footer' );
+template( 'footer', [
+	'back' => true,
+] );

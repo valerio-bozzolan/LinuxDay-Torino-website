@@ -41,10 +41,10 @@ function print_menu($uid = null, $level = 0, $args = [] ) {
 	?>
 
 	<ul<?php if($level === 0): echo HTML::spaced( $args['main-ul-intag'] ); endif ?>>
-	<?php foreach($menuEntries as $menuEntry): ?>
+	<?php foreach( $menuEntries as $menuEntry ): ?>
 
 		<li>
-			<?= HTML::a($menuEntry->url, $menuEntry->name, $menuEntry->get('title')) ?>
+			<?= HTML::a( keep_url_in_language( $menuEntry->url ), $menuEntry->name, $menuEntry->get('title') ) ?>
 <?php print_menu( $menuEntry->uid, $level + 1, $args ) ?>
 
 		</li>

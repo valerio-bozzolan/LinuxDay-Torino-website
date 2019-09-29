@@ -27,7 +27,7 @@ class Footer {
 	<?php if( $args['home'] ): ?>
 	<div class="divider"></div>
 	<div class="section">
-		<a class="btn purple darken-3 waves-effect" href="<?= CURRENT_CONFERENCE_PATH ?>/">
+		<a class="btn purple darken-3 waves-effect" href="<?= keep_url_in_language( CURRENT_CONFERENCE_PATH . _ ) ?>">
 			<?php
 				printf(
 					__("Torna a %s"),
@@ -113,7 +113,7 @@ class Footer {
 				</ul>
 
 				<h5 class="white-text"><?= __( "Lingua" ) ?></h5>
-				<form method="post">
+				<form method="get">
 					<select name="l">
 						<?php foreach( all_languages() as $l ): ?>
 							<option value="<?= $l->getCode() ?>"<?= selected( $l, latest_language() ) ?>><?= $l->getHuman() ?></option>

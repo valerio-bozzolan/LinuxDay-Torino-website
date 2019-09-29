@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database event (full of relations)
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -54,11 +54,7 @@ trait FullEventTrait {
 	 * Force the current request to the correct Event permalink
 	 */
 	public function forceEventPermalink() {
-		$from = BASE_URL . $_SERVER['REQUEST_URI'];
-		$to = $this->getEventURL( true );
-		if( $from !== $to ) {
-			http_redirect( $to, 303 );
-		}
+		force_permalink( $this->getEventURL( true ) );
 	}
 
 	/**
@@ -203,7 +199,8 @@ class FullEvent extends Queried {
 	 */
 	public static function permalink( $conference_uid, $event_uid, $chapter_uid, $absolute = false ) {
 		$url = sprintf( PERMALINK_EVENT, $conference_uid, $event_uid, $chapter_uid ) ;
-		return site_page( $url, $absolute );
+		$url = site_page( $url, $absolute );
+		return keep_url_in_language( $url );
 	}
 
 	/**

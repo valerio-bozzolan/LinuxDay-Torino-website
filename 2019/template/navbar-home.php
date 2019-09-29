@@ -28,6 +28,8 @@
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
 
+$home = keep_url_in_language( CURRENT_CONFERENCE_ROOT . _ );
+
 $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 ?>
 <!-- =========================
@@ -41,17 +43,16 @@ $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="<?= CURRENT_CONFERENCE_ROOT ?>/#" class="navbar-brand"><?= esc_html( $conference->getConferenceTitle() ) ?></a>
+			<a href="<?= $home ?>#" class="navbar-brand"><?= esc_html( $conference->getConferenceTitle() ) ?></a>
 		</div>
 
 		<div class="collapse navbar-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#intro" class="smoothScroll">Intro</a></li>
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#overview" class="smoothScroll">Overview</a></li>
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#program" class="smoothScroll">Programs</a></li>
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="<?= CURRENT_CONFERENCE_ROOT ?>/#contact" class="smoothScroll">Contact</a></li>
+				<li><a href="<?= $home ?>#intro" class="smoothScroll"><?= __( "Intro" ) ?></a></li>
+				<li><a href="<?= $home ?>#program" class="smoothScroll"><?= __( "Programma" ) ?></a></li>
+				<li><a href="<?= $home ?>#venue" class="smoothScroll"><?= __( "Dove" ) ?></a></li>
+				<li><a href="<?= $home ?>#contact" class="smoothScroll"><?= __( "Contatti" ) ?></a></li>
 			</ul>
 
 		</div>

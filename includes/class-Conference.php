@@ -52,7 +52,8 @@ trait ConferenceTrait {
 	 */
 	public function getConferenceURL( $absolute = false ) {
 		$url = sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
-		return site_page( $url, $absolute );
+		$url = site_page( $url, $absolute );
+		return keep_url_in_language( $url );
 	}
 
 	/**
@@ -68,11 +69,7 @@ trait ConferenceTrait {
 	 * Force this request to the correct Conference permalink
 	 */
 	public function forceConferencePermalink() {
-		$from = BASE_URL . $_SERVER['REQUEST_URI'];
-		$to = $this->getConferenceURL( true );
-		if( $from !== $to ) {
-			http_redirect( $to, 303 );
-		}
+		force_permalink( $this->getConferenceURL( true ) );
 	}
 
 	function getConferenceHumanStart() {

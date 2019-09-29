@@ -88,18 +88,15 @@ trait UserTrait {
 			CURRENT_CONFERENCE_UID,
 			$this->getUserUID()
 		);
-		return site_page( $url, $absolute );
+		$url = site_page( $url, $absolute );
+		return keep_url_in_language( $url );
 	}
 
 	/**
 	 * Force this request to the correct User permalink
 	 */
 	public function forceUserPermalink() {
-		$from = BASE_URL . $_SERVER['REQUEST_URI'];
-		$to = $this->getUserURL( true );
-		if( $from !== $to ) {
-			http_redirect( $to, 303 );
-		}
+		force_permalink( $this->getUserURL( true ) );
 	}
 
 	function getUserLink( $base = null, $html_class = null) {

@@ -17,6 +17,10 @@
 
 /*
  * This is the footer of the website
+ *
+ * Available variables:
+ *
+ *  $back: when is set, the back button is displayed
  */
 
 // do not visit directly
@@ -26,6 +30,13 @@ defined( 'ABSPATH' ) or exit;
 <!-- =========================
 	FOOTER SECTION
 ============================== -->
+
+<?php if( isset( $back ) ): ?>
+	<div class="container">
+		<a class="btn btn-primary" href="<?= keep_url_in_language( CURRENT_CONFERENCE_ROOT . _ ) ?>"><?= __( "Torna al Linux Day Torino" ) ?></a>
+	</div>
+<?php endif ?>
+
 <footer>
 	<div class="container">
 		<div class="row">

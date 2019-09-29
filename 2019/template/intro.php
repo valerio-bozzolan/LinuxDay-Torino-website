@@ -28,7 +28,6 @@ defined( 'ABSPATH' ) or exit;
 <section id="intro" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-12 col-sm-12">
 				<h3><?= __( "Sabato 26 Ottobre 2019" ) ?></h3>
 				<h1>Linux Day Torino</h1>
@@ -37,11 +36,8 @@ defined( 'ABSPATH' ) or exit;
                     '<span class="typing-smanettone">',
                     '</span>'
                 ) ?></div>
-				<a href="<?= CURRENT_CONFERENCE_ROOT ?>/#detail" class="btn btn-lg btn-default smoothScroll hidden-xs"><?= esc_attr( __( "SCOPRI DI PIÙ" ) ) ?></a>
-				<!-- <a href="#register" class="btn btn-lg btn-danger smoothScroll">CIAO</a>-->
+				<a href="#detail" class="btn btn-lg btn-default smoothScroll hidden-xs"><?= esc_attr( __( "SCOPRI DI PIÙ" ) ) ?></a>
 			</div>
-
-
 		</div>
 	</div>
 </section>

@@ -279,7 +279,7 @@ template( 'header', [
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-8">
-				<h2><?= __( "Luogo" ) ?></h2>
+				<h2><?= __( "Dove" ) ?></h2>
 				<p><?= __( "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da Montefeltro 2." ) ?></p>
 				<p><?= __( "Per raggiungerci puoi:" ) ?></p>
 				<ul>

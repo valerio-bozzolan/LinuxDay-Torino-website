@@ -311,4 +311,6 @@ $events = ( new QueryEvent() )
 <!-- End social -->
 
 <?php
-template( 'footer' );
+template( 'footer', [
+	'back' => true,
+] );

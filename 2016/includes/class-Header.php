@@ -85,13 +85,7 @@ class Header {
 		<?php } );
 		// Close header - End
 
-		$l = latest_language();
-
-		if($l) {
-			$l = $l->getISO();
-		} else {
-			$l = 'it';
-		}
+		$l = latest_language()->getISO();
 ?>
 <!DOCTYPE html>
 <html lang="<?= $l ?>">
@@ -163,7 +157,7 @@ class Header {
 <body>
 	<nav>
 		<div class="nav-wrapper purple darken-4">
-			<a class="brand-logo" href="<?= CURRENT_CONFERENCE_PATH . _ ?>" title="<?php echo esc_attr(SITE_NAME) ?>">
+			<a class="brand-logo" href="<?= keep_url_in_language( CURRENT_CONFERENCE_PATH . _ ) ?>" title="<?php echo esc_attr(SITE_NAME) ?>">
 				<img src="<?= STATIC_PATH ?>/ld-2016-logo-64.png" alt="<?php echo esc_attr(SITE_DESCRIPTION) ?>" />
 			</a>
 			<a href="#" data-activates="slide-out" class="button-collapse"><?= icon('menu') ?></a>
