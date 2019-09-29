@@ -215,33 +215,30 @@ template( 'header', $args );
 			<div class="row">
 			<?php foreach( $users as $user ): ?>
 				<div class="col-sm-12 col-md-6">
-					<div class="row valign-wrapper">
+					<div class="row">
 						<div class="col-sm-4 col-lg-3">
-							<a class="tooltipped" href="<?= esc_attr(
+							<p><a class="tooltipped" href="<?= esc_attr(
 								$user->getUserURL()
 							) ?>" title="<?= esc_attr( sprintf(
 								__("Profilo di %s"),
 								$user->getUserFullname()
-							) ) ?>" data-tooltip="<?= esc_attr(
-								$user->getUserFullname()
-							) ?>">
+							) ) ?>">
 								<img class="circle img-responsive hoverable" src="<?= esc_attr(
 									$user->getUserImage( 256 )
 								) ?>" alt="<?= esc_attr(
 									$user->getUserFullname()
 								) ?>" />
-							</a>
+							</a></p>
 						</div>
 						<div class="col-sm-8 col-lg-9">
-							<?= HTML::a(
+							<p><?= HTML::a(
 								$user->getUserURL(),
 								"<h4>" . esc_html( $user->getUserFullname() ) . "</h4>",
 								sprintf(
 									__("Profilo di %s"),
 									$user->getUserFullname()
-								),
-								'valign'
-							) ?>
+								)
+							) ?></p>
 						</div>
 					</div>
 				</div>

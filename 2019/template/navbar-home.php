@@ -30,6 +30,10 @@ defined( 'ABSPATH' ) or exit;
 
 $home = keep_url_in_language( CURRENT_CONFERENCE_ROOT . _ );
 
+// get the current URL but without the query string (without the language)
+$current_url = $_SERVER['REQUEST_URI'];
+$current_url = strtok( $current_url, '?' );
+
 $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 ?>
 <!-- =========================
@@ -53,6 +57,17 @@ $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 				<li><a href="<?= $home ?>#program" class="smoothScroll"><?= __( "Programma" ) ?></a></li>
 				<li><a href="<?= $home ?>#venue" class="smoothScroll"><?= __( "Dove" ) ?></a></li>
 				<li><a href="<?= $home ?>#contact" class="smoothScroll"><?= __( "Contatti" ) ?></a></li>
+
+				<?php foreach( all_languages() as $lang ): ?>
+					<?php if( $lang !== latest_language() ): ?>
+						<li><a hreflang="<?= $lang->getISO() ?>" href="<?=
+							// set the URL to this page, but with this language
+							esc_attr( http_build_get_query( $current_url, [
+								'l' => $lang->getCode(),
+							] ) )
+						?>"><?= icon( 'language' ) . ' ' . $lang->getHuman() ?></a></li>
+					<?php endif ?>
+				<?php endforeach ?>
 			</ul>
 
 		</div>
