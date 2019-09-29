@@ -80,8 +80,13 @@ function force_permalink( $permalink ) {
 		return;
 	}
 
+	// do not send a 301 Moved Permanently if the language was missing (maybe the user was just redirected to his language)
+	$status = isset( $_GET['l'] )
+		? 301  // 301 Moved Permanently
+		: 300; // 300 Multiple Choices
+
 	// redirect to the correct location
-	http_redirect( $permalink, 301 );
+	http_redirect( $permalink, $status );
 }
 
 /**
@@ -89,13 +94,12 @@ function force_permalink( $permalink ) {
  *
  * @return string
  */
-function keep_url_in_language( $url, $force = false ) {
+function keep_url_in_language( $url ) {
 
-	if( isset( $_GET['l'] ) || $force ) {
-		$url = http_build_get_query( $url, [
-			'l' => latest_language()->getCode(),
-		] );
-	}
+	$code = latest_language()->getCode();
+	$url = http_build_get_query( $url, [
+		'l' => latest_language()->getISO(),
+	] );
 
 	return $url;
 }
