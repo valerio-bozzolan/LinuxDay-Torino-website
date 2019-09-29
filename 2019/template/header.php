@@ -51,51 +51,6 @@ $args['og'] = array_replace( [
 	'type'   => 'website',
 	'title'  => $conference->getConferenceTitle(),
 ], $args['og'] );
-
-// TODO: move the define somewhere else (per-year, not a global parameter for every site across all years)
-define('DEFAULT_LANGUAGE_ISO', 'it');
-
-// I assume that latest_language()->getISO() does not return different codes for the same language:
-// e.g. it should return ONLY it_IT OR it, not "it_IT" some times and "it" some others
-// this does not appear to be the case and it breaks everything completely.
-
-// l is either given in the request or implicit
-$l = $_GET['l'] ?? latest_language()->getISO();
-
-// From the manual: "This function may not give correct results for relative URLs."
-// Then build a full URL!
-$parsed = parse_url("https://${_SERVER['HTTP_HOST']}${_SERVER['REQUEST_URI']}");
-if(isset($parsed["query"])) {
-	parse_str($parsed["query"], $query);
-} else {
-	$query = [];
-}
-
-if($l === DEFAULT_LANGUAGE_ISO) {
-	// Remove the ugly l
-	if(isset($_GET['l'])) {
-		unset($query["l"]);
-	}
-
-	// are there any remaining query parameters?
-	if(count($query) > 0) {
-		$query = '?' . http_build_query($query);
-	} else {
-		$query = '';
-	}
-
-	// l was there: redirect to page without l (or remove this "if" to get a canonical URL without l)
-	if(isset($_GET['l'])) {
-		// TODO: change to 301 when we're sure
-		header("Location: ${parsed['path']}$query", true, 302);
-		exit(0);
-	}
-} else {
-	// Other languages need the l for the canonical URL
-	$query["l"] = $l;
-	$query = '?' . http_build_query($query);
-}
-$canonical = "https://${_SERVER['HTTP_HOST']}${parsed['path']}$query";
 ?>
 <!DOCTYPE html>
 <html lang="<?= latest_language()->getISO() ?>">
@@ -109,8 +64,6 @@ http://www.templatemo.com/tm-486-new-event
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<link rel="canonical" href="<?= $canonical ?>">
 
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/font-awesome.min.css">
