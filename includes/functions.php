@@ -93,7 +93,7 @@ function keep_url_in_language( $url, $force = false ) {
 
 	if( isset( $_GET['l'] ) || $force ) {
 		$url = http_build_get_query( $url, [
-			'l' => latest_language()->getCode(),
+			'l' => latest_language()->getISO(),
 		] );
 	}
 
