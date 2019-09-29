@@ -30,13 +30,10 @@ if( !$conference ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$conference->forceConferencePermalink();
-}
-
 template( 'header', [
 	'conference' => $conference,
 	'intro'      => true,
+	'canonical'  => $conference->getConferenceURL( true ),
 ] );
 ?>
 

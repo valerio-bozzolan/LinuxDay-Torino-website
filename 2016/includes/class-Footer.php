@@ -116,7 +116,7 @@ class Footer {
 				<form method="get">
 					<select name="l">
 						<?php foreach( all_languages() as $l ): ?>
-							<option value="<?= $l->getCode() ?>"<?= selected( $l, latest_language() ) ?>><?= $l->getHuman() ?></option>
+							<option value="<?= $l->getISO() ?>"<?= selected( $l, latest_language() ) ?>><?= $l->getHuman() ?></option>
 						<?php endforeach ?>
 					</select>
 					<button type="submit" class="btn waves-effect"><?= __( "Scegli" ) ?></button>

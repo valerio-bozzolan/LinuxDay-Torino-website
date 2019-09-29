@@ -24,10 +24,6 @@ if( !$conference ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$conference->forceConferencePermalink();
-}
-
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
 enqueue_js('scrollfire');

@@ -92,13 +92,6 @@ trait UserTrait {
 		return keep_url_in_language( $url );
 	}
 
-	/**
-	 * Force this request to the correct User permalink
-	 */
-	public function forceUserPermalink() {
-		force_permalink( $this->getUserURL( true ) );
-	}
-
 	function getUserLink( $base = null, $html_class = null) {
 		$name = $this->getUserFullname();
 

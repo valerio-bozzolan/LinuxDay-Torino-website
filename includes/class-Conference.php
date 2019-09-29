@@ -53,7 +53,10 @@ trait ConferenceTrait {
 	public function getConferenceURL( $absolute = false ) {
 		$url = sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
 		$url = site_page( $url, $absolute );
-		return keep_url_in_language( $url );
+		if( $this->hasConferenceI18nSupport() ) {
+			$url = keep_url_in_language( $url );
+		}
+		return $url;
 	}
 
 	/**
@@ -63,13 +66,6 @@ trait ConferenceTrait {
 	 */
 	public function hasConferenceEventsURL() {
 		return $this->has( 'conference_events_url' );
-	}
-
-	/**
-	 * Force this request to the correct Conference permalink
-	 */
-	public function forceConferencePermalink() {
-		force_permalink( $this->getConferenceURL( true ) );
 	}
 
 	function getConferenceHumanStart() {
@@ -92,6 +88,15 @@ trait ConferenceTrait {
 			return $date->format( $format );
 		}
 		return $date;
+	}
+
+	/**
+	 * Check if this Conference has the internationalization support
+	 *
+	 * @return boolean
+	 */
+	public function hasConferenceI18nSupport() {
+		return $this->hasConferenceEventsURL();
 	}
 
 	/**

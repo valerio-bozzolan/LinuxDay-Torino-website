@@ -51,13 +51,6 @@ trait FullEventTrait {
 	}
 
 	/**
-	 * Force the current request to the correct Event permalink
-	 */
-	public function forceEventPermalink() {
-		force_permalink( $this->getEventURL( true ) );
-	}
-
-	/**
 	 * Create a Query to find the next Event in the same Room
 	 *
 	 * @return Query

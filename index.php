@@ -17,5 +17,5 @@
 
 require 'load.php';
 
-// redirect to latest conference with a temporary redirect
-http_redirect( _ . LATEST_CONFERENCE_UID, 307 );
+// redirect to latest conference with a 300 Multiple Choices redirect
+http_redirect( _ . LATEST_CONFERENCE_UID, 300 );

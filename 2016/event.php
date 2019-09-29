@@ -37,10 +37,6 @@ if( !$event ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$event->forceEventPermalink();
-}
-
 $args = [
 	'title' => sprintf(
 		__("%s: %s"),

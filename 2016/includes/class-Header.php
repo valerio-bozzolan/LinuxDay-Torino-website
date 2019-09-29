@@ -37,7 +37,7 @@ class Header {
 			'nav-title'   => SITE_NAME_SHORT,
 			'head-title'  => null,
 			'title'       => $menu ? $menu->name : null,
-			'url'         => $menu ? $menu->url  : null,
+			'url'         => $menu ? keep_url_in_language( $menu->url ) : null,
 			'not-found'   => false,
 			'user-navbar' => true,
 			'container'   => true,
@@ -63,6 +63,11 @@ class Header {
 				$args['title'],
 				$args['nav-title']
 			);
+		}
+
+		// force the permalink to this URL
+		if( $args['url'] && FORCE_PERMALINK ) {
+			force_permalink( $args['url'] );
 		}
 
 		header('Content-Type: text/html; charset=' . CHARSET);

@@ -43,18 +43,14 @@ if( !$user ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$user->forceUserPermalink();
-}
-
 enqueue_js('jquery');
 
 template( 'header', [
 	'conference' => $conference,
 	'title'      => $user->getUserFullname(),
+	'canonical'  => $user->getUserURL( true ),
 	'og' => [
 		'image' => $user->getUserImage( true ),
-		'url'   => $user->getUserURL( true ),
 		'type'  => 'profile',
 		'profile:first_name' => $user->get( 'user_name'    ),
 		'profile:last_name'  => $user->get( 'user_surname' ),
@@ -271,18 +267,18 @@ $events = ( new QueryEvent() )
 						echo esc_html( $event->getEventTitle() );
 					}
 				?></td>
-				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
+				<td><?= HTML::a(
+					$event->getConferenceURL(),
+					esc_html( $event->getConferenceTitle() )
+				) ?></td>
 				<td>
 					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
 						<?= esc_html( $event->getLocationName() ) ?>
 					</span><br />
 				</td>
 				<td>
-					<?php printf(
-						__("Ore <b>%s</b> (il %s)"),
-						$event->getEventStart("H:i"),
-						$event->getEventStart("d/m/Y")
-					) ?><br />
+					<?= esc_html( $event->getEventStart( __( "d/m/Y" ) ) ) ?>
+					<br />
 					<small><?= $event->getEventHumanStart() ?></small>
 				</td>
 			</tr>
