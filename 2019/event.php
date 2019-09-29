@@ -44,7 +44,7 @@ $args = [
 		$event->getChapterName(),
 		$event->getEventTitle()
 	),
-	'url' => $event->getEventURL()
+	'canonical' => $event->getEventURL( true ),
 ];
 
 if( $event->hasEventImage() ) {

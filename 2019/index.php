@@ -37,6 +37,7 @@ if( FORCE_PERMALINK ) {
 template( 'header', [
 	'conference' => $conference,
 	'intro'      => true,
+	'canonical'  => $conference->getConferenceURL( true ),
 ] );
 ?>
 

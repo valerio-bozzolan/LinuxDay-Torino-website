@@ -52,9 +52,9 @@ enqueue_js('jquery');
 template( 'header', [
 	'conference' => $conference,
 	'title'      => $user->getUserFullname(),
+	'canonical'  => $user->getUserURL( true ),
 	'og' => [
 		'image' => $user->getUserImage( true ),
-		'url'   => $user->getUserURL( true ),
 		'type'  => 'profile',
 		'profile:first_name' => $user->get( 'user_name'    ),
 		'profile:last_name'  => $user->get( 'user_surname' ),

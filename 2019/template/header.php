@@ -24,10 +24,15 @@
  *
  * $conference (object)         Current conference
  * $intro      (true|undefined) If true, you want that damn splash screen
+ * $og         (array)          OG meta tags
+ * $canonical  (string)         Canonical link tag
  */
 
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
+
+// canonical URL
+$canonical = isset( $canonical ) ? $canonical : null;
 
 // as default declare empty OG Meta tags
 if( ! isset( $args['og'] ) ) {
@@ -36,6 +41,7 @@ if( ! isset( $args['og'] ) ) {
 
 // set default OG Meta tags
 $args['og'] = array_replace( [
+	'url'    => $canonical,
 	'image'  => CURRENT_CONFERENCE_URL . '/images/linux-day-2019.png', // It's better an absolute URL here
 	'type'   => 'website',
 	'title'  => $conference->getConferenceTitle(),
@@ -66,6 +72,10 @@ http://www.templatemo.com/tm-486-new-event
 <!-- Organic fonts grown locally, hand-picked for your enojyment. Guaranteed tracking-free, absolutely no CDNs! -->
 <!-- Do you want even faster loading times with sites that use CDNs? Try https://decentraleyes.org/ (not sponsored, just a good extension) -->
 <link href='<?= CURRENT_CONFERENCE_ROOT ?>/css/poppins.css' rel='stylesheet' type='text/css'>
+
+<?php if( $canonical ): ?>
+	<link rel="canonical" href="<?= esc_attr( $canonical ) ?>" />
+<?php endif ?>
 
 <?php foreach( $args['og'] as $id => $value ): ?>
 	<meta property="og:<?= esc_attr( $id ) ?>" content="<?= esc_attr( $value ) ?>" />
