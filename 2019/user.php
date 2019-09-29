@@ -267,18 +267,18 @@ $events = ( new QueryEvent() )
 						echo esc_html( $event->getEventTitle() );
 					}
 				?></td>
-				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
+				<td><?= HTML::a(
+					$event->getConferenceURL(),
+					esc_html( $event->getConferenceTitle() )
+				) ?></td>
 				<td>
 					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
 						<?= esc_html( $event->getLocationName() ) ?>
 					</span><br />
 				</td>
 				<td>
-					<?php printf(
-						__("Ore <b>%s</b> (il %s)"),
-						$event->getEventStart("H:i"),
-						$event->getEventStart("d/m/Y")
-					) ?><br />
+					<?= esc_html( $event->getEventStart( __( "d/m/Y" ) ) ) ?>
+					<br />
 					<small><?= $event->getEventHumanStart() ?></small>
 				</td>
 			</tr>
