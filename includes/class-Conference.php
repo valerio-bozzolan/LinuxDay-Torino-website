@@ -53,7 +53,10 @@ trait ConferenceTrait {
 	public function getConferenceURL( $absolute = false ) {
 		$url = sprintf( PERMALINK_CONFERENCE, $this->getConferenceUID() );
 		$url = site_page( $url, $absolute );
-		return keep_url_in_language( $url );
+		if( $this->hasConferenceI18nSupport() ) {
+			$url = keep_url_in_language( $url );
+		}
+		return $url;
 	}
 
 	/**
@@ -85,6 +88,15 @@ trait ConferenceTrait {
 			return $date->format( $format );
 		}
 		return $date;
+	}
+
+	/**
+	 * Check if this Conference has the internationalization support
+	 *
+	 * @return boolean
+	 */
+	public function hasConferenceI18nSupport() {
+		return $this->hasConferenceEventsURL();
 	}
 
 	/**
