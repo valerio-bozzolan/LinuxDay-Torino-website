@@ -263,28 +263,24 @@ template( 'header', $args );
 	<!-- Stard previous/before -->
 	<section class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-6 col-lg-6">
 				<?php if( $previous ): ?>
-					<h3><?= icon('navigate_before'); echo __("Preceduto da") ?></h3>
-					<p class="flow-text">
-						<?= HTML::a(
-							$previous->getEventURL(),
-							esc_html( $previous->getEventTitle() )
-						) ?>
-						<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
-					</p>
+					<h3><?= __( "Preceduto da" ) ?></h3>
+					<h3><?= HTML::a(
+						$previous->getEventURL(),
+						icon( 'arrow-left' ) . ' ' . esc_html( $previous->getEventTitle() )
+					) ?></h3>
+					<time datetime="<?= $previous->getEventStart('Y-m-d H:i') ?>"><?= $previous->getEventHumanStart() ?></time>
 				<?php endif ?>
 			</div>
-			<div class="col-sm-12 col-md-6 text-right">
+			<div class="col-sm-12 col-md-6 col-lg-6 text-right">
 				<?php if( $next ): ?>
-					<h3><?= __("A seguire"); echo icon('navigate_next') ?></h3>
-					<p class="flow-text">
-						<?= HTML::a(
-							$next->getEventURL(),
-							esc_html( $next->getEventTitle() )
-						) ?>
-						<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
-					</p>
+					<h3><?= __( "A seguire" ) ?></h3>
+					<h3><?= HTML::a(
+						$next->getEventURL(),
+						esc_html( $next->getEventTitle() ) . ' ' . icon( 'arrow-right' )
+					) ?></h3>
+					<time datetime="<?= $next->getEventStart('Y-m-d H:i') ?>"><?= $next->getEventHumanStart() ?></time>
 				<?php endif ?>
 			</div>
 		</div>
