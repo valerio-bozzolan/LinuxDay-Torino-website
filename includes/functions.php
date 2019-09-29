@@ -81,7 +81,7 @@ function force_permalink( $permalink ) {
 	}
 
 	// redirect to the correct location
-	http_redirect( $permalink, 303 );
+	http_redirect( $permalink, 301 );
 }
 
 /**
