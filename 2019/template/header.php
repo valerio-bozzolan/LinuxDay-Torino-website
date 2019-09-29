@@ -34,6 +34,11 @@ defined( 'ABSPATH' ) or exit;
 // canonical URL
 $canonical = isset( $canonical ) ? $canonical : null;
 
+// if the canonical is specified, and we have to force the permalink, force that damn permalink
+if( $canonical && FORCE_PERMALINK ) {
+	force_permalink( $canonical );
+}
+
 // as default declare empty OG Meta tags
 if( ! isset( $args['og'] ) ) {
 	$args['og'] = [];
