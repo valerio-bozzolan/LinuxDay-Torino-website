@@ -41,10 +41,6 @@ if( !$user ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$user->forceUserPermalink();
-}
-
 Header::spawn( null, [
 	'title' => $user->getUserFullname(),
 	'url'   => $user->getUserURL(),

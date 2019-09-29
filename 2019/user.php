@@ -43,10 +43,6 @@ if( !$user ) {
 	die_with_404();
 }
 
-if( FORCE_PERMALINK ) {
-	$user->forceUserPermalink();
-}
-
 enqueue_js('jquery');
 
 template( 'header', [

@@ -65,13 +65,6 @@ trait ConferenceTrait {
 		return $this->has( 'conference_events_url' );
 	}
 
-	/**
-	 * Force this request to the correct Conference permalink
-	 */
-	public function forceConferencePermalink() {
-		force_permalink( $this->getConferenceURL( true ) );
-	}
-
 	function getConferenceHumanStart() {
 		return HumanTime::diff( $this->getConferenceStart() );
 	}
