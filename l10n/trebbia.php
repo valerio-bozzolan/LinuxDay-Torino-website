@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2019-03-30T17:00:40+00:00
+# Last update: 2019-09-30T08:49:54+02:00
 
 // conference[2016]::conference_title
 __("Linux Day Torino 2016");
@@ -55,6 +55,9 @@ __("Linux Day Torino 2008");
 
 // conference[2007]::conference_title
 __("Linux Day Torino 2007");
+
+// conference[2019]::conference_title
+__("Linux Day Torino 2019");
 
 // event[talk-base-1]::event_title
 __("Didattica del coding");
@@ -1259,6 +1262,119 @@ __("Watch-Penguin: affrontare la sicurezza aziendale");
 // event[soluzioni-gnulinux-dal-mercato-enterprise-alla-pmi]::event_title
 __("Soluzioni GNU/Linux: dal mercato enterprise alla PMI");
 
+// event[first-steps-with-gnu-linux]::event_title
+__("Primi passi con GNU/Linux");
+
+// event[first-steps-with-gnu-linux]::event_abstract
+__("50 minuti per sapere tutto ciò che serve per entrare nel mondo del software libero senza pentimento. Domande accette.");
+
+// event[dont-touch-my-data]::event_title
+__("Don't Touch My Data");
+
+// event[dont-touch-my-data]::event_abstract
+__("Grazie a qualche volontario dimostreremo come ogni giorno la nostra privacy viene completamente compromessa, e come difendersi.
+Portate l'amico «non ho niente da nascondere».");
+
+// event[private-cloud]::event_title
+__("Private Cloud");
+
+// event[private-cloud]::event_abstract
+__("Raggiungere l'indipendenza tecnologica è possibile. Tutti i servizi cloud che conosciamo possono essere sostituiti da un nostro computer.
+Pronti, via!");
+
+// event[private-cloud]::event_description
+__("Il talk si prefigge di illustrare le tecnologie e le metodologie per la creazione e configurazione di un proprio server privato.
+
+La prima parte si focalizza sulla storia recente di internet e descrive come esso sia completamente cambiato. Il software libero ed open source e le risorse quasi illimitate dei grandi colossi del web (Google, Microsoft, Apple, ecc.) hanno permesso la creazione di innumerevoli servizi: dalla posta elettronica alla gestione dei contatti e calendari, dal backup automatico sul cloud alla condivisione di video e documenti.
+
+Dopo la definizione (e l'interpretazione) del termine \"cloud\" vengono presentate le tecnologie necessarie ad ottenere l'indipendenza tecnologica: la configurazione di un proprio server. Sono elencati in dettaglio i software, gli strumenti e le soluzioni da utilizzare.
+
+L'ultima parte è dedicata alla descrizione di un caso pratico e reale, ovvero la configurazione di tre macchine ad uso aziendale dal 2010 ad oggi.");
+
+// event[big-data]::event_title
+__("Eccovi il Big Data");
+
+// event[big-data]::event_abstract
+__("Chi parla di Big Data è come i pescatori: c'è sempre chi  si inventerà la storia su quel tonno gigante. Quindi parleremo nel concreto delle tecnologie usate in ambito enterprise.");
+
+// event[rasa-ml]::event_title
+__("Rasa ML framework");
+
+// event[rasa-ml]::event_subtitle
+__("AI assistants and chatbots");
+
+// event[rasa-ml]::event_abstract
+__("Costruiamo assieme il nostro assistente utilizzando la tecnologia open source e scritta in Python: Rasa!
+
+Alla fine dei 30 minuti ci risponderà dal nostro smartphone.");
+
+// event[arduino]::event_title
+__("Workshop Arduino");
+
+// event[arduino]::event_abstract
+__("Arduino è una piattaforma di prototipizzazione. Ma cosa diavolo significa?");
+
+// event[offensive-security]::event_title
+__("From Zer0 t0 R00t");
+
+// event[offensive-security]::event_subtitle
+__("Offensive Security");
+
+// event[offensive-security]::event_abstract
+__("Abbiamo poco tempo per simulare un ambiente vulnerabile e poter testare insieme, uno ad uno, le più famose tecniche di penetration testing.
+Non rifatelo a casa.");
+
+// event[read-the-docs]::event_title
+__("ReadTheDocs");
+
+// event[read-the-docs]::event_abstract
+__("Un consulente per il Team per la Trasformazione Digitale del governo italiano parlerà di [Docs Italia](https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.");
+
+// event[read-the-docs]::event_description
+__("Durante il 2018 sono stato un consulente per il Team per la Trasformazione Digitale del governo italiano per lavorare su Docs Italia (https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.
+
+Non abbiamo scritto Docs Italia da zero, ma lo abbiamo costruito sopra a Read The Docs: la piattaforma di riferimento la documentazione di pacchetti Python.
+Questo ci ha permesso di risparmiare un bel po' di lavoro! Ma il software Open Source non si scrive da solo e abbiamo fatto la nostra parte contribuendo a Read The Docs. In questo talk racconterò cosa abbiamo fatto e cosa abbiamo imparato.");
+
+// event[rust]::event_title
+__("Rust");
+
+// event[rust]::event_abstract
+__("Vi parleremo di Rust, il linguaggio di programmazione usato da Cloudflare, Microsoft, Mozilla e molti altri per le sue performance e sicurezza inerente.");
+
+// event[mqtt]::event_title
+__("MQTT");
+
+// event[mqtt]::event_abstract
+__("Che cos'è l'MQTT e che ruolo ha nelle nostre vite? Vi mostreremo gli utilizzi di questo protocollo di messaggistica.");
+
+// event[deep-speech]::event_title
+__("Deep Speech");
+
+// event[deep-speech]::event_subtitle
+__("Riconoscimento vocale");
+
+// event[deep-speech]::event_abstract
+__("Come funziona una rete neurale per la decodifica della voce umana? E come contribuire? Lo scopriremo insieme ad una volontaria di Mozilla Foundation.");
+
+// event[apache-spark]::event_title
+__("Apache Spark");
+
+// event[apache-spark]::event_abstract
+__("Se avete mai sentito parlare di \"calcolo distribuito\", ora ve lo mostreremo, e si fa sul serio. Un sistemista ci mostrerà alcuni dettagli di questo strumento per il data analytics e machine learning algorithms.");
+
+// event[android]::event_title
+__("Android");
+
+// event[quantum-computing]::event_title
+__("Quantum Computing");
+
+// event[bim2gml]::event_title
+__("GIS - BIM2GML");
+
+// event[bim2gml]::event_abstract
+__("Strumenti per la conversione di formati per la rappresentazione 3D.");
+
 // location[1]::location_name
 __("Dipartimento di Informatica");
 
@@ -1324,6 +1440,18 @@ __("Torino Incontra");
 // location[9]::location_address
 __("Via Nino Costa 8, Torino");
 
+// location[10]::location_name
+__("Toolbox Coworking");
+
+// location[10]::location_address
+__("Via Agostino da Montefeltro 2, Torino");
+
+// location[11]::location_name
+__("Fablab");
+
+// location[11]::location_address
+__("Via Egeo 16, Torino");
+
 // track[base]::track_name
 __("Base");
 
@@ -1365,6 +1493,12 @@ __("Avanzato");
 
 // track[advanced]::track_label
 __("Adatto ad un pubblico di nerd disperati");
+
+// track[sikurezza]::track_name
+__("Sikurezza");
+
+// track[sicurezza]::track_name
+__("Sicurezza");
 
 // chapter[talk]::chapter_name
 __("Talk");
@@ -1465,6 +1599,18 @@ __("Sala Consiglio di Facoltà");
 // room[sala-einaudi]::room_name
 __("Sala Einaudi");
 
+// room[base]::room_name
+__("Aula Base");
+
+// room[dev]::room_name
+__("Aula Dev");
+
+// room[sys]::room_name
+__("Aula Sys");
+
+// room[misc]::room_name
+__("Aula Misc");
+
 // skill[asd]::skill_title
 __("asd");
 
@@ -1533,95 +1679,6 @@ __("Embedded");
 
 // skill[haskell]::skill_title
 __("Haskell");
-
-// user[boz]::user_bio
-__("Qualcuno ha detto... software libero?");
-
-// user[oirasor]::user_bio
-__("Studente di Ingegneria Informatica, appassionato di tante cose (forse troppe).
-
-Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo avanzare per migliorare le risorse e la conoscenza di tutti.
-
-Mi è capitato di organizzare il Linux Day 2016. =P
-
-Suonatore di Floppy, appassionato di Dama e Retrocomputing.");
-
-// user[dario]::user_bio
-__("Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per la didattica. Co-fondatore di [CoderDojo Torino2](http://www.coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali.it).
-
-Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal 2010.");
-
-// user[renzo]::user_bio
-__("Ricercatore, Maker, Insegnante, Sviluppatore...
-Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.
-In realtà vuole salvare il mondo, ma non ditelo a nessuno.");
-
-// user[luigi.maselli]::user_bio
-__("Fondatore <http://corso-javascript.it> e TorinoJS, software developer freelance.");
-
-// user[marco.cavallini]::user_bio
-__("Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel 1999 con le prime schede StrongArm.
-
-È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco ha fondato KOAN nel 1996, una software house specializzata in software embedded con sede in Italia, che offre servizi di sviluppo del kernel e formazione per i sistemi Linux embedded. Quando non si utilizza i computer, è solitamente interessato a mescolare la Fisica con la Filosofia.");
-
-// user[davide]::user_bio
-__("Davide è viaggiatore transalpino, programmatore della domenica (se non fa bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano gli amplificatori operazionali, in altre occasioni canta a squarciagola con altre persone. Appassionato di vecchi computer e di elettronica analogica, si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. Coordinatore del progetto open source FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due posti, soprattutto se a motore centrale.
-
-Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio ionico su vetro e come calcolare un modo di propagazione in una guida d'onda dielettrica.");
-
-// user[francesco]::user_bio
-__("Si diverte quando ha a che fare con tutto ciò che ha dei bit o della corrente, sistemista di professione, maker per diletto, podcaster (<http://geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al mese.
-
-Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e altre schedine embedded, basi di elettronica, programmatore a tempo perso (quali linguaggi? non è importante, impararne la sintassi non è la cosa che mi ostacola).");
-
-// user[massimo]::user_bio
-__("Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.");
-
-// user[elia]::user_bio
-__("Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.");
-
-// user[davide.isoardi]::user_bio
-__("Big Data System Architect e sysadmin.");
-
-// user[davide.vergari]::user_bio
-__("Big Data System Architect e sysadmin.");
-
-// user[davide.mainardi]::user_bio
-__("Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e sicurezza informatica, full stack Java developer, Consigliere della Fondazione dell'Ordine degli Ingegneri della Provincia di Torino.");
-
-// user[marco.signoretto]::user_bio
-__("The trash king!
-
-Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello aziendale.
-
-Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a muoversi in tutti i campi della creatività: dal product design alla grafica, dall'interaction design alla sostenibilità.");
-
-// user[alessio]::user_bio
-__("Appassionato di troppe cose, ho costretto il mio entusiasmo per la conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi piace giocare a scacchi e bere aranciata. Anche non contemporaneamente.");
-
-// user[mario.lacaj]::user_bio
-__("Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del Dipartimento di Informatica di Torino.
-
-Cosa c'entro? Te lo dico subito in questa intervista:
-
-<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-dipartimento/>");
-
-// user[madbob]::user_bio
-__("Presidente [Italian Linux Society](http://www.ils.org/).");
-
-// user[silux]::user_bio
-__("Vivo fin dal lontano '92, la mia vocazione è di fare il mago.
-
-Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, scrivere in un antico linguaggio per incantare oggetti e materializzare oggetti dalla plastica, e mi diverto tantissimo a farlo.
-
-L’Open source e l’open hardware è quello di cui c'è bisogno per usare al meglio la meravigliosa tecnologia intorno a noi.
-
-Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi e per chi non legge mai i testi delle licenze.");
-
-// user[tinytanic]::user_bio
-__("Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto che neanche nel 1983 sarebbe stato un buon computer.
-
-Ora cerco di sviluppare il mio futuro libero... e tu?");
 
 ######################################
 ##### Th-th-th-that's all folks! #####

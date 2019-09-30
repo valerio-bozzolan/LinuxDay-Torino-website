@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-29 09:25+0000\n"
+"POT-Creation-Date: 2019-09-30 06:56+0000\n"
 "PO-Revision-Date: 2019-09-29 11:29+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 "The website source code is distributed under the %s Free license. Clone it!"
 
-#: 2016/credits.php:204 2016/event.php:211 2019/event.php:166
+#: 2016/credits.php:204 2016/event.php:207 2019/event.php:162
 msgid "Materiale"
 msgstr "Files"
 
@@ -153,160 +153,160 @@ msgstr "the default image of some elements"
 msgid "Modifica %s: %s"
 msgstr "Edit %s: %s"
 
-#: 2016/event-edit.php:205 2016/event-edit.php:548 2016/user-edit.php:485
+#: 2016/event-edit.php:204 2016/event-edit.php:547 2016/user-edit.php:485
 #, php-format
 msgid "Aggiungi %s"
 msgstr "Add %s"
 
-#: 2016/event-edit.php:206 2016/index.php:76
+#: 2016/event-edit.php:205 2016/index.php:72
 msgid "Evento"
 msgstr "Event"
 
-#: 2016/event-edit.php:228 2016/user-edit.php:224
+#: 2016/event-edit.php:227 2016/user-edit.php:224
 msgid "Vedi"
 msgstr "See"
 
-#: 2016/event-edit.php:239
+#: 2016/event-edit.php:238
 msgid "Titolo"
 msgstr ""
 
-#: 2016/event-edit.php:250
+#: 2016/event-edit.php:249
 msgid "Codice"
 msgstr ""
 
-#: 2016/event-edit.php:261
+#: 2016/event-edit.php:260
 msgid "Sottotitolo"
 msgstr ""
 
-#: 2016/event-edit.php:272 2016/includes/class-Footer.php:115
+#: 2016/event-edit.php:271 2016/includes/class-Footer.php:115
 msgid "Lingua"
 msgstr "Language"
 
-#: 2016/event-edit.php:288
+#: 2016/event-edit.php:287
 msgid "Capitolo"
 msgstr ""
 
-#: 2016/event-edit.php:326
+#: 2016/event-edit.php:325
 msgid "Traccia"
 msgstr ""
 
-#: 2016/event-edit.php:364
+#: 2016/event-edit.php:363
 msgid "Stanza"
 msgstr ""
 
-#: 2016/event-edit.php:407
+#: 2016/event-edit.php:406
 msgid "Inizio"
 msgstr "Start"
 
-#: 2016/event-edit.php:420
+#: 2016/event-edit.php:419
 msgid "Fine"
 msgstr "End"
 
-#: 2016/event-edit.php:436 2016/event.php:147 2019/event.php:133
+#: 2016/event-edit.php:435 2016/event.php:143 2019/event.php:129
 msgid "Abstract"
 msgstr "Abstract"
 
-#: 2016/event-edit.php:443 2016/event-edit.php:458
+#: 2016/event-edit.php:442 2016/event-edit.php:457
 msgid "Traduzione dalla community:"
 msgstr ""
 
-#: 2016/event-edit.php:451 2016/event.php:157 2019/event.php:144
+#: 2016/event-edit.php:450 2016/event.php:153 2019/event.php:140
 msgid "Descrizione"
 msgstr "Description"
 
-#: 2016/event-edit.php:469 2016/user-edit.php:386
+#: 2016/event-edit.php:468 2016/user-edit.php:386
 msgid "Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:484 2016/event-edit.php:594 2016/user-edit.php:453
+#: 2016/event-edit.php:483 2016/event-edit.php:593 2016/user-edit.php:453
 #: 2016/user-edit.php:549
 msgid "Salva"
 msgstr "Save"
 
-#: 2016/event-edit.php:497 2016/user-edit.php:464
+#: 2016/event-edit.php:496 2016/user-edit.php:464
 msgid "Nuova Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:501 2016/user-edit.php:468
+#: 2016/event-edit.php:500 2016/user-edit.php:468
 msgid "Sfoglia"
 msgstr ""
 
-#: 2016/event-edit.php:508 2016/user-edit.php:475
+#: 2016/event-edit.php:507 2016/user-edit.php:475
 msgid "Carica"
 msgstr ""
 
-#: 2016/event-edit.php:521
+#: 2016/event-edit.php:520
 #, php-format
 msgid "Associa %s"
 msgstr "Associate %s"
 
-#: 2016/event-edit.php:522 2016/event-edit.php:551 2016/event-edit.php:599
+#: 2016/event-edit.php:521 2016/event-edit.php:550 2016/event-edit.php:598
 msgid "Utente"
 msgstr "User"
 
-#: 2016/event-edit.php:542 2016/user-edit.php:511 2019/index.php:173
+#: 2016/event-edit.php:541 2016/user-edit.php:511 2019/index.php:173
 msgid "Aggiungi"
 msgstr "Add"
 
-#: 2016/event-edit.php:550
+#: 2016/event-edit.php:549
 #, php-format
 msgid "Nuovo %s"
 msgstr "New %s"
 
-#: 2016/event-edit.php:573 2016/event-edit.php:598 2016/user-edit.php:526
+#: 2016/event-edit.php:572 2016/event-edit.php:597 2016/user-edit.php:526
 #, php-format
 msgid "Modifica %s"
 msgstr "Edit %s"
 
-#: 2016/event-edit.php:574
+#: 2016/event-edit.php:573
 msgid "Ordinamento"
 msgstr "Order"
 
-#: 2016/event-edit.php:591 2016/user-edit.php:546 2016/user-edit.php:569
+#: 2016/event-edit.php:590 2016/user-edit.php:546 2016/user-edit.php:569
 msgid "Elimina"
 msgstr "Delete"
 
-#: 2016/event.php:46 2019/event.php:43
+#: 2016/event.php:42 2019/event.php:39
 #, php-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: 2016/event.php:67
+#: 2016/event.php:63
 msgid "Grazie per esserti iscritto."
 msgstr "Thank you for you subscription."
 
-#: 2016/event.php:71
+#: 2016/event.php:67
 msgid "E-mail non valida."
 msgstr "E-mail invalid."
 
-#: 2016/event.php:82
+#: 2016/event.php:78
 msgid "Modifica evento"
 msgstr "Edit event"
 
-#: 2016/event.php:103 2016/user.php:170 2019/event.php:88 2019/user.php:193
+#: 2016/event.php:99 2016/user.php:166 2019/event.php:84 2019/user.php:189
 msgid "Tema"
 msgstr "Chapter"
 
-#: 2016/event.php:110 2016/index.php:78 2016/user.php:171 2019/event.php:95
-#: 2019/index.php:282 2019/user.php:194 2019/template/navbar-home.php:54
+#: 2016/event.php:106 2016/index.php:74 2016/user.php:167 2019/event.php:91
+#: 2019/index.php:282 2019/user.php:190 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr "Where"
 
-#: 2016/event.php:124 2016/index.php:77 2017/index.php:131 2019/event.php:109
-#: 2019/user.php:195
+#: 2016/event.php:120 2016/index.php:73 2017/index.php:131 2019/event.php:105
+#: 2019/user.php:191
 msgid "Quando"
 msgstr "When"
 
-#: 2016/event.php:128 2016/index.php:102 2019/event.php:113
+#: 2016/event.php:124 2016/index.php:98 2019/event.php:109
 #, php-format
 msgid "%s alle %s"
 msgstr "%s at %s"
 
-#: 2016/event.php:134 2019/event.php:119
+#: 2016/event.php:130 2019/event.php:115
 msgid "Scarica promemoria calendario"
 msgstr ""
 
-#: 2016/event.php:168
+#: 2016/event.php:164
 msgid ""
 "Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa "
 "pagina."
@@ -314,74 +314,74 @@ msgstr ""
 "Invite your friends to subscribe in this page sharing the URL of this web "
 "page."
 
-#: 2016/event.php:174
+#: 2016/event.php:170
 msgid "Iscrizioni"
 msgstr "Subscriptions"
 
-#: 2016/event.php:175
+#: 2016/event.php:171
 msgid ""
 "Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare "
 "il tuo interesse:"
 msgstr ""
 "Subscriptions are still open. Insert your e-mail to express your interest:"
 
-#: 2016/event.php:178 2016/user-edit.php:281
+#: 2016/event.php:174 2016/user-edit.php:281
 msgid "E-mail"
 msgstr "E-mail"
 
-#: 2016/event.php:182
+#: 2016/event.php:178
 msgid "Sottoscrivi"
 msgstr "Subscribe"
 
-#: 2016/event.php:198 2019/event.php:154
+#: 2016/event.php:194 2019/event.php:150
 msgid "Note"
 msgstr "Notes"
 
-#: 2016/event.php:218 2019/event.php:173
+#: 2016/event.php:214 2019/event.php:169
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Download %s sharable under %s license."
 
-#: 2016/event.php:237 2019/event.php:192
+#: 2016/event.php:233 2019/event.php:188
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr "See %s sharable under %s license."
 
-#: 2016/event.php:259 2019/event.php:213
+#: 2016/event.php:255 2019/event.php:209
 msgid "Relatori"
 msgstr "Speakers"
 
-#: 2016/event.php:273 2016/event.php:290 2019/event.php:227 2019/event.php:244
+#: 2016/event.php:269 2016/event.php:286 2019/event.php:223 2019/event.php:238
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profile of %s"
 
-#: 2016/event.php:301 2019/event.php:255
+#: 2016/event.php:297 2019/event.php:248
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "The speaker list is not known yet."
 
-#: 2016/event.php:324 2019/event.php:275
+#: 2016/event.php:320 2019/event.php:268
 msgid "Preceduto da"
 msgstr "Previous"
 
-#: 2016/event.php:336 2019/event.php:287
+#: 2016/event.php:332 2019/event.php:278
 msgid "A seguire"
 msgstr "Next"
 
-#: 2016/index.php:72
+#: 2016/index.php:68
 #, php-format
 msgid "Il %s si è concluso..."
 msgstr "The %s ended..."
 
-#: 2016/index.php:73
+#: 2016/index.php:69
 msgid "Ma abbiamo altro!"
 msgstr "But we have more!"
 
-#: 2016/index.php:103
+#: 2016/index.php:99 2019/user.php:280
 msgid "d/m/Y"
 msgstr "m/d/Y"
 
-#: 2016/index.php:135
+#: 2016/index.php:131
 #, php-format
 msgid ""
 "Il Linux Day è la principale manifestazione italiana di promozione di "
@@ -394,19 +394,19 @@ msgstr ""
 "was at <strong>%s</strong> (%s) at the <strong>Computer Science department</"
 "strong> of the Turin University of Studies."
 
-#: 2016/index.php:139 2016/includes/class-Header.php:151
+#: 2016/index.php:135 2016/includes/class-Header.php:156
 msgid "https://it.wikipedia.org/wiki/GNU"
 msgstr "https://en.wikipedia.org/wiki/GNU"
 
-#: 2016/index.php:145
+#: 2016/index.php:141
 msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/index.php:166
+#: 2016/index.php:162
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr "This year, the national subject is... <code>coding</code>!"
 
-#: 2016/index.php:190
+#: 2016/index.php:186
 #, php-format
 msgid ""
 "Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s "
@@ -419,126 +419,126 @@ msgstr ""
 "needs of a wide audience (from the younger, to the curious person, up to the "
 "experts)."
 
-#: 2016/index.php:198
+#: 2016/index.php:194
 #, php-format
 msgid "In seguito si riporta la tabella dei talk suddivisa in %s categorie:"
 msgstr "Here is the talk table divided in %s categories:"
 
-#: 2016/index.php:208
+#: 2016/index.php:204
 msgid "Planimetria"
 msgstr "Planimetry"
 
-#: 2016/index.php:209
+#: 2016/index.php:205
 msgid "La manifestazione è suddivisa in aule tematiche."
 msgstr "The manifestation it was subdivided in thematic rooms:"
 
-#: 2016/index.php:214
+#: 2016/index.php:210
 msgid "Planimetria Dipartimento di Informatica"
 msgstr "Computer Science department planimetry"
 
-#: 2016/index.php:223
+#: 2016/index.php:219
 msgid "App Android"
 msgstr "Android App"
 
-#: 2016/index.php:225
+#: 2016/index.php:221
 #, php-format
 msgid ""
 "La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"
 msgstr "Are you reading the talks over a small screen? Try the %s app!"
 
-#: 2016/index.php:240 2016/index.php:252
+#: 2016/index.php:236 2016/index.php:248
 #, php-format
 msgid "Scarica e installa %s:"
 msgstr "Download and install %s:"
 
-#: 2016/index.php:246
+#: 2016/index.php:242
 msgid "Installa F-Droid"
 msgstr "Install F-Droid"
 
-#: 2016/index.php:258
+#: 2016/index.php:254
 msgid "Installa LDTO16"
 msgstr "Install LDTO16"
 
-#: 2016/index.php:267
+#: 2016/index.php:263
 msgid "Attività"
 msgstr "Activities"
 
-#: 2016/index.php:268
+#: 2016/index.php:264
 msgid "In contemporanea ai talk avranno luogo diverse attività:"
 msgstr "At the same time of the talks, various activities will take place:"
 
-#: 2016/index.php:272
+#: 2016/index.php:268
 msgid "Riparazione di apparecchiature elettroniche."
 msgstr "Fixing electronic devices"
 
-#: 2016/index.php:273
+#: 2016/index.php:269
 msgid "Associazione Restarters Torino"
 msgstr "Restarters Torino association"
 
-#: 2016/index.php:275
+#: 2016/index.php:271
 #, php-format
 msgid "dall'%s"
 msgstr "by %s"
 
-#: 2016/index.php:279
+#: 2016/index.php:275
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
 msgstr "Coding lab for children themed Linux Day"
 
-#: 2016/index.php:281
+#: 2016/index.php:277
 #, php-format
 msgid "%s e %s."
 msgstr "%s and %s."
 
-#: 2016/index.php:284
+#: 2016/index.php:280
 msgid "CoderDojo Torino"
 msgstr "CoderDojo Turin"
 
-#: 2016/index.php:291
+#: 2016/index.php:287
 msgid "Coderdojo Torino 2"
 msgstr "CoderDojo Turin 2"
 
-#: 2016/index.php:303
+#: 2016/index.php:299
 msgid "Allestimento museale di Retrocomputing."
 msgstr "Retrocomputing museum exhibition"
 
-#: 2016/index.php:306
+#: 2016/index.php:302
 #, php-format
 msgid "dal %s"
 msgstr "by %s"
 
-#: 2016/index.php:310
+#: 2016/index.php:306
 msgid ""
 "LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
 msgstr ""
 "LIP (Linux Installation Party) and technical assistance to GNU/Linux "
 "distributions."
 
-#: 2016/index.php:311
+#: 2016/index.php:307
 msgid "volontari"
 msgstr "volunteers"
 
-#: 2016/index.php:322
+#: 2016/index.php:318
 msgid "Come arrivare"
 msgstr "How to reach us"
 
-#: 2016/index.php:331
+#: 2016/index.php:327
 msgid "Abilitare JavaScript per la mappa interattiva."
 msgstr "Enable JavaScript for interactive map."
 
-#: 2016/index.php:342
+#: 2016/index.php:338
 #, php-format
 msgid "Vedi %s su OpenStreetMap"
 msgstr "See %s on OpenStreetMap"
 
-#: 2016/index.php:363
+#: 2016/index.php:359
 msgid "Le quattro libertà fontamentali del software libero"
 msgstr "The four fundamentals of Free as in Freedom software:"
 
-#: 2016/index.php:370
+#: 2016/index.php:366
 msgid "Ingresso gratuito"
 msgstr "Free (as in beer) entry"
 
-#: 2016/index.php:373
+#: 2016/index.php:369
 #, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
@@ -553,15 +553,15 @@ msgstr ""
 "Days always indipendent, Free and without costs.<br /> See you on <strong>"
 "%s</strong>!"
 
-#: 2016/index.php:380
+#: 2016/index.php:376
 msgid "22 ottobre"
 msgstr "October 22nd"
 
-#: 2016/index.php:386
+#: 2016/index.php:382
 msgid "Scopri i nostri partner"
 msgstr "Our partners"
 
-#: 2016/index.php:388
+#: 2016/index.php:384
 #, php-format
 msgid "Partner %s"
 msgstr "%s partner"
@@ -595,23 +595,27 @@ msgstr "Photos"
 msgid "Crediti"
 msgstr "Credits"
 
-#: 2016/login.php:41
+#: 2016/login.php:40
+msgid "Login"
+msgstr ""
+
+#: 2016/login.php:48
 msgid "Sei loggato!"
 msgstr "You are logged in!"
 
-#: 2016/login.php:44
+#: 2016/login.php:51
 msgid "Sloggati"
 msgstr "Log out"
 
-#: 2016/login.php:53
+#: 2016/login.php:65
 msgid "Nome utente"
 msgstr "Username"
 
-#: 2016/login.php:57
+#: 2016/login.php:69
 msgid "Password"
 msgstr "Password"
 
-#: 2016/login.php:62
+#: 2016/login.php:74
 msgid "Accedi"
 msgstr "Log in"
 
@@ -696,11 +700,10 @@ msgid "Modifica utente %s"
 msgstr "Edit user %s"
 
 #: 2016/user-edit.php:215
-#, fuzzy
 msgid "Aggiungi Utente"
-msgstr "Add user"
+msgstr "Add User"
 
-#: 2016/user-edit.php:236 2016/user.php:168 2019/user.php:191
+#: 2016/user-edit.php:236 2016/user.php:164 2019/user.php:187
 msgid "Nome"
 msgstr "Name"
 
@@ -738,58 +741,58 @@ msgstr ""
 msgid "Skill"
 msgstr ""
 
-#: 2016/user.php:62 2019/event.php:65 2019/index.php:150 2019/user.php:75
+#: 2016/user.php:58 2019/event.php:61 2019/index.php:150 2019/user.php:71
 msgid "Modifica"
 msgstr "Edit"
 
-#: 2016/user.php:94 2019/user.php:112
+#: 2016/user.php:90 2019/user.php:108
 msgid "Sito personale"
 msgstr "Personal website"
 
-#: 2016/user.php:116 2019/user.php:134
+#: 2016/user.php:112 2019/user.php:130
 msgid "Le mie skill:"
 msgstr "My skills:"
 
-#: 2016/user.php:131
+#: 2016/user.php:127
 #, fuzzy, php-format
 msgid "La mia licenza di software libero preferita è la %s."
 msgstr "My favorite Free as in freedom software license is the <b>%s</b>."
 
-#: 2016/user.php:147 2019/user.php:169
+#: 2016/user.php:143 2019/user.php:165
 msgid "Bio"
 msgstr "Bio"
 
-#: 2016/user.php:156 2019/user.php:176 l10n/trebbia.php:1370
+#: 2016/user.php:152 2019/user.php:172 l10n/trebbia.php:1504
 msgid "Talk"
 msgstr "Talk"
 
-#: 2016/user.php:169 2019/user.php:192
+#: 2016/user.php:165 2019/user.php:188
 msgid "Tipo"
 msgstr "Type"
 
-#: 2016/user.php:172
+#: 2016/user.php:168
 msgid "When"
 msgstr "Quando"
 
-#: 2016/user.php:185 2019/user.php:208
+#: 2016/user.php:181 2019/user.php:204
 #, php-format
 msgid "Vedi %s"
 msgstr "See %s"
 
-#: 2016/user.php:199 2016/user.php:256 2019/user.php:222 2019/user.php:282
+#: 2016/user.php:195 2016/user.php:252 2019/user.php:218
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr "At <b>%s</b> (%s)"
 
-#: 2016/user.php:210 2019/user.php:234
+#: 2016/user.php:206 2019/user.php:230
 msgid "Quest'anno il relatore non ha tenuto nessun talk."
 msgstr "This speaker has not had any talk this year."
 
-#: 2016/user.php:228
+#: 2016/user.php:224
 msgid "Altre partecipazioni"
 msgstr "Other partecipations"
 
-#: 2016/user.php:273 2019/user.php:298
+#: 2016/user.php:269 2019/user.php:294
 msgid "Social"
 msgstr "Social"
 
@@ -926,7 +929,7 @@ msgstr "Take the bus 59 or 50/"
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Enable JavaScript to see the map"
 
-#: 2017/index.php:170 2019/index.php:86 2019/template/navbar-home.php:53
+#: 2017/index.php:170 2019/index.php:83 2019/template/navbar-home.php:57
 msgid "Programma"
 msgstr "Schedule"
 
@@ -999,69 +1002,67 @@ msgstr "LDTO2017"
 msgid "API"
 msgstr "API"
 
-#: 2019/index.php:52
+#: 2019/index.php:49
 msgid "Tutti insieme"
-msgstr ""
+msgstr "All toghether"
 
-#: 2019/index.php:53
+#: 2019/index.php:50
 msgid ""
 "LAN party, installation party, mini Restart Party. Porta un amico da "
 "convertire: ci divertiremo insieme a tutte le community."
 msgstr ""
 
-#: 2019/index.php:59
-#, fuzzy, php-format
+#: 2019/index.php:56
+#, php-format
 msgid "%s sessioni"
-msgstr "sessions"
+msgstr "%s sessions"
 
-#: 2019/index.php:62
+#: 2019/index.php:59
 msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
 msgstr ""
 
-#: 2019/index.php:68
-#, fuzzy, php-format
+#: 2019/index.php:65
+#, php-format
 msgid "%s relatori"
-msgstr "speakers"
+msgstr "%s speakers"
 
-#: 2019/index.php:71
+#: 2019/index.php:68
 msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
 msgstr ""
 
-#: 2019/index.php:87
+#: 2019/index.php:84
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
-msgstr ""
+msgstr "Here a taste of the available topics:"
 
-#: 2019/index.php:95 2019/index.php:131
-#, fuzzy, php-format
+#: 2019/index.php:92 2019/index.php:131
+#, php-format
 msgid "Aula %s"
-msgstr "\"B\" room"
+msgstr "%s room"
 
 #: 2019/index.php:122
-#, fuzzy, php-format
+#, php-format
 msgid "Di %s"
-msgstr "See %s"
+msgstr "By %s"
 
 #: 2019/index.php:123
-#, fuzzy
 msgid "Speaker Segreto"
-msgstr "Speakers"
+msgstr "Secret Speaker"
 
 #: 2019/index.php:144
 msgid "Salva sul calendario"
-msgstr ""
+msgstr "Save on calendar"
 
 #: 2019/index.php:195
 msgid "Domande frequenti"
-msgstr ""
+msgstr "Frequently asked questions"
 
 #: 2019/index.php:206
-#, fuzzy
 msgid "Cos'è il Linux Day?"
-msgstr "What is the Linux Day Turin"
+msgstr "What is the Linux Day?"
 
 #: 2019/index.php:212
 msgid ""
@@ -1168,7 +1169,7 @@ msgid ""
 "email %s o al numero %s."
 msgstr "Contact us at the address %s or at the number %s."
 
-#: 2019/load.php:43
+#: 2019/load.php:43 l10n/trebbia.php:60
 #, fuzzy
 msgid "Linux Day Torino 2019"
 msgstr "Linux Day Turin 2016"
@@ -1178,12 +1179,12 @@ msgstr "Linux Day Turin 2016"
 msgid "LDTO2019"
 msgstr "LDTO2016"
 
-#: 2019/user.php:149
+#: 2019/user.php:145
 #, php-format
 msgid "La mia licenza di software libero preferita è la <b>%s</b>."
 msgstr "My favorite Free as in freedom software license is the <b>%s</b>."
 
-#: 2019/user.php:253
+#: 2019/user.php:249
 #, fuzzy
 msgid "Altre partecipazioni passate"
 msgstr "Other partecipations"
@@ -1392,7 +1393,7 @@ msgstr "external video"
 msgid "%s %s"
 msgstr "%s %s"
 
-#: includes/class-User.php:108
+#: includes/class-User.php:101
 #, php-format
 msgid "Profilo utente di %s"
 msgstr "Profile of user %s"
@@ -1509,11 +1510,11 @@ msgstr "Linux Day Turin 2016"
 msgid "Linux Day Torino 2007"
 msgstr "Linux Day Turin 2017"
 
-#: l10n/trebbia.php:60
+#: l10n/trebbia.php:63
 msgid "Didattica del coding"
 msgstr "Coding didactics"
 
-#: l10n/trebbia.php:63
+#: l10n/trebbia.php:66
 msgid ""
 "Le basi del coding sono fondamentali, come leggere e scrivere.\n"
 "Quali strumenti e metodi didattici hanno a disposizione insegnanti e "
@@ -1522,11 +1523,11 @@ msgstr ""
 "Coding basics are fundamentals, like reading and writing. \n"
 "Which didactics tools and methods do teachers and parents have?"
 
-#: l10n/trebbia.php:67
+#: l10n/trebbia.php:70
 msgid "Introduzione alla programmazione con JavaScript"
 msgstr "Introduction to JavaScript programming"
 
-#: l10n/trebbia.php:70
+#: l10n/trebbia.php:73
 msgid ""
 "Un viaggio nel magico mondo della programmazione con consigli pratici e "
 "tecnici per chi aspira a creare software e non solo subirlo."
@@ -1535,11 +1536,11 @@ msgstr ""
 "technical recommendation to whoever aspires to create software and not just "
 "having it imposed on them."
 
-#: l10n/trebbia.php:73
+#: l10n/trebbia.php:76
 msgid "Non bisogna aver paura di IPv6"
 msgstr "Do not fear IPv6"
 
-#: l10n/trebbia.php:76
+#: l10n/trebbia.php:79
 msgid ""
 "Una breve presentazione non tecnica di IPv6, dalle caratteristiche alle "
 "potenzialità, le differenze da IPv4 e l'implementazione in ambiente GNU/"
@@ -1549,15 +1550,15 @@ msgstr ""
 "its potentiality, its difference with IPv4 and its implementation in GNU/"
 "Linux environments."
 
-#: l10n/trebbia.php:79
+#: l10n/trebbia.php:82
 msgid "La tecnologia LoRa e le sue applicazioni IoT"
 msgstr "LoRa technology and its implementation to IoT"
 
-#: l10n/trebbia.php:82
+#: l10n/trebbia.php:85
 msgid "Rinascimento 2.0"
 msgstr "Renaissance 2.0"
 
-#: l10n/trebbia.php:85
+#: l10n/trebbia.php:88
 msgid ""
 "Non è una lezione di storia... o forse sì. Stiamo scrivendo la storia che "
 "leggeranno i nostri pronipoti. Siamo spesso troppo presi dai gadget "
@@ -1568,11 +1569,11 @@ msgstr ""
 "our grandchildren will study. We are often to taken by technological gadgets "
 "to realize that a revolution is taking place: we are entering a new era. "
 
-#: l10n/trebbia.php:88
+#: l10n/trebbia.php:91
 msgid "Utilizzi di GNU/Linux"
 msgstr "GNU/Linux uses"
 
-#: l10n/trebbia.php:91
+#: l10n/trebbia.php:94
 msgid ""
 "Il partecipanti saranno coinvolti in un sondaggio interattivo sugli utilizzi "
 "del software libero della vita di tutti i giorni. Si suggerisce di invitare "
@@ -1582,16 +1583,16 @@ msgstr ""
 "Freedom Software uses in every day life. It's recommended to bring with you "
 "your typical skeptic friend and/or the fanboy (╯°□°)╯."
 
-#: l10n/trebbia.php:94
+#: l10n/trebbia.php:97
 msgid "Linux al Comune di Torino"
 msgstr "Linux to Municipality of Turin"
 
-#: l10n/trebbia.php:97
+#: l10n/trebbia.php:100
 msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
 msgstr ""
 "Yocto Project, an automatic generator of embedded Linux distributions. "
 
-#: l10n/trebbia.php:100
+#: l10n/trebbia.php:103
 msgid ""
 "Lo Yocto Project è un progetto di collaborazione open source che fornisce "
 "modelli, strumenti e metodi che consentono di creare sistemi Linux-based "
@@ -1627,11 +1628,11 @@ msgstr ""
 "letting users concentrate on the characteristics and development of their "
 "product."
 
-#: l10n/trebbia.php:103
+#: l10n/trebbia.php:106
 msgid "Dieci anni dietro a FidoCadJ"
 msgstr "Ten years put behind FidoCadj"
 
-#: l10n/trebbia.php:106
+#: l10n/trebbia.php:109
 msgid ""
 "Dietro le quinte del progetto open source [FidoCadJ](http://darwinne.github."
 "io/FidoCadJ/): un editor per l'elettronica (e non solo), usato in diversi "
@@ -1641,11 +1642,11 @@ msgstr ""
 "open-source project: an editor for electronics (and not only), used in "
 "different Italian forums."
 
-#: l10n/trebbia.php:109
+#: l10n/trebbia.php:112
 msgid "Un bot di Telegram con Python"
 msgstr "A Telegram bot with Python"
 
-#: l10n/trebbia.php:112
+#: l10n/trebbia.php:115
 msgid ""
 "Usare Python e la libreria Telepot per sviluppare un semplice bot su "
 "Telegram che tira un dado da 6 per noi. Il tutto su un Raspberry Pi, "
@@ -1655,7 +1656,7 @@ msgstr ""
 "create a simple 6-faces dice for us. The project is deployed on a  Raspberry "
 "PI, small, cheap and low energy."
 
-#: l10n/trebbia.php:115
+#: l10n/trebbia.php:118
 msgid ""
 "Slide con esempi di codice e presentazione del Raspberry dal vivo, se c'è "
 "connettività e tempo una breve dimostrazione."
@@ -1663,12 +1664,12 @@ msgstr ""
 "Slides with code examples and a live show of the Raspberry, and a brief "
 "demonstration if there is enough time."
 
-#: l10n/trebbia.php:118
+#: l10n/trebbia.php:121
 msgid "Docker: distribuiamo applicazioni"
 msgstr "Docker: we supply applications"
 
 # Come si traduce sistemi distribuiti? ~Liv
-#: l10n/trebbia.php:121
+#: l10n/trebbia.php:124
 msgid ""
 "Una introduzione ai sistemi distribuiti tramite la gestione dei container "
 "realizzati con Docker.\n"
@@ -1680,11 +1681,11 @@ msgstr ""
 "An answer to: what do we need Docker for? How to install it? How do I manage "
 "it?"
 
-#: l10n/trebbia.php:125
+#: l10n/trebbia.php:128
 msgid "Hadoop - BigData in streaming"
 msgstr "Hadoop - BigData in streaming"
 
-#: l10n/trebbia.php:128
+#: l10n/trebbia.php:131
 msgid ""
 "Big Data, cosa sono e dove vanno? Use case di un cluster Hadoop per "
 "l'elaborazione in streaming con Apache NiFi, Kafka e Solr."
@@ -1692,11 +1693,11 @@ msgstr ""
 "What are BigData and where do they go? Case use of a cluster Hadoop to "
 "elaborate while streaming with Apache NiFi, Kafka and Solr."
 
-#: l10n/trebbia.php:131
+#: l10n/trebbia.php:134
 msgid "InfoSec. Istruzioni per l'uso."
 msgstr "InfoSec. How to use."
 
-#: l10n/trebbia.php:134
+#: l10n/trebbia.php:137
 msgid ""
 "InfoSec → Information Security → Sicurezza delle informazioni.\n"
 "\n"
@@ -1708,11 +1709,11 @@ msgstr ""
 "Talk will show application and give practical advice in order to keep "
 "(mainly) safe you \"digital life\"."
 
-#: l10n/trebbia.php:139
+#: l10n/trebbia.php:142
 msgid "Sostenibilità e Open Culture all'Università"
 msgstr "Sustainability and Open Culture at University"
 
-#: l10n/trebbia.php:142
+#: l10n/trebbia.php:145
 msgid ""
 "Le apparecchiature guaste sono una risorsa più che un rifiuto. Al "
 "Politecnico un gruppo di studenti intende costituire un team dove i ragazzi "
@@ -1725,27 +1726,27 @@ msgstr ""
 "informations and provide society around them with free of charge working "
 "devices."
 
-#: l10n/trebbia.php:145
+#: l10n/trebbia.php:148
 msgid "Wikidata: la base di conoscenza libera"
 msgstr "Wikidata: the ground of Free knowledge"
 
-#: l10n/trebbia.php:148 l10n/trebbia.php:1529
+#: l10n/trebbia.php:151 l10n/trebbia.php:1675
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
-#: l10n/trebbia.php:151
+#: l10n/trebbia.php:154
 msgid "LIP"
 msgstr "LIP"
 
-#: l10n/trebbia.php:154 l10n/trebbia.php:1373
+#: l10n/trebbia.php:157 l10n/trebbia.php:1507
 msgid "Linux Installation Party"
 msgstr "Linux Installation Party"
 
-#: l10n/trebbia.php:157
+#: l10n/trebbia.php:160
 msgid "Installazione di varie distribuzioni GNU/Linux."
 msgstr "Installation of various GNU/Linux distributions."
 
-#: l10n/trebbia.php:160
+#: l10n/trebbia.php:163
 msgid ""
 "Linux Installation Party e assistenza tecnica distribuzioni GNU/Linux. "
 "Gestito da volontari."
@@ -1753,15 +1754,15 @@ msgstr ""
 "Linux Installation Party and technical assistance on GNU/Linux "
 "distributions. Run by Volunteers."
 
-#: l10n/trebbia.php:163 l10n/trebbia.php:1376
+#: l10n/trebbia.php:166 l10n/trebbia.php:1510
 msgid "Coderdojo"
 msgstr "Coderdojo"
 
-#: l10n/trebbia.php:166
+#: l10n/trebbia.php:169
 msgid "Laboratorio di coding per i più piccoli a tema Linux Day."
 msgstr "Coding lab for children themed Linux Day."
 
-#: l10n/trebbia.php:169
+#: l10n/trebbia.php:172
 msgid ""
 "Ebbene sì. Per la prima volta nelle edizioni torinesi del Linux Day, si è "
 "deciso di ospitare un CoderDojo, un po' particolare, dove i ninja si "
@@ -1788,11 +1789,11 @@ msgstr ""
 "Particular thanks go to the two groups that made this experience possible "
 "CoderDojo Turin and CoderDojo Turin 2."
 
-#: l10n/trebbia.php:177
+#: l10n/trebbia.php:180
 msgid "Lezione introduttiva corso GNU/Linux"
 msgstr "Introduction to GNU/Linux"
 
-#: l10n/trebbia.php:180
+#: l10n/trebbia.php:183
 msgid ""
 "Questa è stata la prima lezione introduttiva dell'iniziativa del comitato "
 "Linux Day Torino.\n"
@@ -1803,11 +1804,11 @@ msgstr ""
 "\n"
 "It was an introductive lesson about GNU/Linux and to the Free Software world."
 
-#: l10n/trebbia.php:185
+#: l10n/trebbia.php:188
 msgid "Installiamo insieme una distribuzione GNU/Linux"
 msgstr "Installation of a GNU/Linux distribution"
 
-#: l10n/trebbia.php:188
+#: l10n/trebbia.php:191
 msgid ""
 "Questa è la seconda lezione di un'iniziativa promossa dal comitato Linux Day "
 "Torino."
@@ -1815,11 +1816,11 @@ msgstr ""
 "This is the second lesson from an initiative promoted by the Linux Day Turin "
 "committee."
 
-#: l10n/trebbia.php:191
+#: l10n/trebbia.php:194
 msgid "Manutenzione di un sistema basato su Debian"
 msgstr "Maintainment of a Debian-based system"
 
-#: l10n/trebbia.php:194
+#: l10n/trebbia.php:197
 msgid ""
 "La gestione di un sistema Debian-like (Debian, varie Ubuntu, etc.).\n"
 "\n"
@@ -1831,11 +1832,11 @@ msgstr ""
 "This is the third lesson from an initiative promoted by the Linux Day Turin "
 "committee."
 
-#: l10n/trebbia.php:199
+#: l10n/trebbia.php:202
 msgid "I comandi di base di un sistema GNU/Linux"
 msgstr "GNU/Linux base commands"
 
-#: l10n/trebbia.php:202
+#: l10n/trebbia.php:205
 msgid ""
 "Conoscere i comandi di base per l'amministrazione del filesystem e di altre "
 "parti del tuo sistema GNU/Linux.\n"
@@ -1849,11 +1850,11 @@ msgstr ""
 "This is the fourth lesson from an initiative promoted by the Linux Day Turin "
 "committee."
 
-#: l10n/trebbia.php:207
+#: l10n/trebbia.php:210
 msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
 msgstr "GNU/Linux system and services maintainment"
 
-#: l10n/trebbia.php:210
+#: l10n/trebbia.php:213
 msgid ""
 "Conoscere quali servizi e quali parti compongono un sistema GNU/Linux e come "
 "amministrarli al meglio.\n"
@@ -1867,11 +1868,11 @@ msgstr ""
 "This is the fifth lesson from an initiative promoted by the Linux Day Turin "
 "committee."
 
-#: l10n/trebbia.php:215
+#: l10n/trebbia.php:218
 msgid "Consegna degli attestati"
 msgstr "Award ceremony"
 
-#: l10n/trebbia.php:218
+#: l10n/trebbia.php:221
 msgid ""
 "I più meritevoli e i più presenti saranno premiati con attestati e adesivi!\n"
 "\n"
@@ -1883,204 +1884,202 @@ msgstr ""
 "This day ends the lessons from an initiative promoted by the Linux Day Turin "
 "committee."
 
-#: l10n/trebbia.php:223 l10n/trebbia.php:783 l10n/trebbia.php:903
+#: l10n/trebbia.php:226 l10n/trebbia.php:786 l10n/trebbia.php:906
 msgid "Primi passi con Linux"
 msgstr ""
 
-#: l10n/trebbia.php:226
+#: l10n/trebbia.php:229
 msgid "Come e perchè iniziare, quali programmi usare"
 msgstr ""
 
-#: l10n/trebbia.php:229
+#: l10n/trebbia.php:232
 msgid "Giocare con Linux"
 msgstr ""
 
-#: l10n/trebbia.php:232
+#: l10n/trebbia.php:235
 msgid "Divertirsi con il pinguino"
 msgstr ""
 
-#: l10n/trebbia.php:235
+#: l10n/trebbia.php:238
 msgid "OpenOffice.org"
 msgstr ""
 
-#: l10n/trebbia.php:238
+#: l10n/trebbia.php:241
 msgid "Introduzione al software libero di produttivita' personale"
 msgstr ""
 
-#: l10n/trebbia.php:241
+#: l10n/trebbia.php:244
 msgid "Firefox e Thunderbird"
 msgstr "Firefox and Thunderbird"
 
-#: l10n/trebbia.php:244
+#: l10n/trebbia.php:247
 msgid "Ottieni il massimo da posta e web"
 msgstr ""
 
-#: l10n/trebbia.php:247
+#: l10n/trebbia.php:250
 msgid "Backup facile e incrementale"
 msgstr ""
 
-#: l10n/trebbia.php:250
+#: l10n/trebbia.php:253
 msgid "Mantenere una copia di riserva dei propri dati"
 msgstr ""
 
-#: l10n/trebbia.php:253
+#: l10n/trebbia.php:256
 msgid "Niente panico"
 msgstr "Don't panic"
 
-#: l10n/trebbia.php:256
+#: l10n/trebbia.php:259
 msgid "I trucchi per passare a Linux senza l'aiuto degli esperti"
 msgstr ""
 
-#: l10n/trebbia.php:259
+#: l10n/trebbia.php:262
 #, fuzzy
 msgid "Linux Community"
 msgstr "Linux to Municipality of Turin"
 
-#: l10n/trebbia.php:262
+#: l10n/trebbia.php:265
 msgid "Districarsi tra gli strumenti della comunità"
 msgstr ""
 
-#: l10n/trebbia.php:265
+#: l10n/trebbia.php:268
 msgid "Linux@scuola"
 msgstr ""
 
-#: l10n/trebbia.php:268
+#: l10n/trebbia.php:271
 msgid "Open-source a scuola: non solo utilizzatori, ma anche sviluppatori"
 msgstr ""
 
-#: l10n/trebbia.php:271
+#: l10n/trebbia.php:274
 msgid "Groupware & Intranet"
 msgstr ""
 
-#: l10n/trebbia.php:274
+#: l10n/trebbia.php:277
 msgid "Dal server al desktop!"
 msgstr "From server to desktop!"
 
-#: l10n/trebbia.php:277
+#: l10n/trebbia.php:280
 msgid "Sicurezza reti wireless"
 msgstr "Security in wireless networks"
 
-#: l10n/trebbia.php:280
+#: l10n/trebbia.php:283
 msgid "Vulnerabilità di una rete senza fili"
 msgstr "Vulnerabilities of a wireless network"
 
-#: l10n/trebbia.php:283
+#: l10n/trebbia.php:286
 msgid "Videoediting"
 msgstr ""
 
-#: l10n/trebbia.php:286
+#: l10n/trebbia.php:289
 msgid "Tecniche e Software per il videoediting su GNU/Linux"
 msgstr ""
 
-#: l10n/trebbia.php:289
+#: l10n/trebbia.php:292
 msgid "OpenSolaris"
 msgstr ""
 
-#: l10n/trebbia.php:292
+#: l10n/trebbia.php:295
 msgid "OS Opensource non è solo Linux"
 msgstr ""
 
-#: l10n/trebbia.php:295
-#, fuzzy
-msgid "Gimp&Blender"
-msgstr "Blender"
-
 #: l10n/trebbia.php:298
+msgid "Gimp&Blender"
+msgstr "Gimp&Blender"
+
+#: l10n/trebbia.php:301
 msgid "Grafica 2D e 3D"
 msgstr ""
 
-#: l10n/trebbia.php:301
+#: l10n/trebbia.php:304
 msgid "Green IT"
 msgstr ""
 
-#: l10n/trebbia.php:304
+#: l10n/trebbia.php:307
 msgid "Risparmio energetico con Linux"
 msgstr ""
 
-#: l10n/trebbia.php:307
+#: l10n/trebbia.php:310
 msgid "Python"
 msgstr ""
 
-#: l10n/trebbia.php:310
+#: l10n/trebbia.php:313
 msgid "Come diventare un hacker"
 msgstr ""
 
-#: l10n/trebbia.php:313
+#: l10n/trebbia.php:316
 msgid "Kernel Linux"
 msgstr ""
 
-#: l10n/trebbia.php:316
+#: l10n/trebbia.php:319
 msgid "Ricompilazione ed Ottimizzazione del Sistema"
 msgstr ""
 
-#: l10n/trebbia.php:319
+#: l10n/trebbia.php:322
 msgid "Cloud Computing"
 msgstr ""
 
-#: l10n/trebbia.php:322
+#: l10n/trebbia.php:325
 msgid "La nuova frontiera del calcolo distribuito"
 msgstr ""
 
-#: l10n/trebbia.php:325
+#: l10n/trebbia.php:328
 msgid "Arduino e Linux"
 msgstr ""
 
-#: l10n/trebbia.php:328
+#: l10n/trebbia.php:331
 msgid "Hardware e software OpenSource insieme"
 msgstr ""
 
-#: l10n/trebbia.php:331
+#: l10n/trebbia.php:334
 msgid "Bash"
 msgstr ""
 
-#: l10n/trebbia.php:334
+#: l10n/trebbia.php:337
 msgid "L'interfaccia utente piu' rapida al mondo"
 msgstr ""
 
-#: l10n/trebbia.php:337
+#: l10n/trebbia.php:340
 msgid "Subversion"
 msgstr ""
 
-#: l10n/trebbia.php:340
-#, fuzzy
-msgid "Introduzione al Version Control"
-msgstr "Introduction to JavaScript programming"
-
 #: l10n/trebbia.php:343
+msgid "Introduzione al Version Control"
+msgstr "Introduction to Version Control"
+
+#: l10n/trebbia.php:346
 msgid "Sviluppo Web con CakePHP"
 msgstr "Web development with CakePHP"
 
-#: l10n/trebbia.php:346
+#: l10n/trebbia.php:349
 msgid "Introduzione al framework MVC con esempi pratici"
 msgstr ""
 
-#: l10n/trebbia.php:349
+#: l10n/trebbia.php:352
 msgid "Linux a scuola"
 msgstr ""
 
-#: l10n/trebbia.php:352
+#: l10n/trebbia.php:355
 msgid ""
 "Sophia Danesino, docente dell'ITIS Peano di Torino, ha presentato insieme a "
 "altri colleghi la sua esperienza con il software libero a scuola, le "
 "impressioni degli alunni e la LIM (Lavagna Interattiva Multimediale)."
 msgstr ""
 
-#: l10n/trebbia.php:355
+#: l10n/trebbia.php:358
 msgid "Linux in azienda: \"not just for fun\""
 msgstr ""
 
-#: l10n/trebbia.php:358
+#: l10n/trebbia.php:361
 msgid ""
 "Fabrizio Reale, fondatore e proprietario di Redomino, ha presentato l'uso di "
 "Linux in azienda e risposto alla domanda: «Si può fare business col software "
 "libero?»."
 msgstr ""
 
-#: l10n/trebbia.php:361
+#: l10n/trebbia.php:364
 msgid "Plone 4"
 msgstr ""
 
-#: l10n/trebbia.php:364
+#: l10n/trebbia.php:367
 msgid ""
 "Presentazione dal vivo della nuovissima release di Plone, uno dei più "
 "potenti CMS open source oggi disponibili. Plone è lo strumento ideale per la "
@@ -2089,15 +2088,15 @@ msgid ""
 "nelle performance, nell'interfaccia e nell'architettura. Scopriamole insieme!"
 msgstr ""
 
-#: l10n/trebbia.php:367
+#: l10n/trebbia.php:370
 msgid "Più veloce, più bello, più facile da usare!"
 msgstr ""
 
-#: l10n/trebbia.php:370
+#: l10n/trebbia.php:373
 msgid "Arduino 1.0"
 msgstr ""
 
-#: l10n/trebbia.php:373
+#: l10n/trebbia.php:376
 msgid ""
 "Arduino è il primo microcontrollore open source, e nasce in Piemonte cinque "
 "anni fa, con il preciso obiettivo di semplificare la prototipazione "
@@ -2110,15 +2109,15 @@ msgid ""
 "cambiamenti, e la presa in esame di alcuni progetti."
 msgstr ""
 
-#: l10n/trebbia.php:376
+#: l10n/trebbia.php:379
 msgid "L'evoluzione di Arduino e i suoi (infiniti?) utilizzi a scopo didattico"
 msgstr ""
 
-#: l10n/trebbia.php:379
+#: l10n/trebbia.php:382
 msgid "Imparare a usare SW open a scuola"
 msgstr ""
 
-#: l10n/trebbia.php:382
+#: l10n/trebbia.php:385
 msgid ""
 "Perché studiare l'Open Source a scuola? esistono gli strumenti adatti? La "
 "discussione presenta alcune idee per studiare il software open source a "
@@ -2131,15 +2130,15 @@ msgid ""
 "descrizione del libro la trovate"
 msgstr ""
 
-#: l10n/trebbia.php:385
+#: l10n/trebbia.php:388
 msgid "Un libro per imparare a usare anche l'Open Source"
 msgstr ""
 
-#: l10n/trebbia.php:388
+#: l10n/trebbia.php:391
 msgid ".NET & GNU/Linux: Nemici o Amici"
 msgstr ""
 
-#: l10n/trebbia.php:391
+#: l10n/trebbia.php:394
 msgid ""
 "Ormai da qualche anno Mono è l'implementazione di riferimento (anche se non "
 "l'unica) del framework .NET di Microsoft in ambiente GNU/Linux. Il "
@@ -2152,15 +2151,15 @@ msgid ""
 "vogliono il cavallo di troia che la MS userà per conquistare Linux."
 msgstr ""
 
-#: l10n/trebbia.php:394
+#: l10n/trebbia.php:397
 msgid "Programmare in C# su Linux e vivere (quasi) felici"
 msgstr ""
 
-#: l10n/trebbia.php:397
+#: l10n/trebbia.php:400
 msgid "HTML 5"
 msgstr ""
 
-#: l10n/trebbia.php:400
+#: l10n/trebbia.php:403
 msgid ""
 "HTML5 è uno standard (attualmente in discussione) che racchiude una lunga "
 "serie di funzionalità per lo sviluppo di applicazioni web. Dopo una breve "
@@ -2171,15 +2170,15 @@ msgid ""
 "futuro dello sviluppo di applicazioni web e non solo."
 msgstr ""
 
-#: l10n/trebbia.php:403
+#: l10n/trebbia.php:406
 msgid "Le nuove frontiere del web"
 msgstr ""
 
-#: l10n/trebbia.php:406
+#: l10n/trebbia.php:409
 msgid "HTML5 Mobile Apps Offline"
 msgstr ""
 
-#: l10n/trebbia.php:409
+#: l10n/trebbia.php:412
 msgid ""
 "L'evoluzione degli standard W3C quali HTML5/CSS3 e il continuo diffondersi "
 "di disposivi mobili con web browser evoluti hanno aperto delle nuove strade "
@@ -2194,17 +2193,17 @@ msgid ""
 "aspettatevi di trovare in futuro una webapp per tutto."
 msgstr ""
 
-#: l10n/trebbia.php:412
+#: l10n/trebbia.php:415
 msgid ""
 "Potenzialità e limiti delle ultime tecnologie web che funzionano anche "
 "offline"
 msgstr ""
 
-#: l10n/trebbia.php:415
+#: l10n/trebbia.php:418
 msgid "Harald Dente Blu ed il bluetooth"
 msgstr ""
 
-#: l10n/trebbia.php:418
+#: l10n/trebbia.php:421
 msgid ""
 "Dopo una breve introduzione al nome ed alla nascita del bluetooth daremo "
 "un'occhiata alla sua struttura (i layers fisico e di trasporto), ai profili "
@@ -2213,15 +2212,15 @@ msgid ""
 "sdptool) e come usarli."
 msgstr ""
 
-#: l10n/trebbia.php:421
+#: l10n/trebbia.php:424
 msgid "Che ce ne facciamo dei comandi di bluez"
 msgstr ""
 
-#: l10n/trebbia.php:424
+#: l10n/trebbia.php:427
 msgid "Asterisk"
 msgstr ""
 
-#: l10n/trebbia.php:427
+#: l10n/trebbia.php:430
 msgid ""
 "Dall'invenzione del primo combinatore telefonico manuale di Almon B. "
 "Strowger, il mondo della telefonia è diventato sempre più efficiente, "
@@ -2232,15 +2231,15 @@ msgid ""
 "reale."
 msgstr ""
 
-#: l10n/trebbia.php:430
+#: l10n/trebbia.php:433
 msgid "La Telefonia open source e la sua integrazione nel mondo reale"
 msgstr ""
 
-#: l10n/trebbia.php:433
+#: l10n/trebbia.php:436
 msgid "Camera oscura digitale"
 msgstr ""
 
-#: l10n/trebbia.php:436
+#: l10n/trebbia.php:439
 msgid ""
 "Presentazione dei migliori software per lo sviluppo e la gestione delle "
 "fotografia digitale come alternativa ad Adobe LightRoom e Adobe CameraRaw. "
@@ -2250,30 +2249,30 @@ msgid ""
 "fotografia digitale."
 msgstr ""
 
-#: l10n/trebbia.php:439
+#: l10n/trebbia.php:442
 msgid "Come ottenere il meglio dalle proprie foto"
 msgstr ""
 
-#: l10n/trebbia.php:442
+#: l10n/trebbia.php:445
 msgid "Tuffarsi in Vim"
 msgstr "Swim in Vim"
 
-#: l10n/trebbia.php:445
+#: l10n/trebbia.php:448
 msgid ""
 "Trucchi e segreti per utilizzare al meglio quello che sembra solo un "
 "semplice editor di testo ma che invece ha alle spalle più di 20 anni di "
 "storia."
 msgstr ""
 
-#: l10n/trebbia.php:448
+#: l10n/trebbia.php:451
 msgid "vim - un editor, una leggenda"
 msgstr ""
 
-#: l10n/trebbia.php:451
+#: l10n/trebbia.php:454
 msgid "Regular Expressions"
 msgstr ""
 
-#: l10n/trebbia.php:454
+#: l10n/trebbia.php:457
 msgid ""
 "Sfruttare la potenza delle espressioni regolari nei Command LIne tools più "
 "usati: grep, sed, awk, find, locate. Il talk parte da una introduzione "
@@ -2284,15 +2283,15 @@ msgid ""
 "rivolge a chi ha già un buon grado di familiarità con la shell."
 msgstr ""
 
-#: l10n/trebbia.php:457
+#: l10n/trebbia.php:460
 msgid "Sfruttare le regexp in grep, sed, awk e find"
 msgstr ""
 
-#: l10n/trebbia.php:460
+#: l10n/trebbia.php:463
 msgid "Apache Directory Server"
 msgstr ""
 
-#: l10n/trebbia.php:463
+#: l10n/trebbia.php:466
 msgid ""
 "Verrà mostrata una panoramica delle funzionalità del server LDAP sviluppato "
 "in Java, la semplicità della configurazione, l'inserimento degli utenti e la "
@@ -2303,15 +2302,15 @@ msgid ""
 "delle acl e l'integrazione con altri strumenti (Apache, PAM, ecc.)."
 msgstr ""
 
-#: l10n/trebbia.php:466
+#: l10n/trebbia.php:469
 msgid "Ldap diventa semplice"
 msgstr "Ldap become simple"
 
-#: l10n/trebbia.php:469
+#: l10n/trebbia.php:472
 msgid "Bacula: il backup enterprise"
 msgstr ""
 
-#: l10n/trebbia.php:472
+#: l10n/trebbia.php:475
 msgid ""
 "Dice il saggio \"Il backup è buono, il backup è bello, il backup mi fa "
 "dormire sereno la notte\". Quando si ha a che fare con molte macchine "
@@ -2321,16 +2320,15 @@ msgid ""
 "piattaforma di backup con una panoramica sulle potenzialità del tool."
 msgstr ""
 
-#: l10n/trebbia.php:475
+#: l10n/trebbia.php:478
 msgid "Dormire sereni la notte"
 msgstr ""
 
-#: l10n/trebbia.php:478
-#, fuzzy
-msgid "Sviluppo su Android"
-msgstr "Android App"
-
 #: l10n/trebbia.php:481
+msgid "Sviluppo su Android"
+msgstr "Android developing"
+
+#: l10n/trebbia.php:484
 msgid ""
 "Il talk si propone di fornire una panoramica sullo sviluppo di applicazioni "
 "Android, utilizzando l'SDK basato su Eclipse e Java. Dopo una breve "
@@ -2343,15 +2341,15 @@ msgid ""
 "piattaforma mobile."
 msgstr ""
 
-#: l10n/trebbia.php:484
+#: l10n/trebbia.php:487
 msgid "creazione pratica di una applicazione mobile"
 msgstr ""
 
-#: l10n/trebbia.php:487
+#: l10n/trebbia.php:490
 msgid "Bash 4.1"
 msgstr ""
 
-#: l10n/trebbia.php:490
+#: l10n/trebbia.php:493
 msgid ""
 "Il talk presenta una serie di comode funzionalità dell'interprete, meno "
 "famose, ma decisamente utili. Verrà presentato un cheatsheet con soluzioni "
@@ -2362,15 +2360,15 @@ msgid ""
 "esperienze, anche poche, di scripting in bash."
 msgstr ""
 
-#: l10n/trebbia.php:493
+#: l10n/trebbia.php:496
 msgid "Comodi trucchi da usare con bash"
 msgstr ""
 
-#: l10n/trebbia.php:496
+#: l10n/trebbia.php:499
 msgid "DB NoSQL"
 msgstr ""
 
-#: l10n/trebbia.php:499
+#: l10n/trebbia.php:502
 msgid ""
 "Una delle più importanti sfide all’elaborazione distribuita è rappresentata "
 "dalla necessità di implementare alcuni requisiti come la scalabilità delle "
@@ -2380,15 +2378,15 @@ msgid ""
 "classificati come “non relazionali”."
 msgstr ""
 
-#: l10n/trebbia.php:502
+#: l10n/trebbia.php:505
 msgid "Database Not Only SQL"
 msgstr ""
 
-#: l10n/trebbia.php:505
+#: l10n/trebbia.php:508
 msgid "Wireshark revealed"
 msgstr ""
 
-#: l10n/trebbia.php:508
+#: l10n/trebbia.php:511
 msgid ""
 "L'intervento verterà sul software wireshark e sul suo uso per capire le "
 "logiche delle rete, con focus sulle reti IP. Si partirà dai concetti di "
@@ -2399,305 +2397,305 @@ msgid ""
 "dimostrazioni di live-capture e di uso dei tool incorporati al suo interno."
 msgstr ""
 
-#: l10n/trebbia.php:511
+#: l10n/trebbia.php:514
 msgid "Un occhio nei meandri della rete"
 msgstr ""
 
-#: l10n/trebbia.php:514
+#: l10n/trebbia.php:517
 msgid "20 Anni di Linux"
 msgstr ""
 
-#: l10n/trebbia.php:517
+#: l10n/trebbia.php:520
 msgid ""
 "Quest'anno ricorrono i primi 20 anni dalla nascita del kernel Linux. Come è "
 "nato, chi ci ha lavorato, e come ha impattato la sua esistenza nel corso "
 "della breve (ma intensa)..."
 msgstr ""
 
-#: l10n/trebbia.php:520
+#: l10n/trebbia.php:523
 msgid "Android, ChromiumOS, MeeGo: Quale Sicurezza?"
 msgstr ""
 
-#: l10n/trebbia.php:523
+#: l10n/trebbia.php:526
 msgid ""
 "Da qualche anno i dispositivi mobile sono entrati prepotentemente nella "
 "nostra vita. A loro affidiamo molti dei nostri dati più importanti anche se "
 "non tutti affrontano la..."
 msgstr ""
 
-#: l10n/trebbia.php:526
+#: l10n/trebbia.php:529
 msgid "CaeLinux per le Applicazioni Ingegneristiche"
 msgstr ""
 
-#: l10n/trebbia.php:529
+#: l10n/trebbia.php:532
 msgid ""
 "EDF (Electricitè de France) ha sviluppato una serie di programmi per "
 "progettare e costruire centrali idroelettriche e nucleari. Il pacchetto "
 "comprende un CAD tridimensionale, un \"..."
 msgstr ""
 
-#: l10n/trebbia.php:532
+#: l10n/trebbia.php:535
 msgid "Come Ottenere di Più da Gimp"
 msgstr ""
 
-#: l10n/trebbia.php:535
+#: l10n/trebbia.php:538
 msgid ""
 "The Gimp, il programma freesoftware per il fotoritocco alternativo a "
 "PhotoShop, già offre una gran quantità di funzioni ed opzioni, ma grazie a..."
 msgstr ""
 
-#: l10n/trebbia.php:538
+#: l10n/trebbia.php:541
 msgid "Contribuire al Kernel Linux"
 msgstr ""
 
-#: l10n/trebbia.php:541
+#: l10n/trebbia.php:544
 msgid ""
 "L'intervento verterà su una esperienza nell'inviare una patch al kernel "
 "Linux. Oltre ad alcuni brevi dettagli tecnici verrà data enfasi a come nasce "
 "una patch, come la si sviluppa..."
 msgstr ""
 
-#: l10n/trebbia.php:544
+#: l10n/trebbia.php:547
 #, fuzzy
 msgid "Editing Fotografico"
 msgstr "Photos"
 
-#: l10n/trebbia.php:547
+#: l10n/trebbia.php:550
 msgid ""
 "Panoramica sulle applicazioni per Linux dedicate all'editing fotografico "
 "piu' o meno avanzato."
 msgstr ""
 
-#: l10n/trebbia.php:550
+#: l10n/trebbia.php:553
 msgid "Hardware Obsoleto e LTSP: Sessione Pratica"
 msgstr ""
 
-#: l10n/trebbia.php:553
+#: l10n/trebbia.php:556
 msgid ""
 "Troppo spesso i laboratori informatici delle scuole presentano hardware "
 "obsoleto e non aggiornato. La soluzione a questo problema puo' essere "
 "LTSP,..."
 msgstr ""
 
-#: l10n/trebbia.php:556
+#: l10n/trebbia.php:559
 msgid "Hardware Obsoleto e LTSP: Sessione Teorica"
 msgstr ""
 
-#: l10n/trebbia.php:559
+#: l10n/trebbia.php:562
 msgid ""
 "Troppo spesso i laboratori informatici delle scuole presentano hardware "
 "obsoleto e non aggiornato. La soluzione a questo problema puo' essere LTSP..."
 msgstr ""
 
-#: l10n/trebbia.php:562
+#: l10n/trebbia.php:565
 msgid "I Desktop di Linux, GNOME3 Shell e Unity"
 msgstr ""
 
-#: l10n/trebbia.php:565
+#: l10n/trebbia.php:568
 msgid ""
 "Dalla versione 11.04 Ubuntu si presenta con un nuovo ambiente grafico, "
 "denominato Unity. Come funziona? Quali sono le sue caratteristiche? Qual'è "
 "il metodo migliore per sfruttare..."
 msgstr ""
 
-#: l10n/trebbia.php:568
+#: l10n/trebbia.php:571
 msgid "Impatto nell'uso del FLOSS nelle Piccole e Medie Imprese"
 msgstr ""
 
-#: l10n/trebbia.php:571
+#: l10n/trebbia.php:574
 msgid ""
 "Il software libero ed opensource può essere estremamente utile non solo a "
 "casa ma anche (e soprattutto) in azienda. Meno costoso, più sicuro, "
 "maggiormente personalizzabile, e..."
 msgstr ""
 
-#: l10n/trebbia.php:574
+#: l10n/trebbia.php:577
 msgid "Introduzione a Blender"
 msgstr "Blender introduction"
 
-#: l10n/trebbia.php:577
+#: l10n/trebbia.php:580
 msgid ""
 "Quando si parla di grafica 3D su Linux è impossibile non parlare di Blender. "
 "In questo talk una rapida introduzione al programma ed alle sue..."
 msgstr ""
 
-#: l10n/trebbia.php:580
+#: l10n/trebbia.php:583
 msgid "Introduzione a VIM"
 msgstr ""
 
-#: l10n/trebbia.php:583
+#: l10n/trebbia.php:586
 msgid ""
 "Chi penserebbe che uno dei più potenti IDE del pianeta sia una applicazione "
 "senza grafica, senza icone, ma con centinaia di comandi testuali per "
 "elaborare in pochi istanti i..."
 msgstr ""
 
-#: l10n/trebbia.php:586
+#: l10n/trebbia.php:589
 msgid "Le Migliori Estensioni per Firefox"
 msgstr ""
 
-#: l10n/trebbia.php:589
+#: l10n/trebbia.php:592
 msgid ""
 "Tutti conoscono - e magari usano - Firefox, il browser web alternativo a "
 "Internet Explorer, ma non tutti conoscono le..."
 msgstr ""
 
-#: l10n/trebbia.php:592 l10n/trebbia.php:749 l10n/trebbia.php:1113
+#: l10n/trebbia.php:595 l10n/trebbia.php:752 l10n/trebbia.php:1116
 msgid "Primi Passi con Linux"
 msgstr ""
 
-#: l10n/trebbia.php:595
+#: l10n/trebbia.php:598
 msgid ""
 "Una introduzione a Linux ed al software libero: cos'è, com'è, e perché è "
 "davvero così importante avere accesso pieno ed incondizionato al codice "
 "degli applicativi che si usano sul..."
 msgstr ""
 
-#: l10n/trebbia.php:598
+#: l10n/trebbia.php:601
 msgid "Primi Passi con Linux... A Scuola"
 msgstr ""
 
-#: l10n/trebbia.php:601
+#: l10n/trebbia.php:604
 msgid ""
 "Una introduzione a Linux ed al software libero, con un approfondimento "
 "speciale al mondo della scuola ed all'utilizzo di strumenti (e di "
 "metodologie) open per la didattica."
 msgstr ""
 
-#: l10n/trebbia.php:604
+#: l10n/trebbia.php:607
 #, fuzzy
 msgid "Programmazione in Qt"
 msgstr "Schedule"
 
-#: l10n/trebbia.php:607
+#: l10n/trebbia.php:610
 msgid ""
 "Nel panorama dei dispositivi mobili vediamo purtroppo una mancanza di un "
 "sistema con un modello di sviluppo aperto, sul modello di quanto succede in "
 "ambiente desktop, con progetti..."
 msgstr ""
 
-#: l10n/trebbia.php:610
+#: l10n/trebbia.php:613
 msgid "Sabayon, Fedora, openmamba: confronto tra distribuzioni"
 msgstr ""
 
-#: l10n/trebbia.php:613
+#: l10n/trebbia.php:616
 msgid ""
 "Quando si parla di Linux quasi tutti parlano di Ubuntu, ma esistono molte "
 "altre soluzioni più o meno diffuse ognuna delle quali gode di sue specifiche "
 "peculiarità. Insieme a Fabio..."
 msgstr ""
 
-#: l10n/trebbia.php:616
+#: l10n/trebbia.php:619
 msgid "Shotwell: come Organizzare le Foto su Linux"
 msgstr ""
 
-#: l10n/trebbia.php:619
+#: l10n/trebbia.php:622
 msgid ""
 "Approfondimento su Shotwell, diffusa applicazione open per organizzare al "
 "meglio le proprio fotografie. Dedicato a tutti coloro che hanno..."
 msgstr ""
 
-#: l10n/trebbia.php:622
+#: l10n/trebbia.php:625
 msgid "Software Libero in Classe: Esperienze di Vita Vissuta"
 msgstr ""
 
-#: l10n/trebbia.php:625
+#: l10n/trebbia.php:628
 msgid ""
 "Spesso si propone di introdurre Linux a scuola, ma qualcuno ci ha già "
 "provato? Esperienze pratiche e sincere di software libero tra i banchi: cosa "
 "è andato bene, cosa è andato..."
 msgstr ""
 
-#: l10n/trebbia.php:628
+#: l10n/trebbia.php:631
 msgid "Software Libero in Classe: Prove di Libertà"
 msgstr ""
 
-#: l10n/trebbia.php:631
+#: l10n/trebbia.php:634
 msgid ""
 "La cultura dominante impone modelli applicativi in ogni ambito della "
 "conoscenza: deve la scuola accettare questi modelli e progettare una "
 "formazione che vada incontro alle..."
 msgstr ""
 
-#: l10n/trebbia.php:634
+#: l10n/trebbia.php:637
 #, fuzzy
 msgid "Software Libero Solidale: GASdotto"
 msgstr "Free Software"
 
-#: l10n/trebbia.php:637
+#: l10n/trebbia.php:640
 msgid ""
 "Presentazione di una applicazione freesoftware \"made in Torino\", GASdotto, "
 "utilizzata da diversi Gruppi di Acquisto della zona ed insieme a loro..."
 msgstr ""
 
-#: l10n/trebbia.php:640
+#: l10n/trebbia.php:643
 msgid "The Document Foundation: un Anno Dopo"
 msgstr ""
 
-#: l10n/trebbia.php:643
+#: l10n/trebbia.php:646
 msgid ""
 "La Document Foundation e' nata circa un anno fa' per promuovere lo sviluppo "
 "e la diffusione di LibreOffice, fork della ben nota..."
 msgstr ""
 
-#: l10n/trebbia.php:646
+#: l10n/trebbia.php:649
 msgid "Un Sito in 50 Minuti con Drupal"
 msgstr ""
 
-#: l10n/trebbia.php:649
+#: l10n/trebbia.php:652
 msgid ""
 "I siti Internet non sono tutti uguali, cosiccome non tutti uguali sono gli "
 "strumenti. Vediamo come Drupal, noto CMS opensource, è stato utilizzato..."
 msgstr ""
 
-#: l10n/trebbia.php:652
+#: l10n/trebbia.php:655
 msgid "Videogiochi Open"
 msgstr ""
 
-#: l10n/trebbia.php:655
+#: l10n/trebbia.php:658
 msgid ""
 "Linux è solo per i server? Decisamente no, a giudicare dalla quantità di "
 "videogiochi (liberi e gratuiti) a disposizione! Una panoramica sui "
 "videogames più popolari, dagli..."
 msgstr ""
 
-#: l10n/trebbia.php:658
+#: l10n/trebbia.php:661
 msgid "Webapp HTML5 e JSON con Ruby on Rails 3.1"
 msgstr ""
 
-#: l10n/trebbia.php:661
+#: l10n/trebbia.php:664
 msgid ""
 "Talk sulla versione 3.1 del framework Rails, e sulle tecnologie web "
 "associate: HTML5, Javascript e JSON."
 msgstr ""
 
-#: l10n/trebbia.php:664
+#: l10n/trebbia.php:667
 msgid "WiiLD: la Lavagna Interattiva Multimediale Low-Cost"
 msgstr ""
 
-#: l10n/trebbia.php:667
+#: l10n/trebbia.php:670
 msgid ""
 "Tanto si è parlato di Lavagna Interattiva Multimediale (nota anche come "
 "LIM), la quale però costa svariate migliaia di euro e a volte presenta "
 "qualche problema tecnico. In questo..."
 msgstr ""
 
-#: l10n/trebbia.php:670
+#: l10n/trebbia.php:673
 msgid "Software Libero nella Piccola Impresa: un Caso Concreto"
 msgstr ""
 
-#: l10n/trebbia.php:673
+#: l10n/trebbia.php:676
 msgid ""
 "La cooperativa MAG4 Piemonte (strumenti di finanza etica e di economia "
 "solidale) utilizza da diversi anni software libero per il proprio "
 "funzionamento: Debian, MySQL,..."
 msgstr ""
 
-#: l10n/trebbia.php:676
+#: l10n/trebbia.php:679
 msgid "Politiche per l’Open Source?"
 msgstr ""
 
-#: l10n/trebbia.php:679
+#: l10n/trebbia.php:682
 msgid ""
 "Una panoramica sul ruolo strategico del FLOSS.\n"
 "\n"
@@ -2706,22 +2704,22 @@ msgid ""
 "dell'Universita' di Torino"
 msgstr ""
 
-#: l10n/trebbia.php:685
+#: l10n/trebbia.php:688
 msgid "Le Competenze Automotive di Akhela nell'Ambito di Genivi"
 msgstr ""
 
-#: l10n/trebbia.php:688
+#: l10n/trebbia.php:691
 msgid ""
 "Akhela è da tempo impegnata in molti settori dello sviluppo software per il "
 "mercato dell'Automotive. Uno dei campi nei quali Akhela si è distinta presso "
 "i più importanti Car..."
 msgstr ""
 
-#: l10n/trebbia.php:691
+#: l10n/trebbia.php:694
 msgid "Il Piemonte di Fronte alle Sfide dell'Agenda Digitale"
 msgstr ""
 
-#: l10n/trebbia.php:694
+#: l10n/trebbia.php:697
 msgid ""
 "Il Piemonte di fronte alle sfide dell'Agenda Digitale: appropriazione e "
 "utilizzo delle ICT da parte degli attori del sistema regionale.\n"
@@ -2730,22 +2728,22 @@ msgid ""
 "Alessandro Sciullo - Gruppo di..."
 msgstr ""
 
-#: l10n/trebbia.php:700
+#: l10n/trebbia.php:703
 msgid "Conclusioni"
 msgstr ""
 
-#: l10n/trebbia.php:703
+#: l10n/trebbia.php:706
 msgid ""
 "Conclusioni del convegno, a cura dell'Assessore al Lavoro, Formazione "
 "Professionale e Orientamento per il Mercato del Lavoro della Provincia di "
 "Torino."
 msgstr ""
 
-#: l10n/trebbia.php:706
+#: l10n/trebbia.php:709
 msgid "Free Software e Open Source"
 msgstr ""
 
-#: l10n/trebbia.php:709
+#: l10n/trebbia.php:712
 msgid ""
 "Codice, soldi, libertà e divertimento: ovvero perché il software libero e "
 "aperto è buono per chi lo usa e per chi lo fa.\n"
@@ -2754,11 +2752,11 @@ msgid ""
 "Un talk alla portata di tutti per capire cosa..."
 msgstr ""
 
-#: l10n/trebbia.php:715
+#: l10n/trebbia.php:718
 msgid "Mozilla in Mobilità"
 msgstr ""
 
-#: l10n/trebbia.php:718
+#: l10n/trebbia.php:721
 msgid ""
 "Negli ultimi anni il mercato degli smartphone e della connettività mobile in "
 "genere è aumentato e sta aumentando moltissimo.\n"
@@ -2767,11 +2765,11 @@ msgid ""
 "Di pari passo, Mozilla si sta muovendo..."
 msgstr ""
 
-#: l10n/trebbia.php:724
+#: l10n/trebbia.php:727
 msgid "Open Data"
 msgstr ""
 
-#: l10n/trebbia.php:727
+#: l10n/trebbia.php:730
 msgid ""
 "Cosa sono gli Open Data e come distinguerli dall' openfuffa. Best Practices, "
 "geolocalizzazione, strumenti per l'analisi ed esempi italiani e "
@@ -2779,11 +2777,11 @@ msgid ""
 "..."
 msgstr ""
 
-#: l10n/trebbia.php:731
+#: l10n/trebbia.php:734
 msgid "How a 10 Million Dollars Company uses Free Software"
 msgstr ""
 
-#: l10n/trebbia.php:734
+#: l10n/trebbia.php:737
 msgid ""
 "Come viene usato il free software per creare un sito da un milione di "
 "visitatori al giorno?\n"
@@ -2792,11 +2790,11 @@ msgid ""
 "Quali strumenti usano le grandi aziende per ottimizzare lo stack..."
 msgstr ""
 
-#: l10n/trebbia.php:740
+#: l10n/trebbia.php:743
 msgid "Open Source VFX in Blender: \"Tears of Steel\""
 msgstr ""
 
-#: l10n/trebbia.php:743
+#: l10n/trebbia.php:746
 msgid ""
 "\"Tears of Steel\" - \"progetto Mango\" è il quarto open movie della Blender "
 "Foundation.\n"
@@ -2806,51 +2804,51 @@ msgid ""
 "di..."
 msgstr ""
 
-#: l10n/trebbia.php:752
+#: l10n/trebbia.php:755
 msgid ""
 "Una introduzione a Linux ed al software libero: cos'è, com'è, e perché è "
 "davvero così importante avere accesso pieno ed incondizionato al codice "
 "degli applicativi che si usano..."
 msgstr ""
 
-#: l10n/trebbia.php:755
+#: l10n/trebbia.php:758
 msgid "Hello node.js"
 msgstr ""
 
-#: l10n/trebbia.php:758
+#: l10n/trebbia.php:761
 msgid ""
 "Node.js è una piattaforma per costruire facilmente applicazioni di rete "
 "veloci e scalabili. In questo talk vedremo quali sono i vantaggi di questa "
 "piattaforma, come cominciare..."
 msgstr ""
 
-#: l10n/trebbia.php:761
+#: l10n/trebbia.php:764
 msgid "Raspberry Pi: un Ponte tra IT e Embedded"
 msgstr ""
 
-#: l10n/trebbia.php:764
+#: l10n/trebbia.php:767
 msgid ""
 "Raspberry Pi, il nuovo, piccolissimo PC basato su ARM e su Linux, per via "
 "del suo bassissimo costo puo' essere usato sia come tradizionale postazione "
 "di lavoro che come..."
 msgstr ""
 
-#: l10n/trebbia.php:767
+#: l10n/trebbia.php:770
 msgid "Ploomcake: il CMS Plone con steroidi!"
 msgstr ""
 
-#: l10n/trebbia.php:770
+#: l10n/trebbia.php:773
 msgid ""
 "Ploomcake è un'evoluzione del CMS Plone che rende più semplice la creazione "
 "di siti web, intranet e portali collaborativi con una particolare attenzione "
 "ai dispositivi mobile..."
 msgstr ""
 
-#: l10n/trebbia.php:773
+#: l10n/trebbia.php:776
 msgid "Software Libero nelle P.A.: Novità Normative"
 msgstr ""
 
-#: l10n/trebbia.php:776
+#: l10n/trebbia.php:779
 msgid ""
 "Nell'ultimo anno si sono succedute molte novità normative che riguardano il "
 "software libero:\n"
@@ -2860,7 +2858,7 @@ msgid ""
 "la legge..."
 msgstr ""
 
-#: l10n/trebbia.php:786
+#: l10n/trebbia.php:789
 msgid ""
 "Ci siamo lasciati convincere dall'immancabile amico smanettone e finalmente "
 "abbiamo installato Linux. Subito cominciano le cattive notizie: è diverso da "
@@ -2870,24 +2868,24 @@ msgid ""
 "(operativi) ostili."
 msgstr ""
 
-#: l10n/trebbia.php:789
+#: l10n/trebbia.php:792
 #, fuzzy
 msgid "Installiamo insieme Debian"
 msgstr "Installation of a GNU/Linux distribution"
 
-#: l10n/trebbia.php:792
+#: l10n/trebbia.php:795
 msgid ""
 "Installazione dal vivo di Debian Live 7.0 LXDE, utile per verificare la "
 "compatibilità dell'hardware, adatta a computer nuovi o un po' datati, facile "
 "da mantenere aggiornata: insomma un ottimo esempio di Software libero!"
 msgstr ""
 
-#: l10n/trebbia.php:795
+#: l10n/trebbia.php:798
 #, fuzzy
 msgid "Come è strutturato un Sistema GNU/Linux"
 msgstr "GNU/Linux base commands"
 
-#: l10n/trebbia.php:798
+#: l10n/trebbia.php:801
 msgid ""
 "Conoscere come è fatto GNU/Linux potrebbe esservi utile per non fare errori "
 "durante l'installazione, o  banalmente per sfruttarlo meglio.Vediamo di "
@@ -2897,11 +2895,11 @@ msgid ""
 "che emergeranno durante la conversazione."
 msgstr ""
 
-#: l10n/trebbia.php:801
+#: l10n/trebbia.php:804
 msgid "Corsi Online per Insegnanti"
 msgstr ""
 
-#: l10n/trebbia.php:804
+#: l10n/trebbia.php:807
 msgid ""
 "Breve storia del percorso che dalla legge regionale sul Software Libero ha "
 "portato alla piattaforma teachmood.it e alla realizzazione di corsi per i "
@@ -2909,12 +2907,12 @@ msgid ""
 "Presentazione della piattaforma e dei corsi."
 msgstr ""
 
-#: l10n/trebbia.php:807
+#: l10n/trebbia.php:810
 #, fuzzy
 msgid "Fotografia Digitale"
 msgstr "Photos"
 
-#: l10n/trebbia.php:810
+#: l10n/trebbia.php:813
 msgid ""
 "Panoramiche a 360 gradi con utilizzo del programma Hugin Panorama photo "
 "stitcher e Gimp per ritocco finale del cielo blu ed esportazione in jpeg "
@@ -2925,32 +2923,32 @@ msgid ""
 "antivibrazioni."
 msgstr ""
 
-#: l10n/trebbia.php:813
+#: l10n/trebbia.php:816
 msgid "Il terminale per tutti"
 msgstr ""
 
-#: l10n/trebbia.php:816
+#: l10n/trebbia.php:819
 msgid ""
 "Un talk per \"assaggiare\" la potenza del terminale, farvi venire la voglia "
 "di utilizzare questo strumento nella vita quotidiana e consigliarvi qualche "
 "trucchetto."
 msgstr ""
 
-#: l10n/trebbia.php:819
+#: l10n/trebbia.php:822
 msgid "Arduino Yún"
 msgstr ""
 
-#: l10n/trebbia.php:822
+#: l10n/trebbia.php:825
 msgid ""
 "Introduzione ad Arduino Yún, la prima scheda Arduino dotata di un processore "
 "dedicato a Linux che affianca e potenzia le capacità del microcontrollore."
 msgstr ""
 
-#: l10n/trebbia.php:825
+#: l10n/trebbia.php:828
 msgid "Quante ne sai?"
 msgstr ""
 
-#: l10n/trebbia.php:828
+#: l10n/trebbia.php:831
 msgid ""
 "Torna a grande richiesta il talk interattivo tra hacking e fooling: \"premi "
 "la patata\" e rispondi alle domande! Quante SLOC ci sono in Debian? "
@@ -2961,11 +2959,11 @@ msgid ""
 "immancabili, celeberrimi biscotti."
 msgstr ""
 
-#: l10n/trebbia.php:831
+#: l10n/trebbia.php:834
 msgid "Privacy ed anonimato su Internet"
 msgstr ""
 
-#: l10n/trebbia.php:834
+#: l10n/trebbia.php:837
 msgid ""
 "Il talk si prefigge di illustrare il modo in cui le nostre informazioni "
 "personali viaggino in rete: il tracking, il filter-bubbling dei motori di "
@@ -2974,11 +2972,11 @@ msgid ""
 "eventualmente in anonimato."
 msgstr ""
 
-#: l10n/trebbia.php:837
+#: l10n/trebbia.php:840
 msgid "Asterisk: centralino VoIP FLOSS"
 msgstr ""
 
-#: l10n/trebbia.php:840
+#: l10n/trebbia.php:843
 msgid ""
 "Configurazione di un centralino telefonico (PBX) basato su Asterisk "
 "comprensivo di periferiche (telefoni VoIP, PortAdapter analogici, GSMbox, "
@@ -2988,22 +2986,22 @@ msgid ""
 "utilizzate in diretta dai partecipanti."
 msgstr ""
 
-#: l10n/trebbia.php:843
+#: l10n/trebbia.php:846
 msgid "Zabbix: Monitoring is possible"
 msgstr ""
 
-#: l10n/trebbia.php:846
+#: l10n/trebbia.php:849
 msgid ""
 "Introduzione a Zabbix, soluzione di Monitoring Opensource adattabile a varie "
 "realta', dal privato all'Enterprise. Concetti, caratteristiche di base e "
 "scenari di utilizzo."
 msgstr ""
 
-#: l10n/trebbia.php:849
+#: l10n/trebbia.php:852
 msgid "Fastboot in sistemi embedded"
 msgstr ""
 
-#: l10n/trebbia.php:852
+#: l10n/trebbia.php:855
 msgid ""
 "Il talk ha l'obiettivo di introdurre le tecniche utilizzate per ottimizzare "
 "la sequenza di startup di un sistema embedded. Si partirà con la descrizione "
@@ -3011,11 +3009,11 @@ msgid ""
 "descrivendo la gestione dell'avvio di servizi in user space (systemd)."
 msgstr ""
 
-#: l10n/trebbia.php:855
+#: l10n/trebbia.php:858
 msgid "MITM e webapp"
 msgstr ""
 
-#: l10n/trebbia.php:858
+#: l10n/trebbia.php:861
 msgid ""
 "Partendo da concetti di base come ARP ed SSL si parlerà di tecniche di MITM "
 "in relazione con le tecnologie web con dimostrazioni pratiche e suggerimenti "
@@ -3023,22 +3021,22 @@ msgid ""
 "infrastruttura."
 msgstr ""
 
-#: l10n/trebbia.php:861
+#: l10n/trebbia.php:864
 msgid "Quando il nuovo rende insicure le VPN"
 msgstr ""
 
-#: l10n/trebbia.php:864
+#: l10n/trebbia.php:867
 msgid ""
 "Sfruttando il poco conosciuto IPv6 si può creare una condizione di rete per "
 "la quale il traffico, normalmente diretto su una vpn sicura, viene deviato "
 "verso un proxy dell'attaccante."
 msgstr ""
 
-#: l10n/trebbia.php:867
+#: l10n/trebbia.php:870
 msgid "Penetration Test con Kali Linux"
 msgstr ""
 
-#: l10n/trebbia.php:870
+#: l10n/trebbia.php:873
 msgid ""
 "Il crescente trend dei cyber attacchi pone a chiunque lavori nel campo IT "
 "alcuni importanti quesiti: Quali sono le armi che vengono usate? Siamo "
@@ -3049,12 +3047,12 @@ msgid ""
 "possibili contromisure."
 msgstr ""
 
-#: l10n/trebbia.php:873
+#: l10n/trebbia.php:876
 #, fuzzy
 msgid "Mifare Ultralight: Istruzioni per l'uso"
 msgstr "InfoSec. How to use."
 
-#: l10n/trebbia.php:876
+#: l10n/trebbia.php:879
 msgid ""
 "Uno degli utilizzi più comuni dei chip NFC riguarda i sistemi di trasporto "
 "pubblico, in cui spesso si può riscontrare una scorretta implementazione del "
@@ -3065,12 +3063,12 @@ msgid ""
 "l’utilizzo adeguato dei bytes del settore \"OTP\"."
 msgstr ""
 
-#: l10n/trebbia.php:879
+#: l10n/trebbia.php:882
 #, fuzzy
 msgid "I Database non Relazionali"
 msgstr "Relational SQL database."
 
-#: l10n/trebbia.php:882
+#: l10n/trebbia.php:885
 msgid ""
 "I database non relazionali, pur non essendo una novità assoluta, hanno "
 "registrato una crescita esponenziale nel loro sviluppo e utilizzo negli "
@@ -3081,22 +3079,22 @@ msgid ""
 "sviluppo) vari NRDBMS (database non relazionali)."
 msgstr ""
 
-#: l10n/trebbia.php:885
+#: l10n/trebbia.php:888
 msgid "Redis per Linux"
 msgstr ""
 
-#: l10n/trebbia.php:888
+#: l10n/trebbia.php:891
 msgid ""
 "Redis come sistema di storage di configurazioni, Etcd. Oltre le sessioni: "
 "pub/sub (chat), hipache, AWS ElastiCache per Redis. Master/slave config (il "
 "problema di Twilio). Redis come logger e/o queue broker (Logstash)"
 msgstr ""
 
-#: l10n/trebbia.php:891
+#: l10n/trebbia.php:894
 msgid "MeteorJS & webapp in Realtime"
 msgstr ""
 
-#: l10n/trebbia.php:894
+#: l10n/trebbia.php:897
 msgid ""
 "Le applicazioni web per essere reattive e sicure devono fare controlli sia "
 "lato client che lato server, questo comporta duplicazione di codice e spesso "
@@ -3105,11 +3103,11 @@ msgid ""
 "che potrà girare indifferentemente sul browser o sul server o su entrambi."
 msgstr ""
 
-#: l10n/trebbia.php:897
+#: l10n/trebbia.php:900
 msgid "Plone CMS & Ploomcake"
 msgstr ""
 
-#: l10n/trebbia.php:900
+#: l10n/trebbia.php:903
 msgid ""
 "Plone è un gestore di contenuti open source sviluppato in Python. Il suo "
 "punto di forza è la flessibilità. Con Plone si possono creare siti web, "
@@ -3118,7 +3116,7 @@ msgid ""
 "una distribuzione Plone."
 msgstr ""
 
-#: l10n/trebbia.php:906
+#: l10n/trebbia.php:909
 msgid ""
 "Linux è un sistema semplice, veloce e adatto a tutti. Si può usare per "
 "navigare su Internet, salvare e modificare fotografie, scrivere documenti, e "
@@ -3127,11 +3125,11 @@ msgid ""
 "più stabile che c'è."
 msgstr ""
 
-#: l10n/trebbia.php:909
+#: l10n/trebbia.php:912
 msgid "Ma che è 'sto Linux Day?"
 msgstr ""
 
-#: l10n/trebbia.php:912
+#: l10n/trebbia.php:915
 msgid ""
 "Un meta-talk sul Linux Day, e non solo quello di Torino: come funziona (o "
 "non funziona) la più grande manifestazione nazionale a supporto di Linux e "
@@ -3139,11 +3137,11 @@ msgid ""
 "disperso."
 msgstr ""
 
-#: l10n/trebbia.php:915
+#: l10n/trebbia.php:918
 msgid "Creative Commons e Open Data"
 msgstr ""
 
-#: l10n/trebbia.php:918
+#: l10n/trebbia.php:921
 msgid ""
 "Le licenze Creative Commons permettono a singoli creatori o istituzioni di "
 "condividere le proprie opere secondo il modello \"alcuni diritti riservati"
@@ -3153,11 +3151,11 @@ msgid ""
 "messa a disposizione di dati."
 msgstr ""
 
-#: l10n/trebbia.php:921
+#: l10n/trebbia.php:924
 msgid "UEFI"
 msgstr ""
 
-#: l10n/trebbia.php:924
+#: l10n/trebbia.php:927
 msgid ""
 "Si fa prima una breve introduzione al processo di booting ed al ruolo che vi "
 "gioca(va) il BIOS ed i suoi limiti. Si fa quindi una breve storia del EFI e "
@@ -3166,11 +3164,11 @@ msgid ""
 "Microsoft."
 msgstr ""
 
-#: l10n/trebbia.php:927
+#: l10n/trebbia.php:930
 msgid "Reti P2P"
 msgstr ""
 
-#: l10n/trebbia.php:930
+#: l10n/trebbia.php:933
 msgid ""
 "Si partirà dalle basi per comprendere ed esplorare i concetti fondamentali e "
 "strutturali di diverse categorie di reti peer to peer, evidenziando le "
@@ -3178,11 +3176,11 @@ msgid ""
 "problemi che esse hanno affrontato con successo."
 msgstr ""
 
-#: l10n/trebbia.php:933
+#: l10n/trebbia.php:936
 msgid "Privacy e anonimato su Android"
 msgstr ""
 
-#: l10n/trebbia.php:936
+#: l10n/trebbia.php:939
 msgid ""
 "La rapida diffusione degli smartphone, in grado di connettere gli individui "
 "in modo quanto mai personale, ha portato l'informatica al di fuori dei "
@@ -3192,12 +3190,12 @@ msgid ""
 "di tali informazioni."
 msgstr ""
 
-#: l10n/trebbia.php:939
+#: l10n/trebbia.php:942
 #, fuzzy
 msgid "Conosci il software libero?"
 msgstr "Catalogue of Free as in Freedom software for Android"
 
-#: l10n/trebbia.php:942
+#: l10n/trebbia.php:945
 msgid ""
 "A grande richiesta, torna il quiz interattivo tra hacking e fooling! Quante "
 "SLOC ci sono in Debian? Chi organizza il Caos Communication Camp? Qual è la "
@@ -3211,11 +3209,11 @@ msgid ""
 "Manda QUIZ14 a quantenesai14@ivnb.info :)"
 msgstr ""
 
-#: l10n/trebbia.php:945
+#: l10n/trebbia.php:948
 msgid "Reverse engineering 101"
 msgstr ""
 
-#: l10n/trebbia.php:948
+#: l10n/trebbia.php:951
 msgid ""
 "Verranno introdotti gli strumenti più utili per fare reverse engineering e "
 "verrà analizzato e risolto, passo dopo passo, un \"crackme\" (pseudo-"
@@ -3223,11 +3221,11 @@ msgid ""
 "scopo puramente didattico)."
 msgstr ""
 
-#: l10n/trebbia.php:951
+#: l10n/trebbia.php:954
 msgid "MeteorJS e le infografiche realtime"
 msgstr ""
 
-#: l10n/trebbia.php:954
+#: l10n/trebbia.php:957
 msgid ""
 "L'approccio client/server sta sempre più stretto per le nuove web/app, "
 "MeteorJS rivoluziona il paradigma e propone un'alternava per scrivere codice "
@@ -3236,11 +3234,11 @@ msgid ""
 "che utilizzano dati in streaming o opendata."
 msgstr ""
 
-#: l10n/trebbia.php:957
+#: l10n/trebbia.php:960
 msgid "Strumenti per lo sviluppo web"
 msgstr ""
 
-#: l10n/trebbia.php:960
+#: l10n/trebbia.php:963
 msgid ""
 "Migliora la tua esperienza di sviluppatore web adottando strumenti avanzati "
 "per automatizzare operazioni ripetitive e noiose: scaffolding nuovi "
@@ -3249,11 +3247,11 @@ msgid ""
 "tematiche legate al deploy."
 msgstr ""
 
-#: l10n/trebbia.php:963
+#: l10n/trebbia.php:966
 msgid "Scrivere driver per il kernel"
 msgstr ""
 
-#: l10n/trebbia.php:966
+#: l10n/trebbia.php:969
 msgid ""
 "Un'introduzione alla programmazione in spazio kernel. Dopo la presentazione "
 "di alcuni concetti di base e delle strutture dati che tengono insieme tutto "
@@ -3263,11 +3261,11 @@ msgid ""
 "piccolo, il modo in cui normalmente si imposta il codice in spazio kernel."
 msgstr ""
 
-#: l10n/trebbia.php:969
+#: l10n/trebbia.php:972
 msgid "Shield e librerie RaspberryPi"
 msgstr ""
 
-#: l10n/trebbia.php:972
+#: l10n/trebbia.php:975
 msgid ""
 "RaspberryPi non è solo un microcomputer per applicazioni classiche, ma una "
 "vera board per lo sviluppo e la comunicazione con altri sistemi Embedded. In "
@@ -3281,11 +3279,11 @@ msgid ""
 "comunicazione verso le altre periferiche!"
 msgstr ""
 
-#: l10n/trebbia.php:975
+#: l10n/trebbia.php:978
 msgid "Videosorveglianza RaspberryPi"
 msgstr ""
 
-#: l10n/trebbia.php:978
+#: l10n/trebbia.php:981
 msgid ""
 "Comprare una videocamera per la sorveglianza e il motion detection già "
 "configurata e funzionante è troppo facile. Partiamo dal RaspberryPi, il suo "
@@ -3294,22 +3292,22 @@ msgid ""
 "succede qualcosa nella zona che volete controllare mentre voi non ci siete."
 msgstr ""
 
-#: l10n/trebbia.php:981
+#: l10n/trebbia.php:984
 msgid "Arduino"
 msgstr ""
 
-#: l10n/trebbia.php:984
+#: l10n/trebbia.php:987
 msgid ""
 "Forse la più famosa scheda elettronica al mondo, raccontata da chi ci lavora "
 "tutto il giorno: la community, la gamma di piattaforme, progetti pratici e "
 "spunti operativi. L'opensource allo stato solido!"
 msgstr ""
 
-#: l10n/trebbia.php:987
+#: l10n/trebbia.php:990
 msgid "OpenWRT"
 msgstr ""
 
-#: l10n/trebbia.php:990
+#: l10n/trebbia.php:993
 msgid ""
 "OpenWrt, soprannominatosi \"wireless freedom\", è una distribuzione Linux "
 "ultraleggera per sistemi embedded, presente in molti wireless router. Ora i "
@@ -3319,11 +3317,11 @@ msgid ""
 "vincerà?"
 msgstr ""
 
-#: l10n/trebbia.php:993
+#: l10n/trebbia.php:996
 msgid "Ettercap, sicurezza in LAN"
 msgstr ""
 
-#: l10n/trebbia.php:996
+#: l10n/trebbia.php:999
 msgid ""
 "Ettercap è un software libero, strumento progettato per la sicurezza della "
 "rete dagli attacchi LAN. Può essere usato per l'analisi della rete e "
@@ -3332,11 +3330,11 @@ msgid ""
 "intercettazioni attive contro una serie di protocolli comuni."
 msgstr ""
 
-#: l10n/trebbia.php:999
+#: l10n/trebbia.php:1002
 msgid "Virtualizzazione con KVM"
 msgstr ""
 
-#: l10n/trebbia.php:1002
+#: l10n/trebbia.php:1005
 msgid ""
 "La virtualizzazione è una delle tecnologie chiave dell'Informatica attuale, "
 "ma non tutti la conoscono e apprezzano per quello che realmente permette di "
@@ -3344,11 +3342,11 @@ msgid ""
 "in funzione qemu e kvm, anche utilizzando l'interfaccia virt-manager."
 msgstr ""
 
-#: l10n/trebbia.php:1005
+#: l10n/trebbia.php:1008
 msgid "Virtualizzazione con Docker"
 msgstr ""
 
-#: l10n/trebbia.php:1008
+#: l10n/trebbia.php:1011
 msgid ""
 "Docker è uno dei progetti open source più giovani, ma con la sua grande "
 "velocità e scalabilità promette di rivoluzionare la virtualizzazione e i "
@@ -3357,11 +3355,11 @@ msgid ""
 "possibilità di utilizzo in vari ambiti."
 msgstr ""
 
-#: l10n/trebbia.php:1011
+#: l10n/trebbia.php:1014
 msgid "Zabbix"
 msgstr "Zabbix"
 
-#: l10n/trebbia.php:1014
+#: l10n/trebbia.php:1017
 msgid ""
 "Zabbix è uno tra i più noti software di monitoring open source, nato nel "
 "lontano 1999 da un'idea di Alexei Vladishev, ad oggi è una delle soluzioni "
@@ -3370,90 +3368,90 @@ msgid ""
 "soglie di allarme."
 msgstr ""
 
-#: l10n/trebbia.php:1017
+#: l10n/trebbia.php:1020
 #, fuzzy
 msgid "Il Software Libero per Tutti"
 msgstr "Free Software"
 
-#: l10n/trebbia.php:1020
+#: l10n/trebbia.php:1023
 msgid ""
 "Dopo avere analizzato i concetti che stanno alla base del software libero, "
 "valuteremo insieme i passi che un utente può effettuare per migrare un "
 "computer ad una distribuzione libera senza difficoltà."
 msgstr ""
 
-#: l10n/trebbia.php:1023
+#: l10n/trebbia.php:1026
 msgid "Adotta un Software"
 msgstr ""
 
-#: l10n/trebbia.php:1026
+#: l10n/trebbia.php:1029
 msgid ""
 "Cosa fare quando il tuo programma preferito non viene più sviluppato, ovvero "
 "come diventare un developer KDE per pigrizia e fare parte di un progetto "
 "open source. Ispirato ad una storia vera."
 msgstr ""
 
-#: l10n/trebbia.php:1029
+#: l10n/trebbia.php:1032
 msgid "Storage: Cos'è e Come è Fatto"
 msgstr ""
 
-#: l10n/trebbia.php:1032
+#: l10n/trebbia.php:1035
 msgid ""
 "Struttura di un sistema storage, dai dischi alle interfacce di "
 "comunicazione: carrellata non tecnica sui contenuti di questi sistemi di "
 "archiviazione, sempre più diffusi anche in ambito casalingo."
 msgstr ""
 
-#: l10n/trebbia.php:1035
+#: l10n/trebbia.php:1038
 msgid "F-Droid, Libera il tuo Smartphone!"
 msgstr ""
 
-#: l10n/trebbia.php:1038
+#: l10n/trebbia.php:1041
 msgid ""
 "Lo smartphone è il libro (aperto) della tua vita privata. Puoi continuare a "
 "restare nel \"Grande Fratello\", se lo desideri, ma una via di uscita "
 "esiste. (A fine talk, installation-party sugli Android)."
 msgstr ""
 
-#: l10n/trebbia.php:1041
+#: l10n/trebbia.php:1044
 msgid "Un Pinguino in Comune"
 msgstr ""
 
-#: l10n/trebbia.php:1044
+#: l10n/trebbia.php:1047
 msgid ""
 "Non tutti sanno che in numerosi laboratori didattici nelle scuole di Torino "
 "si trova Linux. E la storia di come ci sia arrivato parte dall'assessorato "
 "all'istruzione..."
 msgstr ""
 
-#: l10n/trebbia.php:1047
+#: l10n/trebbia.php:1050
 #, fuzzy
 msgid "Fare il Software Libero"
 msgstr "Free Software"
 
-#: l10n/trebbia.php:1050
+#: l10n/trebbia.php:1053
 msgid ""
 "Sviluppare software libero non vuol dire solamente mettere dei sorgenti su "
 "GitHub: lo scopo del talk è fornire le basi tecniche (e non) per sviluppare "
 "nuovi progetti e contribuire a quelli esistenti."
 msgstr ""
 
-#: l10n/trebbia.php:1053
+#: l10n/trebbia.php:1056
 msgid "Non c'è Cloud senza Storage"
 msgstr ""
 
-#: l10n/trebbia.php:1056
+#: l10n/trebbia.php:1059
 msgid ""
 "Eravamo abituati a RAID, ARRAY e dischi, ma il mondo evolve e questi sono un "
 "ricordo. Ceph è un Distributed Storage tra i più interessanti e pone le basi "
 "per le future soluzioni di memorizzazione dati."
 msgstr ""
 
-#: l10n/trebbia.php:1059
+#: l10n/trebbia.php:1062
 msgid "Libera un Chromebook"
 msgstr ""
 
-#: l10n/trebbia.php:1062
+#: l10n/trebbia.php:1065
 #, php-format
 msgid ""
 "Saremo destinati ad utilizzare solo applicazioni cloud? Forse. Nel frattempo "
@@ -3461,263 +3459,458 @@ msgid ""
 "Linux e godiamoci il 100% delle sue potenzialità."
 msgstr ""
 
-#: l10n/trebbia.php:1065
+#: l10n/trebbia.php:1068
 #, fuzzy
 msgid "Installiamo Linux!"
 msgstr "Install LDTO16"
 
-#: l10n/trebbia.php:1068
+#: l10n/trebbia.php:1071
 msgid ""
 "Consigli, dritte e warning su come installare sul proprio computer una delle "
 "distribuzioni Linux più famose. Installeremo Linux su un computer di prova "
 "per vedere \"live\" tutti i passaggi necessari."
 msgstr ""
 
-#: l10n/trebbia.php:1071
+#: l10n/trebbia.php:1074
 msgid "Nel Labirinto dei Codec Futuri"
 msgstr ""
 
-#: l10n/trebbia.php:1074
+#: l10n/trebbia.php:1077
 msgid ""
 "Negli ultimi anni abbiamo visto nuovi standard che promettono di essere "
 "superiori: HEVC, VP9/VP10, Daala ed Opus. L'intervento mira a dare una "
 "introduzione sugli specifici format e spiegare a che punto siamo."
 msgstr ""
 
-#: l10n/trebbia.php:1077
+#: l10n/trebbia.php:1080
 msgid "IBM Bluemix, Digital Innovation Platform"
 msgstr ""
 
-#: l10n/trebbia.php:1080
+#: l10n/trebbia.php:1083
 msgid ""
 "IBM Bluemix è la piattaforma cloud basata su open standard, per lo sviluppo, "
 "test e esecuzione di applicazioni in modalità PaaS. Qui una presentazione ed "
 "una dimostrazione live."
 msgstr ""
 
-#: l10n/trebbia.php:1083
+#: l10n/trebbia.php:1086
 msgid "Riservatezza Digitale: Missione Impossibile?"
 msgstr ""
 
-#: l10n/trebbia.php:1086
+#: l10n/trebbia.php:1089
 msgid ""
 "Oggigiorno i dispositivi personali ci accompagnano ovunque, registrando e "
 "trasmettendo tutte le attività. È ancora possibile fare uso dello strumento "
 "digitale tutelando al contempo la propria privacy?"
 msgstr ""
 
-#: l10n/trebbia.php:1089
+#: l10n/trebbia.php:1092
 msgid "E con Linux che Programmi uso?"
 msgstr ""
 
-#: l10n/trebbia.php:1092
+#: l10n/trebbia.php:1095
 msgid ""
 "Panoramica sui programmi più utili da installare sulla vostra nuova "
 "installazione di Linux, per non sentire la mancanza di Windows e rimanere "
 "sorpresi dalla varietà e qualità. Con regalo a fine talk."
 msgstr ""
 
-#: l10n/trebbia.php:1095
+#: l10n/trebbia.php:1098
 msgid "A Summary of the Daala Project"
 msgstr ""
 
-#: l10n/trebbia.php:1098
+#: l10n/trebbia.php:1101
 msgid ""
 "Daala is a \"next-next generation\" video codec project sponsored by Mozilla "
 "and Xiph.Org. The talk will cover what worked, what didn't and where we plan "
 "to go from here."
 msgstr ""
 
-#: l10n/trebbia.php:1101
+#: l10n/trebbia.php:1104
 msgid "Ninux e Reti Wireless Comunitarie"
 msgstr ""
 
-#: l10n/trebbia.php:1104
+#: l10n/trebbia.php:1107
 msgid ""
 "Ninux.org, la più grande community wireless italiana in salsa open source. "
 "Liberi di condividere e sperimentare. Teoria e pratica delle reti wireless "
 "comunitarie."
 msgstr ""
 
-#: l10n/trebbia.php:1107
+#: l10n/trebbia.php:1110
 msgid "Copyright-Copyleft"
 msgstr ""
 
-#: l10n/trebbia.php:1110
+#: l10n/trebbia.php:1113
 msgid ""
 "Capire insieme quali sono i diritti di chi fruisce e diffonde e di chi crea "
 "e produce contenuti in rete, per sapere cosa fare e prevedere come andrà a "
 "finire la battaglia sui contenuti in rete."
 msgstr ""
 
-#: l10n/trebbia.php:1116 l10n/trebbia.php:1140 l10n/trebbia.php:1164
-#: l10n/trebbia.php:1188
+#: l10n/trebbia.php:1119 l10n/trebbia.php:1143 l10n/trebbia.php:1167
+#: l10n/trebbia.php:1191
 msgid "14:30"
 msgstr ""
 
-#: l10n/trebbia.php:1119
+#: l10n/trebbia.php:1122
 msgid "Privacy"
 msgstr ""
 
-#: l10n/trebbia.php:1122 l10n/trebbia.php:1146 l10n/trebbia.php:1170
-#: l10n/trebbia.php:1194
+#: l10n/trebbia.php:1125 l10n/trebbia.php:1149 l10n/trebbia.php:1173
+#: l10n/trebbia.php:1197
 msgid "15:30"
 msgstr ""
 
-#: l10n/trebbia.php:1125
+#: l10n/trebbia.php:1128
 msgid "Il Nostro Diritto Digitale alla Città"
 msgstr ""
 
-#: l10n/trebbia.php:1128 l10n/trebbia.php:1152 l10n/trebbia.php:1176
-#: l10n/trebbia.php:1200
+#: l10n/trebbia.php:1131 l10n/trebbia.php:1155 l10n/trebbia.php:1179
+#: l10n/trebbia.php:1203
 msgid "16:30"
 msgstr ""
 
-#: l10n/trebbia.php:1131
+#: l10n/trebbia.php:1134
 msgid "Quando un dato è cancellato"
 msgstr ""
 
-#: l10n/trebbia.php:1134 l10n/trebbia.php:1158 l10n/trebbia.php:1182
-#: l10n/trebbia.php:1206
+#: l10n/trebbia.php:1137 l10n/trebbia.php:1161 l10n/trebbia.php:1185
+#: l10n/trebbia.php:1209
 msgid "17:30"
 msgstr ""
 
-#: l10n/trebbia.php:1137
+#: l10n/trebbia.php:1140
 msgid "Rust, perché e perché no"
 msgstr ""
 
-#: l10n/trebbia.php:1143
+#: l10n/trebbia.php:1146
 msgid "Blockchain, da zero al codice"
 msgstr ""
 
-#: l10n/trebbia.php:1149 l10n/trebbia.php:1532
+#: l10n/trebbia.php:1152 l10n/trebbia.php:1678
 msgid "Embedded"
 msgstr "Embedded"
 
-#: l10n/trebbia.php:1155
+#: l10n/trebbia.php:1158
 msgid "Far parlare i dispositivi IoT"
 msgstr ""
 
-#: l10n/trebbia.php:1161
+#: l10n/trebbia.php:1164
 msgid "Big Data RT Analytics"
 msgstr ""
 
-#: l10n/trebbia.php:1167
+#: l10n/trebbia.php:1170
 msgid "Fun with Zabbix & IoT"
 msgstr ""
 
-#: l10n/trebbia.php:1173
+#: l10n/trebbia.php:1176
 msgid "Da IPv4 a IPv6"
 msgstr ""
 
-#: l10n/trebbia.php:1179
+#: l10n/trebbia.php:1182
 msgid "Varnish: quando la cache conta"
 msgstr ""
 
-#: l10n/trebbia.php:1185
+#: l10n/trebbia.php:1188
 msgid "Dispositivi IoT con iottly"
 msgstr ""
 
-#: l10n/trebbia.php:1191
+#: l10n/trebbia.php:1194
 msgid "Odoo, ERP open per l'azienda"
 msgstr ""
 
-#: l10n/trebbia.php:1197
+#: l10n/trebbia.php:1200
 msgid "Quali alternative a WhatsApp?"
 msgstr ""
 
-#: l10n/trebbia.php:1203
+#: l10n/trebbia.php:1206
 msgid "Bitcoin e Monero"
 msgstr ""
 
-#: l10n/trebbia.php:1209
+#: l10n/trebbia.php:1212
 msgid "LUG Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1212
+#: l10n/trebbia.php:1215
 #, fuzzy
 msgid "Debian GNU/Linux news"
 msgstr "GNU/Linux"
 
-#: l10n/trebbia.php:1215
+#: l10n/trebbia.php:1218
 msgid "Billing tools with free software / Free software for network monitoring"
 msgstr ""
 
-#: l10n/trebbia.php:1218
+#: l10n/trebbia.php:1221
 #, fuzzy
 msgid "Software libero e impresa"
 msgstr "Free Software"
 
-#: l10n/trebbia.php:1221
+#: l10n/trebbia.php:1224
 msgid "Open Media Streaming"
 msgstr ""
 
-#: l10n/trebbia.php:1224
+#: l10n/trebbia.php:1227
 msgid "MOSIX"
 msgstr ""
 
-#: l10n/trebbia.php:1227
+#: l10n/trebbia.php:1230
 msgid "presentazione del libro \"Informatica solidale\""
 msgstr ""
 
-#: l10n/trebbia.php:1230
+#: l10n/trebbia.php:1233
 msgid "Le attività del GNU/Linux Users Group Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1233
+#: l10n/trebbia.php:1236
 msgid ""
 "Software Libero, nuove opportunità per la Pubblica Amministrazione, la "
 "scuola e le imprese"
 msgstr ""
 
-#: l10n/trebbia.php:1236
+#: l10n/trebbia.php:1239
 msgid ""
 "Software Libero e Pubblica Amministrazione: la proposta di mozione nel "
 "Comune di Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1239
+#: l10n/trebbia.php:1242
 msgid "Cluster Linux per il calcolo ad alte prestazioni in ambito Automotive"
 msgstr ""
 
-#: l10n/trebbia.php:1242
+#: l10n/trebbia.php:1245
 msgid "Informatica solidale: perchè conviene cooperare?"
 msgstr ""
 
-#: l10n/trebbia.php:1245
+#: l10n/trebbia.php:1248
 msgid "Il passaggio del LIASES all'Open Source"
 msgstr ""
 
-#: l10n/trebbia.php:1248
+#: l10n/trebbia.php:1251
 msgid "Un sistema webmail per l'integrazione della comunicazione aziendale"
 msgstr ""
 
-#: l10n/trebbia.php:1251
+#: l10n/trebbia.php:1254
 msgid "GNU/Linux: una piattaforma flessibile per l'azienda"
 msgstr ""
 
-#: l10n/trebbia.php:1254
+#: l10n/trebbia.php:1257
 msgid "Procedura di gestione interventi tecnici"
 msgstr ""
 
-#: l10n/trebbia.php:1257
+#: l10n/trebbia.php:1260
 msgid "Watch-Penguin: affrontare la sicurezza aziendale"
 msgstr ""
 
-#: l10n/trebbia.php:1260
+#: l10n/trebbia.php:1263
 msgid "Soluzioni GNU/Linux: dal mercato enterprise alla PMI"
 msgstr ""
 
-#: l10n/trebbia.php:1263 2017/includes/class-Footer.php:102
+#: l10n/trebbia.php:1266
+#, fuzzy
+msgid "Primi passi con GNU/Linux"
+msgstr "GNU/Linux uses"
+
+#: l10n/trebbia.php:1269
+msgid ""
+"50 minuti per sapere tutto ciò che serve per entrare nel mondo del software "
+"libero senza pentimento. Domande accette."
+msgstr ""
+
+#: l10n/trebbia.php:1272
+msgid "Don't Touch My Data"
+msgstr ""
+
+#: l10n/trebbia.php:1275
+msgid ""
+"Grazie a qualche volontario dimostreremo come ogni giorno la nostra privacy "
+"viene completamente compromessa, e come difendersi.\n"
+"Portate l'amico «non ho niente da nascondere»."
+msgstr ""
+
+#: l10n/trebbia.php:1279
+msgid "Private Cloud"
+msgstr ""
+
+#: l10n/trebbia.php:1282
+msgid ""
+"Raggiungere l'indipendenza tecnologica è possibile. Tutti i servizi cloud "
+"che conosciamo possono essere sostituiti da un nostro computer.\n"
+"Pronti, via!"
+msgstr ""
+
+#: l10n/trebbia.php:1286
+msgid ""
+"Il talk si prefigge di illustrare le tecnologie e le metodologie per la "
+"creazione e configurazione di un proprio server privato.\n"
+"\n"
+"La prima parte si focalizza sulla storia recente di internet e descrive come "
+"esso sia completamente cambiato. Il software libero ed open source e le "
+"risorse quasi illimitate dei grandi colossi del web (Google, Microsoft, "
+"Apple, ecc.) hanno permesso la creazione di innumerevoli servizi: dalla "
+"posta elettronica alla gestione dei contatti e calendari, dal backup "
+"automatico sul cloud alla condivisione di video e documenti.\n"
+"\n"
+"Dopo la definizione (e l'interpretazione) del termine \"cloud\" vengono "
+"presentate le tecnologie necessarie ad ottenere l'indipendenza tecnologica: "
+"la configurazione di un proprio server. Sono elencati in dettaglio i "
+"software, gli strumenti e le soluzioni da utilizzare.\n"
+"\n"
+"L'ultima parte è dedicata alla descrizione di un caso pratico e reale, "
+"ovvero la configurazione di tre macchine ad uso aziendale dal 2010 ad oggi."
+msgstr ""
+
+#: l10n/trebbia.php:1295
+msgid "Eccovi il Big Data"
+msgstr ""
+
+#: l10n/trebbia.php:1298
+msgid ""
+"Chi parla di Big Data è come i pescatori: c'è sempre chi  si inventerà la "
+"storia su quel tonno gigante. Quindi parleremo nel concreto delle tecnologie "
+"usate in ambito enterprise."
+msgstr ""
+
+#: l10n/trebbia.php:1301
+msgid "Rasa ML framework"
+msgstr ""
+
+#: l10n/trebbia.php:1304
+msgid "AI assistants and chatbots"
+msgstr ""
+
+#: l10n/trebbia.php:1307
+msgid ""
+"Costruiamo assieme il nostro assistente utilizzando la tecnologia open "
+"source e scritta in Python: Rasa!\n"
+"\n"
+"Alla fine dei 30 minuti ci risponderà dal nostro smartphone."
+msgstr ""
+
+#: l10n/trebbia.php:1312
+msgid "Workshop Arduino"
+msgstr ""
+
+#: l10n/trebbia.php:1315
+msgid ""
+"Arduino è una piattaforma di prototipizzazione. Ma cosa diavolo significa?"
+msgstr ""
+
+#: l10n/trebbia.php:1318
+msgid "From Zer0 t0 R00t"
+msgstr ""
+
+#: l10n/trebbia.php:1321
+msgid "Offensive Security"
+msgstr ""
+
+#: l10n/trebbia.php:1324
+msgid ""
+"Abbiamo poco tempo per simulare un ambiente vulnerabile e poter testare "
+"insieme, uno ad uno, le più famose tecniche di penetration testing.\n"
+"Non rifatelo a casa."
+msgstr ""
+
+#: l10n/trebbia.php:1328
+msgid "ReadTheDocs"
+msgstr ""
+
+#: l10n/trebbia.php:1331
+msgid ""
+"Un consulente per il Team per la Trasformazione Digitale del governo "
+"italiano parlerà di [Docs Italia](https://docs.italia.it), una piattaforma "
+"Open Source per collezionare e condividere la documentazione della Pubblica "
+"Amministrazione."
+msgstr ""
+
+#: l10n/trebbia.php:1334
+msgid ""
+"Durante il 2018 sono stato un consulente per il Team per la Trasformazione "
+"Digitale del governo italiano per lavorare su Docs Italia (https://docs."
+"italia.it), una piattaforma Open Source per collezionare e condividere la "
+"documentazione della Pubblica Amministrazione.\n"
+"\n"
+"Non abbiamo scritto Docs Italia da zero, ma lo abbiamo costruito sopra a "
+"Read The Docs: la piattaforma di riferimento la documentazione di pacchetti "
+"Python.\n"
+"Questo ci ha permesso di risparmiare un bel po' di lavoro! Ma il software "
+"Open Source non si scrive da solo e abbiamo fatto la nostra parte "
+"contribuendo a Read The Docs. In questo talk racconterò cosa abbiamo fatto e "
+"cosa abbiamo imparato."
+msgstr ""
+
+#: l10n/trebbia.php:1340
+msgid "Rust"
+msgstr ""
+
+#: l10n/trebbia.php:1343
+msgid ""
+"Vi parleremo di Rust, il linguaggio di programmazione usato da Cloudflare, "
+"Microsoft, Mozilla e molti altri per le sue performance e sicurezza inerente."
+msgstr ""
+
+#: l10n/trebbia.php:1346
+msgid "MQTT"
+msgstr ""
+
+#: l10n/trebbia.php:1349
+msgid ""
+"Che cos'è l'MQTT e che ruolo ha nelle nostre vite? Vi mostreremo gli "
+"utilizzi di questo protocollo di messaggistica."
+msgstr ""
+
+#: l10n/trebbia.php:1352
+msgid "Deep Speech"
+msgstr ""
+
+#: l10n/trebbia.php:1355
+#, fuzzy
+msgid "Riconoscimento vocale"
+msgstr "Renaissance 2.0"
+
+#: l10n/trebbia.php:1358
+msgid ""
+"Come funziona una rete neurale per la decodifica della voce umana? E come "
+"contribuire? Lo scopriremo insieme ad una volontaria di Mozilla Foundation."
+msgstr ""
+
+#: l10n/trebbia.php:1361
+msgid "Apache Spark"
+msgstr ""
+
+#: l10n/trebbia.php:1364
+msgid ""
+"Se avete mai sentito parlare di \"calcolo distribuito\", ora ve lo "
+"mostreremo, e si fa sul serio. Un sistemista ci mostrerà alcuni dettagli di "
+"questo strumento per il data analytics e machine learning algorithms."
+msgstr ""
+
+#: l10n/trebbia.php:1367
+#, fuzzy
+msgid "Android"
+msgstr "Android App"
+
+#: l10n/trebbia.php:1370
+msgid "Quantum Computing"
+msgstr ""
+
+#: l10n/trebbia.php:1373
+msgid "GIS - BIM2GML"
+msgstr ""
+
+#: l10n/trebbia.php:1376
+msgid "Strumenti per la conversione di formati per la rappresentazione 3D."
+msgstr ""
+
+#: l10n/trebbia.php:1379 2017/includes/class-Footer.php:102
 msgid "Dipartimento di Informatica"
 msgstr "Computer Science department"
 
-#: l10n/trebbia.php:1266
-#, fuzzy
+#: l10n/trebbia.php:1382
 msgid "Via Pessinetto 12, Torino"
 msgstr "Turin, Via Pessinetto 12"
 
-#: l10n/trebbia.php:1269
+#: l10n/trebbia.php:1385
 msgid ""
 "Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
 "Amedeo di Savoia / Dipartimento di Informatica*.\n"
@@ -3731,16 +3924,16 @@ msgstr ""
 "Taking the underground to *XIII Dicembre* and getting on the bus n°**59** or "
 "n°**59/** and getting off at the stop **Svizzera**."
 
-#: l10n/trebbia.php:1274 2016/includes/class-Footer.php:103
+#: l10n/trebbia.php:1390 2016/includes/class-Footer.php:103
 #: 2017/includes/class-Footer.php:103
 msgid "Dipartimento di Biotecnologie"
 msgstr "Biotechnology department"
 
-#: l10n/trebbia.php:1277
+#: l10n/trebbia.php:1393
 msgid "Via Nizza 52, Torino"
 msgstr "Via Nizza 52, Turin"
 
-#: l10n/trebbia.php:1280
+#: l10n/trebbia.php:1396
 msgid ""
 "La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
 "Biotecnologie."
@@ -3748,610 +3941,389 @@ msgstr ""
 "**Nizza**'s underground station is at 50 mt from the Biotechnologies "
 "Department. "
 
-#: l10n/trebbia.php:1283
+#: l10n/trebbia.php:1399
 #, fuzzy
 msgid "Politecnico di Torino (sede centrale)"
 msgstr "Polytechnic of Turin"
 
-#: l10n/trebbia.php:1286
+#: l10n/trebbia.php:1402
 msgid "Corso Duca degli Abruzzi 24, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1289
+#: l10n/trebbia.php:1405
 #, fuzzy
 msgid "Politecnico di Torino (cittadella)"
 msgstr "Polytechnic of Turin"
 
-#: l10n/trebbia.php:1292
+#: l10n/trebbia.php:1408
 msgid "Corso Castelfidardo 34, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1295 2016/includes/class-Footer.php:110
+#: l10n/trebbia.php:1411 2016/includes/class-Footer.php:110
 #: 2017/includes/class-Footer.php:110
 msgid "Cascina Roccafranca"
 msgstr "Cascina Roccafranca"
 
-#: l10n/trebbia.php:1298
+#: l10n/trebbia.php:1414
 #, fuzzy
 msgid "Via Edoardo Rubino 45, Torino"
 msgstr "Via Nizza 52, Turin"
 
-#: l10n/trebbia.php:1301 2016/includes/class-Footer.php:106
+#: l10n/trebbia.php:1417 2016/includes/class-Footer.php:106
 #: 2017/includes/class-Footer.php:106
 msgid "Cortile del Maglio"
 msgstr "Cortile del Maglio"
 
-#: l10n/trebbia.php:1304
+#: l10n/trebbia.php:1420
 msgid "Via Vittorio Andreis 18, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1307
+#: l10n/trebbia.php:1423
 msgid "Sala Consiglieri della Provincia di Torino"
 msgstr ""
 
-#: l10n/trebbia.php:1310
+#: l10n/trebbia.php:1426
 #, fuzzy
 msgid "Via Maria Vittoria 12, Torino"
 msgstr "Via Nizza 52, Turin"
 
-#: l10n/trebbia.php:1313
+#: l10n/trebbia.php:1429
 msgid "Palazzo Cisterna"
 msgstr ""
 
-#: l10n/trebbia.php:1316
+#: l10n/trebbia.php:1432
 msgid "Casa del Quartiere"
 msgstr ""
 
-#: l10n/trebbia.php:1319
+#: l10n/trebbia.php:1435
 #, fuzzy
 msgid "Via Oddino Morgari 14, Torino"
 msgstr "Via Nizza 52, Turin"
 
-#: l10n/trebbia.php:1322
+#: l10n/trebbia.php:1438
 msgid "Torino Incontra"
 msgstr ""
 
-#: l10n/trebbia.php:1325
-#, fuzzy
+#: l10n/trebbia.php:1441
 msgid "Via Nino Costa 8, Torino"
-msgstr "Via Nizza 52, Turin"
+msgstr "Via Nino Costa 8, Turin"
 
-#: l10n/trebbia.php:1328
+#: l10n/trebbia.php:1444
+msgid "Toolbox Coworking"
+msgstr ""
+
+#: l10n/trebbia.php:1447
+#, fuzzy
+msgid "Via Agostino da Montefeltro 2, Torino"
+msgstr "Turin, Via Pessinetto 12"
+
+#: l10n/trebbia.php:1450
+msgid "Fablab"
+msgstr ""
+
+#: l10n/trebbia.php:1453
+#, fuzzy
+msgid "Via Egeo 16, Torino"
+msgstr "Turin, Via Pessinetto 12"
+
+#: l10n/trebbia.php:1456
 msgid "Base"
 msgstr "Base"
 
-#: l10n/trebbia.php:1331
+#: l10n/trebbia.php:1459
 msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
-msgstr "Non-technical"
+msgstr "Suitable for a non-technical audience"
 
-#: l10n/trebbia.php:1334
+#: l10n/trebbia.php:1462
 msgid "Dev"
 msgstr "Dev"
 
-#: l10n/trebbia.php:1337
+#: l10n/trebbia.php:1465
 msgid "Area sviluppatori"
 msgstr "Developers area"
 
-#: l10n/trebbia.php:1340
+#: l10n/trebbia.php:1468
 msgid "Sys"
 msgstr "Sys"
 
-#: l10n/trebbia.php:1343
+#: l10n/trebbia.php:1471
 msgid "Area sistemisti"
 msgstr "Sysadmins area"
 
-#: l10n/trebbia.php:1346
+#: l10n/trebbia.php:1474
 msgid "Misc"
 msgstr "Misc"
 
-#: l10n/trebbia.php:1349
+#: l10n/trebbia.php:1477
 msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
 msgstr "Related to knowledge and digital freedom."
 
-#: l10n/trebbia.php:1352
+#: l10n/trebbia.php:1480
 msgid "Altro"
 msgstr "Other"
 
-#: l10n/trebbia.php:1355
+#: l10n/trebbia.php:1483
 msgid "Di tutto un po'"
 msgstr "A bit of everything"
 
-#: l10n/trebbia.php:1358
+#: l10n/trebbia.php:1486
 msgid "Intermedio"
 msgstr ""
 
-#: l10n/trebbia.php:1361
-#, fuzzy
+#: l10n/trebbia.php:1489
 msgid "Adatto ad un pubblico abbastanza smanettone"
-msgstr "Non-technical"
+msgstr "Suitable for an audience somehow nerd"
 
-#: l10n/trebbia.php:1364
+#: l10n/trebbia.php:1492
 msgid "Avanzato"
+msgstr "Advanced"
+
+#: l10n/trebbia.php:1495
+msgid "Adatto ad un pubblico di nerd disperati"
+msgstr "Suitable for a desperate nerd audience"
+
+#: l10n/trebbia.php:1498
+msgid "Sikurezza"
 msgstr ""
 
-#: l10n/trebbia.php:1367
-#, fuzzy
-msgid "Adatto ad un pubblico di nerd disperati"
-msgstr "Non-technical"
+#: l10n/trebbia.php:1501
+msgid "Sicurezza"
+msgstr ""
 
-#: l10n/trebbia.php:1379
+#: l10n/trebbia.php:1513
 msgid "Corso"
 msgstr "Lesson"
 
-#: l10n/trebbia.php:1382
+#: l10n/trebbia.php:1516
 msgid "Aula B"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1385
+#: l10n/trebbia.php:1519
 msgid "Aula A"
 msgstr "\"A\" room"
 
-#: l10n/trebbia.php:1388
+#: l10n/trebbia.php:1522
 msgid "Aula D"
 msgstr "\"D\" room"
 
-#: l10n/trebbia.php:1391
+#: l10n/trebbia.php:1525
 msgid "Aula C"
 msgstr "\"C\" room"
 
-#: l10n/trebbia.php:1394
+#: l10n/trebbia.php:1528
 msgid "Spazio Coderdojo"
 msgstr "CoderDojo area"
 
-#: l10n/trebbia.php:1397
+#: l10n/trebbia.php:1531
 msgid "Spazio Restart"
 msgstr "Restart area"
 
-#: l10n/trebbia.php:1400
+#: l10n/trebbia.php:1534
 msgid "Primo piano"
 msgstr "First Floor"
 
-#: l10n/trebbia.php:1403
+#: l10n/trebbia.php:1537
 msgid "Laboratorio Turing"
 msgstr "Turing Lab"
 
-#: l10n/trebbia.php:1406
+#: l10n/trebbia.php:1540
 msgid "Laboratorio Dijkstra"
 msgstr "Dijkstra Laboratory"
 
-#: l10n/trebbia.php:1409
+#: l10n/trebbia.php:1543
 msgid "Aula F"
 msgstr "\"F\" room"
 
-#: l10n/trebbia.php:1412
+#: l10n/trebbia.php:1546
 msgid "Laboratorio von Neumann"
 msgstr "von Neumann Lab"
 
-#: l10n/trebbia.php:1415
+#: l10n/trebbia.php:1549
 #, fuzzy
 msgid "Aula 1I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1418
+#: l10n/trebbia.php:1552
 #, fuzzy
 msgid "Aula 3I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1421
+#: l10n/trebbia.php:1555
 #, fuzzy
 msgid "Aula 5I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1424
+#: l10n/trebbia.php:1558
 #, fuzzy
 msgid "Aula 2I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1427
+#: l10n/trebbia.php:1561
 #, fuzzy
 msgid "Aula 4I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1430
+#: l10n/trebbia.php:1564
 #, fuzzy
 msgid "Aula 2"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1433
+#: l10n/trebbia.php:1567
 #, fuzzy
 msgid "Aula 4"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1436
+#: l10n/trebbia.php:1570
 #, fuzzy
 msgid "Aula 6"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1439
+#: l10n/trebbia.php:1573
 #, fuzzy
 msgid "Aula 8"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1442
+#: l10n/trebbia.php:1576
 #, fuzzy
 msgid "Aula 7"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1445
+#: l10n/trebbia.php:1579
 #, fuzzy
 msgid "Aula 7I"
 msgstr "\"B\" room"
 
-#: l10n/trebbia.php:1448
+#: l10n/trebbia.php:1582
 msgid "Aula corsi 1"
 msgstr ""
 
-#: l10n/trebbia.php:1451
+#: l10n/trebbia.php:1585
 msgid "Aula corsi 2"
 msgstr ""
 
-#: l10n/trebbia.php:1454
+#: l10n/trebbia.php:1588
 msgid "Incubatore"
 msgstr ""
 
-#: l10n/trebbia.php:1457
+#: l10n/trebbia.php:1591
 msgid "Bottega"
 msgstr ""
 
-#: l10n/trebbia.php:1460
+#: l10n/trebbia.php:1594
 msgid "Salone"
 msgstr ""
 
-#: l10n/trebbia.php:1463
+#: l10n/trebbia.php:1597
 msgid "Sala Consiglio di Facoltà"
 msgstr ""
 
-#: l10n/trebbia.php:1466
+#: l10n/trebbia.php:1600
 msgid "Sala Einaudi"
 msgstr ""
 
-#: l10n/trebbia.php:1469
+#: l10n/trebbia.php:1603
+#, fuzzy
+msgid "Aula Base"
+msgstr "\"B\" room"
+
+#: l10n/trebbia.php:1606
+#, fuzzy
+msgid "Aula Dev"
+msgstr "\"D\" room"
+
+#: l10n/trebbia.php:1609
+#, fuzzy
+msgid "Aula Sys"
+msgstr "\"B\" room"
+
+#: l10n/trebbia.php:1612
+#, fuzzy
+msgid "Aula Misc"
+msgstr "\"B\" room"
+
+#: l10n/trebbia.php:1615
 msgid "asd"
 msgstr "asd"
 
-#: l10n/trebbia.php:1472
+#: l10n/trebbia.php:1618
 msgid "PHP"
 msgstr "PHP"
 
-#: l10n/trebbia.php:1475
+#: l10n/trebbia.php:1621
 msgid "JavaScript"
 msgstr "JavaScript"
 
-#: l10n/trebbia.php:1478
+#: l10n/trebbia.php:1624
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: l10n/trebbia.php:1481
+#: l10n/trebbia.php:1627
 msgid "NodeJS"
 msgstr "NodeJS"
 
-#: l10n/trebbia.php:1484
+#: l10n/trebbia.php:1630
 msgid "Apple"
 msgstr "Apple"
 
-#: l10n/trebbia.php:1487
+#: l10n/trebbia.php:1633
 msgid "Java"
 msgstr "Java"
 
-#: l10n/trebbia.php:1490
+#: l10n/trebbia.php:1636
 msgid "C++"
 msgstr "C++"
 
-#: l10n/trebbia.php:1493
+#: l10n/trebbia.php:1639
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: l10n/trebbia.php:1496
+#: l10n/trebbia.php:1642
 msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
-#: l10n/trebbia.php:1499
+#: l10n/trebbia.php:1645
 msgid "Turbo Pascal"
 msgstr "Turbo Pascal"
 
-#: l10n/trebbia.php:1502
+#: l10n/trebbia.php:1648
 msgid "Software Libero"
 msgstr "Free Software"
 
-#: l10n/trebbia.php:1505
+#: l10n/trebbia.php:1651
 msgid "Debian"
 msgstr "Debian"
 
-#: l10n/trebbia.php:1508
+#: l10n/trebbia.php:1654
 msgid "Inkscape"
 msgstr "Inkscape"
 
-#: l10n/trebbia.php:1511
+#: l10n/trebbia.php:1657
 msgid "Adobe Illustrator"
 msgstr "Adobe Illustrator"
 
-#: l10n/trebbia.php:1514
+#: l10n/trebbia.php:1660
 msgid "Immagini vettoriali"
 msgstr "Vector Images"
 
-#: l10n/trebbia.php:1517
+#: l10n/trebbia.php:1663
 msgid "Insegnare"
 msgstr "Teach"
 
-#: l10n/trebbia.php:1520
+#: l10n/trebbia.php:1666
 msgid "Recupero del RAEE"
 msgstr "RAEE recovery"
 
-#: l10n/trebbia.php:1523
+#: l10n/trebbia.php:1669
 msgid "Blender"
 msgstr "Blender"
 
-#: l10n/trebbia.php:1526
+#: l10n/trebbia.php:1672
 msgid "C"
 msgstr "C"
 
-#: l10n/trebbia.php:1535
+#: l10n/trebbia.php:1681
 msgid "Haskell"
 msgstr "Haskell"
-
-#: l10n/trebbia.php:1538
-msgid "Qualcuno ha detto... software libero?"
-msgstr "Did someone say... Free as in Freedom software?"
-
-#: l10n/trebbia.php:1541
-msgid ""
-"Studente di Ingegneria Informatica, appassionato di tante cose (forse "
-"troppe).\n"
-"\n"
-"Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
-"avanzare per migliorare le risorse e la conoscenza di tutti.\n"
-"\n"
-"Mi è capitato di organizzare il Linux Day 2016. =P\n"
-"\n"
-"Suonatore di Floppy, appassionato di Dama e Retrocomputing."
-msgstr ""
-"Computer engineering student, enthusiast of many things (maybe too many).\n"
-"\n"
-"I don't like technology for the sake of gadgets, but I like its incessant "
-"progress to improve resources and knowledge for everyone.\n"
-"\n"
-"I ended up organizing the Linux Day 2016. =P\n"
-"\n"
-"Floppy musician, checkers and Retrocomputing enthusiast."
-
-#: l10n/trebbia.php:1550
-msgid ""
-"Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione per "
-"la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
-"coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
-"it).\n"
-"\n"
-"Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
-"2010."
-msgstr ""
-"Dario Sera, 22 years old, Computer engineering student with a fascination "
-"for didactics. Co-founder of [CoderDojo Turin2](http://www.coderdojotorino2."
-"it) and of [Merende Digitali](http://www.merendedigitali.it).\n"
-"\n"
-"I've been using GNU/Linux for many years, and I help out at the Linux Day "
-"since 2010."
-
-#: l10n/trebbia.php:1555
-msgid ""
-"Ricercatore, Maker, Insegnante, Sviluppatore...\n"
-"Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
-"In realtà vuole salvare il mondo, ma non ditelo a nessuno."
-msgstr ""
-"Researcher, Maker, Teacher, Developer...\n"
-"Fifty years old at the civil registry, but keeps on playing and thinking "
-"freely.\n"
-"Actually he wants to save the world, but don't tell it to anybody."
-
-#: l10n/trebbia.php:1560
-msgid ""
-"Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
-"freelance."
-msgstr ""
-"Founder of <http://corso-javascript.it> and TorinoJS, software developer "
-"freelance."
-
-#: l10n/trebbia.php:1563
-msgid ""
-"Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
-"Inizia l'attività di evangelizzazione all'Open Source e Linux embedded nel "
-"1999 con le prime schede StrongArm.\n"
-"\n"
-"È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. Marco "
-"ha fondato KOAN nel 1996, una software house specializzata in software "
-"embedded con sede in Italia, che offre servizi di sviluppo del kernel e "
-"formazione per i sistemi Linux embedded. Quando non si utilizza i computer, "
-"è solitamente interessato a mescolare la Fisica con la Filosofia."
-msgstr ""
-"Marco Cavallini is a C/C++ programmer since mid '80s. He started to "
-"evangelize Open Source and Linux Embedded since 1999 with the first "
-"StrongArm's boards.\n"
-"\n"
-"A member of OpenEmbedded since 2009 and Yocto Project advocate since 2012. "
-"Marco founded KOAN in 1996, a software house specialized in embedded "
-"software with Italian offices, that offers kernel development services and "
-"training on Linux embedded systems. When he is not using a computer, he is "
-"usually interested in mixing up Physics with Philosophy."
-
-#: l10n/trebbia.php:1568
-msgid ""
-"Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
-"bello, non c'è neve e non si va a sciare) e qualche volta anche del sabato "
-"pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come si usano "
-"gli amplificatori operazionali, in altre occasioni canta a squarciagola con "
-"altre persone. Appassionato di vecchi computer e di elettronica analogica, "
-"si tiene in casa un numero imbarazzante di oscilloscopi, tracciacurve, una "
-"macchina da scrivere ed un pianoforte. Coordinatore del progetto open source "
-"FidoCadJ, Davide è sensibile al fascino delle automobili scoperte a due "
-"posti, soprattutto se a motore centrale.\n"
-"\n"
-"Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
-"generatore ad impulsi con diodi step recovery, ha un'idea abbastanza precisa "
-"su cosa sia un intervallo di quarta eccedente, come funzioni lo scambio "
-"ionico su vetro e come calcolare un modo di propagazione in una guida d'onda "
-"dielettrica."
-msgstr ""
-"Davide is a transalpine traveller, Sunday programmer (except when it's sunny "
-"and there's snow and he can go ski) and sometimes even of Saturday "
-"afternoon. Sometimes he tells boys and girls how to use operational "
-"amplifiers, some other times he sings to the top of his lungs with other "
-"people. Old computers and analogical electronics enthusiast, he has at home "
-"an embarrassing number of oscilloscopes, transistors, a typing machine and a "
-"piano. Coordinator of the open source project FidoCadj, Davide is sensitive "
-"to the charm of two seats convertibles, especially with mid-engine layout.\n"
-"\n"
-"Davide often uses Java, C and C++, he know how to build a impulse generator "
-"with step recovery diodes, he knows pretty well what is an augmented fourth "
-"interval, how does the ionic exchange work on glass and how to calculate "
-"movement of propagation in a dielectric waveguide."
-
-#: l10n/trebbia.php:1573
-msgid ""
-"Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
-"corrente, sistemista di professione, maker per diletto, podcaster (<http://"
-"geekcookies.github.io> e <http://www.pilloledib.it>) almeno una volta al "
-"mese.\n"
-"\n"
-"Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi e "
-"altre schedine embedded, basi di elettronica, programmatore a tempo perso "
-"(quali linguaggi? non è importante, impararne la sintassi non è la cosa che "
-"mi ostacola)."
-msgstr ""
-"He has fun when he's dealing with bits and electrical current, professional "
-"systems analyst, maker for his own plesure, podcaster (<http://geekcookies."
-"github.com> and <http://www.pilloledib.it>) at least once a month.\n"
-"\n"
-"Short résumé of my passions: Win/Linux/Mac systems, Arduino, Raspberry Pi "
-"and other embedded boards, electronics fundamentals, programmer as a pastime "
-"(what languages? It's not important, learning their syntax is not "
-"preclusive)."
-
-#: l10n/trebbia.php:1578
-msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
-msgstr "System Architect at Project Archivio SRL and Dicobit."
-
-#: l10n/trebbia.php:1581
-msgid ""
-"Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
-"dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
-"Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
-"Digitale. Consulente informatico si occupa di system engineering."
-msgstr ""
-"Elia Bellussi, 35 years old, is the founder of the \"Museo Internazionale "
-"dell'Informatica\" (previously known as \"Museo Piemontese dell'Informatica"
-"\") and of CoderDojo Torino. Associate of AICA, \"Stati Generali "
-"dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in "
-"system engineering. "
-
-#: l10n/trebbia.php:1584 l10n/trebbia.php:1587
-msgid "Big Data System Architect e sysadmin."
-msgstr "Big Data System Architect and sysadmin."
-
-#: l10n/trebbia.php:1590
-msgid ""
-"Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
-"sicurezza informatica, full stack Java developer, Consigliere della "
-"Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
-msgstr ""
-"Computer engineer, open source enthusiast, focused on IT privacy and "
-"security, full stack Java developer, Councelor at \"Fondazione dell'Ordine "
-"degli Ingegneri della Provincia di Torino\"."
-
-#: l10n/trebbia.php:1593
-msgid ""
-"The trash king!\n"
-"\n"
-"Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico "
-"a studiare l'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è "
-"laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello "
-"aziendale.\n"
-"\n"
-"Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a "
-"muoversi in tutti i campi della creatività: dal product design alla grafica, "
-"dall'interaction design alla sostenibilità."
-msgstr ""
-"The trash king!\n"
-"\n"
-"Born and raised in Turin, Marco has spent the last few years at Politecnico, "
-"studying the last ring of the productive chain: garbage. In 2015 he "
-"graduated in Ecodesign with a thesis about RAEE management at a business "
-"level.\n"
-"\n"
-"Today, he has opened the little creative studio \"Olive Creative Lab\" "
-"inclined to move around every field possible to creativity: from product "
-"design to graphics, from interaction design to sustainability."
-
-#: l10n/trebbia.php:1600
-msgid ""
-"Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
-"conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro ogni "
-"giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, Wikidata "
-"e OpenStreetMap e non vedo l'ora di poter navigare in un Web semantico. Mi "
-"piace giocare a scacchi e bere aranciata. Anche non contemporaneamente."
-msgstr ""
-"Aficionado of many things, I forced my passion for knowledge and technology "
-"to meet in computer science. I work with data everyday at Synapta, adding "
-"new ones to Wikipedia, Wikidata and OpenStreetMap and I can't wait to surf a "
-"semantic Web. I love to play chess and drink orange soda. Even not together. "
-
-#: l10n/trebbia.php:1603
-msgid ""
-"Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
-"Dipartimento di Informatica di Torino.\n"
-"\n"
-"Cosa c'entro? Te lo dico subito in questa intervista:\n"
-"\n"
-"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
-"dipartimento/>"
-msgstr ""
-"Nice to meet you! I'm one of the Students' Union Representative of the "
-"Computer Science Department of Turin.\n"
-"\n"
-"What do I do? Know more about it in this interview:\n"
-"\n"
-"<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
-"dipartimento/>"
-
-#: l10n/trebbia.php:1610
-msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
-msgstr "[Italian Linux Society](http://www.ils.org/)'s president."
-
-#: l10n/trebbia.php:1613
-msgid ""
-"Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
-"\n"
-"Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
-"scrivere in un antico linguaggio per incantare oggetti e materializzare "
-"oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
-"\n"
-"L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
-"meglio la meravigliosa tecnologia intorno a noi.\n"
-"\n"
-"Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per esempi "
-"e per chi non legge mai i testi delle licenze."
-msgstr ""
-"Alive since the far ‘92, my main calling is to be a wizard.\n"
-"\n"
-"Turning out not be be feasible, I started making wizards, daemons, writing "
-"ancient runes that enchant objects, materialize elements out of plastic and "
-"having great fun with it.\n"
-"\n"
-"Open source and hardware it was is needed for anyone to make use of the "
-"wonderful things around us.\n"
-"\n"
-"I love the [WTFPL](https://en.wikipedia.org/wiki/WTFPL) to distribute "
-"examples and for who don't never read the text of the licenses."
-
-#: l10n/trebbia.php:1622
-msgid ""
-"Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
-"che neanche nel 1983 sarebbe stato un buon computer.\n"
-"\n"
-"Ora cerco di sviluppare il mio futuro libero... e tu?"
-msgstr ""
-"Linux user since 2010 started from Ubuntu with GNOME (<3) on a very old "
-"computer that even in 1983 would not be a good one.\n"
-"\n"
-"Now I try to develop my free future... and you?"
 
 #: 2016/includes/class-ActivityBox.php:34
 #, php-format
@@ -4486,15 +4458,16 @@ msgstr ""
 "third parts!"
 
 #: 2016/includes/class-Header.php:62 2017/includes/class-Header.php:50
+#: 2019/template/header.php:45
 #, php-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
-#: 2016/includes/class-Header.php:154
+#: 2016/includes/class-Header.php:159
 msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://en.wikipedia.org/wiki/Linux_kernel"
 
-#: 2016/includes/class-Header.php:174
+#: 2016/includes/class-Header.php:179
 msgid "This is Wikipedia"
 msgstr "This is Wikipedia"
 
@@ -4516,64 +4489,64 @@ msgstr ""
 "under root permissions... it will <b>not</b> save you!)"
 
 #: 2019/template/footer.php:40
-#, fuzzy
 msgid "Torna al Linux Day Torino"
-msgstr "Linux Day Torino Blog"
+msgstr "Back to Linux Day Torino"
 
 #: 2019/template/footer.php:49
 #, php-format
 msgid ""
 "I contenuti di questo sito sono liberamente fruibili in licenza di contenuto "
 "libero %s."
-msgstr ""
+msgstr "The contents of this website are Freely available from the %s license."
 
 #: 2019/template/footer.php:54
 #, php-format
 msgid "Puoi clonare questo design con &hearts; scaricandolo da %s."
-msgstr ""
+msgstr "You can clone this design with &hearts; from %s."
 
 #: 2019/template/footer.php:59
-#, fuzzy, php-format
-msgid "Il motore del sito è rilasciato in licenza di software libero %s."
-msgstr ""
-"The website source code is distributed under the %s Free license. Clone it!"
+#, php-format
+msgid "Il %s è rilasciato in licenza di software libero %s."
+msgstr "The %s is distributed under the %s Libre license."
 
-#: 2019/template/footer.php:63
+#: 2019/template/footer.php:62
+msgid "motore del sito"
+msgstr "website engine"
+
+#: 2019/template/footer.php:67
 msgid ""
 "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
 "abbiamo trasmesso cookie o altre tecnologie di tracciamento personale."
 msgstr ""
 
-#: 2019/template/header.php:53
+#: 2019/template/header.php:80
 #, fuzzy
 msgid "Comitato Linux Day Torino"
 msgstr "What is the Linux Day Turin"
 
 #: 2019/template/intro.php:32
-#, fuzzy
 msgid "Sabato 26 Ottobre 2019"
-msgstr "Saturday, October 22nd"
+msgstr "Saturday, October 26nd 2019"
 
 #: 2019/template/intro.php:39
 msgid "SCOPRI DI PIÙ"
-msgstr ""
+msgstr "MORE INFOS"
 
 #: 2019/template/intro.php:51
-#, fuzzy
 msgid "una persona curiosa"
-msgstr "a "
+msgstr "a curious guy"
 
 #: 2019/template/intro.php:52
 msgid "in cerca di lavoro"
-msgstr ""
+msgstr "looking for a job"
 
-#: 2019/template/navbar-home.php:52
+#: 2019/template/navbar-home.php:56
 msgid "Intro"
-msgstr ""
+msgstr "Intro"
 
-#: 2019/template/navbar-home.php:55
+#: 2019/template/navbar-home.php:59
 msgid "Contatti"
-msgstr ""
+msgstr "Contacts"
 
 #: includes/suckless-php/class-FileUploader.php:319
 msgid "Upload completato con successo."
@@ -4681,6 +4654,260 @@ msgid ""
 "Potrebbe essere utile comunicarci questo problema affinchè non si ripresenti "
 "in futuro. Grazie per la collaborazione."
 msgstr ""
+
+#~ msgid "Qualcuno ha detto... software libero?"
+#~ msgstr "Did someone say... Free as in Freedom software?"
+
+#~ msgid ""
+#~ "Studente di Ingegneria Informatica, appassionato di tante cose (forse "
+#~ "troppe).\n"
+#~ "\n"
+#~ "Non mi piace la tecnologia che provoca il gadgettame, ma il suo continuo "
+#~ "avanzare per migliorare le risorse e la conoscenza di tutti.\n"
+#~ "\n"
+#~ "Mi è capitato di organizzare il Linux Day 2016. =P\n"
+#~ "\n"
+#~ "Suonatore di Floppy, appassionato di Dama e Retrocomputing."
+#~ msgstr ""
+#~ "Computer engineering student, enthusiast of many things (maybe too "
+#~ "many).\n"
+#~ "\n"
+#~ "I don't like technology for the sake of gadgets, but I like its incessant "
+#~ "progress to improve resources and knowledge for everyone.\n"
+#~ "\n"
+#~ "I ended up organizing the Linux Day 2016. =P\n"
+#~ "\n"
+#~ "Floppy musician, checkers and Retrocomputing enthusiast."
+
+#~ msgid ""
+#~ "Dario Sera, 22 anni, studente di Ingegneria Informatica con la passione "
+#~ "per la didattica. Co-fondatore di [CoderDojo Torino2](http://www."
+#~ "coderdojotorino2.it) e di [Merende Digitali](http://www.merendedigitali."
+#~ "it).\n"
+#~ "\n"
+#~ "Utilizzo GNU/Linux da molti anni, e collaboro con il Linux Day Torino dal "
+#~ "2010."
+#~ msgstr ""
+#~ "Dario Sera, 22 years old, Computer engineering student with a fascination "
+#~ "for didactics. Co-founder of [CoderDojo Turin2](http://www."
+#~ "coderdojotorino2.it) and of [Merende Digitali](http://www.merendedigitali."
+#~ "it).\n"
+#~ "\n"
+#~ "I've been using GNU/Linux for many years, and I help out at the Linux Day "
+#~ "since 2010."
+
+#~ msgid ""
+#~ "Ricercatore, Maker, Insegnante, Sviluppatore...\n"
+#~ "Cinquantenne all'anagrafe, continua a giocare e a pensare liberamente.\n"
+#~ "In realtà vuole salvare il mondo, ma non ditelo a nessuno."
+#~ msgstr ""
+#~ "Researcher, Maker, Teacher, Developer...\n"
+#~ "Fifty years old at the civil registry, but keeps on playing and thinking "
+#~ "freely.\n"
+#~ "Actually he wants to save the world, but don't tell it to anybody."
+
+#~ msgid ""
+#~ "Fondatore <http://corso-javascript.it> e TorinoJS, software developer "
+#~ "freelance."
+#~ msgstr ""
+#~ "Founder of <http://corso-javascript.it> and TorinoJS, software developer "
+#~ "freelance."
+
+#~ msgid ""
+#~ "Marco Cavallini è un programmatore C/C++ sin dalla metà degli anni '80. "
+#~ "Inizia l'attività di evangelizzazione all'Open Source e Linux embedded "
+#~ "nel 1999 con le prime schede StrongArm.\n"
+#~ "\n"
+#~ "È membro di OpenEmbedded dal 2009 e Yocto Project advocate dal 2012. "
+#~ "Marco ha fondato KOAN nel 1996, una software house specializzata in "
+#~ "software embedded con sede in Italia, che offre servizi di sviluppo del "
+#~ "kernel e formazione per i sistemi Linux embedded. Quando non si utilizza "
+#~ "i computer, è solitamente interessato a mescolare la Fisica con la "
+#~ "Filosofia."
+#~ msgstr ""
+#~ "Marco Cavallini is a C/C++ programmer since mid '80s. He started to "
+#~ "evangelize Open Source and Linux Embedded since 1999 with the first "
+#~ "StrongArm's boards.\n"
+#~ "\n"
+#~ "A member of OpenEmbedded since 2009 and Yocto Project advocate since "
+#~ "2012. Marco founded KOAN in 1996, a software house specialized in "
+#~ "embedded software with Italian offices, that offers kernel development "
+#~ "services and training on Linux embedded systems. When he is not using a "
+#~ "computer, he is usually interested in mixing up Physics with Philosophy."
+
+#~ msgid ""
+#~ "Davide è viaggiatore transalpino, programmatore della domenica (se non fa "
+#~ "bello, non c'è neve e non si va a sciare) e qualche volta anche del "
+#~ "sabato pomeriggio. Ogni tanto racconta a dei ragazzi e delle ragazze come "
+#~ "si usano gli amplificatori operazionali, in altre occasioni canta a "
+#~ "squarciagola con altre persone. Appassionato di vecchi computer e di "
+#~ "elettronica analogica, si tiene in casa un numero imbarazzante di "
+#~ "oscilloscopi, tracciacurve, una macchina da scrivere ed un pianoforte. "
+#~ "Coordinatore del progetto open source FidoCadJ, Davide è sensibile al "
+#~ "fascino delle automobili scoperte a due posti, soprattutto se a motore "
+#~ "centrale.\n"
+#~ "\n"
+#~ "Davide pratica abbastanza spesso Java, il C ed il C++, sa costruire un "
+#~ "generatore ad impulsi con diodi step recovery, ha un'idea abbastanza "
+#~ "precisa su cosa sia un intervallo di quarta eccedente, come funzioni lo "
+#~ "scambio ionico su vetro e come calcolare un modo di propagazione in una "
+#~ "guida d'onda dielettrica."
+#~ msgstr ""
+#~ "Davide is a transalpine traveller, Sunday programmer (except when it's "
+#~ "sunny and there's snow and he can go ski) and sometimes even of Saturday "
+#~ "afternoon. Sometimes he tells boys and girls how to use operational "
+#~ "amplifiers, some other times he sings to the top of his lungs with other "
+#~ "people. Old computers and analogical electronics enthusiast, he has at "
+#~ "home an embarrassing number of oscilloscopes, transistors, a typing "
+#~ "machine and a piano. Coordinator of the open source project FidoCadj, "
+#~ "Davide is sensitive to the charm of two seats convertibles, especially "
+#~ "with mid-engine layout.\n"
+#~ "\n"
+#~ "Davide often uses Java, C and C++, he know how to build a impulse "
+#~ "generator with step recovery diodes, he knows pretty well what is an "
+#~ "augmented fourth interval, how does the ionic exchange work on glass and "
+#~ "how to calculate movement of propagation in a dielectric waveguide."
+
+#~ msgid ""
+#~ "Si diverte quando ha a che fare con tutto ciò che ha dei bit o della "
+#~ "corrente, sistemista di professione, maker per diletto, podcaster "
+#~ "(<http://geekcookies.github.io> e <http://www.pilloledib.it>) almeno una "
+#~ "volta al mese.\n"
+#~ "\n"
+#~ "Mini CV delle mie passioni: sistemi Win/Linux/Mac, Arduino, Raspberry Pi "
+#~ "e altre schedine embedded, basi di elettronica, programmatore a tempo "
+#~ "perso (quali linguaggi? non è importante, impararne la sintassi non è la "
+#~ "cosa che mi ostacola)."
+#~ msgstr ""
+#~ "He has fun when he's dealing with bits and electrical current, "
+#~ "professional systems analyst, maker for his own plesure, podcaster "
+#~ "(<http://geekcookies.github.com> and <http://www.pilloledib.it>) at least "
+#~ "once a month.\n"
+#~ "\n"
+#~ "Short résumé of my passions: Win/Linux/Mac systems, Arduino, Raspberry Pi "
+#~ "and other embedded boards, electronics fundamentals, programmer as a "
+#~ "pastime (what languages? It's not important, learning their syntax is not "
+#~ "preclusive)."
+
+#~ msgid "Architetto di Sistemi presso Progetto Archivio SRL e Dicobit."
+#~ msgstr "System Architect at Project Archivio SRL and Dicobit."
+
+#~ msgid ""
+#~ "Elia Bellussi, 35 anni, è fondatore del Museo Internazionale "
+#~ "dell'Informatica (già Museo Piemontese dell'Informatica) e di CoderDojo "
+#~ "Torino. Socio di AICA, Stati Generali dell'Innovazione e di Nord Est "
+#~ "Digitale. Consulente informatico si occupa di system engineering."
+#~ msgstr ""
+#~ "Elia Bellussi, 35 years old, is the founder of the \"Museo Internazionale "
+#~ "dell'Informatica\" (previously known as \"Museo Piemontese "
+#~ "dell'Informatica\") and of CoderDojo Torino. Associate of AICA, \"Stati "
+#~ "Generali dell'Innovazione\" and \"Nord Est Digitale\". IT Consultant, "
+#~ "specialized in system engineering. "
+
+#~ msgid "Big Data System Architect e sysadmin."
+#~ msgstr "Big Data System Architect and sysadmin."
+
+#~ msgid ""
+#~ "Ingegnere informatico, Open Source enthusiast, focalizzato su privacy e "
+#~ "sicurezza informatica, full stack Java developer, Consigliere della "
+#~ "Fondazione dell'Ordine degli Ingegneri della Provincia di Torino."
+#~ msgstr ""
+#~ "Computer engineer, open source enthusiast, focused on IT privacy and "
+#~ "security, full stack Java developer, Councelor at \"Fondazione "
+#~ "dell'Ordine degli Ingegneri della Provincia di Torino\"."
+
+#~ msgid ""
+#~ "The trash king!\n"
+#~ "\n"
+#~ "Nato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di "
+#~ "Politecnico a studiare l'ultima parte della filiera ovvero l’immondizia. "
+#~ "Nel 2015 si è laureato in Ecodesign con una tesi sulla gestione dei RAEE "
+#~ "a livello aziendale.\n"
+#~ "\n"
+#~ "Oggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato "
+#~ "a muoversi in tutti i campi della creatività: dal product design alla "
+#~ "grafica, dall'interaction design alla sostenibilità."
+#~ msgstr ""
+#~ "The trash king!\n"
+#~ "\n"
+#~ "Born and raised in Turin, Marco has spent the last few years at "
+#~ "Politecnico, studying the last ring of the productive chain: garbage. In "
+#~ "2015 he graduated in Ecodesign with a thesis about RAEE management at a "
+#~ "business level.\n"
+#~ "\n"
+#~ "Today, he has opened the little creative studio \"Olive Creative Lab\" "
+#~ "inclined to move around every field possible to creativity: from product "
+#~ "design to graphics, from interaction design to sustainability."
+
+#~ msgid ""
+#~ "Appassionato di troppe cose, ho costretto il mio entusiasmo per la "
+#~ "conoscenza e per la tecnologia ad incontrarsi nell'informatica. Lavoro "
+#~ "ogni giorno coi dati presso Synapta, ne aggiungo di nuovi su Wikipedia, "
+#~ "Wikidata e OpenStreetMap e non vedo l'ora di poter navigare in un Web "
+#~ "semantico. Mi piace giocare a scacchi e bere aranciata. Anche non "
+#~ "contemporaneamente."
+#~ msgstr ""
+#~ "Aficionado of many things, I forced my passion for knowledge and "
+#~ "technology to meet in computer science. I work with data everyday at "
+#~ "Synapta, adding new ones to Wikipedia, Wikidata and OpenStreetMap and I "
+#~ "can't wait to surf a semantic Web. I love to play chess and drink orange "
+#~ "soda. Even not together. "
+
+#~ msgid ""
+#~ "Piacere di conoscerti! Sono uno dei rappresentanti degli studenti del "
+#~ "Dipartimento di Informatica di Torino.\n"
+#~ "\n"
+#~ "Cosa c'entro? Te lo dico subito in questa intervista:\n"
+#~ "\n"
+#~ "<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+#~ "dipartimento/>"
+#~ msgstr ""
+#~ "Nice to meet you! I'm one of the Students' Union Representative of the "
+#~ "Computer Science Department of Turin.\n"
+#~ "\n"
+#~ "What do I do? Know more about it in this interview:\n"
+#~ "\n"
+#~ "<https://blog.linuxdaytorino.org/2016/10/04/intervista-e-sopralluogo-al-"
+#~ "dipartimento/>"
+
+#~ msgid "Presidente [Italian Linux Society](http://www.ils.org/)."
+#~ msgstr "[Italian Linux Society](http://www.ils.org/)'s president."
+
+#~ msgid ""
+#~ "Vivo fin dal lontano '92, la mia vocazione è di fare il mago.\n"
+#~ "\n"
+#~ "Visto che non è possibile, ho iniziato a scrivere incantesimi, demoni, "
+#~ "scrivere in un antico linguaggio per incantare oggetti e materializzare "
+#~ "oggetti dalla plastica, e mi diverto tantissimo a farlo.\n"
+#~ "\n"
+#~ "L’Open source e l’open hardware è quello di cui c'è bisogno per usare al "
+#~ "meglio la meravigliosa tecnologia intorno a noi.\n"
+#~ "\n"
+#~ "Amo usare la licenza [WTFPL](https://it.wikipedia.org/wiki/WTFPL) per "
+#~ "esempi e per chi non legge mai i testi delle licenze."
+#~ msgstr ""
+#~ "Alive since the far ‘92, my main calling is to be a wizard.\n"
+#~ "\n"
+#~ "Turning out not be be feasible, I started making wizards, daemons, "
+#~ "writing ancient runes that enchant objects, materialize elements out of "
+#~ "plastic and having great fun with it.\n"
+#~ "\n"
+#~ "Open source and hardware it was is needed for anyone to make use of the "
+#~ "wonderful things around us.\n"
+#~ "\n"
+#~ "I love the [WTFPL](https://en.wikipedia.org/wiki/WTFPL) to distribute "
+#~ "examples and for who don't never read the text of the licenses."
+
+#~ msgid ""
+#~ "Linux user dal 2010 iniziato da una Ubuntu con GNOME 2 (<3) su un muletto "
+#~ "che neanche nel 1983 sarebbe stato un buon computer.\n"
+#~ "\n"
+#~ "Ora cerco di sviluppare il mio futuro libero... e tu?"
+#~ msgstr ""
+#~ "Linux user since 2010 started from Ubuntu with GNOME (<3) on a very old "
+#~ "computer that even in 1983 would not be a good one.\n"
+#~ "\n"
+#~ "Now I try to develop my free future... and you?"
 
 #~ msgid "Aggiungi skill"
 #~ msgstr "Add skill"
