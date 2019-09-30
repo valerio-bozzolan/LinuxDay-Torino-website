@@ -19,11 +19,11 @@ require 'load.php';
 
 $status = null;
 
-if( isset( $_GET['logout'] ) ) {
+if( is_action( 'logout' ) ) {
 	logout();
 }
 
-if( isset( $_POST['user_uid'], $_POST['user_password'] ) ) {
+if( is_action( 'login' ) && isset( $_POST['user_uid'], $_POST['user_password'] ) ) {
 	login( $status );
 }
 
@@ -42,15 +42,23 @@ Header::spawn( null, [
 
 if( is_logged() ):
 ?>
-	<p class="flow-text"><?= __("Sei loggato!") ?></p>
-	<p><?= HTML::a(
-		CURRENT_CONFERENCE_PATH . '/login.php?logout',
-		__("Sloggati") . icon('exit_to_app', 'left')
-	) ?></p>
+
+	<form method="post" class="card-panel">
+		<?php form_action( 'logout' ) ?>
+		<p class="flow-text"><?= __("Sei loggato!") ?></p>
+		<p>
+			<button type="submit" class="btn waves-effect"><?=
+				 __( "Sloggati" )
+				 .
+				 icon('exit_to_app', 'left')
+			?></button>
+		</p>
+	</form>
 
 <?php else: ?>
 	<div class="card-panel">
 		<form method="post">
+			<?php form_action( 'login' ) ?>
 			<div class="row">
 				<div class="input-field col s12 m6">
 					<input name="user_uid" id="user_uid" type="text" class="validate"<?= value( @$_REQUEST['user_uid'] ) ?> />
@@ -62,7 +70,7 @@ if( is_logged() ):
 				</div>
 			</div>
 			<div class="col s12">
-				<p><button class="btn waves-effect purple" type="submit" name="action">
+				<p><button class="btn waves-effect purple" type="submit">
 					<?= __("Accedi") ?>
 					<?= icon() ?>
 				</button></p>
