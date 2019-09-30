@@ -22,6 +22,7 @@
 /*
  * Args that should be passed:
  *
+ * $title      (string)         Page title
  * $conference (object)         Current conference
  * $intro      (true|undefined) If true, you want that damn splash screen
  * $og         (array)          OG meta tags
@@ -30,6 +31,22 @@
 
 // do not visit directly
 defined( 'ABSPATH' ) or exit;
+
+// site name
+$sitename = $conference->getConferenceTitle();
+
+// page title (if any)
+$title = isset( $title ) ? $title : null;
+
+// page title
+$title_dashed = $sitename;
+if( isset( $title ) ) {
+	$title_dashed = sprintf(
+		__( "%s - %s" ),
+		$title,
+		$sitename
+	);
+}
 
 // canonical URL
 $canonical = isset( $canonical ) ? $canonical : null;
@@ -49,7 +66,7 @@ $args['og'] = array_replace( [
 	'url'    => $canonical,
 	'image'  => CURRENT_CONFERENCE_URL . '/images/linux-day-2019.png', // It's better an absolute URL here
 	'type'   => 'website',
-	'title'  => $conference->getConferenceTitle(),
+	'title'  => $title,
 ], $args['og'] );
 
 ?>
@@ -60,7 +77,7 @@ $args['og'] = array_replace( [
 New Event
 http://www.templatemo.com/tm-486-new-event
 -->
-<title><?= esc_html( $conference->getConferenceTitle() ) ?></title>
+<title><?= esc_html( $title_dashed ) ?></title>
 <meta name="author" content="<?= esc_attr( __( "Comitato Linux Day Torino" ) ) ?>">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
