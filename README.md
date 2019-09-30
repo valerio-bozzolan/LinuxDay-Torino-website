@@ -34,9 +34,32 @@ Too keep the project updated, just run:
 	git pull
 	vagrant provision
 
+## Quick start on Arch Linux (or anything other than Debian GNU/Linux)
+
+The virtual machine does not work with VirtualBox. It is also incompatible with Vagrant rsync synced folders. You have to install libvirt, any packages required for NFS and firewalld because libvirt requires a firewall for no apparent reason and the firewall *has* to be firewalld. Which by default blocks libvirt machines from accessing NFS.
+
+You need a few packages and a Vagrant plugin:
+
+```bash
+pacman -S nfs-utils libvirt firewalld
+vagrant plugin install vagrant-libvirt
+```
+
+Then, to start the VM:
+
+```bash
+systemctl start libvirtd firewalld nfs-server rpcbind
+firewall-cmd --zone=libvirt --add-service=nfs
+firewall-cmd --zone=libvirt --add-service=mountd
+firewall-cmd --zone=libvirt --add-service=rpc-bind
+vagrant up --provider=libvirt
+```
+
+The `firewall-cmd` commands can be made permanent with `--permanent`.
+
 ## Bare-metal installation
 
-If you don't want to use Vagrant (maybe you have a shitty distro like Arch Linux, where Vagrant seems to be broken...), you can just install Apache or nginx and a MySQL server and run this project as you know.
+If you don't want to use Vagrant, you can just install Apache or nginx and a MySQL server and run this project as you know.
 
 In this case follow the installation instructions for Debian GNU/Linux and adapt it to your needs.
 
