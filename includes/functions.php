@@ -95,26 +95,29 @@ function force_permalink( $permalink ) {
  * @return string
  */
 function keep_url_in_language( $url ) {
+	// force an absolute URL
+	$url = site_page( $url, true );
 
-	$code = latest_language()->getCode();
-	$url = http_build_get_query( $url, [
-		'l' => latest_language()->getISO(),
+	// current language ISO code
+	$lang = latest_language()->getISO();
+
+	// force this argument
+	return replace_url_args( $url, [
+		'l' => $lang,
 	] );
-
-	return $url;
 }
 
 /**
- * Replace parameters in GET string
+ * Override parameters in GET query string
  *
  * @param  string $url        The entire URL (no relative URLs they confuse parse_url)
  * @param   array $parameters Associative array, with key = paramter, value = value or null to remove it
  * @return string the new query part of the URL with "?" already placed in front, or an empty string
  */
 function replace_url_args( $url, $parameters ) {
-	$parsed = parse_url($url);
-	if( isset( $parsed["query"] ) ) {
-		parse_str( $parsed["query"], $query );
+	$parsed = parse_url( $url );
+	if( isset( $parsed['query'] ) ) {
+		parse_str( $parsed['query'], $query );
 	} else {
 		$query = [];
 	}
@@ -125,9 +128,5 @@ function replace_url_args( $url, $parameters ) {
 			$query[ $k ] = $v;
 		}
 	}
-	if ( count($query) > 0 ) {
-		return '?' . http_build_query($query);
-	} else {
-		return '';
-	}
+	return http_build_get_query( $url, $parameters );
 }
