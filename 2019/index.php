@@ -133,9 +133,11 @@ template( 'header', [
 								) ?></span>
 							</p>
 
-							<?php if( $event->hasEventAbstract() ): ?>
-								<p><?= $event->getEventAbstractHTML() ?></p>
-							<?php endif ?>
+							<?php
+								if( $event->hasEventAbstract() ) {
+									echo $event->getEventAbstractHTML();
+								}
+							?>
 
 							<p>
 								<i class="fa fa-info-circle"></i>&nbsp;<a href="<?= esc_attr( $event->getEventURL() ) ?>">info</a>
