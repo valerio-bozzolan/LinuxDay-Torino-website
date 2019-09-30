@@ -96,6 +96,7 @@ a2dissite --quiet 000-default
 
 # "copy apache configuration for ldto site"
 cp --verbose "$PROJECT"/Vagrant/apache.conf /etc/apache2/sites-available/project.conf
+cp --verbose "$PROJECT"/documentation/apache/htaccess.conf "$PROJECT"/.htaccess
 
 echo "patch for php-libmarkdown"
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=877513
