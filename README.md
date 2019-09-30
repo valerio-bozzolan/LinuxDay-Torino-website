@@ -6,74 +6,93 @@ Materiale per il Linux Day Torino dal 2016 al 2019.
 ## Installazione sito web
 Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di ogni Linux Day Torino, centralizzandone le informazioni.
 
-È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework [sucklessPhp](https://github.com/valerio-bozzolan/suckless-php).
+È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework [suckless-php](https://github.com/valerio-bozzolan/suckless-php).
 
-### Preparazione
-Su un sistema Debian `stable`:
+## Hacking
 
-    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 php-gettext libjs-jquery libjs-leaflet libmarkdown-php
+To start hacking in this website we suggest the installation of `vagrant`. You should know how to install this package.
+
+Then, just:
+
+	vagrant up
+
+## Bare-metal installation
+
+This website is designed to be a very simple PHP/MySQL installation and it's tested in both Apache and nginx. You should know what to do, but here you are an example:
+
+### Debian GNU/Linux
+
+On a Debian GNU/Linux `stable` system (actually tested on stretch) install a webserver and a MysQL database server:
+
+    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery libjs-leaflet libmarkdown-php
     a2enmod rewrite
     service apache2 reload
 
-### File
-Clonare i file di questo progetto direttamente nella `DocumentRoot` del proprio `VirtualHost` di Apache.
+Place the project files in the `DocumentRoot` of your Apache `VirtualHost`.
 
     cd /var/www/linuxday
-    git clone [questo repo] .
+    git clone [https://... this repo]
 
-In seguito copiare il file `htaccess.txt` in `.htaccess`.
+Then copy our example Apache configuration file ([`htaccess.txt`](documentation/apache/htaccess.conf)) as `/.htaccess` (yes, in your DocumentRoot).
 
-Il sito può rimanere tranquillamente in sola lettura per l'utente Apache:
+Now everything should work.
+
+The website can be kept in read-only mode for the webserver user:
 
     chown root:www-data -R /var/www/linuxday
     chmod o=            -R /var/www/linuxday
 
-### URL
-Se il sito ha una cartella diversa dalla root, ricordarsi di variare l'`.htaccess` in concordanza:
+### URL rewrite
 
-    # /.htaccess:
-    RewriteBase /ldto
+If the website is server from a directory that it's not the DocumentRoot, we support it. Just change the `/.htaccess` to fit your needs:
 
-E ricordarsi di aggiornare la relativa costante:
+    RewriteBase /subdirectory
 
-    # /load.php:
-    define('ROOT', '/ldto');
+Then change the related configuration constant from your `/load.php` file:
+
+    define( 'ROOT', '/subdirectory' );
 
 ### Database
-Creare un database e importare `documentation/database/database-schema.sql`.
 
-Creare il file `load.php` (vedere l'esempio `load-example.php`) inserendovi le credenziali del database.
+Create an empty database and import the [`database-schema.sql`](documentation/database/database-schema.sql) file.
 
-Si può applicare un prefisso alle tabelle, specificandolo nella variabile `$prefix` del file `load.php`.
+Now copy the `load-example.php` in a new file called `load.php` and insert there your database credentials etc.
 
-### Framework
-Posizionare il framework Suckless-PHP nella directory `includes`:
+You can choose a different table prefix declaring the `$prefix` variable in your `load.php` file.
+
+### suckless-php
+
+Place the suckless-php framework somewhere. We like in the `/includes` directory:
 
     # apt-get install git
-    git clone https://github.com/valerio-bozzolan/suckless-php includes/suckless-php
+    cd includes
+    git clone https://github.com/valerio-bozzolan/suckless-php
 
 ### API
+
 Le API (aka "tagliatella") possono generare un documento XML che contiene l'elenco dei talk/eventi (in un formato che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
 
 La tagliatella restituisce un codice HTTP 500 e qualche uncaught exception se ci sono stati errori.
 
 ## Multilingua
+
 Il sito è multilingua grazie a GNU Gettext. GNU Gettext è un software un po' anziano ma decisamente rispettabile e adottato da tutti i principali CMS a cui puoi pensare. Riassumere il workflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
 
 Per cambiare una stringa italiana, cambiala dal database o dal codice sorgente.
 
 Quando poi hai deciso di voler tradurre il progetto così com'è:
 
-    # Exporting database strings to source code
-    cd ./2016/l10n/
-    ./mieti.php > ./trebbia.php
-    cd -
-
-    # Export source code to GNU Gettext template (.pot)
-    ./2016/l10n/localize.php .
-
-    # Export GNU Gettext template (.pot) in files for Poedit (.po)
-    ./2016/l10n/localize.php .
+	# Exporting database strings to source code
+	vagrant ssh
+	cd /vagrant
+	./l10n/mieti.php > ./l10n/trebbia.php
+	
+	# Export source code to GNU Gettext template (.pot)
+	./l10n/localize.php .
+	
+	# Export GNU Gettext template (.pot) in files for Poedit (.po)
+	/l10n/localize.php .
+	exit
 
 A questo punto sfodera Poedit e traduci tutti i .po che desideri.
 
@@ -109,7 +128,9 @@ In ogni caso:
 
 ## Aggiornamento del database
 
-    ./cli/upgrade.php
+	vagrant ssh
+	/vagrant/cli/upgrade.php
+	exit
 
 ## Contributi
 Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
