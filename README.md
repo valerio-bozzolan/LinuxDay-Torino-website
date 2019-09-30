@@ -5,23 +5,23 @@ Content Management System for the __Linux Day Torino__ event, but just from 2016
 
 The [Linux Day](https://www.linuxday.it/) is a yearly Italian event were Italian cities organize free conferences for everyone, talking about GNU/Linux, Free software, open source, and we meet amazing new friends.
 
-The [Linux Day Torino](https://linuxdaytorino.org/) is just our local implementation, and this project is our website.
+The [Linux Day Torino](https://linuxdaytorino.org/) is just our local implementation, and this project is the related website.
 
 ## Introduction
 
-This project allow the centralization of various informations during a set of conferences, while maintaining completly different themes for each conference.
+This project allow the centralization of various informations during a set of conferences, while allowing completly different themes for each conference.
 
 This project is designed using GNU/Linux, Apache/nginx, PHP, MySQL/MariaDB and the [suckless-php](https://github.com/valerio-bozzolan/suckless-php) framework.
 
-We use PHP. Because __PHP does not suck__. PHP it's the best hypertext preprocessor available. It's well-tested; well-known; well-documented; multi-platform; easy to be deployed; powerful; actively developed since 20 years and if you know how to code, it's also drammatically fast and secure.
+We use PHP. Because _PHP does not suck_. PHP it's the best hypertext preprocessor available. It's well-tested; well-known; well-documented; multi-platform; easy to be deployed; powerful; actively developed since 20 years and if you know how to code, it's also drammatically fast and secure.
 
-Note that, thanks to PHP, this website has no third party ependency. We use just a stupid framework made by us (10 files). __No Laravel__. No therabytes of NodeJS dependencies. No silly crap. Just this website. So, before talking about PHP, shut up. Think about your crapware hipster NodeJS project full of shitty dependencies you do not know.
+Note that, thanks to PHP, this website has no third party dependency. I mean we use just a stupid framework made by us (10 files). __No Laravel__. No therabytes of NodeJS dependencies. No silly crap. Just this website. So, before talking bad about PHP, shut up. You are a troll. Think about your crapware-hipster-NodeJS/whateverbetter project full of shitty dependencies you do not know how to maintain, kiddo.
 
-PHP loves your. Do not be bad with it. :^)
+PHP loves you. Do not be bad with it. :^)
 
 ## Quick start Hacking
 
-To start hacking on this project we suggest the installation of `vagrant` to reproduce our production environment quickly. You should know how to install this package in your GNU/Linux distribution. Then, just run:
+To start hacking on this project we suggest the installation of `vagrant` to reproduce our production environment quickly. You should know how to install this package from your favourite GNU/Linux distribution. Then, just run:
 
 	vagrant up
 
@@ -57,9 +57,10 @@ Copy the example [Apache configuration file](documentation/apache/htaccess.conf)
 
 Remember to change the `DocumentRoot` of your Apache configuration file to respect your pathname (e.g. `/var/www/linuxday`).
 
-Create an empty database with a dedicated user. Then copy the `load-example.php` in a new file called `load.php` and insert there your database credentials. Remember to populate the database importing the [`database-schema.sql`](documentation/database/database-schema.sql) file.
+Create an empty database with a dedicated user. Then copy the [load-example.php](load-example.php) in a new file called `load.php` and type there your database credentials. Populate your database with the [database-schema.sql](documentation/database/database-schema.sql).
 
-Place the suckless-php framework somewhere. We like in the `includes` directory in your project:
+Place [suckless-php](https://github.com/valerio-bozzolan/suckless-php) somewhere. It is our laser-cannon framework. It consists in just ~23 files.
+You can put it in the `includes` directory of the project:
 
     # apt-get install git
     cd includes
@@ -75,6 +76,8 @@ The website can be kept in read-only for the webserver user, and nothing more. E
     chmod o=            -R /var/www/linuxday
 
 You may also want to declare the PHP `open_basedir` directive to the value of `/var/www/linuxday:/usr/share/php` and nothing more to restrict the access to just these files.
+
+Also you can disable all the unused system calls like `exec()` etc.
 
 ### Installation in a custom subdirectory
 
@@ -164,12 +167,9 @@ Or create an User with:
 
 The login page is actually situated in `2016/login.php`.
 
-## Contributions
-
-If you do a non-minor contribution you are welcome to put your name in the copyright header of that file.
-
 ## License
-(c) 2015 Linux Day contributors, 2016-2019 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day contributors
+
+(c) 2015 Linux Day contributors, 2016-2019 [Valerio Bozzolan](https://boz.reyboz.it/), [Ludovico Pavesi](https://github.com/lvps), [Rosario Antoci](https://linuxdaytorino.org/2019/user/oirasor), Linux Day contributors
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -178,3 +178,5 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 Thank you for forking this project!
+
+Contributions are welcome! If you do any non-minor contribution you are welcome to put your name in the copyright header of your touched file.
