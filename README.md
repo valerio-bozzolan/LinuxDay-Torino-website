@@ -1,148 +1,180 @@
-# Linux Day Torino website
+# Linux Day Torino's website
 ![Linux Day Torino](https://raw.githubusercontent.com/0iras0r/ld2016/master/2016/static/linuxday-64.png)
 
-Materiale per il Linux Day Torino dal 2016 al 2019.
+Content Management System for the __Linux Day Torino__ event, but just from 2016 to 2019 (and beyond we hope!).
 
-## Installazione sito web
-Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di ogni Linux Day Torino, centralizzandone le informazioni.
+The [Linux Day](https://www.linuxday.it/) is a yearly Italian event were Italian cities organize free conferences for everyone, talking about GNU/Linux, Free software, open source, and we meet amazing new friends.
 
-È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework [suckless-php](https://github.com/valerio-bozzolan/suckless-php).
+The [Linux Day Torino](https://linuxdaytorino.org/) is just our local implementation, and this project is our website.
+
+## Introduction
+
+This project allow the centralization of various informations during a set of conferences, while maintaining completly different themes for each conference.
+
+This project is designed using GNU/Linux, Apache/nginx, PHP, MySQL/MariaDB and the [suckless-php](https://github.com/valerio-bozzolan/suckless-php) framework.
+
+We use PHP. Because __PHP does not suck__. PHP it's the best hypertext preprocessor available. It's well-tested; well-known; well-documented; multi-platform; easy to be deployed; powerful; actively developed since 20 years and if you know how to code, it's also drammatically fast and secure.
+
+Note that, thanks to PHP, this website has no third party ependency. We use just a stupid framework made by us (10 files). __No Laravel__. No therabytes of NodeJS dependencies. No silly crap. Just this website. So, before talking about PHP, shut up. Think about your crapware hipster NodeJS project full of shitty dependencies you do not know.
+
+PHP loves your. Do not be bad with it. :^)
 
 ## Quick start Hacking
 
-To start hacking in this website we suggest the installation of `vagrant`. You should know how to install this package.
-
-Then, just:
+To start hacking on this project we suggest the installation of `vagrant` to reproduce our production environment quickly. You should know how to install this package in your GNU/Linux distribution. Then, just run:
 
 	vagrant up
 
+Then simply follow the instructions from your terminal.
+
+## Keep project up-to-date
+
+Too keep the project updated, just run:
+
+	git pull
+	vagrant provision
+
 ## Bare-metal installation
 
-If you don't want to use Vagrant, note that this website is designed to be a very simple PHP/MySQL project and it's very easy to be deployed in both Apache and nginx. You should know what to do, but here you are an example in Debian GNU/Linux.
+If you don't want to use Vagrant (maybe you have a shitty distro like Arch Linux, where Vagrant seems to be broken...), you can just install Apache or nginx and a MySQL server and run this project as you know.
 
-### Debian GNU/Linux
+In this case follow the installation instructions for Debian GNU/Linux and adapt it to your needs.
 
-On a Debian GNU/Linux `stable` system (actually tested on stretch) install a webserver and a MysQL database server:
+### Bare-metal installation (Debian GNU/Linux)
 
-    apt-get install apache2 mariadb-server php5 php5-mysql libapache2-mod-php5 libjs-jquery libjs-leaflet libmarkdown-php
+On a Debian GNU/Linux `stable` system (actually tested on `stretch`) install a webserver (Apache or nginx, is your choice) and a MysQL database server and some other additional packages:
+
+    apt install apache2 mariadb-server php php-mysql libapache2-mod-php libjs-jquery libjs-leaflet libmarkdown-php
     a2enmod rewrite
     service apache2 reload
 
-Place the project files in the `DocumentRoot` of your Apache `VirtualHost`.
+Place the project files somewhere, available to your webserver:
 
-    cd /var/www/linuxday
-    git clone [https://... this repo]
+	cd /var/www/linuxday
+	git clone [https://... this repo]
 
-Then copy our example Apache configuration file [`htaccess.txt`](documentation/apache/htaccess.conf) as `/.htaccess` (yes, in your DocumentRoot).
+Copy the example [Apache configuration file](documentation/apache/htaccess.conf) and save it as `.htaccess` (e.g. `/var/www/linuxday/.htaccess`). Or if you want nginx obviously we have an [nginx configuration example](documentation/nginx/locations.conf).
 
-### Hardening
+Remember to change the `DocumentRoot` of your Apache configuration file to respect your pathname (e.g. `/var/www/linuxday`).
 
-The website can be kept in read-only mode for the webserver user and nothing more:
+Create an empty database with a dedicated user. Then copy the `load-example.php` in a new file called `load.php` and insert there your database credentials. Remember to populate the database importing the [`database-schema.sql`](documentation/database/database-schema.sql) file.
 
-    chown root:www-data -R /var/www/linuxday
-    chmod o=            -R /var/www/linuxday
-
-Also you may want to declare the `open_basedir` to your DocumentRoot plus `/usr/share/php`.
-
-### URL rewrite
-
-If you want to serve the website from a subdirectory, you can. Just change your `/.htaccess` to fit your needs:
-
-    RewriteBase /subdirectory
-
-Then change the related configuration constant from your `/load.php` file to have not link rots:
-
-    define( 'ROOT', '/subdirectory' );
-
-### Database
-
-Create an empty database and import the [`database-schema.sql`](documentation/database/database-schema.sql) file.
-
-Now copy the `load-example.php` in a new file called `load.php` and insert there your database credentials etc.
-
-You can choose a different table prefix declaring the `$prefix` variable in your `load.php` file.
-
-### Install suckless-php
-
-Place the suckless-php framework somewhere. We like in the `/includes` directory:
+Place the suckless-php framework somewhere. We like in the `includes` directory in your project:
 
     # apt-get install git
     cd includes
     git clone https://github.com/valerio-bozzolan/suckless-php
 
-### API
+Now everything should work.
 
-The websites has an API callled _tagliatella_ that can generate a valid XML document containing all the talks/events (in a formato that someone call Pentabarf, but it's not the Pentabarf - really this stupid format has no even an official name).
+### Hardening your bare-metal installation
 
-The _tagliatella_ gives an HTTP Status Code 500 and some other uncaught exceptions if an error raises.
+The website can be kept in read-only for the webserver user, and nothing more. E.g.:
 
-## Internationalization
+    chown root:www-data -R /var/www/linuxday
+    chmod o=            -R /var/www/linuxday
 
-Il sito è multilingua grazie a GNU Gettext. GNU Gettext è un software un po' anziano ma decisamente rispettabile e adottato da tutti i principali CMS a cui puoi pensare. Riassumere il workflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
+You may also want to declare the PHP `open_basedir` directive to the value of `/var/www/linuxday:/usr/share/php` and nothing more to restrict the access to just these files.
 
-Per cambiare una stringa italiana, cambiala dal database o dal codice sorgente.
+### Installation in a custom subdirectory
 
-Quando poi hai deciso di voler tradurre il progetto così com'è:
+If you want to serve the website from a subdirectory, you can. Just change your `.htaccess` file to fit your needs. Example:
 
-	# Exporting database strings to source code
-	vagrant ssh
-	cd /vagrant
-	./l10n/mieti.php > ./l10n/trebbia.php
-	
-	# Export source code to GNU Gettext template (.pot)
-	./l10n/localize.php .
-	
-	# Export GNU Gettext template (.pot) in files for Poedit (.po)
-	/l10n/localize.php .
-	exit
+	# RewriteBase /
+	RewriteBase /linuxday
 
-A questo punto sfodera Poedit e traduci tutti i .po che desideri.
+In this case also change the related project `ROOT` from your `load.php` file:
 
-I file `.po` sono situati nella directory `2016/l10n/`.
+	# define( 'ROOT', '' );
+	define( 'ROOT', '/linuxday' );
 
-Per vedere il risultato in funzione (indovina un po'?):
+## Database import
 
-    # Compile Poedit files (.po) to binary GNU Gettext files (.mo)
-    ./2016/l10n/localize.php .
+To just reset your database to the latest version, just run:
 
-### Cambiare lingua
-Il sito effettua content negotiation controllando la lingua accettata dal browser web (l'header `Accept-Language`) o eventuali richieste `GET`/`POST`/`COOKIE` con il parametro `l=$lingua` (`en`, `it`, ecc.). La lingua italiana è predefinita.
+	git pull
+	vagrant provision
 
-### Aggiunta lingua
-Copiare il template GNU Gettext `2016/l10n/linuxday.pot` in un nuovo file `.po` nel nuovo percorso di lingua (e.g.: `./$ANNO/l10n/ru_RU.utf8/LC_MESSAGES/linuxday.po`) e modificare quest'ultimo con Poedit. Registrare la lingua in Boz-PHP modificando `./2016/load.php` e rieffettuare i passi della sezione [multilingua](#multilingua).
+Or just import the [database-schema.sql](documentation/database/database-schema.sql).
 
-## Backend
+## Database export
 
-Per poter accedere al backend occorre registrarsi:
-
-	./cli/add-user.php --uid=mario.rossi --role=admin --pwd=password
-
-Effettuare poi il login nella pagina `2016/login.php`.
-
-## Esportazione del database
-**Nota**: a differenza del codice sorgente il database in questo repository è da considerarsi **read-only** ed è **molto meglio contattare il webmaster** invece che variarne i contenuti direttamente.
-
-In ogni caso:
+When you want to export and commit the database, just run:
 
 	vagrant ssh
 	/vagrant/Vagrant/pull-database.php
 	exit
+	
+	git status
+	# ...
 
-## Aggiornamento del database
+### API
+
+The website exposes some REST-ful APIs.
+
+The one called _tagliatella_ generates a valid XML document containing all the talks/events (in a format that someone call Pentabarf, but it's not the Pentabarf - really, this stupid format has not even an official name). The _tagliatella_ API gives an HTTP Status Code 500 and some other uncaught exceptions if an error raises.
+
+The one called _tropical_ generates a valid `iCal` document to import an Event or a Conference in your favourite calendar client.
+
+## Internationalization
+
+The website interface (plus some parts of the content) is internationalized thanks to GNU Gettext. GNU Gettext is both a software and a standard. This is not the place to learn GNU Gettext, but this is how you can use it.
+
+### Translate a string 
+
+You can edit the `.po` file with Poedit to translate some strings to a language:
+
+* [English](l10n/en_US.utf8/LC_MESSAGES/linuxday.po)
+
+To apply your changes:
+
+	vagrant provision
+
+Or:
 
 	vagrant ssh
-	/vagrant/cli/upgrade.php
+	cd /vagrant
+	./l10n/localize.php .
+	./l10n/localize.php .
 	exit
 
-## Contributi
-Ogni contributo avviene sotto i termini di una licenza compatibile con la licenza in calce. L'autore di un nuovo file ricopia l'intestazione della licenza da un file esistente. Autori/contributori si firmano nell'intestazione del file creato/modificato (o della parte creata/modificata) come detentori del diritto d'autore.
+Note that if you change the database contents you may also need this command before the above one:
 
-## Licenza
-Salvo ove diversamente specificato, il progetto appartiene ai contributori di Linux Day Torino ed è distribuito sotto licenza [GNU Affero General Public License](LICENSE.md). Eccezione soprattutto per alcuni loghi dei vari partner, che appartengono ai legittimi proprietari e sono concessi in licenza esclusiva a Linux Day Torino, ed ad alcuni temi grafici degli anni 2015 e precedenti.
+	vagrant ssh
+	cd /vagrant
+	./l10n/mieti.php > ./l10n/trebbia.php
+
+That's all.
+
+### Translate in a new language
+
+Copy the [GNU Gettext template](l10n/linuxday.pot) in a new pathname similar to the English one, and also rename it to the `.po` extension.
+
+Then in the [load-post.php](includes/load-post.php) file you can add another `register_language()` line.
+
+## Backend
+
+To access to the backend follow the instructions on your terminal when running:
+
+	vagrant provision
+
+Or create an User with:
+
+	./cli/add-user.php --uid=root --role=admin --pwd=secret
+
+The login page is actually situated in `2016/login.php`.
+
+## Contributions
+
+If you do a non-minor contribution you are welcome to put your name in the copyright header of that file.
+
+## License
+(c) 2015 Linux Day contributors, 2016-2019 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day contributors
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU Affero General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU Affero General Public License](LICENSE.md) for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+Thank you for forking this project!
