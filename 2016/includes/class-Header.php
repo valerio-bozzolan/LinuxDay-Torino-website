@@ -26,7 +26,7 @@ class Header {
 	 * @param $menu_uid string Menu entry UID (if any) or page title
 	 * @param $args array Header arguments
 	 */
-	static function spawn( $menu_uid = null, $args = [] ) {
+	public static function spawn( $menu_uid = null, $args = [] ) {
 
 		$menu = $menu_uid
 			? menu_entry( $menu_uid )

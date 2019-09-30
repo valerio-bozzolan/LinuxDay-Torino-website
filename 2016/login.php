@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Admin login page
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Rosario Antoci, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -19,13 +19,15 @@ require 'load.php';
 
 $status = null;
 
-isset($_GET['logout'])
-	and logout();
+if( isset( $_GET['logout'] ) {
+	logout();
+}
 
-isset( $_POST['user_uid'], $_POST['user_password'] )
-	and login($status);
+if( isset( $_POST['user_uid'], $_POST['user_password'] ) ) {
+	login( $status );
+}
 
-switch($status) {
+switch( $status ) {
 	case Session::LOGIN_FAILED:
 		error_die("Wrong e-mail or password");
 		break;
@@ -34,7 +36,7 @@ switch($status) {
 		break;
 }
 
-Header::spawn('home');
+Header::spawn();
 
 if( is_logged() ):
 ?>
