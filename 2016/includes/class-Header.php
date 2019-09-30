@@ -95,7 +95,7 @@ class Header {
 <!DOCTYPE html>
 <html lang="<?= $l ?>">
 <head>
-	<title><?= $args['head-title'] ?></title>
+	<title><?= esc_html( $args['head-title'] ) ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="GNU nano" />
 	<link rel="copyright" href="//creativecommons.org/licenses/by-sa/4.0/" />
@@ -187,10 +187,10 @@ class Header {
 	<header class="container">
 		<?php if( isset( $args['url'] ) ): ?>
 
-		<h1><?= HTML::a($args['url'], $args['title'], null, TEXT) ?></h1>
+		<h1><?= HTML::a( $args['url'], esc_html( $args['title'] ), null, TEXT ) ?></h1>
 		<?php else: ?>
 
-		<h1><?= $args['title'] ?></h1>
+		<h1><?= esc_html( $args['title'] ) ?></h1>
 		<?php endif ?>
 	</header>
 	<?php endif ?>
