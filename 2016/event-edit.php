@@ -191,16 +191,15 @@ if( $_POST ) {
 }
 
 if( $event ) {
-	Header::spawn( 'event', [
+	Header::spawn( null, [
 		'title' => sprintf(
 			__("Modifica %s: %s"),
 			$event->getChapterName(),
 			$event->getEventTitle()
 		),
-		'url' => $event->getEventURL()
 	] );
 } else {
-	Header::spawn( 'event', [
+	Header::spawn( null, [
 		'title' => sprintf(
 			__( "Aggiungi %s" ),
 			__( "Evento" )
