@@ -83,7 +83,7 @@ function force_permalink( $permalink ) {
 	// do not send a 301 Moved Permanently if the language was missing (maybe the user was just redirected to his language)
 	$status = isset( $_GET['l'] )
 		? 301  // 301 Moved Permanently
-		: 300; // 300 Multiple Choices
+		: 303; // 303 See Other
 
 	// redirect to the correct location
 	http_redirect( $permalink, $status );
