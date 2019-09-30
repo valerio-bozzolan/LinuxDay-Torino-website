@@ -109,7 +109,10 @@ template( 'header', [
 					<?php foreach( $events as $event ): ?>
 						<?php $last_event_start = $event->get( Event::START ) ?>
 						<div class="col-xs-12">
-							<h3><?= esc_html( $event->getEventTitle() ) ?></h3>
+							<h3><?= HTML::a(
+								$event->getEventURL(),
+								esc_html( $event->getEventTitle() )
+							) ?></h3>
 
 							<?php if( $event->hasEventSubtitle() ): ?>
 								<h3 class="event-subtitle"><?= esc_html( $event->getEventSubtitle() ) ?></h3>
