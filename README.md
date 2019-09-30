@@ -8,7 +8,7 @@ Il sito web vuole permettere l'indipendenza dei temi grafici dei vari anni di og
 
 È utilizzata la combinazione PHP+MySQL/MariaDB usando il framework [suckless-php](https://github.com/valerio-bozzolan/suckless-php).
 
-## Hacking
+## Quick start Hacking
 
 To start hacking in this website we suggest the installation of `vagrant`. You should know how to install this package.
 
@@ -18,7 +18,7 @@ Then, just:
 
 ## Bare-metal installation
 
-This website is designed to be a very simple PHP/MySQL installation and it's tested in both Apache and nginx. You should know what to do, but here you are an example:
+If you don't want to use Vagrant, note that this website is designed to be a very simple PHP/MySQL project and it's very easy to be deployed in both Apache and nginx. You should know what to do, but here you are an example in Debian GNU/Linux.
 
 ### Debian GNU/Linux
 
@@ -33,22 +33,24 @@ Place the project files in the `DocumentRoot` of your Apache `VirtualHost`.
     cd /var/www/linuxday
     git clone [https://... this repo]
 
-Then copy our example Apache configuration file ([`htaccess.txt`](documentation/apache/htaccess.conf)) as `/.htaccess` (yes, in your DocumentRoot).
+Then copy our example Apache configuration file [`htaccess.txt`](documentation/apache/htaccess.conf) as `/.htaccess` (yes, in your DocumentRoot).
 
-Now everything should work.
+### Hardening
 
-The website can be kept in read-only mode for the webserver user:
+The website can be kept in read-only mode for the webserver user and nothing more:
 
     chown root:www-data -R /var/www/linuxday
     chmod o=            -R /var/www/linuxday
 
+Also you may want to declare the `open_basedir` to your DocumentRoot plus `/usr/share/php`.
+
 ### URL rewrite
 
-If the website is server from a directory that it's not the DocumentRoot, we support it. Just change the `/.htaccess` to fit your needs:
+If you want to serve the website from a subdirectory, you can. Just change your `/.htaccess` to fit your needs:
 
     RewriteBase /subdirectory
 
-Then change the related configuration constant from your `/load.php` file:
+Then change the related configuration constant from your `/load.php` file to have not link rots:
 
     define( 'ROOT', '/subdirectory' );
 
@@ -60,7 +62,7 @@ Now copy the `load-example.php` in a new file called `load.php` and insert there
 
 You can choose a different table prefix declaring the `$prefix` variable in your `load.php` file.
 
-### suckless-php
+### Install suckless-php
 
 Place the suckless-php framework somewhere. We like in the `/includes` directory:
 
@@ -70,11 +72,11 @@ Place the suckless-php framework somewhere. We like in the `/includes` directory
 
 ### API
 
-Le API (aka "tagliatella") possono generare un documento XML che contiene l'elenco dei talk/eventi (in un formato che alcuni chiamano Pentabarf, ma non è il formato Pentabarf, non ha nemmeno un nome in particolare).
+The websites has an API callled _tagliatella_ that can generate a valid XML document containing all the talks/events (in a formato that someone call Pentabarf, but it's not the Pentabarf - really this stupid format has no even an official name).
 
-La tagliatella restituisce un codice HTTP 500 e qualche uncaught exception se ci sono stati errori.
+The _tagliatella_ gives an HTTP Status Code 500 and some other uncaught exceptions if an error raises.
 
-## Multilingua
+## Internationalization
 
 Il sito è multilingua grazie a GNU Gettext. GNU Gettext è un software un po' anziano ma decisamente rispettabile e adottato da tutti i principali CMS a cui puoi pensare. Riassumere il workflow di GNU Gettext in poche righe confonderebbe soltanto, quindi passiamo al sodo.
 
