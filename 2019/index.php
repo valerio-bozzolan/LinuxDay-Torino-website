@@ -96,17 +96,8 @@ template( 'header', [
 					<?php
 						// every Event should start when the Conference starts
 						$last_event_start = $conference->getConferenceStart();
-
-						// query all the events that belongs to this conference
-						// and that belongs to this chapter
-						// order by date
-						$events =
-							FullEvent::factoryByConference( $conference->getConferenceID() )
-								->whereStr( Track::UID, $track )
-								->orderBy(  Event::START, 'ASC' )
-								->queryResults();
 					?>
-					<?php foreach( $events as $event ): ?>
+					<?php foreach( Homepage19::eventsFromConferenceTrack( $conference, $track ) as $event ): ?>
 						<?php $last_event_start = $event->get( Event::START ) ?>
 						<div class="col-xs-12">
 							<h3><?= HTML::a(
