@@ -56,7 +56,11 @@ $current_url = strtok( $current_url, '?' );
 					) ?>
 					<br />
 					<?= sprintf(
-						__( "Il motore del sito è rilasciato in licenza di software libero %s." ),
+						__( "Il %s è rilasciato in licenza di software libero %s." ),
+						HTML::a(
+							REPO,
+							__( "motore del sito" )
+						),
 						Licenses::instance()->get( 'gnu-agpl' )->getLink()
 					) ?>
 					<br />
