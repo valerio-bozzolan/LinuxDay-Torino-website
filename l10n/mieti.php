@@ -75,7 +75,6 @@ spawn_gnu( Track::T, [
 spawn_gnu( Chapter::T, [ Chapter::NAME  ], Chapter::UID );
 spawn_gnu( Room   ::T, [ Room   ::NAME  ], Room   ::UID );
 spawn_gnu( Skill  ::T, [ Skill  ::TITLE ], Skill  ::UID );
-spawn_gnu( User   ::T, [ User   ::BIO   ], User   ::UID );
 
 // footer to be put in trebbia.php
 echo <<< EOF
