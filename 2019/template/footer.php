@@ -93,7 +93,7 @@ vagrant up
 							<a hreflang="<?= $lang->getISO() ?>" href="<?=
 								// set the URL to this page, but with this language
 								esc_attr( http_build_get_query( $current_url, [
-									'l' => $lang->getCode(),
+									'l' => $lang->getISO(),
 								] ) )
 							?>"><?= icon( 'language' ) . ' ' . $lang->getHuman() ?></a>
 						<?php endif ?>
