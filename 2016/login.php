@@ -19,7 +19,7 @@ require 'load.php';
 
 $status = null;
 
-if( isset( $_GET['logout'] ) {
+if( isset( $_GET['logout'] ) ) {
 	logout();
 }
 
@@ -36,7 +36,9 @@ switch( $status ) {
 		break;
 }
 
-Header::spawn();
+Header::spawn( null, [
+	'title' => __( "Login" ),
+] );
 
 if( is_logged() ):
 ?>
