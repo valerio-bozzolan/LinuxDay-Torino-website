@@ -103,3 +103,31 @@ function keep_url_in_language( $url ) {
 
 	return $url;
 }
+
+/**
+ * Replace parameters in GET string
+ *
+ * @param  string $url        The entire URL (no relative URLs they confuse parse_url)
+ * @param   array $parameters Associative array, with key = paramter, value = value or null to remove it
+ * @return string the new query part of the URL with "?" already placed in front, or an empty string
+ */
+function replace_url_args( $url, $parameters ) {
+	$parsed = parse_url($url);
+	if( isset( $parsed["query"] ) ) {
+		parse_str( $parsed["query"], $query );
+	} else {
+		$query = [];
+	}
+	foreach( $parameters as $k => $v ) {
+		if( $v === null ) {
+			unset( $query[ $k ] );
+		} else {
+			$query[ $k ] = $v;
+		}
+	}
+	if ( count($query) > 0 ) {
+		return '?' . http_build_query($query);
+	} else {
+		return '';
+	}
+}

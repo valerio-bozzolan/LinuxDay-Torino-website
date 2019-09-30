@@ -68,7 +68,6 @@ $args['og'] = array_replace( [
 	'type'   => 'website',
 	'title'  => $title,
 ], $args['og'] );
-
 ?>
 <!DOCTYPE html>
 <html lang="<?= latest_language()->getISO() ?>">
