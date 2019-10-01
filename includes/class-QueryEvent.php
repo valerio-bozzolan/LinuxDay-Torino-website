@@ -74,6 +74,7 @@ class QueryEvent extends Query {
 	/**
 	 * Where the Event is...
 	 *
+	 * @param  object $event Event
 	 * @return self
 	 */
 	public function whereEvent( $event ) {

@@ -34,10 +34,12 @@ if( !$conference ) {
 // retrieve the Event (if existing)
 $event = null;
 if( isset( $_GET['uid'] ) ) {
-	$event = FullEvent::queryByConferenceAndUID(
-		$conference->getConferenceID(),
-		$_GET['uid']
-	);
+	$event = ( new QueryEvent() )
+		->whereConference( $conference )
+		->joinConference()
+		->joinChapter()
+		->whereEventUID( $_GET['uid'] )
+		->queryRow();
 
 	if( !$event ) {
 		die_with_404();
@@ -53,6 +55,13 @@ if( isset( $_GET['uid'] ) ) {
 	}
 }
 
+// known columns internationalized in multiple languages
+$i18n_columns = [
+	Event::ABSTRACT    => __( "Abstract" ),
+	Event::DESCRIPTION => __( "Descrizione" ),
+	Event::NOTE        => __( "Note" ),
+];
+
 $warning = null;
 
 if( $_POST ) {
@@ -66,8 +75,6 @@ if( $_POST ) {
 		$data[] = new DBCol( Event::UID,         $_POST['uid'],         's' );
 		$data[] = new DBCol( Event::LANGUAGE,    $_POST['language'],    's' );
 		$data[] = new DBCol( Event::SUBTITLE,    $_POST['subtitle'],    's' );
-		$data[] = new DBCol( Event::ABSTRACT,    $_POST['abstract'],    'snull' );
-		$data[] = new DBCol( Event::DESCRIPTION, $_POST['description'], 'snull' );
 		$data[] = new DBCol( Event::START,       $_POST['start'],       's' );
 		$data[] = new DBCol( Event::END,         $_POST['end'],         's' );
 		$data[] = new DBCol( Event::IMAGE,       $_POST['image'],       'snull' );
@@ -76,14 +83,29 @@ if( $_POST ) {
 		$data[] = new DBCol( Track::ID,          $_POST['track'],       'd' );
 		$data[] = new DBCol( Conference::ID,     $conference_ID,        'd' );
 
+		// for each language save the fields
+		foreach( all_languages() as $lang ) {
+			foreach( $i18n_columns as $i18n_column => $label ) {
+				// generic column name in this language
+				$field = $i18n_column . '_' . $lang->getISO();
+
+				// sent column value
+				$value = $_POST[ $field ] ?? null;
+
+				// prepare to be saved
+				$data[] = new DBCol( $field, $value, 'snull' );
+			}
+		}
+
+		// convert empty strings to NULL, if possible
 		foreach( $data as $row ) {
 			$row->promoteNULL();
 		}
 
 		if( $event ) {
 			// update the existing Event
-			Event::factory()
-				->whereInt( Event::ID, $event->getEventID() )
+			( new QueryEvent() )
+				->whereEvent( $event )
 				->update( $data );
 		} else {
 			// insert a new Event
@@ -215,7 +237,7 @@ if( $event ) {
 
 	<p><?= HTML::a(
 		$conference->getConferenceURL(),
-		$conference->getConferenceTitle() . icon( 'home', 'left' )
+		esc_html( $conference->getConferenceTitle() ) . icon( 'home', 'left' )
 	) ?></p>
 
 	<?php if( $event ): ?>
@@ -428,41 +450,29 @@ if( $event ) {
 			</div>
 
 		</div>
-		<div class="row">
 
-			<div class="col s12 m6">
-				<div class="card-panel">
-					<label for="event-abstract"><?= __( "Abstract" ) ?></label>
-					<textarea name="abstract" class="materialize-textarea"><?php
-						if( $event ) {
-							echo esc_html( $event->get( Event::ABSTRACT ) );
-						}
-					?></textarea>
-					<?php if( $event ): ?>
-						<p><?= __( "Traduzione dalla community:" ) ?></p>
-						<div><?= $event->getEventAbstractHTML() ?></div>
-					<?php endif ?>
-				</div>
+		<?php foreach( $i18n_columns as $i18n_column => $label ): ?>
+			<h3><?= $label ?></h3>
+			<div class="row">
+				<?php foreach( all_languages() as $lang ): ?>
+					<?php $iso = $lang->getISO() ?>
+					<?php $field = $i18n_column . '_' . $iso ?>
+					<div class="col s12 m6">
+						<div class="card-panel">
+							<label for="event-abstract"><?= $label ?> (<?= $lang->getHuman() ?>)</label>
+							<textarea name="<?= esc_attr( $field ) ?>" class="materialize-textarea"><?php
+								if( $event ) {
+									echo esc_html( $event->get( $field ) );
+								}
+							?></textarea>
+						</div>
+					</div>
+				<?php endforeach ?>
 			</div>
+		<?php endforeach ?>
 
-			<div class="col s12 m6">
-				<div class="card-panel">
-					<label for="event-description"><?= __( "Descrizione" ) ?></label>
-					<textarea name="description" class="materialize-textarea"><?php
-						if( $event ) {
-							echo esc_html( $event->get( Event::DESCRIPTION ) );
-						}
-					?></textarea>
-					<?php if( $event ): ?>
-						<p><?= __( "Traduzione dalla community:" ) ?></p>
-						<div><?= $event->getEventDescriptionHTML() ?></div>
-					<?php endif ?>
-				</div>
-			</div>
-
-		</div>
+		<!-- Image -->
 		<div class="row">
-
 			<div class="col s12 m6">
 				<div class="card-panel">
 					<label for="event-image"><?= __( "Immagine" ) ?></label>
@@ -476,8 +486,9 @@ if( $event ) {
 					<?php endif ?>
 				</div>
 			</div>
-
 		</div>
+		<!-- /Image -->
+
 		<div class="row">
 			<div class="col s12">
 				<button type="submit" class="btn waves-effect"><?= __( "Salva" ) ?></button>

@@ -27,16 +27,20 @@ function request_uri() {
  * Generate a stupid MySQL COALESCE() clause to select the most appropriate i18n database column
  *
  * @param  string $name Base virtual name of the column
- * @param  mixed  $i18n Associative array of languages and column names, or a generic column name like 'column_%s'
+ * @param  mixed  $i18n Associative array of languages and column names, or a generic column name like 'column_%s', or nothing to be the "$name_%s"
  * @return string
  */
-function i18n_coalesce( $name, $i18n ) {
+function i18n_coalesce( $name, $i18n = null ) {
 
 	// current language (e.g. 'en')
 	$lang = latest_language()->getISO();
 
 	// default language of the website
 	$default = 'it';
+
+	if( !$i18n ) {
+		$i18n = $name . '_%s';
+	}
 
 	// allow a generic string
 	if( is_string( $i18n ) ) {

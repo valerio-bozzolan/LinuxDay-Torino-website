@@ -430,7 +430,7 @@ class Event extends Queried {
 	 * @return string
 	 */
 	public static function ABSTRACT_L10N() {
-		return i18n_coalesce( self::ABSTRACT, 'event_abstract_%s' );
+		return i18n_coalesce( self::ABSTRACT );
 	}
 
 	/**
@@ -439,7 +439,7 @@ class Event extends Queried {
 	 * @return string
 	 */
 	public static function DESCRIPTION_L10N() {
-		return i18n_coalesce( self::DESCRIPTION, 'event_description_%s' );
+		return i18n_coalesce( self::DESCRIPTION );
 	}
 
 	/**
@@ -448,7 +448,7 @@ class Event extends Queried {
 	 * @return string
 	 */
 	public static function NOTE_L10N() {
-		return i18n_coalesce( self::NOTE, 'event_description_%s' );
+		return i18n_coalesce( self::NOTE );
 	}
 
 	/**
