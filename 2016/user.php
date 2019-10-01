@@ -230,7 +230,10 @@ Header::spawn( null, [
 						echo esc_html( $event->getEventTitle() );
 					}
 				?></td>
-				<td><?= esc_html( $event->getConferenceTitle() ) ?></td>
+				<td><?= HTML::a(
+					$event->getConferenceURL(),
+					esc_html( $event->getConferenceTitle() )
+				) ?></td>
 				<td>
 					<span class="tooltipped" data-position="top" data-tooltip="<?= esc_attr( $event->getLocationAddress() ) ?>">
 						<?= esc_html( $event->getLocationName() ) ?>
