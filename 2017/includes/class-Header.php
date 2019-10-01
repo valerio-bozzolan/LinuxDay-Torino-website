@@ -34,6 +34,21 @@ class Header {
 			'noindex'     => NOINDEX
 		], $args );
 
+		// adjust the URL for our convenience
+		if( $args['url'] ) {
+
+			// force an absolute URL
+			$args['url'] = site_page( $args['url'], true );
+
+			// force to that language (TODO)
+			// $args['url'] = keep_url_in_language( $args['url'] );
+		}
+
+		// eventually force to this correct permalik
+		if( $args['url'] && FORCE_PERMALINK ) {
+			force_permalink( $args['url'] );
+		}
+
 		if( ! isset( $args['og'] ) ) {
 			$args['og'] = [];
 		}

@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2017 - Single conference page
-# Copyright (C) 2017, 2018 Roberto Guido, Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
+# Copyright (C) 2017, 2018, 2019 Roberto Guido, Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -21,9 +21,6 @@ $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 	->queryRow();
 
 $conference or die_with_404();
-
-FORCE_PERMALINK
-	and $conference->forceConferencePermalink();
 
 enqueue_js('leaflet');
 enqueue_js('leaflet.init');
