@@ -104,7 +104,6 @@ if( is_action( 'save-user' ) ) {
 
 	// POST -> redirect -> GET
 	http_redirect( $user->getUserEditURL(), 303 );
-
 }
 
 /**
@@ -202,19 +201,18 @@ if( $user && is_action( 'delete-user' ) ) {
 		->delete();
 
 	// POST -> redirect -> GET
-	http_redirect( $user->getUserEditURL(), 302 );
+	http_redirect( $user->getUserEditURL(), 303 );
 }
 
-Header::spawn('user', [
+Header::spawn( null, [
 	'title' =>
 		$user
 			? sprintf(
-			  	__("Modifica utente %s"),
+			  	__("Modifica %s"),
 			  	$user->getUserFullname()
 			  )
 			: __( "Aggiungi Utente" )
 	,
-	'url' => $user ? $user->getUserURL() : null,
 ] );
 ?>
 
