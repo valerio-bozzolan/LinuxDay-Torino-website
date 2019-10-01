@@ -57,8 +57,6 @@ spawn_gnu( Conference::T, [
 spawn_gnu( Event::T, [
 	Event::TITLE,
 	Event::SUBTITLE,
-	Event::ABSTRACT,
-	Event::DESCRIPTION,
 ], Event::UID );
 
 spawn_gnu( Location::T, [

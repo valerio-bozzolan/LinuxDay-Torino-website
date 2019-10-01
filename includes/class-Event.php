@@ -209,16 +209,31 @@ trait EventTrait {
 		return $this->get( Event::NOTE );
 	}
 
-	function getEventDescriptionHTML( $args = [] ) {
-		return Markdown::parse( __( $this->getEventDescription() ), $args );
+	/**
+	 * Get the Event description rendered in HTML
+	 *
+	 * @return string
+	 */
+	public function getEventDescriptionHTML( $args = [] ) {
+		return Markdown::parse( $this->getEventDescription(), $args );
 	}
 
-	function getEventAbstractHTML( $args = [] ) {
-		return Markdown::parse( __( $this->getEventAbstract() ), $args );
+	/**
+	 * Get the Event abstract rendered in HTML
+	 *
+	 * @return string
+	 */
+	public function getEventAbstractHTML( $args = [] ) {
+		return Markdown::parse( $this->getEventAbstract(), $args );
 	}
 
-	function getEventNoteHTML( $args = [] ) {
-		return Markdown::parse( __( $this->getEventNote() ), $args );
+	/**
+	 * Get the Event notes rendered in HTML
+	 *
+	 * @return string
+	 */
+	public function getEventNoteHTML( $args = [] ) {
+		return Markdown::parse( $this->getEventNote(), $args );
 	}
 
 	/**
