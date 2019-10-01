@@ -52,24 +52,6 @@ if( $event->hasEventImage() ) {
 	];
 }
 
-// Adding subscribers
-$subscribed = null;
-if( isset( $_POST['subscription_email'] ) && $event->areEventSubscriptionsAvailable() ) {
-	$email = $_POST['subscription_email'];
-
-	if( filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-		$event->addSubscription($email);
-
-		$args['alert']      = __("Grazie per esserti iscritto.");
-		$args['alert.type'] = Messagebox::INFO;
-		$subscribed         = true;
-	} else {
-		$args['alert']      = __("E-mail non valida.");
-		$args['alert.type'] = Messagebox::ERROR;
-		$subscribed         = false;
-	}
-}
-
 Header::spawn( null, $args );
 ?>
 	<?php if( $event->isEventEditable() ): ?>
@@ -155,37 +137,6 @@ Header::spawn( null, $args );
 	</div>
 	<?php endif ?>
 	<!-- End event description -->
-
-	<!-- Start subscriptions -->
-	<?php if( $event->areEventSubscriptionsAvailable() ): ?>
-	<div class="divider"></div>
-	<div class="section">
-		<?php if( true === $subscribed ): ?>
-			<p class="flow-text"><?= __("Invita anche i tuoi amici ad iscriversi condividendo l'indirizzo di questa pagina.") ?></p>
-		<?php else: ?>
-			<form method="post">
-				<div class="row">
-					<div class="col s12 m6 l8">
-						<div class="card-panel">
-							<h3><?= __("Iscrizioni") ?></h3>
-							<p class="flow-text"><?= __("Le sottoscrizioni sono ancora aperte. Inserisci la tua e-mail per segnalare il tuo interesse:") ?></p>
-							<div class="row">
-								<div class="col s12 l6 input-field">
-									<label for="subscription_email"><?= __("E-mail") ?></label>
-									<input type="email" name="subscription_email" id="subscription_email" />
-								</div>
-								<div class="col s12 l6 input-field">
-									<button type="submit" class="btn purple darken-3 waves-effect"><?= __("Sottoscrivi"); echo icon('send', 'right') ?></button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-		<?php endif ?>
-	</div>
-	<?php endif ?>
-	<!-- End subscriptions -->
 
 	<!-- Start event description -->
 	<?php if( $event->hasEventNote() ): ?>
