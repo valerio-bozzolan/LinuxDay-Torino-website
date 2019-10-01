@@ -183,7 +183,20 @@ class Location extends Queried {
 
 	const DEFAULT_ZOOM = 17;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeLocation($this);
 	}
+
+	/**
+	 * All the public Location fields
+	 *
+	 * @return string
+	 */
+	public static function fields() {
+		return self::T . DOT . STAR;
+	}
+
 }

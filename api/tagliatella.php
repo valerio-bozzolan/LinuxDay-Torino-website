@@ -63,22 +63,6 @@ add_child( $xml, $conference, 'day_change',        '09:00:00' );
 add_child( $xml, $conference, 'timeslot_duration', '00:30:00' );
 
 $events = FullEvent::factoryByConference( $conference_row->getConferenceID() )
-	->select( [
-		Event::ID_,
-		Event::UID,
-		Event::TITLE,
-		Event::SUBTITLE,
-		Event::ABSTRACT,
-		Event::DESCRIPTION,
-		Event::LANGUAGE,
-		Event::START,
-		Event::END,
-		Room ::ID_,
-		Room::NAME,
-		Chapter::NAME,
-		Track::ID_,
-		Track::NAME
-	] )
 	->orderBy( Event::START )
 	->orderBy( Room::ID_ )
 	->queryGenerator();

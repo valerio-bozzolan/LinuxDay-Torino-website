@@ -1,6 +1,6 @@
 <?php
 # Linux Day Torino website - classes
-# Copyright (C) 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -15,10 +15,15 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+// load dependent traits
+class_exists( QueryConference::class, true );
+
 /**
  * Class able to query a FullEvent.
  */
 class QueryEvent extends Query {
+
+	use QueryConferenceTrait;
 
 	/**
 	 * Univoque Event ID column name
@@ -34,10 +39,28 @@ class QueryEvent extends Query {
 	 */
 	protected $CHAPTER_ID = 'event.chapter_ID';
 
-	/**
-	 * Univoque location ID column name (useful with conference joins)
+	/*
+	 * Univoque Conference ID column name
+	 *
+	 * Used from ConferenceTrait#joinConference()
+	 *
+	 * @var
 	 */
-	protected $LOCATION_ID = 'conference.location_ID';
+	protected $CONFERENCE_ID = 'event.conference_ID';
+
+	/**
+	 * Univoque Track ID column name
+	 *
+	 * @var
+	 */
+	protected $TRACK_ID = 'event.track_ID';
+
+	/**
+	 * Univoque Room ID column name
+	 *
+	 * @var
+	 */
+	protected $ROOM_ID = 'event.room_ID';
 
 	/**
 	 * Constructor
@@ -79,42 +102,13 @@ class QueryEvent extends Query {
 	}
 
 	/**
-	 * Limit to a specific Conference
+	 * Where the Event UID is this one
 	 *
-	 * @param $conference Conference
+	 * @param  string $uid Event UID
 	 * @return self
 	 */
-	public function whereConference( $conference ) {
-		return $this->joinConference()
-		            ->whereInt( Event::CONFERENCE_, $conference->getConferenceID() );
-	}
-
-	/**
-	 * Exclude a specific Conference
-	 *
-	 * @param $conference Conference
-	 * @return self
-	 */
-	public function whereConferenceNot( $conference ) {
-		$id = $conference->getConferenceID();
-		return $this->joinConference()
-		            ->whereInt( Event::CONFERENCE_, $id, '<>' );
-	}
-
-	/**
-	 * Join Events to their Conference
-	 *
-	 * You can call it multiple time safely.
-	 *
-	 * @return self
-	 */
-	public function joinConference() {
-		if( empty( $this->joinedConference ) ) {
-			$this->from(   Conference::T                       );
-			$this->equals( Conference::ID_, Event::CONFERENCE_ );
-			$this->joinedConference = true;
-		}
-		return $this;
+	public function whereEventUID( $uid ) {
+		return $this->whereStr( Event::UID, $uid );
 	}
 
 	/**
@@ -127,18 +121,21 @@ class QueryEvent extends Query {
 	}
 
 	/**
-	 * Join Events to their Location (and Conference. asd)
+	 * Join a table with the Track table
 	 *
-	 * You can call it multiple time safely.
-	 *
-	 * @TODO: move this method into QueryConference, and extends QueryEvent
 	 * @return self
 	 */
-	public function joinLocation() {
-		if( empty( $this->joinedLocation ) ) {
-			$this->joinOn( 'INNER', Location::T, $this->LOCATION_ID, 'location.location_ID' );
-		}
-		return $this;
+	public function joinTrack() {
+		return $this->joinOn( 'INNER', Track::T, Track::ID_, $this->TRACK_ID );
+	}
+
+	/**
+	 * Join a table with the Room table
+	 *
+	 * @return self
+	 */
+	public function joinRoom() {
+		return $this->joinOn( 'INNER', Room::T, Room::ID_, $this->ROOM_ID );
 	}
 
 	/**

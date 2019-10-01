@@ -96,4 +96,13 @@ class Room extends Queried {
 	public function __construct() {
 		$this->normalizeRoom();
 	}
+
+	/**
+	 * All the public room fields
+	 *
+	 * @return string
+	 */
+	public static function fields() {
+		return Room::T . DOT . STAR;
+	}
 }

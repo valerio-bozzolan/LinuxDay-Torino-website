@@ -356,7 +356,7 @@ class Event extends Queried {
 	const DESCRIPTION = 'event_description';
 
 	/**
-	 * Abstract column name
+	 * Description column name
 	 */
 	const ABSTRACT = 'event_abstract';
 
@@ -407,5 +407,53 @@ class Event extends Queried {
  	 */
 	public function __construct() {
 		$this->normalizeEvent();
+	}
+
+	/**
+	 * Generate the appropriate SELECT for the User Abstract
+	 *
+	 * @return string
+	 */
+	public static function ABSTRACT_L10N() {
+		return i18n_coalesce( self::ABSTRACT, 'event_abstract_%s' );
+	}
+
+	/**
+	 * Generate the appropriate SELECT for the User Description
+	 *
+	 * @return string
+	 */
+	public static function DESCRIPTION_L10N() {
+		return i18n_coalesce( self::DESCRIPTION, 'event_description_%s' );
+	}
+
+	/**
+	 * Generate the appropriate SELECT for the User Description
+	 *
+	 * @return string
+	 */
+	public static function NOTE_L10N() {
+		return i18n_coalesce( self::NOTE, 'event_description_%s' );
+	}
+
+	/**
+	 * All the public Event fields
+	 *
+	 * @return array
+	 */
+	public static function fields() {
+		return [
+			self::ID_,
+			self::UID,
+			self::TITLE,
+			self::DESCRIPTION_L10N(),
+			self::ABSTRACT_L10N(),
+			self::NOTE_L10n(),
+			self::SUBTITLE,
+			self::IMAGE,
+			self::START,
+			self::END,
+			self::LANGUAGE,
+		];
 	}
 }

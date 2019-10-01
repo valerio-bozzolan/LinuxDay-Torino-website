@@ -17,21 +17,19 @@
 
 require 'load.php';
 
-$conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
+$event = FullEvent::factory()
+	->select( Location::fields() )
+	->joinLocation()
+	->whereConferenceUID( CURRENT_CONFERENCE_UID )
+	->whereEventUID( $_GET['uid' ] )
 	->queryRow();
-
-if( !$conference ) {
-	die_with_404();
-}
-
-$event = FullEvent::factoryByConferenceAndUID(
-	$conference->getConferenceID(),
-	@ $_GET['uid']
-)->queryRow();
 
 if( !$event ) {
 	die_with_404();
 }
+
+// well, this Event has all the Conference stuff
+$conference = $event;
 
 $args = [
 	'conference' => $conference,

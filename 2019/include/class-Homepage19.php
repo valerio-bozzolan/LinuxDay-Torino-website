@@ -32,19 +32,6 @@ class Homepage19 {
 	 */
 	public static function eventsFromConferenceTrack( $conference, $track ) {
 		return FullEvent::factoryByConference( $conference->getConferenceID() )
-				->select( [
-					Conference::UID,
-					Event::ID_,
-					Event::TITLE,
-					Event::SUBTITLE,
-					Event::ABSTRACT,
-					Event::START,
-					Event::END,
-					Event::UID,
-					Track::UID,
-					Chapter::UID,
-					Room::UID,
-				] )
 				->whereStr( Track::UID, $track )
 				->orderBy(  Event::START, 'ASC' )
 				->queryGenerator();

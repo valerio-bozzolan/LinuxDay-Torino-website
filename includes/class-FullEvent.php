@@ -120,18 +120,15 @@ class FullEvent extends Queried {
 	 * @return Query
 	 */
 	public static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( [
-				Event     ::T,
-				Conference::T,
-				Room      ::T,
-				Track     ::T,
-				Chapter   ::T,
-			] )
-			->equals( Event::CONFERENCE_, Conference::ID_ )
-			->equals( Event::ROOM_,       Room      ::ID_ )
-			->equals( Event::TRACK_,      Track     ::ID_ )
-			->equals( Event::CHAPTER_,    Chapter   ::ID_ );
+		return ( new QueryEvent() )
+			->select( Conference::fields() )
+			->select( Event     ::fields() )
+			->select( Track     ::fields() )
+			->select( Chapter   ::fields() )
+			->select( Room      ::fields() )
+			->joinConference()
+			->joinTrackChapterRoom()
+			->defaultClass( __CLASS__ );
 	}
 
 	static function factoryByConference( $conference_ID ) {

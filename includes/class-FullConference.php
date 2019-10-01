@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database conference (full of relations)
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -39,15 +39,9 @@ class FullConference extends Queried {
 	 * @return Query
 	 */
 	public static function factory() {
-		return Query::factory( __CLASS__ )
-			->from( [
-				Conference::T,
-				Location  ::T,
-			] )
-			->equals(
-				Conference::T . DOT . Location::ID,
-				Location  ::T . DOT . Location::ID
-			);
+		return ( new QueryConference() )
+			->joinLocation()
+			->defaultClass( __CLASS__ );
 	}
 
 	/**

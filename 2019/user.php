@@ -174,8 +174,14 @@ template( 'header', [
 			<?php
 			// get the Events of this USer in this Conference
 			$events = ( new QueryEvent() )
+				->select( Conference::fields() )
+				->select( Event     ::fields() )
+				->select( Chapter   ::fields() )
+				->select( Track     ::fields() )
+				->select( Room      ::fields() )
 				->whereConference( $conference )
 				->whereUser(       $user       )
+				->joinConference()
 				->joinTrackChapterRoom()
 				->queryGenerator();
 			?>

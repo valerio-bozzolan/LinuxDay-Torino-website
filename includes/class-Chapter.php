@@ -87,7 +87,19 @@ class Chapter extends Queried {
 	 */
 	const MAXLEN_UID = 32;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		$this->normalizeChapter();
+	}
+
+	/**
+	 * All the public Chapter fields
+	 *
+	 * @return string
+	 */
+	public static function fields() {
+		return self::T . DOT . STAR;
 	}
 }

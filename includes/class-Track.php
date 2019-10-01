@@ -116,4 +116,13 @@ class Track extends Queried {
 	public function __construct() {
 		$this->normalizeTrack();
 	}
+
+	/**
+	 * All the public Track fields
+	 *
+	 * @return string
+	 */
+	public static function fields() {
+		return self::T . DOT . STAR;
+	}
 }

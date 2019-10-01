@@ -213,14 +213,14 @@ class Conference extends Queried {
 	const TITLE = 'conference_title';
 
 	/**
-	 * Subtitle column name
-	 */
-	const SUBTITLE = 'conference_subtitle';
-
-	/**
 	 * Description column name
 	 */
 	const DESCRIPTION = 'conference_description';
+
+	/**
+	 * Subtitle column name
+	 */
+	const SUBTITLE = 'conference_subtitle';
 
 	/**
 	 * Start column name
@@ -275,4 +275,27 @@ class Conference extends Queried {
 	public function __construct() {
 		$this->normalizeConference();
 	}
+
+	/**
+	 * All the public fields of a Conference
+	 *
+	 * @return array
+	 */
+	public static function fields() {
+		return [
+			self::ID_,
+			self::TITLE,
+			self::UID,
+			self::TITLE,
+			self::SUBTITLE,
+			self::DESCRIPTION,
+			self::START,
+			self::END,
+			self::ACRONYM,
+			self::PERSONS_URL,
+			self::EVENTS_URL,
+			self::DAYS,
+		];
+	}
+
 }

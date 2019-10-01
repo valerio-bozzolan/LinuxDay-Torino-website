@@ -23,17 +23,7 @@ $conference = FullConference::factoryFromUID( CURRENT_CONFERENCE_UID )
 $conference or die_with_404();
 
 $user = User::factoryByUID( $_GET['uid'] )
-	->select( [
-		User::ID,
-		User::UID,
-		User::GRAVATAR,
-		User::NAME,
-		User::SURNAME,
-		User::IMAGE,
-		User::WEBSITE,
-		User::LOVED_LICENSE,
-		User::BIO_L10N(),
-	] )
+	->select( User::fields()          )
 	->select( User::allSocialFields() )
 	->queryRow();
 
@@ -151,10 +141,9 @@ Header::spawn( null, [
 	<div class="section">
 		<h3><?= __("Talk") ?></h3>
 
-		<?php $events = ( new QueryEvent() )
+		<?php $events = FullEvent::factory()
 			->whereConference( $conference )
 			->whereUser(       $user       )
-			->joinTrackChapterRoom()
 			->queryGenerator();
 		 ?>
 		<?php if( $events->valid() ): ?>

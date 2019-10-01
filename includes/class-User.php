@@ -432,4 +432,24 @@ class User extends Sessionuser {
 	public static function BIO_L10N() {
 		return i18n_coalesce( 'user_bio', 'user_bio_%s' );
 	}
+
+	/**
+	 * Get all the public User fields
+	 *
+	 * @return array
+	 */
+	public static function fields() {
+		return [
+			self::ID,
+			self::UID,
+			self::GRAVATAR,
+			self::NAME,
+			self::SURNAME,
+			self::IMAGE,
+			self::WEBSITE,
+			self::LOVED_LICENSE,
+			self::BIO_L10N(),
+		];
+	}
+
 }

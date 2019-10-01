@@ -1,6 +1,6 @@
 <?php
 # Linux Day website - common functions
-# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Ludovico Pavesi, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -113,6 +113,8 @@ function keep_url_in_language( $url ) {
  * @param  string $url        The entire URL (no relative URLs they confuse parse_url)
  * @param   array $parameters Associative array, with key = paramter, value = value or null to remove it
  * @return string the new query part of the URL with "?" already placed in front, or an empty string
+ * @author Ludovico Pavesi
+ * @since  2019-09-30
  */
 function replace_url_args( $url, $parameters ) {
 	$parsed = parse_url( $url );
