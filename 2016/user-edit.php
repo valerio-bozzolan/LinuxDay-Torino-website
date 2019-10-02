@@ -307,7 +307,7 @@ Header::spawn( null, [
 				<div class="card-panel">
 					<div class="input-field">
 						<label for="user-website"><?= __( "Sito web" ) ?></label>
-						<input type="text" name="website" id="user-website"<?=
+						<input type="text" name="site" id="user-website"<?=
 							$user
 								? value( $user->get( User::WEBSITE ) )
 								: ''
