@@ -6,9 +6,7 @@ Anche quest'anno (a quanto pare) si avvicina il Linux Day e sicuramente avremo t
 
 ## Informazioni
 
-Si invitano i relatori a fornire più informazioni possibili riguardanti il proprio talk. In particolare:
-
-Inoltre, ti chiediamo un piccolo spoiler sul tuo talk e qualche informazione su di te.
+Ti chiediamo un piccolo spoiler sul tuo talk e qualche informazione su di te:
 
 * Titolo — Il nome del talk (max. 30 caratteri)
 * Abstract — Le tematiche del talk (max. 200 caratteri)
