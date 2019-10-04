@@ -142,52 +142,57 @@ if( $user && is_action( 'change-image' ) ) {
 	}
 }
 
-if( isset( $_POST['action'], $_POST['skill_uid'], $_POST['skill_score'] ) ) {
+if( isset( $_POST['skill_uid'], $_POST['skill_score'] ) ) {
+
+	// find existing Skill
 	$skill = Skill::factoryFromUID( $_POST['skill_uid'] )
 		->queryRow();
 
-	$skill or error_die( sprintf(
-		"Skill '%s' not found",
-		esc_html( $_POST['skill_uid'] )
-	) );
+	// eventually create the Skill
+	if( !$skill ) {
+		( new QuerySkill() )
+			->insertRow( [
+				'skill_uid' => $_POST['skill_uid'],
+			] );
+
+		// retrieve last inserted Skill
+		$skill = ( new QuerySkill() )
+			->whereSkillID( last_inserted_ID() )
+			->queryRow();
+	}
+
+	// query the UserSkill
+	$query_userskill = ( new QueryUserSkill() )
+			->whereUser(  $user  )
+			->whereSkill( $skill );
 
 	if( is_action( 'change-skill' ) ) {
+
+		// delete the Skill or just update?
 		if( isset( $_POST['skill_delete'] ) ) {
-			// Delete skill checked
-			query( sprintf(
-				"DELETE FROM {$T('user_skill')} WHERE user_ID = %d AND skill_ID = %d",
-				$user->getUserID(),
-				$skill->getSkillID()
-			) );
+
+			$query_userskill->delete();
+
 		} else {
-			// Update skill elsewhere
-			query_update('user_skill',
-				new DBCol('skill_score', $_POST['skill_score'], 'd' ),
-				sprintf(
-					'skill_ID = %d',
-					$skill->getSkillID()
-				)
-			);
+			// update the score
+			$query_userskill->update( [
+				'skill_score' => (int)$_POST['skill_score'],
+			] );
 		}
 	}
 
 	if( is_action( 'add-skill' ) ) {
 
-		$skill = Skill::factoryFromUID( $_POST['skill_uid'] )
-			->queryRow();
+		// eventually delete
+		$query_userskill->delete();
 
-		// If exists, delete it
-		query( sprintf(
-			"DELETE FROM {$T('user_skill')} WHERE user_ID = %d AND skill_ID = %d",
-			$user->getUserID(),
-			$skill->getSkillID()
-		) );
-
-		insert_row('user_skill', [
-			new DBCol('user_ID',     $user->getUserID(),    'd'),
-			new DBCol('skill_ID',    $skill->getSkillID(),  'd'),
-			new DBCol('skill_score', $_POST['skill_score'], 'd'),
-		] );
+		// then add
+		( new QueryUserSkill() )
+			->insertRow( [
+				'user_ID'     => $user->getUserID(),
+				'skill_ID'    => $skill->getSkillID(),
+				'skill_score' => $_POST['skill_score'],
+			] );
 	}
 
 }

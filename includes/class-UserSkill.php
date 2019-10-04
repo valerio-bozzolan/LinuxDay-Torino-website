@@ -1,6 +1,6 @@
 <?php
 # Linux Day 2016 - Construct a database user skill
-# Copyright (C) 2016, 2017, 2018 Valerio Bozzolan, Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Valerio Bozzolan, Linux Day Torino
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,8 +17,24 @@
 
 trait UserSkillTrait {
 
-	function getSkillScore() {
-		return $this->get('skill_score');
+	/**
+	 * Get the UserSkill score
+	 *
+	 * @return int
+	 */
+	public function getSkillScore() {
+		return $this->get( 'skill_score' );
+	}
+
+	/**
+	 * Update this UserSkill
+	 *
+	 * @param array $args Arguments
+	 */
+	public function updateUserSkill( $args ) {
+		return ( new QueryUserSkill() )
+			->whereUserSkill( $this )
+			->update( $args );
 	}
 
 	function getSkillCode() {

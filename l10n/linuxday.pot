@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 19:16+0000\n"
+"POT-Creation-Date: 2019-10-04 17:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,121 +143,122 @@ msgstr ""
 msgid "l'immagine predefinita di alcuni elementi"
 msgstr ""
 
-#: 2016/event-edit.php:196
+#: 2016/event-edit.php:60 2016/event.php:125 2019/event.php:127
+msgid "Abstract"
+msgstr ""
+
+#: 2016/event-edit.php:61 2016/event.php:135 2019/event.php:138
+msgid "Descrizione"
+msgstr ""
+
+#: 2016/event-edit.php:62 2016/event.php:145 2019/event.php:148
+msgid "Note"
+msgstr ""
+
+#: 2016/event-edit.php:218
 #, php-format
 msgid "Modifica %s: %s"
 msgstr ""
 
-#: 2016/event-edit.php:204 2016/event-edit.php:547 2016/user-edit.php:485
+#: 2016/event-edit.php:226 2016/event-edit.php:558 2016/user-edit.php:483
 #, php-format
 msgid "Aggiungi %s"
 msgstr ""
 
-#: 2016/event-edit.php:205 2016/index.php:72
+#: 2016/event-edit.php:227 2016/index.php:72
 msgid "Evento"
 msgstr ""
 
-#: 2016/event-edit.php:227 2016/user-edit.php:224
+#: 2016/event-edit.php:249 2016/user-edit.php:222
 msgid "Vedi"
 msgstr ""
 
-#: 2016/event-edit.php:238
+#: 2016/event-edit.php:260
 msgid "Titolo"
 msgstr ""
 
-#: 2016/event-edit.php:249
+#: 2016/event-edit.php:271
 msgid "Codice"
 msgstr ""
 
-#: 2016/event-edit.php:260
+#: 2016/event-edit.php:282
 msgid "Sottotitolo"
 msgstr ""
 
-#: 2016/event-edit.php:271 2016/includes/class-Footer.php:115
+#: 2016/event-edit.php:293 2016/includes/class-Footer.php:115
 msgid "Lingua"
 msgstr ""
 
-#: 2016/event-edit.php:287
+#: 2016/event-edit.php:309
 msgid "Capitolo"
 msgstr ""
 
-#: 2016/event-edit.php:325
+#: 2016/event-edit.php:347
 msgid "Traccia"
 msgstr ""
 
-#: 2016/event-edit.php:363
+#: 2016/event-edit.php:385
 msgid "Stanza"
 msgstr ""
 
-#: 2016/event-edit.php:406
+#: 2016/event-edit.php:428
 msgid "Inizio"
 msgstr ""
 
-#: 2016/event-edit.php:419
+#: 2016/event-edit.php:441
 msgid "Fine"
 msgstr ""
 
-#: 2016/event-edit.php:435 2016/event.php:125 2019/event.php:127
-msgid "Abstract"
-msgstr ""
-
-#: 2016/event-edit.php:442 2016/event-edit.php:457
-msgid "Traduzione dalla community:"
-msgstr ""
-
-#: 2016/event-edit.php:450 2016/event.php:135 2019/event.php:138
-msgid "Descrizione"
-msgstr ""
-
-#: 2016/event-edit.php:468 2016/user-edit.php:386
+#: 2016/event-edit.php:478 2016/user-edit.php:384
 msgid "Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:483 2016/event-edit.php:593 2016/user-edit.php:453
-#: 2016/user-edit.php:549
+#: 2016/event-edit.php:494 2016/event-edit.php:604 2016/user-edit.php:451
+#: 2016/user-edit.php:547
 msgid "Salva"
 msgstr ""
 
-#: 2016/event-edit.php:496 2016/user-edit.php:464
+#: 2016/event-edit.php:507 2016/user-edit.php:462
 msgid "Nuova Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:500 2016/user-edit.php:468
+#: 2016/event-edit.php:511 2016/user-edit.php:466
 msgid "Sfoglia"
 msgstr ""
 
-#: 2016/event-edit.php:507 2016/user-edit.php:475
+#: 2016/event-edit.php:518 2016/user-edit.php:473
 msgid "Carica"
 msgstr ""
 
-#: 2016/event-edit.php:520
+#: 2016/event-edit.php:531
 #, php-format
 msgid "Associa %s"
 msgstr ""
 
-#: 2016/event-edit.php:521 2016/event-edit.php:550 2016/event-edit.php:598
+#: 2016/event-edit.php:532 2016/event-edit.php:561 2016/event-edit.php:609
 msgid "Utente"
 msgstr ""
 
-#: 2016/event-edit.php:541 2016/user-edit.php:511 2019/index.php:166
+#: 2016/event-edit.php:552 2016/user-edit.php:509 2019/index.php:166
 msgid "Aggiungi"
 msgstr ""
 
-#: 2016/event-edit.php:549
+#: 2016/event-edit.php:560
 #, php-format
 msgid "Nuovo %s"
 msgstr ""
 
-#: 2016/event-edit.php:572 2016/event-edit.php:597 2016/user-edit.php:526
+#: 2016/event-edit.php:583 2016/event-edit.php:608 2016/user-edit.php:211
+#: 2016/user-edit.php:524
 #, php-format
 msgid "Modifica %s"
 msgstr ""
 
-#: 2016/event-edit.php:573
+#: 2016/event-edit.php:584
 msgid "Ordinamento"
 msgstr ""
 
-#: 2016/event-edit.php:590 2016/user-edit.php:546 2016/user-edit.php:569
+#: 2016/event-edit.php:601 2016/user-edit.php:544 2016/user-edit.php:567
 msgid "Elimina"
 msgstr ""
 
@@ -291,10 +292,6 @@ msgstr ""
 
 #: 2016/event.php:112 2019/event.php:113
 msgid "Scarica promemoria calendario"
-msgstr ""
-
-#: 2016/event.php:145 2019/event.php:148
-msgid "Note"
 msgstr ""
 
 #: 2016/event.php:165 2019/event.php:167
@@ -635,53 +632,48 @@ msgstr ""
 msgid "Alcuni scatti dal Linux Day 2016 a Torino."
 msgstr ""
 
-#: 2016/user-edit.php:212
-#, php-format
-msgid "Modifica utente %s"
-msgstr ""
-
-#: 2016/user-edit.php:215
+#: 2016/user-edit.php:214
 msgid "Aggiungi Utente"
 msgstr ""
 
-#: 2016/user-edit.php:236 2016/user.php:153 2019/user.php:193
+#: 2016/user-edit.php:234 2016/user.php:153 2019/user.php:193
 msgid "Nome"
 msgstr ""
 
-#: 2016/user-edit.php:251
+#: 2016/user-edit.php:249
 msgid "Cognome"
 msgstr ""
 
-#: 2016/user-edit.php:266
+#: 2016/user-edit.php:264
 msgid "Nickname"
 msgstr ""
 
-#: 2016/user-edit.php:281
+#: 2016/user-edit.php:279
 msgid "E-mail"
 msgstr ""
 
-#: 2016/user-edit.php:296
+#: 2016/user-edit.php:294
 msgid "Gravatar"
 msgstr ""
 
-#: 2016/user-edit.php:311
+#: 2016/user-edit.php:309
 msgid "Sito web"
 msgstr ""
 
-#: 2016/user-edit.php:400
+#: 2016/user-edit.php:398
 msgid "Licenza preferita"
 msgstr ""
 
-#: 2016/user-edit.php:402
+#: 2016/user-edit.php:400
 msgid "Nessuna"
 msgstr ""
 
-#: 2016/user-edit.php:435
+#: 2016/user-edit.php:433
 #, php-format
 msgid "Biografia (%s)"
 msgstr ""
 
-#: 2016/user-edit.php:486 2016/user-edit.php:527
+#: 2016/user-edit.php:484 2016/user-edit.php:525
 msgid "Skill"
 msgstr ""
 
@@ -723,7 +715,7 @@ msgstr ""
 msgid "Vedi %s"
 msgstr ""
 
-#: 2016/user.php:184 2016/user.php:241 2019/user.php:224
+#: 2016/user.php:184 2016/user.php:244 2019/user.php:224
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr ""
@@ -736,7 +728,7 @@ msgstr ""
 msgid "Altre partecipazioni"
 msgstr ""
 
-#: 2016/user.php:258 2019/user.php:300
+#: 2016/user.php:261 2019/user.php:300
 msgid "Social"
 msgstr ""
 
