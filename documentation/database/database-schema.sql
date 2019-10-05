@@ -339,7 +339,7 @@ INSERT INTO `ldto_event` VALUES (219,'watch-penguin-affrontare-la-sicurezza-azie
 INSERT INTO `ldto_event` VALUES (220,'soluzioni-gnulinux-dal-mercato-enterprise-alla-pmi','Soluzioni GNU/Linux: dal mercato enterprise alla PMI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'it','2002-11-23 15:00:00','2002-11-23 16:00:00',NULL,0,11,NULL,NULL,1);
 INSERT INTO `ldto_event` VALUES (221,'first-steps-with-gnu-linux','Primi passi con GNU/Linux','','50 minuti per sapere tutto ciò che serve per entrare nel mondo del software libero senza pentimento. Domande accette.','50 minutes to learn all your needs to jump in the Free Software world without regreting nothing. Questions allowed.',NULL,NULL,NULL,NULL,'it','2019-10-26 14:00:00','2019-10-26 15:00:00',NULL,0,14,31,1,1);
 INSERT INTO `ldto_event` VALUES (222,'dont-touch-my-data','Don\'t Touch My Data','','Grazie a qualche volontario dimostreremo come ogni giorno la nostra privacy viene completamente compromessa, e come difendersi.\r\nPortate l\'amico «non ho niente da nascondere».','Thanks to some volunteer we will demonstrate how, in our everyday, our privacy is completely compromised, and how to defend ourselves.',NULL,NULL,NULL,NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00',NULL,0,14,31,1,1);
-INSERT INTO `ldto_event` VALUES (223,'private-cloud','Private Cloud','','Raggiungere l\'indipendenza tecnologica è possibile. Tutti i servizi cloud che conosciamo possono essere sostituiti da un nostro computer.\nPronti, via!',NULL,'Il talk si prefigge di illustrare le tecnologie e le metodologie per la creazione e configurazione di un proprio server privato.\n\nLa prima parte si focalizza sulla storia recente di internet e descrive come esso sia completamente cambiato. Il software libero ed open source e le risorse quasi illimitate dei grandi colossi del web (Google, Microsoft, Apple, ecc.) hanno permesso la creazione di innumerevoli servizi: dalla posta elettronica alla gestione dei contatti e calendari, dal backup automatico sul cloud alla condivisione di video e documenti.\n\nDopo la definizione (e l\'interpretazione) del termine \"cloud\" vengono presentate le tecnologie necessarie ad ottenere l\'indipendenza tecnologica: la configurazione di un proprio server. Sono elencati in dettaglio i software, gli strumenti e le soluzioni da utilizzare.\n\nL\'ultima parte è dedicata alla descrizione di un caso pratico e reale, ovvero la configurazione di tre macchine ad uso aziendale dal 2010 ad oggi.',NULL,NULL,NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00',NULL,0,14,31,1,1);
+INSERT INTO `ldto_event` VALUES (223,'private-cloud','Private Cloud','','Posta elettronica, contatti, calendari, foto, video e documenti: tutto condiviso e sempre accessibile, grazie al cloud.\r\n\r\nQuale cloud? Il tuo.\r\n\r\nDove? A casa tua, sul tuo computer.\r\n\r\nAnche per aziende? Certo.','E-mail, contacts, calendars, photos, videos and documents: all shared and accessible, in The Cloud.\r\n\r\nWhich cloud? Yours.\r\n\r\nWhere? At home, on your PC.\r\n\r\nFor business too? Sure.','Il talk si prefigge di illustrare le tecnologie e le metodologie per la creazione e configurazione di un proprio server privato.\r\n\r\nLa prima parte si focalizza sulla storia recente di internet e descrive come esso sia completamente cambiato. Il software libero ed open source e le risorse quasi illimitate dei grandi colossi del web (Google, Microsoft, Apple, ecc.) hanno permesso la creazione di innumerevoli servizi: dalla posta elettronica alla gestione dei contatti e calendari, dal backup automatico sul cloud alla condivisione di video e documenti.\r\n\r\nDopo la definizione (e l\'interpretazione) del termine \"cloud\" vengono presentate le tecnologie necessarie ad ottenere l\'indipendenza tecnologica: la configurazione di un proprio server. Sono elencati in dettaglio i software, gli strumenti e le soluzioni da utilizzare.\r\n\r\nL\'ultima parte è dedicata alla descrizione di un caso pratico e reale, ovvero la configurazione di tre macchine ad uso aziendale dal 2010 ad oggi.',NULL,'L\'[Immagine della nuvola](https://commons.wikimedia.org/wiki/File:Sunray_clouds_amk.jpg) è stata scattata da AngMoKio ed è liberamente fruibile in licenza [CC BY SA 2.5](https://creativecommons.org/licenses/by-sa/2.5) da Wikimedia Commons.',NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00','https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Sunray_clouds_amk.jpg/640px-Sunray_clouds_amk.jpg',0,14,31,1,1);
 INSERT INTO `ldto_event` VALUES (224,'big-data','Eccovi il Big Data','','Chi parla di Big Data è come i pescatori: c\'è sempre chi  si inventerà la storia su quel tonno gigante. Quindi parleremo nel concreto delle tecnologie usate in ambito enterprise.',NULL,NULL,NULL,NULL,NULL,'','2019-10-26 15:00:00','2019-10-26 16:00:00',NULL,0,14,33,3,1);
 INSERT INTO `ldto_event` VALUES (225,'rasa-ml','Rasa ML framework','AI assistants and chatbots','Costruiamo assieme il nostro assistente utilizzando la tecnologia open source e scritta in Python: Rasa!\n\nAlla fine dei 30 minuti ci risponderà dal nostro smartphone.',NULL,NULL,NULL,NULL,NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00',NULL,0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (226,'arduino','Workshop Arduino','Costruire una Command Line multi-output in Go','[Arduino-CLI](https://blog.arduino.cc/2018/08/24/announcing-the-arduino-command-line-interface-cli/) è una _command line interface scritta_ in [Go](https://it.wikipedia.org/wiki/Go_(linguaggio_di_programmazione)) che supporta tutte le architetture Linux piú popolari, incluso ARM v7. Esploreremo la command line, l\'ouput di testo e in JSON, la sua funzionalitá GRPC e come viene usata in ambienti di test e CI con le GitHub Actions in vari progetti, incluso TensorFlow Lite.','[Arduino-CLI](https://blog.arduino.cc/2018/08/24/announcing-the-arduino-command-line-interface-cli/) is a command line interface written in [Go](https://en.wikipedia.org/wiki/Go_(programming_language)) and supporting the most famous Linux architectures, including ARM v7. We will explore the command line, the raw text output and the JSON one, the GRPC feature and how its tested in CI environments with the GitHub Actions in various projects, including TensorFlow Lite.',NULL,NULL,NULL,NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00',NULL,0,14,34,4,1);
@@ -774,7 +774,7 @@ CREATE TABLE `ldto_skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -806,6 +806,16 @@ INSERT INTO `ldto_skill` VALUES (20,'c','C','programming');
 INSERT INTO `ldto_skill` VALUES (21,'wiki','Wikipedia','subject');
 INSERT INTO `ldto_skill` VALUES (22,'embedded','Embedded','subject');
 INSERT INTO `ldto_skill` VALUES (23,'haskell','Haskell','programming');
+INSERT INTO `ldto_skill` VALUES (24,'javaee','JavaEE','programming');
+INSERT INTO `ldto_skill` VALUES (25,'jsf','JSF','programming');
+INSERT INTO `ldto_skill` VALUES (26,'primefaces','PrimeFaces','programming');
+INSERT INTO `ldto_skill` VALUES (27,'maven','Maven','programming');
+INSERT INTO `ldto_skill` VALUES (28,'engineering','Engineering','');
+INSERT INTO `ldto_skill` VALUES (29,'html','HTML','');
+INSERT INTO `ldto_skill` VALUES (30,'css','CSS','');
+INSERT INTO `ldto_skill` VALUES (31,'javascript','JavaScript','programming');
+INSERT INTO `ldto_skill` VALUES (32,'artificial-intelligence','Artificial Intelligence','');
+INSERT INTO `ldto_skill` VALUES (33,'machine-learning','Machine Learning','');
 /*!40000 ALTER TABLE `ldto_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1089,12 +1099,18 @@ CREATE TABLE `ldto_user_skill` (
 LOCK TABLES `ldto_user_skill` WRITE;
 /*!40000 ALTER TABLE `ldto_user_skill` DISABLE KEYS */;
 INSERT INTO `ldto_user_skill` VALUES (1,11,-4);
+INSERT INTO `ldto_user_skill` VALUES (17,31,-4);
+INSERT INTO `ldto_user_skill` VALUES (17,32,-4);
+INSERT INTO `ldto_user_skill` VALUES (17,33,-4);
 INSERT INTO `ldto_user_skill` VALUES (20,15,-4);
 INSERT INTO `ldto_user_skill` VALUES (1,4,-2);
 INSERT INTO `ldto_user_skill` VALUES (1,6,-2);
+INSERT INTO `ldto_user_skill` VALUES (17,2,-2);
 INSERT INTO `ldto_user_skill` VALUES (1,5,-1);
+INSERT INTO `ldto_user_skill` VALUES (17,30,-1);
 INSERT INTO `ldto_user_skill` VALUES (1,7,0);
 INSERT INTO `ldto_user_skill` VALUES (11,7,0);
+INSERT INTO `ldto_user_skill` VALUES (17,29,1);
 INSERT INTO `ldto_user_skill` VALUES (1,3,2);
 INSERT INTO `ldto_user_skill` VALUES (1,8,2);
 INSERT INTO `ldto_user_skill` VALUES (1,13,2);
@@ -1111,6 +1127,9 @@ INSERT INTO `ldto_user_skill` VALUES (10,20,3);
 INSERT INTO `ldto_user_skill` VALUES (10,22,3);
 INSERT INTO `ldto_user_skill` VALUES (11,8,3);
 INSERT INTO `ldto_user_skill` VALUES (11,20,3);
+INSERT INTO `ldto_user_skill` VALUES (17,7,3);
+INSERT INTO `ldto_user_skill` VALUES (17,27,3);
+INSERT INTO `ldto_user_skill` VALUES (17,28,3);
 INSERT INTO `ldto_user_skill` VALUES (20,16,3);
 INSERT INTO `ldto_user_skill` VALUES (20,17,3);
 INSERT INTO `ldto_user_skill` VALUES (20,18,3);
@@ -1122,6 +1141,9 @@ INSERT INTO `ldto_user_skill` VALUES (1,12,4);
 INSERT INTO `ldto_user_skill` VALUES (7,12,4);
 INSERT INTO `ldto_user_skill` VALUES (8,3,4);
 INSERT INTO `ldto_user_skill` VALUES (8,12,4);
+INSERT INTO `ldto_user_skill` VALUES (17,24,4);
+INSERT INTO `ldto_user_skill` VALUES (17,25,4);
+INSERT INTO `ldto_user_skill` VALUES (17,26,4);
 /*!40000 ALTER TABLE `ldto_user_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1134,4 +1156,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-02 13:37:23
+-- Dump completed on 2019-10-05  8:08:35
