@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-05 12:24+0200\n"
-"PO-Revision-Date: 2019-09-29 11:29+0200\n"
+"POT-Creation-Date: 2019-10-05 12:43+0200\n"
+"PO-Revision-Date: 2019-10-05 12:29+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 2016/credits.php:27
@@ -180,15 +180,15 @@ msgstr "See"
 
 #: 2016/event-edit.php:267 2016/user-edit.php:606
 msgid "Titolo"
-msgstr ""
+msgstr "Title"
 
 #: 2016/event-edit.php:278
 msgid "Codice"
-msgstr ""
+msgstr "Code"
 
 #: 2016/event-edit.php:289
 msgid "Sottotitolo"
-msgstr ""
+msgstr "Subtitle"
 
 #: 2016/event-edit.php:300 2016/includes/class-Footer.php:115
 msgid "Lingua"
@@ -196,15 +196,15 @@ msgstr "Language"
 
 #: 2016/event-edit.php:316
 msgid "Capitolo"
-msgstr ""
+msgstr "Chapter"
 
 #: 2016/event-edit.php:354
 msgid "Traccia"
-msgstr ""
+msgstr "Track"
 
 #: 2016/event-edit.php:392
 msgid "Stanza"
-msgstr ""
+msgstr "Room"
 
 #: 2016/event-edit.php:435
 msgid "Inizio"
@@ -216,7 +216,7 @@ msgstr "End"
 
 #: 2016/event-edit.php:485 2016/user-edit.php:415
 msgid "Immagine"
-msgstr ""
+msgstr "Image"
 
 #: 2016/event-edit.php:501 2016/event-edit.php:611 2016/user-edit.php:482
 #: 2016/user-edit.php:541
@@ -225,15 +225,15 @@ msgstr "Save"
 
 #: 2016/event-edit.php:514 2016/user-edit.php:493
 msgid "Nuova Immagine"
-msgstr ""
+msgstr "New Image"
 
 #: 2016/event-edit.php:518 2016/user-edit.php:497
 msgid "Sfoglia"
-msgstr ""
+msgstr "Pick"
 
 #: 2016/event-edit.php:525 2016/user-edit.php:504
 msgid "Carica"
-msgstr ""
+msgstr "Upload"
 
 #: 2016/event-edit.php:538
 #, php-format
@@ -298,7 +298,7 @@ msgstr "%s at %s"
 
 #: 2016/event.php:112 2019/event.php:113
 msgid "Scarica promemoria calendario"
-msgstr ""
+msgstr "Download calendar memo"
 
 #: 2016/event.php:165 2019/event.php:167
 #, php-format
@@ -560,7 +560,7 @@ msgstr "Credits"
 
 #: 2016/login.php:40
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: 2016/login.php:48
 msgid "Sei loggato!"
@@ -667,11 +667,11 @@ msgstr "Name"
 
 #: 2016/user-edit.php:280
 msgid "Cognome"
-msgstr ""
+msgstr "Surname"
 
 #: 2016/user-edit.php:295
 msgid "Nickname"
-msgstr ""
+msgstr "Nickname"
 
 #: 2016/user-edit.php:310
 msgid "E-mail"
@@ -679,11 +679,11 @@ msgstr "E-mail"
 
 #: 2016/user-edit.php:325
 msgid "Gravatar"
-msgstr ""
+msgstr "Gravatar"
 
 #: 2016/user-edit.php:340
 msgid "Sito web"
-msgstr ""
+msgstr "Website"
 
 #: 2016/user-edit.php:429
 #, fuzzy
@@ -692,16 +692,16 @@ msgstr "jQuery License"
 
 #: 2016/user-edit.php:431
 msgid "Nessuna"
-msgstr ""
+msgstr "None"
 
 #: 2016/user-edit.php:464
 #, php-format
 msgid "Biografia (%s)"
-msgstr ""
+msgstr "Bio (%s)"
 
 #: 2016/user-edit.php:520 2016/user-edit.php:560 2016/user-edit.php:597
 msgid "Skill"
-msgstr ""
+msgstr "Skill"
 
 #: 2016/user-edit.php:596
 #, fuzzy, php-format
@@ -715,7 +715,7 @@ msgstr "Schedule"
 
 #: 2016/user-edit.php:612
 msgid "Interesse"
-msgstr ""
+msgstr "Interest"
 
 #: 2016/user-edit.php:614 2016/user.php:154 2019/user.php:197
 msgid "Tipo"
@@ -998,6 +998,8 @@ msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
 msgstr ""
+"Choose between the <b>base room</b>, the room for <b>sysadmins</b> or "
+"<b>programmers</b> and have fun!"
 
 #: 2019/index.php:65
 #, php-format
@@ -1009,6 +1011,8 @@ msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
 msgstr ""
+"Programmers, engineers, layers, specialists from the whole Software Freedom "
+"ecosystem. All toghether in Turin."
 
 #: 2019/index.php:84
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
@@ -1030,16 +1034,16 @@ msgstr "Secret Speaker"
 
 #: 2019/index.php:136
 msgid "Memo"
-msgstr ""
+msgstr "Memo"
 
 #: 2019/index.php:180
 msgid "Nello stesso momento"
-msgstr ""
+msgstr "At the same moment"
 
 #: 2019/index.php:186 2019/index.php:246
-#, fuzzy, php-format
+#, php-format
 msgid "Cos'è il %s"
-msgstr "What is the Linux Day?"
+msgstr "What is the %s"
 
 #: 2019/index.php:189
 msgid ""
@@ -1047,16 +1051,20 @@ msgid ""
 "centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
 "GNU/Linux e aiuteremo noi nella loro liberazione!"
 msgstr ""
+"Bring with you your laptop, a smartphone, a toaster, a nuclear power plant, "
+"or whatever could be converted to GNU/Linux and we will help in their "
+"liberation!"
 
 #: 2019/index.php:192
 #, php-format
 msgid ""
 "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
 msgstr ""
+"The image of %s and %s available with the %s and %s license respectively."
 
 #: 2019/index.php:207
 msgid "pubblico dominio"
-msgstr ""
+msgstr "public domain"
 
 #: 2019/index.php:234
 msgid "Domande frequenti"
@@ -1067,14 +1075,16 @@ msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
 msgstr ""
+"It's a national event, planned every year since 20 years. We do the Linux "
+"Day in the whole Italy, in the same day, and Turin will be present also."
 
 #: 2019/index.php:257
 msgid "Informazioni sul Linux Day nazionale"
-msgstr ""
+msgstr "Informations on the national Linux Day"
 
 #: 2019/index.php:267
 msgid "Posso portare un amico che non capisce nulla?"
-msgstr ""
+msgstr "Can I bring a friend that does not understand nothing?"
 
 #: 2019/index.php:273
 msgid ""
@@ -1082,46 +1092,54 @@ msgid ""
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
 "all'installation party e lo aiuteremo nella migrazione al software libero!"
 msgstr ""
+"Bring your friend. But also, respect your friend! Drop him/her in the \"base"
+"\" room and enjoy. Or drop him/her to the installation party and we will "
+"liberate your friend!"
 
 #: 2019/index.php:282
 msgid "Quanto costa?"
-msgstr ""
+msgstr "How much it costs?"
 
 #: 2019/index.php:288
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
 msgstr ""
+"The event is completly gratis for everyone thanks to Turin's communities and "
+"in who believe in them."
 
 #: 2019/index.php:297
 msgid "Come prenoto una T-shirt?"
-msgstr ""
+msgstr "How do I reserve my T-shirt?"
 
 #: 2019/index.php:303
 msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
-msgstr ""
+msgstr "Tell us your size and we will keep it in a secure place for you!"
 
 #: 2019/index.php:304
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
 msgstr ""
+"Seriously, contact us to hold your T-shirt. They tend to finish very "
+"quickly, and every year someone remains nacked."
 
 #: 2019/index.php:325
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
 msgstr ""
+"The office of the Linux Day Torino 2019 will be the Toolbox Coworking, in "
+"Via Agostino da Montefeltro 2."
 
 #: 2019/index.php:326
-#, fuzzy
 msgid "Per raggiungerci puoi:"
 msgstr "To arrive you can:"
 
 #: 2019/index.php:329 2019/index.php:340 2019/index.php:351
 #, php-format
 msgid "Prendere %s, fermata %s"
-msgstr ""
+msgstr "Take %s, %s stop"
 
 #: 2019/index.php:331 2019/index.php:342 includes/class-Sharable.php:57
 #, php-format
@@ -1135,17 +1153,17 @@ msgstr "tram %s"
 
 #: 2019/index.php:337
 msgid "Ospedale Mauriziano"
-msgstr ""
+msgstr "Mauriziano Hospital"
 
 #: 2019/index.php:344
-#, fuzzy, php-format
+#, php-format
 msgid "bus %s"
-msgstr "%s %s"
+msgstr "bus %s"
 
 #: 2019/index.php:353
-#, fuzzy, php-format
+#, php-format
 msgid "la %s"
-msgstr "\"B\" room"
+msgstr "the %s"
 
 #: 2019/index.php:354
 msgid "metropolitana"
@@ -1154,28 +1172,27 @@ msgstr "underground"
 #: 2019/index.php:359
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
-msgstr ""
+msgstr "Also %s and %s buses stop somehow near."
 
 #: 2019/index.php:379
 msgid "Contattaci"
-msgstr ""
+msgstr "Contact Us"
 
 #: 2019/index.php:381
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
 "email %s o al numero %s."
-msgstr "Contact us at the address %s or at the number %s."
+msgstr ""
+"To contact the Linux Day Torino you can send an e-mail to %s or text to %s."
 
 #: 2019/load.php:43 l10n/trebbia.php:60
-#, fuzzy
 msgid "Linux Day Torino 2019"
-msgstr "Linux Day Turin 2016"
+msgstr "Linux Day Turin 2019"
 
 #: 2019/load.php:44
-#, fuzzy
 msgid "LDTO2019"
-msgstr "LDTO2016"
+msgstr "LDTO2019"
 
 #: 2019/user.php:148
 #, php-format
@@ -1183,9 +1200,8 @@ msgid "La mia licenza di software libero preferita è la <b>%s</b>."
 msgstr "My favorite Free as in freedom software license is the <b>%s</b>."
 
 #: 2019/user.php:258
-#, fuzzy
 msgid "Altre partecipazioni passate"
-msgstr "Other partecipations"
+msgstr "Other past partecipations"
 
 #: includes/class-HumanTime.php:68
 #, php-format
@@ -1221,9 +1237,9 @@ msgid "%d mesi"
 msgstr "%d months"
 
 #: includes/class-HumanTime.php:113
-#, fuzzy, php-format
+#, php-format
 msgid "%d m"
-msgstr "%d months"
+msgstr "%d m"
 
 #: includes/class-HumanTime.php:119
 msgid "un mese"
@@ -1250,7 +1266,7 @@ msgstr "%d days"
 #: includes/class-HumanTime.php:142
 #, php-format
 msgid "%d d"
-msgstr ""
+msgstr "%d d"
 
 #: includes/class-HumanTime.php:149
 msgid "domani"
@@ -1292,7 +1308,7 @@ msgstr "half an hours"
 
 #: includes/class-HumanTime.php:195
 msgid "½ h"
-msgstr ""
+msgstr "½ h"
 
 #: includes/class-HumanTime.php:199
 #, php-format
@@ -1325,15 +1341,13 @@ msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
 msgstr "https://creativecommons.org/licenses/by/4.0/deed"
 
 #: includes/class-Licenses.php:57
-#, fuzzy
 msgid ""
 "Creative Commons - Attribuzione - Condividi allo stesso modo 2.0 Generico"
-msgstr "Creative Commons Attribution - ShareAlike 4.0 International"
+msgstr "Creative Commons Attribution - Share alike 2.0 Generic"
 
 #: includes/class-Licenses.php:57
-#, fuzzy
 msgid "https://creativecommons.org/licenses/by-sa/2.0/deed.it"
-msgstr "https://creativecommons.org/licenses/by-sa/3.0/"
+msgstr "https://creativecommons.org/licenses/by-sa/2.0/deed.en"
 
 #: includes/class-Licenses.php:58
 msgid ""
@@ -2304,9 +2318,8 @@ msgid "Soluzioni GNU/Linux: dal mercato enterprise alla PMI"
 msgstr ""
 
 #: l10n/trebbia.php:648
-#, fuzzy
 msgid "Primi passi con GNU/Linux"
-msgstr "GNU/Linux uses"
+msgstr "First steps with GNU/Linux"
 
 #: l10n/trebbia.php:651
 msgid "Don't Touch My Data"
@@ -2318,7 +2331,7 @@ msgstr ""
 
 #: l10n/trebbia.php:657
 msgid "Eccovi il Big Data"
-msgstr ""
+msgstr "Here you are the Big Data"
 
 #: l10n/trebbia.php:660
 msgid "Rasa ML framework"
@@ -2994,6 +3007,9 @@ msgid ""
 "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
 "abbiamo trasmesso cookie o altre tecnologie di tracciamento personale."
 msgstr ""
+"We do not apply any data protection policy because we have not received from "
+"you any identification data or anyway we do not track you with cookies, "
+"scripts, etc."
 
 #: 2019/template/header.php:80
 #, fuzzy

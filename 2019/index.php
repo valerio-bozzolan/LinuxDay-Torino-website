@@ -184,7 +184,7 @@ template( 'header', [
 		<div class="jumbotron">
 			<h3><?= sprintf(
 				__( "Cos'è il %s" ),
-				"Linux Installation Party?"
+				"Linux Installation Party"
 			) ?></h3>
 			<p><?= __( "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a GNU/Linux e aiuteremo noi nella loro liberazione!" ) ?></p>
 		</div>
@@ -243,7 +243,7 @@ template( 'header', [
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         							<p><?= sprintf(
-        								__( "Cos'è il %s?" ),
+        								__( "Cos'è il %s" ),
         								"Linux Day"
         							) ?></p>
         						</a>
