@@ -142,6 +142,30 @@ if( $user && is_action( 'change-image' ) ) {
 	}
 }
 
+// register action to create a Skill
+if( is_action( 'create-skill' ) && isset( $_POST['skill_title'], $_POST['skill_type'] ) ) {
+
+	// generate a Skill UID
+	$skill_uid = generate_slug( $_POST['skill_title'], 32 );
+
+	// check if already exists
+	$skill = ( new QuerySkill() )
+		->whereSkillUID( $skill_uid )
+		->queryRow();
+
+	// create the Skill
+	if( !$skill ) {
+		( new QuerySkill() )
+			->insertRow( [
+				'skill_uid'   => $skill_uid,
+				'skill_title' => $_POST['skill_title'],
+				'skill_type'  => $_POST['skill_type'],
+			] );
+	}
+
+}
+
+// register action to edit an existing Skill
 if( isset( $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 
 	// find existing Skill
@@ -166,6 +190,7 @@ if( isset( $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 			->whereUser(  $user  )
 			->whereSkill( $skill );
 
+	// eventually change an existing skill
 	if( is_action( 'change-skill' ) ) {
 
 		// delete the Skill or just update?
@@ -181,12 +206,13 @@ if( isset( $_POST['skill_uid'], $_POST['skill_score'] ) ) {
 		}
 	}
 
+	// eventually add a skill
 	if( is_action( 'add-skill' ) ) {
 
 		// eventually delete
 		$query_userskill->delete();
 
-		// then add
+		// then add the skill
 		( new QueryUserSkill() )
 			->insertRow( [
 				'user_ID'     => $user->getUserID(),
@@ -483,6 +509,51 @@ Header::spawn( null, [
 	<?php endif ?>
 	<!-- /image -->
 
+	<!-- list Skill and Interest -->
+	<?php if( $user ): ?>
+		<?php $skills = $user->factoryUserSkills()
+			->queryGenerator();
+		?>
+		<?php if( $skills->valid() ): ?>
+			<h3><?php printf(
+				__( "Modifica %s" ),
+				__( "Skill" )
+			) ?></h3>
+			<div class="row">
+				<?php $i = 0; ?>
+				<?php foreach( $skills as $skill ): ?>
+					<div class="col s12 m4">
+						<div class="card-panel">
+							<form method="post">
+								<?php form_action( 'change-skill' ) ?>
+								<div class="row">
+									<div class="col s6">
+										<input type="text" name="skill_uid" value="<?= $skill->getSkillUID() ?>" />
+									</div>
+									<div class="col s6">
+										<input type="text" name="skill_score" value="<?= $skill->getSkillScore() ?>" />
+									</div>
+									<div class="col s6">
+										<input type="checkbox" name="skill_delete" value="yes" id="skill-<?= $i ?>" />
+										<label for="skill-<?= $i++ ?>"><?= __("Elimina") ?></label>
+									</div>
+									<div class="col s6">
+										<button type="submit" class="btn"><?= __("Salva") ?></button>
+									</div>
+									<div class="col s12">
+										<p><?= $skill->getSkillPhrase() ?></p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				<?php endforeach ?>
+			</div>
+		<?php endif ?>
+	<?php endif ?>
+	<!-- /list Skill and Interest -->
+
+	<!-- add Skill and Interest -->
 	<?php if( $user ): ?>
 		<h3><?php printf(
 			__( "Aggiungi %s"),
@@ -493,7 +564,6 @@ Header::spawn( null, [
 				<div class="card-panel">
 					<form method="post">
 						<?php form_action( 'add-skill' ) ?>
-						<input type="hidden" name="uid" value="<?= $user->getUserUID() ?>" />
 						<div class="row">
 							<div class="col s6">
 								<select name="skill_uid" class="browser-default" required="required">
@@ -519,48 +589,38 @@ Header::spawn( null, [
 			</div>
 		</div>
 	<?php endif ?>
+	<!-- /Add Skill and Interest -->
 
 	<?php if( $user ): ?>
-		<?php $skills = $user->factoryUserSkills()
-			->queryGenerator();
-		?>
-		<?php if( $skills->valid() ): ?>
-			<h3><?php printf(
-				__( "Modifica %s" ),
-				__( "Skill" )
-			) ?></h3>
-			<div class="row">
-				<?php $i = 0; ?>
-				<?php foreach( $skills as $skill ): ?>
-					<div class="col s12 m4">
-						<div class="card-panel">
-							<form method="post">
-								<?php form_action( 'change-skill' ) ?>
-								<input type="hidden" name="uid" value="<?= $user->getUserUID() ?>" />
-								<div class="row">
-									<div class="col s6">
-										<input type="text" name="skill_uid" value="<?= $skill->getSkillUID() ?>" />
-									</div>
-									<div class="col s6">
-										<input type="text" name="skill_score" value="<?= $skill->getSkillScore() ?>" />
-									</div>
-									<div class="col s6">
-										<input type="checkbox" name="skill_delete" value="yes" id="skill-<?= $i ?>" />
-										<label for="skill-<?= $i++ ?>"><?= __("Elimina") ?></label>
-									</div>
-									<div class="col s6">
-										<button type="submit" class="btn"><?= __("Salva") ?></button>
-									</div>
-									<div class="col s12">
-										<p><?= $skill->getSkillPhrase() ?></p>
-									</div>
-								</div>
-							</form>
+		<h3><?php printf(
+			__( "Crea %s"),
+			__( "Skill" )
+		) ?></h3>
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="card-panel">
+					<form method="post">
+						<?php form_action( 'create-skill' ) ?>
+						<div class="row">
+							<div class="col s12 input-field">
+								<label for="new-skill-title" class="active"><?= __( "Titolo" ) ?></label>
+								<input id="new-skill-title" name="skill_title" required="required" />
+							</div>
+							<div class="col s12 input-field">
+								<select id="new-skill-type" name="skill_type" required="required" />
+									<option value="programming"><?= __( "Programmazione" ) ?></option>
+									<option value="interest"><?=    __( "Interesse"      ) ?></option>
+								</select>
+								<label for="new-skill-type"><?= __( "Tipo" ) ?></label>
+							</div>
+							<div class="col s12">
+								<button type="submit" class="btn"><?= __("Aggiungi") ?></button>
+							</div>
 						</div>
-					</div>
-				<?php endforeach ?>
+					</form>
+				</div>
 			</div>
-		<?php endif ?>
+		</div>
 	<?php endif ?>
 
 	<!-- delete -->

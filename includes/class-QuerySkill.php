@@ -37,8 +37,21 @@ trait QuerySkillTrait {
 		return $this->whereInt( $this->SKILL_ID, $id );
 	}
 
+	/**
+	 * Where the Skill UID is the specified one
+	 *
+	 * @param  string $uid Skill UID
+	 * @return self
+	 */
+	public function whereSkillUID( $uid ) {
+		return $this->whereStr( 'skill_uid', $uid );
+	}
+
 }
 
+/**
+ * Query a Skill
+ */
 class QuerySkill extends Query {
 
 	use QuerySkillTrait;
