@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-04 17:59+0000\n"
+"POT-Creation-Date: 2019-10-05 12:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,122 +143,123 @@ msgstr ""
 msgid "l'immagine predefinita di alcuni elementi"
 msgstr ""
 
-#: 2016/event-edit.php:60 2016/event.php:125 2019/event.php:127
+#: 2016/event-edit.php:67 2016/event.php:125 2019/event.php:127
 msgid "Abstract"
 msgstr ""
 
-#: 2016/event-edit.php:61 2016/event.php:135 2019/event.php:138
+#: 2016/event-edit.php:68 2016/event.php:135 2019/event.php:138
 msgid "Descrizione"
 msgstr ""
 
-#: 2016/event-edit.php:62 2016/event.php:145 2019/event.php:148
+#: 2016/event-edit.php:69 2016/event.php:145 2019/event.php:148
 msgid "Note"
 msgstr ""
 
-#: 2016/event-edit.php:218
+#: 2016/event-edit.php:225
 #, php-format
 msgid "Modifica %s: %s"
 msgstr ""
 
-#: 2016/event-edit.php:226 2016/event-edit.php:558 2016/user-edit.php:483
+#: 2016/event-edit.php:233 2016/event-edit.php:565 2016/user-edit.php:559
 #, php-format
 msgid "Aggiungi %s"
 msgstr ""
 
-#: 2016/event-edit.php:227 2016/index.php:72
+#: 2016/event-edit.php:234 2016/index.php:72
 msgid "Evento"
 msgstr ""
 
-#: 2016/event-edit.php:249 2016/user-edit.php:222
+#: 2016/event-edit.php:256 2016/user-edit.php:253
 msgid "Vedi"
 msgstr ""
 
-#: 2016/event-edit.php:260
+#: 2016/event-edit.php:267 2016/user-edit.php:606
 msgid "Titolo"
 msgstr ""
 
-#: 2016/event-edit.php:271
+#: 2016/event-edit.php:278
 msgid "Codice"
 msgstr ""
 
-#: 2016/event-edit.php:282
+#: 2016/event-edit.php:289
 msgid "Sottotitolo"
 msgstr ""
 
-#: 2016/event-edit.php:293 2016/includes/class-Footer.php:115
+#: 2016/event-edit.php:300 2016/includes/class-Footer.php:115
 msgid "Lingua"
 msgstr ""
 
-#: 2016/event-edit.php:309
+#: 2016/event-edit.php:316
 msgid "Capitolo"
 msgstr ""
 
-#: 2016/event-edit.php:347
+#: 2016/event-edit.php:354
 msgid "Traccia"
 msgstr ""
 
-#: 2016/event-edit.php:385
+#: 2016/event-edit.php:392
 msgid "Stanza"
 msgstr ""
 
-#: 2016/event-edit.php:428
+#: 2016/event-edit.php:435
 msgid "Inizio"
 msgstr ""
 
-#: 2016/event-edit.php:441
+#: 2016/event-edit.php:448
 msgid "Fine"
 msgstr ""
 
-#: 2016/event-edit.php:478 2016/user-edit.php:384
+#: 2016/event-edit.php:485 2016/user-edit.php:415
 msgid "Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:494 2016/event-edit.php:604 2016/user-edit.php:451
-#: 2016/user-edit.php:547
+#: 2016/event-edit.php:501 2016/event-edit.php:611 2016/user-edit.php:482
+#: 2016/user-edit.php:541
 msgid "Salva"
 msgstr ""
 
-#: 2016/event-edit.php:507 2016/user-edit.php:462
+#: 2016/event-edit.php:514 2016/user-edit.php:493
 msgid "Nuova Immagine"
 msgstr ""
 
-#: 2016/event-edit.php:511 2016/user-edit.php:466
+#: 2016/event-edit.php:518 2016/user-edit.php:497
 msgid "Sfoglia"
 msgstr ""
 
-#: 2016/event-edit.php:518 2016/user-edit.php:473
+#: 2016/event-edit.php:525 2016/user-edit.php:504
 msgid "Carica"
 msgstr ""
 
-#: 2016/event-edit.php:531
+#: 2016/event-edit.php:538
 #, php-format
 msgid "Associa %s"
 msgstr ""
 
-#: 2016/event-edit.php:532 2016/event-edit.php:561 2016/event-edit.php:609
+#: 2016/event-edit.php:539 2016/event-edit.php:568 2016/event-edit.php:616
 msgid "Utente"
 msgstr ""
 
-#: 2016/event-edit.php:552 2016/user-edit.php:509 2019/index.php:166
+#: 2016/event-edit.php:559 2016/user-edit.php:584 2016/user-edit.php:617
+#: 2019/index.php:165
 msgid "Aggiungi"
 msgstr ""
 
-#: 2016/event-edit.php:560
+#: 2016/event-edit.php:567
 #, php-format
 msgid "Nuovo %s"
 msgstr ""
 
-#: 2016/event-edit.php:583 2016/event-edit.php:608 2016/user-edit.php:211
-#: 2016/user-edit.php:524
+#: 2016/event-edit.php:590 2016/event-edit.php:615 2016/user-edit.php:242
+#: 2016/user-edit.php:519
 #, php-format
 msgid "Modifica %s"
 msgstr ""
 
-#: 2016/event-edit.php:584
+#: 2016/event-edit.php:591
 msgid "Ordinamento"
 msgstr ""
 
-#: 2016/event-edit.php:601 2016/user-edit.php:544 2016/user-edit.php:567
+#: 2016/event-edit.php:608 2016/user-edit.php:538 2016/user-edit.php:632
 msgid "Elimina"
 msgstr ""
 
@@ -271,17 +272,17 @@ msgstr ""
 msgid "Modifica evento"
 msgstr ""
 
-#: 2016/event.php:81 2016/user.php:155 2019/event.php:82 2019/user.php:195
+#: 2016/event.php:81 2016/user.php:155 2019/event.php:82 2019/user.php:198
 msgid "Tema"
 msgstr ""
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:89
-#: 2019/index.php:275 2019/user.php:196 2019/template/navbar-home.php:58
+#: 2019/index.php:324 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr ""
 
 #: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:103
-#: 2019/user.php:197
+#: 2019/user.php:200
 msgid "Quando"
 msgstr ""
 
@@ -334,7 +335,7 @@ msgstr ""
 msgid "Ma abbiamo altro!"
 msgstr ""
 
-#: 2016/index.php:99 2019/user.php:286
+#: 2016/index.php:99 2019/user.php:289
 msgid "d/m/Y"
 msgstr ""
 
@@ -632,52 +633,69 @@ msgstr ""
 msgid "Alcuni scatti dal Linux Day 2016 a Torino."
 msgstr ""
 
-#: 2016/user-edit.php:214
+#: 2016/user-edit.php:245
 msgid "Aggiungi Utente"
 msgstr ""
 
-#: 2016/user-edit.php:234 2016/user.php:153 2019/user.php:193
+#: 2016/user-edit.php:265 2016/user.php:153 2019/user.php:196
 msgid "Nome"
 msgstr ""
 
-#: 2016/user-edit.php:249
+#: 2016/user-edit.php:280
 msgid "Cognome"
 msgstr ""
 
-#: 2016/user-edit.php:264
+#: 2016/user-edit.php:295
 msgid "Nickname"
 msgstr ""
 
-#: 2016/user-edit.php:279
+#: 2016/user-edit.php:310
 msgid "E-mail"
 msgstr ""
 
-#: 2016/user-edit.php:294
+#: 2016/user-edit.php:325
 msgid "Gravatar"
 msgstr ""
 
-#: 2016/user-edit.php:309
+#: 2016/user-edit.php:340
 msgid "Sito web"
 msgstr ""
 
-#: 2016/user-edit.php:398
+#: 2016/user-edit.php:429
 msgid "Licenza preferita"
 msgstr ""
 
-#: 2016/user-edit.php:400
+#: 2016/user-edit.php:431
 msgid "Nessuna"
 msgstr ""
 
-#: 2016/user-edit.php:433
+#: 2016/user-edit.php:464
 #, php-format
 msgid "Biografia (%s)"
 msgstr ""
 
-#: 2016/user-edit.php:484 2016/user-edit.php:525
+#: 2016/user-edit.php:520 2016/user-edit.php:560 2016/user-edit.php:597
 msgid "Skill"
 msgstr ""
 
-#: 2016/user.php:48 2019/event.php:59 2019/index.php:143 2019/user.php:71
+#: 2016/user-edit.php:596
+#, php-format
+msgid "Crea %s"
+msgstr ""
+
+#: 2016/user-edit.php:611
+msgid "Programmazione"
+msgstr ""
+
+#: 2016/user-edit.php:612
+msgid "Interesse"
+msgstr ""
+
+#: 2016/user-edit.php:614 2016/user.php:154 2019/user.php:197
+msgid "Tipo"
+msgstr ""
+
+#: 2016/user.php:48 2019/event.php:59 2019/index.php:142 2019/user.php:71
 msgid "Modifica"
 msgstr ""
 
@@ -685,7 +703,7 @@ msgstr ""
 msgid "Sito personale"
 msgstr ""
 
-#: 2016/user.php:102 2019/user.php:130
+#: 2016/user.php:102 2019/user.php:133
 msgid "Le mie skill:"
 msgstr ""
 
@@ -694,33 +712,29 @@ msgstr ""
 msgid "La mia licenza di software libero preferita è la %s."
 msgstr ""
 
-#: 2016/user.php:133 2019/user.php:165
+#: 2016/user.php:133 2019/user.php:168
 msgid "Bio"
 msgstr ""
 
-#: 2016/user.php:142 2019/user.php:172 l10n/trebbia.php:827
+#: 2016/user.php:142 2019/user.php:175 l10n/trebbia.php:827
 msgid "Talk"
-msgstr ""
-
-#: 2016/user.php:154 2019/user.php:194
-msgid "Tipo"
 msgstr ""
 
 #: 2016/user.php:157
 msgid "When"
 msgstr ""
 
-#: 2016/user.php:170 2019/user.php:210
+#: 2016/user.php:170 2019/user.php:213
 #, php-format
 msgid "Vedi %s"
 msgstr ""
 
-#: 2016/user.php:184 2016/user.php:244 2019/user.php:224
+#: 2016/user.php:184 2016/user.php:244 2019/user.php:227
 #, php-format
 msgid "Ore <b>%s</b> (il %s)"
 msgstr ""
 
-#: 2016/user.php:195 2019/user.php:236
+#: 2016/user.php:195 2019/user.php:239
 msgid "Quest'anno il relatore non ha tenuto nessun talk."
 msgstr ""
 
@@ -728,7 +742,7 @@ msgstr ""
 msgid "Altre partecipazioni"
 msgstr ""
 
-#: 2016/user.php:261 2019/user.php:300
+#: 2016/user.php:261 2019/user.php:303
 msgid "Social"
 msgstr ""
 
@@ -859,7 +873,7 @@ msgstr ""
 msgid "Prendere il bus 59 o 50/"
 msgstr ""
 
-#: 2017/index.php:156 2019/index.php:317
+#: 2017/index.php:156 2019/index.php:366
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr ""
 
@@ -981,116 +995,138 @@ msgstr ""
 msgid "Speaker Segreto"
 msgstr ""
 
-#: 2019/index.php:137
-msgid "Salva sul calendario"
+#: 2019/index.php:136
+msgid "Memo"
 msgstr ""
 
-#: 2019/index.php:188
+#: 2019/index.php:180
+msgid "Nello stesso momento"
+msgstr ""
+
+#: 2019/index.php:186 2019/index.php:246
+#, php-format
+msgid "Cos'è il %s"
+msgstr ""
+
+#: 2019/index.php:189
+msgid ""
+"Porta con te il tuo computer portatile, uno smartphone, un tostapane, una "
+"centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
+"GNU/Linux e aiuteremo noi nella loro liberazione!"
+msgstr ""
+
+#: 2019/index.php:192
+#, php-format
+msgid ""
+"L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
+msgstr ""
+
+#: 2019/index.php:207
+msgid "pubblico dominio"
+msgstr ""
+
+#: 2019/index.php:234
 msgid "Domande frequenti"
 msgstr ""
 
-#: 2019/index.php:199
-msgid "Cos'è il Linux Day?"
-msgstr ""
-
-#: 2019/index.php:205
+#: 2019/index.php:254
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
 msgstr ""
 
-#: 2019/index.php:208
+#: 2019/index.php:257
 msgid "Informazioni sul Linux Day nazionale"
 msgstr ""
 
-#: 2019/index.php:218
+#: 2019/index.php:267
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr ""
 
-#: 2019/index.php:224
+#: 2019/index.php:273
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
 "all'installation party e lo aiuteremo nella migrazione al software libero!"
 msgstr ""
 
-#: 2019/index.php:233
+#: 2019/index.php:282
 msgid "Quanto costa?"
 msgstr ""
 
-#: 2019/index.php:239
+#: 2019/index.php:288
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
 msgstr ""
 
-#: 2019/index.php:248
+#: 2019/index.php:297
 msgid "Come prenoto una T-shirt?"
 msgstr ""
 
-#: 2019/index.php:254
+#: 2019/index.php:303
 msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
 msgstr ""
 
-#: 2019/index.php:255
+#: 2019/index.php:304
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
 msgstr ""
 
-#: 2019/index.php:276
+#: 2019/index.php:325
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
 msgstr ""
 
-#: 2019/index.php:277
+#: 2019/index.php:326
 msgid "Per raggiungerci puoi:"
 msgstr ""
 
-#: 2019/index.php:280 2019/index.php:291 2019/index.php:302
+#: 2019/index.php:329 2019/index.php:340 2019/index.php:351
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr ""
 
-#: 2019/index.php:282 2019/index.php:293 includes/class-Sharable.php:57
+#: 2019/index.php:331 2019/index.php:342 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr ""
 
-#: 2019/index.php:284
+#: 2019/index.php:333
 #, php-format
 msgid "tram %s"
 msgstr ""
 
-#: 2019/index.php:288
+#: 2019/index.php:337
 msgid "Ospedale Mauriziano"
 msgstr ""
 
-#: 2019/index.php:295
+#: 2019/index.php:344
 #, php-format
 msgid "bus %s"
 msgstr ""
 
-#: 2019/index.php:304
+#: 2019/index.php:353
 #, php-format
 msgid "la %s"
 msgstr ""
 
-#: 2019/index.php:305
+#: 2019/index.php:354
 msgid "metropolitana"
 msgstr ""
 
-#: 2019/index.php:310
+#: 2019/index.php:359
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr ""
 
-#: 2019/index.php:330
+#: 2019/index.php:379
 msgid "Contattaci"
 msgstr ""
 
-#: 2019/index.php:332
+#: 2019/index.php:381
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -1105,12 +1141,12 @@ msgstr ""
 msgid "LDTO2019"
 msgstr ""
 
-#: 2019/user.php:145
+#: 2019/user.php:148
 #, php-format
 msgid "La mia licenza di software libero preferita è la <b>%s</b>."
 msgstr ""
 
-#: 2019/user.php:255
+#: 2019/user.php:258
 msgid "Altre partecipazioni passate"
 msgstr ""
 
@@ -1253,58 +1289,67 @@ msgstr ""
 
 #: includes/class-Licenses.php:57
 msgid ""
-"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+"Creative Commons - Attribuzione - Condividi allo stesso modo 2.0 Generico"
 msgstr ""
 
 #: includes/class-Licenses.php:57
-msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgid "https://creativecommons.org/licenses/by-sa/2.0/deed.it"
 msgstr ""
 
 #: includes/class-Licenses.php:58
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+msgstr ""
+
+#: includes/class-Licenses.php:58
+msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:59
 msgid ""
 "Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
 "Internazionale"
 msgstr ""
 
-#: includes/class-Licenses.php:58
+#: includes/class-Licenses.php:59
 msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
 msgstr ""
 
-#: includes/class-Licenses.php:59
+#: includes/class-Licenses.php:60
 msgid ""
 "Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
 "modo 4.0 Internazionale"
 msgstr ""
 
-#: includes/class-Licenses.php:59
+#: includes/class-Licenses.php:60
 msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
 msgstr ""
 
-#: includes/class-Licenses.php:61
+#: includes/class-Licenses.php:63
 msgid "GNU General Public License, versione 3"
 msgstr ""
 
-#: includes/class-Licenses.php:62
+#: includes/class-Licenses.php:64
 msgid "GNU General Public License, versione 2"
 msgstr ""
 
-#: includes/class-Licenses.php:64
+#: includes/class-Licenses.php:66
 msgid "Licenza jQuery"
 msgstr ""
 
-#: includes/class-Licenses.php:65
+#: includes/class-Licenses.php:67
 msgid "Licenza MIT"
 msgstr ""
 
-#: includes/class-Licenses.php:67
+#: includes/class-Licenses.php:69
 msgid "Licenza PHP"
 msgstr ""
 
-#: includes/class-Licenses.php:68
+#: includes/class-Licenses.php:70
 msgid "Fai cosa c**** ti pare Public License"
 msgstr ""
 
-#: includes/class-Licenses.php:68
+#: includes/class-Licenses.php:70
 msgid "https://it.wikipedia.org/wiki/WTFPL"
 msgstr ""
 
@@ -1322,58 +1367,58 @@ msgstr ""
 msgid "Profilo utente di %s"
 msgstr ""
 
-#: includes/class-UserSkill.php:38
+#: includes/class-UserSkill.php:54
 #, php-format
 msgid "%s per me potrebbe essere qualcosa che si mangia"
 msgstr ""
 
-#: includes/class-UserSkill.php:39
+#: includes/class-UserSkill.php:55
 #, php-format
 msgid "ho conoscenze %s di base"
 msgstr ""
 
-#: includes/class-UserSkill.php:40
+#: includes/class-UserSkill.php:56
 #, php-format
 msgid "sono discretamente bravo in %s"
 msgstr ""
 
-#: includes/class-UserSkill.php:40
+#: includes/class-UserSkill.php:56
 #, php-format
 msgid "sono molto interessato al mondo %s"
 msgstr ""
 
-#: includes/class-UserSkill.php:41
+#: includes/class-UserSkill.php:57
 #, php-format
 msgid "%s... il mio cavallo di battaglia!"
 msgstr ""
 
-#: includes/class-UserSkill.php:41
+#: includes/class-UserSkill.php:57
 #, php-format
 msgid "%s... è un mio pensiero fisso!"
 msgstr ""
 
-#: includes/class-UserSkill.php:42
+#: includes/class-UserSkill.php:58
 #, php-format
 msgid "%s: l'essenza stessa della mia vita!"
 msgstr ""
 
-#: includes/class-UserSkill.php:43
+#: includes/class-UserSkill.php:59
 #, php-format
 msgid "%s, sto cercando di smettere..."
 msgstr ""
 
-#: includes/class-UserSkill.php:44
+#: includes/class-UserSkill.php:60
 #, php-format
 msgid ""
 "se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
 msgstr ""
 
-#: includes/class-UserSkill.php:45
+#: includes/class-UserSkill.php:61
 #, php-format
 msgid "se accenni a %s ti prendo a tastierate"
 msgstr ""
 
-#: includes/class-UserSkill.php:47
+#: includes/class-UserSkill.php:63
 #, php-format
 msgid ""
 "sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
