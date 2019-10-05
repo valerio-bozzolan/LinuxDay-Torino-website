@@ -121,7 +121,10 @@ template( 'header', [
 			<div class="col-sm-12 col-md-6 col-lg-8">
 
 				<!-- Start skills -->
-				<?php $skills = $user->factoryUserSkills()
+				<?php $skills = ( new QueryUserSkill() )
+					->whereUser( $user )
+					->joinSkill()
+					->orderBySkillUID()
 					->queryGenerator();
 				?>
 				<?php if( $skills->valid() ): ?>

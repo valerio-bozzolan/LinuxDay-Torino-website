@@ -47,6 +47,26 @@ trait QuerySkillTrait {
 		return $this->whereStr( 'skill_uid', $uid );
 	}
 
+	/**
+	 * Join a table with the Skill table
+	 *
+	 * @param  string $join Join type
+	 * @return self
+	 */
+	public function joinSkill( $join = 'INNER' ) {
+		return $this->joinOn( $join, Skill::T, $this->SKILL_ID, 'skill.skill_ID' );
+	}
+
+	/**
+	 * Order by the Skill UID
+	 *
+	 * @param  string $direction Order direction (DESC|ASC)
+	 * @return self
+	 */
+	public function orderBySkillUID( $direction = null ) {
+		return $this->orderBy( Skill::UID, $direction );
+	}
+
 }
 
 /**
