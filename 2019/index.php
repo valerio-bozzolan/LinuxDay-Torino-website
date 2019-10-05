@@ -32,6 +32,7 @@ if( !$conference ) {
 
 template( 'header', [
 	'conference' => $conference,
+	'title'      => $conference->getConferenceTitle(),
 	'intro'      => true,
 	'canonical'  => $conference->getConferenceURL( true ),
 ] );
