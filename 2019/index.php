@@ -173,6 +173,53 @@ template( 'header', [
 </section>
 
 <!-- =========================
+   GNU/Linux Installation Party
+============================== -->
+<section id="lip-info" class="parallax-section">
+	<div class="container">
+		<h2 class="text-center"><?= __( "Nello stesso momento" ) ?>&hellip;</h2>
+		<div>
+			<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gnu-linux-installation-party-ds.jpg" title="GNU/Linux installation party DSLite DSLinux" />
+		</div>
+		<div class="jumbotron">
+			<h3><?= sprintf(
+				__( "Cos'è il %s" ),
+				"Linux Installation Party?"
+			) ?></h3>
+			<p><?= __( "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a GNU/Linux e aiuteremo noi nella loro liberazione!" ) ?></p>
+		</div>
+		<p><small><em><?= sprintf(
+			__( "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s." ),
+
+			// DS Linux
+			HTML::a(
+				'https://commons.wikimedia.org/wiki/File:Ds_lite_with_slot-2_device_running_dslinux.jpg',
+				"DSLinux"
+			),
+
+			// GNU & Freedo
+			HTML::a(
+				'https://commons.wikimedia.org/wiki/File:GNU_and_Freedo.svg',
+				"GNU & Freedo"
+			),
+
+			// DS Linux's license
+			__( "pubblico dominio" ),
+
+			// GNU & Freedo license
+			sprintf(
+				"%s+%s",
+
+				// GNU is in GNU FDL
+				license( 'gnu-fdl'      )->getLink(),
+
+				// Freedo is in CC BY SA 2.0
+				license( 'cc-by-sa-2.0' )->getLink()
+			)
+		) ?></em></small></p>
+</section>
+
+<!-- =========================
     FAQ SECTION   
 ============================== -->
 <section id="faq" class="parallax-section">
@@ -195,7 +242,10 @@ template( 'header', [
    						<div class="panel-heading" role="tab" id="headingOne">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        							<p><?= __( "Cos'è il Linux Day?" ) ?></p>
+        							<p><?= sprintf(
+        								__( "Cos'è il %s?" ),
+        								"Linux Day"
+        							) ?></p>
         						</a>
       						</h4>
     					</div>
@@ -226,14 +276,14 @@ template( 'header', [
  					</div>
 
  					<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingThree">
+   						<div class="panel-heading" role="tab" id="faq-price">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         							<p><?= __( "Quanto costa?" ) ?></p>
         						</a>
       						</h4>
     					</div>
-   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-price">
       						<div class="panel-body">
       							<p><?= __( "L'evento è completamente gratuito ed è unicamente possibile grazie al sostegno di tutte le community di Torino e di chi crede in loro." ) ?></p>
       						</div>
@@ -241,14 +291,14 @@ template( 'header', [
  					 </div>
 
  					<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingThree">
+   						<div class="panel-heading" role="tab" id="faq-tshirt">
       						<h4 class="panel-title">
         						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
         							<p><?= __( "Come prenoto una T-shirt?" ) ?></p>
         						</a>
       						</h4>
     					</div>
-   						<div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+   						<div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-tshirt">
       						<div class="panel-body">
       							<p><?= __( "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!" ) ?></p>
       							<p><?= __( "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto velocemente, e ogni anno molte persone rimangono spoglie." ) ?></p>
