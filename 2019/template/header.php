@@ -57,17 +57,17 @@ if( $canonical && FORCE_PERMALINK ) {
 }
 
 // as default declare empty OG Meta tags
-if( ! isset( $args['og'] ) ) {
-	$args['og'] = [];
+if( ! isset( $og ) ) {
+	$og = [];
 }
 
 // set default OG Meta tags
-$args['og'] = array_replace( [
+$og = array_replace( [
 	'url'    => $canonical,
 	'image'  => CURRENT_CONFERENCE_URL . '/images/linux-day-2019.png', // It's better an absolute URL here
 	'type'   => 'website',
 	'title'  => $title,
-], $args['og'] );
+], $og );
 ?>
 <!DOCTYPE html>
 <html lang="<?= latest_language()->getISO() ?>">
@@ -98,7 +98,7 @@ http://www.templatemo.com/tm-486-new-event
 	<link rel="canonical" href="<?= esc_attr( $canonical ) ?>" />
 <?php endif ?>
 
-<?php foreach( $args['og'] as $id => $value ): ?>
+<?php foreach( $og as $id => $value ): ?>
 	<meta property="og:<?= esc_attr( $id ) ?>" content="<?= esc_attr( $value ) ?>" />
 <?php endforeach ?>
 
