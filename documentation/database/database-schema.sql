@@ -347,7 +347,7 @@ INSERT INTO `ldto_event` VALUES (227,'offensive-security','From Zer0 t0 R00t','O
 INSERT INTO `ldto_event` VALUES (230,'read-the-docs','ReadTheDocs','','Un consulente per il Team per la Trasformazione Digitale del governo italiano parlerà di [Docs Italia](https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.',NULL,'Durante il 2018 sono stato un consulente per il Team per la Trasformazione Digitale del governo italiano per lavorare su Docs Italia (https://docs.italia.it), una piattaforma Open Source per collezionare e condividere la documentazione della Pubblica Amministrazione.\n\nNon abbiamo scritto Docs Italia da zero, ma lo abbiamo costruito sopra a Read The Docs: la piattaforma di riferimento la documentazione di pacchetti Python.\nQuesto ci ha permesso di risparmiare un bel po\' di lavoro! Ma il software Open Source non si scrive da solo e abbiamo fatto la nostra parte contribuendo a Read The Docs. In questo talk racconterò cosa abbiamo fatto e cosa abbiamo imparato.',NULL,NULL,NULL,'it','2019-10-26 14:00:00','2019-10-26 15:00:00',NULL,0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (232,'rust','Rust','','Vi parleremo di Rust, il linguaggio di programmazione usato da Cloudflare, Microsoft, Mozilla e molti altri per le sue performance e sicurezza inerente.','We will talk about Rust, the programming language used by Cloudflare, Microsoft, Mozilla and various other big companies for its related great performances and security.',NULL,NULL,NULL,NULL,'it','2019-10-26 15:00:00','2019-10-26 16:00:00','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/240px-Rust_programming_language_black_logo.svg.png',0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (233,'mqtt','MQTT','','MQTT è un protocollo di comunicazione con basso overhead di dati, molto veloce e molto semplice da gestire. Viene usato per le reti degli oggetti e anche per cose un po\' più impegnative come Facebook Messenger. Vedremo come si può usare in modo semplice e immediato.','MQTT is a communication protocol with low transfer overhead, somehow very fast and simple to be handled. It\'s used in the Internet of Things but also for something more complex like in the Facebook Messenger implementation. We wil see how it can be used in a simple and quick way.',NULL,NULL,'L\'immagine proviene da [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:MQTT_autenticacion.png) ed è liberamente fruibile in licenza [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.it).','The image is taken from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:MQTT_autenticacion.png) and its Freely available under the [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.it) license.','it','2019-10-26 17:00:00','2019-10-26 18:00:00','https://upload.wikimedia.org/wikipedia/commons/9/93/MQTT_autenticacion.png',0,14,33,3,1);
-INSERT INTO `ldto_event` VALUES (234,'deep-speech','Deep Speech','Riconoscimento vocale','Come funziona una rete neurale per la decodifica della voce umana? E come contribuire? Lo scopriremo insieme ad una volontaria di Mozilla Foundation.',NULL,NULL,NULL,NULL,NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00',NULL,0,14,34,4,1);
+INSERT INTO `ldto_event` VALUES (234,'deep-speech','Deep Speech','Riconoscimento vocale','Come funziona una rete neurale per la decodifica della voce umana? E come contribuire? Lo scopriremo insieme ad una volontaria di Mozilla Foundation.','How does a neural network for the human voice decodification work? and how to contribute? We will learn it, together with a Mozilla Foundation volounteer.',NULL,NULL,NULL,NULL,'it','2019-10-26 16:00:00','2019-10-26 17:00:00','2019/images/deep-speech.svg',0,14,34,4,1);
 INSERT INTO `ldto_event` VALUES (235,'apache-spark','Apache Spark','','Se avete mai sentito parlare di \"calcolo distribuito\", ora ve lo mostreremo, e si fa sul serio. Un sistemista ci mostrerà alcuni dettagli di questo strumento per il data analytics e machine learning algorithms.',NULL,NULL,NULL,NULL,NULL,'','2019-10-26 16:00:00','2019-10-26 17:00:00',NULL,0,14,33,3,1);
 INSERT INTO `ldto_event` VALUES (236,'android','Android','',NULL,NULL,NULL,NULL,NULL,NULL,'','2019-10-26 17:00:00','2019-10-26 18:00:00',NULL,0,14,32,2,1);
 INSERT INTO `ldto_event` VALUES (237,'quantum-computing','Quantum Computing','',NULL,NULL,NULL,NULL,NULL,NULL,'it','2019-10-26 17:00:00','2019-10-26 18:00:00',NULL,0,14,31,1,1);
@@ -774,7 +774,7 @@ CREATE TABLE `ldto_skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -816,6 +816,19 @@ INSERT INTO `ldto_skill` VALUES (30,'css','CSS','');
 INSERT INTO `ldto_skill` VALUES (31,'javascript','JavaScript','programming');
 INSERT INTO `ldto_skill` VALUES (32,'artificial-intelligence','Artificial Intelligence','');
 INSERT INTO `ldto_skill` VALUES (33,'machine-learning','Machine Learning','');
+INSERT INTO `ldto_skill` VALUES (34,'mozilla','Mozilla','');
+INSERT INTO `ldto_skill` VALUES (35,'effective-altruism','Effective Altruism','');
+INSERT INTO `ldto_skill` VALUES (36,'python','Python','programming');
+INSERT INTO `ldto_skill` VALUES (37,'data-science','Data Science','');
+INSERT INTO `ldto_skill` VALUES (38,'jazz','Jazz','');
+INSERT INTO `ldto_skill` VALUES (39,'lucid-dreaming','lucid dreaming','');
+INSERT INTO `ldto_skill` VALUES (40,'berlin','Berlin','');
+INSERT INTO `ldto_skill` VALUES (41,'london','London','');
+INSERT INTO `ldto_skill` VALUES (42,'physics','physics','programming');
+INSERT INTO `ldto_skill` VALUES (43,'phisics','phisics','');
+INSERT INTO `ldto_skill` VALUES (44,'consciousness','consciousness','');
+INSERT INTO `ldto_skill` VALUES (45,'vegan','vegan','');
+INSERT INTO `ldto_skill` VALUES (46,'rust','Rust','');
 /*!40000 ALTER TABLE `ldto_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1066,7 +1079,7 @@ INSERT INTO `ldto_user` VALUES (144,'g1bot','user',1,0,'Emanuele','Guido',NULL,N
 INSERT INTO `ldto_user` VALUES (145,'virginia','user',1,0,'Virginia','Hyd3l',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (146,'pau','user',1,0,'Alberto','Pau',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (147,'uncle-fra','user',1,0,'Francesco','Bergesio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (148,'astrastefania','user',1,0,'Stefania','Delprete',NULL,NULL,NULL,'2019/images/user-astrastefania.jpg',NULL,NULL,NULL,NULL,NULL,NULL,'astrastefania',NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (153,'not_a_numb3r','user',1,0,'Mauro','Foti',NULL,'maurofoti1900@gmail.com','1c009e95f5878fc6884e802a24cf356a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (154,'fabio-di-ninno','user',1,0,'Fabio','Di Ninno',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Ingegnere informatico. Da un anno lavoro nel mondo dell\'AI, di questi tempi sembra molto _cool_ dirlo!\r\n\r\nLa verità è che vorrei portare questa tecnologia ai cittadini, nella\r\nvita di tutti i giorni.\r\n\r\nMi piace tutto ciò che è nuovo e rompe gli schemi con il passato soprattutto se è fatto di zeri e uno.',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (155,'fabrizio-massara','user',1,0,'Fabrizio','Massara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
@@ -1111,6 +1124,8 @@ INSERT INTO `ldto_user_skill` VALUES (17,30,-1);
 INSERT INTO `ldto_user_skill` VALUES (1,7,0);
 INSERT INTO `ldto_user_skill` VALUES (11,7,0);
 INSERT INTO `ldto_user_skill` VALUES (17,29,1);
+INSERT INTO `ldto_user_skill` VALUES (148,40,1);
+INSERT INTO `ldto_user_skill` VALUES (148,41,1);
 INSERT INTO `ldto_user_skill` VALUES (1,3,2);
 INSERT INTO `ldto_user_skill` VALUES (1,8,2);
 INSERT INTO `ldto_user_skill` VALUES (1,13,2);
@@ -1120,6 +1135,9 @@ INSERT INTO `ldto_user_skill` VALUES (24,2,2);
 INSERT INTO `ldto_user_skill` VALUES (24,3,2);
 INSERT INTO `ldto_user_skill` VALUES (24,20,2);
 INSERT INTO `ldto_user_skill` VALUES (24,23,2);
+INSERT INTO `ldto_user_skill` VALUES (148,38,2);
+INSERT INTO `ldto_user_skill` VALUES (148,39,2);
+INSERT INTO `ldto_user_skill` VALUES (148,46,2);
 INSERT INTO `ldto_user_skill` VALUES (1,2,3);
 INSERT INTO `ldto_user_skill` VALUES (8,5,3);
 INSERT INTO `ldto_user_skill` VALUES (10,8,3);
@@ -1137,6 +1155,10 @@ INSERT INTO `ldto_user_skill` VALUES (23,5,3);
 INSERT INTO `ldto_user_skill` VALUES (23,13,3);
 INSERT INTO `ldto_user_skill` VALUES (23,21,3);
 INSERT INTO `ldto_user_skill` VALUES (24,7,3);
+INSERT INTO `ldto_user_skill` VALUES (148,34,3);
+INSERT INTO `ldto_user_skill` VALUES (148,35,3);
+INSERT INTO `ldto_user_skill` VALUES (148,36,3);
+INSERT INTO `ldto_user_skill` VALUES (148,37,3);
 INSERT INTO `ldto_user_skill` VALUES (1,12,4);
 INSERT INTO `ldto_user_skill` VALUES (7,12,4);
 INSERT INTO `ldto_user_skill` VALUES (8,3,4);
@@ -1144,6 +1166,9 @@ INSERT INTO `ldto_user_skill` VALUES (8,12,4);
 INSERT INTO `ldto_user_skill` VALUES (17,24,4);
 INSERT INTO `ldto_user_skill` VALUES (17,25,4);
 INSERT INTO `ldto_user_skill` VALUES (17,26,4);
+INSERT INTO `ldto_user_skill` VALUES (148,42,4);
+INSERT INTO `ldto_user_skill` VALUES (148,44,4);
+INSERT INTO `ldto_user_skill` VALUES (148,45,4);
 /*!40000 ALTER TABLE `ldto_user_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1156,4 +1181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-06 12:20:01
+-- Dump completed on 2019-10-07  5:44:46
