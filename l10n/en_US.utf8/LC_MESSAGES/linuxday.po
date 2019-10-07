@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 07:50+0200\n"
+"POT-Creation-Date: 2019-10-07 07:56+0200\n"
 "PO-Revision-Date: 2019-10-05 12:29+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
@@ -686,9 +686,8 @@ msgid "Sito web"
 msgstr "Website"
 
 #: 2016/user-edit.php:429
-#, fuzzy
 msgid "Licenza preferita"
-msgstr "jQuery License"
+msgstr "Favourite license"
 
 #: 2016/user-edit.php:431
 msgid "Nessuna"
@@ -704,14 +703,13 @@ msgid "Skill"
 msgstr "Skill"
 
 #: 2016/user-edit.php:596
-#, fuzzy, php-format
+#, php-format
 msgid "Crea %s"
-msgstr "in %s"
+msgstr "Create %s"
 
 #: 2016/user-edit.php:611
-#, fuzzy
 msgid "Programmazione"
-msgstr "Schedule"
+msgstr "Programming"
 
 #: 2016/user-edit.php:612
 msgid "Interesse"
@@ -734,9 +732,9 @@ msgid "Le mie skill:"
 msgstr "My skills:"
 
 #: 2016/user.php:117
-#, fuzzy, php-format
+#, php-format
 msgid "La mia licenza di software libero preferita è la %s."
-msgstr "My favorite Free as in freedom software license is the <b>%s</b>."
+msgstr "My favorite Free as in freedom software license is the %s."
 
 #: 2016/user.php:133 2019/user.php:168
 msgid "Bio"
@@ -1247,7 +1245,7 @@ msgstr "one month"
 
 #: includes/class-HumanTime.php:120
 msgid "1 m"
-msgstr ""
+msgstr "1 m"
 
 #: includes/class-HumanTime.php:132
 #, php-format
@@ -1296,7 +1294,7 @@ msgstr "one hours"
 
 #: includes/class-HumanTime.php:185
 msgid "1 h"
-msgstr ""
+msgstr "1 h"
 
 #: includes/class-HumanTime.php:189
 msgid "tre quarti d'ora"
@@ -1959,9 +1957,8 @@ msgid "Software Libero nelle P.A.: Novità Normative"
 msgstr ""
 
 #: l10n/trebbia.php:384
-#, fuzzy
 msgid "Installiamo insieme Debian"
-msgstr "Installation of a GNU/Linux distribution"
+msgstr "Let's install Debian toghether"
 
 #: l10n/trebbia.php:387
 #, fuzzy
@@ -2379,9 +2376,8 @@ msgid "Apache Spark"
 msgstr ""
 
 #: l10n/trebbia.php:693
-#, fuzzy
 msgid "Android"
-msgstr "Android App"
+msgstr "Android"
 
 #: l10n/trebbia.php:696
 msgid "Quantum Computing"
@@ -2711,24 +2707,20 @@ msgid "Sala Einaudi"
 msgstr ""
 
 #: l10n/trebbia.php:926
-#, fuzzy
 msgid "Aula Base"
-msgstr "\"B\" room"
+msgstr "Base Room"
 
 #: l10n/trebbia.php:929
-#, fuzzy
 msgid "Aula Dev"
-msgstr "\"D\" room"
+msgstr "Dev Room"
 
 #: l10n/trebbia.php:932
-#, fuzzy
 msgid "Aula Sys"
-msgstr "\"B\" room"
+msgstr "Sys Room"
 
 #: l10n/trebbia.php:935
-#, fuzzy
 msgid "Aula Misc"
-msgstr "\"B\" room"
+msgstr "Misc Room"
 
 #: l10n/trebbia.php:938
 msgid "asd"
@@ -3003,20 +2995,18 @@ msgid "motore del sito"
 msgstr "website engine"
 
 #: 2019/template/footer.php:67
-#, fuzzy
 msgid ""
 "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
 "abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti "
 "abbiamo monitorato con tecnologie apposite."
 msgstr ""
-"We do not apply any data protection policy because we have not received from "
-"you any identification data or anyway we do not track you with cookies, "
-"scripts, etc."
+"We do not apply any data protection policy because we have not asked to you "
+"any identification data and we have not trasmitted to you any cookie and we "
+"have not monitored you with any tracking technology."
 
 #: 2019/template/header.php:80
-#, fuzzy
 msgid "Comitato Linux Day Torino"
-msgstr "What is the Linux Day Turin"
+msgstr "Linux Day Turin Committee"
 
 #: 2019/template/intro.php:32
 msgid "Sabato 26 Ottobre 2019"
