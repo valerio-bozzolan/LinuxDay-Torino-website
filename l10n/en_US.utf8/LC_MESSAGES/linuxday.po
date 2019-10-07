@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-05 12:43+0200\n"
+"POT-Creation-Date: 2019-10-07 07:50+0200\n"
 "PO-Revision-Date: 2019-10-05 12:29+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
@@ -245,7 +245,7 @@ msgid "Utente"
 msgstr "User"
 
 #: 2016/event-edit.php:559 2016/user-edit.php:584 2016/user-edit.php:617
-#: 2019/index.php:165
+#: 2019/index.php:166
 msgid "Aggiungi"
 msgstr "Add"
 
@@ -282,7 +282,7 @@ msgid "Tema"
 msgstr "Chapter"
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:89
-#: 2019/index.php:324 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2019/index.php:325 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr "Where"
 
@@ -721,7 +721,7 @@ msgstr "Interest"
 msgid "Tipo"
 msgstr "Type"
 
-#: 2016/user.php:48 2019/event.php:59 2019/index.php:142 2019/user.php:71
+#: 2016/user.php:48 2019/event.php:59 2019/index.php:143 2019/user.php:71
 msgid "Modifica"
 msgstr "Edit"
 
@@ -901,11 +901,11 @@ msgstr "Take the tram 9 or 3 (\"Ospedale Amedeo di Savoia\")"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Take the bus 59 or 50/"
 
-#: 2017/index.php:156 2019/index.php:366
+#: 2017/index.php:156 2019/index.php:367
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Enable JavaScript to see the map"
 
-#: 2017/index.php:167 2019/index.php:83 2019/template/navbar-home.php:57
+#: 2017/index.php:167 2019/index.php:84 2019/template/navbar-home.php:57
 msgid "Programma"
 msgstr "Schedule"
 
@@ -978,22 +978,22 @@ msgstr "LDTO2017"
 msgid "API"
 msgstr "API"
 
-#: 2019/index.php:49
+#: 2019/index.php:50
 msgid "Tutti insieme"
 msgstr "All toghether"
 
-#: 2019/index.php:50
+#: 2019/index.php:51
 msgid ""
 "LAN party, installation party, mini Restart Party. Porta un amico da "
 "convertire: ci divertiremo insieme a tutte le community."
 msgstr ""
 
-#: 2019/index.php:56
+#: 2019/index.php:57
 #, php-format
 msgid "%s sessioni"
 msgstr "%s sessions"
 
-#: 2019/index.php:59
+#: 2019/index.php:60
 msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
@@ -1001,12 +1001,12 @@ msgstr ""
 "Choose between the <b>base room</b>, the room for <b>sysadmins</b> or "
 "<b>programmers</b> and have fun!"
 
-#: 2019/index.php:65
+#: 2019/index.php:66
 #, php-format
 msgid "%s relatori"
 msgstr "%s speakers"
 
-#: 2019/index.php:68
+#: 2019/index.php:69
 msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
@@ -1014,38 +1014,38 @@ msgstr ""
 "Programmers, engineers, layers, specialists from the whole Software Freedom "
 "ecosystem. All toghether in Turin."
 
-#: 2019/index.php:84
+#: 2019/index.php:85
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
 msgstr "Here a taste of the available topics:"
 
-#: 2019/index.php:92 2019/index.php:122
+#: 2019/index.php:93 2019/index.php:123
 #, php-format
 msgid "Aula %s"
 msgstr "%s room"
 
-#: 2019/index.php:113
+#: 2019/index.php:114
 #, php-format
 msgid "Di %s"
 msgstr "By %s"
 
-#: 2019/index.php:114
+#: 2019/index.php:115
 msgid "Speaker Segreto"
 msgstr "Secret Speaker"
 
-#: 2019/index.php:136
+#: 2019/index.php:137
 msgid "Memo"
 msgstr "Memo"
 
-#: 2019/index.php:180
+#: 2019/index.php:181
 msgid "Nello stesso momento"
 msgstr "At the same moment"
 
-#: 2019/index.php:186 2019/index.php:246
+#: 2019/index.php:187 2019/index.php:247
 #, php-format
 msgid "Cos'è il %s"
 msgstr "What is the %s"
 
-#: 2019/index.php:189
+#: 2019/index.php:190
 msgid ""
 "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una "
 "centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
@@ -1055,22 +1055,22 @@ msgstr ""
 "or whatever could be converted to GNU/Linux and we will help in their "
 "liberation!"
 
-#: 2019/index.php:192
+#: 2019/index.php:193
 #, php-format
 msgid ""
 "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
 msgstr ""
 "The image of %s and %s available with the %s and %s license respectively."
 
-#: 2019/index.php:207
+#: 2019/index.php:208
 msgid "pubblico dominio"
 msgstr "public domain"
 
-#: 2019/index.php:234
+#: 2019/index.php:235
 msgid "Domande frequenti"
 msgstr "Frequently asked questions"
 
-#: 2019/index.php:254
+#: 2019/index.php:255
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
@@ -1078,15 +1078,15 @@ msgstr ""
 "It's a national event, planned every year since 20 years. We do the Linux "
 "Day in the whole Italy, in the same day, and Turin will be present also."
 
-#: 2019/index.php:257
+#: 2019/index.php:258
 msgid "Informazioni sul Linux Day nazionale"
 msgstr "Informations on the national Linux Day"
 
-#: 2019/index.php:267
+#: 2019/index.php:268
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr "Can I bring a friend that does not understand nothing?"
 
-#: 2019/index.php:273
+#: 2019/index.php:274
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
@@ -1096,11 +1096,11 @@ msgstr ""
 "\" room and enjoy. Or drop him/her to the installation party and we will "
 "liberate your friend!"
 
-#: 2019/index.php:282
+#: 2019/index.php:283
 msgid "Quanto costa?"
 msgstr "How much it costs?"
 
-#: 2019/index.php:288
+#: 2019/index.php:289
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
@@ -1108,15 +1108,15 @@ msgstr ""
 "The event is completly gratis for everyone thanks to Turin's communities and "
 "in who believe in them."
 
-#: 2019/index.php:297
+#: 2019/index.php:298
 msgid "Come prenoto una T-shirt?"
 msgstr "How do I reserve my T-shirt?"
 
-#: 2019/index.php:303
+#: 2019/index.php:304
 msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
 msgstr "Tell us your size and we will keep it in a secure place for you!"
 
-#: 2019/index.php:304
+#: 2019/index.php:305
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
@@ -1124,7 +1124,7 @@ msgstr ""
 "Seriously, contact us to hold your T-shirt. They tend to finish very "
 "quickly, and every year someone remains nacked."
 
-#: 2019/index.php:325
+#: 2019/index.php:326
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
@@ -1132,53 +1132,53 @@ msgstr ""
 "The office of the Linux Day Torino 2019 will be the Toolbox Coworking, in "
 "Via Agostino da Montefeltro 2."
 
-#: 2019/index.php:326
+#: 2019/index.php:327
 msgid "Per raggiungerci puoi:"
 msgstr "To arrive you can:"
 
-#: 2019/index.php:329 2019/index.php:340 2019/index.php:351
+#: 2019/index.php:330 2019/index.php:341 2019/index.php:352
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr "Take %s, %s stop"
 
-#: 2019/index.php:331 2019/index.php:342 includes/class-Sharable.php:57
+#: 2019/index.php:332 2019/index.php:343 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr "the %s"
 
-#: 2019/index.php:333
+#: 2019/index.php:334
 #, php-format
 msgid "tram %s"
 msgstr "tram %s"
 
-#: 2019/index.php:337
+#: 2019/index.php:338
 msgid "Ospedale Mauriziano"
 msgstr "Mauriziano Hospital"
 
-#: 2019/index.php:344
+#: 2019/index.php:345
 #, php-format
 msgid "bus %s"
 msgstr "bus %s"
 
-#: 2019/index.php:353
+#: 2019/index.php:354
 #, php-format
 msgid "la %s"
 msgstr "the %s"
 
-#: 2019/index.php:354
+#: 2019/index.php:355
 msgid "metropolitana"
 msgstr "underground"
 
-#: 2019/index.php:359
+#: 2019/index.php:360
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Also %s and %s buses stop somehow near."
 
-#: 2019/index.php:379
+#: 2019/index.php:380
 msgid "Contattaci"
 msgstr "Contact Us"
 
-#: 2019/index.php:381
+#: 2019/index.php:382
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -3003,9 +3003,11 @@ msgid "motore del sito"
 msgstr "website engine"
 
 #: 2019/template/footer.php:67
+#, fuzzy
 msgid ""
 "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
-"abbiamo trasmesso cookie o altre tecnologie di tracciamento personale."
+"abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti "
+"abbiamo monitorato con tecnologie apposite."
 msgstr ""
 "We do not apply any data protection policy because we have not received from "
 "you any identification data or anyway we do not track you with cookies, "

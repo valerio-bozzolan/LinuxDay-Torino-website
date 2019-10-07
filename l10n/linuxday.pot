@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-05 12:43+0200\n"
+"POT-Creation-Date: 2019-10-07 07:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,7 +240,7 @@ msgid "Utente"
 msgstr ""
 
 #: 2016/event-edit.php:559 2016/user-edit.php:584 2016/user-edit.php:617
-#: 2019/index.php:165
+#: 2019/index.php:166
 msgid "Aggiungi"
 msgstr ""
 
@@ -277,7 +277,7 @@ msgid "Tema"
 msgstr ""
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:89
-#: 2019/index.php:324 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2019/index.php:325 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr ""
 
@@ -695,7 +695,7 @@ msgstr ""
 msgid "Tipo"
 msgstr ""
 
-#: 2016/user.php:48 2019/event.php:59 2019/index.php:142 2019/user.php:71
+#: 2016/user.php:48 2019/event.php:59 2019/index.php:143 2019/user.php:71
 msgid "Modifica"
 msgstr ""
 
@@ -873,11 +873,11 @@ msgstr ""
 msgid "Prendere il bus 59 o 50/"
 msgstr ""
 
-#: 2017/index.php:156 2019/index.php:366
+#: 2017/index.php:156 2019/index.php:367
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr ""
 
-#: 2017/index.php:167 2019/index.php:83 2019/template/navbar-home.php:57
+#: 2017/index.php:167 2019/index.php:84 2019/template/navbar-home.php:57
 msgid "Programma"
 msgstr ""
 
@@ -945,188 +945,188 @@ msgstr ""
 msgid "API"
 msgstr ""
 
-#: 2019/index.php:49
+#: 2019/index.php:50
 msgid "Tutti insieme"
 msgstr ""
 
-#: 2019/index.php:50
+#: 2019/index.php:51
 msgid ""
 "LAN party, installation party, mini Restart Party. Porta un amico da "
 "convertire: ci divertiremo insieme a tutte le community."
 msgstr ""
 
-#: 2019/index.php:56
+#: 2019/index.php:57
 #, php-format
 msgid "%s sessioni"
 msgstr ""
 
-#: 2019/index.php:59
+#: 2019/index.php:60
 msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
 msgstr ""
 
-#: 2019/index.php:65
+#: 2019/index.php:66
 #, php-format
 msgid "%s relatori"
 msgstr ""
 
-#: 2019/index.php:68
+#: 2019/index.php:69
 msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
 msgstr ""
 
-#: 2019/index.php:84
+#: 2019/index.php:85
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
 msgstr ""
 
-#: 2019/index.php:92 2019/index.php:122
+#: 2019/index.php:93 2019/index.php:123
 #, php-format
 msgid "Aula %s"
 msgstr ""
 
-#: 2019/index.php:113
+#: 2019/index.php:114
 #, php-format
 msgid "Di %s"
 msgstr ""
 
-#: 2019/index.php:114
+#: 2019/index.php:115
 msgid "Speaker Segreto"
 msgstr ""
 
-#: 2019/index.php:136
+#: 2019/index.php:137
 msgid "Memo"
 msgstr ""
 
-#: 2019/index.php:180
+#: 2019/index.php:181
 msgid "Nello stesso momento"
 msgstr ""
 
-#: 2019/index.php:186 2019/index.php:246
+#: 2019/index.php:187 2019/index.php:247
 #, php-format
 msgid "Cos'è il %s"
 msgstr ""
 
-#: 2019/index.php:189
+#: 2019/index.php:190
 msgid ""
 "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una "
 "centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
 "GNU/Linux e aiuteremo noi nella loro liberazione!"
 msgstr ""
 
-#: 2019/index.php:192
+#: 2019/index.php:193
 #, php-format
 msgid ""
 "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
 msgstr ""
 
-#: 2019/index.php:207
+#: 2019/index.php:208
 msgid "pubblico dominio"
 msgstr ""
 
-#: 2019/index.php:234
+#: 2019/index.php:235
 msgid "Domande frequenti"
 msgstr ""
 
-#: 2019/index.php:254
+#: 2019/index.php:255
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
 msgstr ""
 
-#: 2019/index.php:257
+#: 2019/index.php:258
 msgid "Informazioni sul Linux Day nazionale"
 msgstr ""
 
-#: 2019/index.php:267
+#: 2019/index.php:268
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr ""
 
-#: 2019/index.php:273
+#: 2019/index.php:274
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
 "all'installation party e lo aiuteremo nella migrazione al software libero!"
 msgstr ""
 
-#: 2019/index.php:282
+#: 2019/index.php:283
 msgid "Quanto costa?"
 msgstr ""
 
-#: 2019/index.php:288
+#: 2019/index.php:289
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
 msgstr ""
 
-#: 2019/index.php:297
+#: 2019/index.php:298
 msgid "Come prenoto una T-shirt?"
 msgstr ""
 
-#: 2019/index.php:303
+#: 2019/index.php:304
 msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
 msgstr ""
 
-#: 2019/index.php:304
+#: 2019/index.php:305
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
 msgstr ""
 
-#: 2019/index.php:325
+#: 2019/index.php:326
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
 msgstr ""
 
-#: 2019/index.php:326
+#: 2019/index.php:327
 msgid "Per raggiungerci puoi:"
 msgstr ""
 
-#: 2019/index.php:329 2019/index.php:340 2019/index.php:351
+#: 2019/index.php:330 2019/index.php:341 2019/index.php:352
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr ""
 
-#: 2019/index.php:331 2019/index.php:342 includes/class-Sharable.php:57
+#: 2019/index.php:332 2019/index.php:343 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr ""
 
-#: 2019/index.php:333
+#: 2019/index.php:334
 #, php-format
 msgid "tram %s"
 msgstr ""
 
-#: 2019/index.php:337
+#: 2019/index.php:338
 msgid "Ospedale Mauriziano"
 msgstr ""
 
-#: 2019/index.php:344
+#: 2019/index.php:345
 #, php-format
 msgid "bus %s"
 msgstr ""
 
-#: 2019/index.php:353
+#: 2019/index.php:354
 #, php-format
 msgid "la %s"
 msgstr ""
 
-#: 2019/index.php:354
+#: 2019/index.php:355
 msgid "metropolitana"
 msgstr ""
 
-#: 2019/index.php:359
+#: 2019/index.php:360
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr ""
 
-#: 2019/index.php:379
+#: 2019/index.php:380
 msgid "Contattaci"
 msgstr ""
 
-#: 2019/index.php:381
+#: 2019/index.php:382
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -2884,7 +2884,8 @@ msgstr ""
 #: 2019/template/footer.php:67
 msgid ""
 "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
-"abbiamo trasmesso cookie o altre tecnologie di tracciamento personale."
+"abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti "
+"abbiamo monitorato con tecnologie apposite."
 msgstr ""
 
 #: 2019/template/header.php:80

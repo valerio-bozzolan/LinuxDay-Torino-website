@@ -64,7 +64,7 @@ $current_url = strtok( $current_url, '?' );
 						Licenses::instance()->get( 'gnu-agpl' )->getLink()
 					) ?>
 					<br />
-					<?= __( "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti abbiamo trasmesso cookie o altre tecnologie di tracciamento personale." ) ?>
+					<?= __( "Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti abbiamo monitorato con tecnologie apposite." ) ?>
 				</p>
 
 				<div class="footer-hack">
