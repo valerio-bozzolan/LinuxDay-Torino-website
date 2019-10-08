@@ -53,6 +53,10 @@ template( 'header', $args );
 <section class="container">
 	<h1><?= esc_html( $event->getEventTitle() ) ?></h1>
 
+	<?php if( $event->hasEventSubtitle() ): ?>
+		<h2><?= esc_html( $event->getEventSubtitle() ) ?></h2>
+	<?php endif ?>
+
 	<?php if( $event->isEventEditable() ): ?>
 	<p><?= HTML::a(
 		$event->getFullEventEditURL(),
