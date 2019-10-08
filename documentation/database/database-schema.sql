@@ -774,7 +774,7 @@ CREATE TABLE `ldto_skill` (
   PRIMARY KEY (`skill_ID`),
   UNIQUE KEY `skill_uid` (`skill_uid`),
   KEY `skill_type` (`skill_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -833,6 +833,12 @@ INSERT INTO `ldto_skill` VALUES (47,'curiosity','Curiosity','');
 INSERT INTO `ldto_skill` VALUES (48,'creativity','creativity','');
 INSERT INTO `ldto_skill` VALUES (49,'teamwork','teamwork','');
 INSERT INTO `ldto_skill` VALUES (50,'laziness','laziness','');
+INSERT INTO `ldto_skill` VALUES (51,'linux','Linux','');
+INSERT INTO `ldto_skill` VALUES (52,'big-data','Big Data','');
+INSERT INTO `ldto_skill` VALUES (53,'kubernetes','Kubernetes','');
+INSERT INTO `ldto_skill` VALUES (54,'devops','Devops','');
+INSERT INTO `ldto_skill` VALUES (55,'azure','Azure','');
+INSERT INTO `ldto_skill` VALUES (56,'developer','developer','');
 /*!40000 ALTER TABLE `ldto_skill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -955,7 +961,7 @@ INSERT INTO `ldto_user` VALUES (12,'francesco','user',1,0,'Francesco','Tucci',NU
 INSERT INTO `ldto_user` VALUES (13,'massimo','user',1,0,'Massimo','Nuvoli',NULL,NULL,'5f4846fa67388fd5a92638407ed501a8','/2016/static/user/massimo.jpg',NULL,NULL,NULL,'Architetto di Sistemi presso Progetto Archivio SRL e Dicobit.','System Architect at Project Archivio SRL and Dicobit.',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (14,'elia','user',1,0,'Elia','Bellussi',NULL,NULL,'8b0e2f9c8927ae8527071f82e9ba8eb0',NULL,NULL,NULL,NULL,'Elia Bellussi, 35 anni, è fondatore del Museo Internazionale dell\'Informatica (già Museo Piemontese dell\'Informatica) e di CoderDojo Torino. Socio di AICA, Stati Generali dell\'Innovazione e di Nord Est Digitale. Consulente informatico si occupa di system engineering.','Elia Bellussi, 35 years old, is the founder of the \"Museo Internazionale dell\'Informatica\" (previously known as \"Museo Piemontese dell\'Informatica\") and of CoderDojo Torino. Associate of AICA, \"Stati Generali dell\'Innovazione\" and \"Nord Est Digitale\". IT Consultant, specialized in system engineering. ',NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (15,'davide.isoardi','user',1,0,'Davide','Isoardi',NULL,NULL,'1e6f2656299bbe943ca1cf27f2cd06b1',NULL,NULL,NULL,NULL,'Big Data System Architect e sysadmin.','Big Data System Architect and sysadmin.',NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `ldto_user` VALUES (16,'davide.vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Big Data System Architect e sysadmin.','Big Data System Architect and sysadmin.',NULL,'DavideVergari',NULL,NULL,NULL,NULL);
+INSERT INTO `ldto_user` VALUES (16,'davide.vergari','user',1,0,'Davide','Vergari',NULL,NULL,NULL,'2019/images/user-davidevergari.jpg',NULL,NULL,NULL,'Sistemista Linux di nascita, _data architect_ per vocazione. Amo l\'open source, la tecnologia, il cloud, il devops, i big data e la birra.','Linux sysadmin since the Unix epoch, data architect by vocation. I love the open source, the technology, the cloud, the devops, the big data and the beer.',NULL,'DavideVergari',NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (17,'davide.mainardi','user',1,0,'Davide','Mainardi',NULL,NULL,'7ef27702d814de74e153d7a6fa125b6e','2019/images/user-davidemainardi.jpeg',NULL,NULL,'gnu-agpl','Computer science engineer, open source enthusiast, pragmatic Java EE developer.','Ingegnere informatico, open source addicted, pragmatico sviluppatore grazie a Java EE.',NULL,'ingmainardi',NULL,NULL,NULL,'dmainardi');
 INSERT INTO `ldto_user` VALUES (18,'gianfranco.poncini','user',1,0,'Gianfranco','Poncini',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `ldto_user` VALUES (20,'marco.signoretto','user',1,0,'Marco','Signoretto',NULL,NULL,'19fb231f51568df3a2a3cd63626f41ca','/2016/static/user/signoretto.jpg',NULL,NULL,NULL,'The trash king!\r\n\r\nNato e cresciuto a Torino, Marco ha speso i suoi ultimi anni di Politecnico a studiare l\'ultima parte della filiera ovvero l’immondizia. Nel 2015 si è laureato in Ecodesign con una tesi sulla gestione dei RAEE a livello aziendale.\r\n\r\nOggi ha aperto il piccolo studio creativo Olive Creative Lab intenzionato a muoversi in tutti i campi della creatività: dal product design alla grafica, dall\'interaction design alla sostenibilità.','The trash king!\r\n\r\nBorn and raised in Turin, Marco has spent the last few years at Politecnico, studying the last ring of the productive chain: garbage. In 2015 he graduated in Ecodesign with a thesis about RAEE management at a business level.\r\n\r\nToday, he has opened the little creative studio \"Olive Creative Lab\" inclined to move around every field possible to creativity: from product design to graphics, from interaction design to sustainability.',NULL,'MarcoSignorett','marco.signoretto.9','marco-signoretto-326003a7',NULL,NULL);
@@ -1120,20 +1126,25 @@ INSERT INTO `ldto_user_skill` VALUES (17,31,-4);
 INSERT INTO `ldto_user_skill` VALUES (17,32,-4);
 INSERT INTO `ldto_user_skill` VALUES (17,33,-4);
 INSERT INTO `ldto_user_skill` VALUES (20,15,-4);
+INSERT INTO `ldto_user_skill` VALUES (16,55,-3);
 INSERT INTO `ldto_user_skill` VALUES (153,50,-3);
 INSERT INTO `ldto_user_skill` VALUES (1,4,-2);
 INSERT INTO `ldto_user_skill` VALUES (1,6,-2);
+INSERT INTO `ldto_user_skill` VALUES (16,56,-2);
 INSERT INTO `ldto_user_skill` VALUES (17,2,-2);
 INSERT INTO `ldto_user_skill` VALUES (1,5,-1);
 INSERT INTO `ldto_user_skill` VALUES (17,30,-1);
 INSERT INTO `ldto_user_skill` VALUES (1,7,0);
 INSERT INTO `ldto_user_skill` VALUES (11,7,0);
+INSERT INTO `ldto_user_skill` VALUES (16,54,1);
 INSERT INTO `ldto_user_skill` VALUES (17,29,1);
 INSERT INTO `ldto_user_skill` VALUES (148,40,1);
 INSERT INTO `ldto_user_skill` VALUES (148,41,1);
 INSERT INTO `ldto_user_skill` VALUES (1,3,2);
 INSERT INTO `ldto_user_skill` VALUES (1,8,2);
 INSERT INTO `ldto_user_skill` VALUES (1,13,2);
+INSERT INTO `ldto_user_skill` VALUES (16,51,2);
+INSERT INTO `ldto_user_skill` VALUES (16,53,2);
 INSERT INTO `ldto_user_skill` VALUES (20,14,2);
 INSERT INTO `ldto_user_skill` VALUES (20,19,2);
 INSERT INTO `ldto_user_skill` VALUES (24,2,2);
@@ -1150,6 +1161,7 @@ INSERT INTO `ldto_user_skill` VALUES (10,20,3);
 INSERT INTO `ldto_user_skill` VALUES (10,22,3);
 INSERT INTO `ldto_user_skill` VALUES (11,8,3);
 INSERT INTO `ldto_user_skill` VALUES (11,20,3);
+INSERT INTO `ldto_user_skill` VALUES (16,52,3);
 INSERT INTO `ldto_user_skill` VALUES (17,7,3);
 INSERT INTO `ldto_user_skill` VALUES (17,27,3);
 INSERT INTO `ldto_user_skill` VALUES (17,28,3);
@@ -1189,4 +1201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-08 17:21:04
+-- Dump completed on 2019-10-08 17:26:22
