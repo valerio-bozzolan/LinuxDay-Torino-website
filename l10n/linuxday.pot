@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 19:50+0000\n"
+"POT-Creation-Date: 2019-10-08 17:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,7 +126,7 @@ msgid ""
 "Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"
 msgstr ""
 
-#: 2016/credits.php:204 2016/event.php:158 2019/event.php:160
+#: 2016/credits.php:204 2016/event.php:158 2019/event.php:164
 msgid "Materiale"
 msgstr ""
 
@@ -143,15 +143,15 @@ msgstr ""
 msgid "l'immagine predefinita di alcuni elementi"
 msgstr ""
 
-#: 2016/event-edit.php:67 2016/event.php:125 2019/event.php:127
+#: 2016/event-edit.php:67 2016/event.php:125 2019/event.php:131
 msgid "Abstract"
 msgstr ""
 
-#: 2016/event-edit.php:68 2016/event.php:135 2019/event.php:138
+#: 2016/event-edit.php:68 2016/event.php:135 2019/event.php:142
 msgid "Descrizione"
 msgstr ""
 
-#: 2016/event-edit.php:69 2016/event.php:145 2019/event.php:148
+#: 2016/event-edit.php:69 2016/event.php:145 2019/event.php:152
 msgid "Note"
 msgstr ""
 
@@ -272,57 +272,57 @@ msgstr ""
 msgid "Modifica evento"
 msgstr ""
 
-#: 2016/event.php:81 2016/user.php:155 2019/event.php:82 2019/user.php:198
+#: 2016/event.php:81 2016/user.php:155 2019/event.php:86 2019/user.php:198
 msgid "Tema"
 msgstr ""
 
-#: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:89
+#: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
 #: 2019/index.php:325 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr ""
 
-#: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:103
+#: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:107
 #: 2019/user.php:200
 msgid "Quando"
 msgstr ""
 
-#: 2016/event.php:106 2016/index.php:98 2019/event.php:107
+#: 2016/event.php:106 2016/index.php:98 2019/event.php:111
 #, php-format
 msgid "%s alle %s"
 msgstr ""
 
-#: 2016/event.php:112 2019/event.php:113
+#: 2016/event.php:112 2019/event.php:117
 msgid "Scarica promemoria calendario"
 msgstr ""
 
-#: 2016/event.php:165 2019/event.php:167
+#: 2016/event.php:165 2019/event.php:171
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr ""
 
-#: 2016/event.php:184 2019/event.php:186
+#: 2016/event.php:184 2019/event.php:190
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr ""
 
-#: 2016/event.php:206 2019/event.php:207
+#: 2016/event.php:206 2019/event.php:211
 msgid "Relatori"
 msgstr ""
 
-#: 2016/event.php:220 2016/event.php:237 2019/event.php:221 2019/event.php:236
+#: 2016/event.php:220 2016/event.php:237 2019/event.php:225 2019/event.php:240
 #, php-format
 msgid "Profilo di %s"
 msgstr ""
 
-#: 2016/event.php:248 2019/event.php:246
+#: 2016/event.php:248 2019/event.php:250
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr ""
 
-#: 2016/event.php:271 2019/event.php:266
+#: 2016/event.php:271 2019/event.php:270
 msgid "Preceduto da"
 msgstr ""
 
-#: 2016/event.php:283 2019/event.php:276
+#: 2016/event.php:283 2019/event.php:280
 msgid "A seguire"
 msgstr ""
 
@@ -695,7 +695,7 @@ msgstr ""
 msgid "Tipo"
 msgstr ""
 
-#: 2016/user.php:48 2019/event.php:59 2019/index.php:143 2019/user.php:71
+#: 2016/user.php:48 2019/event.php:63 2019/index.php:143 2019/user.php:71
 msgid "Modifica"
 msgstr ""
 
