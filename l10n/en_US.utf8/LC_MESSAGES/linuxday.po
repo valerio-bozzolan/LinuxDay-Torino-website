@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-08 17:50+0000\n"
-"PO-Revision-Date: 2019-10-05 12:29+0200\n"
+"PO-Revision-Date: 2019-10-08 19:54+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
 "Language: en_US\n"
@@ -1009,8 +1009,8 @@ msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
 msgstr ""
-"Programmers, engineers, layers, specialists from the whole Software Freedom "
-"ecosystem. All toghether in Turin."
+"Programmers, engineers, lawyers, specialists from the whole Software Freedom "
+"ecosystem. All together in Turin."
 
 #: 2019/index.php:85
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
@@ -1219,7 +1219,7 @@ msgstr "%d years"
 #: includes/class-HumanTime.php:98
 #, php-format
 msgid "%d y"
-msgstr ""
+msgstr "%d y"
 
 #: includes/class-HumanTime.php:104
 msgid "un anno"
@@ -1227,7 +1227,7 @@ msgstr "one year"
 
 #: includes/class-HumanTime.php:105
 msgid "1 y"
-msgstr ""
+msgstr "1 y"
 
 #: includes/class-HumanTime.php:112
 #, php-format
@@ -1634,15 +1634,15 @@ msgstr "Award ceremony"
 
 #: l10n/trebbia.php:138 l10n/trebbia.php:381 l10n/trebbia.php:441
 msgid "Primi passi con Linux"
-msgstr ""
+msgstr "First steps with Linux"
 
 #: l10n/trebbia.php:141
 msgid "Giocare con Linux"
-msgstr ""
+msgstr "Play with Linux"
 
 #: l10n/trebbia.php:144
 msgid "OpenOffice.org"
-msgstr ""
+msgstr "OpenOffice.org"
 
 #: l10n/trebbia.php:147
 msgid "Firefox e Thunderbird"
@@ -2573,7 +2573,7 @@ msgstr ""
 
 #: l10n/trebbia.php:824
 msgid "Sicurezza"
-msgstr ""
+msgstr "Security"
 
 #: l10n/trebbia.php:836
 msgid "Corso"
@@ -3060,7 +3060,7 @@ msgstr ""
 
 #: includes/suckless-php/class-FileUploader.php:340
 msgid "troppo"
-msgstr ""
+msgstr "too much"
 
 #: includes/suckless-php/class-FileUploader.php:345
 msgid "Impossibile salvare il file."
@@ -3118,7 +3118,7 @@ msgstr ""
 
 #: includes/suckless-php/class-OutputUtilities.php:184
 msgid "Errore"
-msgstr ""
+msgstr "Error"
 
 #: includes/suckless-php/class-OutputUtilities.php:190
 #, php-format
