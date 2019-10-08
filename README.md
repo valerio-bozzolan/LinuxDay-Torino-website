@@ -128,7 +128,7 @@ Or just import the [database-schema.sql](documentation/database/database-schema.
 When you want to export and commit the database, just run:
 
 	vagrant ssh
-	/vagrant/Vagrant/pull-database.php
+	/vagrant/Vagrant/pull-database.sh
 	exit
 	
 	git status
