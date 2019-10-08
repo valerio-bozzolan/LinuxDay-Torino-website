@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) or exit;
 
 			$logo = $is_icon
 				? icon( $path )
-				: HTML::img( ROOT . "/2016/static/social/$path", $social, $title, 'responsive-img' );
+				: HTML::img( ROOT . "/2016/static/social/$path", $social, $title, 'user-social-box' );
 
 			echo HTML::a( $profile, $logo, $title, null, 'target="_blank" rel="noreferrer nofollow"' );
 		?>
