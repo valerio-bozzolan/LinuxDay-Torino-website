@@ -106,7 +106,7 @@ template( 'header', [
 						<p><?= HTML::a(
 							$user->user_site,
 							__("Sito personale") . icon('inbox', 'right'),
-							null,
+							$user->getUserFullname(),
 							'btn waves-effect purple darken-2',
 							'target="_blank"'
 						) ?></p>
