@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 17:50+0000\n"
+"POT-Creation-Date: 2019-10-10 09:07+0200\n"
 "PO-Revision-Date: 2019-10-08 19:54+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
@@ -282,7 +282,7 @@ msgid "Tema"
 msgstr "Chapter"
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
-#: 2019/index.php:325 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2019/index.php:340 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr "Where"
 
@@ -899,7 +899,7 @@ msgstr "Take the tram 9 or 3 (\"Ospedale Amedeo di Savoia\")"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Take the bus 59 or 50/"
 
-#: 2017/index.php:156 2019/index.php:367
+#: 2017/index.php:156 2019/index.php:382
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Enable JavaScript to see the map"
 
@@ -1107,14 +1107,26 @@ msgstr ""
 "in who believe in them."
 
 #: 2019/index.php:298
+msgid "Registrerete i talk?"
+msgstr ""
+
+#: 2019/index.php:304
+msgid ""
+"Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico "
+"per rendere questa community attiva e straordinaria! In ogni caso il nostro "
+"Media Partner farà il possibile per registrare più tracce possibili, forse "
+"anche con uno streaming."
+msgstr ""
+
+#: 2019/index.php:313
 msgid "Come prenoto una T-shirt?"
 msgstr "How do I reserve my T-shirt?"
 
-#: 2019/index.php:304
+#: 2019/index.php:319
 msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
 msgstr "Tell us your size and we will keep it in a secure place for you!"
 
-#: 2019/index.php:305
+#: 2019/index.php:320
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
@@ -1122,7 +1134,7 @@ msgstr ""
 "Seriously, contact us to hold your T-shirt. They tend to finish very "
 "quickly, and every year someone remains nacked."
 
-#: 2019/index.php:326
+#: 2019/index.php:341
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
@@ -1130,53 +1142,70 @@ msgstr ""
 "The office of the Linux Day Torino 2019 will be the Toolbox Coworking, in "
 "Via Agostino da Montefeltro 2."
 
-#: 2019/index.php:327
+#: 2019/index.php:342
 msgid "Per raggiungerci puoi:"
 msgstr "To arrive you can:"
 
-#: 2019/index.php:330 2019/index.php:341 2019/index.php:352
+#: 2019/index.php:345 2019/index.php:356 2019/index.php:367
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr "Take %s, %s stop"
 
-#: 2019/index.php:332 2019/index.php:343 includes/class-Sharable.php:57
+#: 2019/index.php:347 2019/index.php:358 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr "the %s"
 
-#: 2019/index.php:334
+#: 2019/index.php:349
 #, php-format
 msgid "tram %s"
 msgstr "tram %s"
 
-#: 2019/index.php:338
+#: 2019/index.php:353
 msgid "Ospedale Mauriziano"
 msgstr "Mauriziano Hospital"
 
-#: 2019/index.php:345
+#: 2019/index.php:360
 #, php-format
 msgid "bus %s"
 msgstr "bus %s"
 
-#: 2019/index.php:354
+#: 2019/index.php:369
 #, php-format
 msgid "la %s"
 msgstr "the %s"
 
-#: 2019/index.php:355
+#: 2019/index.php:370
 msgid "metropolitana"
 msgstr "underground"
 
-#: 2019/index.php:360
+#: 2019/index.php:375
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Also %s and %s buses stop somehow near."
 
-#: 2019/index.php:380
+#: 2019/index.php:394
+msgid "Le Community coinvolte"
+msgstr ""
+
+#: 2019/index.php:397
+#, fuzzy
+msgid "Media Partner"
+msgstr "Media partner:"
+
+#: 2019/index.php:403
+msgid "Organizzatore"
+msgstr ""
+
+#: 2019/index.php:409
+msgid "Coordinatore Nazionale"
+msgstr ""
+
+#: 2019/index.php:424
 msgid "Contattaci"
 msgstr "Contact Us"
 
-#: 2019/index.php:382
+#: 2019/index.php:426
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
