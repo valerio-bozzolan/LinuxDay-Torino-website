@@ -1108,7 +1108,7 @@ msgstr ""
 
 #: 2019/index.php:298
 msgid "Registrerete i talk?"
-msgstr ""
+msgstr "Will you record the talks?"
 
 #: 2019/index.php:304
 msgid ""
@@ -1117,6 +1117,7 @@ msgid ""
 "Media Partner farà il possibile per registrare più tracce possibili, forse "
 "anche con uno streaming."
 msgstr ""
+"Please come in person! We need your phisical help to evolve this awesome and active community! In any case our Media Partner will do everything possible to register as many tracks as possible, perhaps even with a streaming."
 
 #: 2019/index.php:313
 msgid "Come prenoto una T-shirt?"
@@ -1186,20 +1187,19 @@ msgstr "Also %s and %s buses stop somehow near."
 
 #: 2019/index.php:394
 msgid "Le Community coinvolte"
-msgstr ""
+msgstr "The Involved Communities"
 
 #: 2019/index.php:397
-#, fuzzy
 msgid "Media Partner"
-msgstr "Media partner:"
+msgstr "Media Partner"
 
 #: 2019/index.php:403
 msgid "Organizzatore"
-msgstr ""
+msgstr "Organizer"
 
 #: 2019/index.php:409
 msgid "Coordinatore Nazionale"
-msgstr ""
+msgstr "National Coordinator"
 
 #: 2019/index.php:424
 msgid "Contattaci"
