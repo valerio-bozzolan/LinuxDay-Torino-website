@@ -279,17 +279,32 @@ template( 'header', [
  					<div class="panel panel-default">
    						<div class="panel-heading" role="tab" id="faq-price">
       						<h4 class="panel-title">
-        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
         							<p><?= __( "Quanto costa?" ) ?></p>
         						</a>
       						</h4>
     					</div>
-   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-price">
+   						<div id="collapsePrice" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-price">
       						<div class="panel-body">
       							<p><?= __( "L'evento è completamente gratuito ed è unicamente possibile grazie al sostegno di tutte le community di Torino e di chi crede in loro." ) ?></p>
       						</div>
    						 </div>
- 					 </div>
+ 					</div>
+
+ 					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="faq-record">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse-record" aria-expanded="false" aria-controls="collapse-record">
+        							<p><?= __( "Registrerete i talk?" ) ?></p>
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapse-record" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-record">
+      						<div class="panel-body">
+      							<p><?= __( "Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico per rendere questa community attiva e straordinaria! In ogni caso il nostro Media Partner farà il possibile per registrare più tracce possibili, forse anche con uno streaming." ) ?></p>
+      						</div>
+   						 </div>
+ 					</div>
 
  					<div class="panel panel-default">
    						<div class="panel-heading" role="tab" id="faq-tshirt">
@@ -366,6 +381,35 @@ template( 'header', [
 			<div class="col-md-6 col-sm-4">
 				<noscript><?= __("Abilita JavaScript per vedere la mappa") ?></noscript>
 				<?= $conference->printLocationLeaflet() ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- =========================
+   Media Partner
+============================== -->
+<section id="media-partner" class="parallax-section">
+	<div class="container">
+		<h2 class="text-center"><?= __( "Le Community coinvolte" ) ?></h2>
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p><?= __( "Media Partner" ) ?></p>
+				<a href="https://www.top-ix.org/" title="Top-IX">
+					<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p><?= __( "Organizzatore" ) ?></p>
+				<a href="https://informaticalibera.info/" title="Officina Informatica Libera">
+					<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/officina-informatica-libera.png" alt="Officina Informatica Libera" />
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p><?= __( "Coordinatore Nazionale" ) ?></p>
+				<a href="https://www.ils.org/" title="Italian Linux Society">
+					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
+				</a>
 			</div>
 		</div>
 	</div>
