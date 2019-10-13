@@ -390,10 +390,10 @@ template( 'header', [
 	<div class="container">
 		<h2 class="text-center"><?= __( "Con il patrocinio di…" ) ?></h2>
 			<div class="col-sm-6 col-md-4 col-lg-3">
-				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/comune.jpg" alt="Comune di Torino" />
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
-				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/comune.jpg" alt="Comune di Torino" />
 			</div>
 		</div>
 	</div>
