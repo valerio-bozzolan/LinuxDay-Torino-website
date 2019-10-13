@@ -1,6 +1,6 @@
 <?php
-# Linux Day 2016 - Markdown autoloader
-# Copyright (C) 2016, 2018 Valerio Bozzolan
+# Linux Day Torino website - Markdown autoloader
+# Copyright (C) 2016, 2018, 2019 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -17,8 +17,9 @@
 
 include LIBMARKDOWN_PATH;
 
-file_exists( LIBMARKDOWN_PATH ) or
+if( !file_exists( LIBMARKDOWN_PATH ) ) {
 	error_die( 'please install php-markdown package or define a different LIBMARKDOWN_PATH into your /load.php' );
+}
 
 class Markdown {
 
@@ -63,7 +64,7 @@ class Markdown {
 		}
 
 		// avoid headings
-		$s = strip_tags( $s, '<b><em><a><code><br><p><strong>' );
+		$s = strip_tags( $s, '<b><em><a><code><br><p><strong><ul><ol><li>' );
 
 		return $s;
 	}
