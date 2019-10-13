@@ -774,7 +774,9 @@ footer {
 .user-social-box {
 	width:64px;
 }
-
-#media-partner .reduce-height {
-	max-height:150px;
+.reduce-height {
+	max-height:100px;
+}
+#media-partner {
+	margin-top: 2em;
 }

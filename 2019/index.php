@@ -386,29 +386,36 @@ template( 'header', [
 	</div>
 </section>
 
+<section id="patronage">
+	<div class="container">
+		<h2 class="text-center"><?= __( "Con il patrocinio di…" ) ?></h2>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/comune.jpg" alt="Comune di Torino" />
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
+			</div>
+		</div>
+	</div>
+</section>
+
 <!-- =========================
    Media Partner
 ============================== -->
-<section id="media-partner" class="parallax-section">
+<section id="media-partner">
 	<div class="container">
-		<h2 class="text-center"><?= __( "Le Community coinvolte" ) ?></h2>
+		<h2 class="text-center"><?= __( "Con il supporto di…" ) ?></h2>
 		<div class="row">
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p>Italian Linux Society</p>
+				<a href="https://www.ils.org/" title="Italian Linux Society">
+					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
+				</a>
+			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p><?= __( "Media Partner" ) ?></p>
 				<a href="https://www.top-ix.org/" title="Top-IX">
-					<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
-				</a>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-3">
-				<p><?= __( "Organizzatore" ) ?></p>
-				<a href="https://informaticalibera.info/" title="Officina Informatica Libera">
-					<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/officina-informatica-libera.png" alt="Officina Informatica Libera" />
-				</a>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-3">
-				<p><?= __( "Coordinatore Nazionale" ) ?></p>
-				<a href="https://www.ils.org/" title="Italian Linux Society">
-					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
+					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
 				</a>
 			</div>
 		</div>
