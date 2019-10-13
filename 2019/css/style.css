@@ -775,6 +775,7 @@ footer {
 	width:64px;
 }
 .reduce-height {
+	margin:auto;
 	max-height:100px;
 }
 #media-partner {

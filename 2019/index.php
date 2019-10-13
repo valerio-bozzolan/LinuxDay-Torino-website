@@ -387,9 +387,9 @@ template( 'header', [
 </section>
 
 <section id="patronage">
-	<div class="container">
-		<h2 class="text-center"><?= __( "Con il patrocinio di…" ) ?></h2>
-			<div class="col-sm-6 col-md-4 col-lg-3">
+	<div class="container text-center">
+		<h2><?= __( "Con il patrocinio di…" ) ?></h2>
+			<div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-3">
 				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
@@ -403,10 +403,10 @@ template( 'header', [
    Media Partner
 ============================== -->
 <section id="media-partner">
-	<div class="container">
-		<h2 class="text-center"><?= __( "Con il supporto di…" ) ?></h2>
+	<div class="container text-center">
+		<h2><?= __( "Con il supporto di…" ) ?></h2>
 		<div class="row">
-			<div class="col-sm-6 col-md-4 col-lg-3">
+			<div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-3">
 				<p>Italian Linux Society</p>
 				<a href="https://www.ils.org/" title="Italian Linux Society">
 					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
@@ -426,7 +426,7 @@ template( 'header', [
     CONTACT SECTION
 ============================== -->
 <section id="contact" class="parallax-section">
-	<div class="container">
+	<div class="container text-center">
 		<div class="col-12">
 			<h2><?= __( "Contattaci" ) ?></h2>
 			<p><?php printf(
