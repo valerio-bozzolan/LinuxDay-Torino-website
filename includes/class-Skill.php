@@ -23,7 +23,7 @@ trait SkillTrait {
 	 * @return int
  	 */
 	public function getSkillID() {
-		return $this->nonnull( 'skill_ID' );
+		return $this->nonnull( Skill::ID );
 	}
 
 	/**
@@ -32,14 +32,14 @@ trait SkillTrait {
 	 * @return int
  	 */
 	public function getSkillUID() {
-		return $this->get( 'skill_uid' );
+		return $this->get( Skill::UID );
 	}
 
 	/**
 	 * Normalize a Skill object
 	 */
 	protected function normalizeSkill() {
-		$this->integers( 'skill_ID' );
+		$this->integers( Skill::ID );
 	}
 }
 
@@ -53,6 +53,11 @@ class Skill extends Queried {
 	 * Database table name
 	 */
 	const T = 'skill';
+
+	/**
+	 * ID column name
+	 */
+	const ID = 'skill_ID';
 
 	/**
 	 * UID column name
