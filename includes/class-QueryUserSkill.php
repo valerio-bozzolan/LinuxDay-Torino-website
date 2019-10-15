@@ -19,6 +19,9 @@
 class_exists( 'QueryUser', true );
 class_exists( 'QuerySkill', true );
 
+/**
+ * Methods for a QueryUserSkill class
+ */
 trait QueryUserSkillTrait {
 
 	use QueryUserTrait;
@@ -37,6 +40,9 @@ trait QueryUserSkillTrait {
 
 }
 
+/**
+ * Query UserSkill
+ */
 class QueryUserSkill extends Query {
 
 	use QueryUserSkillTrait;
@@ -47,9 +53,9 @@ class QueryUserSkill extends Query {
 	protected $SKILL_ID = 'user_skill.skill_ID';
 
 	/**
-	 * Univoque Skill ID column name
+	 * Univoque User ID column name
 	 */
-	const USER_ID = 'user_skill.user_ID';
+	protected $USER_ID = 'user_skill.user_ID';
 
 	/**
 	 * Constructor

@@ -88,17 +88,4 @@ class EventUser extends Queried {
 	public function __construct() {
 		$this->normalizeEventUser();
 	}
-
-	/**
-	 * Delete the connection of an Event to an User
-	 *
-	 * @param int $event_ID Event ID
-	 * @param int $user_ID  User ID
-	 */
-	public static function delete( $event_ID, $user_ID ) {
-		EventUser::factory()
-			->whereInt( 'event_ID', $event_ID )
-			->whereInt( 'user_ID',  $user_ID  )
-			->delete();
-	}
 }

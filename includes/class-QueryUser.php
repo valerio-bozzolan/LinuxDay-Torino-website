@@ -24,7 +24,7 @@ trait QueryUserTrait {
 	 * @return self
 	 */
 	public function whereUserID( $id ) {
-		return $this->whereInt( static::USER_ID, $id );
+		return $this->whereInt( $this->USER_ID, $id );
 	}
 
 	/**
@@ -48,9 +48,9 @@ class QueryUser extends Query {
 	use QueryUserTrait;
 
 	/**
-	 * Disambigued user ID column name
+	 * Univoque User ID column name
 	 */
-	const USER_ID = 'user.user_ID';
+	protected $USER_ID = 'user.user_ID';
 
 	/**
 	 * Constructor

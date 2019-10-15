@@ -178,11 +178,15 @@ if( $_POST ) {
 			->queryRow();
 
 		if( $user ) {
-			EventUser::delete( $event->getEventID(), $user->getUserID() );
+			( new QueryEventUser() )
+				->whereEvent( $event )
+				->whereUser(  $user  )
+				->delete();
 
-			insert_row('event_user', [
+			( new QueryEventUser() )->insertRow( [
 				new DBCol( Event::ID, $event->getEventID(), 'd' ),
-				new DBCol( User::ID,  $user->getUserID(),   'd' ),
+				new DBCol( User ::ID, $user->getUserID(),   'd' ),
+				new DBCol( EventUser::ORDER, 0,             'd' ),
 			] );
 		}
 	}

@@ -19,11 +19,50 @@
 class_exists( QueryConference::class, true );
 
 /**
+ * Methods for a QueryEvent class
+ */
+trait QueryEventTrait {
+
+	use QueryConferenceTrait;
+
+	/**
+	 * Where the Event is...
+	 *
+	 * @param  object $event Event
+	 * @return self
+	 */
+	public function whereEvent( $event ) {
+		return $this->whereEventID( $event->getEventID() );
+	}
+
+	/**
+	 * Where the Event ID is...
+	 *
+	 * @param  int  $id Event ID
+	 * @return self
+	 */
+	public function whereEventID( $id ) {
+		return $this->whereInt( $this->EVENT_ID, $id );
+	}
+
+	/**
+	 * Where the Event UID is this one
+	 *
+	 * @param  string $uid Event UID
+	 * @return self
+	 */
+	public function whereEventUID( $uid ) {
+		return $this->whereStr( Event::UID, $uid );
+	}
+
+}
+
+/**
  * Class able to query a FullEvent.
  */
 class QueryEvent extends Query {
 
-	use QueryConferenceTrait;
+	use QueryEventTrait;
 
 	/**
 	 * Univoque Event ID column name
@@ -72,27 +111,9 @@ class QueryEvent extends Query {
 	}
 
 	/**
-	 * Where the Event is...
-	 *
-	 * @param  object $event Event
-	 * @return self
-	 */
-	public function whereEvent( $event ) {
-		return $this->whereEventID( $event->getEventID() );
-	}
-
-	/**
-	 * Where the Event ID is...
-	 *
-	 * @param  int  $id Event ID
-	 * @return self
-	 */
-	public function whereEventID( $id ) {
-		return $this->whereInt( $this->EVENT_ID, $id );
-	}
-
-	/**
 	 * Limit to a certain User
+	 *
+	 * @deprecated
 	 *
 	 * @param $user User
 	 * @return self
@@ -100,16 +121,6 @@ class QueryEvent extends Query {
 	public function whereUser( $user ) {
 		return $this->joinEventUser()
 		            ->whereInt( EventUser::USER_, $user->getUserID() );
-	}
-
-	/**
-	 * Where the Event UID is this one
-	 *
-	 * @param  string $uid Event UID
-	 * @return self
-	 */
-	public function whereEventUID( $uid ) {
-		return $this->whereStr( Event::UID, $uid );
 	}
 
 	/**
