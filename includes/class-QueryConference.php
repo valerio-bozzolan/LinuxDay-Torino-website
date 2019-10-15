@@ -91,6 +91,15 @@ trait QueryConferenceTrait {
 		return $this;
 	}
 
+	/**
+	 * Check if the Conference has support for internationalization
+	 *
+	 * @return self
+	 */
+	public function whereConferenceHasI18nSupport() {
+		return $this->compare( 'conference_events_url', 'IS NOT', 'NULL' );
+	}
+
 }
 
 /**
