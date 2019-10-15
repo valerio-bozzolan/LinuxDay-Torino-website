@@ -1188,14 +1188,12 @@ msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Also %s and %s buses stop somehow near."
 
 #: 2019/index.php:391
-#, fuzzy
 msgid "Con il patrocinio di…"
-msgstr "With the patronage of:"
+msgstr "With the patronage of…"
 
 #: 2019/index.php:407
-#, fuzzy
 msgid "Con il supporto di…"
-msgstr "With the patronage of:"
+msgstr "With the support from…"
 
 #: 2019/index.php:416
 msgid "Media Partner"
@@ -1545,18 +1543,16 @@ msgstr ""
 "Department. "
 
 #: l10n/trebbia.php:47
-#, fuzzy
 msgid "Politecnico di Torino (sede centrale)"
-msgstr "Polytechnic of Turin"
+msgstr "Polytechnic of Turin (headquarter)"
 
 #: l10n/trebbia.php:50
 msgid "Corso Duca degli Abruzzi 24, Torino"
 msgstr ""
 
 #: l10n/trebbia.php:53
-#, fuzzy
 msgid "Politecnico di Torino (cittadella)"
-msgstr "Polytechnic of Turin"
+msgstr "Polytechnic of Turin (citadel)"
 
 #: l10n/trebbia.php:56
 msgid "Corso Castelfidardo 34, Torino"
