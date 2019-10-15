@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 # Linux Day 2016 - GNU Gettext feeder generating fake source code content from the database
-# Copyright (C) 2016, 2018 Linux Day Torino
+# Copyright (C) 2016, 2018, 2019 Linux Day Torino contributors
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -30,7 +30,7 @@ $date = date( 'c' );
 echo <<< EOF
 <?php
 # Linux Day 2016 - Fake source code generated from the database to feed GNU Gettext
-# Copyright (C) 2016, 2018 Linux Day Torino
+# Copyright (C) 2016, 2017, 2018, 2019 Linux Day Torino contributors
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -49,30 +49,65 @@ echo <<< EOF
 EOF;
 // end header
 
-spawn_gnu( Conference::T, [
-	Conference::TITLE,
-	Conference::DESCRIPTION,
-], Conference::UID );
+generate_gnu_gettext_from_table(
+	Conference::T,
+	Conference::ID,
+		// select all Conference(s) with i18n suppport
+		( new QueryConference() )
+			->whereConferenceHasI18nSupport(),
+	[
+		Conference::TITLE,
+		Conference::DESCRIPTION,
+	],
+	Conference::UID
+);
 
-spawn_gnu( Event::T, [
-	Event::TITLE,
-	Event::SUBTITLE,
-], Event::UID );
+generate_gnu_gettext_from_table(
+	Event::T,
+	Event::ID,
+	// select all Event(s) related to a conference that has i18n suppport
+	( new QueryEvent() )
+		->where(
+			"EXISTS (" .
+				( new QueryConference() )
+					->whereConferenceHasI18nSupport()
+					->equals( 'conference.conference_ID', 'event.event_ID' )
+					->getQuery()
+			. ")"
+		),
+	[
+		Event::TITLE,
+		Event::SUBTITLE,
+	],
+	Event::UID
+);
 
-spawn_gnu( Location::T, [
-	Location::NAME,
-	Location::ADDRESS,
-	Location::NOTE,
-] );
+generate_gnu_gettext_from_table(
+	Location::T,
+	Location::ID,
+	null,
+	[
+		Location::NAME,
+		Location::ADDRESS,
+		Location::NOTE,
 
-spawn_gnu( Track::T, [
-	Track::NAME,
-	Track::LABEL,
-], Track::UID );
+	]
+);
 
-spawn_gnu( Chapter::T, [ Chapter::NAME  ], Chapter::UID );
-spawn_gnu( Room   ::T, [ Room   ::NAME  ], Room   ::UID );
-spawn_gnu( Skill  ::T, [ Skill  ::TITLE ], Skill  ::UID );
+generate_gnu_gettext_from_table(
+	Track::T,
+	Track::ID,
+	null,
+	[
+		Track::NAME,
+		Track::LABEL,
+	],
+	Track::UID
+);
+
+generate_gnu_gettext_from_table( Chapter::T, Chapter::ID, null, [ Chapter::NAME  ], Chapter::UID );
+generate_gnu_gettext_from_table( Room   ::T, Room   ::ID, null, [ Room   ::NAME  ], Room   ::UID );
+generate_gnu_gettext_from_table( Skill  ::T, Skill  ::ID, null, [ Skill  ::TITLE ], Skill  ::UID );
 
 // footer to be put in trebbia.php
 echo <<< EOF
@@ -84,9 +119,14 @@ echo <<< EOF
 EOF;
 // end footer
 
-function spawn_gnu( $from, $fields, $identifier = null ) {
+function generate_gnu_gettext_from_table( $table, $id, $query, $fields, $identifier = null ) {
 	if( ! $identifier ) {
-		$identifier = "{$from}_ID";
+		$identifier = $id;
+	}
+
+	if( !$query ) {
+		$query = new Query();
+		$query->from( $table );
 	}
 
 	// Stripping evil carriage returns from the database
@@ -97,21 +137,26 @@ function spawn_gnu( $from, $fields, $identifier = null ) {
 			$field
 		), '-' );
 	}
-	query_update( $from, $cols, '1' /* WHERE 1 */ );
 
-	$results = Query::factory()
+	// run clean text fields
+	( clone $query )
+		->where( 1 ) // just a condition
+		->update( $cols );
+
+	// select the rows
+	$results = $query
 		->select( $fields )
 		->select( $identifier )
-		->from( $from )
 		->queryGenerator();
 
+	// for each row do something
 	foreach( $results as $result ) {
 		$uid = $result->get( $identifier );
-		spawn_linux( $from, $uid, $result, $fields );
+		generate_gnu_gettext_from_row( $table, $uid, $result, $fields );
 	}
 }
 
-function spawn_linux( $from, $uid, $obj, $properties ) {
+function generate_gnu_gettext_from_row( $from, $uid, $obj, $properties ) {
 	foreach( $properties as $property ) {
 		$value = $obj->get( $property );
 
