@@ -1,6 +1,6 @@
-# Linux Day 2016 website - GNU Gettext English translation file.
-# Copyright (C) 2016 Linux Day website contributors
-# This file is distributed under the same license as the Linux Day 2016 package.
+# Linux Day Torino website - GNU Gettext English translation file.
+# Copyright (C) 2016, 2017, 2018, 2019 Linux Day website contributors
+# This file is distributed under the same license as the Linux Day Torino website.
 #
 # Valerio Bozzolan <gnu@linux.it>, 2016.
 # quel_tale <lvps@users.noreply.github.com>, 2019.
