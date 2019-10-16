@@ -1,0 +1,2338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Linux Day website contributors
+# This file is distributed under the same license as the linuxday package.
+# With the help of Beppe Cantanna, 2019
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxday\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-15 06:12+0000\n"
+"PO-Revision-Date: 2019-10-16 07:36+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language: pms\n"
+
+#: 2016/credits.php:27
+msgid ""
+"Di seguito sono riportati gli elementi utilizzati in questo sito, tra i "
+"migliori esempi di <strong>software libero</strong> e <strong>open source</"
+"strong>."
+msgstr ""
+"Si 'd apress i peule trové ij element dovrà ant ës sit, antre ij pì bon "
+"esempe ëd <strong>software lìber</strong> e <strong>open source</strong>."
+
+#: 2016/credits.php:37
+msgid "Sistema operativo del server web."
+msgstr "Sistem operativ dël serveur web."
+
+#: 2016/credits.php:44
+msgid "Server web."
+msgstr "Serveur web."
+
+#: 2016/credits.php:51
+msgid "Pre-processore di ipertesti."
+msgstr "Pre-processor ëd hyper-text."
+
+#: 2016/credits.php:58
+msgid "MySQL guidato dalla comunità."
+msgstr "MySQL masentà da la comunità."
+
+#: 2016/credits.php:65
+msgid "Database SQL relazionale."
+msgstr "Bas ëd dait SQL relassional."
+
+#: 2016/credits.php:72
+msgid "Framework per internazionalizzazione e localizzazione dei messaggi."
+msgstr "Quàder për l'internassionalisassion e la localisassion dij message."
+
+#: 2016/credits.php:79
+msgid "Framework PHP e MySQL/MariaDB."
+msgstr "Quàder PHP e MySQL/MariaDB."
+
+#: 2016/credits.php:86
+msgid "Certificato SSL."
+msgstr "Sertificà SSL."
+
+#: 2016/credits.php:93
+msgid "Framework JavaScript."
+msgstr "Quàder JavaScript."
+
+#: 2016/credits.php:100
+msgid "Framework JavaScript per mappe interattive"
+msgstr "Quàder JavaScript për ël mapping interativ"
+
+#: 2016/credits.php:107
+msgid "Framework CSS e JavaScript in stile Material Design."
+msgstr "Quàder CSS e JavaScript an stil Material Design."
+
+#: 2016/credits.php:114
+msgid "Famiglia di caratteri."
+msgstr "Famija ëd caràcter."
+
+#: 2016/credits.php:121
+msgid "Collezione di icone Material Design."
+msgstr "Colession ëd icon-e Material Design."
+
+#: 2016/credits.php:126
+msgid "https://inkscape.org/it/"
+msgstr "https://inkscape.org/it/"
+
+#: 2016/credits.php:128
+msgid "Programma per disegno vettoriale."
+msgstr "Program ëd dissegn vectorial."
+
+#: 2016/credits.php:133
+msgid "https://www.gimp.org"
+msgstr "https://www.gimp.org"
+
+#: 2016/credits.php:135
+msgid "Fotoritocchi e modifiche alle immagini"
+msgstr "Modificassion e ameliorassion ëd fòto e mistà"
+
+#: 2016/credits.php:142
+msgid "Banale editor di testo da terminale."
+msgstr "Sempi editor ëd text da terminal."
+
+#: 2016/credits.php:149
+msgid "Mappa planetaria libera"
+msgstr "Carta planetaria lìbera."
+
+#: 2016/credits.php:156
+msgid "Controllo versione distribuito"
+msgstr "Control spantià ëd version."
+
+#: 2016/credits.php:163
+msgid "Event manager open source"
+msgstr "Masent ëd ij event open source"
+
+#: 2016/credits.php:170
+msgid "Your Own Url Shortener"
+msgstr "Vòstr scurseur ëd URL"
+
+#: 2016/credits.php:177
+msgid "Validatore standard HTML, JavaScript e CSS"
+msgstr "Validateur standard HTML, JavaScript e CSS."
+
+#: 2016/credits.php:184
+msgid "Catalogo di software libero per Android"
+msgstr "Catalògh ëd software lìber për Android"
+
+#: 2016/credits.php:193
+#, php-format
+msgid ""
+"Il codice sorgente del sito è distribuito sotto licenza libera %s. Clonalo!"
+msgstr ""
+"Ël còdes sors dël sit a l'é distribuì sota lissensa lìbera %s. Clon-lo!"
+
+#: 2016/credits.php:204 2016/event.php:158 2019/event.php:164
+msgid "Materiale"
+msgstr "Material"
+
+#: 2016/credits.php:210
+#, php-format
+msgid "Grazie a %s per %s sotto licenza %s."
+msgstr "Un mersì à %s për %s la sot-lissensa %s."
+
+#: 2016/credits.php:221
+msgid "l'immagine estratta dal suo video «This is Wikipedia»"
+msgstr "la mistà pijà da soa video \"This is Wikipedia\""
+
+#: 2016/credits.php:228
+msgid "l'immagine predefinita di alcuni elementi"
+msgstr "la mistà pre-definìa ëd quaich element"
+
+#: 2016/event-edit.php:67 2016/event.php:125 2019/event.php:131
+msgid "Abstract"
+msgstr "Abstract/Sintes"
+
+#: 2016/event-edit.php:68 2016/event.php:135 2019/event.php:142
+msgid "Descrizione"
+msgstr "Descrission"
+
+#: 2016/event-edit.php:69 2016/event.php:145 2019/event.php:152
+msgid "Note"
+msgstr "Armarche"
+
+#: 2016/event-edit.php:229
+#, php-format
+msgid "Modifica %s: %s"
+msgstr "Modifié %s: %s"
+
+#: 2016/event-edit.php:237 2016/event-edit.php:569 2016/user-edit.php:559
+#, php-format
+msgid "Aggiungi %s"
+msgstr "Gionté %s"
+
+#: 2016/event-edit.php:238 2016/index.php:72
+msgid "Evento"
+msgstr "Event"
+
+#: 2016/event-edit.php:260 2016/user-edit.php:253
+msgid "Vedi"
+msgstr "Vardé"
+
+#: 2016/event-edit.php:271 2016/user-edit.php:606
+msgid "Titolo"
+msgstr "Tìtol"
+
+#: 2016/event-edit.php:282
+msgid "Codice"
+msgstr "Còdes"
+
+#: 2016/event-edit.php:293
+msgid "Sottotitolo"
+msgstr "Sot-tìtol"
+
+#: 2016/event-edit.php:304 2016/includes/class-Footer.php:115
+msgid "Lingua"
+msgstr "Lenga"
+
+#: 2016/event-edit.php:320
+msgid "Capitolo"
+msgstr "Capìtol"
+
+#: 2016/event-edit.php:358
+msgid "Traccia"
+msgstr "Trassé"
+
+#: 2016/event-edit.php:396
+msgid "Stanza"
+msgstr ""
+
+#: 2016/event-edit.php:439
+msgid "Inizio"
+msgstr "Anandiament"
+
+#: 2016/event-edit.php:452
+msgid "Fine"
+msgstr "Fin"
+
+#: 2016/event-edit.php:489 2016/user-edit.php:415
+msgid "Immagine"
+msgstr "Mistà"
+
+#: 2016/event-edit.php:505 2016/event-edit.php:615 2016/user-edit.php:482
+#: 2016/user-edit.php:541
+msgid "Salva"
+msgstr "Anregistré"
+
+#: 2016/event-edit.php:518 2016/user-edit.php:493
+msgid "Nuova Immagine"
+msgstr "Neuva Mistà"
+
+#: 2016/event-edit.php:522 2016/user-edit.php:497
+msgid "Sfoglia"
+msgstr "Përcore"
+
+#: 2016/event-edit.php:529 2016/user-edit.php:504
+msgid "Carica"
+msgstr "Carié"
+
+#: 2016/event-edit.php:542
+#, php-format
+msgid "Associa %s"
+msgstr "Assossié %s"
+
+#: 2016/event-edit.php:543 2016/event-edit.php:572 2016/event-edit.php:620
+msgid "Utente"
+msgstr "Utilisador"
+
+#: 2016/event-edit.php:563 2016/user-edit.php:584 2016/user-edit.php:617
+#: 2019/index.php:166
+msgid "Aggiungi"
+msgstr "Gionté"
+
+#: 2016/event-edit.php:571
+#, php-format
+msgid "Nuovo %s"
+msgstr "Neuv %s"
+
+#: 2016/event-edit.php:594 2016/event-edit.php:619 2016/user-edit.php:242
+#: 2016/user-edit.php:519
+#, php-format
+msgid "Modifica %s"
+msgstr "Modifié %s"
+
+#: 2016/event-edit.php:595
+msgid "Ordinamento"
+msgstr "Ardrissé"
+
+#: 2016/event-edit.php:612 2016/user-edit.php:538 2016/user-edit.php:632
+msgid "Elimina"
+msgstr "Eliminé"
+
+#: 2016/event.php:42 2019/event.php:37
+#, php-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: 2016/event.php:60
+msgid "Modifica evento"
+msgstr "Modifié un event"
+
+#: 2016/event.php:81 2016/user.php:155 2019/event.php:86 2019/user.php:198
+msgid "Tema"
+msgstr "Oget"
+
+#: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
+#: 2019/index.php:340 2019/user.php:199 2019/template/navbar-home.php:58
+msgid "Dove"
+msgstr "Andoa"
+
+#: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:107
+#: 2019/user.php:200
+msgid "Quando"
+msgstr "Quandi"
+
+#: 2016/event.php:106 2016/index.php:98 2019/event.php:111
+#, php-format
+msgid "%s alle %s"
+msgstr "%s ora %s"
+
+#: 2016/event.php:112 2019/event.php:117
+msgid "Scarica promemoria calendario"
+msgstr "Dëscaria ël memo dël calendari"
+
+#: 2016/event.php:165 2019/event.php:171
+#, php-format
+msgid "Scarica %s distribuibile sotto licenza %s."
+msgstr "Dëscarié %s distribuàbil sota lissensa %s"
+
+#: 2016/event.php:184 2019/event.php:190
+#, php-format
+msgid "Vedi %s distribuibile sotto licenza %s."
+msgstr "Vardé %s distribuàbil sota lissensa %s."
+
+#: 2016/event.php:206 2019/event.php:211
+msgid "Relatori"
+msgstr "Presentador"
+
+#: 2016/event.php:220 2016/event.php:237 2019/event.php:225 2019/event.php:240
+#, php-format
+msgid "Profilo di %s"
+msgstr "Profil ëd %s"
+
+#: 2016/event.php:248 2019/event.php:250
+msgid "L'elenco dei relatori non è ancora noto."
+msgstr "La lista dij presentador a l'é ancor nen conossùa."
+
+#: 2016/event.php:271 2019/event.php:270
+msgid "Preceduto da"
+msgstr "Anans a-i ven"
+
+#: 2016/event.php:283 2019/event.php:280
+msgid "A seguire"
+msgstr "Apress a-i ven"
+
+#: 2016/index.php:68
+#, php-format
+msgid "Il %s si è concluso..."
+msgstr "Ël %s a l'é concludu-se..."
+
+#: 2016/index.php:69
+msgid "Ma abbiamo altro!"
+msgstr "Ma i l'oma 'd autr"
+
+#: 2016/index.php:99 2019/user.php:289
+msgid "d/m/Y"
+msgstr "d/m/A"
+
+#: 2016/index.php:131
+#, php-format
+msgid ""
+"Il Linux Day è la principale manifestazione italiana di promozione di "
+"software libero e sistemi operativi %s/%s. Il Linux Day Torino 2016 si è "
+"tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di "
+"Informatica</strong> dell'Università degli studi di Torino."
+msgstr ""
+"Ël Linux Day a l'é ël pì important event italian ëd promossion ëd software "
+"duvert e sistem operativ  %s/%s.Ël Liux Day Turin 2016 a l'é tnu-se ij "
+"<strong>%s</strong> (%s) ant ël <strong>Dëpartament 'd Informàtica</strong> "
+"ëd l'Università ëd Turin."
+
+# I é-lo na pàgina an piemontèis corespondenta ant Wikipedia?
+#: 2016/index.php:135 2016/includes/class-Header.php:156
+msgid "https://it.wikipedia.org/wiki/GNU"
+msgstr "https://pms.wikipedia.org/wiki/GNU"
+
+# I é-lo na pàgina an piemontèis corespondenta ant Wikipedia?
+#: 2016/index.php:141
+msgid "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
+msgstr "https://pms.wikipedia.org/wiki/Linux_%28kernel%29"
+
+# Coding/codage?
+#: 2016/index.php:162
+msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
+msgstr "Ël suget ëd s'ann si à lëvel nassional a l'é ël <code>coding</code>!"
+
+#: 2016/index.php:186
+#, php-format
+msgid ""
+"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s "
+"ore, affrontando tematiche riguardanti il software libero su più livelli, "
+"per soddisfare le esigenze di un ampio pubblico (dai più piccoli, al "
+"curioso, fino agli esperti)."
+msgstr ""
+"Un program fiamengh consistent ant ëd %s presentassion ëd n'ora, spantià "
+"ansima %s ore, ch'a coato ël software duvert an tute soe dimension, con ël "
+"but ëd rësponde à j'atèise 'd un pùblich divers (da ij pì cit, ai curios, "
+"fin-a ij espert)."
+
+#: 2016/index.php:194
+#, php-format
+msgid "In seguito si riporta la tabella dei talk suddivisa in %s categorie:"
+msgstr "Si 'd apress la taula ëd le presentassion dividùa an %s categorìe:"
+
+#: 2016/index.php:204
+msgid "Planimetria"
+msgstr "Pian"
+
+#: 2016/index.php:205
+msgid "La manifestazione è suddivisa in aule tematiche."
+msgstr "'L event a l'é organisà an sale temàtiche."
+
+#: 2016/index.php:210
+msgid "Planimetria Dipartimento di Informatica"
+msgstr "Pian dël Dëpartament 'd Informàtica"
+
+#: 2016/index.php:219
+msgid "App Android"
+msgstr "Applicassion Android"
+
+#: 2016/index.php:221
+#, php-format
+msgid ""
+"La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"
+msgstr ""
+"La taula ëd le presentassion a peul esse mal da lese ans un cit scren. "
+"Preuvé l'applicassion %s!"
+
+#: 2016/index.php:236 2016/index.php:248
+#, php-format
+msgid "Scarica e installa %s:"
+msgstr "Dëscarié e instalé %s:"
+
+#: 2016/index.php:242
+msgid "Installa F-Droid"
+msgstr "Instalé F-Droid"
+
+#: 2016/index.php:254
+msgid "Installa LDTO16"
+msgstr "Instalé LDTO16"
+
+#: 2016/index.php:263
+msgid "Attività"
+msgstr "Atività an paralel"
+
+#: 2016/index.php:264
+msgid "In contemporanea ai talk avranno luogo diverse attività:"
+msgstr ""
+"Un program 'd atività a l'é prevedù ant 'l istess temp ëd le presentassion:"
+
+#: 2016/index.php:268
+msgid "Riparazione di apparecchiature elettroniche."
+msgstr "Rangé ëd dispositiv eletrònich"
+
+#: 2016/index.php:269
+msgid "Associazione Restarters Torino"
+msgstr "Associassion Restarters Turin"
+
+#: 2016/index.php:271
+#, php-format
+msgid "dall'%s"
+msgstr "dac%s"
+
+#: 2016/index.php:275
+msgid "Laboratorio di coding per i più piccoli a tema Linux Day"
+msgstr "Laboratòri ëd codage për le masnà, ans ël suget dël Linux Day"
+
+#: 2016/index.php:277
+#, php-format
+msgid "%s e %s."
+msgstr "%s e %s."
+
+#: 2016/index.php:280
+msgid "CoderDojo Torino"
+msgstr "CoderDojo Turin"
+
+#: 2016/index.php:287
+msgid "Coderdojo Torino 2"
+msgstr "Coderdojo Turin 2"
+
+#: 2016/index.php:299
+msgid "Allestimento museale di Retrocomputing."
+msgstr ""
+
+#: 2016/index.php:302
+#, php-format
+msgid "dal %s"
+msgstr "da %s"
+
+#: 2016/index.php:306
+msgid ""
+"LIP (Linux Installation Party) e assistenza tecnica distribuzioni GNU/Linux."
+msgstr ""
+"LIP (Linux Installation Party) e supòrt técnich për le distribussion GNU/"
+"Linux."
+
+#: 2016/index.php:307
+msgid "volontari"
+msgstr "për giuté"
+
+#: 2016/index.php:318
+msgid "Come arrivare"
+msgstr "Për ruvé fin-a si"
+
+#: 2016/index.php:327
+msgid "Abilitare JavaScript per la mappa interattiva."
+msgstr "Autorisé JavaScript për ël pian interativ."
+
+#: 2016/index.php:338
+#, php-format
+msgid "Vedi %s su OpenStreetMap"
+msgstr "Vardé %s ansima OpenStreetMap"
+
+# Duvert/lìber?
+#: 2016/index.php:359
+msgid "Le quattro libertà fontamentali del software libero"
+msgstr "Le quatr libertà fondamentale dël software lìber"
+
+#: 2016/index.php:366
+msgid "Ingresso gratuito"
+msgstr "Intrada à gràtis"
+
+#: 2016/index.php:369
+#, php-format
+msgid ""
+"Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
+"dimenticare di portarti a casa una <em>maglietta</em> o qualche dozzina di "
+"adesivi e spille! È il nostro modo per promuovere ulteriormente il software "
+"libero, per far sì che altri Linux Day rimangano sempre indipendenti, liberi "
+"e gratuiti.<br /> Ci vediamo il <strong>%s</strong>!"
+msgstr ""
+"St'ann si 'l acess a l'é torna completament à gràtis.<br /> Profite-ne për "
+"pijé ëd <em>t-shirt </em> o vaire adesiv e pins! A venta promeuve e spantié "
+"ël software duvert, për che 'd autre Linux Day a peulo continué à esse "
+"independent, lìber e à gràtis.<br /> Arvëd-se ij <strong>%s</strong> à Turin!"
+
+#: 2016/index.php:376
+msgid "22 ottobre"
+msgstr "22 'd otober"
+
+#: 2016/index.php:382
+msgid "Scopri i nostri partner"
+msgstr "Dëscheuvre nòsti partner:"
+
+#: 2016/index.php:384
+#, php-format
+msgid "Partner %s"
+msgstr "Partner %s"
+
+# 2019?
+#: 2016/load.php:47 l10n/trebbia.php:21
+msgid "Linux Day Torino 2016"
+msgstr "Linux Day Turin 2016"
+
+#: 2016/load.php:48
+msgid "LDTO2016"
+msgstr "LDTO2016"
+
+#: 2016/load.php:49 2017/load.php:48 2019/load.php:45
+msgid ""
+"Manifestazione annuale sul software libero ed i sistemi operativi GNU/Linux."
+msgstr "Event anual ans ël software duvert e ij sistem operativ GNU/Linux."
+
+#: 2016/load.php:64 2017/load.php:67
+msgid "Benvenuti"
+msgstr "Bin-ëvnù"
+
+#: 2016/load.php:65
+msgid "Partner"
+msgstr "Partner"
+
+#: 2016/load.php:66
+msgid "Fotografie"
+msgstr "Fòto/Mistà"
+
+#: 2016/load.php:67
+msgid "Crediti"
+msgstr "Crédit"
+
+#: 2016/login.php:40
+msgid "Login"
+msgstr "Intré/Login"
+
+#: 2016/login.php:48
+msgid "Sei loggato!"
+msgstr "I seve intrà!"
+
+#: 2016/login.php:51
+msgid "Sloggati"
+msgstr "Seurte/Logout"
+
+#: 2016/login.php:65
+msgid "Nome utente"
+msgstr "Nòm 'd utilisador"
+
+#: 2016/login.php:69
+msgid "Password"
+msgstr "Paròla 'd acess/Password"
+
+#: 2016/login.php:74
+msgid "Accedi"
+msgstr "Intré"
+
+#: 2016/partner.php:23
+msgid ""
+"Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si "
+"festeggia in tutta Italia.Tutto questo, a Torino, non sarebbe possibile "
+"senza una comunità incredibile. Grazie a tutti coloro che credono nella "
+"libertà digitale e culturale."
+msgstr ""
+"I savìe che ël Linux Day a l'é na festa nassional, ch'a l'ha leu an tuta "
+"Italia. Tut son, an bele si à Turin, a sarìa nen possìbil sensa daré na "
+"comunità incredìbila. Un gròss mersì à tuit coj ch'a chërdo ant la libertà "
+"digital e cultural."
+
+#: 2016/partner.php:36 2016/includes/class-CreditBox.php:48
+#, php-format
+msgid "Logo di %s"
+msgstr "Lògo ëd %s"
+
+#: 2016/partner.php:49
+msgid "Con la partecipazione di:"
+msgstr "Con la partissipassion ëd:"
+
+#: 2016/partner.php:53
+msgid "Associazione Tesso"
+msgstr "Associassion Tesso"
+
+#: 2016/partner.php:69
+msgid "Coderdojo Torino"
+msgstr "Coderdojo Turin"
+
+#: 2016/partner.php:96
+msgid "Main sponsor:"
+msgstr "Spònsor prinsipal:"
+
+#: 2016/partner.php:110
+msgid "Media partner:"
+msgstr "Media partner:"
+
+#: 2016/partner.php:131
+msgid "Con il patrocinio di:"
+msgstr "S'event a l'é sostnù da:"
+
+#: 2016/partner.php:136
+#, php-format
+msgid "Patrocinio %s"
+msgstr "Supòrt %s"
+
+#: 2016/partner.php:147
+msgid "Regione Piemonte"
+msgstr "Region Piemont"
+
+#: 2016/partner.php:155
+msgid "Città Metropolitana di Torino"
+msgstr "Sità Metropolitan-a ëd Turin"
+
+#: 2016/partner.php:163
+msgid "Comune di Torino"
+msgstr "Comun-a ëd Turin"
+
+#: 2016/partner.php:170
+msgid "Dipartimento di Informatica UniTO"
+msgstr "Dëpartament 'd Informatica ëd l'Università ëd Turin"
+
+#: 2016/partner.php:177
+msgid "Torino Smart City"
+msgstr "Turin Smart City"
+
+#: 2016/photos.php:21
+#, php-format
+msgid "foto %s"
+msgstr "fòto %s"
+
+# 2019?
+#: 2016/photos.php:28
+msgid "Alcuni scatti dal Linux Day 2016 a Torino."
+msgstr "Quaich moment dël Linux Day 2016 à Turin."
+
+#: 2016/user-edit.php:245
+msgid "Aggiungi Utente"
+msgstr ""
+
+#: 2016/user-edit.php:265 2016/user.php:153 2019/user.php:196
+msgid "Nome"
+msgstr ""
+
+#: 2016/user-edit.php:280
+msgid "Cognome"
+msgstr ""
+
+#: 2016/user-edit.php:295
+msgid "Nickname"
+msgstr ""
+
+#: 2016/user-edit.php:310
+msgid "E-mail"
+msgstr ""
+
+#: 2016/user-edit.php:325
+msgid "Gravatar"
+msgstr ""
+
+#: 2016/user-edit.php:340
+msgid "Sito web"
+msgstr ""
+
+#: 2016/user-edit.php:429
+msgid "Licenza preferita"
+msgstr ""
+
+#: 2016/user-edit.php:431
+msgid "Nessuna"
+msgstr ""
+
+#: 2016/user-edit.php:464
+#, php-format
+msgid "Biografia (%s)"
+msgstr ""
+
+#: 2016/user-edit.php:520 2016/user-edit.php:560 2016/user-edit.php:597
+msgid "Skill"
+msgstr ""
+
+#: 2016/user-edit.php:596
+#, php-format
+msgid "Crea %s"
+msgstr ""
+
+#: 2016/user-edit.php:611
+msgid "Programmazione"
+msgstr ""
+
+#: 2016/user-edit.php:612
+msgid "Interesse"
+msgstr ""
+
+#: 2016/user-edit.php:614 2016/user.php:154 2019/user.php:197
+msgid "Tipo"
+msgstr ""
+
+#: 2016/user.php:48 2019/event.php:63 2019/index.php:143 2019/user.php:71
+msgid "Modifica"
+msgstr ""
+
+#: 2016/user.php:80 2019/user.php:108
+msgid "Sito personale"
+msgstr ""
+
+#: 2016/user.php:102 2019/user.php:133
+msgid "Le mie skill:"
+msgstr ""
+
+#: 2016/user.php:117
+#, php-format
+msgid "La mia licenza di software libero preferita è la %s."
+msgstr ""
+
+#: 2016/user.php:133 2019/user.php:168
+msgid "Bio"
+msgstr ""
+
+#: 2016/user.php:142 2019/user.php:175 l10n/trebbia.php:152
+msgid "Talk"
+msgstr ""
+
+#: 2016/user.php:157
+msgid "When"
+msgstr ""
+
+#: 2016/user.php:170 2019/user.php:213
+#, php-format
+msgid "Vedi %s"
+msgstr ""
+
+#: 2016/user.php:184 2016/user.php:244 2019/user.php:227
+#, php-format
+msgid "Ore <b>%s</b> (il %s)"
+msgstr ""
+
+#: 2016/user.php:195 2019/user.php:239
+msgid "Quest'anno il relatore non ha tenuto nessun talk."
+msgstr ""
+
+#: 2016/user.php:213
+msgid "Altre partecipazioni"
+msgstr ""
+
+#: 2016/user.php:261 2019/user.php:303
+msgid "Social"
+msgstr ""
+
+#: 2017/index.php:45
+msgid "Linux Day<br />Torino"
+msgstr ""
+
+#: 2017/index.php:47 2019/template/intro.php:35
+#, php-format
+msgid "Se anche tu sei %suno smanettone%s, vieni a trovarci!"
+msgstr ""
+
+#: 2017/index.php:51
+msgid "Sabato 28 ottobre"
+msgstr ""
+
+#: 2017/index.php:60 2019/template/intro.php:49
+msgid "uno smanettone"
+msgstr ""
+
+#: 2017/index.php:61 2019/template/intro.php:50
+msgid "un programmatore"
+msgstr ""
+
+#: 2017/index.php:62
+msgid "un tipo curioso"
+msgstr ""
+
+#: 2017/index.php:63 2019/template/intro.php:53
+msgid "un sistemista"
+msgstr ""
+
+#: 2017/index.php:64 2019/template/intro.php:54
+msgid "un po' pinguino"
+msgstr ""
+
+#: 2017/index.php:65 2019/template/intro.php:55
+msgid "in modalità incognito"
+msgstr ""
+
+#: 2017/index.php:66 2019/template/intro.php:56
+msgid "un cucciolo di GNU"
+msgstr ""
+
+#: 2017/index.php:78
+msgid "Cos'è il Linux Day Torino"
+msgstr ""
+
+#: 2017/index.php:81
+msgid ""
+"L'edizione sabauda del Linux Day, il grande evento nazionale per la "
+"promozione e la diffusione di GNU/Linux e del software libero."
+msgstr ""
+
+#: 2017/index.php:90
+msgid ""
+"Il Linux Day è un evento che si svolge nello stesso giorno (quest'anno, "
+"sabato 28 ottobre) in tutta Italia."
+msgstr ""
+
+#: 2017/index.php:94
+msgid ""
+"Il Comitato Linux Day Torino, costituito informalmente da volontari, "
+"associazioni e professionisti, organizza dal 2007 l'edizione torinese della "
+"manifestazione, che si articola su diverse sessioni parallele con talk per "
+"ogni tipo di interesse."
+msgstr ""
+
+#: 2017/index.php:100
+msgid ""
+"Quest'anno siamo ospitati dal Dipartimento di Informatica dell'Università di "
+"Torino, in via Pessinetto. L'accesso all'evento è libero e gratuito."
+msgstr ""
+
+#: 2017/index.php:103
+msgid "Vedi il programma"
+msgstr ""
+
+#: 2017/index.php:118 2017/index.php:143
+msgid "Location"
+msgstr ""
+
+#: 2017/index.php:118
+msgid "Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino."
+msgstr ""
+
+#: 2017/index.php:119
+msgid "Speakers"
+msgstr ""
+
+#: 2017/index.php:120
+#, php-format
+msgid "<b>%d</b> relatori, distribuiti su <b>%d</b> sessioni tematiche."
+msgstr ""
+
+#: 2017/index.php:128
+msgid "<b>28 ottobre 2017</b> dalle 14:00 alle 19:00."
+msgstr ""
+
+#: 2017/index.php:129 2017/index.php:198
+msgid "Extras"
+msgstr ""
+
+#: 2017/index.php:129
+msgid "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
+msgstr ""
+
+#: 2017/index.php:146
+msgid ""
+"Per il secondo anno il Dipartimento di Informatica dell'Università di Torino "
+"ospita il Linux Day di Torino. Per avvicinare i professionisti di domani a "
+"GNU/Linux, al software libero e all'open source."
+msgstr ""
+
+#: 2017/index.php:151
+msgid "Per raggiungerlo puoi:"
+msgstr ""
+
+#: 2017/index.php:152
+msgid "Venire in auto, il parcheggio in zona non manca"
+msgstr ""
+
+#: 2017/index.php:153
+msgid "Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")"
+msgstr ""
+
+#: 2017/index.php:154
+msgid "Prendere il bus 59 o 50/"
+msgstr ""
+
+#: 2017/index.php:156 2019/index.php:382
+msgid "Abilita JavaScript per vedere la mappa"
+msgstr ""
+
+#: 2017/index.php:167 2019/index.php:84 2019/template/navbar-home.php:57
+msgid "Programma"
+msgstr ""
+
+#: 2017/index.php:168
+msgid "Il programma dei talk è in fase di definizione! :)"
+msgstr ""
+
+#: 2017/index.php:185
+msgid "sessioni"
+msgstr ""
+
+#: 2017/index.php:186
+msgid "ore"
+msgstr ""
+
+#: 2017/index.php:187
+msgid "relatori"
+msgstr ""
+
+#: 2017/index.php:200
+msgid ""
+"Se i talk non dovessero bastare, abbiamo altro con cui animare la giornata!"
+msgstr ""
+
+#: 2017/index.php:216
+msgid "Porta il tuo computer, ti aiuteremo ad installare Linux!"
+msgstr ""
+
+#: 2017/index.php:217
+msgid "Il frullatore non funziona più? Portalo e lo ripareremo insieme!"
+msgstr ""
+
+#: 2017/index.php:223
+#, php-format
+msgid ""
+"Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. "
+"Prenotazione obbligatoria (disponibile a breve)."
+msgstr ""
+
+#: 2017/index.php:227
+msgid ""
+"Vieni a presentare il tuo progetto open source e smanettaci con altri "
+"appassionati!"
+msgstr ""
+
+#: 2017/index.php:235
+msgid "Sponsor"
+msgstr ""
+
+#: 2017/index.php:236
+msgid ""
+"Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere "
+"l'evento."
+msgstr ""
+
+#: 2017/load.php:46
+msgid "Linux Day Torino 2017"
+msgstr ""
+
+#: 2017/load.php:47
+msgid "LDTO2017"
+msgstr ""
+
+#: 2017/load.php:71
+msgid "API"
+msgstr ""
+
+#: 2019/index.php:50
+msgid "Tutti insieme"
+msgstr ""
+
+#: 2019/index.php:51
+msgid ""
+"LAN party, installation party, mini Restart Party. Porta un amico da "
+"convertire: ci divertiremo insieme a tutte le community."
+msgstr ""
+
+#: 2019/index.php:57
+#, php-format
+msgid "%s sessioni"
+msgstr ""
+
+#: 2019/index.php:60
+msgid ""
+"Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
+"<b>programmatori</b> e divertiti!"
+msgstr ""
+
+#: 2019/index.php:66
+#, php-format
+msgid "%s relatori"
+msgstr ""
+
+#: 2019/index.php:69
+msgid ""
+"Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
+"libero. Tutti insieme a Torino."
+msgstr ""
+
+#: 2019/index.php:85
+msgid "Ecco un assaggio dei temi che verranno affrontati:"
+msgstr ""
+
+#: 2019/index.php:93 2019/index.php:123
+#, php-format
+msgid "Aula %s"
+msgstr ""
+
+#: 2019/index.php:114
+#, php-format
+msgid "Di %s"
+msgstr ""
+
+#: 2019/index.php:115
+msgid "Speaker Segreto"
+msgstr ""
+
+#: 2019/index.php:137
+msgid "Memo"
+msgstr ""
+
+#: 2019/index.php:181
+msgid "Nello stesso momento"
+msgstr ""
+
+#: 2019/index.php:187 2019/index.php:247
+#, php-format
+msgid "Cos'è il %s"
+msgstr ""
+
+#: 2019/index.php:190
+msgid ""
+"Porta con te il tuo computer portatile, uno smartphone, un tostapane, una "
+"centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
+"GNU/Linux e aiuteremo noi nella loro liberazione!"
+msgstr ""
+
+#: 2019/index.php:193
+#, php-format
+msgid ""
+"L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
+msgstr ""
+
+#: 2019/index.php:208
+msgid "pubblico dominio"
+msgstr ""
+
+#: 2019/index.php:235
+msgid "Domande frequenti"
+msgstr ""
+
+#: 2019/index.php:255
+msgid ""
+"È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
+"Italia, parallelamente, e a Torino non mancheremo."
+msgstr ""
+
+#: 2019/index.php:258
+msgid "Informazioni sul Linux Day nazionale"
+msgstr ""
+
+#: 2019/index.php:268
+msgid "Posso portare un amico che non capisce nulla?"
+msgstr ""
+
+#: 2019/index.php:274
+msgid ""
+"Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
+"Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
+"all'installation party e lo aiuteremo nella migrazione al software libero!"
+msgstr ""
+
+#: 2019/index.php:283
+msgid "Quanto costa?"
+msgstr ""
+
+#: 2019/index.php:289
+msgid ""
+"L'evento è completamente gratuito ed è unicamente possibile grazie al "
+"sostegno di tutte le community di Torino e di chi crede in loro."
+msgstr ""
+
+#: 2019/index.php:298
+msgid "Registrerete i talk?"
+msgstr ""
+
+#: 2019/index.php:304
+msgid ""
+"Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico "
+"per rendere questa community attiva e straordinaria! In ogni caso il nostro "
+"Media Partner farà il possibile per registrare più tracce possibili, forse "
+"anche con uno streaming."
+msgstr ""
+
+#: 2019/index.php:313
+msgid "Come prenoto una T-shirt?"
+msgstr ""
+
+#: 2019/index.php:319
+msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
+msgstr ""
+
+#: 2019/index.php:320
+msgid ""
+"Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
+"velocemente, e ogni anno molte persone rimangono spoglie."
+msgstr ""
+
+#: 2019/index.php:341
+msgid ""
+"La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
+"Montefeltro 2."
+msgstr ""
+
+#: 2019/index.php:342
+msgid "Per raggiungerci puoi:"
+msgstr ""
+
+#: 2019/index.php:345 2019/index.php:356 2019/index.php:367
+#, php-format
+msgid "Prendere %s, fermata %s"
+msgstr ""
+
+#: 2019/index.php:347 2019/index.php:358 includes/class-Sharable.php:57
+#, php-format
+msgid "il %s"
+msgstr ""
+
+#: 2019/index.php:349
+#, php-format
+msgid "tram %s"
+msgstr ""
+
+#: 2019/index.php:353
+msgid "Ospedale Mauriziano"
+msgstr ""
+
+#: 2019/index.php:360
+#, php-format
+msgid "bus %s"
+msgstr ""
+
+#: 2019/index.php:369
+#, php-format
+msgid "la %s"
+msgstr ""
+
+#: 2019/index.php:370
+msgid "metropolitana"
+msgstr ""
+
+#: 2019/index.php:375
+#, php-format
+msgid "Anche i bus %s e %s fermano abbastanza vicino."
+msgstr ""
+
+#: 2019/index.php:391
+msgid "Con il patrocinio di…"
+msgstr ""
+
+#: 2019/index.php:407
+msgid "Con il supporto di…"
+msgstr ""
+
+#: 2019/index.php:416
+msgid "Media Partner"
+msgstr ""
+
+#: 2019/index.php:431
+msgid "Contattaci"
+msgstr ""
+
+#: 2019/index.php:433
+#, php-format
+msgid ""
+"Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
+"email %s o al numero %s."
+msgstr ""
+
+#: 2019/load.php:43 l10n/trebbia.php:24
+msgid "Linux Day Torino 2019"
+msgstr ""
+
+#: 2019/load.php:44
+msgid "LDTO2019"
+msgstr ""
+
+#: 2019/user.php:148
+#, php-format
+msgid "La mia licenza di software libero preferita è la <b>%s</b>."
+msgstr ""
+
+#: 2019/user.php:258
+msgid "Altre partecipazioni passate"
+msgstr ""
+
+#: includes/class-HumanTime.php:68
+#, php-format
+msgid "fra %s"
+msgstr ""
+
+#: includes/class-HumanTime.php:74
+#, php-format
+msgid "%s fa"
+msgstr ""
+
+#: includes/class-HumanTime.php:97
+#, php-format
+msgid "%d anni"
+msgstr ""
+
+#: includes/class-HumanTime.php:98
+#, php-format
+msgid "%d y"
+msgstr ""
+
+#: includes/class-HumanTime.php:104
+msgid "un anno"
+msgstr ""
+
+#: includes/class-HumanTime.php:105
+msgid "1 y"
+msgstr ""
+
+#: includes/class-HumanTime.php:112
+#, php-format
+msgid "%d mesi"
+msgstr ""
+
+#: includes/class-HumanTime.php:113
+#, php-format
+msgid "%d m"
+msgstr ""
+
+#: includes/class-HumanTime.php:119
+msgid "un mese"
+msgstr ""
+
+#: includes/class-HumanTime.php:120
+msgid "1 m"
+msgstr ""
+
+#: includes/class-HumanTime.php:132
+#, php-format
+msgid "%d settimane"
+msgstr ""
+
+#: includes/class-HumanTime.php:136
+msgid "una settimana"
+msgstr ""
+
+#: includes/class-HumanTime.php:141
+#, php-format
+msgid "%d giorni"
+msgstr ""
+
+#: includes/class-HumanTime.php:142
+#, php-format
+msgid "%d d"
+msgstr ""
+
+#: includes/class-HumanTime.php:149
+msgid "domani"
+msgstr ""
+
+#: includes/class-HumanTime.php:149
+msgid "ieri"
+msgstr ""
+
+#: includes/class-HumanTime.php:163
+msgid "oggi"
+msgstr ""
+
+#: includes/class-HumanTime.php:168
+#, php-format
+msgid "%d ore e %d minuti"
+msgstr ""
+
+#: includes/class-HumanTime.php:171
+#, php-format
+msgid "%d ore"
+msgstr ""
+
+#: includes/class-HumanTime.php:184
+msgid "un'ora"
+msgstr ""
+
+#: includes/class-HumanTime.php:185
+msgid "1 h"
+msgstr ""
+
+#: includes/class-HumanTime.php:189
+msgid "tre quarti d'ora"
+msgstr ""
+
+#: includes/class-HumanTime.php:194
+msgid "mezzora"
+msgstr ""
+
+#: includes/class-HumanTime.php:195
+msgid "½ h"
+msgstr ""
+
+#: includes/class-HumanTime.php:199
+#, php-format
+msgid "%d minuti"
+msgstr ""
+
+#: includes/class-HumanTime.php:203
+msgid "un minuto"
+msgstr ""
+
+#: includes/class-HumanTime.php:207
+#, php-format
+msgid "%d secondi"
+msgstr ""
+
+#: includes/class-HumanTime.php:212
+msgid "proprio ora"
+msgstr ""
+
+#: includes/class-Licenses.php:54
+msgid "Licenza Apache, versione 2.0"
+msgstr ""
+
+#: includes/class-Licenses.php:56
+msgid "Creative Commons - Attribuzione 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:56
+msgid "https://creativecommons.org/licenses/by/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:57
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 2.0 Generico"
+msgstr ""
+
+#: includes/class-Licenses.php:57
+msgid "https://creativecommons.org/licenses/by-sa/2.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:58
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 3.0 Unported"
+msgstr ""
+
+#: includes/class-Licenses.php:58
+msgid "https://creativecommons.org/licenses/by-sa/3.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:59
+msgid ""
+"Creative Commons - Attribuzione - Condividi allo stesso modo 4.0 "
+"Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:59
+msgid "https://creativecommons.org/licenses/by-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:60
+msgid ""
+"Creative Commons - Attribuzione - Non commerciale - Condividi allo stesso "
+"modo 4.0 Internazionale"
+msgstr ""
+
+#: includes/class-Licenses.php:60
+msgid "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
+msgstr ""
+
+#: includes/class-Licenses.php:63
+msgid "GNU General Public License, versione 3"
+msgstr ""
+
+#: includes/class-Licenses.php:64
+msgid "GNU General Public License, versione 2"
+msgstr ""
+
+#: includes/class-Licenses.php:66
+msgid "Licenza jQuery"
+msgstr ""
+
+#: includes/class-Licenses.php:67
+msgid "Licenza MIT"
+msgstr ""
+
+#: includes/class-Licenses.php:69
+msgid "Licenza PHP"
+msgstr ""
+
+#: includes/class-Licenses.php:70
+msgid "Fai cosa c**** ti pare Public License"
+msgstr ""
+
+#: includes/class-Licenses.php:70
+msgid "https://it.wikipedia.org/wiki/WTFPL"
+msgstr ""
+
+#: includes/class-Sharable.php:57 includes/class-Sharable.php:59
+msgid "video esterno"
+msgstr ""
+
+#: includes/class-User.php:72
+#, php-format
+msgid "%s %s"
+msgstr ""
+
+#: includes/class-User.php:101
+#, php-format
+msgid "Profilo utente di %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:54
+#, php-format
+msgid "%s per me potrebbe essere qualcosa che si mangia"
+msgstr ""
+
+#: includes/class-UserSkill.php:55
+#, php-format
+msgid "ho conoscenze %s di base"
+msgstr ""
+
+#: includes/class-UserSkill.php:56
+#, php-format
+msgid "sono discretamente bravo in %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:56
+#, php-format
+msgid "sono molto interessato al mondo %s"
+msgstr ""
+
+#: includes/class-UserSkill.php:57
+#, php-format
+msgid "%s... il mio cavallo di battaglia!"
+msgstr ""
+
+#: includes/class-UserSkill.php:57
+#, php-format
+msgid "%s... è un mio pensiero fisso!"
+msgstr ""
+
+#: includes/class-UserSkill.php:58
+#, php-format
+msgid "%s: l'essenza stessa della mia vita!"
+msgstr ""
+
+#: includes/class-UserSkill.php:59
+#, php-format
+msgid "%s, sto cercando di smettere..."
+msgstr ""
+
+#: includes/class-UserSkill.php:60
+#, php-format
+msgid ""
+"se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
+msgstr ""
+
+#: includes/class-UserSkill.php:61
+#, php-format
+msgid "se accenni a %s ti prendo a tastierate"
+msgstr ""
+
+#: includes/class-UserSkill.php:63
+#, php-format
+msgid ""
+"sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
+msgstr ""
+
+#: l10n/trebbia.php:27 2017/includes/class-Footer.php:102
+msgid "Dipartimento di Informatica"
+msgstr ""
+
+#: l10n/trebbia.php:30
+msgid "Via Pessinetto 12, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:33
+msgid ""
+"Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
+"Amedeo di Savoia / Dipartimento di Informatica*.\n"
+"\n"
+"Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
+"°**59** e n°**59/** scendendo alla fermata *Svizzera*."
+msgstr ""
+
+#: l10n/trebbia.php:38 2016/includes/class-Footer.php:103
+#: 2017/includes/class-Footer.php:103
+msgid "Dipartimento di Biotecnologie"
+msgstr ""
+
+#: l10n/trebbia.php:41
+msgid "Via Nizza 52, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:44
+msgid ""
+"La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
+"Biotecnologie."
+msgstr ""
+
+#: l10n/trebbia.php:47
+msgid "Politecnico di Torino (sede centrale)"
+msgstr ""
+
+#: l10n/trebbia.php:50
+msgid "Corso Duca degli Abruzzi 24, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:53
+msgid "Politecnico di Torino (cittadella)"
+msgstr ""
+
+#: l10n/trebbia.php:56
+msgid "Corso Castelfidardo 34, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:59 2016/includes/class-Footer.php:110
+#: 2017/includes/class-Footer.php:110
+msgid "Cascina Roccafranca"
+msgstr ""
+
+#: l10n/trebbia.php:62
+msgid "Via Edoardo Rubino 45, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:65 2016/includes/class-Footer.php:106
+#: 2017/includes/class-Footer.php:106
+msgid "Cortile del Maglio"
+msgstr ""
+
+#: l10n/trebbia.php:68
+msgid "Via Vittorio Andreis 18, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:71
+msgid "Sala Consiglieri della Provincia di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:74
+msgid "Via Maria Vittoria 12, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:77
+msgid "Palazzo Cisterna"
+msgstr ""
+
+#: l10n/trebbia.php:80
+msgid "Casa del Quartiere"
+msgstr ""
+
+#: l10n/trebbia.php:83
+msgid "Via Oddino Morgari 14, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:86
+msgid "Torino Incontra"
+msgstr ""
+
+#: l10n/trebbia.php:89
+msgid "Via Nino Costa 8, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:92
+msgid "Toolbox Coworking"
+msgstr ""
+
+#: l10n/trebbia.php:95
+msgid "Via Agostino da Montefeltro 2, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:98
+msgid "Fablab"
+msgstr ""
+
+#: l10n/trebbia.php:101
+msgid "Via Egeo 16, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:104
+msgid "Base"
+msgstr ""
+
+#: l10n/trebbia.php:107
+msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
+msgstr ""
+
+#: l10n/trebbia.php:110
+msgid "Dev"
+msgstr ""
+
+#: l10n/trebbia.php:113
+msgid "Area sviluppatori"
+msgstr ""
+
+#: l10n/trebbia.php:116
+msgid "Sys"
+msgstr ""
+
+#: l10n/trebbia.php:119
+msgid "Area sistemisti"
+msgstr ""
+
+#: l10n/trebbia.php:122
+msgid "Misc"
+msgstr ""
+
+#: l10n/trebbia.php:125
+msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
+msgstr ""
+
+#: l10n/trebbia.php:128
+msgid "Altro"
+msgstr ""
+
+#: l10n/trebbia.php:131
+msgid "Di tutto un po'"
+msgstr ""
+
+#: l10n/trebbia.php:134
+msgid "Intermedio"
+msgstr ""
+
+#: l10n/trebbia.php:137
+msgid "Adatto ad un pubblico abbastanza smanettone"
+msgstr ""
+
+#: l10n/trebbia.php:140
+msgid "Avanzato"
+msgstr ""
+
+#: l10n/trebbia.php:143
+msgid "Adatto ad un pubblico di nerd disperati"
+msgstr ""
+
+#: l10n/trebbia.php:146
+msgid "Sikurezza"
+msgstr ""
+
+#: l10n/trebbia.php:149
+msgid "Sicurezza"
+msgstr ""
+
+#: l10n/trebbia.php:155
+msgid "Linux Installation Party"
+msgstr ""
+
+#: l10n/trebbia.php:158
+msgid "Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:161
+msgid "Corso"
+msgstr ""
+
+#: l10n/trebbia.php:164
+msgid "Aula B"
+msgstr ""
+
+#: l10n/trebbia.php:167
+msgid "Aula A"
+msgstr ""
+
+#: l10n/trebbia.php:170
+msgid "Aula D"
+msgstr ""
+
+#: l10n/trebbia.php:173
+msgid "Aula C"
+msgstr ""
+
+#: l10n/trebbia.php:176
+msgid "Spazio Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:179
+msgid "Spazio Restart"
+msgstr ""
+
+#: l10n/trebbia.php:182
+msgid "Primo piano"
+msgstr ""
+
+#: l10n/trebbia.php:185
+msgid "Laboratorio Turing"
+msgstr ""
+
+#: l10n/trebbia.php:188
+msgid "Laboratorio Dijkstra"
+msgstr ""
+
+#: l10n/trebbia.php:191
+msgid "Aula F"
+msgstr ""
+
+#: l10n/trebbia.php:194
+msgid "Laboratorio von Neumann"
+msgstr ""
+
+#: l10n/trebbia.php:197
+msgid "Aula 1I"
+msgstr ""
+
+#: l10n/trebbia.php:200
+msgid "Aula 3I"
+msgstr ""
+
+#: l10n/trebbia.php:203
+msgid "Aula 5I"
+msgstr ""
+
+#: l10n/trebbia.php:206
+msgid "Aula 2I"
+msgstr ""
+
+#: l10n/trebbia.php:209
+msgid "Aula 4I"
+msgstr ""
+
+#: l10n/trebbia.php:212
+msgid "Aula 2"
+msgstr ""
+
+#: l10n/trebbia.php:215
+msgid "Aula 4"
+msgstr ""
+
+#: l10n/trebbia.php:218
+msgid "Aula 6"
+msgstr ""
+
+#: l10n/trebbia.php:221
+msgid "Aula 8"
+msgstr ""
+
+#: l10n/trebbia.php:224
+msgid "Aula 7"
+msgstr ""
+
+#: l10n/trebbia.php:227
+msgid "Aula 7I"
+msgstr ""
+
+#: l10n/trebbia.php:230
+msgid "Aula corsi 1"
+msgstr ""
+
+#: l10n/trebbia.php:233
+msgid "Aula corsi 2"
+msgstr ""
+
+#: l10n/trebbia.php:236
+msgid "Incubatore"
+msgstr ""
+
+#: l10n/trebbia.php:239
+msgid "Bottega"
+msgstr ""
+
+#: l10n/trebbia.php:242
+msgid "Salone"
+msgstr ""
+
+#: l10n/trebbia.php:245
+msgid "Sala Consiglio di Facoltà"
+msgstr ""
+
+#: l10n/trebbia.php:248
+msgid "Sala Einaudi"
+msgstr ""
+
+#: l10n/trebbia.php:251
+msgid "Aula Base"
+msgstr ""
+
+#: l10n/trebbia.php:254
+msgid "Aula Dev"
+msgstr ""
+
+#: l10n/trebbia.php:257
+msgid "Aula Sys"
+msgstr ""
+
+#: l10n/trebbia.php:260
+msgid "Aula Misc"
+msgstr ""
+
+#: l10n/trebbia.php:263
+msgid "asd"
+msgstr ""
+
+#: l10n/trebbia.php:266
+msgid "PHP"
+msgstr ""
+
+#: l10n/trebbia.php:269 l10n/trebbia.php:353
+msgid "JavaScript"
+msgstr ""
+
+#: l10n/trebbia.php:272
+msgid "Microsoft Windows"
+msgstr ""
+
+#: l10n/trebbia.php:275
+msgid "NodeJS"
+msgstr ""
+
+#: l10n/trebbia.php:278
+msgid "Apple"
+msgstr ""
+
+#: l10n/trebbia.php:281
+msgid "Java"
+msgstr ""
+
+#: l10n/trebbia.php:284
+msgid "C++"
+msgstr ""
+
+#: l10n/trebbia.php:287
+msgid "Ubuntu"
+msgstr ""
+
+#: l10n/trebbia.php:290
+msgid "GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:293
+msgid "Turbo Pascal"
+msgstr ""
+
+#: l10n/trebbia.php:296
+msgid "Software Libero"
+msgstr ""
+
+#: l10n/trebbia.php:299
+msgid "Debian"
+msgstr ""
+
+#: l10n/trebbia.php:302
+msgid "Inkscape"
+msgstr ""
+
+#: l10n/trebbia.php:305
+msgid "Adobe Illustrator"
+msgstr ""
+
+#: l10n/trebbia.php:308
+msgid "Immagini vettoriali"
+msgstr ""
+
+#: l10n/trebbia.php:311
+msgid "Insegnare"
+msgstr ""
+
+#: l10n/trebbia.php:314
+msgid "Recupero del RAEE"
+msgstr ""
+
+#: l10n/trebbia.php:317
+msgid "Blender"
+msgstr ""
+
+#: l10n/trebbia.php:320
+msgid "C"
+msgstr ""
+
+#: l10n/trebbia.php:323
+msgid "Wikipedia"
+msgstr ""
+
+#: l10n/trebbia.php:326
+msgid "Embedded"
+msgstr ""
+
+#: l10n/trebbia.php:329
+msgid "Haskell"
+msgstr ""
+
+#: l10n/trebbia.php:332
+msgid "JavaEE"
+msgstr ""
+
+#: l10n/trebbia.php:335
+msgid "JSF"
+msgstr ""
+
+#: l10n/trebbia.php:338
+msgid "PrimeFaces"
+msgstr ""
+
+#: l10n/trebbia.php:341
+msgid "Maven"
+msgstr ""
+
+#: l10n/trebbia.php:344
+msgid "Engineering"
+msgstr ""
+
+#: l10n/trebbia.php:347
+msgid "HTML"
+msgstr ""
+
+#: l10n/trebbia.php:350
+msgid "CSS"
+msgstr ""
+
+#: l10n/trebbia.php:356
+msgid "Artificial Intelligence"
+msgstr ""
+
+#: l10n/trebbia.php:359
+msgid "Machine Learning"
+msgstr ""
+
+#: l10n/trebbia.php:362
+msgid "Mozilla"
+msgstr ""
+
+#: l10n/trebbia.php:365
+msgid "Effective Altruism"
+msgstr ""
+
+#: l10n/trebbia.php:368
+msgid "Python"
+msgstr ""
+
+#: l10n/trebbia.php:371
+msgid "Data Science"
+msgstr ""
+
+#: l10n/trebbia.php:374
+msgid "Jazz"
+msgstr ""
+
+#: l10n/trebbia.php:377
+msgid "lucid dreaming"
+msgstr ""
+
+#: l10n/trebbia.php:380
+msgid "Berlin"
+msgstr ""
+
+#: l10n/trebbia.php:383
+msgid "London"
+msgstr ""
+
+#: l10n/trebbia.php:386
+msgid "physics"
+msgstr ""
+
+#: l10n/trebbia.php:389
+msgid "phisics"
+msgstr ""
+
+#: l10n/trebbia.php:392
+msgid "consciousness"
+msgstr ""
+
+#: l10n/trebbia.php:395
+msgid "vegan"
+msgstr ""
+
+#: l10n/trebbia.php:398
+msgid "Rust"
+msgstr ""
+
+#: l10n/trebbia.php:401
+msgid "Curiosity"
+msgstr ""
+
+#: l10n/trebbia.php:404
+msgid "creativity"
+msgstr ""
+
+#: l10n/trebbia.php:407
+msgid "teamwork"
+msgstr ""
+
+#: l10n/trebbia.php:410
+msgid "laziness"
+msgstr ""
+
+#: l10n/trebbia.php:413
+msgid "Linux"
+msgstr ""
+
+#: l10n/trebbia.php:416
+msgid "Big Data"
+msgstr ""
+
+#: l10n/trebbia.php:419
+msgid "Kubernetes"
+msgstr ""
+
+#: l10n/trebbia.php:422
+msgid "Devops"
+msgstr ""
+
+#: l10n/trebbia.php:425
+msgid "Azure"
+msgstr ""
+
+#: l10n/trebbia.php:428
+msgid "developer"
+msgstr ""
+
+#: 2016/includes/class-ActivityBox.php:34
+#, php-format
+msgid "da %s"
+msgstr ""
+
+#: 2016/includes/class-ActivityBox.php:55
+#, php-format
+msgid "Gestito %s."
+msgstr ""
+
+#: 2016/includes/class-ActivityBox.php:61
+msgid "Prenota"
+msgstr ""
+
+#: 2016/includes/class-ActivityBox.php:63
+#, php-format
+msgid "Prenota la tua partecipazione a %s"
+msgstr ""
+
+#: 2016/includes/class-CreditBox.php:42
+#, php-format
+msgid "%s: progetto a licenza %s"
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:97
+#: 2017/includes/class-DailyEventsTable.php:97
+msgid "asd! No."
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:120
+#: 2017/includes/class-DailyEventsTable.php:120
+#, php-format
+msgid "%d° ora"
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:142
+#: 2017/includes/class-DailyEventsTable.php:142
+#, php-format
+msgid "Talk %s"
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:147
+#: 2017/includes/class-DailyEventsTable.php:147
+#, php-format
+msgid "%s<br /> di %s."
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:152
+#: 2017/includes/class-DailyEventsTable.php:152
+msgid "Nessun talk pianificato."
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:185
+#: 2017/includes/class-DailyEventsTable.php:185
+msgid ", "
+msgstr ""
+
+#: 2016/includes/class-DailyEventsTable.php:187
+#: 2017/includes/class-DailyEventsTable.php:187
+#, php-format
+msgid "%s e %s"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:33 2017/includes/class-Footer.php:32
+#, php-format
+msgid "Torna a %s"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:50 2017/includes/class-Footer.php:49
+#, php-format
+msgid ""
+"Tutti i contenuti sono rilasciati sotto licenza di <strong>contenuto "
+"culturale libero</strong> %s. Sei libero di distribuire e/o modificare i "
+"contenuti anche per scopi commerciali, fintanto che si cita la provenienza e "
+"si ricondivide sotto la medesima licenza."
+msgstr ""
+
+#: 2016/includes/class-Footer.php:59 2017/includes/class-Footer.php:58
+#, php-format
+msgid "Contattare all'indirizzo %s o al numero %s."
+msgstr ""
+
+#: 2016/includes/class-Footer.php:65 2017/includes/class-Footer.php:64
+#, php-format
+msgid "%s su Facebook"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:72 2017/includes/class-Footer.php:71
+#, php-format
+msgid "%s su Twitter"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:81 2017/includes/class-Footer.php:80
+msgid "Blog del Linux Day Torino"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:88 2017/includes/class-Footer.php:87
+msgid "Edizioni Passate"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:104 2016/includes/class-Footer.php:105
+#: 2017/includes/class-Footer.php:104 2017/includes/class-Footer.php:105
+msgid "Politecnico di Torino"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:122
+msgid "Scegli"
+msgstr ""
+
+#: 2016/includes/class-Footer.php:131
+#, php-format
+msgid "Pagina generata in %s secondi con %d query al database."
+msgstr ""
+
+#: 2016/includes/class-Footer.php:141
+msgid "<b>Alcuni</b> diritti riservati."
+msgstr ""
+
+#: 2016/includes/class-Footer.php:154
+msgid ""
+"Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
+"Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
+"regalare i tuoi dati a terzi!"
+msgstr ""
+
+#: 2016/includes/class-Header.php:62 2017/includes/class-Header.php:65
+#: 2019/template/header.php:45
+#, php-format
+msgid "%s - %s"
+msgstr ""
+
+#: 2016/includes/class-Header.php:159
+msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
+msgstr ""
+
+#: 2016/includes/class-Header.php:179
+msgid "This is Wikipedia"
+msgstr ""
+
+#: 2016/includes/class-SocialBox.php:36 2019/template/user-social-box.php:39
+#, php-format
+msgid "%s su %s"
+msgstr ""
+
+#: 2016/includes/functions.php:68 2017/includes/functions.php:68
+msgid "È un 404! Pagina non trovata :("
+msgstr ""
+
+#: 2016/includes/functions.php:71 2017/includes/functions.php:71
+msgid ""
+"Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di "
+"root <b>non</b> risolve la situazione!)"
+msgstr ""
+
+#: 2019/template/footer.php:40
+msgid "Torna al Linux Day Torino"
+msgstr ""
+
+#: 2019/template/footer.php:49
+#, php-format
+msgid ""
+"I contenuti di questo sito sono liberamente fruibili in licenza di contenuto "
+"libero %s."
+msgstr ""
+
+#: 2019/template/footer.php:54
+#, php-format
+msgid "Puoi clonare questo design con &hearts; scaricandolo da %s."
+msgstr ""
+
+#: 2019/template/footer.php:59
+#, php-format
+msgid "Il %s è rilasciato in licenza di software libero %s."
+msgstr ""
+
+#: 2019/template/footer.php:62
+msgid "motore del sito"
+msgstr ""
+
+#: 2019/template/footer.php:67
+msgid ""
+"Non si applicano politiche sulla protezione dei tuoi dati in quanto non ti "
+"abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti "
+"abbiamo monitorato con tecnologie apposite."
+msgstr ""
+
+#: 2019/template/header.php:80
+msgid "Comitato Linux Day Torino"
+msgstr ""
+
+#: 2019/template/intro.php:32
+msgid "Sabato 26 Ottobre 2019"
+msgstr ""
+
+#: 2019/template/intro.php:39
+msgid "SCOPRI DI PIÙ"
+msgstr ""
+
+#: 2019/template/intro.php:51
+msgid "una persona curiosa"
+msgstr ""
+
+#: 2019/template/intro.php:52
+msgid "in cerca di lavoro"
+msgstr ""
+
+#: 2019/template/navbar-home.php:56
+msgid "Intro"
+msgstr ""
+
+#: 2019/template/navbar-home.php:59
+msgid "Contatti"
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:319
+msgid "Upload completato con successo."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:322
+msgid "Non è stato selezionato alcun file."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:325
+msgid "Per favore ricarica il file. È stato caricato solo parzialmente."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:329
+#, php-format
+msgid "Superati i limiti di upload (massimo %s)."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:334
+msgid "Il file eccede i limiti imposti."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:339
+#, php-format
+msgid "Il file pesa %s. Non può superare %s."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:340
+msgid "troppo"
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:345
+msgid "Impossibile salvare il file."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:348
+msgid "Il MIME del file non è validabile."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:353
+#, php-format
+msgid "Il file é di un MIME type non concesso: \"%s\"."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:364
+#, php-format
+msgid "Il file ha un'estensione non valida. Estensioni accettate: %s."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:368
+msgid "Il file ha un nome troppo breve."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:371
+msgid "Il file ha un nome troppo lungo."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:374
+msgid "Errore di caricamento sconosciuto."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:378
+msgid "Manca una cartella temporanea. Contattare l'amministratore."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:382
+msgid "Errore di caricamento alquanto sconosciuto."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:402
+#, php-format
+msgid ""
+"Il 5° argomento di %s dovrebbe essere il nome di una funzione ma non esiste "
+"alcuna funzione '%s'."
+msgstr ""
+
+#: includes/suckless-php/class-FileUploader.php:555
+#, php-format
+msgid "La richiesta non è valida (inviati più di %s)."
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:149
+msgid "NaN"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:184
+msgid "Errore"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:190
+#, php-format
+msgid "Ci dispiace! C'è qualche piccolo problema tecnico! (DEBUG: %s)"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:191
+msgid "sì"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:191
+msgid "no"
+msgstr ""
+
+#: includes/suckless-php/class-OutputUtilities.php:194
+msgid ""
+"Potrebbe essere utile comunicarci questo problema affinchè non si ripresenti "
+"in futuro. Grazie per la collaborazione."
+msgstr ""
