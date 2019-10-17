@@ -361,7 +361,7 @@ template( 'header', [
     					</div>
    						<div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-tshirt">
       						<div class="panel-body">
-      							<p><?= __( "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!" ) ?></p>
+      							<p><?= __( "Comunicaci la tua taglia ed il genere (uomo/donna) e te la terremo da parte fresca per l'evento!" ) ?></p>
       							<p><?= __( "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto velocemente, e ogni anno molte persone rimangono spoglie." ) ?></p>
       						</div>
    						 </div>
