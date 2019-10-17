@@ -221,6 +221,23 @@ template( 'header', [
 </section>
 
 <!-- =========================
+   Other stuff
+============================== -->
+<section id="other-stuff" class="parallax-section">
+	<div class="container">
+		<h2 class="text-center"><?= __( "Ma non finisce qui!" ) ?></h2>
+		<div>
+			<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/corso-linux-base-gnu-freedo.jpg" title="<?= esc_attr( __( "Corsi GNU/Linux" ) ) ?>" />
+		</div>
+		<div class="jumbotron">
+			<h3><?= __( "Corsi GNU/Linux" ) ?></h3>
+			<p><?= __( "Ti aspettiamo al Linux Day, ma nei giorni successivi organizzeremo anche dei veri e propri corsi (gratuiti!) di livello base ed avanzato, sull'uso di GNU/Linux in ambito personale e industriale." ) ?></p>
+			<p><?= __( "Che aspetti? Prenota un posto anche per i corsi!" ) ?></p>
+			<a href="https://linux.studenti.polito.it/wp/corso-gnu-linux-base-autunno-2019/"><?= __( "Iscrizione ai corsi GNU/Linux" ) ?></a>
+		</div>
+</section>
+
+<!-- =========================
     FAQ SECTION   
 ============================== -->
 <section id="faq" class="parallax-section">
