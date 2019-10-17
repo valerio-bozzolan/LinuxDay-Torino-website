@@ -238,6 +238,34 @@ template( 'header', [
 </section>
 
 <!-- =========================
+   Other stuff
+============================== -->
+<section id="other-stuff" class="parallax-section">
+	<div class="container">
+		<h2 class="text-center"><?= __( "Assistenza tecnica" ) ?></h2>
+		<div class="jumbotron">
+			<p><?= __( "Ti aspettiamo al Linux Day, ma dopo questa conferenza non ti lasceremo certo da solo!" ) ?></p>
+
+			<ul>
+				<li>
+					<?= Markdown::parse( __( "Ogni mercoledì, sportello di assistenza gratuita al software libero, all'**Officina Informatica Libera**, in via Oddino Morgari 14, a Torino." ) ) ?>
+					<p><a href="https://informaticalibera.info/"><?= __( "Contatti" ) ?></a> (<?= sprintf(
+						__( "prossimo: %s" ),
+						__( "30 ottobre" )
+					) ?>)</p>
+				</li>
+				<li>
+					<?= Markdown::parse( __( "Ogni terzo sabato del mese, sportello di assistenza gratuita al software libero, con il **GLugTO**, al Polo culturale Lombroso16" ) ) ?>
+					<p><a href="https://www.glugto.org/index.php/2016/11/07/lombrosognu/"><?= __( "Contatti" ) ?></a> (<?= sprintf(
+						__( "prossimo: %s" ),
+						__( "2 novembre" )
+					) ?>)</p>
+				</li>
+			</ul>
+		</div>
+</section>
+
+<!-- =========================
     FAQ SECTION   
 ============================== -->
 <section id="faq" class="parallax-section">
