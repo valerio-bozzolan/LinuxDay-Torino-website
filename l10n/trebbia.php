@@ -15,13 +15,157 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2019-10-15T08:09:12+02:00
+# Last update: 2019-10-18T14:29:14+02:00
 
 // conference[2016]::conference_title
 __("Linux Day Torino 2016");
 
 // conference[2019]::conference_title
 __("Linux Day Torino 2019");
+
+// event[talk-base-1]::event_title
+__("Didattica del coding");
+
+// event[talk-dev-1]::event_title
+__("Introduzione alla programmazione con JavaScript");
+
+// event[talk-sys-1]::event_title
+__("Non bisogna aver paura di IPv6");
+
+// event[talk-misc-1]::event_title
+__("La tecnologia LoRa e le sue applicazioni IoT");
+
+// event[talk-base-2]::event_title
+__("Rinascimento 2.0");
+
+// event[talk-base-3]::event_title
+__("Utilizzi di GNU/Linux");
+
+// event[talk-base-4]::event_title
+__("Linux al Comune di Torino");
+
+// event[talk-dev-2]::event_title
+__("Yocto Project, un generatore automatico di distribuzioni linux embedded");
+
+// event[talk-dev-3]::event_title
+__("Dieci anni dietro a FidoCadJ");
+
+// event[talk-dev-4]::event_title
+__("Un bot di Telegram con Python");
+
+// event[talk-sys-2]::event_title
+__("Docker: distribuiamo applicazioni");
+
+// event[talk-sys-4]::event_title
+__("Hadoop - BigData in streaming");
+
+// event[talk-sys-3]::event_title
+__("InfoSec. Istruzioni per l'uso.");
+
+// event[talk-misc-2]::event_title
+__("Sostenibilità e Open Culture all'Università");
+
+// event[talk-misc-3]::event_title
+__("Wikidata: la base di conoscenza libera");
+
+// event[talk-misc-4]::event_title
+__("Wikipedia");
+
+// event[lip]::event_title
+__("LIP");
+
+// event[lip]::event_subtitle
+__("Linux Installation Party");
+
+// event[coderdojo]::event_title
+__("Coderdojo");
+
+// event[gnu-linux-base]::event_title
+__("Lezione introduttiva corso GNU/Linux");
+
+// event[gnu-linux-base-installation]::event_title
+__("Installiamo insieme una distribuzione GNU/Linux");
+
+// event[gnu-linux-base-debian-maintenance]::event_title
+__("Manutenzione di un sistema basato su Debian");
+
+// event[gnu-linux-base-command-line]::event_title
+__("I comandi di base di un sistema GNU/Linux");
+
+// event[gnu-linux-base-sysadmin]::event_title
+__("Gestione del sistema e dei servizi in un sistema GNU/Linux");
+
+// event[gnu-linux-base-award-ceremony]::event_title
+__("Consegna degli attestati");
+
+// event[first-steps-with-gnu-linux]::event_title
+__("Primi passi con GNU/Linux");
+
+// event[dont-touch-my-data]::event_title
+__("Don't Touch My Data");
+
+// event[private-cloud]::event_title
+__("Private Cloud");
+
+// event[big-data]::event_title
+__("Velocizzare le query con Dremio");
+
+// event[rasa-ml]::event_title
+__("Rasa ML framework");
+
+// event[rasa-ml]::event_subtitle
+__("AI assistants and chatbots");
+
+// event[arduino]::event_title
+__("Workshop Arduino");
+
+// event[arduino]::event_subtitle
+__("Costruire una Command Line multi-output in Go");
+
+// event[offensive-security]::event_title
+__("From Zer0 t0 R00t");
+
+// event[offensive-security]::event_subtitle
+__("Offensive Security Workshop");
+
+// event[read-the-docs]::event_title
+__("ReadTheDocs");
+
+// event[rust]::event_title
+__("Rust");
+
+// event[mqtt]::event_title
+__("MQTT");
+
+// event[deep-speech]::event_title
+__("Deep Speech");
+
+// event[deep-speech]::event_subtitle
+__("Riconoscimento vocale");
+
+// event[apache-spark]::event_title
+__("Running Spark");
+
+// event[apache-spark]::event_subtitle
+__("Machine Learning pipelines on Kubernetes");
+
+// event[android]::event_title
+__("50 sfumature di native");
+
+// event[android]::event_subtitle
+__("Android");
+
+// event[quantum-computing]::event_title
+__("Quantum Computing");
+
+// event[bim2gml]::event_title
+__("GIS - BIM2GML");
+
+// event[copyright]::event_title
+__("70 anni dopo la morte");
+
+// event[copyright]::event_subtitle
+__("La nuova direttiva sul copyright");
 
 // location[1]::location_name
 __("Dipartimento di Informatica");
