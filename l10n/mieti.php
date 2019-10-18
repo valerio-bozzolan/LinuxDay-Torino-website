@@ -71,7 +71,7 @@ generate_gnu_gettext_from_table(
 			"EXISTS (" .
 				( new QueryConference() )
 					->whereConferenceHasI18nSupport()
-					->equals( 'conference.conference_ID', 'event.event_ID' )
+					->equals( 'conference.conference_ID', 'event.conference_ID' )
 					->getQuery()
 			. ")"
 		),
