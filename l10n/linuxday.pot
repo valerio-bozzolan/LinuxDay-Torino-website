@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 14:24+0200\n"
+"POT-Creation-Date: 2019-10-18 14:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -716,7 +716,7 @@ msgstr ""
 msgid "Bio"
 msgstr ""
 
-#: 2016/user.php:142 2019/user.php:175 l10n/trebbia.php:152
+#: 2016/user.php:142 2019/user.php:175 l10n/trebbia.php:296
 msgid "Talk"
 msgstr ""
 
@@ -1512,15 +1512,207 @@ msgid ""
 "sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
 msgstr ""
 
-#: l10n/trebbia.php:27 2017/includes/class-Footer.php:102
-msgid "Dipartimento di Informatica"
+#: l10n/trebbia.php:27
+msgid "Didattica del coding"
 msgstr ""
 
 #: l10n/trebbia.php:30
-msgid "Via Pessinetto 12, Torino"
+msgid "Introduzione alla programmazione con JavaScript"
 msgstr ""
 
 #: l10n/trebbia.php:33
+msgid "Non bisogna aver paura di IPv6"
+msgstr ""
+
+#: l10n/trebbia.php:36
+msgid "La tecnologia LoRa e le sue applicazioni IoT"
+msgstr ""
+
+#: l10n/trebbia.php:39
+msgid "Rinascimento 2.0"
+msgstr ""
+
+#: l10n/trebbia.php:42
+msgid "Utilizzi di GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:45
+msgid "Linux al Comune di Torino"
+msgstr ""
+
+#: l10n/trebbia.php:48
+msgid "Yocto Project, un generatore automatico di distribuzioni linux embedded"
+msgstr ""
+
+#: l10n/trebbia.php:51
+msgid "Dieci anni dietro a FidoCadJ"
+msgstr ""
+
+#: l10n/trebbia.php:54
+msgid "Un bot di Telegram con Python"
+msgstr ""
+
+#: l10n/trebbia.php:57
+msgid "Docker: distribuiamo applicazioni"
+msgstr ""
+
+#: l10n/trebbia.php:60
+msgid "Hadoop - BigData in streaming"
+msgstr ""
+
+#: l10n/trebbia.php:63
+msgid "InfoSec. Istruzioni per l'uso."
+msgstr ""
+
+#: l10n/trebbia.php:66
+msgid "Sostenibilità e Open Culture all'Università"
+msgstr ""
+
+#: l10n/trebbia.php:69
+msgid "Wikidata: la base di conoscenza libera"
+msgstr ""
+
+#: l10n/trebbia.php:72 l10n/trebbia.php:467
+msgid "Wikipedia"
+msgstr ""
+
+#: l10n/trebbia.php:75
+msgid "LIP"
+msgstr ""
+
+#: l10n/trebbia.php:78 l10n/trebbia.php:299
+msgid "Linux Installation Party"
+msgstr ""
+
+#: l10n/trebbia.php:81 l10n/trebbia.php:302
+msgid "Coderdojo"
+msgstr ""
+
+#: l10n/trebbia.php:84
+msgid "Lezione introduttiva corso GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:87
+msgid "Installiamo insieme una distribuzione GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:90
+msgid "Manutenzione di un sistema basato su Debian"
+msgstr ""
+
+#: l10n/trebbia.php:93
+msgid "I comandi di base di un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:96
+msgid "Gestione del sistema e dei servizi in un sistema GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:99
+msgid "Consegna degli attestati"
+msgstr ""
+
+#: l10n/trebbia.php:102
+msgid "Primi passi con GNU/Linux"
+msgstr ""
+
+#: l10n/trebbia.php:105
+msgid "Don't Touch My Data"
+msgstr ""
+
+#: l10n/trebbia.php:108
+msgid "Private Cloud"
+msgstr ""
+
+#: l10n/trebbia.php:111
+msgid "Velocizzare le query con Dremio"
+msgstr ""
+
+#: l10n/trebbia.php:114
+msgid "Rasa ML framework"
+msgstr ""
+
+#: l10n/trebbia.php:117
+msgid "AI assistants and chatbots"
+msgstr ""
+
+#: l10n/trebbia.php:120
+msgid "Workshop Arduino"
+msgstr ""
+
+#: l10n/trebbia.php:123
+msgid "Costruire una Command Line multi-output in Go"
+msgstr ""
+
+#: l10n/trebbia.php:126
+msgid "From Zer0 t0 R00t"
+msgstr ""
+
+#: l10n/trebbia.php:129
+msgid "Offensive Security Workshop"
+msgstr ""
+
+#: l10n/trebbia.php:132
+msgid "ReadTheDocs"
+msgstr ""
+
+#: l10n/trebbia.php:135 l10n/trebbia.php:542
+msgid "Rust"
+msgstr ""
+
+#: l10n/trebbia.php:138
+msgid "MQTT"
+msgstr ""
+
+#: l10n/trebbia.php:141
+msgid "Deep Speech"
+msgstr ""
+
+#: l10n/trebbia.php:144
+msgid "Riconoscimento vocale"
+msgstr ""
+
+#: l10n/trebbia.php:147
+msgid "Running Spark"
+msgstr ""
+
+#: l10n/trebbia.php:150
+msgid "Machine Learning pipelines on Kubernetes"
+msgstr ""
+
+#: l10n/trebbia.php:153
+msgid "50 sfumature di native"
+msgstr ""
+
+#: l10n/trebbia.php:156
+msgid "Android"
+msgstr ""
+
+#: l10n/trebbia.php:159
+msgid "Quantum Computing"
+msgstr ""
+
+#: l10n/trebbia.php:162
+msgid "GIS - BIM2GML"
+msgstr ""
+
+#: l10n/trebbia.php:165
+msgid "70 anni dopo la morte"
+msgstr ""
+
+#: l10n/trebbia.php:168
+msgid "La nuova direttiva sul copyright"
+msgstr ""
+
+#: l10n/trebbia.php:171 2017/includes/class-Footer.php:102
+msgid "Dipartimento di Informatica"
+msgstr ""
+
+#: l10n/trebbia.php:174
+msgid "Via Pessinetto 12, Torino"
+msgstr ""
+
+#: l10n/trebbia.php:177
 msgid ""
 "Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
 "Amedeo di Savoia / Dipartimento di Informatica*.\n"
@@ -1529,524 +1721,508 @@ msgid ""
 "°**59** e n°**59/** scendendo alla fermata *Svizzera*."
 msgstr ""
 
-#: l10n/trebbia.php:38 2016/includes/class-Footer.php:103
+#: l10n/trebbia.php:182 2016/includes/class-Footer.php:103
 #: 2017/includes/class-Footer.php:103
 msgid "Dipartimento di Biotecnologie"
 msgstr ""
 
-#: l10n/trebbia.php:41
+#: l10n/trebbia.php:185
 msgid "Via Nizza 52, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:44
+#: l10n/trebbia.php:188
 msgid ""
 "La fermata **Nizza** della metropolitana è a 50 metri dal Dipartimento di "
 "Biotecnologie."
 msgstr ""
 
-#: l10n/trebbia.php:47
+#: l10n/trebbia.php:191
 msgid "Politecnico di Torino (sede centrale)"
 msgstr ""
 
-#: l10n/trebbia.php:50
+#: l10n/trebbia.php:194
 msgid "Corso Duca degli Abruzzi 24, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:53
+#: l10n/trebbia.php:197
 msgid "Politecnico di Torino (cittadella)"
 msgstr ""
 
-#: l10n/trebbia.php:56
+#: l10n/trebbia.php:200
 msgid "Corso Castelfidardo 34, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:59 2016/includes/class-Footer.php:110
+#: l10n/trebbia.php:203 2016/includes/class-Footer.php:110
 #: 2017/includes/class-Footer.php:110
 msgid "Cascina Roccafranca"
 msgstr ""
 
-#: l10n/trebbia.php:62
+#: l10n/trebbia.php:206
 msgid "Via Edoardo Rubino 45, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:65 2016/includes/class-Footer.php:106
+#: l10n/trebbia.php:209 2016/includes/class-Footer.php:106
 #: 2017/includes/class-Footer.php:106
 msgid "Cortile del Maglio"
 msgstr ""
 
-#: l10n/trebbia.php:68
+#: l10n/trebbia.php:212
 msgid "Via Vittorio Andreis 18, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:71
+#: l10n/trebbia.php:215
 msgid "Sala Consiglieri della Provincia di Torino"
 msgstr ""
 
-#: l10n/trebbia.php:74
+#: l10n/trebbia.php:218
 msgid "Via Maria Vittoria 12, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:77
+#: l10n/trebbia.php:221
 msgid "Palazzo Cisterna"
 msgstr ""
 
-#: l10n/trebbia.php:80
+#: l10n/trebbia.php:224
 msgid "Casa del Quartiere"
 msgstr ""
 
-#: l10n/trebbia.php:83
+#: l10n/trebbia.php:227
 msgid "Via Oddino Morgari 14, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:86
+#: l10n/trebbia.php:230
 msgid "Torino Incontra"
 msgstr ""
 
-#: l10n/trebbia.php:89
+#: l10n/trebbia.php:233
 msgid "Via Nino Costa 8, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:92
+#: l10n/trebbia.php:236
 msgid "Toolbox Coworking"
 msgstr ""
 
-#: l10n/trebbia.php:95
+#: l10n/trebbia.php:239
 msgid "Via Agostino da Montefeltro 2, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:98
+#: l10n/trebbia.php:242
 msgid "Fablab"
 msgstr ""
 
-#: l10n/trebbia.php:101
+#: l10n/trebbia.php:245
 msgid "Via Egeo 16, Torino"
 msgstr ""
 
-#: l10n/trebbia.php:104
+#: l10n/trebbia.php:248
 msgid "Base"
 msgstr ""
 
-#: l10n/trebbia.php:107
+#: l10n/trebbia.php:251
 msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
 msgstr ""
 
-#: l10n/trebbia.php:110
+#: l10n/trebbia.php:254
 msgid "Dev"
 msgstr ""
 
-#: l10n/trebbia.php:113
+#: l10n/trebbia.php:257
 msgid "Area sviluppatori"
 msgstr ""
 
-#: l10n/trebbia.php:116
+#: l10n/trebbia.php:260
 msgid "Sys"
 msgstr ""
 
-#: l10n/trebbia.php:119
+#: l10n/trebbia.php:263
 msgid "Area sistemisti"
 msgstr ""
 
-#: l10n/trebbia.php:122
+#: l10n/trebbia.php:266
 msgid "Misc"
 msgstr ""
 
-#: l10n/trebbia.php:125
+#: l10n/trebbia.php:269
 msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
 msgstr ""
 
-#: l10n/trebbia.php:128
+#: l10n/trebbia.php:272
 msgid "Altro"
 msgstr ""
 
-#: l10n/trebbia.php:131
+#: l10n/trebbia.php:275
 msgid "Di tutto un po'"
 msgstr ""
 
-#: l10n/trebbia.php:134
+#: l10n/trebbia.php:278
 msgid "Intermedio"
 msgstr ""
 
-#: l10n/trebbia.php:137
+#: l10n/trebbia.php:281
 msgid "Adatto ad un pubblico abbastanza smanettone"
 msgstr ""
 
-#: l10n/trebbia.php:140
+#: l10n/trebbia.php:284
 msgid "Avanzato"
 msgstr ""
 
-#: l10n/trebbia.php:143
+#: l10n/trebbia.php:287
 msgid "Adatto ad un pubblico di nerd disperati"
 msgstr ""
 
-#: l10n/trebbia.php:146
+#: l10n/trebbia.php:290
 msgid "Sikurezza"
 msgstr ""
 
-#: l10n/trebbia.php:149
+#: l10n/trebbia.php:293
 msgid "Sicurezza"
 msgstr ""
 
-#: l10n/trebbia.php:155
-msgid "Linux Installation Party"
-msgstr ""
-
-#: l10n/trebbia.php:158
-msgid "Coderdojo"
-msgstr ""
-
-#: l10n/trebbia.php:161
+#: l10n/trebbia.php:305
 msgid "Corso"
 msgstr ""
 
-#: l10n/trebbia.php:164
+#: l10n/trebbia.php:308
 msgid "Aula B"
 msgstr ""
 
-#: l10n/trebbia.php:167
+#: l10n/trebbia.php:311
 msgid "Aula A"
 msgstr ""
 
-#: l10n/trebbia.php:170
+#: l10n/trebbia.php:314
 msgid "Aula D"
 msgstr ""
 
-#: l10n/trebbia.php:173
+#: l10n/trebbia.php:317
 msgid "Aula C"
 msgstr ""
 
-#: l10n/trebbia.php:176
+#: l10n/trebbia.php:320
 msgid "Spazio Coderdojo"
 msgstr ""
 
-#: l10n/trebbia.php:179
+#: l10n/trebbia.php:323
 msgid "Spazio Restart"
 msgstr ""
 
-#: l10n/trebbia.php:182
+#: l10n/trebbia.php:326
 msgid "Primo piano"
 msgstr ""
 
-#: l10n/trebbia.php:185
+#: l10n/trebbia.php:329
 msgid "Laboratorio Turing"
 msgstr ""
 
-#: l10n/trebbia.php:188
+#: l10n/trebbia.php:332
 msgid "Laboratorio Dijkstra"
 msgstr ""
 
-#: l10n/trebbia.php:191
+#: l10n/trebbia.php:335
 msgid "Aula F"
 msgstr ""
 
-#: l10n/trebbia.php:194
+#: l10n/trebbia.php:338
 msgid "Laboratorio von Neumann"
 msgstr ""
 
-#: l10n/trebbia.php:197
+#: l10n/trebbia.php:341
 msgid "Aula 1I"
 msgstr ""
 
-#: l10n/trebbia.php:200
+#: l10n/trebbia.php:344
 msgid "Aula 3I"
 msgstr ""
 
-#: l10n/trebbia.php:203
+#: l10n/trebbia.php:347
 msgid "Aula 5I"
 msgstr ""
 
-#: l10n/trebbia.php:206
+#: l10n/trebbia.php:350
 msgid "Aula 2I"
 msgstr ""
 
-#: l10n/trebbia.php:209
+#: l10n/trebbia.php:353
 msgid "Aula 4I"
 msgstr ""
 
-#: l10n/trebbia.php:212
+#: l10n/trebbia.php:356
 msgid "Aula 2"
 msgstr ""
 
-#: l10n/trebbia.php:215
+#: l10n/trebbia.php:359
 msgid "Aula 4"
 msgstr ""
 
-#: l10n/trebbia.php:218
+#: l10n/trebbia.php:362
 msgid "Aula 6"
 msgstr ""
 
-#: l10n/trebbia.php:221
+#: l10n/trebbia.php:365
 msgid "Aula 8"
 msgstr ""
 
-#: l10n/trebbia.php:224
+#: l10n/trebbia.php:368
 msgid "Aula 7"
 msgstr ""
 
-#: l10n/trebbia.php:227
+#: l10n/trebbia.php:371
 msgid "Aula 7I"
 msgstr ""
 
-#: l10n/trebbia.php:230
+#: l10n/trebbia.php:374
 msgid "Aula corsi 1"
 msgstr ""
 
-#: l10n/trebbia.php:233
+#: l10n/trebbia.php:377
 msgid "Aula corsi 2"
 msgstr ""
 
-#: l10n/trebbia.php:236
+#: l10n/trebbia.php:380
 msgid "Incubatore"
 msgstr ""
 
-#: l10n/trebbia.php:239
+#: l10n/trebbia.php:383
 msgid "Bottega"
 msgstr ""
 
-#: l10n/trebbia.php:242
+#: l10n/trebbia.php:386
 msgid "Salone"
 msgstr ""
 
-#: l10n/trebbia.php:245
+#: l10n/trebbia.php:389
 msgid "Sala Consiglio di Facoltà"
 msgstr ""
 
-#: l10n/trebbia.php:248
+#: l10n/trebbia.php:392
 msgid "Sala Einaudi"
 msgstr ""
 
-#: l10n/trebbia.php:251
+#: l10n/trebbia.php:395
 msgid "Aula Base"
 msgstr ""
 
-#: l10n/trebbia.php:254
+#: l10n/trebbia.php:398
 msgid "Aula Dev"
 msgstr ""
 
-#: l10n/trebbia.php:257
+#: l10n/trebbia.php:401
 msgid "Aula Sys"
 msgstr ""
 
-#: l10n/trebbia.php:260
+#: l10n/trebbia.php:404
 msgid "Aula Misc"
 msgstr ""
 
-#: l10n/trebbia.php:263
+#: l10n/trebbia.php:407
 msgid "asd"
 msgstr ""
 
-#: l10n/trebbia.php:266
+#: l10n/trebbia.php:410
 msgid "PHP"
 msgstr ""
 
-#: l10n/trebbia.php:269 l10n/trebbia.php:353
+#: l10n/trebbia.php:413 l10n/trebbia.php:497
 msgid "JavaScript"
 msgstr ""
 
-#: l10n/trebbia.php:272
+#: l10n/trebbia.php:416
 msgid "Microsoft Windows"
 msgstr ""
 
-#: l10n/trebbia.php:275
+#: l10n/trebbia.php:419
 msgid "NodeJS"
 msgstr ""
 
-#: l10n/trebbia.php:278
+#: l10n/trebbia.php:422
 msgid "Apple"
 msgstr ""
 
-#: l10n/trebbia.php:281
+#: l10n/trebbia.php:425
 msgid "Java"
 msgstr ""
 
-#: l10n/trebbia.php:284
+#: l10n/trebbia.php:428
 msgid "C++"
 msgstr ""
 
-#: l10n/trebbia.php:287
+#: l10n/trebbia.php:431
 msgid "Ubuntu"
 msgstr ""
 
-#: l10n/trebbia.php:290
+#: l10n/trebbia.php:434
 msgid "GNU/Linux"
 msgstr ""
 
-#: l10n/trebbia.php:293
+#: l10n/trebbia.php:437
 msgid "Turbo Pascal"
 msgstr ""
 
-#: l10n/trebbia.php:296
+#: l10n/trebbia.php:440
 msgid "Software Libero"
 msgstr ""
 
-#: l10n/trebbia.php:299
+#: l10n/trebbia.php:443
 msgid "Debian"
 msgstr ""
 
-#: l10n/trebbia.php:302
+#: l10n/trebbia.php:446
 msgid "Inkscape"
 msgstr ""
 
-#: l10n/trebbia.php:305
+#: l10n/trebbia.php:449
 msgid "Adobe Illustrator"
 msgstr ""
 
-#: l10n/trebbia.php:308
+#: l10n/trebbia.php:452
 msgid "Immagini vettoriali"
 msgstr ""
 
-#: l10n/trebbia.php:311
+#: l10n/trebbia.php:455
 msgid "Insegnare"
 msgstr ""
 
-#: l10n/trebbia.php:314
+#: l10n/trebbia.php:458
 msgid "Recupero del RAEE"
 msgstr ""
 
-#: l10n/trebbia.php:317
+#: l10n/trebbia.php:461
 msgid "Blender"
 msgstr ""
 
-#: l10n/trebbia.php:320
+#: l10n/trebbia.php:464
 msgid "C"
 msgstr ""
 
-#: l10n/trebbia.php:323
-msgid "Wikipedia"
-msgstr ""
-
-#: l10n/trebbia.php:326
+#: l10n/trebbia.php:470
 msgid "Embedded"
 msgstr ""
 
-#: l10n/trebbia.php:329
+#: l10n/trebbia.php:473
 msgid "Haskell"
 msgstr ""
 
-#: l10n/trebbia.php:332
+#: l10n/trebbia.php:476
 msgid "JavaEE"
 msgstr ""
 
-#: l10n/trebbia.php:335
+#: l10n/trebbia.php:479
 msgid "JSF"
 msgstr ""
 
-#: l10n/trebbia.php:338
+#: l10n/trebbia.php:482
 msgid "PrimeFaces"
 msgstr ""
 
-#: l10n/trebbia.php:341
+#: l10n/trebbia.php:485
 msgid "Maven"
 msgstr ""
 
-#: l10n/trebbia.php:344
+#: l10n/trebbia.php:488
 msgid "Engineering"
 msgstr ""
 
-#: l10n/trebbia.php:347
+#: l10n/trebbia.php:491
 msgid "HTML"
 msgstr ""
 
-#: l10n/trebbia.php:350
+#: l10n/trebbia.php:494
 msgid "CSS"
 msgstr ""
 
-#: l10n/trebbia.php:356
+#: l10n/trebbia.php:500
 msgid "Artificial Intelligence"
 msgstr ""
 
-#: l10n/trebbia.php:359
+#: l10n/trebbia.php:503
 msgid "Machine Learning"
 msgstr ""
 
-#: l10n/trebbia.php:362
+#: l10n/trebbia.php:506
 msgid "Mozilla"
 msgstr ""
 
-#: l10n/trebbia.php:365
+#: l10n/trebbia.php:509
 msgid "Effective Altruism"
 msgstr ""
 
-#: l10n/trebbia.php:368
+#: l10n/trebbia.php:512
 msgid "Python"
 msgstr ""
 
-#: l10n/trebbia.php:371
+#: l10n/trebbia.php:515
 msgid "Data Science"
 msgstr ""
 
-#: l10n/trebbia.php:374
+#: l10n/trebbia.php:518
 msgid "Jazz"
 msgstr ""
 
-#: l10n/trebbia.php:377
+#: l10n/trebbia.php:521
 msgid "lucid dreaming"
 msgstr ""
 
-#: l10n/trebbia.php:380
+#: l10n/trebbia.php:524
 msgid "Berlin"
 msgstr ""
 
-#: l10n/trebbia.php:383
+#: l10n/trebbia.php:527
 msgid "London"
 msgstr ""
 
-#: l10n/trebbia.php:386
+#: l10n/trebbia.php:530
 msgid "physics"
 msgstr ""
 
-#: l10n/trebbia.php:389
+#: l10n/trebbia.php:533
 msgid "phisics"
 msgstr ""
 
-#: l10n/trebbia.php:392
+#: l10n/trebbia.php:536
 msgid "consciousness"
 msgstr ""
 
-#: l10n/trebbia.php:395
+#: l10n/trebbia.php:539
 msgid "vegan"
 msgstr ""
 
-#: l10n/trebbia.php:398
-msgid "Rust"
-msgstr ""
-
-#: l10n/trebbia.php:401
+#: l10n/trebbia.php:545
 msgid "Curiosity"
 msgstr ""
 
-#: l10n/trebbia.php:404
+#: l10n/trebbia.php:548
 msgid "creativity"
 msgstr ""
 
-#: l10n/trebbia.php:407
+#: l10n/trebbia.php:551
 msgid "teamwork"
 msgstr ""
 
-#: l10n/trebbia.php:410
+#: l10n/trebbia.php:554
 msgid "laziness"
 msgstr ""
 
-#: l10n/trebbia.php:413
+#: l10n/trebbia.php:557
 msgid "Linux"
 msgstr ""
 
-#: l10n/trebbia.php:416
+#: l10n/trebbia.php:560
 msgid "Big Data"
 msgstr ""
 
-#: l10n/trebbia.php:419
+#: l10n/trebbia.php:563
 msgid "Kubernetes"
 msgstr ""
 
-#: l10n/trebbia.php:422
+#: l10n/trebbia.php:566
 msgid "Devops"
 msgstr ""
 
-#: l10n/trebbia.php:425
+#: l10n/trebbia.php:569
 msgid "Azure"
 msgstr ""
 
-#: l10n/trebbia.php:428
+#: l10n/trebbia.php:572
 msgid "developer"
 msgstr ""
 
