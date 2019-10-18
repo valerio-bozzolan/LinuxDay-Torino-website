@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Linux Day website contributors
 # This file is distributed under the same license as the linuxday package.
-# With the help of Beppe Cantanna, 2019
-# Silvio Sandron, 2019
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 06:12+0000\n"
-"PO-Revision-Date: 2019-10-16 23:20+0200\n"
+"PO-Revision-Date: 2019-10-18 13:33+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,14 +18,13 @@ msgstr ""
 "Language: pms\n"
 
 #: 2016/credits.php:27
-#, fuzzy
 msgid ""
 "Di seguito sono riportati gli elementi utilizzati in questo sito, tra i "
 "migliori esempi di <strong>software libero</strong> e <strong>open source</"
 "strong>."
 msgstr ""
-"Si 'd apress i peule trové ij element dovrà ant ës sit, antre ij pì bon "
-"esempe ëd software lìber e duvert 5open source)."
+"Si d’apress it peule trové ij element dovrà ant ës sit, antre ij pì bon "
+"esempe ëd software lìber e duvert (open source)."
 
 #: 2016/credits.php:37
 #, fuzzy
@@ -89,9 +87,8 @@ msgid "Famiglia di caratteri."
 msgstr "Famija ëd caràcter."
 
 #: 2016/credits.php:121
-#, fuzzy
 msgid "Collezione di icone Material Design."
-msgstr "Colession ëd icon-e Material Design."
+msgstr "Colession d’icon-e Material Design."
 
 #: 2016/credits.php:126
 #, fuzzy
@@ -99,9 +96,8 @@ msgid "https://inkscape.org/it/"
 msgstr "https://inkscape.org/it/"
 
 #: 2016/credits.php:128
-#, fuzzy
 msgid "Programma per disegno vettoriale."
-msgstr "Program ëd dissegn vectorial."
+msgstr "Programa ëd dissegn vectorial."
 
 #: 2016/credits.php:133
 #, fuzzy
@@ -114,9 +110,8 @@ msgid "Fotoritocchi e modifiche alle immagini"
 msgstr "Modificassion e ameliorassion ëd fòto e mistà"
 
 #: 2016/credits.php:142
-#, fuzzy
 msgid "Banale editor di testo da terminale."
-msgstr "Sempi editor ëd text da terminal."
+msgstr "Editor sempi ëd text da terminal."
 
 #: 2016/credits.php:149
 #, fuzzy
@@ -129,14 +124,12 @@ msgid "Controllo versione distribuito"
 msgstr "Control spantià ëd version."
 
 #: 2016/credits.php:163
-#, fuzzy
 msgid "Event manager open source"
-msgstr "Masent ëd ij event duvert 5open source°"
+msgstr "Masent ëd j’event duvert (open source)"
 
 #: 2016/credits.php:170
-#, fuzzy
 msgid "Your Own Url Shortener"
-msgstr "Vòstr scurseur ëd URL"
+msgstr "Tò scurseur ëd URL"
 
 #: 2016/credits.php:177
 #, fuzzy
@@ -144,9 +137,8 @@ msgid "Validatore standard HTML, JavaScript e CSS"
 msgstr "Validateur standard HTML, JavaScript e CSS"
 
 #: 2016/credits.php:184
-#, fuzzy
 msgid "Catalogo di software libero per Android"
-msgstr "Catalògh ëd software lìber për Android"
+msgstr "Catalogh ëd software lìber për Android"
 
 #: 2016/credits.php:193
 #, fuzzy, php-format
@@ -191,14 +183,14 @@ msgid "Note"
 msgstr "Armarche"
 
 #: 2016/event-edit.php:229
-#, fuzzy, php-format
+#, php-format
 msgid "Modifica %s: %s"
-msgstr "Modifié %s: %s"
+msgstr "Modifia %s: %s"
 
 #: 2016/event-edit.php:237 2016/event-edit.php:569 2016/user-edit.php:559
-#, fuzzy, php-format
+#, php-format
 msgid "Aggiungi %s"
-msgstr "Gionté"
+msgstr "Gionta %s"
 
 #: 2016/event-edit.php:238 2016/index.php:72
 #, fuzzy
@@ -206,9 +198,8 @@ msgid "Evento"
 msgstr "Event"
 
 #: 2016/event-edit.php:260 2016/user-edit.php:253
-#, fuzzy
 msgid "Vedi"
-msgstr "Vardé"
+msgstr "Varda"
 
 #: 2016/event-edit.php:271 2016/user-edit.php:606
 #, fuzzy
@@ -241,8 +232,9 @@ msgid "Traccia"
 msgstr "Trassé"
 
 #: 2016/event-edit.php:396
+#, fuzzy
 msgid "Stanza"
-msgstr ""
+msgstr "Stansia"
 
 #: 2016/event-edit.php:439
 #, fuzzy
@@ -261,9 +253,8 @@ msgstr "Mistà"
 
 #: 2016/event-edit.php:505 2016/event-edit.php:615 2016/user-edit.php:482
 #: 2016/user-edit.php:541
-#, fuzzy
 msgid "Salva"
-msgstr "Anregistré"
+msgstr "Anregistra"
 
 #: 2016/event-edit.php:518 2016/user-edit.php:493
 #, fuzzy
@@ -271,19 +262,17 @@ msgid "Nuova Immagine"
 msgstr "Neuva mistà"
 
 #: 2016/event-edit.php:522 2016/user-edit.php:497
-#, fuzzy
 msgid "Sfoglia"
-msgstr "Përcore"
+msgstr "Përcor"
 
 #: 2016/event-edit.php:529 2016/user-edit.php:504
-#, fuzzy
 msgid "Carica"
-msgstr "Carié"
+msgstr "Caria"
 
 #: 2016/event-edit.php:542
-#, fuzzy, php-format
+#, php-format
 msgid "Associa %s"
-msgstr "Assossié %s"
+msgstr "Assossia %s"
 
 #: 2016/event-edit.php:543 2016/event-edit.php:572 2016/event-edit.php:620
 #, fuzzy
@@ -292,9 +281,8 @@ msgstr "Utilisador"
 
 #: 2016/event-edit.php:563 2016/user-edit.php:584 2016/user-edit.php:617
 #: 2019/index.php:166
-#, fuzzy
 msgid "Aggiungi"
-msgstr "Gionté"
+msgstr "Gionta"
 
 #: 2016/event-edit.php:571
 #, fuzzy, php-format
@@ -303,19 +291,17 @@ msgstr "Neuv %s"
 
 #: 2016/event-edit.php:594 2016/event-edit.php:619 2016/user-edit.php:242
 #: 2016/user-edit.php:519
-#, fuzzy, php-format
+#, php-format
 msgid "Modifica %s"
-msgstr "Modifié %s"
+msgstr "Modifia %s"
 
 #: 2016/event-edit.php:595
-#, fuzzy
 msgid "Ordinamento"
 msgstr "Ardrissé"
 
 #: 2016/event-edit.php:612 2016/user-edit.php:538 2016/user-edit.php:632
-#, fuzzy
 msgid "Elimina"
-msgstr "Eliminé"
+msgstr "Elimina"
 
 #: 2016/event.php:42 2019/event.php:37
 #, fuzzy, php-format
@@ -323,9 +309,8 @@ msgid "%s: %s"
 msgstr "%s: %s"
 
 #: 2016/event.php:60
-#, fuzzy
 msgid "Modifica evento"
-msgstr "Modifié un event"
+msgstr "Cangia n’event"
 
 #: 2016/event.php:81 2016/user.php:155 2019/event.php:86 2019/user.php:198
 #, fuzzy
@@ -340,9 +325,8 @@ msgstr "Andoa"
 
 #: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:107
 #: 2019/user.php:200
-#, fuzzy
 msgid "Quando"
-msgstr "Quandi"
+msgstr "Quand"
 
 #: 2016/event.php:106 2016/index.php:98 2019/event.php:111
 #, fuzzy, php-format
@@ -355,14 +339,14 @@ msgid "Scarica promemoria calendario"
 msgstr "Dëscaria ël memo dël calendari"
 
 #: 2016/event.php:165 2019/event.php:171
-#, fuzzy, php-format
+#, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
-msgstr "Dëscarié %s distribuàbil sota lissensa %s."
+msgstr "Dëscaria %s distribuàbil sota lissensa %s."
 
 #: 2016/event.php:184 2019/event.php:190
-#, fuzzy, php-format
+#, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
-msgstr "Vardé %s distribuàbil sota lissensa %s."
+msgstr "Varda %s distribuàbil sota lissensa %s."
 
 #: 2016/event.php:206 2019/event.php:211
 #, fuzzy
@@ -395,9 +379,8 @@ msgid "Il %s si è concluso..."
 msgstr "Ël %s a l'é concludu-se..."
 
 #: 2016/index.php:69
-#, fuzzy
 msgid "Ma abbiamo altro!"
-msgstr "Ma i l'oma 'd autr"
+msgstr "Ma i l'oma d’autr"
 
 #: 2016/index.php:99 2019/user.php:289
 #, fuzzy
@@ -431,10 +414,9 @@ msgstr "https://it.wikipedia.org/wiki/Linux_%28kernel%29"
 
 # Coding/codage?
 #: 2016/index.php:162
-#, fuzzy
 msgid "Il tema di quest'anno a livello nazionale è... il <code>coding</code>!"
 msgstr ""
-"Ël suget ëd s'ann si à lëvel nassional a l'é ël <code>coding (codage)</code>!"
+"Ël suget ëd s'ann si a lëvel nassional a l'é ël <code>coding (codage)</code>!"
 
 #: 2016/index.php:186
 #, fuzzy, php-format
@@ -450,9 +432,9 @@ msgstr ""
 "fin-a ij espert)."
 
 #: 2016/index.php:194
-#, fuzzy, php-format
+#, php-format
 msgid "In seguito si riporta la tabella dei talk suddivisa in %s categorie:"
-msgstr "Si 'd apress la taula ëd le presentassion dividùa an %s categorìe:"
+msgstr "Si d’apress la taula ëd le presentassion dividùa an %s categorìe:"
 
 #: 2016/index.php:204
 #, fuzzy
@@ -460,14 +442,12 @@ msgid "Planimetria"
 msgstr "Pian"
 
 #: 2016/index.php:205
-#, fuzzy
 msgid "La manifestazione è suddivisa in aule tematiche."
-msgstr "'L event a l'é organisà an sale temàtiche."
+msgstr "L’event a l'é organisà an sale temàtiche."
 
 #: 2016/index.php:210
-#, fuzzy
 msgid "Planimetria Dipartimento di Informatica"
-msgstr "Pian dël Dëpartament 'd Informàtica"
+msgstr "Pian dël Dëpartament d’Informàtica"
 
 #: 2016/index.php:219
 #, fuzzy
@@ -475,27 +455,25 @@ msgid "App Android"
 msgstr "Applicassion Android"
 
 #: 2016/index.php:221
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "La tabella dei talk può essere scomoda su schermo piccolo. Prova l'app %s!"
 msgstr ""
 "La taula ëd le presentassion a peul esse mal da lese ans un cit scren. "
-"Preuvé l'applicassion %s!"
+"Preuva l'applicassion %s!"
 
 #: 2016/index.php:236 2016/index.php:248
-#, fuzzy, php-format
+#, php-format
 msgid "Scarica e installa %s:"
-msgstr "Dëscarié e instalé %s:"
+msgstr "Dëscaria e instala %s:"
 
 #: 2016/index.php:242
-#, fuzzy
 msgid "Installa F-Droid"
-msgstr "Instalé F-Droid"
+msgstr "Instala F-Droid"
 
 #: 2016/index.php:254
-#, fuzzy
 msgid "Installa LDTO16"
-msgstr "Instalé LDTO16"
+msgstr "Instala LDTO16"
 
 #: 2016/index.php:263
 #, fuzzy
@@ -544,8 +522,9 @@ msgid "Coderdojo Torino 2"
 msgstr "Coderdojo Turin 2"
 
 #: 2016/index.php:299
+#, fuzzy
 msgid "Allestimento museale di Retrocomputing."
-msgstr ""
+msgstr "Realisassion museal ëd Retrocomputing."
 
 #: 2016/index.php:302
 #, fuzzy, php-format
@@ -561,9 +540,8 @@ msgstr ""
 "Linux."
 
 #: 2016/index.php:307
-#, fuzzy
 msgid "volontari"
-msgstr "Për giuté"
+msgstr "për giuté"
 
 #: 2016/index.php:318
 #, fuzzy
@@ -576,9 +554,9 @@ msgid "Abilitare JavaScript per la mappa interattiva."
 msgstr "Autorisé JavaScript për ël pian interativ."
 
 #: 2016/index.php:338
-#, fuzzy, php-format
+#, php-format
 msgid "Vedi %s su OpenStreetMap"
-msgstr "Vardé %s ansima OpenStreetMap"
+msgstr "Varda %s ansima OpenStreetMap"
 
 # Duvert/lìber?
 #: 2016/index.php:359
@@ -587,12 +565,11 @@ msgid "Le quattro libertà fontamentali del software libero"
 msgstr "Le quatr libertà fondamentale dël software duvert"
 
 #: 2016/index.php:366
-#, fuzzy
 msgid "Ingresso gratuito"
-msgstr "Intrada à gràtis"
+msgstr "Intrada a gràtis"
 
 #: 2016/index.php:369
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Anche quest'anno l'accesso all'evento è completamente gratuito.<br /> Non "
 "dimenticare di portarti a casa una <em>maglietta</em> o qualche dozzina di "
@@ -600,7 +577,7 @@ msgid ""
 "libero, per far sì che altri Linux Day rimangano sempre indipendenti, liberi "
 "e gratuiti.<br /> Ci vediamo il <strong>%s</strong>!"
 msgstr ""
-"St'ann si 'l acess a l'é torna completament à gràtis.<br /> Profite-ne për "
+"St'ann si 'l acess a l'é torna completament a gràtis.<br /> Profit-ne për "
 "pijé ëd <em>t-shirt </em> o vaire adesiv e pins! A venta promeuve e spantié "
 "ël software duvert, për che 'd autre Linux Day a peulo continué à esse "
 "independent, lìber e à gràtis.<br /> Arvëd-se ij <strong>%s</strong> à Turin!"
@@ -611,9 +588,8 @@ msgid "22 ottobre"
 msgstr "22 'd otober"
 
 #: 2016/index.php:382
-#, fuzzy
 msgid "Scopri i nostri partner"
-msgstr "Dëscheuvre nòsti partner"
+msgstr "Dëscheuvr nòsti partner"
 
 #: 2016/index.php:384
 #, fuzzy, php-format
@@ -663,9 +639,8 @@ msgid "Login"
 msgstr "Intré/Login"
 
 #: 2016/login.php:48
-#, fuzzy
 msgid "Sei loggato!"
-msgstr "I seve intrà"
+msgstr "It ses intrà"
 
 #: 2016/login.php:51
 #, fuzzy
@@ -683,19 +658,17 @@ msgid "Password"
 msgstr "Paròla 'd acess/Password"
 
 #: 2016/login.php:74
-#, fuzzy
 msgid "Accedi"
-msgstr "Intré"
+msgstr "Intra"
 
 #: 2016/partner.php:23
-#, fuzzy
 msgid ""
 "Sapevi che il Linux Day è una festa nazionale? Nello stesso giorno si "
 "festeggia in tutta Italia.Tutto questo, a Torino, non sarebbe possibile "
 "senza una comunità incredibile. Grazie a tutti coloro che credono nella "
 "libertà digitale e culturale."
 msgstr ""
-"I savìe che ël Linux Day a l'é na festa nassional, ch'a l'ha leu an tuta "
+"It savìe che ël Linux Day a l'é na festa nassional, ch'a l'ha leu an tuta "
 "Italia. Tut son, an bele si à Turin, a sarìa nen possìbil sensa daré na "
 "comunità incredìbila. Un gròss mersì à tuit coj ch'a chërdo ant la libertà "
 "digital e cultural."
@@ -756,9 +729,8 @@ msgid "Comune di Torino"
 msgstr "Comun-a ëd Turin"
 
 #: 2016/partner.php:170
-#, fuzzy
 msgid "Dipartimento di Informatica UniTO"
-msgstr "Dëpartament 'd Informàtica ëd l'Università ëd Turin"
+msgstr "Dëpartament d’Informàtica ëd l'Università ëd Turin"
 
 #: 2016/partner.php:177
 #, fuzzy
@@ -777,13 +749,13 @@ msgid "Alcuni scatti dal Linux Day 2016 a Torino."
 msgstr "Quaich moment dël Linux Day 2016 à Turin."
 
 #: 2016/user-edit.php:245
-#, fuzzy
 msgid "Aggiungi Utente"
-msgstr "Gionté un utilisador"
+msgstr "Gionta n’utilisador"
 
 #: 2016/user-edit.php:265 2016/user.php:153 2019/user.php:196
+#, fuzzy
 msgid "Nome"
-msgstr ""
+msgstr "Nòm"
 
 #: 2016/user-edit.php:280
 #, fuzzy
@@ -791,8 +763,9 @@ msgid "Cognome"
 msgstr "Nòm ëd famija"
 
 #: 2016/user-edit.php:295
+#, fuzzy
 msgid "Nickname"
-msgstr ""
+msgstr "Stranòm"
 
 #: 2016/user-edit.php:310
 #, fuzzy
@@ -806,7 +779,7 @@ msgstr "Gravatar"
 
 #: 2016/user-edit.php:340
 msgid "Sito web"
-msgstr ""
+msgstr "Sit web"
 
 #: 2016/user-edit.php:429
 #, fuzzy
@@ -814,8 +787,9 @@ msgid "Licenza preferita"
 msgstr "Lissensa preferìa"
 
 #: 2016/user-edit.php:431
+#, fuzzy
 msgid "Nessuna"
-msgstr ""
+msgstr "Gnun-a"
 
 #: 2016/user-edit.php:464
 #, fuzzy, php-format
@@ -823,8 +797,9 @@ msgid "Biografia (%s)"
 msgstr "Biografìa (%s)"
 
 #: 2016/user-edit.php:520 2016/user-edit.php:560 2016/user-edit.php:597
+#, fuzzy
 msgid "Skill"
-msgstr ""
+msgstr "Competense"
 
 #: 2016/user-edit.php:596
 #, fuzzy, php-format
@@ -832,8 +807,9 @@ msgid "Crea %s"
 msgstr "Creé %s"
 
 #: 2016/user-edit.php:611
+#, fuzzy
 msgid "Programmazione"
-msgstr ""
+msgstr "Programassion"
 
 #: 2016/user-edit.php:612
 #, fuzzy
@@ -841,16 +817,18 @@ msgid "Interesse"
 msgstr "Interess"
 
 #: 2016/user-edit.php:614 2016/user.php:154 2019/user.php:197
+#, fuzzy
 msgid "Tipo"
-msgstr ""
+msgstr "Tip"
 
 #: 2016/user.php:48 2019/event.php:63 2019/index.php:143 2019/user.php:71
+#, fuzzy
 msgid "Modifica"
-msgstr ""
+msgstr "Modifié"
 
 #: 2016/user.php:80 2019/user.php:108
 msgid "Sito personale"
-msgstr ""
+msgstr "Sit personal"
 
 #: 2016/user.php:102 2019/user.php:133
 #, fuzzy
@@ -868,35 +846,37 @@ msgid "Bio"
 msgstr "Bio"
 
 #: 2016/user.php:142 2019/user.php:175 l10n/trebbia.php:152
+#, fuzzy
 msgid "Talk"
-msgstr ""
+msgstr "Presentassion"
 
 #: 2016/user.php:157
+#, fuzzy
 msgid "When"
-msgstr ""
+msgstr "Quandi"
 
 #: 2016/user.php:170 2019/user.php:213
 #, php-format
 msgid "Vedi %s"
-msgstr ""
+msgstr "Varda %s"
 
 #: 2016/user.php:184 2016/user.php:244 2019/user.php:227
-#, php-format
+#, fuzzy, php-format
 msgid "Ore <b>%s</b> (il %s)"
-msgstr ""
+msgstr "Ore <b>%s</b> (ij %s)"
 
 #: 2016/user.php:195 2019/user.php:239
+#, fuzzy
 msgid "Quest'anno il relatore non ha tenuto nessun talk."
-msgstr ""
+msgstr "S'ann si ël presentador a l'ha fait gnun-e presentassion."
 
 #: 2016/user.php:213
-#, fuzzy
 msgid "Altre partecipazioni"
-msgstr "'D autre partissipassion"
+msgstr "D’autre partissipassion"
 
 #: 2016/user.php:261 2019/user.php:303
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: 2017/index.php:45
 #, fuzzy
@@ -906,31 +886,35 @@ msgstr "Linux Day<br />Turin"
 #: 2017/index.php:47 2019/template/intro.php:35
 #, php-format
 msgid "Se anche tu sei %suno smanettone%s, vieni a trovarci!"
-msgstr ""
+msgstr "S'it ses ëdcò ti %sun tarabascaire%s ven-ne a trové!"
 
 #: 2017/index.php:51
 msgid "Sabato 28 ottobre"
-msgstr ""
+msgstr "Saba 28 'd Otober"
 
 #: 2017/index.php:60 2019/template/intro.php:49
+#, fuzzy
 msgid "uno smanettone"
-msgstr ""
+msgstr "un tarabascaire"
 
 #: 2017/index.php:61 2019/template/intro.php:50
+#, fuzzy
 msgid "un programmatore"
-msgstr ""
+msgstr "un programeur"
 
 #: 2017/index.php:62
+#, fuzzy
 msgid "un tipo curioso"
-msgstr ""
+msgstr "un curios"
 
 #: 2017/index.php:63 2019/template/intro.php:53
 msgid "un sistemista"
-msgstr ""
+msgstr "n’administrador sistem"
 
 #: 2017/index.php:64 2019/template/intro.php:54
+#, fuzzy
 msgid "un po' pinguino"
-msgstr ""
+msgstr "un pòch pingoin"
 
 #: 2017/index.php:65 2019/template/intro.php:55
 #, fuzzy
@@ -938,8 +922,9 @@ msgid "in modalità incognito"
 msgstr "an meud stermà"
 
 #: 2017/index.php:66 2019/template/intro.php:56
+#, fuzzy
 msgid "un cucciolo di GNU"
-msgstr ""
+msgstr "Në sforniòt ëd GNU"
 
 #: 2017/index.php:78
 #, fuzzy
@@ -965,7 +950,6 @@ msgstr ""
 "otober) an vaire sit an Italia."
 
 #: 2017/index.php:94
-#, fuzzy
 msgid ""
 "Il Comitato Linux Day Torino, costituito informalmente da volontari, "
 "associazioni e professionisti, organizza dal 2007 l'edizione torinese della "
@@ -973,33 +957,37 @@ msgid ""
 "ogni tipo di interesse."
 msgstr ""
 "Ël Comità Linux Day Turin, creà informalment da ëd volontari, associassion e "
-"professionaj, a organisa da 2007 l'edission turinèisa ëd 'l event, ansima "
+"professionaj, a organisa da 2007 l'edission turinèisa ëd l’event, ansima "
 "vaire session paralele, con ëd presentassion për vira interess."
 
 #: 2017/index.php:100
+#, fuzzy
 msgid ""
 "Quest'anno siamo ospitati dal Dipartimento di Informatica dell'Università di "
 "Torino, in via Pessinetto. L'accesso all'evento è libero e gratuito."
 msgstr ""
+"S'ann si i soma acheujù dal Dëpartament 'd Informatica ëd l'Università ëd "
+"Turin, an contrà ëd Pessinet. 'L access a l'é lìber e a gratis."
 
 #: 2017/index.php:103
 msgid "Vedi il programma"
-msgstr ""
+msgstr "Varda ël program"
 
 #: 2017/index.php:118 2017/index.php:143
+#, fuzzy
 msgid "Location"
-msgstr ""
+msgstr "Leu"
 
 #: 2017/index.php:118
-#, fuzzy
 msgid "Dipartimento di Informatica UniTo in Via Pessinetto 12, Torino."
 msgstr ""
-"Dëpartament 'd Informàtica ëd l'Università ëd Turin, contrà ëd Pessinet 12, "
+"Dëpartament d’Informàtica ëd l'Università ëd Turin, contrà ëd Pessinet 12, "
 "Turin"
 
 #: 2017/index.php:119
+#, fuzzy
 msgid "Speakers"
-msgstr ""
+msgstr "Presentador"
 
 #: 2017/index.php:120
 #, fuzzy, php-format
@@ -1016,32 +1004,41 @@ msgstr "<b>ij 28 'd otober 2017</b> da doi bòt à 7 ore dël dòp-mesdì."
 msgid "Extras"
 msgstr "Extra"
 
+# o Saba Sors Duverta
 #: 2017/index.php:129
+#, fuzzy
 msgid "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
-msgstr ""
+msgstr "Linux Install Party, Restart Party, CoderDojo, Open Source Saturday"
 
 #: 2017/index.php:146
+#, fuzzy
 msgid ""
 "Per il secondo anno il Dipartimento di Informatica dell'Università di Torino "
 "ospita il Linux Day di Torino. Per avvicinare i professionisti di domani a "
 "GNU/Linux, al software libero e all'open source."
 msgstr ""
+"Për lë scond ann ël Dëpartament 'd Informatica ëd l'Università ëd Turin a "
+"acheuj ël Linux Dau ëd Turin, con ël but 'd avziné ij professionaj ëd doman "
+"a GNU/Linux, al software lìber e duvert."
 
 #: 2017/index.php:151
+#, fuzzy
 msgid "Per raggiungerlo puoi:"
-msgstr ""
+msgstr "Për ruvé si it peule:"
 
 #: 2017/index.php:152
 msgid "Venire in auto, il parcheggio in zona non manca"
-msgstr ""
+msgstr "Ven-e con l'auto, a-i é gnun problem a parchegé"
 
 #: 2017/index.php:153
+#, fuzzy
 msgid "Prendere il tram 9 o 3 (\"Ospedale Amedeo di Savoia\")"
-msgstr ""
+msgstr "Pijé ël tram 9 o 3 (Ospidal Amedé ëd Savòja)"
 
 #: 2017/index.php:154
+#, fuzzy
 msgid "Prendere il bus 59 o 50/"
-msgstr ""
+msgstr "Pijé ël bus 59 o 50/"
 
 #: 2017/index.php:156 2019/index.php:382
 #, fuzzy
@@ -1049,8 +1046,9 @@ msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Autorisé JavaScript per vardé ël pian"
 
 #: 2017/index.php:167 2019/index.php:84 2019/template/navbar-home.php:57
+#, fuzzy
 msgid "Programma"
-msgstr ""
+msgstr "Program"
 
 #: 2017/index.php:168
 #, fuzzy
@@ -1058,25 +1056,30 @@ msgid "Il programma dei talk è in fase di definizione! :)"
 msgstr "Ël program ëd le presentassion a l'é an fas ëd definission :)"
 
 #: 2017/index.php:185
+#, fuzzy
 msgid "sessioni"
-msgstr ""
+msgstr "session"
 
 #: 2017/index.php:186
+#, fuzzy
 msgid "ore"
-msgstr ""
+msgstr "ore"
 
 #: 2017/index.php:187
+#, fuzzy
 msgid "relatori"
-msgstr ""
+msgstr "presentador"
 
 #: 2017/index.php:200
 msgid ""
 "Se i talk non dovessero bastare, abbiamo altro con cui animare la giornata!"
 msgstr ""
+"Se le presentassio a doveisso nen basté, i l'oma bin d’autr për anpini la "
+"giornà!"
 
 #: 2017/index.php:216
 msgid "Porta il tuo computer, ti aiuteremo ad installare Linux!"
-msgstr ""
+msgstr "Ven con tò computer, it giuteroma a instalé Linux!"
 
 #: 2017/index.php:217
 #, fuzzy
@@ -1086,29 +1089,33 @@ msgstr ""
 "ansem!"
 
 #: 2017/index.php:223
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Workshop di programmazione di base per bambini e ragazzi dai %d ai %d anni. "
 "Prenotazione obbligatoria (disponibile a breve)."
 msgstr ""
+"Workshop ëd programassion ëd bas per masnà da %d a %d agn. Rëservassion "
+"indispensàbila (a deurbirà da si nen vaire)."
 
 #: 2017/index.php:227
+#, fuzzy
 msgid ""
 "Vieni a presentare il tuo progetto open source e smanettaci con altri "
 "appassionati!"
 msgstr ""
+"Ven presenté tò proget sors duverta e tarabsca ansima con 'd autre passionà!"
 
 #: 2017/index.php:235
+#, fuzzy
 msgid "Sponsor"
-msgstr ""
+msgstr "Sponsor"
 
 #: 2017/index.php:236
-#, fuzzy
 msgid ""
 "Grazie al nostro sponsor, che ci aiuta a sostenere le spese e a far crescere "
 "l'evento."
 msgstr ""
-"Mersì à nòstr sponsor, che a në giuta con le spèise e à fé chërse 'l event."
+"Mersì à nòstr sponsor, che an giuta con le spèise e a fé chërse l’event."
 
 #: 2017/load.php:46
 #, fuzzy
@@ -1127,16 +1134,15 @@ msgstr "API"
 
 #: 2019/index.php:50
 msgid "Tutti insieme"
-msgstr ""
+msgstr "Tuit ansem"
 
 #: 2019/index.php:51
-#, fuzzy
 msgid ""
 "LAN party, installation party, mini Restart Party. Porta un amico da "
 "convertire: ci divertiremo insieme a tutte le community."
 msgstr ""
-"LAN party, installation party, mini Restart Party. Porté n'amisa o un amis "
-"da convertì, për amuse-se con tuta la comunità."
+"LAN party, installation party, mini Restart Party. Porté n'amisa o n’amis da "
+"convertì, për amuse-se con tuta la comunità."
 
 #: 2019/index.php:57
 #, fuzzy, php-format
@@ -1144,10 +1150,13 @@ msgid "%s sessioni"
 msgstr "%s session"
 
 #: 2019/index.php:60
+#, fuzzy
 msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
 msgstr ""
+"Sern antre la <b>stansia ëd bas</b>, la stansia për <b>administrator sistem</"
+"b> o <b>programeur</b> e bon corage!"
 
 #: 2019/index.php:66
 #, fuzzy, php-format
@@ -1155,15 +1164,17 @@ msgid "%s relatori"
 msgstr "%s presentador"
 
 #: 2019/index.php:69
+#, fuzzy
 msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
 msgstr ""
+"Programeur, ingenié, avocat, professionaj dël software duvert. Tuit ansem a "
+"Turin."
 
 #: 2019/index.php:85
-#, fuzzy
 msgid "Ecco un assaggio dei temi che verranno affrontati:"
-msgstr "An bele si në scianchet dij suget tratà:"
+msgstr "Anbelessì në scianchet dij suget tratà:"
 
 #: 2019/index.php:93 2019/index.php:123
 #, fuzzy, php-format
@@ -1176,16 +1187,19 @@ msgid "Di %s"
 msgstr "Ëd %s"
 
 #: 2019/index.php:115
+#, fuzzy
 msgid "Speaker Segreto"
-msgstr ""
+msgstr "Presentador secret"
 
 #: 2019/index.php:137
+#, fuzzy
 msgid "Memo"
-msgstr ""
+msgstr "Memo"
 
 #: 2019/index.php:181
+#, fuzzy
 msgid "Nello stesso momento"
-msgstr ""
+msgstr "Ant 'l istess moment"
 
 #: 2019/index.php:187 2019/index.php:247
 #, fuzzy, php-format
@@ -1198,6 +1212,9 @@ msgid ""
 "centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
 "GNU/Linux e aiuteremo noi nella loro liberazione!"
 msgstr ""
+"Pòrta sì tò computer o teléfon portàbil, un rustior ëd pan, na sentral termo-"
+"nucleara o tut lòn ch'a peul esse tramuvà a GNU/Linux, e i të giuteroma "
+"noiautre à libere-je!"
 
 #: 2019/index.php:193
 #, fuzzy, php-format
@@ -1207,8 +1224,9 @@ msgstr ""
 "La mistà ëd %s e ëd %s disponìbile rëspectivament sota lissensa %s e %s."
 
 #: 2019/index.php:208
+#, fuzzy
 msgid "pubblico dominio"
-msgstr ""
+msgstr "Pùblich domin"
 
 #: 2019/index.php:235
 #, fuzzy
@@ -1231,7 +1249,7 @@ msgstr "Informassion ans ël Linux Day nassional"
 
 #: 2019/index.php:268
 msgid "Posso portare un amico che non capisce nulla?"
-msgstr ""
+msgstr "Peul-me mné un amis ch'a na capiss nen d’autr tut?"
 
 #: 2019/index.php:274
 msgid ""
@@ -1239,23 +1257,28 @@ msgid ""
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
 "all'installation party e lo aiuteremo nella migrazione al software libero!"
 msgstr ""
+"A l'é franch important avèj n’amis. Ma ancor pì important a l'é mne-lo si! "
+"Da-je largh ant la stansia \"ëd bas\", e it vëdras ch'a s'anbëtterà pa. O "
+"pura men-lo a 'l installation party, e i-j giuteroma për soa migrassion vers "
+"ël software lìber."
 
 #: 2019/index.php:283
+#, fuzzy
 msgid "Quanto costa?"
-msgstr ""
+msgstr "Vaire a ven?"
 
 #: 2019/index.php:289
-#, fuzzy
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
 msgstr ""
-"'L event a l'é completament à gratis e son a l'é mach possìbil mersì al "
+"'L event a l'é completament a gratis e son a l'é mach possìbil mersì al "
 "supòrt ëd tute le comunità ëd Turin e ëd chi ch'a-j giuta."
 
 #: 2019/index.php:298
+#, fuzzy
 msgid "Registrerete i talk?"
-msgstr ""
+msgstr "I anregistrereve le presentassion?"
 
 #: 2019/index.php:304
 msgid ""
@@ -1264,6 +1287,9 @@ msgid ""
 "Media Partner farà il possibile per registrare più tracce possibili, forse "
 "anche con uno streaming."
 msgstr ""
+"Ven personalment! I l'oma damanca ëd tò agiut concret për rende sa comunità "
+"ativa e fiamenga! An tute le manere nòstr Media Partner a tirerà à "
+"anregistré ël pì possìbil ëd trasse, eventualment an streaming"
 
 #: 2019/index.php:313
 #, fuzzy
@@ -1276,10 +1302,13 @@ msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
 msgstr "Di-ne vòsta taja, e i lo buteroma da na banda për 'l event!"
 
 #: 2019/index.php:320
+#, fuzzy
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
 msgstr ""
+"Dabon, a venta di-lo anans, për che a-i é ëd taje ch'a finisso pì an pressa, "
+"e vira ann vaire a resto patanù."
 
 #: 2019/index.php:341
 #, fuzzy
@@ -1291,13 +1320,14 @@ msgstr ""
 "Montefeltro 2."
 
 #: 2019/index.php:342
+#, fuzzy
 msgid "Per raggiungerci puoi:"
-msgstr ""
+msgstr "Për ruvé si it peule:"
 
 #: 2019/index.php:345 2019/index.php:356 2019/index.php:367
-#, php-format
+#, fuzzy, php-format
 msgid "Prendere %s, fermata %s"
-msgstr ""
+msgstr "Pijé %s, stassion %s"
 
 #: 2019/index.php:347 2019/index.php:358 includes/class-Sharable.php:57
 #, fuzzy, php-format
@@ -1305,13 +1335,14 @@ msgid "il %s"
 msgstr "ël %s"
 
 #: 2019/index.php:349
-#, php-format
+#, fuzzy, php-format
 msgid "tram %s"
-msgstr ""
+msgstr "tram %s"
 
 #: 2019/index.php:353
+#, fuzzy
 msgid "Ospedale Mauriziano"
-msgstr ""
+msgstr "Ospidal Maurissian"
 
 #: 2019/index.php:360
 #, fuzzy, php-format
@@ -1324,13 +1355,14 @@ msgid "la %s"
 msgstr "la %s"
 
 #: 2019/index.php:370
+#, fuzzy
 msgid "metropolitana"
-msgstr ""
+msgstr "metrò"
 
 #: 2019/index.php:375
-#, fuzzy, php-format
+#, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
-msgstr "Ij bus %s e %s a së fermo assé davzin."
+msgstr "Ij bus %s e %s as fermo assé davzin."
 
 #: 2019/index.php:391
 #, fuzzy
@@ -1342,8 +1374,9 @@ msgid "Con il supporto di…"
 msgstr "Con ël supòrt ëd..."
 
 #: 2019/index.php:416
+#, fuzzy
 msgid "Media Partner"
-msgstr ""
+msgstr "Media Partner"
 
 #: 2019/index.php:431
 #, fuzzy
@@ -1356,6 +1389,8 @@ msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
 "email %s o al numero %s."
 msgstr ""
+"Për contaté ël Comità Linux Day Turin it peule scrive a l'adrëssa email %s o "
+"al nùmer %s."
 
 #: 2019/load.php:43 l10n/trebbia.php:24
 #, fuzzy
@@ -1373,9 +1408,8 @@ msgid "La mia licenza di software libero preferita è la <b>%s</b>."
 msgstr "La lissensa ëd software lìber ch'i l'hai pì car a l'é <b>%s</b>."
 
 #: 2019/user.php:258
-#, fuzzy
 msgid "Altre partecipazioni passate"
-msgstr "'D autre partissipassion precedente"
+msgstr "D’autre partissipassion precedente"
 
 #: includes/class-HumanTime.php:68
 #, fuzzy, php-format
@@ -1398,8 +1432,9 @@ msgid "%d y"
 msgstr "%d y"
 
 #: includes/class-HumanTime.php:104
+#, fuzzy
 msgid "un anno"
-msgstr ""
+msgstr "un ann"
 
 #: includes/class-HumanTime.php:105
 #, fuzzy
@@ -1417,8 +1452,9 @@ msgid "%d m"
 msgstr "%d m"
 
 #: includes/class-HumanTime.php:119
+#, fuzzy
 msgid "un mese"
-msgstr ""
+msgstr "un mèis"
 
 #: includes/class-HumanTime.php:120
 #, fuzzy
@@ -1431,8 +1467,9 @@ msgid "%d settimane"
 msgstr "%d sman-e"
 
 #: includes/class-HumanTime.php:136
+#, fuzzy
 msgid "una settimana"
-msgstr ""
+msgstr "na sman-a"
 
 #: includes/class-HumanTime.php:141
 #, fuzzy, php-format
@@ -1455,8 +1492,9 @@ msgid "ieri"
 msgstr "jer"
 
 #: includes/class-HumanTime.php:163
+#, fuzzy
 msgid "oggi"
-msgstr ""
+msgstr "ancheuj"
 
 #: includes/class-HumanTime.php:168
 #, fuzzy, php-format
@@ -1469,8 +1507,9 @@ msgid "%d ore"
 msgstr "%d ore"
 
 #: includes/class-HumanTime.php:184
+#, fuzzy
 msgid "un'ora"
-msgstr ""
+msgstr "n'ora"
 
 #: includes/class-HumanTime.php:185
 #, fuzzy
@@ -1479,11 +1518,12 @@ msgstr "1 h"
 
 #: includes/class-HumanTime.php:189
 msgid "tre quarti d'ora"
-msgstr ""
+msgstr "tre quart d’ora"
 
 #: includes/class-HumanTime.php:194
+#, fuzzy
 msgid "mezzora"
-msgstr ""
+msgstr "mes ora"
 
 #: includes/class-HumanTime.php:195
 #, fuzzy
@@ -1496,8 +1536,9 @@ msgid "%d minuti"
 msgstr "%d minute"
 
 #: includes/class-HumanTime.php:203
+#, fuzzy
 msgid "un minuto"
-msgstr ""
+msgstr "na minuta"
 
 #: includes/class-HumanTime.php:207
 #, fuzzy, php-format
@@ -1505,8 +1546,9 @@ msgid "%d secondi"
 msgstr "%d second"
 
 #: includes/class-HumanTime.php:212
+#, fuzzy
 msgid "proprio ora"
-msgstr ""
+msgstr "Giusta adess"
 
 #: includes/class-Licenses.php:54
 #, fuzzy
@@ -1610,7 +1652,7 @@ msgstr "https://it.wikipedia.org/wiki/WTFPL"
 
 #: includes/class-Sharable.php:57 includes/class-Sharable.php:59
 msgid "video esterno"
-msgstr ""
+msgstr "video estern"
 
 #: includes/class-User.php:72
 #, fuzzy, php-format
@@ -1618,9 +1660,9 @@ msgid "%s %s"
 msgstr "%s %s"
 
 #: includes/class-User.php:101
-#, php-format
+#, fuzzy, php-format
 msgid "Profilo utente di %s"
-msgstr ""
+msgstr "Profil 'd utilisador ëd %s"
 
 #: includes/class-UserSkill.php:54
 #, fuzzy, php-format
@@ -1635,12 +1677,12 @@ msgstr "i l'hai ëd conossense %s ëd bas"
 #: includes/class-UserSkill.php:56
 #, php-format
 msgid "sono discretamente bravo in %s"
-msgstr ""
+msgstr "Im la gav an %s"
 
 #: includes/class-UserSkill.php:56
-#, php-format
+#, fuzzy, php-format
 msgid "sono molto interessato al mondo %s"
-msgstr ""
+msgstr "i son motobin interessà al mond  %s"
 
 #: includes/class-UserSkill.php:57
 #, fuzzy, php-format
@@ -1653,42 +1695,45 @@ msgid "%s... è un mio pensiero fisso!"
 msgstr "%s... a l'é mé balin!"
 
 #: includes/class-UserSkill.php:58
-#, fuzzy, php-format
+#, php-format
 msgid "%s: l'essenza stessa della mia vita!"
-msgstr "%s: l'essenza midema ëd mia vita!"
+msgstr "%s: l'essensa midema ëd mia vita!"
 
 #: includes/class-UserSkill.php:59
-#, fuzzy, php-format
+#, php-format
 msgid "%s, sto cercando di smettere..."
-msgstr "%s, i serch ëd pianté lì..."
+msgstr "%s, i sercho ëd pianté lì..."
 
 #: includes/class-UserSkill.php:60
 #, php-format
 msgid ""
 "se mi tocca avere a che fare con %s poi mi faccio una doccia all'acqua ragia"
-msgstr ""
+msgstr "s'i son obligà a fé con %s , apress i faso un bagn d’aquaraz"
 
 #: includes/class-UserSkill.php:61
 #, php-format
 msgid "se accenni a %s ti prendo a tastierate"
-msgstr ""
+msgstr "S'it dise bele mach na paròla ansima  %s, it patelo a colp ëd giari"
 
 #: includes/class-UserSkill.php:63
 #, php-format
 msgid ""
 "sono pronto ad uccidere se sento parlare di %s e non ho paura della galera"
 msgstr ""
+"i peul fé na stravacà s'i sento parlé ëd %s, e i l'hai nen por ëd la përzon"
 
 #: l10n/trebbia.php:27 2017/includes/class-Footer.php:102
-#, fuzzy
 msgid "Dipartimento di Informatica"
-msgstr "Dëpartament ëd Informàtica"
+msgstr "Dëpartament d’Informàtica"
 
 #: l10n/trebbia.php:30
 msgid "Via Pessinetto 12, Torino"
-msgstr ""
+msgstr "contrà ëd Pessinet 12, Turin"
 
+# fermà --> stassion?
+# Ij nòm ëd le stassion an piemontèis?
 #: l10n/trebbia.php:33
+#, fuzzy
 msgid ""
 "Puoi prendere il tram n°**9** e n°**3**, scendendo alla fermata *Ospedale "
 "Amedeo di Savoia / Dipartimento di Informatica*.\n"
@@ -1696,6 +1741,11 @@ msgid ""
 "Dalla fermata della metropolitana *XVIII Dicembre* puoi prendere il pullman n"
 "°**59** e n°**59/** scendendo alla fermata *Svizzera*."
 msgstr ""
+"It peude pijé ël tram n°**9** e n°**3**, an caland a la fërmà *Ospedale "
+"Amedeo di Savoia / Dipartimento di Informatica*.\n"
+"\n"
+"Da la fermata dla metro *XVIII Dicembre* it peude pijé ël pullman n°**59** e "
+"n°**59/** an caland a la fërmà *Svizzera*."
 
 #: l10n/trebbia.php:38 2016/includes/class-Footer.php:103
 #: 2017/includes/class-Footer.php:103
@@ -1705,7 +1755,7 @@ msgstr "Dëpartament ëd Biotecnologìe"
 
 #: l10n/trebbia.php:41
 msgid "Via Nizza 52, Torino"
-msgstr ""
+msgstr "contrà ëd Nissa 52, Turin"
 
 #: l10n/trebbia.php:44
 #, fuzzy
@@ -1717,8 +1767,9 @@ msgstr ""
 "Biotecnologìe."
 
 #: l10n/trebbia.php:47
+#, fuzzy
 msgid "Politecnico di Torino (sede centrale)"
-msgstr ""
+msgstr "Politécnich ëd Turin (quartié general)"
 
 #: l10n/trebbia.php:50
 #, fuzzy
@@ -1726,8 +1777,9 @@ msgid "Corso Duca degli Abruzzi 24, Torino"
 msgstr "Cors Duch ëd ij Abruz 24, Turin"
 
 #: l10n/trebbia.php:53
+#, fuzzy
 msgid "Politecnico di Torino (cittadella)"
-msgstr ""
+msgstr "Politécnich ëd Turin (Sitadela)"
 
 #: l10n/trebbia.php:56
 #, fuzzy
@@ -1741,8 +1793,9 @@ msgid "Cascina Roccafranca"
 msgstr "Cassin-a Ròch dij Franch"
 
 #: l10n/trebbia.php:62
+#, fuzzy
 msgid "Via Edoardo Rubino 45, Torino"
-msgstr ""
+msgstr "contrà Eduardo Rubino 45, Turin"
 
 #: l10n/trebbia.php:65 2016/includes/class-Footer.php:106
 #: 2017/includes/class-Footer.php:106
@@ -1751,20 +1804,24 @@ msgid "Cortile del Maglio"
 msgstr "Cort dël Martinèt"
 
 #: l10n/trebbia.php:68
+#, fuzzy
 msgid "Via Vittorio Andreis 18, Torino"
-msgstr ""
+msgstr "contrà Vittorio Andreis 18, Turin"
 
 #: l10n/trebbia.php:71
+#, fuzzy
 msgid "Sala Consiglieri della Provincia di Torino"
-msgstr ""
+msgstr "Sala dij Consejé ëd la Provincia ëd Turin"
 
 #: l10n/trebbia.php:74
+#, fuzzy
 msgid "Via Maria Vittoria 12, Torino"
-msgstr ""
+msgstr "contrà Maria Vitòria 12, Turin"
 
 #: l10n/trebbia.php:77
+#, fuzzy
 msgid "Palazzo Cisterna"
-msgstr ""
+msgstr "Palass Sisterna"
 
 #: l10n/trebbia.php:80
 #, fuzzy
@@ -1772,24 +1829,26 @@ msgid "Casa del Quartiere"
 msgstr "Ca dël Quartié"
 
 #: l10n/trebbia.php:83
+#, fuzzy
 msgid "Via Oddino Morgari 14, Torino"
-msgstr ""
+msgstr "contrà Oddino Morgari 14, Turin"
 
 #: l10n/trebbia.php:86
 msgid "Torino Incontra"
-msgstr ""
+msgstr "\"Torino Incontra\""
 
 #: l10n/trebbia.php:89
 msgid "Via Nino Costa 8, Torino"
-msgstr ""
+msgstr "contrà Nino Costa 8, Turin"
 
 #: l10n/trebbia.php:92
+#, fuzzy
 msgid "Toolbox Coworking"
-msgstr ""
+msgstr "Toolbox Coworking"
 
 #: l10n/trebbia.php:95
 msgid "Via Agostino da Montefeltro 2, Torino"
-msgstr ""
+msgstr "contrà Agostino da Montefeltro 2, Turin"
 
 #: l10n/trebbia.php:98
 #, fuzzy
@@ -1797,8 +1856,9 @@ msgid "Fablab"
 msgstr "Fablab"
 
 #: l10n/trebbia.php:101
+#, fuzzy
 msgid "Via Egeo 16, Torino"
-msgstr ""
+msgstr "contrà Egé 16, Turin"
 
 #: l10n/trebbia.php:104
 #, fuzzy
@@ -1806,9 +1866,8 @@ msgid "Base"
 msgstr "Bas"
 
 #: l10n/trebbia.php:107
-#, fuzzy
 msgid "Adatto ad un pubblico senza pre-conoscenze particolari"
-msgstr "Adatà à un pùblich con gnun-e conossense precedente"
+msgstr "Adatà s un pùblich con gnun-e conossense precedente"
 
 #: l10n/trebbia.php:110
 #, fuzzy
@@ -1821,8 +1880,9 @@ msgid "Area sviluppatori"
 msgstr "Èira dij dësanvlopeur"
 
 #: l10n/trebbia.php:116
+#, fuzzy
 msgid "Sys"
-msgstr ""
+msgstr "Sys"
 
 #: l10n/trebbia.php:119
 #, fuzzy
@@ -1831,12 +1891,11 @@ msgstr "Èira dij resior ëd sistem"
 
 #: l10n/trebbia.php:122
 msgid "Misc"
-msgstr ""
+msgstr "Misc"
 
 #: l10n/trebbia.php:125
-#, fuzzy
 msgid "Argomenti relativi alla conoscenza e alla libertà digitale."
-msgstr "Suget gropà à la libertà digitala."
+msgstr "Suget gropà a la libertà digitala."
 
 #: l10n/trebbia.php:128
 #, fuzzy
@@ -1844,9 +1903,8 @@ msgid "Altro"
 msgstr "'D autr"
 
 #: l10n/trebbia.php:131
-#, fuzzy
 msgid "Di tutto un po'"
-msgstr "Un pòch ëd son, un pòch ëd lòn"
+msgstr "Un pòch ëd sòn, un pòch ëd lòn"
 
 #: l10n/trebbia.php:134
 #, fuzzy
@@ -1854,34 +1912,36 @@ msgid "Intermedio"
 msgstr "Intermediari"
 
 #: l10n/trebbia.php:137
-#, fuzzy
 msgid "Adatto ad un pubblico abbastanza smanettone"
-msgstr "Adatà à un pùblich dëstortojà"
+msgstr "Adatà a un pùblich dëstortojà"
 
 #: l10n/trebbia.php:140
+#, fuzzy
 msgid "Avanzato"
-msgstr ""
+msgstr "Anans"
 
 #: l10n/trebbia.php:143
-#, fuzzy
 msgid "Adatto ad un pubblico di nerd disperati"
-msgstr "Adatà à un pùblich ëd nerd dësesperà"
+msgstr "Adatà a un pùblich ëd nerd dësesperà"
 
 #: l10n/trebbia.php:146
+#, fuzzy
 msgid "Sikurezza"
-msgstr ""
+msgstr "Sikurëssa"
 
 #: l10n/trebbia.php:149
 msgid "Sicurezza"
-msgstr ""
+msgstr "Sicurëssa"
 
 #: l10n/trebbia.php:155
+#, fuzzy
 msgid "Linux Installation Party"
-msgstr ""
+msgstr "Linux Installation Party"
 
 #: l10n/trebbia.php:158
+#, fuzzy
 msgid "Coderdojo"
-msgstr ""
+msgstr "Coderdojo"
 
 # o ant ël sens ëd avenùa?
 #: l10n/trebbia.php:161
@@ -1910,16 +1970,19 @@ msgid "Aula C"
 msgstr "Stansia C"
 
 #: l10n/trebbia.php:176
+#, fuzzy
 msgid "Spazio Coderdojo"
-msgstr ""
+msgstr "Ëspasse Coderojo"
 
 #: l10n/trebbia.php:179
+#, fuzzy
 msgid "Spazio Restart"
-msgstr ""
+msgstr "Ëspasse Restart"
 
 #: l10n/trebbia.php:182
+#, fuzzy
 msgid "Primo piano"
-msgstr ""
+msgstr "Prim pian"
 
 #: l10n/trebbia.php:185
 #, fuzzy
@@ -2017,16 +2080,18 @@ msgid "Bottega"
 msgstr "Bòita"
 
 #: l10n/trebbia.php:242
+#, fuzzy
 msgid "Salone"
-msgstr ""
+msgstr "Salon"
 
 #: l10n/trebbia.php:245
 msgid "Sala Consiglio di Facoltà"
-msgstr ""
+msgstr "Sala dël Consèj ëd Facoltà"
 
 #: l10n/trebbia.php:248
+#, fuzzy
 msgid "Sala Einaudi"
-msgstr ""
+msgstr "Sala Einaud"
 
 #: l10n/trebbia.php:251
 #, fuzzy
@@ -2054,8 +2119,9 @@ msgid "asd"
 msgstr "asd"
 
 #: l10n/trebbia.php:266
+#, fuzzy
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #: l10n/trebbia.php:269 l10n/trebbia.php:353
 #, fuzzy
@@ -2063,12 +2129,14 @@ msgid "JavaScript"
 msgstr "JavaScript"
 
 #: l10n/trebbia.php:272
+#, fuzzy
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "Microsoft Windows"
 
 #: l10n/trebbia.php:275
+#, fuzzy
 msgid "NodeJS"
-msgstr ""
+msgstr "NOdeJS"
 
 #: l10n/trebbia.php:278
 #, fuzzy
@@ -2087,7 +2155,7 @@ msgstr "C++"
 
 #: l10n/trebbia.php:287
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: l10n/trebbia.php:290
 #, fuzzy
@@ -2095,12 +2163,14 @@ msgid "GNU/Linux"
 msgstr "GNU/Linux"
 
 #: l10n/trebbia.php:293
+#, fuzzy
 msgid "Turbo Pascal"
-msgstr ""
+msgstr "Turbo Pascal"
 
 #: l10n/trebbia.php:296
+#, fuzzy
 msgid "Software Libero"
-msgstr ""
+msgstr "Software duvert"
 
 #: l10n/trebbia.php:299
 #, fuzzy
@@ -2127,9 +2197,10 @@ msgstr "Mistà vectoriale"
 msgid "Insegnare"
 msgstr "Mostré"
 
+# Was ist das?
 #: l10n/trebbia.php:314
 msgid "Recupero del RAEE"
-msgstr ""
+msgstr "Recuperé ël RAEE"
 
 #: l10n/trebbia.php:317
 #, fuzzy
@@ -2142,8 +2213,9 @@ msgid "C"
 msgstr "C"
 
 #: l10n/trebbia.php:323
+#, fuzzy
 msgid "Wikipedia"
-msgstr ""
+msgstr "Wikipedia"
 
 # o ambricà?
 #: l10n/trebbia.php:326
@@ -2167,12 +2239,14 @@ msgid "JSF"
 msgstr "JSF"
 
 #: l10n/trebbia.php:338
+#, fuzzy
 msgid "PrimeFaces"
-msgstr ""
+msgstr "PrimeFaces"
 
 #: l10n/trebbia.php:341
+#, fuzzy
 msgid "Maven"
-msgstr ""
+msgstr "Maven"
 
 # o Ingenierìa?
 #: l10n/trebbia.php:344
@@ -2195,13 +2269,16 @@ msgstr "CSS"
 msgid "Artificial Intelligence"
 msgstr "Inteligensa artifissiala"
 
+# o Machine Learning?
 #: l10n/trebbia.php:359
+#, fuzzy
 msgid "Machine Learning"
-msgstr ""
+msgstr "Anprendiment automàtich."
 
 #: l10n/trebbia.php:362
+#, fuzzy
 msgid "Mozilla"
-msgstr ""
+msgstr "Mozilla"
 
 #: l10n/trebbia.php:365
 #, fuzzy
@@ -2210,7 +2287,7 @@ msgstr "Effective Altruism"
 
 #: l10n/trebbia.php:368
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 # o Data Science?
 #: l10n/trebbia.php:371
@@ -2223,9 +2300,11 @@ msgstr "Siensa dij dait"
 msgid "Jazz"
 msgstr "Jazz"
 
+# o seugn lùcid?
 #: l10n/trebbia.php:377
+#, fuzzy
 msgid "lucid dreaming"
-msgstr ""
+msgstr "lucid dreaming"
 
 #: l10n/trebbia.php:380
 #, fuzzy
@@ -2233,29 +2312,33 @@ msgid "Berlin"
 msgstr "Berlin"
 
 #: l10n/trebbia.php:383
+#, fuzzy
 msgid "London"
-msgstr ""
+msgstr "Londra"
 
 #: l10n/trebbia.php:386
+#, fuzzy
 msgid "physics"
-msgstr ""
+msgstr "fìsica"
 
 #: l10n/trebbia.php:389
+#, fuzzy
 msgid "phisics"
-msgstr ""
+msgstr "fìsica"
 
 #: l10n/trebbia.php:392
-#, fuzzy
 msgid "consciousness"
-msgstr "pijé consiensa"
+msgstr "pijé cossiensa"
 
 #: l10n/trebbia.php:395
+#, fuzzy
 msgid "vegan"
-msgstr ""
+msgstr "vegan"
 
 #: l10n/trebbia.php:398
+#, fuzzy
 msgid "Rust"
-msgstr ""
+msgstr "Rust"
 
 #: l10n/trebbia.php:401
 #, fuzzy
@@ -2269,7 +2352,7 @@ msgstr "creatività"
 
 #: l10n/trebbia.php:407
 msgid "teamwork"
-msgstr ""
+msgstr "travaj d’echip"
 
 #: l10n/trebbia.php:410
 #, fuzzy
@@ -2316,13 +2399,14 @@ msgid "Gestito %s."
 msgstr "Masentà %s."
 
 #: 2016/includes/class-ActivityBox.php:61
+#, fuzzy
 msgid "Prenota"
-msgstr ""
+msgstr "Rëservé"
 
 #: 2016/includes/class-ActivityBox.php:63
-#, php-format
+#, fuzzy, php-format
 msgid "Prenota la tua partecipazione a %s"
-msgstr ""
+msgstr "Rëserva toa partissipassion a %s"
 
 #: 2016/includes/class-CreditBox.php:42
 #, fuzzy, php-format
@@ -2331,9 +2415,8 @@ msgstr "%s: proget con lissensa %s"
 
 #: 2016/includes/class-DailyEventsTable.php:97
 #: 2017/includes/class-DailyEventsTable.php:97
-#, fuzzy
 msgid "asd! No."
-msgstr "asd! No."
+msgstr "asd! Nò."
 
 #: 2016/includes/class-DailyEventsTable.php:120
 #: 2017/includes/class-DailyEventsTable.php:120
@@ -2343,9 +2426,9 @@ msgstr "%d° ore"
 
 #: 2016/includes/class-DailyEventsTable.php:142
 #: 2017/includes/class-DailyEventsTable.php:142
-#, php-format
+#, fuzzy, php-format
 msgid "Talk %s"
-msgstr ""
+msgstr "Presentassion %s"
 
 #: 2016/includes/class-DailyEventsTable.php:147
 #: 2017/includes/class-DailyEventsTable.php:147
@@ -2355,8 +2438,9 @@ msgstr "%s<br /> ëd %s."
 
 #: 2016/includes/class-DailyEventsTable.php:152
 #: 2017/includes/class-DailyEventsTable.php:152
+#, fuzzy
 msgid "Nessun talk pianificato."
-msgstr ""
+msgstr "Gnun-e presentassion prevëddùe"
 
 #: 2016/includes/class-DailyEventsTable.php:185
 #: 2017/includes/class-DailyEventsTable.php:185
@@ -2373,7 +2457,7 @@ msgstr "%s e %s"
 #: 2016/includes/class-Footer.php:33 2017/includes/class-Footer.php:32
 #, php-format
 msgid "Torna a %s"
-msgstr ""
+msgstr "Va andarera a %s"
 
 #: 2016/includes/class-Footer.php:50 2017/includes/class-Footer.php:49
 #, php-format
@@ -2383,6 +2467,9 @@ msgid ""
 "contenuti anche per scopi commerciali, fintanto che si cita la provenienza e "
 "si ricondivide sotto la medesima licenza."
 msgstr ""
+"Tuti ij contnù a son dait sota licensa d’un  <strong>fòrt contnù liber </"
+"strong> %s. It ses liber dë spantié e/o cangé ij contnù ëdcò për but "
+"comersiaj se it site la sorgiss e it lo smon-e torna sota la midema licensa."
 
 #: 2016/includes/class-Footer.php:59 2017/includes/class-Footer.php:58
 #, fuzzy, php-format
@@ -2411,17 +2498,18 @@ msgstr "Edission precedente"
 
 #: 2016/includes/class-Footer.php:104 2016/includes/class-Footer.php:105
 #: 2017/includes/class-Footer.php:104 2017/includes/class-Footer.php:105
+#, fuzzy
 msgid "Politecnico di Torino"
-msgstr ""
+msgstr "Politécnich ëd Turin"
 
 #: 2016/includes/class-Footer.php:122
 msgid "Scegli"
-msgstr ""
+msgstr "Sern"
 
 #: 2016/includes/class-Footer.php:131
 #, php-format
 msgid "Pagina generata in %s secondi con %d query al database."
-msgstr ""
+msgstr "Pàgina generà an %s second con %d arcesta a la bas ëd dait."
 
 #: 2016/includes/class-Footer.php:141
 #, fuzzy
@@ -2429,14 +2517,13 @@ msgid "<b>Alcuni</b> diritti riservati."
 msgstr "<b>Quaich</b> drit rëservà."
 
 #: 2016/includes/class-Footer.php:154
-#, fuzzy
 msgid ""
 "Hai notato qualcosa? Non c'è nessun software di tracciamento degli utenti. "
 "Non dovremmo vantarcene, dato che dovrebbe essere una cosa normale non "
 "regalare i tuoi dati a terzi!"
 msgstr ""
 "I l'eve pa armarcà? A-i é gnun software për trassé ij utilisador. A venterìa "
-"gnanca fé spatuss: a sarìa franch normal nen vorèj regalé sò dait à ëd ters!"
+"gnanca fé spatuss: a sarìa franch normal nen vorèj regalé sò dait a ëd ters!"
 
 #: 2016/includes/class-Header.php:62 2017/includes/class-Header.php:65
 #: 2019/template/header.php:45
@@ -2450,8 +2537,9 @@ msgid "https://it.wikipedia.org/wiki/Linux_(kernel)"
 msgstr "https://it.wikipedia.org/wiki/Linux_(kernel)"
 
 #: 2016/includes/class-Header.php:179
+#, fuzzy
 msgid "This is Wikipedia"
-msgstr ""
+msgstr "Sòn a l'é Wikipedia"
 
 #: 2016/includes/class-SocialBox.php:36 2019/template/user-social-box.php:39
 #, fuzzy, php-format
@@ -2464,14 +2552,17 @@ msgid "È un 404! Pagina non trovata :("
 msgstr "Eror 404! Pàgina nen trovà :("
 
 #: 2016/includes/functions.php:71 2017/includes/functions.php:71
+#, fuzzy
 msgid ""
 "Nott foond! A.k.a. erroro quattrociantoquatto (N.B. eseguire coi permessi di "
 "root <b>non</b> risolve la situazione!)"
 msgstr ""
+"Nòt faond! Visadì eror quatr-cent-e-quatr (l'esecussion tan-me root a giuta "
+"<b>nen 'd autr tut</b>!"
 
 #: 2019/template/footer.php:40
 msgid "Torna al Linux Day Torino"
-msgstr ""
+msgstr "Va andarera al Linux Day Turin"
 
 #: 2019/template/footer.php:49
 #, fuzzy, php-format
@@ -2483,9 +2574,9 @@ msgstr ""
 "%s."
 
 #: 2019/template/footer.php:54
-#, php-format
+#, fuzzy, php-format
 msgid "Puoi clonare questo design con &hearts; scaricandolo da %s."
-msgstr ""
+msgstr "It peule cloné ës design con &hearts; an dëscariand-lo da %s."
 
 #: 2019/template/footer.php:59
 #, fuzzy, php-format
@@ -2493,8 +2584,9 @@ msgid "Il %s è rilasciato in licenza di software libero %s."
 msgstr "Ël %s a l'é concedù an lissensa ëd software lìber %s."
 
 #: 2019/template/footer.php:62
+#, fuzzy
 msgid "motore del sito"
-msgstr ""
+msgstr "motor dël sit"
 
 #: 2019/template/footer.php:67
 msgid ""
@@ -2502,6 +2594,9 @@ msgid ""
 "abbiamo chiesto nessun dato e non ti abbiamo trasmesso cookie e non ti "
 "abbiamo monitorato con tecnologie apposite."
 msgstr ""
+"Gnun-e polìtiche ans la protession dij dait a son aplicabile, con lòn che i "
+"l'oma ciama-ve gnun dait, i l'oma buta-ve gnun cookie e i l'oma nen monitora-"
+"ve con ëd tecnologìe."
 
 #: 2019/template/header.php:80
 #, fuzzy
@@ -2510,15 +2605,17 @@ msgstr "Comità dël Linux Day Turin"
 
 #: 2019/template/intro.php:32
 msgid "Sabato 26 Ottobre 2019"
-msgstr ""
+msgstr "Saba 26 Otober 2019"
 
 #: 2019/template/intro.php:39
+#, fuzzy
 msgid "SCOPRI DI PIÙ"
-msgstr ""
+msgstr "DËSCHEUVR ËD PÌ"
 
 #: 2019/template/intro.php:51
+#, fuzzy
 msgid "una persona curiosa"
-msgstr ""
+msgstr "na përson-a curiosa"
 
 #: 2019/template/intro.php:52
 #, fuzzy
@@ -2537,20 +2634,20 @@ msgstr "Contat"
 
 #: includes/suckless-php/class-FileUploader.php:319
 msgid "Upload completato con successo."
-msgstr ""
+msgstr "Upload riessù"
 
 #: includes/suckless-php/class-FileUploader.php:322
 msgid "Non è stato selezionato alcun file."
-msgstr ""
+msgstr "It l’has nen sernù gnun file."
 
 #: includes/suckless-php/class-FileUploader.php:325
 msgid "Per favore ricarica il file. È stato caricato solo parzialmente."
-msgstr ""
+msgstr "Për piasì caria torna ël file. A l’é staita carià mach na part."
 
 #: includes/suckless-php/class-FileUploader.php:329
-#, php-format
+#, fuzzy, php-format
 msgid "Superati i limiti di upload (massimo %s)."
-msgstr ""
+msgstr "Passà ël limit ëd upload (%s max)."
 
 #: includes/suckless-php/class-FileUploader.php:334
 #, fuzzy
@@ -2564,7 +2661,7 @@ msgstr "Ël file a l'é  %s gròss. A venta ch'a sia sota %s."
 
 #: includes/suckless-php/class-FileUploader.php:340
 msgid "troppo"
-msgstr ""
+msgstr "tròp"
 
 #: includes/suckless-php/class-FileUploader.php:345
 #, fuzzy
@@ -2582,9 +2679,9 @@ msgid "Il file é di un MIME type non concesso: \"%s\"."
 msgstr "Ël file a l'é 'd un MIME type përmëttù: \"%s\"."
 
 #: includes/suckless-php/class-FileUploader.php:364
-#, fuzzy, php-format
+#, php-format
 msgid "Il file ha un'estensione non valida. Estensioni accettate: %s."
-msgstr "L'extension dël file a l'é nen vàlida. Extension acetà:%s."
+msgstr "L'extension dël file a l'é nen vàlida. Estension acetà:%s."
 
 #: includes/suckless-php/class-FileUploader.php:368
 #, fuzzy
@@ -2603,7 +2700,7 @@ msgstr "Eror ëd cariament franch dësconossù."
 
 #: includes/suckless-php/class-FileUploader.php:378
 msgid "Manca una cartella temporanea. Contattare l'amministratore."
-msgstr ""
+msgstr "A-i manca un dossier temporari. Vorèj contaté l’Adminsitrator."
 
 #: includes/suckless-php/class-FileUploader.php:382
 #, fuzzy
@@ -2625,8 +2722,9 @@ msgid "La richiesta non è valida (inviati più di %s)."
 msgstr "L'arcesta a l'é nen vàlida (manda pì che %s)."
 
 #: includes/suckless-php/class-OutputUtilities.php:149
+#, fuzzy
 msgid "NaN"
-msgstr ""
+msgstr "NaN"
 
 #: includes/suckless-php/class-OutputUtilities.php:184
 #, fuzzy
@@ -2634,20 +2732,20 @@ msgid "Errore"
 msgstr "Eror"
 
 #: includes/suckless-php/class-OutputUtilities.php:190
-#, fuzzy, php-format
+#, php-format
 msgid "Ci dispiace! C'è qualche piccolo problema tecnico! (DEBUG: %s)"
-msgstr "A në dëspias: a-i é quaich cit problem técnich (DEBUG: %s)"
+msgstr "An dëspias: a-i é quaich cit problem técnich (DEBUG: %s)"
 
 #: includes/suckless-php/class-OutputUtilities.php:191
 msgid "sì"
-msgstr ""
+msgstr "é"
 
 #: includes/suckless-php/class-OutputUtilities.php:191
 msgid "no"
-msgstr ""
+msgstr "nò"
 
 #: includes/suckless-php/class-OutputUtilities.php:194
 msgid ""
 "Potrebbe essere utile comunicarci questo problema affinchè non si ripresenti "
 "in futuro. Grazie per la collaborazione."
-msgstr ""
+msgstr "A podria vnì bin fe-ne conòsse ës problem an manera d’arzòlv-lo"
