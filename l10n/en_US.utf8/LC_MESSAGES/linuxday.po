@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-15 06:12+0000\n"
+"POT-Creation-Date: 2019-10-18 14:24+0200\n"
 "PO-Revision-Date: 2019-10-08 19:54+0200\n"
 "Last-Translator: quel_tale <lvps@users.noreply.github.com>\n"
 "Language-Team: Italian <>\n"
@@ -282,7 +282,7 @@ msgid "Tema"
 msgstr "Chapter"
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
-#: 2019/index.php:340 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2019/index.php:385 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr "Where"
 
@@ -899,7 +899,7 @@ msgstr "Take the tram 9 or 3 (\"Ospedale Amedeo di Savoia\")"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Take the bus 59 or 50/"
 
-#: 2017/index.php:156 2019/index.php:382
+#: 2017/index.php:156 2019/index.php:427
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Enable JavaScript to see the map"
 
@@ -1038,7 +1038,7 @@ msgstr "Memo"
 msgid "Nello stesso momento"
 msgstr "At the same moment"
 
-#: 2019/index.php:187 2019/index.php:247
+#: 2019/index.php:187 2019/index.php:292
 #, php-format
 msgid "Cos'è il %s"
 msgstr "What is the %s"
@@ -1064,11 +1064,76 @@ msgstr ""
 msgid "pubblico dominio"
 msgstr "public domain"
 
+#: 2019/index.php:228
+msgid "Ma non finisce qui!"
+msgstr ""
+
+#: 2019/index.php:230 2019/index.php:233
+#, fuzzy
+msgid "Corsi GNU/Linux"
+msgstr "GNU/Linux"
+
+#: 2019/index.php:234
+msgid ""
+"Ti aspettiamo al Linux Day, ma nei giorni successivi organizzeremo anche dei "
+"veri e propri corsi (gratuiti!) di livello base ed avanzato, sull'uso di GNU/"
+"Linux in ambito personale e industriale."
+msgstr ""
+
 #: 2019/index.php:235
+msgid "Che aspetti? Prenota un posto anche per i corsi!"
+msgstr ""
+
+#: 2019/index.php:236
+#, fuzzy
+msgid "Iscrizione ai corsi GNU/Linux"
+msgstr "First steps with GNU/Linux"
+
+#: 2019/index.php:245
+msgid "Assistenza tecnica"
+msgstr ""
+
+#: 2019/index.php:247
+msgid ""
+"Ti aspettiamo al Linux Day, ma dopo questa conferenza non ti lasceremo certo "
+"da solo!"
+msgstr ""
+
+#: 2019/index.php:251
+msgid ""
+"Ogni mercoledì, sportello di assistenza gratuita al software libero, "
+"all'**Officina Informatica Libera**, in via Oddino Morgari 14, a Torino."
+msgstr ""
+
+#: 2019/index.php:252 2019/index.php:259 2019/template/navbar-home.php:59
+msgid "Contatti"
+msgstr "Contacts"
+
+#: 2019/index.php:253 2019/index.php:260
+#, php-format
+msgid "prossimo: %s"
+msgstr ""
+
+#: 2019/index.php:254
+#, fuzzy
+msgid "30 ottobre"
+msgstr "October 22nd"
+
+#: 2019/index.php:258
+msgid ""
+"Ogni terzo sabato del mese, sportello di assistenza gratuita al software "
+"libero, con il **GLugTO**, al Polo culturale Lombroso16"
+msgstr ""
+
+#: 2019/index.php:261
+msgid "2 novembre"
+msgstr ""
+
+#: 2019/index.php:280
 msgid "Domande frequenti"
 msgstr "Frequently asked questions"
 
-#: 2019/index.php:255
+#: 2019/index.php:300
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
@@ -1076,15 +1141,15 @@ msgstr ""
 "It's a national event, planned every year since 20 years. We do the Linux "
 "Day in the whole Italy, in the same day, and Turin will be present also."
 
-#: 2019/index.php:258
+#: 2019/index.php:303
 msgid "Informazioni sul Linux Day nazionale"
 msgstr "Informations on the national Linux Day"
 
-#: 2019/index.php:268
+#: 2019/index.php:313
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr "Can I bring a friend that does not understand nothing?"
 
-#: 2019/index.php:274
+#: 2019/index.php:319
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
@@ -1094,11 +1159,11 @@ msgstr ""
 "\" room and enjoy. Or drop him/her to the installation party and we will "
 "liberate your friend!"
 
-#: 2019/index.php:283
+#: 2019/index.php:328
 msgid "Quanto costa?"
 msgstr "How much it costs?"
 
-#: 2019/index.php:289
+#: 2019/index.php:334
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
@@ -1106,11 +1171,11 @@ msgstr ""
 "The event is completly gratis for everyone thanks to Turin's communities and "
 "in who believe in them."
 
-#: 2019/index.php:298
+#: 2019/index.php:343
 msgid "Registrerete i talk?"
 msgstr "Will you record the talks?"
 
-#: 2019/index.php:304
+#: 2019/index.php:349
 msgid ""
 "Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico "
 "per rendere questa community attiva e straordinaria! In ogni caso il nostro "
@@ -1121,15 +1186,18 @@ msgstr ""
 "active community! In any case our Media Partner will do everything possible "
 "to register as many tracks as possible, perhaps even with a streaming."
 
-#: 2019/index.php:313
+#: 2019/index.php:358
 msgid "Come prenoto una T-shirt?"
 msgstr "How do I reserve my T-shirt?"
 
-#: 2019/index.php:319
-msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
+#: 2019/index.php:364
+#, fuzzy
+msgid ""
+"Comunicaci la tua taglia ed il genere (uomo/donna) e te la terremo da parte "
+"fresca per l'evento!"
 msgstr "Tell us your size and we will keep it in a secure place for you!"
 
-#: 2019/index.php:320
+#: 2019/index.php:365
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
@@ -1137,7 +1205,7 @@ msgstr ""
 "Seriously, contact us to hold your T-shirt. They tend to finish very "
 "quickly, and every year someone remains nacked."
 
-#: 2019/index.php:341
+#: 2019/index.php:386
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
@@ -1145,65 +1213,65 @@ msgstr ""
 "The office of the Linux Day Torino 2019 will be the Toolbox Coworking, in "
 "Via Agostino da Montefeltro 2."
 
-#: 2019/index.php:342
+#: 2019/index.php:387
 msgid "Per raggiungerci puoi:"
 msgstr "To arrive you can:"
 
-#: 2019/index.php:345 2019/index.php:356 2019/index.php:367
+#: 2019/index.php:390 2019/index.php:401 2019/index.php:412
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr "Take %s, %s stop"
 
-#: 2019/index.php:347 2019/index.php:358 includes/class-Sharable.php:57
+#: 2019/index.php:392 2019/index.php:403 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr "the %s"
 
-#: 2019/index.php:349
+#: 2019/index.php:394
 #, php-format
 msgid "tram %s"
 msgstr "tram %s"
 
-#: 2019/index.php:353
+#: 2019/index.php:398
 msgid "Ospedale Mauriziano"
 msgstr "Mauriziano Hospital"
 
-#: 2019/index.php:360
+#: 2019/index.php:405
 #, php-format
 msgid "bus %s"
 msgstr "bus %s"
 
-#: 2019/index.php:369
+#: 2019/index.php:414
 #, php-format
 msgid "la %s"
 msgstr "the %s"
 
-#: 2019/index.php:370
+#: 2019/index.php:415
 msgid "metropolitana"
 msgstr "underground"
 
-#: 2019/index.php:375
+#: 2019/index.php:420
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Also %s and %s buses stop somehow near."
 
-#: 2019/index.php:391
+#: 2019/index.php:436
 msgid "Con il patrocinio di…"
 msgstr "With the patronage of…"
 
-#: 2019/index.php:407
+#: 2019/index.php:452
 msgid "Con il supporto di…"
 msgstr "With the support from…"
 
-#: 2019/index.php:416
+#: 2019/index.php:461
 msgid "Media Partner"
 msgstr "Media Partner"
 
-#: 2019/index.php:431
+#: 2019/index.php:476
 msgid "Contattaci"
 msgstr "Contact Us"
 
-#: 2019/index.php:433
+#: 2019/index.php:478
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -2289,10 +2357,6 @@ msgstr "looking for a job"
 msgid "Intro"
 msgstr "Intro"
 
-#: 2019/template/navbar-home.php:59
-msgid "Contatti"
-msgstr "Contacts"
-
 #: includes/suckless-php/class-FileUploader.php:319
 msgid "Upload completato con successo."
 msgstr ""
@@ -2615,9 +2679,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Software libero e impresa"
 #~ msgstr "Free Software"
-
-#~ msgid "Primi passi con GNU/Linux"
-#~ msgstr "First steps with GNU/Linux"
 
 #, fuzzy
 #~ msgid "Riconoscimento vocale"

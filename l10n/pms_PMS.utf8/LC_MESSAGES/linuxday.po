@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-15 06:12+0000\n"
+"POT-Creation-Date: 2019-10-18 14:24+0200\n"
 "PO-Revision-Date: 2019-10-18 13:33+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: pms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.4\n"
-"Last-Translator: \n"
-"Language: pms\n"
 
 #: 2016/credits.php:27
 msgid ""
@@ -318,7 +318,7 @@ msgid "Tema"
 msgstr "Oget"
 
 #: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
-#: 2019/index.php:340 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2019/index.php:385 2019/user.php:199 2019/template/navbar-home.php:58
 #, fuzzy
 msgid "Dove"
 msgstr "Andoa"
@@ -1040,7 +1040,7 @@ msgstr "Pijé ël tram 9 o 3 (Ospidal Amedé ëd Savòja)"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Pijé ël bus 59 o 50/"
 
-#: 2017/index.php:156 2019/index.php:382
+#: 2017/index.php:156 2019/index.php:427
 #, fuzzy
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Autorisé JavaScript per vardé ël pian"
@@ -1201,7 +1201,7 @@ msgstr "Memo"
 msgid "Nello stesso momento"
 msgstr "Ant 'l istess moment"
 
-#: 2019/index.php:187 2019/index.php:247
+#: 2019/index.php:187 2019/index.php:292
 #, fuzzy, php-format
 msgid "Cos'è il %s"
 msgstr "Còs é-lo %s"
@@ -1228,12 +1228,77 @@ msgstr ""
 msgid "pubblico dominio"
 msgstr "Pùblich domin"
 
+#: 2019/index.php:228
+msgid "Ma non finisce qui!"
+msgstr ""
+
+#: 2019/index.php:230 2019/index.php:233
+#, fuzzy
+msgid "Corsi GNU/Linux"
+msgstr "GNU/Linux"
+
+#: 2019/index.php:234
+msgid ""
+"Ti aspettiamo al Linux Day, ma nei giorni successivi organizzeremo anche dei "
+"veri e propri corsi (gratuiti!) di livello base ed avanzato, sull'uso di GNU/"
+"Linux in ambito personale e industriale."
+msgstr ""
+
 #: 2019/index.php:235
+msgid "Che aspetti? Prenota un posto anche per i corsi!"
+msgstr ""
+
+#: 2019/index.php:236
+msgid "Iscrizione ai corsi GNU/Linux"
+msgstr ""
+
+#: 2019/index.php:245
+msgid "Assistenza tecnica"
+msgstr ""
+
+#: 2019/index.php:247
+msgid ""
+"Ti aspettiamo al Linux Day, ma dopo questa conferenza non ti lasceremo certo "
+"da solo!"
+msgstr ""
+
+#: 2019/index.php:251
+msgid ""
+"Ogni mercoledì, sportello di assistenza gratuita al software libero, "
+"all'**Officina Informatica Libera**, in via Oddino Morgari 14, a Torino."
+msgstr ""
+
+#: 2019/index.php:252 2019/index.php:259 2019/template/navbar-home.php:59
+#, fuzzy
+msgid "Contatti"
+msgstr "Contat"
+
+#: 2019/index.php:253 2019/index.php:260
+#, php-format
+msgid "prossimo: %s"
+msgstr ""
+
+#: 2019/index.php:254
+#, fuzzy
+msgid "30 ottobre"
+msgstr "22 'd otober"
+
+#: 2019/index.php:258
+msgid ""
+"Ogni terzo sabato del mese, sportello di assistenza gratuita al software "
+"libero, con il **GLugTO**, al Polo culturale Lombroso16"
+msgstr ""
+
+#: 2019/index.php:261
+msgid "2 novembre"
+msgstr ""
+
+#: 2019/index.php:280
 #, fuzzy
 msgid "Domande frequenti"
 msgstr "Question frequente"
 
-#: 2019/index.php:255
+#: 2019/index.php:300
 #, fuzzy
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
@@ -1242,16 +1307,16 @@ msgstr ""
 "A l'é un event nassional ch'a së ten da squasi 20 agn. A l'ha leu an tuta "
 "Italia ant 'l istess temp, e donch ëdcò à Turin."
 
-#: 2019/index.php:258
+#: 2019/index.php:303
 #, fuzzy
 msgid "Informazioni sul Linux Day nazionale"
 msgstr "Informassion ans ël Linux Day nassional"
 
-#: 2019/index.php:268
+#: 2019/index.php:313
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr "Peul-me mné un amis ch'a na capiss nen d’autr tut?"
 
-#: 2019/index.php:274
+#: 2019/index.php:319
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
@@ -1262,12 +1327,12 @@ msgstr ""
 "pura men-lo a 'l installation party, e i-j giuteroma për soa migrassion vers "
 "ël software lìber."
 
-#: 2019/index.php:283
+#: 2019/index.php:328
 #, fuzzy
 msgid "Quanto costa?"
 msgstr "Vaire a ven?"
 
-#: 2019/index.php:289
+#: 2019/index.php:334
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
@@ -1275,12 +1340,12 @@ msgstr ""
 "'L event a l'é completament a gratis e son a l'é mach possìbil mersì al "
 "supòrt ëd tute le comunità ëd Turin e ëd chi ch'a-j giuta."
 
-#: 2019/index.php:298
+#: 2019/index.php:343
 #, fuzzy
 msgid "Registrerete i talk?"
 msgstr "I anregistrereve le presentassion?"
 
-#: 2019/index.php:304
+#: 2019/index.php:349
 msgid ""
 "Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico "
 "per rendere questa community attiva e straordinaria! In ogni caso il nostro "
@@ -1291,17 +1356,19 @@ msgstr ""
 "ativa e fiamenga! An tute le manere nòstr Media Partner a tirerà à "
 "anregistré ël pì possìbil ëd trasse, eventualment an streaming"
 
-#: 2019/index.php:313
+#: 2019/index.php:358
 #, fuzzy
 msgid "Come prenoto una T-shirt?"
 msgstr "Com fas-me për rëservé un t-shirt?"
 
-#: 2019/index.php:319
+#: 2019/index.php:364
 #, fuzzy
-msgid "Comunicaci la tua taglia e te la terremo da parte fresca per l'evento!"
+msgid ""
+"Comunicaci la tua taglia ed il genere (uomo/donna) e te la terremo da parte "
+"fresca per l'evento!"
 msgstr "Di-ne vòsta taja, e i lo buteroma da na banda për 'l event!"
 
-#: 2019/index.php:320
+#: 2019/index.php:365
 #, fuzzy
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
@@ -1310,7 +1377,7 @@ msgstr ""
 "Dabon, a venta di-lo anans, për che a-i é ëd taje ch'a finisso pì an pressa, "
 "e vira ann vaire a resto patanù."
 
-#: 2019/index.php:341
+#: 2019/index.php:386
 #, fuzzy
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
@@ -1319,71 +1386,71 @@ msgstr ""
 "Ël Linux Day Turin 2019 a së tnirà à Toolbox Coworking, contrà Agostino da "
 "Montefeltro 2."
 
-#: 2019/index.php:342
+#: 2019/index.php:387
 #, fuzzy
 msgid "Per raggiungerci puoi:"
 msgstr "Për ruvé si it peule:"
 
-#: 2019/index.php:345 2019/index.php:356 2019/index.php:367
+#: 2019/index.php:390 2019/index.php:401 2019/index.php:412
 #, fuzzy, php-format
 msgid "Prendere %s, fermata %s"
 msgstr "Pijé %s, stassion %s"
 
-#: 2019/index.php:347 2019/index.php:358 includes/class-Sharable.php:57
+#: 2019/index.php:392 2019/index.php:403 includes/class-Sharable.php:57
 #, fuzzy, php-format
 msgid "il %s"
 msgstr "ël %s"
 
-#: 2019/index.php:349
+#: 2019/index.php:394
 #, fuzzy, php-format
 msgid "tram %s"
 msgstr "tram %s"
 
-#: 2019/index.php:353
+#: 2019/index.php:398
 #, fuzzy
 msgid "Ospedale Mauriziano"
 msgstr "Ospidal Maurissian"
 
-#: 2019/index.php:360
+#: 2019/index.php:405
 #, fuzzy, php-format
 msgid "bus %s"
 msgstr "bus %s"
 
-#: 2019/index.php:369
+#: 2019/index.php:414
 #, fuzzy, php-format
 msgid "la %s"
 msgstr "la %s"
 
-#: 2019/index.php:370
+#: 2019/index.php:415
 #, fuzzy
 msgid "metropolitana"
 msgstr "metrò"
 
-#: 2019/index.php:375
+#: 2019/index.php:420
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Ij bus %s e %s as fermo assé davzin."
 
-#: 2019/index.php:391
+#: 2019/index.php:436
 #, fuzzy
 msgid "Con il patrocinio di…"
 msgstr "S'event a l'é sostnù da..."
 
-#: 2019/index.php:407
+#: 2019/index.php:452
 msgid "Con il supporto di…"
 msgstr "Con ël supòrt ëd..."
 
-#: 2019/index.php:416
+#: 2019/index.php:461
 #, fuzzy
 msgid "Media Partner"
 msgstr "Media Partner"
 
-#: 2019/index.php:431
+#: 2019/index.php:476
 #, fuzzy
 msgid "Contattaci"
 msgstr "Contate-ne"
 
-#: 2019/index.php:433
+#: 2019/index.php:478
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -2626,11 +2693,6 @@ msgstr "À l'arserca 'd un travaj"
 #, fuzzy
 msgid "Intro"
 msgstr "Introdussion"
-
-#: 2019/template/navbar-home.php:59
-#, fuzzy
-msgid "Contatti"
-msgstr "Contat"
 
 #: includes/suckless-php/class-FileUploader.php:319
 msgid "Upload completato con successo."
