@@ -471,4 +471,17 @@ class Event extends Queried {
 			self::LANGUAGE,
 		];
 	}
+
+	/**
+	 * Get all the fields that support internationalization
+	 *
+	 * @return array
+	 */
+	public static function fields_i18n() {
+		return [
+			self::ABSTRACT,
+			self::DESCRIPTION,
+			self::NOTE,
+		];
+	}
 }

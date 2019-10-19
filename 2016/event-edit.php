@@ -62,13 +62,6 @@ if( isset( $_GET['uid'] ) ) {
 	}
 }
 
-// known columns internationalized in multiple languages
-$i18n_columns = [
-	Event::ABSTRACT    => __( "Abstract" ),
-	Event::DESCRIPTION => __( "Descrizione" ),
-	Event::NOTE        => __( "Note" ),
-];
-
 $warning = null;
 
 if( $_POST ) {
@@ -92,7 +85,7 @@ if( $_POST ) {
 
 		// for each language save the fields
 		foreach( all_languages() as $lang ) {
-			foreach( $i18n_columns as $i18n_column => $label ) {
+			foreach( Event::fields_i18n() as $i18n_column => $label ) {
 				// generic column name in this language
 				$field = $i18n_column . '_' . $lang->getISO();
 
@@ -462,7 +455,7 @@ if( $event ) {
 
 		</div>
 
-		<?php foreach( $i18n_columns as $i18n_column => $label ): ?>
+		<?php foreach( Event::fields_i18n() as $i18n_column => $label ): ?>
 			<h3><?= $label ?></h3>
 			<div class="row">
 				<?php foreach( all_languages() as $lang ): ?>
