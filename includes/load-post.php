@@ -90,7 +90,7 @@ define( 'GETTEXT_DEFAULT_ENCODE', 'utf8' );
 // register languages
 register_language( 'en_US', ['en', 'en-us', 'en-en'], null, null, 'English'    );
 register_language( 'it_IT', ['it', 'it-it'],          null, null, 'Italiano'   );
-register_language( 'pms',   [ 'pms' ],                null, null, 'Piemontese' );
+register_language( 'pms',   [ 'pms' ],                null, null, 'Piemontèis' );
 register_default_language( 'it_IT' );
 
 // apply the global timezone
