@@ -37,8 +37,13 @@ require ABSPATH . '/includes/functions.php';
 // user permissions
 register_permissions( 'user', [] );
 
+// translator permissions
+inherit_permissions( 'translator', 'user', [
+	'translate',
+] );
+
 // admin permissions
-inherit_permissions( 'admin',   'user', [
+inherit_permissions( 'admin', 'translator', [
 	'add-event',
 	'edit-users',
 	'edit-events',
@@ -88,8 +93,8 @@ define( 'GETTEXT_DIRECTORY', ABSPATH . __ . 'l10n' );
 define( 'GETTEXT_DEFAULT_ENCODE', 'utf8' );
 
 // register languages
-register_language( 'en_US', ['en', 'en-us', 'en-en'], null, null, 'English'    );
 register_language( 'it_IT', ['it', 'it-it'],          null, null, 'Italiano'   );
+register_language( 'en_US', ['en', 'en-us', 'en-en'], null, null, 'English'    );
 register_language( 'pms',   [ 'pms' ],                null, null, 'Piemontèis' );
 register_default_language( 'it_IT' );
 
