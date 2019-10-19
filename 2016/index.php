@@ -126,7 +126,7 @@ Header::spawn( null, [
 				<img src="<?= STATIC_PATH ?>/linuxday-200.png" alt="<?= esc_attr( $conference->getConferenceTitle() ) ?>" class="responsive-img" />
 			</div>
 			<div class="col s12 m10 l11">
-				<p class="flow-text"><?php printf(
+				<p class="flow-text text-justify"><?php printf(
 					__(
 						"Il Linux Day è la principale manifestazione italiana di promozione di software libero e sistemi operativi %s/%s. ".
 						"Il Linux Day Torino 2016 si è tenuto il <strong>%s</strong> (%s) presso il <strong>Dipartimento di Informatica</strong> dell'Università degli studi di Torino."
@@ -181,7 +181,7 @@ Header::spawn( null, [
 				Track::LABEL,
 			]
 		); ?>
-		<p class="flow-text"><?php printf(
+		<p class="flow-text text-justify"><?php printf(
 			__(
 				"Un ampio programma fatto di %s talks di un'ora ciascuno distribuiti in %s ore, ".
 				"affrontando tematiche riguardanti il software libero su più livelli, ".
