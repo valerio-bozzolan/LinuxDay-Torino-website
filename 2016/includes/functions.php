@@ -72,3 +72,14 @@ function die_with_404() {
 	new Footer();
 	exit;
 }
+
+/**
+ * Require a certain page from the template directory
+ *
+ * @param $name string page name (to be sanitized)
+ * @param $args mixed arguments to be passed to the page scope
+ */
+function template( $template, $template_args = [] ) {
+	extract( $template_args, EXTR_SKIP );
+	require CURRENT_CONFERENCE_ABSPATH . __ . 'template' . __ . $template . '.php';
+}

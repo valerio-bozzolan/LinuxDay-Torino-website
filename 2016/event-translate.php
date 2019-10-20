@@ -56,19 +56,28 @@ if( is_action( 'translate-event' ) ) {
 	// for each language save the fields
 	foreach( all_languages() as $lang ) {
 
-		// do not allow to edit the default language
-		if( $lang === $DEFAULT_LANGUAGE ) {
+		// do not allow to edit the default language if you are not the Event owner
+		if( $lang === $DEFAULT_LANGUAGE && !$event->isEventEditable() ) {
 			continue;
 		}
 
-		foreach( Event::fields_i18n() as $i18n_column => $label ) {
+		// for each translatable fields
+		foreach( Event::fields_i18n() as $i18n_column ) {
+
 			// generic column name in this language
 			$field = $i18n_column . '_' . $lang->getISO();
 
 			// sent column value
-			$value = $_POST[ $field ] ?? null;
+			$value = isset( $_POST[ $field ] )
+			              ? $_POST[ $field ]
+			              : null;
 
-			// prepare to be saved
+			// set empty strings as null
+			if( !$value ) {
+				$value = null;
+			}
+
+			// sanitize the value before update (allow string and null)
 			$tosave[] = new DBCol( $field, $value, 'snull' );
 		}
 	}
@@ -77,6 +86,9 @@ if( is_action( 'translate-event' ) ) {
 	( new QueryEvent() )
 		->whereEvent( $event )
 		->update( $tosave );
+
+	// POST -> redirect -> GET
+	http_redirect( $_SERVER[ 'REQUEST_URI' ], 303 );
 }
 
 // print the site header
@@ -87,25 +99,28 @@ Header::spawn( null, [
 
 <form method="post">
 
-	<p><?= __( "Descrizione" ) ?>
-	<div class="row">
-		<?php foreach( all_languages() as $lang ): ?>
-			<div class="col s12">
-				<label><?= $lang->getHuman() ?></label>
-				<textarea name="<?= Event::DESCRIPTION ?>"<?php
+	<?php form_action( 'translate-event' ) ?>
 
-					// mark source language as readonly
-					if( $lang === $DEFAULT_LANGUAGE ) {
-						echo " readonly";
-					}
+	<!-- abstract -->
+	<?php template( 'textarea-multilanguage', [
+		'event' => $event,
+		'field' => Event::ABSTRACT,
+		'label' => __( "Abstract" )
+	] ) ?>
 
-				?>><?=
-					// textarea content
-					esc_html( $event->get( Event::DESCRIPTION . '_' . $lang->getISO() ) )
-				?></textarea>
-			</div>
-		<?php endforeach ?>
-	</div>
+	<!-- description -->
+	<?php template( 'textarea-multilanguage', [
+		'event' => $event,
+		'field' => Event::DESCRIPTION,
+		'label' => __( "Descrizione" )
+	] ) ?>
+
+	<!-- notes -->
+	<?php template( 'textarea-multilanguage', [
+		'event' => $event,
+		'field' => Event::NOTE,
+		'label' => __( "Note" )
+	] ) ?>
 
 	<div class="row">
 		<div class="col s12">
