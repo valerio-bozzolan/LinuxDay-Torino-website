@@ -35,14 +35,24 @@ $opts = getopt( 'h', [
 
 // show help
 if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ], $opts[ 'role' ] ) || isset( $opts[ 'help' ] ) || isset( $opts[ 'h' ] ) ) {
+
+	$roles = _roles();
+	$roles_list = implode( '|', $roles );
+
 	printf( "Usage: %s [OPTIONS]\n", $argv[ 0 ] );
 	echo "OPTIONS:\n";
 	echo "    --uid=UID          user UID\n";
-	echo "    --role=ROLE        user role (user|admin|translator)\n";
+	echo "    --role=ROLE        user role ($roles_list)\n";
 	echo "    --pwd=PASSWORD     password\n";
 	echo "    --force            update the user password if exists\n";
 	echo " -h --help             show this help and exit\n";
 	exit( 0 );
+}
+
+// validate role
+if( !Permissions::instance()->roleExists( $opts['role'] ) ) {
+	printf( "The role '%s' does not exist\n", $opts['role'] );
+	exit( 1 );
 }
 
 // look for existing user
@@ -72,4 +82,26 @@ if( $user ) {
 		new DBCol( User::PASSWORD,  $pwd,            's' ),
 		new DBCol( User::IS_ACTIVE, 1,               'd' ),
 	] );
+}
+
+
+/**
+ * Get a list of available roles
+ *
+ * Well, it just remove the DEFAULT_USER_ROLE from the roles.
+ *
+ * @return array
+ */
+function _roles() {
+
+	$good_roles = [];
+
+	// get the existing roles
+	foreach( Permissions::instance()->getRoles() as $role ) {
+		if( $role !== DEFAULT_USER_ROLE ) {
+			$good_roles[] = $role;
+		}
+	}
+
+	return $good_roles;
 }
