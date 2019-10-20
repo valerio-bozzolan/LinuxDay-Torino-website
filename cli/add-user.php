@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 # Linux Day - command line interface to create an user
-# Copyright (C) 2018 Valerio Bozzolan
+# Copyright (C) 2018, 2019 Valerio Bozzolan
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -38,7 +38,7 @@ if( ! isset( $opts[ 'uid' ], $opts[ 'pwd' ], $opts[ 'role' ] ) || isset( $opts[ 
 	printf( "Usage: %s [OPTIONS]\n", $argv[ 0 ] );
 	echo "OPTIONS:\n";
 	echo "    --uid=UID          user UID\n";
-	echo "    --role=ROLE        user role (user|admin)\n";
+	echo "    --role=ROLE        user role (user|admin|translator)\n";
 	echo "    --pwd=PASSWORD     password\n";
 	echo "    --force            update the user password if exists\n";
 	echo " -h --help             show this help and exit\n";
