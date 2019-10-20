@@ -33,7 +33,7 @@ if( !$id ) {
 $event = ( new QueryEvent() )
 	->whereEventID( $id )
 	->joinConference()
-	->joinTrack()
+	->joinChapter()
 	->queryRow();
 
 // no Event no party
@@ -96,6 +96,19 @@ Header::spawn( null, [
 	'title' => $event->getEventTitle(),
 ] );
 ?>
+
+<p><?= HTML::a(
+	$event->getConferenceURL(),
+	esc_html( $event->getConferenceTitle() ) . icon( 'home', 'left' )
+) ?></p>
+
+<p><?= HTML::a(
+	// href
+	$event->getEventURL(),
+
+	// text
+	__( "Vedi" ) . icon( 'account_box', 'left' )
+) ?></p>
 
 <form method="post">
 
