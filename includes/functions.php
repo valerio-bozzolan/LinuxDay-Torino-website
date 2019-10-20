@@ -35,11 +35,6 @@ function i18n_coalesce( $name, $i18n = null ) {
 	// current language (e.g. 'en')
 	$lang = latest_language()->getISO();
 
-	// TODO: add database fields for Piemontese
-	if( $lang === 'pms' ) {
-		$lang = 'it';
-	}
-
 	// default language of the website
 	$default = 'it';
 
