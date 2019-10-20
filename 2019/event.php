@@ -58,11 +58,23 @@ template( 'header', $args );
 	<?php endif ?>
 
 	<?php if( $event->isEventEditable() ): ?>
-	<p><?= HTML::a(
-		$event->getFullEventEditURL(),
-		__("Modifica") . icon('edit', 'left')
-	) ?></p>
+
+		<!-- edit link -->
+		<p><?= HTML::a(
+			$event->getFullEventEditURL(),
+			__("Modifica") . icon('edit', 'left')
+		) ?></p>
+
+	<?php elseif( $event->isEventTranslatable() ): ?>
+
+		<!-- translate link -->
+		<p><?= HTML::a(
+			$event->getEventTranslateURL(),
+			__("Traduci") . icon('edit', 'left')
+		) ?></p>
+
 	<?php endif ?>
+
 </section>
 
 <section class="container">

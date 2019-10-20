@@ -142,7 +142,13 @@ template( 'header', [
 									$event->getFullEventEditURL(),
 									__( "Modifica" )
 								) ?>
+							<?php elseif( $event->isEventTranslatable() ): ?>
+								<?= HTML::a(
+									$event->getEventTranslateURL(),
+									__( "Traduci" )
+								) ?>
 							<?php endif ?>
+
 						</div>
 					<?php endforeach ?>
 

@@ -264,6 +264,15 @@ trait EventTrait {
 	}
 
 	/**
+	 * Check if I can translate this Event
+	 *
+	 * @return boolean
+	 */
+	public function isEventTranslatable() {
+		return $this->isEventEditable() || has_permission( 'translate' );
+	}
+
+	/**
 	 * Insert subscription if not exists
 	 */
 	function addSubscription($email) {
@@ -303,6 +312,20 @@ trait EventTrait {
 	public function isEventPassed() {
 		$now = new DateTime('now');
 		return $now->diff( $this->get('event_end') )->invert === 1;
+	}
+
+	/**
+	 * Get the URL to the page that allow to translate this Event
+	 *
+	 * @return string
+	 */
+	public function getEventTranslateURL() {
+		// well, actually the translate page it's in the 2016 directory :^)
+		$page = ROOT . '/2016/event-translate.php';
+
+		return http_build_get_query( $page, [
+			'id' => $this->getEventID(),
+		] );
 	}
 
 	/**

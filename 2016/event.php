@@ -54,11 +54,17 @@ if( $event->hasEventImage() ) {
 
 Header::spawn( null, $args );
 ?>
+
 	<?php if( $event->isEventEditable() ): ?>
-	<p><?= HTML::a(
-		$event->getFullEventEditURL(),
-		__("Modifica evento") . icon('edit', 'left')
-	) ?></p>
+		<p><?= HTML::a(
+			$event->getFullEventEditURL(),
+			__("Modifica") . icon('edit', 'left')
+		) ?></p>
+	<?php elseif( $event->isEventTranslatable() ): ?>
+		<p><?= HTML::a(
+			$event->getEventTranslateURL(),
+			__("Traduci") . icon('edit', 'left')
+		) ?></p>
 	<?php endif ?>
 
 	<div class="row">
