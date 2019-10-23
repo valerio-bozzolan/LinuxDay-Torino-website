@@ -81,7 +81,6 @@ template( 'header', [
 			<div class="col-sm-12">
 				<div class="section-title">
 					<h2><?= __( "Programma" ) ?></h2>
-					<p><?= __( "Ecco un assaggio dei temi che verranno affrontati:" ) ?></p>
 				</div>
 			</div>
 		</div>
@@ -174,6 +173,11 @@ template( 'header', [
 				</div>
 			</div>
 		<?php endforeach ?>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<img class="img-fluid" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/planimetria.png" alt="Planimetria Linux Day Torino 2019">
+			</div>
 		</div>
 	</div>
 </section>
