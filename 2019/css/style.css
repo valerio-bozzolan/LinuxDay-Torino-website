@@ -73,6 +73,7 @@ a {
 #speakers, 
 #program,
 #sponsors, 
+#lip-info, 
 #contact, footer {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -739,7 +740,7 @@ footer {
  * Custom shit 2019 by LDTO
  */
 #map {
-	height: 80vmin;
+	height: 50vmin;
 }
 .event-subtitle {
 	margin:0 !important;
