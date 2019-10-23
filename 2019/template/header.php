@@ -86,6 +86,7 @@ http://www.templatemo.com/tm-486-new-event
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/owl.theme.css">
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/owl.carousel.css">
+<link rel="icon" type="image/png" href="<?= ROOT ?>/2018/images/linuxday-favicon.png" />
 
 <!-- Main css -->
 <link rel="stylesheet" href="<?= CURRENT_CONFERENCE_ROOT ?>/css/style.css">
