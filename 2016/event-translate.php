@@ -62,7 +62,7 @@ if( is_action( 'translate-event' ) ) {
 		}
 
 		// for each translatable fields
-		foreach( Event::fields_i18n() as $i18n_column ) {
+		foreach( Event::fields_i18n() as $i18n_column => $label ) {
 
 			// generic column name in this language
 			$field = $i18n_column . '_' . $lang->getISO();
@@ -114,26 +114,15 @@ Header::spawn( null, [
 
 	<?php form_action( 'translate-event' ) ?>
 
-	<!-- abstract -->
-	<?php template( 'textarea-multilanguage', [
-		'event' => $event,
-		'field' => Event::ABSTRACT,
-		'label' => __( "Abstract" )
-	] ) ?>
+	<?php foreach( Event::fields_i18n() as $field => $label ): ?>
 
-	<!-- description -->
-	<?php template( 'textarea-multilanguage', [
-		'event' => $event,
-		'field' => Event::DESCRIPTION,
-		'label' => __( "Descrizione" )
-	] ) ?>
+		<?php template( 'textarea-multilanguage', [
+			'event' => $event,
+			'field' => $field,
+			'label' => $label,
+		] ) ?>
 
-	<!-- notes -->
-	<?php template( 'textarea-multilanguage', [
-		'event' => $event,
-		'field' => Event::NOTE,
-		'label' => __( "Note" )
-	] ) ?>
+	<?php endforeach ?>
 
 	<div class="row">
 		<div class="col s12">

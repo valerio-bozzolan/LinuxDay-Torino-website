@@ -502,9 +502,9 @@ class Event extends Queried {
 	 */
 	public static function fields_i18n() {
 		return [
-			self::ABSTRACT,
-			self::DESCRIPTION,
-			self::NOTE,
+			self::ABSTRACT     => __( "Abstract"    ),
+			self::DESCRIPTION  => __( "Descrizione" ),
+			self::NOTE         => __( "Note"        ),
 		];
 	}
 }
