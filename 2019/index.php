@@ -186,7 +186,7 @@ template( 'header', [
 		<div class="row">
 			<h2 class="text-center"><?= __( "Nello stesso momento" ) ?>&hellip;</h2>
 			<div class="col-md-6">
-				<img class="img-fluid" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gnu-linux-installation-party-ds.jpg" title="GNU/Linux installation party DSLite DSLinux" />
+				<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gnu-linux-installation-party-ds.jpg" title="GNU/Linux installation party DSLite DSLinux" />
 			</div>
 			<div class="col-md-6">
 				<div class="jumbotron">
