@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Last update: 2019-10-18T14:29:14+02:00
+# Last update: 2019-10-23T20:05:06+02:00
 
 // conference[2016]::conference_title
 __("Linux Day Torino 2016");
@@ -138,7 +138,7 @@ __("Rust");
 __("MQTT");
 
 // event[deep-speech]::event_title
-__("Deep Speech");
+__("DeepSpeech");
 
 // event[deep-speech]::event_subtitle
 __("Riconoscimento vocale");

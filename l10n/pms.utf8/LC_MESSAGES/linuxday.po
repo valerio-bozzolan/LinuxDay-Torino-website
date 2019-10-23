@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxday\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 14:34+0200\n"
+"POT-Creation-Date: 2019-10-23 18:05+0000\n"
 "PO-Revision-Date: 2019-10-18 21:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 "Ël còdes sors dël sit a l'é distribuì sota lissensa lìbera %s. Clon-lo!"
 
-#: 2016/credits.php:204 2016/event.php:158 2019/event.php:164
+#: 2016/credits.php:204 2016/event.php:164 2019/event.php:176
 msgid "Materiale"
 msgstr "Material"
 
@@ -146,123 +146,111 @@ msgstr "la mistà pijà da soa video \"This is Wikipedia\""
 msgid "l'immagine predefinita di alcuni elementi"
 msgstr "la mistà pre-definìa ëd quaich element"
 
-#: 2016/event-edit.php:67 2016/event.php:125 2019/event.php:131
-msgid "Abstract"
-msgstr "Abstract/Sintes"
-
-#: 2016/event-edit.php:68 2016/event.php:135 2019/event.php:142
-msgid "Descrizione"
-msgstr "Descrission"
-
-#: 2016/event-edit.php:69 2016/event.php:145 2019/event.php:152
-msgid "Note"
-msgstr "Armarche"
-
-#: 2016/event-edit.php:229
+#: 2016/event-edit.php:222
 #, php-format
 msgid "Modifica %s: %s"
 msgstr "Modifia %s: %s"
 
-#: 2016/event-edit.php:237 2016/event-edit.php:569 2016/user-edit.php:559
+#: 2016/event-edit.php:230 2016/event-edit.php:562 2016/user-edit.php:559
 #, php-format
 msgid "Aggiungi %s"
 msgstr "Gionta %s"
 
-#: 2016/event-edit.php:238 2016/index.php:72
+#: 2016/event-edit.php:231 2016/index.php:72
 msgid "Evento"
 msgstr "Event"
 
-#: 2016/event-edit.php:260 2016/user-edit.php:253
+#: 2016/event-edit.php:253 2016/event-translate.php:110 2016/user-edit.php:253
 msgid "Vedi"
 msgstr "Varda"
 
-#: 2016/event-edit.php:271 2016/user-edit.php:606
+#: 2016/event-edit.php:264 2016/user-edit.php:606
 msgid "Titolo"
 msgstr "Tìtol"
 
-#: 2016/event-edit.php:282
+#: 2016/event-edit.php:275
 msgid "Codice"
 msgstr "Còdes"
 
-#: 2016/event-edit.php:293
+#: 2016/event-edit.php:286
 msgid "Sottotitolo"
 msgstr "Sot-tìtol"
 
-#: 2016/event-edit.php:304 2016/includes/class-Footer.php:115
+#: 2016/event-edit.php:297 2016/includes/class-Footer.php:115
 msgid "Lingua"
 msgstr "Lenga"
 
-#: 2016/event-edit.php:320
+#: 2016/event-edit.php:313
 msgid "Capitolo"
 msgstr "Capìtol"
 
-#: 2016/event-edit.php:358
+#: 2016/event-edit.php:351
 msgid "Traccia"
 msgstr "Trassé"
 
-#: 2016/event-edit.php:396
+#: 2016/event-edit.php:389
 msgid "Stanza"
 msgstr "Stansia"
 
-#: 2016/event-edit.php:439
+#: 2016/event-edit.php:432
 msgid "Inizio"
 msgstr "Anandiament"
 
-#: 2016/event-edit.php:452
+#: 2016/event-edit.php:445
 msgid "Fine"
 msgstr "Fin"
 
-#: 2016/event-edit.php:489 2016/user-edit.php:415
+#: 2016/event-edit.php:482 2016/user-edit.php:415
 msgid "Immagine"
 msgstr "Mistà"
 
-#: 2016/event-edit.php:505 2016/event-edit.php:615 2016/user-edit.php:482
-#: 2016/user-edit.php:541
+#: 2016/event-edit.php:498 2016/event-edit.php:608 2016/event-translate.php:129
+#: 2016/user-edit.php:482 2016/user-edit.php:541
 msgid "Salva"
 msgstr "Anregistra"
 
-#: 2016/event-edit.php:518 2016/user-edit.php:493
+#: 2016/event-edit.php:511 2016/user-edit.php:493
 msgid "Nuova Immagine"
 msgstr "Neuva mistà"
 
-#: 2016/event-edit.php:522 2016/user-edit.php:497
+#: 2016/event-edit.php:515 2016/user-edit.php:497
 msgid "Sfoglia"
 msgstr "Përcor"
 
-#: 2016/event-edit.php:529 2016/user-edit.php:504
+#: 2016/event-edit.php:522 2016/user-edit.php:504
 msgid "Carica"
 msgstr "Caria"
 
-#: 2016/event-edit.php:542
+#: 2016/event-edit.php:535
 #, php-format
 msgid "Associa %s"
 msgstr "Assossia %s"
 
-#: 2016/event-edit.php:543 2016/event-edit.php:572 2016/event-edit.php:620
+#: 2016/event-edit.php:536 2016/event-edit.php:565 2016/event-edit.php:613
 msgid "Utente"
 msgstr "Utilisador"
 
-#: 2016/event-edit.php:563 2016/user-edit.php:584 2016/user-edit.php:617
-#: 2019/index.php:166
+#: 2016/event-edit.php:556 2016/user-edit.php:584 2016/user-edit.php:617
+#: 2019/index.php:170
 msgid "Aggiungi"
 msgstr "Gionta"
 
-#: 2016/event-edit.php:571
+#: 2016/event-edit.php:564
 #, php-format
 msgid "Nuovo %s"
 msgstr "Neuv %s"
 
-#: 2016/event-edit.php:594 2016/event-edit.php:619 2016/user-edit.php:242
+#: 2016/event-edit.php:587 2016/event-edit.php:612 2016/user-edit.php:242
 #: 2016/user-edit.php:519
 #, php-format
 msgid "Modifica %s"
 msgstr "Modifia %s"
 
-#: 2016/event-edit.php:595
+#: 2016/event-edit.php:588
 msgid "Ordinamento"
 msgstr "Ardrissé"
 
-#: 2016/event-edit.php:612 2016/user-edit.php:538 2016/user-edit.php:632
+#: 2016/event-edit.php:605 2016/user-edit.php:538 2016/user-edit.php:632
 msgid "Elimina"
 msgstr "Elimina"
 
@@ -271,61 +259,78 @@ msgstr "Elimina"
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: 2016/event.php:60
-msgid "Modifica evento"
-msgstr "Cangia n’event"
+#: 2016/event.php:61 2016/user.php:48 2019/event.php:65 2019/index.php:141
+#: 2019/user.php:71
+msgid "Modifica"
+msgstr "Modifié"
 
-#: 2016/event.php:81 2016/user.php:155 2019/event.php:86 2019/user.php:198
+#: 2016/event.php:66 2019/event.php:73 2019/index.php:146
+msgid "Traduci"
+msgstr ""
+
+#: 2016/event.php:87 2016/user.php:155 2019/event.php:98 2019/user.php:198
 msgid "Tema"
 msgstr "Oget"
 
-#: 2016/event.php:88 2016/index.php:74 2016/user.php:156 2019/event.php:93
-#: 2019/index.php:385 2019/user.php:199 2019/template/navbar-home.php:58
+#: 2016/event.php:94 2016/index.php:74 2016/user.php:156 2019/event.php:105
+#: 2019/index.php:401 2019/user.php:199 2019/template/navbar-home.php:58
 msgid "Dove"
 msgstr "Andoa"
 
-#: 2016/event.php:102 2016/index.php:73 2017/index.php:128 2019/event.php:107
+#: 2016/event.php:108 2016/index.php:73 2017/index.php:128 2019/event.php:119
 #: 2019/user.php:200
 msgid "Quando"
 msgstr "Quand"
 
-#: 2016/event.php:106 2016/index.php:98 2019/event.php:111
+#: 2016/event.php:112 2016/index.php:98 2019/event.php:123
 #, php-format
 msgid "%s alle %s"
 msgstr "%s ora %s"
 
-#: 2016/event.php:112 2019/event.php:117
+#: 2016/event.php:118 2019/event.php:129
 msgid "Scarica promemoria calendario"
 msgstr "Dëscaria ël memo dël calendari"
 
-#: 2016/event.php:165 2019/event.php:171
+#: 2016/event.php:131 2019/event.php:143 includes/class-Event.php:505
+msgid "Abstract"
+msgstr "Abstract/Sintes"
+
+#: 2016/event.php:141 2019/event.php:154 includes/class-Event.php:506
+msgid "Descrizione"
+msgstr "Descrission"
+
+#: 2016/event.php:151 2019/event.php:164 includes/class-Event.php:507
+msgid "Note"
+msgstr "Armarche"
+
+#: 2016/event.php:171 2019/event.php:183
 #, php-format
 msgid "Scarica %s distribuibile sotto licenza %s."
 msgstr "Dëscaria %s distribuàbil sota lissensa %s."
 
-#: 2016/event.php:184 2019/event.php:190
+#: 2016/event.php:190 2019/event.php:202
 #, php-format
 msgid "Vedi %s distribuibile sotto licenza %s."
 msgstr "Varda %s distribuàbil sota lissensa %s."
 
-#: 2016/event.php:206 2019/event.php:211
+#: 2016/event.php:212 2019/event.php:223
 msgid "Relatori"
 msgstr "Presentador"
 
-#: 2016/event.php:220 2016/event.php:237 2019/event.php:225 2019/event.php:240
+#: 2016/event.php:226 2016/event.php:243 2019/event.php:237 2019/event.php:252
 #, php-format
 msgid "Profilo di %s"
 msgstr "Profil ëd %s"
 
-#: 2016/event.php:248 2019/event.php:250
+#: 2016/event.php:254 2019/event.php:262
 msgid "L'elenco dei relatori non è ancora noto."
 msgstr "La lista dij presentador a l'é ancor nen conossùa."
 
-#: 2016/event.php:271 2019/event.php:270
+#: 2016/event.php:277 2019/event.php:282
 msgid "Preceduto da"
 msgstr "Anans a-i ven"
 
-#: 2016/event.php:283 2019/event.php:280
+#: 2016/event.php:289 2019/event.php:292
 msgid "A seguire"
 msgstr "Apress a-i ven"
 
@@ -726,10 +731,6 @@ msgstr "Interess"
 msgid "Tipo"
 msgstr "Tip"
 
-#: 2016/user.php:48 2019/event.php:63 2019/index.php:143 2019/user.php:71
-msgid "Modifica"
-msgstr "Modifié"
-
 #: 2016/user.php:80 2019/user.php:108
 msgid "Sito personale"
 msgstr "Sit personal"
@@ -919,11 +920,11 @@ msgstr "Pijé ël tram 9 o 3 (Ospidal Amedé ëd Savòja)"
 msgid "Prendere il bus 59 o 50/"
 msgstr "Pijé ël bus 59 o 50/"
 
-#: 2017/index.php:156 2019/index.php:427
+#: 2017/index.php:156 2019/index.php:443
 msgid "Abilita JavaScript per vedere la mappa"
 msgstr "Autorisé JavaScript per vardé ël pian"
 
-#: 2017/index.php:167 2019/index.php:84 2019/template/navbar-home.php:57
+#: 2017/index.php:167 2019/index.php:83 2019/template/navbar-home.php:57
 msgid "Programma"
 msgstr "Program"
 
@@ -999,11 +1000,11 @@ msgstr "LDTO2017"
 msgid "API"
 msgstr "API"
 
-#: 2019/index.php:50
+#: 2019/index.php:49
 msgid "Tutti insieme"
 msgstr "Tuit ansem"
 
-#: 2019/index.php:51
+#: 2019/index.php:50
 msgid ""
 "LAN party, installation party, mini Restart Party. Porta un amico da "
 "convertire: ci divertiremo insieme a tutte le community."
@@ -1011,12 +1012,12 @@ msgstr ""
 "LAN party, installation party, mini Restart Party. Porté n'amisa o n’amis da "
 "convertì, për amuse-se con tuta la comunità."
 
-#: 2019/index.php:57
+#: 2019/index.php:56
 #, php-format
 msgid "%s sessioni"
 msgstr "%s session"
 
-#: 2019/index.php:60
+#: 2019/index.php:59
 msgid ""
 "Scegli fra l'<b>aula base</b>, l'aula per <b>sistemisti</b> o "
 "<b>programmatori</b> e divertiti!"
@@ -1024,12 +1025,12 @@ msgstr ""
 "Sern antre la <b>stansia ëd bas</b>, la stansia për <b>administrator sistem</"
 "b> o <b>programeur</b> e bon corage!"
 
-#: 2019/index.php:66
+#: 2019/index.php:65
 #, php-format
 msgid "%s relatori"
 msgstr "%s presentador"
 
-#: 2019/index.php:69
+#: 2019/index.php:68
 msgid ""
 "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software "
 "libero. Tutti insieme a Torino."
@@ -1037,38 +1038,39 @@ msgstr ""
 "Programeur, ingenié, avocat, professionaj dël software duvert. Tuit ansem a "
 "Turin."
 
-#: 2019/index.php:85
-msgid "Ecco un assaggio dei temi che verranno affrontati:"
-msgstr "Anbelessì në scianchet dij suget tratà:"
-
-#: 2019/index.php:93 2019/index.php:123
+#: 2019/index.php:91 2019/index.php:121
 #, php-format
 msgid "Aula %s"
 msgstr "Stansia %s"
 
-#: 2019/index.php:114
+#: 2019/index.php:112
 #, php-format
 msgid "Di %s"
 msgstr "Ëd %s"
 
-#: 2019/index.php:115
+#: 2019/index.php:113
 msgid "Speaker Segreto"
 msgstr "Presentador secret"
 
-#: 2019/index.php:137
+#: 2019/index.php:135
 msgid "Memo"
 msgstr "Memo"
 
-#: 2019/index.php:181
+#: 2019/index.php:180
+#, fuzzy
+msgid "planimetria"
+msgstr "Pian"
+
+#: 2019/index.php:193
 msgid "Nello stesso momento"
 msgstr "Ant 'l istess moment"
 
-#: 2019/index.php:187 2019/index.php:292
+#: 2019/index.php:200 2019/index.php:308
 #, php-format
 msgid "Cos'è il %s"
 msgstr "Còs é-lo %s"
 
-#: 2019/index.php:190
+#: 2019/index.php:203
 msgid ""
 "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una "
 "centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a "
@@ -1078,26 +1080,26 @@ msgstr ""
 "nucleara o tut lòn ch'a peul esse tramuvà a GNU/Linux, e i të giuteroma "
 "noiautre à libere-je!"
 
-#: 2019/index.php:193
+#: 2019/index.php:206
 #, php-format
 msgid ""
 "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s."
 msgstr ""
 "La mistà ëd %s e ëd %s disponìbile rëspectivament sota lissensa %s e %s."
 
-#: 2019/index.php:208
+#: 2019/index.php:221
 msgid "pubblico dominio"
 msgstr "pùblich domin"
 
-#: 2019/index.php:228
+#: 2019/index.php:244
 msgid "Ma non finisce qui!"
 msgstr "Ma a finiss pa si!"
 
-#: 2019/index.php:230 2019/index.php:233
+#: 2019/index.php:246 2019/index.php:249
 msgid "Corsi GNU/Linux"
 msgstr "GNU/Linux"
 
-#: 2019/index.php:234
+#: 2019/index.php:250
 msgid ""
 "Ti aspettiamo al Linux Day, ma nei giorni successivi organizzeremo anche dei "
 "veri e propri corsi (gratuiti!) di livello base ed avanzato, sull'uso di GNU/"
@@ -1107,25 +1109,25 @@ msgstr ""
 "cors (à gratis), ëd lëvel ëd bas e pì anans, ans 'l utilisassion ëd GNU/"
 "Linux ant un quàder përsonal e industrial."
 
-#: 2019/index.php:235
+#: 2019/index.php:251
 msgid "Che aspetti? Prenota un posto anche per i corsi!"
 msgstr "Bëstanda nen! Rëserva un pòst ëdcò për ij cors!"
 
-#: 2019/index.php:236
+#: 2019/index.php:252
 msgid "Iscrizione ai corsi GNU/Linux"
 msgstr "Iscrission ai cors GNU/Linux"
 
-#: 2019/index.php:245
+#: 2019/index.php:261
 msgid "Assistenza tecnica"
 msgstr "Supòrt tecnich"
 
-#: 2019/index.php:247
+#: 2019/index.php:263
 msgid ""
 "Ti aspettiamo al Linux Day, ma dopo questa conferenza non ti lasceremo certo "
 "da solo!"
 msgstr "It spetoma al Linux Day, ma apress it lasseroma pa daspërtì!"
 
-#: 2019/index.php:251
+#: 2019/index.php:267
 msgid ""
 "Ogni mercoledì, sportello di assistenza gratuita al software libero, "
 "all'**Officina Informatica Libera**, in via Oddino Morgari 14, a Torino."
@@ -1133,20 +1135,20 @@ msgstr ""
 "Vira mèrcol, l' **Officina Informatica Libera**, contrà Oddino Morgari 14, "
 "Turin, a smon n'assistensa a gratis për ël software lìber."
 
-#: 2019/index.php:252 2019/index.php:259 2019/template/navbar-home.php:59
+#: 2019/index.php:268 2019/index.php:275 2019/template/navbar-home.php:59
 msgid "Contatti"
 msgstr "Contat"
 
-#: 2019/index.php:253 2019/index.php:260
+#: 2019/index.php:269 2019/index.php:276
 #, php-format
 msgid "prossimo: %s"
 msgstr "ch'a-i ven: %s"
 
-#: 2019/index.php:254
+#: 2019/index.php:270
 msgid "30 ottobre"
 msgstr "22 'd otober"
 
-#: 2019/index.php:258
+#: 2019/index.php:274
 msgid ""
 "Ogni terzo sabato del mese, sportello di assistenza gratuita al software "
 "libero, con il **GLugTO**, al Polo culturale Lombroso16"
@@ -1154,15 +1156,15 @@ msgstr ""
 "Vira s saba dël mèis, **GLugTO**, al Pòl Cultural Lombroso16, a smon "
 "n'assistensa a gratis për ël software lìber"
 
-#: 2019/index.php:261
+#: 2019/index.php:277
 msgid "2 novembre"
 msgstr "2 novèmber"
 
-#: 2019/index.php:280
+#: 2019/index.php:296
 msgid "Domande frequenti"
 msgstr "Question frequente"
 
-#: 2019/index.php:300
+#: 2019/index.php:316
 msgid ""
 "È un evento nazionale che si svolge da quasi 20 anni. Si svolge in tutta "
 "Italia, parallelamente, e a Torino non mancheremo."
@@ -1170,15 +1172,15 @@ msgstr ""
 "A l'é un event nassional ch'a së ten da squasi 20 agn. A l'ha leu an tuta "
 "Italia ant 'l istess temp, e donch ëdcò à Turin."
 
-#: 2019/index.php:303
+#: 2019/index.php:319
 msgid "Informazioni sul Linux Day nazionale"
 msgstr "Informassion ans ël Linux Day nassional"
 
-#: 2019/index.php:313
+#: 2019/index.php:329
 msgid "Posso portare un amico che non capisce nulla?"
 msgstr "Peul-me mné un amis ch'a na capiss nen d’autr tut?"
 
-#: 2019/index.php:319
+#: 2019/index.php:335
 msgid ""
 "Porta rispetto per il tuo amico. Ma soprattutto porta il tuo amico! "
 "Abbandonalo all'aula \"base\" e vedrai che non si annoierà. Oppure portalo "
@@ -1189,11 +1191,11 @@ msgstr ""
 "pura men-lo a 'l installation party, e i-j giuteroma për soa migrassion vers "
 "ël software lìber!"
 
-#: 2019/index.php:328
+#: 2019/index.php:344
 msgid "Quanto costa?"
 msgstr "Vaire a ven?"
 
-#: 2019/index.php:334
+#: 2019/index.php:350
 msgid ""
 "L'evento è completamente gratuito ed è unicamente possibile grazie al "
 "sostegno di tutte le community di Torino e di chi crede in loro."
@@ -1201,11 +1203,11 @@ msgstr ""
 "'L event a l'é completament a gratis e son a l'é mach possìbil mersì al "
 "supòrt ëd tute le comunità ëd Turin e ëd chi ch'a-j giuta."
 
-#: 2019/index.php:343
+#: 2019/index.php:359
 msgid "Registrerete i talk?"
 msgstr "I anregistrereve le presentassion?"
 
-#: 2019/index.php:349
+#: 2019/index.php:365
 msgid ""
 "Per favore cerca di venire di persona! Abbiamo bisogno del tuo aiuto fisico "
 "per rendere questa community attiva e straordinaria! In ogni caso il nostro "
@@ -1216,17 +1218,17 @@ msgstr ""
 "ativa e fiamenga! An tute le manere nòstr Media Partner a tirerà à "
 "anregistré ël pì possìbil ëd trasse, eventualment an streaming."
 
-#: 2019/index.php:358
+#: 2019/index.php:374
 msgid "Come prenoto una T-shirt?"
 msgstr "Com fas-me për rëservé un t-shirt?"
 
-#: 2019/index.php:364
+#: 2019/index.php:380
 msgid ""
 "Comunicaci la tua taglia ed il genere (uomo/donna) e te la terremo da parte "
 "fresca per l'evento!"
 msgstr "Di-ne vòsta taja, e i lo buteroma da na banda për 'l event!"
 
-#: 2019/index.php:365
+#: 2019/index.php:381
 msgid ""
 "Seriamente, ti conviene dircelo prima perchè alcune taglie finiscono molto "
 "velocemente, e ogni anno molte persone rimangono spoglie."
@@ -1234,7 +1236,7 @@ msgstr ""
 "Dabon, a venta di-lo anans, për che a-i é ëd taje ch'a finisso pì an pressa, "
 "e vira ann vaire a resto patanù."
 
-#: 2019/index.php:386
+#: 2019/index.php:402
 msgid ""
 "La sede del Linux Day Torino 2019 sarà Toolbox Coworking, in via Agostino da "
 "Montefeltro 2."
@@ -1242,65 +1244,69 @@ msgstr ""
 "Ël Linux Day Turin 2019 a së tnirà à Toolbox Coworking, contrà Agostino da "
 "Montefeltro 2."
 
-#: 2019/index.php:387
+#: 2019/index.php:403
 msgid "Per raggiungerci puoi:"
 msgstr "Për ruvé si it peule:"
 
-#: 2019/index.php:390 2019/index.php:401 2019/index.php:412
+#: 2019/index.php:406 2019/index.php:417 2019/index.php:428
 #, php-format
 msgid "Prendere %s, fermata %s"
 msgstr "Pijé %s, stassion %s"
 
-#: 2019/index.php:392 2019/index.php:403 includes/class-Sharable.php:57
+#: 2019/index.php:408 2019/index.php:419 includes/class-Sharable.php:57
 #, php-format
 msgid "il %s"
 msgstr "ël %s"
 
-#: 2019/index.php:394
+#: 2019/index.php:410
 #, php-format
 msgid "tram %s"
 msgstr "tram %s"
 
-#: 2019/index.php:398
+#: 2019/index.php:414
 msgid "Ospedale Mauriziano"
 msgstr "Ospidal Maurissian"
 
-#: 2019/index.php:405
+#: 2019/index.php:421
 #, php-format
 msgid "bus %s"
 msgstr "bus %s"
 
-#: 2019/index.php:414
+#: 2019/index.php:430
 #, php-format
 msgid "la %s"
 msgstr "la %s"
 
-#: 2019/index.php:415
+#: 2019/index.php:431
 msgid "metropolitana"
 msgstr "metrò"
 
-#: 2019/index.php:420
+#: 2019/index.php:436
 #, php-format
 msgid "Anche i bus %s e %s fermano abbastanza vicino."
 msgstr "Ij bus %s e %s as fermo assé davzin."
 
-#: 2019/index.php:436
+#: 2019/index.php:452
 msgid "Con il patrocinio di…"
 msgstr "S'event a l'é sostnù da…"
 
-#: 2019/index.php:452
+#: 2019/index.php:468
 msgid "Con il supporto di…"
 msgstr "Con ël supòrt ëd…"
 
-#: 2019/index.php:461
+#: 2019/index.php:486
 msgid "Media Partner"
 msgstr "Media Partner"
 
-#: 2019/index.php:476
+#: 2019/index.php:492
+msgid "Broadcaster"
+msgstr ""
+
+#: 2019/index.php:507
 msgid "Contattaci"
 msgstr "Contate-ne"
 
-#: 2019/index.php:478
+#: 2019/index.php:509
 #, php-format
 msgid ""
 "Per contattare il Comitato Linux Day Torino puoi scrivere all'indirizzo "
@@ -1758,7 +1764,8 @@ msgid "MQTT"
 msgstr "MQTT"
 
 #: l10n/trebbia.php:141
-msgid "Deep Speech"
+#, fuzzy
+msgid "DeepSpeech"
 msgstr "Deep speech"
 
 #: l10n/trebbia.php:144
@@ -2666,3 +2673,9 @@ msgid ""
 "Potrebbe essere utile comunicarci questo problema affinchè non si ripresenti "
 "in futuro. Grazie per la collaborazione."
 msgstr "A podrìa vnì bin fe-ne conòsse ës problem an manera d’arzòlv-lo."
+
+#~ msgid "Modifica evento"
+#~ msgstr "Cangia n’event"
+
+#~ msgid "Ecco un assaggio dei temi che verranno affrontati:"
+#~ msgstr "Anbelessì në scianchet dij suget tratà:"
