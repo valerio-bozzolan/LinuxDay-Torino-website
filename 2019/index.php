@@ -484,8 +484,8 @@ template( 'header', [
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p><?= __( "Media Partner" ) ?></p>
-				<a href="https://www.top-ix.org/" title="Top-IX">
-					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
+				<a href="https://www.top-ix.org/" title="TOP-IX">
+					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="TOP-IX" />
 				</a>
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
