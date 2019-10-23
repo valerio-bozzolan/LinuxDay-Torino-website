@@ -176,7 +176,7 @@ template( 'header', [
 		</div>
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<img class="img-fluid" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/planimetria.png" alt="Planimetria Linux Day Torino 2019">
+				<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/planimetria.png" alt="<?= esc_attr( __( "planimetria" ) ) ?>" />
 			</div>
 		</div>
 	</div>
