@@ -490,7 +490,9 @@ template( 'header', [
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p><?= __( "Broadcaster" ) ?></p>
-				<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gdg.png" alt="GDG" />
+				<a href="https://www.facebook.com/gdgtorino" title="GDG">
+					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gdg.png" alt="GDG" />
+				</a>
 			</div>
 		</div>
 	</div>
