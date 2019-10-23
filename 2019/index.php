@@ -44,7 +44,6 @@ template( 'header', [
 <section id="detail" class="parallax-section">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-4 col-sm-4">
 				<i class="fa fa-group"></i>
 				<h3><?= __( "Tutti insieme" ) ?></h3>
@@ -184,46 +183,51 @@ template( 'header', [
 ============================== -->
 <section id="lip-info" class="parallax-section">
 	<div class="container">
-		<h2 class="text-center"><?= __( "Nello stesso momento" ) ?>&hellip;</h2>
-		<div>
-			<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gnu-linux-installation-party-ds.jpg" title="GNU/Linux installation party DSLite DSLinux" />
+		<div class="row">
+			<h2 class="text-center"><?= __( "Nello stesso momento" ) ?>&hellip;</h2>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gnu-linux-installation-party-ds.jpg" title="GNU/Linux installation party DSLite DSLinux" />
+			</div>
+			<div class="col-md-6">
+				<div class="jumbotron">
+					<h3><?= sprintf(
+						__( "Cos'è il %s" ),
+						"Linux Installation Party"
+					) ?></h3>
+					<p><?= __( "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a GNU/Linux e aiuteremo noi nella loro liberazione!" ) ?></p>
+				</div>
+				<p><small><em><?= sprintf(
+					__( "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s." ),
+
+					// DS Linux
+					HTML::a(
+						'https://commons.wikimedia.org/wiki/File:Ds_lite_with_slot-2_device_running_dslinux.jpg',
+						"DSLinux"
+					),
+
+					// GNU & Freedo
+					HTML::a(
+						'https://commons.wikimedia.org/wiki/File:GNU_and_Freedo.svg',
+						"GNU & Freedo"
+					),
+
+					// DS Linux's license
+					__( "pubblico dominio" ),
+
+					// GNU & Freedo license
+					sprintf(
+						"%s+%s",
+
+						// GNU is in GNU FDL
+						license( 'gnu-fdl'      )->getLink(),
+
+						// Freedo is in CC BY SA 2.0
+						license( 'cc-by-sa-2.0' )->getLink()
+					)
+				) ?></em></small></p>
+			</div>
 		</div>
-		<div class="jumbotron">
-			<h3><?= sprintf(
-				__( "Cos'è il %s" ),
-				"Linux Installation Party"
-			) ?></h3>
-			<p><?= __( "Porta con te il tuo computer portatile, uno smartphone, un tostapane, una centrale termonucleare, o qualsiasi cosa che potrebbe essere convertita a GNU/Linux e aiuteremo noi nella loro liberazione!" ) ?></p>
-		</div>
-		<p><small><em><?= sprintf(
-			__( "L'immagine di %s e di %s disponibili rispettivamente in licenza %s e %s." ),
-
-			// DS Linux
-			HTML::a(
-				'https://commons.wikimedia.org/wiki/File:Ds_lite_with_slot-2_device_running_dslinux.jpg',
-				"DSLinux"
-			),
-
-			// GNU & Freedo
-			HTML::a(
-				'https://commons.wikimedia.org/wiki/File:GNU_and_Freedo.svg',
-				"GNU & Freedo"
-			),
-
-			// DS Linux's license
-			__( "pubblico dominio" ),
-
-			// GNU & Freedo license
-			sprintf(
-				"%s+%s",
-
-				// GNU is in GNU FDL
-				license( 'gnu-fdl'      )->getLink(),
-
-				// Freedo is in CC BY SA 2.0
-				license( 'cc-by-sa-2.0' )->getLink()
-			)
-		) ?></em></small></p>
+	</div>
 </section>
 
 <!-- =========================
@@ -457,13 +461,22 @@ template( 'header', [
 	<div class="container text-center">
 		<h2><?= __( "Con il supporto di…" ) ?></h2>
 		<div class="row">
-			<div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-3">
+			<div class="col-sm-6 col-md-4 col-lg-4">
+				<p>Location</p>
+				<a href="https://www.toolboxoffice.it/" title="Toolbox">
+					<img class="reduce-height" src="<?= ROOT ?>/2019/images/toolbox.jpg" alt="Toolbox" />
+				</a>
+				<a href="http://fablabtorino.org/" title="FabLab Torino">
+					<img class="reduce-height" src="<?= ROOT ?>/2019/images/fablab.png" alt="FabLab Torino" />
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4">
 				<p>Italian Linux Society</p>
 				<a href="https://www.ils.org/" title="Italian Linux Society">
 					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
 				</a>
 			</div>
-			<div class="col-sm-6 col-md-4 col-lg-3">
+			<div class="col-sm-6 col-md-4 col-lg-4">
 				<p><?= __( "Media Partner" ) ?></p>
 				<a href="https://www.top-ix.org/" title="Top-IX">
 					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
