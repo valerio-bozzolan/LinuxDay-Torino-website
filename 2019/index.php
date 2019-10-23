@@ -176,7 +176,9 @@ template( 'header', [
 		</div>
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<img class="img-responsive" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/planimetria.png" alt="<?= esc_attr( __( "planimetria" ) ) ?>" />
+				<div>
+					<img class="img-fluid" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/planimetria.png" alt="<?= esc_attr( __( "planimetria" ) ) ?>" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -465,7 +467,7 @@ template( 'header', [
 	<div class="container text-center">
 		<h2><?= __( "Con il supporto di…" ) ?></h2>
 		<div class="row">
-			<div class="col-sm-6 col-md-4 col-lg-4">
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p>Location</p>
 				<a href="https://www.toolboxoffice.it/" title="Toolbox">
 					<img class="reduce-height" src="<?= ROOT ?>/2019/images/toolbox.jpg" alt="Toolbox" />
@@ -474,17 +476,21 @@ template( 'header', [
 					<img class="reduce-height" src="<?= ROOT ?>/2019/images/fablab.png" alt="FabLab Torino" />
 				</a>
 			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4">
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p>Italian Linux Society</p>
 				<a href="https://www.ils.org/" title="Italian Linux Society">
 					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
 				</a>
 			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4">
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p><?= __( "Media Partner" ) ?></p>
 				<a href="https://www.top-ix.org/" title="Top-IX">
 					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="Top-IX" />
 				</a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p><?= __( "Broadcaster" ) ?></p>
+				<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gdg.png" alt="GDG" />
 			</div>
 		</div>
 	</div>
