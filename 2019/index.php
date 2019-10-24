@@ -447,19 +447,6 @@ template( 'header', [
 	</div>
 </section>
 
-<section id="patronage">
-	<div class="container text-center">
-		<h2><?= __( "Con il patrocinio di…" ) ?></h2>
-			<div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-3">
-				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-3">
-				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/comune.jpg" alt="Comune di Torino" />
-			</div>
-		</div>
-	</div>
-</section>
-
 <!-- =========================
    Media Partner
 ============================== -->
@@ -468,31 +455,47 @@ template( 'header', [
 		<h2><?= __( "Con il supporto di…" ) ?></h2>
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-lg-3">
+				<p>Sponsor</p>
+				<a href="http://www.b-play.com/" title="B-Play">
+					<img src="<?= CURRENT_CONFERENCE_ROOT ?>/images/bplay.png" alt="B-Play" />
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p>Location</p>
 				<a href="https://www.toolboxoffice.it/" title="Toolbox">
-					<img class="reduce-height" src="<?= ROOT ?>/2019/images/toolbox.jpg" alt="Toolbox" />
+					<img src="<?= ROOT ?>/2019/images/toolbox.jpg" alt="Toolbox" />
 				</a>
 				<a href="http://fablabtorino.org/" title="FabLab Torino">
-					<img class="reduce-height" src="<?= ROOT ?>/2019/images/fablab.png" alt="FabLab Torino" />
+					<img src="<?= ROOT ?>/2019/images/fablab.png" alt="FabLab Torino" />
 				</a>
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p>Italian Linux Society</p>
 				<a href="https://www.ils.org/" title="Italian Linux Society">
-					<img class="img-responsive reduce-height" src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
+					<img src="<?= ROOT ?>/2018/images/ils.png" alt="Italian Linux Society" />
 				</a>
 			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<p><?= __( "Media Partner" ) ?></p>
 				<a href="https://www.top-ix.org/" title="TOP-IX">
-					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/top-ix.jpg" alt="TOP-IX" />
+					<img src="<?= CURRENT_CONFERENCE_ROOT ?>/images/topix.png" alt="TOP-IX" />
+				</a>
+				<a href="https://www.facebook.com/gdgtorino" title="GDG">
+					<img src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gdg.png" alt="GDG" />
 				</a>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section id="patronage">
+	<div class="container text-center">
+		<h2><?= __( "Con il patrocinio di…" ) ?></h2>
+			<div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-3">
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/metropoli.png" alt="Città metropolitana di Torino" />
+			</div>
 			<div class="col-sm-6 col-md-4 col-lg-3">
-				<p><?= __( "Broadcaster" ) ?></p>
-				<a href="https://www.facebook.com/gdgtorino" title="GDG">
-					<img class="img-responsive reduce-height" src="<?= CURRENT_CONFERENCE_ROOT ?>/images/gdg.png" alt="GDG" />
-				</a>
+				<img class="img-responsive reduce-height" src="<?= ROOT ?>/2016/static/partner/comune.jpg" alt="Comune di Torino" />
 			</div>
 		</div>
 	</div>
