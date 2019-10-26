@@ -130,6 +130,10 @@ template( 'header', $args );
 						) ?></small>
 					</td>
 				</tr>
+				<tr>
+					<th><?= icon( 'fa-language', 'left' ); echo __( "Lingua" ) ?></th>
+					<td><?= find_language( $event->get( Event::LANGUAGE ) )->getHuman() ?></td>
+				</tr>
 			</table>
 		</div>
 		<!-- End room -->
