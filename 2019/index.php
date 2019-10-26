@@ -67,7 +67,14 @@ template( 'header', [
 				) ?></h3>
 				<p><?= __( "Programmatori, ingegneri, avvocati, professionisti nell'ambito del software libero. Tutti insieme a Torino." ) ?></p>
 			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-md-12">
+                		<p class="lead">
+                		    <br><br><br><?= __("L'accesso all'evento è libero e gratuito. Non è richiesta registrazione.") ?>
+		                </p>
+			</div>
 		</div>
 	</div>
 </section>
