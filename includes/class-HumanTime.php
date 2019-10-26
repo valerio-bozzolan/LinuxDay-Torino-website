@@ -144,7 +144,7 @@ class HumanTime {
 		}
 
 		if( $d_fake === 1 ) {
-			$complete = true;
+			$args['complete'] = true;
 
 			return $invert ? __("domani") : _("ieri");
 		}
@@ -158,7 +158,7 @@ class HumanTime {
 		}
 
 		if( $h_fake > 3 ) {
-			$complete = true;
+			$args['complete'] = true;
 
 			return __("oggi");
 		}
@@ -207,7 +207,7 @@ class HumanTime {
 			return sprintf( __("%d secondi"), $s );
 		}
 
-		$complete = true;
+		$args['complete'] = true;
 
 		return __("proprio ora");
 	}
