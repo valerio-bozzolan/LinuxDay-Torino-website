@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) or exit;
                     '<span class="typing-smanettone">',
                     '</span>'
                 ) ?></div>
-				<a href="#detail" class="btn btn-lg btn-default smoothScroll hidden-xs"><?= esc_attr( __( "SCOPRI DI PIÙ" ) ) ?></a>
+				<a href="#program" class="btn btn-lg btn-default smoothScroll hidden-xs"><?= esc_attr( __( "SCOPRI DI PIÙ" ) ) ?></a>
 			</div>
 		</div>
 	</div>
