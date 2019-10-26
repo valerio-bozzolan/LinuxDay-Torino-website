@@ -408,7 +408,7 @@ msgstr "Pian dël Dëpartament d’Informàtica"
 
 #: 2016/index.php:219
 msgid "App Android"
-msgstr "Applicassion Android"
+msgstr "Aplicassion Android"
 
 #: 2016/index.php:221
 #, php-format
@@ -1057,9 +1057,8 @@ msgid "Memo"
 msgstr "Memo"
 
 #: 2019/index.php:180
-#, fuzzy
 msgid "planimetria"
-msgstr "Pian"
+msgstr "pian"
 
 #: 2019/index.php:193
 msgid "Nello stesso momento"
@@ -1764,9 +1763,8 @@ msgid "MQTT"
 msgstr "MQTT"
 
 #: l10n/trebbia.php:141
-#, fuzzy
 msgid "DeepSpeech"
-msgstr "Deep speech"
+msgstr "Deepspeech"
 
 #: l10n/trebbia.php:144
 msgid "Riconoscimento vocale"
@@ -1797,7 +1795,6 @@ msgid "GIS - BIM2GML"
 msgstr "GIS - BIM2GML"
 
 #: l10n/trebbia.php:165
-#, fuzzy
 msgid "70 anni dopo la morte"
 msgstr "70 agn apress la mòrt"
 
