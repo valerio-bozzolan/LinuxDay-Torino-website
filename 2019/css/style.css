@@ -775,6 +775,12 @@ footer {
 	margin:auto;
 	max-height:100px;
 }
+#photos {
+        margin-top: 20px;
+}
+#photos img {
+        margin-bottom: 20px;
+}
 #media-partner {
 	margin-top: 2em;
 }
