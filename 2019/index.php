@@ -188,31 +188,6 @@ template( 'header', [
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="section-title">
-					<h2><?= __( "Streaming" ) ?></h2>
-					<p><?= sprintf(
-						__( "Prendi parte alla conferenza, in diretta dall'aula: %s." ),
-						__( "Aula Misc" )
-					)  ?></p>
-					<p><?= sprintf(
-						__( "Inizio streaming: ore %s. Fine: %s." ),
-						'14:00',
-						'18:00'
-					) ?></p>
-					<iframe width="720" height="404" src="./streaming.html" frameborder="0" allowfullscreen></iframe>
-					<p><?= sprintf(
-						__( "Grazie a %s per lo streaming!" ),
-						HTML::a(
-							'https://www.top-ix.org/',
-							"TOP-IX"
-						)
-					) ?></p>
-					<p><?= __( "Le altre tracce saranno registrate e pubblicate sui social nei giorni successivi!" ) ?></p>
-				</div>
-			</div>
-		</div>
 	</div>
 </section>
 
