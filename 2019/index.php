@@ -88,7 +88,7 @@ template( 'header', [
 			<?php foreach(array_diff(['.', '..'], scandir('./images/photos/')) as $photo): ?>
 				<div class="col-sm-4">
 					<a href="<?= CURRENT_CONFERENCE_ROOT ?>/images/photos/<?= basename($photo) ?>" data-lightbox="roadtrip">
-						<img src="<?= CURRENT_CONFERENCE_ROOT ?>/images/photos/<?= basename($photo) ?>" class="img-responsive">
+						<img src="<?= CURRENT_CONFERENCE_ROOT ?>/images/photos/<?= basename($photo) ?>" class="img-responsive" alt="Linux Day Torino 2019">
 					</a>
 				</div>
 			<?php endforeach ?>
