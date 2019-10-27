@@ -54,6 +54,7 @@ $classes = $top_nav_collapse ? 'top-nav-collapse' : 'navbar-fixed-top';
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?= $home ?>#intro" class="smoothScroll"><?= __( "Intro" ) ?></a></li>
+				<li><a href="<?= $home ?>#photos" class="smoothScroll"><?= __( "Foto" ) ?></a></li>
 				<li><a href="<?= $home ?>#program" class="smoothScroll"><?= __( "Programma" ) ?></a></li>
 				<li><a href="<?= $home ?>#venue" class="smoothScroll"><?= __( "Dove" ) ?></a></li>
 				<li><a href="<?= $home ?>#contact" class="smoothScroll"><?= __( "Contatti" ) ?></a></li>
