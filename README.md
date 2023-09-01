@@ -19,7 +19,7 @@ Note that, thanks to PHP, this website has no third party dependency. I mean we 
 
 PHP loves you. Do not be bad with it. :^)
 
-## Quick start Hacking
+## Quick start Hacking (if you like Vagrant)
 
 To start hacking on this project we suggest the installation of `vagrant` to reproduce our production environment quickly. You should know how to install this package from your favourite GNU/Linux distribution. Then, just run:
 
