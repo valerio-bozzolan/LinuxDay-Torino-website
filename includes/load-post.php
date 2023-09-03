@@ -49,7 +49,7 @@ inherit_permissions( 'admin', 'translator', [
 	'edit-events',
 ] );
 
-define_default( 'LATEST_CONFERENCE_UID', '2019' );
+define_default( 'LATEST_CONFERENCE_UID', '2023' );
 
 define_default( 'CURRENT_CONFERENCE_UID', LATEST_CONFERENCE_UID );
 
